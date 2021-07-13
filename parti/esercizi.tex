@@ -1,104 +1,4 @@
-\documentclass[10pt,a4paper]{book}
-
-\input{../../../Libri/template_dispense.tex}
-\input{../../../Libri/template_eserciziario.tex}
-
-\usepackage{geometry}
-\geometry{
-	nomarginpar, % Toglie doppi margini
-	margin=1.5in, % Imposta i margini a 1 inch
-}
-
-\usepackage{chngcntr}
-\counterwithout{figure}{chapter}
-\counterwithout{equation}{chapter}
-
-\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{document}
-
-
-%----------------------------------------------------------------------------------------
-%	COPERTINA
-%----------------------------------------------------------------------------------------
-
-\pagestyle{empty} % Imposta lo stile senza niente finché non iniziano i contenuti
-\vspace*{\fill}
-%Teo Bucci \\
-\begin{center}
-	{\large \textsc{Esercitazioni di}}\\
-	\vspace*{0.4cm}
-	{\Huge \textsc{Analisi Matematica III}}\\
-	\vspace*{1cm}
-	{\large Di Norman Potrich e Marco Ugo Claudio Boella}\\
-	\vspace*{0.1cm}
-	{\large per il corso di Ingegneria Matematica\footnote{Questo testo non si intende come sostitutivo delle esercitazioni, sicuramente presenta degli errori, che potete gentilmente segnalare all'autore scrivendo a teobucci8@gmail.com. I contenuti sono di proprietà intellettuale degli esercitatori, mentre la trascrizione è di proprietà dell'autore.}}\\
-	\vspace*{0.4cm}
-	{\large Trascritte da Teo Bucci}\\
-	\vspace*{0.1cm}
-	{\large Aggiornato al \today}\\
-	\vspace*{1cm}
-	Politecnico di Milano\\
-	A.A. 2020/2021
-\end{center}
-\vspace*{\fill}
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	COPYRIGHT PAGE
-%----------------------------------------------------------------------------------------
-
-%\clearpage
-%
-%{\Large \textit{Appunti di Matematica Numerica}}
-%
-%\vspace*{\fill}
-%
-%\textcopyright \ Gli autori, tutti i diritti riservati
-%
-%Sono proibite tutte le riproduzioni senza autorizzazione %scritta degli autori.
-%
-%Revisione del \today
-%
-%Developed by Teo Bucci \\
-%Compiled with \ensuremath\heartsuit \\
-%
-%\textbf{Prefazione}
-%
-%% PREFAZIONE
-%
-%Per segnalare eventuali errori o suggerimenti potete %contattare gli autori.
-%
-%\newpage
-%\thispagestyle{empty} % PER NON AVERE COSE NELL'HEADER
-%\clearpage % PER TERMINARE SUBITO LA PAGINA DOPO L'INDICE
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-\addtocontents{toc}{\protect\thispagestyle{empty}}
-
-\tableofcontents % Print the table of contents itself
-
-\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right side of the book
-
-\pagestyle{fancy} % Riswitcha per riavere il numero pagina
-
-\setcounter{page}{1} % Fa ripartire il contatore pagina da 1
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 %           TEMPLATE
-
 
 %           \chapter{Spazi campionari}
 %           
@@ -693,7 +593,7 @@ Classificare le singolarità di
 \begin{equation*}
 f\left( z\right) =\frac{e^{1/z}}{1+z^{2}}
 \end{equation*}
-\Esercizio{Integrale di Fresnel}
+\Esercizio{(Integrale di Fresnel)}
 
 Calcolare
 \begin{equation*}
@@ -867,7 +767,7 @@ che sarà quindi una quantità complessa, ma l'integrale richiesto è proprio la
 \end{equation*}
 \chapter{Esercitazione 2 - Potrich}
 \ParteEsercizi
-\Esercizio{Integrali di Fresnel}
+\Esercizio{(Integrali di Fresnel)}
 
 Calcolare
 \begin{equation*}
@@ -2769,7 +2669,7 @@ Calcolare
 \begin{equation*}
 I=\int ^{+\infty }_{0}\frac{1}{\left( x^{2} +4\right)\left( x+1\right)} dx
 \end{equation*}
-\Esercizio{Spazi $L^{p}$}
+\Esercizio{(Spazi $L^{p}$)}
 
 Si considerino le seguenti funzioni definite su $\left( 0,+\infty \right)$ nel seguente modo
 \begin{equation*}
@@ -7457,5 +7357,3 @@ In conclusione
 y( s) =\left[\frac{7}{16} e^{2t} +\frac{3}{16} e^{-2t} +\frac{3}{8}\cos( 2t) +\frac{1}{4}\sin( 2t)\right] H( t)
 \end{equation*}
 
-
-\end{document}

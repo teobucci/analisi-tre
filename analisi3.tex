@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper,twoside]{book}
+
+\input{../../../Libri/template_dispense.tex}
+
+
+
+%%%%%%%% ESERCIZI
+
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+
+%\renewcommand{\thesection}{\arabic{section}}
+%\renewcommand{\thesubsection}{\arabic{subsection}}
+%\renewcommand{\thechapter}{\arabic{chapter}}
+
+%\titleformat{\section}{\normalfont\LARGE\bfseries}{}{0em}{} % \LARGE anziche' \Large
+%\titleformat{\subsection}{\normalfont\large\bfseries}{}{0em}{}
+
+%\newcommand{\Esercizio}[1]{\subsection{Esercizio~\thechapter.\thesubsection~#1}}
+%\newcommand{\Soluzione}{\subsection{Soluzione~\thechapter.\thesubsection}}
+\newcommand{\Esercizio}[1]{\subsection{Esercizio~#1}}
+\newcommand{\Soluzione}{\subsection{Soluzione}}
+
+\newcommand{\ParteEsercizi}{\section{Esercizi}}
+\newcommand{\ParteSoluzioni}{\section{Soluzioni}}
+
+% MI ASSICURO QUESTA COSA IMPORTANTE
+
+\setcounter{secnumdepth}{2}
+%\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+	\usepackage{geometry}
+	\geometry{
+		nomarginpar, % Toglie doppi margini
+		margin=1in, % Imposta i margini a 1 inch
+	}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+
+\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\pagestyle{empty} % SWITCHA PER NON AVERE NUMERO PAGINA
+\vspace*{\fill}
+%Teo Bucci \\
+\begin{center}
+	{\large \textsc{Appunti di}}\\
+	\vspace*{0.4cm}
+	{\Huge \textsc{Analisi Matematica 3}}\\
+	\vspace*{1cm}
+	{\large {Dalle lezioni del Prof. Gianni Arioli}}\\
+	\vspace*{0.1cm}
+	{\large per il corso di Ingegneria Matematica}\\
+	\vspace*{0.4cm}
+	{\large {di Teo Bucci}}\\
+	\vspace*{1cm}
+	Politecnico di Milano\\A.A. 2020/2021
+\end{center}
+\vspace*{\fill}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\Large \textit{Appunti di Analisi Matematica 3}}
+
+\vspace*{\fill}
+
+\textcopyright \ L'autore, tutti i diritti riservati
+
+Sono proibite tutte le riproduzioni senza autorizzazione scritta dell'autore.
+
+Revisione del \today
+
+Developed by Teo Bucci - \texttt{teobucci8@gmail.com}\\ \\
+Compiled with \ensuremath\heartsuit \\
+
+%\textbf{Prefazione}
+
+Per segnalare eventuali errori o suggerimenti potete contattare l'autore.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% INDICE
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PAGINA VUOTA PER FAR PARTIRE IL CAPITOLO IN UNA PAGINA DISPARI
+%\myNewEmptyPage
+
+\AtEndDocument{\cleardoublepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\pagestyle{fancy} % RISWITCHA PER RIAVERE IL NUMERO PAGINA
+%\setcounter{page}{1} % FA RIPARTIRE IL CONTATORE PAGINA DA 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\part{Teoria}
+\input{parti/teoria.tex}
+
+\part{Esercizi}
+\input{parti/esercizi.tex}
+
+\end{document}
