@@ -8,7 +8,7 @@ La differenza tra i numeri complessi e $\mathbb{R}^{2}$ è che i numeri compless
 \begin{definition}
 $f$ è differenziabile in senso complesso se $f( z+h)$ si può scrivere come
 \begin{equation*}
-f( z+h) =f( z) +f'( z) h+o(| h| )
+f(z+h) =f(z) +f'(z) h+o(|h|)
 \end{equation*}
 per $h\rightarrow 0$, ricordando che $f'( z) \in \mathbb{C}$ e $h\in \mathbb{C}$.
 \end{definition}
@@ -544,7 +544,7 @@ Se abbiamo un numero finito di singolarità, la somma di tutte, sia al finito ch
 Se $z_{0} \neq \infty $
 \begin{itemize}
 \item se è eliminabile allora $\mathrm{Res}( f,z_{0}) =0$
-\item se è polo di ordine $n$ allora $\mathrm{Res}( f,z_{0}) =\lim\limits _{z\rightarrow z_{0}}\frac{d^{n-1}}{dz^{n-1}}\frac{( z-z_{0})^{n}}{n!} f( z)$
+\item se è polo di ordine $n$ allora $\mathrm{Res}( f,z_{0}) = \frac{1}{(n-1)!}\lim\limits _{z\rightarrow z_{0}}\frac{d^{n-1}}{dz^{n-1}}(z-z_0)^n f(z)$
 \item se è polo di ordine $1$ allora $\mathrm{Res}\left(\frac{f}{g} ,z_{0}\right) =\lim\limits _{z\rightarrow z_{0}}\frac{f( z)}{g'( z)}$
 \item vale L'Hopital $\lim\limits _{z\rightarrow z_{0}}\frac{f(z)}{g(z)} =\lim\limits _{z\rightarrow z_{0}}\frac{f'(z)}{g'(z)}$
 \end{itemize}
