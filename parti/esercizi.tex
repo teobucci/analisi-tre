@@ -1204,7 +1204,7 @@ Nel nostro caso è vero perchè vale il seguente teorema.
 \begin{theorem}
 Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\mathrm{Res}\left( f,\infty \right) =0$, perché
 \begin{equation*}
-f\left( z\right) =\sum\limits ^{2}_{n=-\infty } a_{n} z^{n} \ \ \Rightarrow \ \ \mathrm{Res}\left( f,\infty \right) =-a_{-1} =0
+f\left( z\right) =\sum\limits ^{-2}_{n=-\infty } a_{n} z^{n} \ \ \Rightarrow \ \ \mathrm{Res}\left( f,\infty \right) =-a_{-1} =0
 \end{equation*}
 \end{theorem}
 \Soluzione
@@ -1814,7 +1814,7 @@ $f\in \mathcal{H}(\mathbb{C} \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semp
 Calcoliamo i residui
 \begin{gather*}
 \mathrm{Res}\left( f,0\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\left(\left( z-0\right)^{2}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z^{2} +1\right)}\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\frac{\left( z+1\right) e^{\pi z}}{z^{2} +1} =\dotsc =1+\pi \\
-\mathrm{Res}\left( f,i\right) =\lim _{z\rightarrow i}\left( z-i\right) f\left( z\right) =\lim _{z\rightarrow i}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z+1\right)} =\dotsc =\frac{1+i}{2i}\\
+\mathrm{Res}\left( f,i\right) =\lim _{z\rightarrow i}\left( z-i\right) f\left( z\right) =\lim _{z\rightarrow i}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z+i\right)} =\dotsc =\frac{1+i}{2i}\\
 \mathrm{Res}\left( f,-i\right) =\lim _{z\rightarrow -i}\left( z+i\right) f\left( z\right) =\dotsc =-\frac{1-i}{2i}
 \end{gather*}
 Le distanze dei punti singolari di $f$ dal centro della curva $\gamma _{R}$ sono
@@ -1832,10 +1832,10 @@ I_{R} =0
 I_{R} =2\pi i\cdotp \mathrm{Res}\left( f,i\right) =\left( 1+i\right) \pi 
 \end{equation*}
 \item se $\sqrt{2} < R< \sqrt{5}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=i$ e $z=0$\begin{equation*}
-I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,0\right)\right] =\pi \left( 3\pi +2\pi ^{2}\right) i
+I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,0\right)\right] =\pi +i\pi \left( 3 +2\pi\right)
 \end{equation*}
-\item se $R< \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma _{R}$. $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=\pm i$ e $z=0$\begin{equation*}
-I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,0\right) +\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,-i\right)\right]
+\item se $R> \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma _{R}$. $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=\pm i$ e $z=0$\begin{equation*}
+I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,0\right) +\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,-i\right)\right] = i2\pi (2+\pi )
 \end{equation*}
 \end{itemize}
 
