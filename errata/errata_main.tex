@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2.4cm]{geometry}
+
+\newcommand{\thetitle}{Appunti di Analisi Matematica 3}
+
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+
+\fancypagestyle{errata_front}{
+    \fancyhf{}
+    \fancyfoot[R]{\textcopyright \ L'autore, tutti i diritti riservati}
+    \renewcommand{\headrulewidth}{0.0pt}
+}
+
+\fancypagestyle{errata}{
+    \fancyhf{}
+    \fancyhead[L]{Errata corrige}
+    \fancyhead[R]{\thetitle}
+    \renewcommand{\headrulewidth}{0.1pt}
+}
+
+\begin{document}
+
+\pagestyle{errata_front}
+\input{errata_front} \clearpage
+
+\pagestyle{errata}
+\input{errata_contenuto}
+
+\end{document}
