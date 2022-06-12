@@ -1,0 +1,96 @@
+\documentclass[10pt,a4paper,twoside]{book}
+
+\input{style}
+
+%%%%%%%% ESERCIZI
+
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{etoolbox}
+
+\newcommand{\Esercizio}[1]{\subsection{Esercizio~#1}}
+\newcommand{\Soluzione}{\subsection{Soluzione}}
+
+\newcommand{\ParteEsercizi}{\section{Esercizi}}
+\newcommand{\ParteSoluzioni}{\section{Soluzioni}}
+
+% MI ASSICURO QUESTA COSA IMPORTANTE
+
+\setcounter{secnumdepth}{2}
+%\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{1}
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+	\usepackage{geometry}
+	\geometry{
+		nomarginpar, % Toglie doppi margini
+		margin=1in, % Imposta i margini a 1 inch
+	}
+
+\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
+
+\begin{document}
+
+\frontmatter
+
+\pagestyle{empty}
+
+% COPERTINA
+
+\hypertarget{mytitlepage}{} % set the hypertarget
+\bookmark[dest=mytitlepage,level=chapter]{Title Page} % add the bookmark
+
+\vspace*{\fill}
+
+\begin{center}
+	{\large \textsc{Appunti di}}\\
+	\vspace*{0.4cm}
+	{\Huge \textsc{Analisi Matematica 3}}\\
+	\vspace*{1cm}
+	{\large per il corso di Ingegneria Matematica}\\
+	\vspace*{0.4cm}
+	{\large {di Teo Bucci}}\\
+	\vspace*{1cm}
+	Politecnico di Milano\\
+	A.A. 2020/2021
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+% COPYRIGHT PAGE
+
+\hypertarget{mycopyright}{} % set the hypertarget
+\bookmark[dest=mycopyright,level=chapter]{Copyright Page} % add the bookmark
+\input{firstpages/copyright}
+\clearpage
+
+% PREFAZIONE
+
+% \hypertarget{mypreface}{} % set the hypertarget
+% \bookmark[dest=mypreface,level=chapter]{Prefazione} % add the bookmark
+% \input{firstpages/prefazione}
+% \clearpage
+
+% INDICE
+
+\cleardoublepage
+\pagestyle{toc}
+\hypertarget{mytoc}{} % set the hypertarget
+\bookmark[dest=mytoc,level=chapter]{\contentsname} % add the bookmark
+\tableofcontents
+\cleardoublepage
+
+% MAIN MATTER
+
+\pagestyle{fancy}
+\mainmatter
+
+\part{Teoria}
+\input{parti/teoria.tex} \cleardoublepage
+
+\part{Esercizi}
+\input{parti/esercizi.tex} \cleardoublepage
+
+\end{document}

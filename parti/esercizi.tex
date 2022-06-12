@@ -1,4 +1,4 @@
-%! TeX root = ../analisi3.tex
+%! TeX root = ../main.tex
 
 %           TEMPLATE
 
@@ -355,7 +355,7 @@ u_{y}\left( x,y\right) =-v_{x}\left( x,y\right)
 \end{cases}
 \end{equation}
 \end{theorem}
-\begin{oss}
+\begin{obs}
 Un altro modo per scrivere le (1) è
 \begin{equation*}
 \frac{\partial f}{\partial \overline{z}} =0
@@ -382,7 +382,7 @@ f_{x} =f'=u_{x} +iv_{x} =v_{y} -iu_{y}\\
 f_{y} =if'=iu_{x} -v_{x} =iv_{y} +u_{y}
 \end{cases}
 \end{equation*}
-\end{oss}
+\end{obs}
 Poniamo $z=x+iy$
 \begin{align*}
 f\left( z\right) & =\left( x+iy\right)^{2}\left( x^{2} +y^{2}\right) e^{i\left( x-iy\right)^{2}}\\
@@ -462,12 +462,12 @@ dove
 \gamma '\left( t\right) =x'\left( t\right) +iy'\left( t\right)
 \end{gather*}
 \end{definition}
-\begin{oss}
+\begin{obs}
 L'integrale curvilineo dipende dall'orientazione di $\gamma $
 \begin{equation*}
 \int\nolimits _{-\gamma } f\left( z\right) dz=-\int\nolimits _{\gamma } f\left( z\right) dz
 \end{equation*}
-\end{oss}
+\end{obs}
 \begin{theorem}
 Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ continua. TFAE (the followings are equivalent):
 
@@ -1197,9 +1197,9 @@ quindi $\infty $ è una singolarità eliminabile.
 \begin{equation*}
 \mathrm{Res}\left( F,\infty \right) =-\sum\limits ^{3}_{k=1}\mathrm{Res}\left( F,z_{k}\right) =-\left( 1-\frac{1}{2} -\frac{1}{2}\right) =0
 \end{equation*}
-\begin{oss}
+\begin{obs}
 Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\mathrm{Res}\left( f,\infty \right) =0$. Infatti $f\left( z\right) =\frac{1}{z}\rightarrow 0$ per $z\rightarrow +\infty $ quindi $\infty $ è singolarità eliminabile, ma $\mathrm{Res}\left( f,\infty \right) =-a_{-1} =-1\neq 0$.
-\end{oss}
+\end{obs}
 \begin{nb}
 Nel nostro caso è vero perchè vale il seguente teorema.
 \end{nb}
@@ -4767,12 +4767,12 @@ f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\
 \end{array}
 \end{equation*}
 \end{definition}
-\begin{oss}
+\begin{obs}
 [Delta di Dirac] L'esempio fondamentale di distribuzione in $D'\left(\mathbb{R}^{n}\right)$ è la Delta di Dirac, denotata $\delta $, e così definita
 \begin{equation*}
 \langle \delta ,\varphi \rangle =\varphi ( 0) \ \ \forall \varphi \in D\left(\mathbb{R}^{n}\right)
 \end{equation*}
-\end{oss}
+\end{obs}
 \begin{definition}
 Se \ $u\in D'(\mathbb{R})$, allora la derivata distribuzionale di $u$ è la distribuzione $u'\in D'(\mathbb{R})$ definita univocamente da
 \begin{equation*}
@@ -5020,7 +5020,7 @@ Analizziamo in $L^{p}$
 \begin{equation*}
 \Vert g_{n} -g\Vert ^{p}_{L^{p}} =\Vert g_{n}\Vert ^{p}_{L^{p}} =\int ^{7}_{0}| \sin( nx)| ^{p} dx\overset{nx=y}{=}\frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy
 \end{equation*}
-\begin{oss}
+\begin{obs}
 $a >0$
 \begin{equation*}
 a\int ^{ka}_{0}| \sin y| ^{p} dy=\frac{2h\pi }{k}\int ^{2h\pi }_{0}| \sin y| ^{p} dy+\frac{1}{k}\int ^{ka}_{2h\pi }| \sin y| ^{p} dy
@@ -5032,7 +5032,7 @@ Se $k\rightarrow +\infty $ allora $\frac{2h\pi }{k}\rightarrow 1$ e
 \int ^{2h\pi }_{0}| \sin y| ^{p} dy=\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \forall h
 \end{equation*}
 mentre l'altro addendo è infinitesimo.
-\end{oss}
+\end{obs}
 Quindi
 \begin{equation*}
 \frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy\xrightarrow{n\rightarrow +\infty } 7\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \Rightarrow \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{p}(\mathbb{R})}} 0
@@ -7327,7 +7327,7 @@ D
 0
 \end{bmatrix}
 \end{equation*}
-che ha come soluzione\footnote{Ovviamente trovata a mente e senza usare Matlab.}
+che ha come soluzione\footnote{Ovviamente trovata a mente e senza usare MATLAB.}
 \begin{equation*}
 \begin{bmatrix}
 A\\

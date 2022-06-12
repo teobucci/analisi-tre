@@ -1,4 +1,4 @@
-%! TeX root = ../analisi3.tex
+%! TeX root = ../main.tex
 
 \chapter{Analisi complessa}
 
@@ -130,19 +130,19 @@ diverge con $| z|  >1$, ma converge se $| z| \leqslant 1$
 \begin{definition}
 [Funzione Analitica] Una funzione è \textbf{analitica} se si può scrivere localmente in serie di potenze. Se il raggio della serie è infinito allora si dice anche \textbf{intera}.
 \end{definition}
-\begin{oss}
+\begin{obs}
 Osserviamo che si possono estendere al campo complesso tutte le consuete serie di McLaurin
 \begin{equation*}
 \sin z=\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n+1}}{( 2n+1) !} \ \ \ \ \cos z=\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n}}{( 2n) !} \ \ \ \ e^{z} =\sum\limits ^{\infty }_{n=0}\frac{z^{n}}{n!}
 \end{equation*}
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 Ricordiamo anche la forma esponenziale di un numero complesso e la formula di Eulero
 \begin{equation*}
 e^{i\vartheta } =\cos \vartheta +i\sin \vartheta 
 \end{equation*}
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 Consideriamo ora due serie, rispettivamente reale e complessa
 \begin{equation*}
 \frac{1}{1+x^{2}} =\sum\limits ^{\infty }_{n=0}\left( -x^{2}\right)^{n} \ \ \ \ R=1
@@ -152,7 +152,7 @@ il cui raggio di convergenza $R$ vale $1$
 \frac{1}{1+z^{2}} =\sum\limits ^{\infty }_{n=0}\left( -z^{2}\right)^{n}
 \end{equation*}
 Notiamo qui che il denominatore si annulla per $z=\pm i$, quindi il disco di convergenza deve per forza avere raggio $1$, abbiamo quindi un'ulteriore giustificazione al perché la sua restrizione ai numeri reale non può convergere oltre $1$. Vedremo a breve che $\pm 1$ si chiameranno poli.
-\end{oss}
+\end{obs}
 \begin{theorem}
 Se una funzione è differenziabile, non è detto che esista automaticamente un'estensione olomorfa\footnote{Per esempio $f( x) =| x| x$.}, ma se esiste è unica.
 \end{theorem}
@@ -834,13 +834,13 @@ Il teorema ha come corollario del quarto punto che proiettando due punti non li 
 \begin{equation*}
 \Vert P_{x} -P_{y}\Vert \leqslant \Vert x-y\Vert \ \ \forall x,y
 \end{equation*}
-\begin{oss}
+\begin{obs}
 I casi banali sono
 \begin{gather*}
 x\in M\Rightarrow P=x,Q=0\\
 x\in M^{\perp } \Rightarrow P=0,Q=x
 \end{gather*}
-\end{oss}
+\end{obs}
 \begin{theorem}
 [Disuguaglianza di Schwarz]
 \begin{equation*}
@@ -860,28 +860,28 @@ In uno spazio separabile si ha che $\forall x\in X,\exists \{y_{n}\} \subset Y$ 
 \begin{definition}
 [Base hilbertiana] Sia $H$ di Hilbert a dimensione infinita. Un insieme di vettori $\{e_{k}\} \subset H$ tali che $( e_{j} ,e_{k}) =\delta _{jk}$ si dice \textbf{base hilbertiana} se $\forall x\in H,\exists \{\lambda _{n}\} \subset \mathbb{C}$ tale che $x=\sum ^{\infty }_{n=1} \lambda _{n} e_{n}$.
 \end{definition}
-\begin{oss}
+\begin{obs}
 Non essendo finita, non è una base nel senso dell'algebra lineare, ma è la cosa più vicina in dimensione infinita.
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 È l'equivalente di una base ortonormale.
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 Se $n=\mathrm{dim}( V) < \infty $, $\{e_{1} ,\dotsc ,e_{n}\}$, $( e_{j} ,e_{k}) =\delta _{jk}$, allora $\forall v\in V\Rightarrow v=\sum ^{n}_{k=1} \lambda _{k} e_{k}$.
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 Dire
 \begin{equation*}
 x=\sum ^{\infty }_{n=1} \lambda _{n} e_{n} \ \ \text{è equivalente a dire} \ \ \lim\limits _{n\rightarrow +\infty }\left\Vert x-\sum ^{n}_{k=1} \lambda _{k} e_{k}\right\Vert =0
 \end{equation*}
 usando la norma indotta dal prodotto scalare.
-\end{oss}
+\end{obs}
 \begin{theorem}
 Ogni spazio di Hilbert separabile ammette base Hilbertiana.
 \end{theorem}
-\begin{oss}
+\begin{obs}
 Il concetto di separabilità è un concetto abbastanza debole con poche richieste, soddisfatte nella stragrande maggioranza dei casi.
-\end{oss}
+\end{obs}
 \begin{theorem}
 Sia $H$ separabile e sia $\{e_{n}\}$ una base hilbertiana. Allora $\forall x\in H$, $x$ si scrive come \textbf{serie di Fourier generalizzata}
 \begin{equation*}
@@ -906,9 +906,9 @@ moltiplichiamo \textit{a destra} scalarmente per un generico $e_{k}$
 \begin{equation*}
 ( x,e_{k}) =\left(\sum ^{\infty }_{n=1} \lambda _{n} e_{n} ,e_{k}\right) =\sum ^{\infty }_{n=1} \lambda _{n}( e_{n} ,e_{k})\overset{\delta _{nk}}{=} \lambda _{k}
 \end{equation*}
-\begin{oss}
+\begin{obs}
 È una semidimostrazione in quanto la linearità non vale per la serie che va a $\infty $, bisognerebbe passare al limite ma ci accontentiamo.
-\end{oss}
+\end{obs}
 Mostriamo ora Parseval
 \begin{gather*}
 \begin{aligned}
@@ -920,9 +920,9 @@ Mostriamo ora Parseval
 \begin{theorem}
 Sia $H$ di Hilbert separabile. Allora $H$ è isomorfo a $l^{2}$. In particolare $\exists L:H\rightarrow l^{2}$, lineare, biiettiva ed isometria.
 \end{theorem}
-\begin{oss}
+\begin{obs}
 Quindi tutti gli spazi di Hilbert sono isomorfi tra di loro.
-\end{oss}
+\end{obs}
 \textit{Dimostrazione.}
 
 Essendo separabile esiste una BH\footnote{Base Hilbertiana.} $\{e_{n}\}$.
@@ -993,12 +993,12 @@ Consideriamo dei generici insiemi
 | C| =\inf\left\{| P| ,P\in \text{pluri-intervalli} ,P\supset C\right\}
 \end{equation*}
 \end{itemize}
-\begin{oss}
+\begin{obs}
 Gli insiemi aperti non sono chiusi per intersezioni numerabili.
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 Gli insiemi chiusi non sono chiusi per unioni numerabili.
-\end{oss}
+\end{obs}
 Dato un insieme limitato qualunque, si dice
 \begin{itemize}
 \item \textbf{misura esterna} di $E$, $| E| ^{*} =\inf\left\{| A| ,A\ \text{aperto} ,A\supset E\right\}$
@@ -1091,9 +1091,9 @@ dove $g( x)$ è una funzione a scala tale che $g( x) \leqslant f( x)$ e inoltre 
 \end{figure}
 \FloatBarrier
 
-\begin{oss}
+\begin{obs}
 È una definizione più pulita di quella di Riemann. Il dominio e la funzione possono essere illimitati (e naturalmente l'integrale può valere $\infty $).
-\end{oss}
+\end{obs}
 Per definirlo per funzioni anche negative procediamo come segue.
 
 Sia $f:A\subset \mathbb{R}^{n}\rightarrow \mathbb{C}$
@@ -1125,12 +1125,12 @@ f( x) =\begin{cases}
 \end{cases}
 \end{equation*}
 non è integrabile secondo Riemann, ma il suo integrale di Lebesgue esiste e vale $0$.
-\begin{oss}
+\begin{obs}
 Se $f( x) =g( x) ,\forall x\in A$ tranne al più un insieme di misura nulla, allora
 \begin{equation*}
 \int _{A} f( x) dx=\int _{A} g( x) dx\ \ \text{quasi ovunque}
 \end{equation*}
-\end{oss}
+\end{obs}
 \begin{theorem}
 [della Convergenza Monotona] Siano $f_{n} :A\rightarrow [ 0,+\infty )$. Sia $\lim\limits _{n\rightarrow +\infty } f_{n} =f( x)$ quasi ovunque, $f_{n}( x) \leqslant f_{n+1}( x) ,\forall x$ quasi ovunque e $\forall n$. Allora
 \begin{equation*}
@@ -1179,9 +1179,9 @@ con norma
 \end{aligned}
 \end{equation*}
 \end{definition}
-\begin{oss}
+\begin{obs}
 $\Vert f\Vert _{L^{\infty }} =\mathrm{ess\ sup}| f( x)| $.
-\end{oss}
+\end{obs}
 \begin{theorem}
 Sia $p\in [ 1,+\infty )$, $a,b\in L^{p}$, allora anche $( a+b) \in L^{p}$.
 \end{theorem}
@@ -1310,9 +1310,9 @@ Lo spazio $L^{2}( A)$ è uno spazio di Hilbert rispetto al prodotto scalare
 ( f,g)_{2} =\int _{A} f( x)\overline{g( x)} dx
 \end{equation*}
 \end{theorem}
-\begin{oss}
+\begin{obs}
 L'unico esponente coniugato con se stesso è $2$. Lo spazio $L^{2}$ è il giusto \textit{equilibrio}.
-\end{oss}
+\end{obs}
 \section{Serie di Fourier}
 
 Consideriamo come spazio di lavoro $L^{2}([ -\pi ,\pi ])$.
@@ -1352,7 +1352,7 @@ Possiamo "togliere" dalla formula il termine blu e accorparlo nella formula comp
 \begin{equation*}
 \boxed{\forall f\in L^{2}([ -\pi ,\pi ]) ,\ \ f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}[ a_{n}\cos( nx) +b_{n}\sin( nx)]}
 \end{equation*}
-\begin{oss}
+\begin{obs}
 [Convergenza $L^{2}$] L'uguaglianza vale in senso $L^{2}$, ovvero che se indichiamo con $S_{N}( x)$ le somme parziali
 \begin{equation*}
 S_{N}( x) =\frac{a_{0}}{2} +\sum\limits ^{N}_{n=1}[ a_{n}\cos( nx) +b_{n}\sin( nx)]
@@ -1361,8 +1361,8 @@ vale il limite\footnote{come di consueto, dire che qualcosa si avvicina a un'alt
 \begin{equation*}
 \lim\limits _{N\rightarrow +\infty }\int ^{\pi }_{-\pi }[ f( x) -S_{N}( x)]^{2} dx=0
 \end{equation*}
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 La funzione che scegliamo di approssimare deve essere periodica di periodo $2\pi $, si può chiaramente generalizzare il risultato a periodi generici $T$
 \begin{equation*}
 \forall f\in L^{2}\left(\left[ -\frac{T}{2} ,\frac{T}{2}\right]\right) ,\ \ f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\cos\left(\frac{2n\pi }{T} x\right) +b_{n}\sin\left(\frac{2n\pi }{T} x\right)\right]
@@ -1375,8 +1375,8 @@ quindi per esempio
 \begin{equation*}
 a_{n} =\frac{2}{T}\int ^{T/2}_{-T/2} f( x)\cos\left(\frac{2n\pi }{T} x\right) dx
 \end{equation*}
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 [Convergenza uniforme] Dal momento che
 \begin{equation*}
 | a_{n}\cos( nx) +b_{n}\sin( nx)| \leqslant | a_{n}| +| b_{n}| 
@@ -1385,7 +1385,7 @@ Per il test di Weierstrass vale la seguente relazione che ci permette di stabili
 \begin{equation*}
 \sum\limits ^{\infty }_{n=1}(| a_{n}| +| b_{n}| ) < \infty \ \ \Rightarrow \ \ f( x) \ \text{converge uniformemente}
 \end{equation*}
-\end{oss}
+\end{obs}
 \textit{Esempio.}
 
 Sia $f( x) =| x| $ nell'intervallo $[ -\pi ,\pi ]$ estesa con periodicità a tutto $\mathbb{R}$, calcoliamo lo sviluppo di Fourier.
@@ -1430,9 +1430,9 @@ e naturalmente anche $f( x)$. La condizione \textit{sufficiente} affinché la se
 \sum\limits ^{\infty }_{n=1} n^{k}(| a_{n}| +| b_{n}| ) < \infty 
 \end{equation*}
 \end{theorem}
-\begin{oss}
+\begin{obs}
 Lo usiamo normalmente solo come controllo per sapere se abbiamo calcolato bene la serie di Fourier, di solito sappiamo già se $f$ è derivabile o meno.
-\end{oss}
+\end{obs}
 Esiste una base alternativa, che troviamo se scriviamo le relazioni complesse
 \begin{equation*}
 \cos( nx) =\frac{e^{inx} +e^{-inx}}{2} \ \ \ \ \ \ \ \ \sin( nx) =\frac{e^{inx} -e^{-inx}}{2i}
@@ -1441,10 +1441,10 @@ allora la serie di Fourier si scrive nella sua \textbf{forma esponenziale}
 \begin{equation*}
 f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\frac{e^{inx} +e^{-inx}}{2} +b_{n}\frac{e^{inx} -e^{-inx}}{2i}\right] \ \ \Rightarrow \ \ \boxed{f( x) =\sum\limits ^{\infty }_{n=-\infty } c_{n} e^{inx}}
 \end{equation*}
-\begin{oss}
+\begin{obs}
 In generale questi coefficienti sono complessi $c_{n} =\overline{c_{-n}}$.
-\end{oss}
-\begin{oss}
+\end{obs}
+\begin{obs}
 La base $\left\{e^{inx}\right\}_{n\in \mathbb{Z}}$ è una base ortonormale
 \begin{equation*}
 \int ^{\pi }_{-\pi } e^{inx} e^{imx} dx=\int ^{\pi }_{-\pi } e^{i( n-m) x} dx=\begin{cases}
@@ -1461,7 +1461,7 @@ e i coefficienti saranno
 c_{n} =\frac{1}{2\pi }\int ^{\pi }_{-\pi } f( x) e^{-inx} dx
 \end{equation*}
 Il $-$ è dovuto al fatto che $g$ è coniugato nel prodotto scalare.
-\end{oss}
+\end{obs}
 
 
 
