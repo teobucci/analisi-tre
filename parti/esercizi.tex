@@ -1,40 +1,40 @@
 %! TeX root = ../main.tex
 
-%           TEMPLATE
+% TEMPLATE
 
-%           \chapter{Spazi campionari}
-%           
-%           \ParteEsercizi
-%           
-%           \Esercizio{(Nome di un esercizio speciale)}
-%           \Esercizio{}
-%           \Esercizio{}
-%           
-%           \ParteSoluzioni
-%           
-%           \Soluzione
-%           \Soluzione
-%           \Soluzione
-%           
-%           
-%           \chapter{Indipendenza}
-%           
-%           \ParteEsercizi
-%           
-%           \Esercizio{}
-%           \begin{enumerate}
-%               \item ine
-%               \item oh
-%               \item $\!\!\!\!{^*}$ jhk b
-%           \end{enumerate}
-%           \Esercizio{$*$}
-%           \Esercizio{}
-%           
-%           \ParteSoluzioni
-%           
-%           \Soluzione
-%           \Soluzione
-%           \Soluzione
+% \chapter{Spazi campionari}
+% 
+% \ParteEsercizi
+% 
+% \Esercizio{(Nome di un esercizio speciale)}
+% \Esercizio{}
+% \Esercizio{}
+% 
+% \ParteSoluzioni
+% 
+% \Soluzione
+% \Soluzione
+% \Soluzione
+% 
+% 
+% \chapter{Indipendenza}
+% 
+% \ParteEsercizi
+% 
+% \Esercizio{}
+% \begin{enumerate}
+%     \item ine
+%     \item oh
+%     \item $\!\!\!\!{^*}$ jhk b
+% \end{enumerate}
+% \Esercizio{$*$}
+% \Esercizio{}
+% 
+% \ParteSoluzioni
+% 
+% \Soluzione
+% \Soluzione
+% \Soluzione
 
 
 
@@ -91,12 +91,12 @@ g(z)=z^{2} \ \ \ \ \gamma _{1} =\left( t,it^{2}\right) \ \ \ \ \gamma _{2} =(t,i
 \end{equation*}
 \ParteSoluzioni
 \Soluzione
-\begin{theorem}
+\begin{thm}
 [Formule di Eulero] Il seno e il coseno complessi possono essere espressi come
 \begin{equation*}
 \sin z=\frac{e^{iz} -e^{-iz}}{2i} \ \ \cos z=\frac{e^{iz} +e^{-iz}}{2}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Si ha
 \begin{align*}
 \sin z=\frac{e^{iz} -e^{-iz}}{2i} & =2\\
@@ -125,30 +125,30 @@ e^{ix} =e^{i\pi /2} \ \ \Rightarrow \ \ x=\frac{\pi }{2} +2k\pi
 \end{equation*}
 L'equazione ha quindi \textit{infinite} soluzioni, date da infinite coppie di punti disposti su due rette parallele.
 \Soluzione
-\begin{definition}
+\begin{defn}
 La serie centra nel punto $z_{0}$ è data da
 \begin{equation*}
 \sum\limits ^{\infty }_{n=0} a_{n}\left( z-z_{0}\right)^{n}
 \end{equation*}
-\end{definition}
-\begin{nb}
+\end{defn}
+\begin{rem}
 Il raggio di convergenza è $R$, ed è centrato in $z_{0}$. In tutti i punti interni la serie converge, nei punti esterni non converge, sulla circonferenza nulla si può dire in generale.
-\end{nb}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 [Criterio del rapporto]
 \begin{equation*}
 \frac{1}{R} =\lim\limits _{n\rightarrow +\infty }\frac{\left| a_{n+1}\right| }{\left| a_{n}\right| }
 \end{equation*}
 Se il limite vale $\infty /0$, il raggio è $0/\infty $. Se il limite non esiste, il criterio fallisce.
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [Criterio della radice]
 \begin{equation*}
 \frac{1}{R} =\limsup\limits _{n\rightarrow \infty }\sqrt[n]{\left| a_{n}\right| }
 \end{equation*}
 Si noti che il limite superiore esiste sempre (a differenza del limite).
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 Serie prodotto secondo Cauchy
 \begin{equation*}
 A=\sum\limits ^{\infty }_{n=0} a_{n} ,\ \ B=\sum\limits ^{\infty }_{n=0} b_{n} \ \ \Rightarrow \ \ C=\sum\limits ^{\infty }_{n=0} a_{n}\sum\limits ^{\infty }_{n=0} b_{n} =\sum\limits ^{\infty }_{n=0} c_{n}
@@ -157,16 +157,16 @@ con
 \begin{equation*}
 c_{n} =\sum\limits ^{n}_{k=0} a_{k} b_{n-k}
 \end{equation*}
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 La serie $C$ converge assolutamente ad $A\cdot B$, per il teorema di Mertens, se almeno una fra $A$ e $B$ converge assolutamente.
 
 Se $A$ e $B$ hanno $R=+\infty ,$ si può ovviamente applicare il teorema di Mertens, e si può scrivere
 \begin{equation*}
 \sum\limits ^{\infty }_{n=0} a_{n}\sum\limits ^{\infty }_{n=0} b_{n} =\sum\limits ^{\infty }_{n,m=0} a_{n} b_{m}
 \end{equation*}
-\end{theorem}
-\begin{nb}
+\end{thm}
+\begin{rem}
 [Serie notevoli]
 \begin{align*}
 e^{z} & =\sum ^{\infty }_{n=0}\frac{z^{n}}{n!} & R=+\infty \\
@@ -176,7 +176,7 @@ e^{z} & =\sum ^{\infty }_{n=0}\frac{z^{n}}{n!} & R=+\infty \\
 \sin z & =\sum ^{\infty }_{n=0}\frac{(-1)^{n} z^{2n+1}}{(2n+1)!} & R=+\infty \\
 \frac{1}{1-z} & =\sum ^{\infty }_{n=0} z^{n} & R=1
 \end{align*}
-\end{nb}
+\end{rem}
 Separiamo in due termini la frazione
 \begin{equation*}
 f(z)=\frac{1}{z^{2} -3z+2} =\frac{1}{( z-1)( z-2)} =\frac{1}{z-2} -\frac{1}{z-1} =\frac{1}{1-z} -\frac{1}{2-z}
@@ -207,18 +207,18 @@ In alternativa, sfruttando Mertens
 f(z)=\frac{e^{z}}{1+2z} =\sum ^{\infty }_{n=0}\frac{z^{n}}{n!} \cdotp \sum ^{\infty }_{n=0} (-2z)^{n} =\sum ^{\infty }_{n,m=0}\frac{z^{n}}{n!} (-2)^{m} z^{m}
 \end{equation*}
 \Soluzione
-\begin{definition}
+\begin{defn}
 Una funzione si dice \textbf{armonica} se la somma delle sue derivate seconda è pari a zero.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Una funzione si dice \textbf{olomorfa} se è derivabile in senso complesso.
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 Sia $f(z)$ olomorfa: $f(z)=f(x,y)=u(x,y)+iv(x,y)$. Allora $u$ e $v$ sono armoniche, e l'una è l'armonica coniugata dell'altra, secondo le condizioni di Cauchy-Riemann
 \begin{equation*}
 u_{x} =v_{y} \ \ \ \ u_{y} =-v_{x}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Deriviamo la funzione
 \begin{gather*}
 u_{x} =-6xy=v_{y}\\
@@ -330,19 +330,19 @@ Calcolare la somma della serie
 all'interno del suo disco di convergenza.
 \ParteSoluzioni
 \Soluzione
-\begin{definition}
+\begin{defn}
 Siano $\Omega \subseteq \mathbb{C}$, $f:\Omega \rightarrow \mathbb{C}$ è derivabile, in senso complesso, in $z_{0}$ se $\exists $ finito
 \begin{equation*}
 \lim\limits _{h\rightarrow 0}\frac{f\left( z_{0} +h\right) -f\left( z_{0}\right)}{h} ,\ \ \ \ h\in \mathbb{C}
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Sia $\Omega \in \mathbb{C}$ aperto. Se $f$ è derivabile in ogni punto di $\Omega $, allora $f$ è \textbf{olomorfa} in $\Omega $, $f\in \mathcal{H}\left( \Omega \right)$.
-\end{definition}
-\begin{nb}
+\end{defn}
+\begin{rem}
 Se $\Omega \equiv \mathbb{C}$ allora $f$ è \textbf{intera}.
-\end{nb}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 [di Cauchy-Riemann] Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ definita come
 \begin{equation*}
 f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\mathrm{Re}\left( z\right) +i\mathrm{Im}\left( z\right)
@@ -354,8 +354,8 @@ u_{x}\left( x,y\right) =v_{y}\left( x,y\right)\\
 u_{y}\left( x,y\right) =-v_{x}\left( x,y\right)
 \end{cases}
 \end{equation}
-\end{theorem}
-\begin{obs}
+\end{thm}
+\begin{rem}
 Un altro modo per scrivere le (1) è
 \begin{equation*}
 \frac{\partial f}{\partial \overline{z}} =0
@@ -382,7 +382,7 @@ f_{x} =f'=u_{x} +iv_{x} =v_{y} -iu_{y}\\
 f_{y} =if'=iu_{x} -v_{x} =iv_{y} +u_{y}
 \end{cases}
 \end{equation*}
-\end{obs}
+\end{rem}
 Poniamo $z=x+iy$
 \begin{align*}
 f\left( z\right) & =\left( x+iy\right)^{2}\left( x^{2} +y^{2}\right) e^{i\left( x-iy\right)^{2}}\\
@@ -427,12 +427,12 @@ x_{2} =\frac{1}{2} \ \ \rightarrow \ \ y_{2} =-\frac{1}{2} \ \ \rightarrow \ \ z
 x_{3} =-\frac{1}{2} \ \ \rightarrow \ \ y_{3} =\frac{1}{2} \ \ \rightarrow \ \ z_{3} =-\frac{1}{2} +\frac{i}{2}
 \end{gather*}
 \Soluzione
-\begin{definition}
+\begin{defn}
 Le condizioni che verificano l'armonicità di $u$ sono
 \begin{equation}
 u\in C^{2}\left(\mathbb{R}^{2}\right) ,\ \Delta u=u_{xx} +u_{yy} =0
 \end{equation}
-\end{definition}
+\end{defn}
 La prima è certamente vera, controlliamo che il laplaciano di $u$ sia nullo
 \begin{equation*}
 \begin{array}{ r }
@@ -451,7 +451,7 @@ u_{y} =-v_{x}
 \end{cases} \ \ \Rightarrow \ \ v\left( x,y\right) =x^{2} -y^{2} +2y+c,\ \ c\in \mathbb{R}
 \end{equation*}
 \Soluzione
-\begin{definition}
+\begin{defn}
 Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ continua in $\Omega $, $\gamma :\left[ a,b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
 \begin{equation*}
 \int\nolimits _{\gamma } f\left( z\right) dz=\int\nolimits ^{b}_{a} f\left( \gamma \left( t\right)\right) \gamma '\left( t\right) dt
@@ -461,14 +461,14 @@ dove
 \gamma \left( t\right) =x\left( t\right) +iy\left( t\right)\\
 \gamma '\left( t\right) =x'\left( t\right) +iy'\left( t\right)
 \end{gather*}
-\end{definition}
-\begin{obs}
+\end{defn}
+\begin{rem}
 L'integrale curvilineo dipende dall'orientazione di $\gamma $
 \begin{equation*}
 \int\nolimits _{-\gamma } f\left( z\right) dz=-\int\nolimits _{\gamma } f\left( z\right) dz
 \end{equation*}
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ continua. TFAE (the followings are equivalent):
 
 1) $\int _{\gamma } f\left( z\right) dz$ dipende solo dagli estremi di $\gamma $
@@ -476,7 +476,7 @@ Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ cont
 2) $\forall \gamma $ chiusa $C^{1}$ a tratti si ha $\int _{\gamma } f\left( z\right) dz=0$
 
 3) $\exists F\in \mathcal{H}\left( \Omega \right) \cap C^{1}\left( \Omega \right)$ tale che $F'=f$ in $\Omega $
-\end{theorem}
+\end{thm}
 \textbf{\underline{1 modo}}
 \begin{align*}
 \int\nolimits _{\gamma }\left[\overline{z} +\left( z+1\right)^{7}\right] dz & =\int\nolimits ^{0}_{-1}\underbrace{\left[\left( t-it^{2}\right) +\left( t+it^{2} +1\right)^{7}\right]}_{f\left( \gamma \left( t\right)\right)}\underbrace{\left( 1+2it\right)}_{\gamma '\left( t\right)} dt\\
@@ -485,14 +485,14 @@ Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ cont
  & =\left[\frac{t^{2}}{2} +i\frac{t^{3}}{3} +\frac{t^{4}}{2} +\frac{\left( t+it^{2} +1\right)^{8}}{8}\right]^{0}_{-1}\\
  & =\cancel{\frac{1}{8}} -\left\{\frac{1}{2} -\frac{i}{3} +\frac{1}{2} +\cancel{\frac{1}{8}}\right\} =-1+\frac{i}{3}
 \end{align*}
-\begin{nb}
+\begin{rem}
 $\overline{z}$ non è olomorfa
 \begin{align*}
 \lim\limits _{h\rightarrow 0}\frac{f\left( z_{0} +h\right) -f\left( z_{0}\right)}{h} & =\lim\limits _{h\rightarrow 0}\frac{\overline{z_{0} +h} -\overline{z_{0}}}{h}\\
  & =\lim\limits _{h\rightarrow 0}\frac{\cancel{\overline{z_{0}}} +\overline{h} -\cancel{\overline{z_{0}}}}{h}
 \end{align*}
 non esiste finito. Intuiamo che anche $\left| z\right| ^{2} =z\overline{z}$ avrà problemi. In particolare si dimostra che $\left| z\right| ^{2}$ è derivabile in senso complesso solo nell'origine. Il suo analogo in $\mathbb{R}^{2}$ sarebbe $f\left( x,y\right) =x^{2} +y^{2}$, che però è derivabile ovunque.
-\end{nb}
+\end{rem}
 \textbf{\underline{2 modo}}
 
 Consideriamo le due parti di $f\left( z\right)$
@@ -848,13 +848,13 @@ che per $a\rightarrow +\infty $ tende a
 -\sin 1+\int\nolimits ^{+\infty }_{1}\frac{\sin x}{2x^{3/2}} dx
 \end{equation*}
 dobbiamo quindi studiare la convergenza di tale integrale.
-\begin{nb}
+\begin{rem}
 Convergenza di integrali.
 \begin{gather*}
 \int\nolimits ^{+\infty }_{1}\frac{1}{x^{\alpha }} dx\ \ \text{converge} \ \ \Leftrightarrow \ \ \alpha  >1\\
 \int\nolimits ^{1}_{0}\frac{1}{x^{\alpha }} dx\ \ \text{converge} \ \ \Leftrightarrow \ \ \alpha < 1
 \end{gather*}
-\end{nb}
+\end{rem}
 Pertanto
 \begin{equation*}
 \left| \int\nolimits ^{+\infty }_{1}\frac{\sin x}{2x^{3/2}} dx\right| \leqslant \int\nolimits ^{+\infty }_{1}\left| \frac{\sin x}{2x^{3/2}}\right| dx\leqslant \int\nolimits ^{+\infty }_{1}\frac{1}{2x^{3/2}} dx
@@ -922,12 +922,12 @@ Analizziamo cosa succede all'integrale di $f\left( z\right)$ sui vari percorsi
  & =-\int\nolimits ^{R}_{0} e^{it^{2} i} e^{i\frac{\pi }{4}} dt=-e^{i\frac{\pi }{4}}\int\nolimits ^{R}_{0} e^{-t^{2}} dt\xrightarrow{R\rightarrow +\infty } -e^{i\frac{\pi }{4}}\int\nolimits ^{+\infty }_{0} e^{-t^{2}} dt
 \end{align*}
 
-\begin{nb}
+\begin{rem}
 Ricordiamo l'integrale di Gauss
 \begin{equation*}
 \int\nolimits _{\mathbb{R}} e^{-x^{2}} dx=\sqrt{\pi }
 \end{equation*}
-\end{nb}
+\end{rem}
 
 Otteniamo che\begin{equation*}
 \int\nolimits _{\gamma _{3}} f\left( z\right) dz\xrightarrow{R\rightarrow +\infty } -e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}
@@ -1056,13 +1056,13 @@ f\left( z\right) & =-\frac{i}{2}\left\{\frac{1}{z-2i} \cdotp \sum\limits ^{\inft
  & =-\frac{i}{2}\left\{\sum\limits ^{\infty }_{n=1}\frac{\left( -2i\right)^{n}}{\left( z-2i\right)^{n+1}}\right\}
 \end{align*}
 \Soluzione
-\begin{theorem}
+\begin{thm}
 Sia $f\in \mathcal{H}\left( D\left( z_{0} ,R\right) \setminus \left\{z_{0}\right\}\right)$, cioè $z_{0}$ è una \textbf{singolarità isolata} per $f$. Allora localmente
 \begin{equation*}
 f\left( z\right) =\sum\limits ^{+\infty }_{n=-\infty } a_{n}\left( z-z_{0}\right)^{n}
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Sia $M=\left\{n\in \mathbb{Z} :n< 0,a_{n} \neq 0\right\}$ l'insieme degli indici della parte singolare dello sviluppo di Laurent. $z_{0}$ è
 
 \begin{itemize}
@@ -1085,14 +1085,14 @@ dove $-\min M=k$ è l'\textbf{ordine} del polo.
 \Leftrightarrow \ \ \forall \varepsilon \in \left( 0,R\right) \ \text{l'insieme immagine} \ f\left(\left\{0< \left| z-z_{0}\right| < \varepsilon \right\}\right) \ \text{è denso in} \ \mathbb{C}
 \end{gather*}
 \end{itemize}
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 Si dice residuo di $f$ in $z_{0}$
 \begin{equation*}
 \mathrm{Res}\left( f,z_{0}\right) :=a_{-1}
 \end{equation*}
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
 
 \begin{itemize}
@@ -1106,20 +1106,20 @@ Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \overline{D\left( z_{0} ,R\right
 \nexists \lim\limits _{z\rightarrow +\infty } f\left( z\right) \ \ \Leftrightarrow \ \ \left| M\right| =\infty 
 \end{equation*}
 \end{itemize}
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 Si dice residuo di $f$ in $\infty $
 \begin{equation*}
 \mathrm{Res}\left( f,\infty \right) :=-a_{-1}
 \end{equation*}
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 [di De l'Hôpital] Siano $f$ e $g$ funzioni analitiche in $B_{R}\left( z_{0}\right)$ tali che $f\left( z_{0}\right) =g\left( z_{0}\right) =0$ e $g'\left( z_{0}\right) \neq 0$ (quindi solo la forma $\frac{0}{0}$ al finito). Allora
 \begin{equation*}
 \lim\limits _{z\rightarrow z_{0}}\frac{f\left( z\right)}{g\left( z\right)} =\frac{f'\left( z_{0}\right)}{g'\left( z_{0}\right)}
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Le seguenti affermazioni sono equivalenti
 \begin{itemize}
 \item $f$ ha in $z_{0}$ un polo di ordine $m$
@@ -1127,8 +1127,8 @@ Le seguenti affermazioni sono equivalenti
 \item $f\left( z\right) \approx \left| z-z_{0}\right| ^{m}$ per $z\rightarrow z_{0}$
 \item $\frac{1}{f\left( z\right)}$ ha in $z_{0}$ uno zero di ordine $m$
 \end{itemize}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Siano $f(z)$ e $g(z)$ tali che $f\left( z_{0}\right) =0=g\left( z_{0}\right)$ e siano $n$ ed $m$ rispettivamente, gli ordini di $z_{0}$ come zero di $f$ e $g$. La funzione $\frac{f(z)}{g(z)}$ ha in $z_{0}$:
 
 \begin{itemize}
@@ -1136,20 +1136,20 @@ Siano $f(z)$ e $g(z)$ tali che $f\left( z_{0}\right) =0=g\left( z_{0}\right)$ e 
 \item una singolarità eliminabile che non è uno zero se e solo se $n=m$
 \item un polo d'ordine $m-n$ se e solo se $m >n$.
 \end{itemize}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
 \begin{equation*}
 \sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right) +\mathrm{Res}\left( f,\infty \right) =0
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
 \begin{equation*}
 \int\nolimits _{\partial D\left( 0,R\right)} f\left( z\right) dz=2\pi i\left[\sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right)\right]
 \end{equation*}
-\end{theorem}
-\begin{nb}
+\end{thm}
+\begin{rem}
 Come si calcolano i residui?
 Nei punti all'infinito si definisce
 \begin{equation*}
@@ -1173,14 +1173,14 @@ Nei punti $z_{0} \neq \infty $
 \end{enumerate}
 \item se è una singolarità essenziale bisogna per forza fare lo sviluppo di Laurent (che è valido in tutti i casi in realtà, ma è decisamente più laborioso la maggior parte delle volte)
 \end{enumerate}
-\end{nb}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Sia $F=\frac{f}{g}$. Se $f\in \mathcal{H}\left(\mathcal{U}\left( z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left( z_{0}\right) =0$ e $g'\left( z_{0}\right) \neq 0$), allora\begin{equation*}
 \mathrm{Res}\left(\frac{f}{g} ,z_{0}\right) =\frac{f\left( z_{0}\right)}{g'\left( z_{0}\right)}
 \end{equation*}
 
 Ricordiamo che se $f$ non si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ un polo del I ordine. Se $f$ si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ una singolarità eliminabile.
-\end{theorem}
+\end{thm}
 Le singolarità isolate sono $0,1,-1,\infty $.
 
 $z=0,z=1,z=-1$ annullano il denominatore con molteplicità $1$ e non annullano il numeratore, quindi sono degli $1$-poli. Per il teorema appena enunciato:
@@ -1197,18 +1197,18 @@ quindi $\infty $ è una singolarità eliminabile.
 \begin{equation*}
 \mathrm{Res}\left( F,\infty \right) =-\sum\limits ^{3}_{k=1}\mathrm{Res}\left( F,z_{k}\right) =-\left( 1-\frac{1}{2} -\frac{1}{2}\right) =0
 \end{equation*}
-\begin{obs}
+\begin{rem}
 Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\mathrm{Res}\left( f,\infty \right) =0$. Infatti $f\left( z\right) =\frac{1}{z}\rightarrow 0$ per $z\rightarrow +\infty $ quindi $\infty $ è singolarità eliminabile, ma $\mathrm{Res}\left( f,\infty \right) =-a_{-1} =-1\neq 0$.
-\end{obs}
-\begin{nb}
+\end{rem}
+\begin{rem}
 Nel nostro caso è vero perchè vale il seguente teorema.
-\end{nb}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\mathrm{Res}\left( f,\infty \right) =0$, perché
 \begin{equation*}
 f\left( z\right) =\sum\limits ^{-2}_{n=-\infty } a_{n} z^{n} \ \ \Rightarrow \ \ \mathrm{Res}\left( f,\infty \right) =-a_{-1} =0
 \end{equation*}
-\end{theorem}
+\end{thm}
 \Soluzione
 
 Le singolarità isolate di $f$ sono $i,\infty $.
@@ -1253,22 +1253,22 @@ $z=2$ è $1$-polo perché annulla il denominatore con molteplicità $1$ e non an
 $z=\infty $ è singolarità eliminabile perché $\exists \lim\limits _{z\rightarrow \infty } f\left( z\right) \in \mathbb{C}$.
 \item Ricordiamo che
 
-\begin{nb}
+\begin{rem}
 \begin{equation*}
 e^{z} =\sum\limits ^{\infty }_{n=0}\frac{z^{n}}{n!} ,\ \ z\in \mathbb{C} \ \ \ \ \ \ \ \ \frac{1}{1-z} =\sum\limits ^{\infty }_{n=0} z^{n} ,\ \ \left| z\right| < 1
 \end{equation*}
-\end{nb}
+\end{rem}
 
 Qui\begin{equation*}
 e^{\frac{1}{z-1}} =\sum\limits ^{\infty }_{h=0}\frac{1}{h!\left( z-1\right)^{h}}
 \end{equation*}mentre\begin{equation*}
 \frac{1}{z-2} =-\frac{1}{2-z} =-\frac{1}{1-\left( z-1\right)} =-\sum\limits ^{\infty }_{k=0}\left( z-1\right)^{k}
-\end{equation*}La prima serie converge in $\left| z-1\right|  >0$ e la seconda in $\left| z-1\right| < 1$. La serie di Laurent converge quindi in $0< \left| z-1\right| < 1$.\begin{nb}
+\end{equation*}La prima serie converge in $\left| z-1\right|  >0$ e la seconda in $\left| z-1\right| < 1$. La serie di Laurent converge quindi in $0< \left| z-1\right| < 1$.\begin{rem}
 Per scrivere la serie di Laurent sfruttiamo il prodotto alla Cauchy.
 \begin{equation*}
 \left(\sum\limits ^{\infty }_{n=0} a_{n}\right)\left(\sum\limits ^{\infty }_{n=0} b_{n}\right) =\sum\limits ^{\infty }_{n=0}\left(\sum\limits ^{n}_{k=0} a_{k} b_{n-k}\right)
 \end{equation*}
-\end{nb}Quindi\begin{equation*}
+\end{rem}Quindi\begin{equation*}
 f\left( z\right) =-\sum\limits ^{\infty }_{k=0}\sum\limits ^{k}_{h=0}\frac{\left( z-1\right)^{k-2h}}{h!}
 \end{equation*}
 \item $\mathrm{Res}\left( f,2\right) =e$ per la formula dei poli
@@ -1386,12 +1386,12 @@ Ci resta da far vedere che
 \int _{\sigma _{R}} f\left( z\right) dz\rightarrow 0
 \end{equation*}
 Non possiamo usare il Lemma di Jordan, perché al numeratore non c'è un esponenziale immaginario. Dobbiamo sporcarci le mani. In generale sarà un numero complesso, quindi conviene prenderne il modulo e maggiorarlo.
-\begin{nb}
+\begin{rem}
 \begin{equation*}
 \left| \int _{\gamma } f\left( z\right) dz\right| \leqslant M\cdotp \text{lunghezza}\left( \gamma \right)
 \end{equation*}
 dove $M$ è il massimo valore che $f$ può assumere lungo $\gamma $.
-\end{nb}
+\end{rem}
 Per la disuguaglianza triangolare
 \begin{equation*}
 \left| a\pm b\right| \geqslant \left| a\right| -\left| b\right| 
@@ -1409,7 +1409,7 @@ Pertanto il nostro integrale iniziale vale
 \int _{\mathbb{R}}\frac{1}{x^{4} +4a^{4}} dx=\frac{\pi }{4a^{3}}
 \end{equation*}
 \Soluzione
-\begin{theorem}
+\begin{thm}
 Lemmi di Jordan. Considerando
 \begin{equation*}
 g\left( z\right) e^{i\alpha z}
@@ -1418,7 +1418,7 @@ g\left( z\right) e^{i\alpha z}
 \item $\alpha  >0$ l'integrale sulla semicirconferenza di sopra tende a zero
 \item $\alpha < 0$ l'integrale sulla semicirconferenza di sotto tende a zero (quello sopra fa un casino dell'altro mondo)
 \end{itemize}
-\end{theorem}
+\end{thm}
 Analizziamo il caso $\lambda  >0$. Applichiamo il Lemma di Jordan, il quale ci dice che l'integrale lungo la semicirconferenza inferiore tende a $0$, quindi possiamo direttamente scrivere
 
 
@@ -1688,12 +1688,12 @@ e^{ix}\\
 Per risolverli basta porre $f\left( z\right) =R\left( z\right)$ oppure $f\left( z\right) =R\left( z\right) e^{iz}$ e si integra sui semicerchi, infine si fa tendere $R\rightarrow +\infty $.
 
 Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente Lemma. Si fa quindi tendere $\varepsilon \rightarrow 0^{+}$ e $R\rightarrow +\infty $.
-\begin{theorem}
+\begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \mathcal{H}\left( D\left( z_{0} ,r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }\left( t\right) =z_{0} +\varepsilon e^{it}$ con $t\in \left[ \alpha ,\beta \right]$. Allora
 \begin{equation*}
 \lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f\left( z\right) dz=\left( \beta -\alpha \right) i\cdotp \mathrm{Res}\left( f,z_{0}\right)
 \end{equation*}
-\end{theorem}
+\end{thm}
 \begin{figure}[htpb]
 	\centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -1896,12 +1896,12 @@ Infatti
  & \leqslant \int ^{\pi }_{0}\frac{\left| R^{k} e^{ikt}\right| }{\left| \alpha ^{2} +R^{2k} e^{i2kt}\right| }\left| Rie^{it}\right| dt\leqslant \int ^{\pi }_{0}\frac{R^{k+1}}{R^{2k} -\alpha ^{2}} dt\xrightarrow{R\rightarrow +\infty } 0
 \end{align*}
 dove è stata usata la disuguaglianza triangolare
-\begin{nb}
+\begin{rem}
 [Disuguaglianza triangolare] Per maggiorazioni e minorazioni ecco la forma più generale della disuguaglianza del triangolo
 \begin{equation*}
 \left| \left| a\right| -\left| b\right| \right| \leqslant \left| a\pm b\right| \leqslant \left| a\right| +\left| b\right| 
 \end{equation*}
-\end{nb}
+\end{rem}
 
 \Soluzione
 \begin{equation*}
@@ -2214,12 +2214,12 @@ Quando $\varepsilon \rightarrow 0^{+} ,R\rightarrow \infty $
 \begin{equation*}
 \int _{\gamma _{R,\varepsilon }} =\int ^{-1-\varepsilon }_{-R} +\int _{\sigma _{\varepsilon }} +\int ^{R}_{-1-\varepsilon } +\int _{\sigma _{R}}
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \mathcal{H}( D( z_{0} ,r) \setminus \{z_{0}\})$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }( t) =z_{0} +\varepsilon e^{it}$ con $t\in [ \alpha ,\beta ]$. Allora
 \begin{equation*}
 \lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f( z) dz=( \beta -\alpha ) i\cdotp \mathrm{Res}( f,z_{0})
 \end{equation*}
-\end{theorem}
+\end{thm}
 Per Jordan, quello su $\sigma _{R}$ tende a $0$.
 
 Per il lemma del cerchio piccolo, quello su $\sigma _{\varepsilon }$ tende a $( 0-\pi ) i\cdotp \mathrm{Res}( f,-1)$.
@@ -2906,7 +2906,7 @@ Rispondiamo al punto $2$.
 \Leftrightarrow q >2\ \left( +\infty \ \text{incluso}\right)
 \end{gather*}
 \Soluzione
-\begin{theorem}
+\begin{thm}
 [della convergenza dominata] Sia $\{f_{n}\}$ una successione di funzioni misurabili su un insieme $\Omega \subset \mathbb{R}^{n}$ misurabile. Supponiamo che siano verificate le seguenti due condizioni:\footnote{È importante che la $g$ non dipenda da $n$.}
 \begin{equation*}
 \begin{cases}
@@ -2918,7 +2918,7 @@ Allora
 \begin{equation*}
 f\in L^{1}( \Omega ) ,\ \ \ \ \lim _{n\rightarrow +\infty }\int _{\Omega } f_{n}( x) dx=\int _{\Omega }\lim _{n\rightarrow +\infty } f_{n}( x) dx
 \end{equation*}
-\end{theorem}
+\end{thm}
 \begin{enumerate}
 \item Le $f_{n}$ sono continue su $E=( 0,+\infty )$ e quindi misurabili su $E$
 
@@ -2960,11 +2960,11 @@ Per $n\geqslant 2$\begin{equation*}
 $\overset{\text{Dom}}{\Rightarrow }\lim\limits _{n\rightarrow +\infty }\int ^{+\infty }_{0} f_{n}( x) dx=\int ^{+\infty }_{0}\lim\limits _{n\rightarrow +\infty } f_{n}( x) dx=0$.
 \end{enumerate}
 \Soluzione
-\begin{definition}
+\begin{defn}
 \begin{equation*}
 f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{p}} f\ ( p\in [ 1,+\infty )) \ \ \Leftrightarrow \ \ \Vert f_{n} -f\Vert ^{p}_{L^{p}}\xrightarrow{n\rightarrow +\infty } 0
 \end{equation*}
-\end{definition}
+\end{defn}
 \begin{enumerate}
 \item Fisso $x_{0} \in [ 0,+\infty )$
 \begin{enumerate}
@@ -3458,7 +3458,7 @@ Per $\alpha \in [ 0,4)$\begin{equation*}
 \end{equation*}
 \end{enumerate}
 \Soluzione
-\begin{theorem}
+\begin{thm}
 Sia $f:\mathbb{R}\rightarrow \mathbb{R}$, $T$-periodica, allora la serie di Fourier associata ad $f$ è\begin{equation*}
 F( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\cos\left(\frac{2\pi n}{T} x\right) +b_{n}\sin\left(\frac{2\pi n}{T} x\right)\right]
 \end{equation*}
@@ -3471,7 +3471,7 @@ a_{n} =\frac{2}{T}\int ^{\frac{T}{2}}_{-\frac{T}{2}} f( x)\cos\left(\frac{2\pi n
 \textbf{NB.} Se $f$ è pari, il seno è dispari, $P\cdotp D=D\Rightarrow b_{n} =0\ \forall n\geqslant 1$.
 
 \textbf{NB.} Se $f$ è dispari, il coseno è pari, $D\cdotp P=D\Rightarrow a_{n} =0\ \forall n\geqslant 0$.
-\end{theorem}
+\end{thm}
 \begin{enumerate}
 \item Disegnamo la funzione
 
@@ -3645,9 +3645,9 @@ f(x)=\begin{cases}
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
 \Esercizio{}
-\begin{definition}
+\begin{defn}
 [Spazio delle funzioni test] $\varphi \in D( A)$ se $\varphi \in C^{\infty }( A)$, $\exists K$ compatto tale per cui $\varphi ( x) =0,\forall x\notin K$
-\end{definition}
+\end{defn}
 \textit{Esempio.}
 \begin{equation*}
 \varphi ( x) =\begin{cases}
@@ -3656,16 +3656,16 @@ e^{-\frac{1}{1-x^{2}}} , & | x| < 1\\
 \end{cases}
 \end{equation*}
 \fg{0.7}{11-3-1}
-\begin{definition}
+\begin{defn}
 [Distribuzione] Si chiamano distribuzioni gli oggetti $T\in D'( A)$. $T$ è un funzionale lineare continuo su $D( A)$. Quindi so dire cosa fa $T$ a una funzione test $\varphi $ tramite il prodotto di dualità
 \begin{equation*}
 T( \varphi ) =\langle T,\varphi \rangle 
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Convergenza di funzioni test] Diciamo che $\varphi _{k}\xrightarrow{D( A)} \varphi $ se $\forall \alpha ,D^{\alpha } \varphi _{k}\rightarrow D^{\alpha } \varphi $.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Prodotto di dualità] Data $T\in D'( A)$, se $T\in L^{1}_{\mathrm{loc}}( A) \Rightarrow \langle T,\varphi \rangle =\int _{A} T( x) \varphi ( x) dx$. Se invece $T\notin L^{1}_{\mathrm{loc}} \Rightarrow \langle T,\varphi \rangle $ lo dobbiamo definire manualmente, per esempio la Delta di Dirac che è definita come
 \begin{equation*}
 \langle \delta ,\varphi \rangle =\varphi ( 0)
@@ -3674,10 +3674,10 @@ Possiamo anche traslarla
 \begin{equation*}
 \langle \delta _{x_{0}} ,\varphi \rangle =\varphi ( x_{0})
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Convergenza di distribuzioni] Diciamo che $T_{n}\xrightarrow{D'( A)} T$ se $\langle T_{n} ,\varphi \rangle \rightarrow \langle T,\varphi \rangle $, $\forall \varphi \in D( A)$.
-\end{definition}
+\end{defn}
 Studiare la convergenza in distribuzione della seguente successione
 \begin{equation*}
 f_{n} (x)=ne^{-n|x|}
@@ -4554,12 +4554,12 @@ Ciò è coerente con come era stata definita la $g$
 
 Il salto verso l'alto in $x=0$ non lo possiamo vedere perché le funzioni test sono nulle prima di zero.
 \Soluzione
-\begin{nb}
+\begin{rem}
 Si può dimostrare che se $v\in D'(\mathbb{R})$, $\psi \in C^{\infty }(\mathbb{R}) \Rightarrow \psi v\in D'(\mathbb{R})$ e il suo effetto su una funzione test $\varphi $ è
 \begin{equation*}
 \langle \psi v,\varphi \rangle :=\langle v,\psi \varphi \rangle 
 \end{equation*}
-\end{nb}
+\end{rem}
 Quindi
 \begin{equation*}
 \langle x\delta '_{0} (x),\varphi \rangle =\langle \delta '_{0} (x),x\varphi ( x) \rangle =-\langle \delta _{0} ,x\varphi '( x) +\varphi ( x) \rangle =-\varphi ( 0) =\langle -\delta _{0} ,\varphi \rangle 
@@ -4758,7 +4758,7 @@ f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\
 \end{equation*}
 \chapter{Esercitazione 7 - Potrich}
 \ParteEsercizi
-\begin{definition}
+\begin{defn}
 [Distribuzione] Una distribuzione è un operatore $u$ che a ogni funzione test $\varphi $ (funzione $C^{\infty }(\mathbb{R})$ il cui supporto è un compatto $\Omega $ contenuto in $\mathbb{R}$) associa un numero, reale o complesso, $\langle u,\varphi \rangle $ chiamato \textbf{dualità} tra $u$ e $\varphi $ tale che:
 \begin{equation*}
 \begin{array}{ l }
@@ -4766,30 +4766,30 @@ f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\
 \varphi _{j}\rightarrow \varphi \ \text{in} \ D( \Omega ) \ \ \Rightarrow \ \ \langle u,\varphi _{j} \rangle \rightarrow \langle u,\varphi \rangle 
 \end{array}
 \end{equation*}
-\end{definition}
-\begin{obs}
+\end{defn}
+\begin{rem}
 [Delta di Dirac] L'esempio fondamentale di distribuzione in $D'\left(\mathbb{R}^{n}\right)$ è la Delta di Dirac, denotata $\delta $, e così definita
 \begin{equation*}
 \langle \delta ,\varphi \rangle =\varphi ( 0) \ \ \forall \varphi \in D\left(\mathbb{R}^{n}\right)
 \end{equation*}
-\end{obs}
-\begin{definition}
+\end{rem}
+\begin{defn}
 Se \ $u\in D'(\mathbb{R})$, allora la derivata distribuzionale di $u$ è la distribuzione $u'\in D'(\mathbb{R})$ definita univocamente da
 \begin{equation*}
 \int _{\mathbb{R}} u'\varphi =-\int _{\mathbb{R}} u\varphi '\ \ \forall \varphi \in D(\mathbb{R})
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\infty }( \Omega )$: se $\psi \in C^{\infty }( \Omega )$ e $u\in D'(\mathbb{R})$, allora $( \psi u) \in D'( \Omega )$ è la distribuzione tale che
 \begin{equation*}
 \langle \psi u,\varphi \rangle =\langle u,\psi \varphi \rangle \ \ \forall \varphi \in D\left(\mathbb{R}^{n}\right)
 \end{equation*}
-\end{definition}
-\begin{nb}
+\end{defn}
+\begin{rem}
 \begin{equation*}
 \langle u,\varphi \rangle :=\int _{\Omega } u( x) \varphi ( x) dx,\ \ u\in D'( \Omega ) ,\ \varphi \in D( \Omega )
 \end{equation*}
-\end{nb}
+\end{rem}
 \Esercizio{}
 
 Provare che valgono le seguenti identità in $D'(\mathbb{R})$:
@@ -4967,7 +4967,7 @@ Per mostrare la convergenza di questi due integrali posso applicare la convergen
 \begin{equation*}
 \left| \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}}\right| \leqslant \frac{\Vert \varphi \Vert _{\infty }}{1+t^{2}} \in L^{1}(\mathbb{R})
 \end{equation*}
-\begin{nb}
+\begin{rem}
 \begin{gather*}
 \frac{1}{1+t^{2}} \in L^{1}(\mathbb{R}) \ \ \ \ \ \ \ \ \int _{\mathbb{R}}\frac{1}{1+t^{2}} dt=[\arctan t]^{+\infty }_{-\infty } =\frac{\pi }{2} -\left( -\frac{\pi }{2}\right) =\pi \\
 \\
@@ -4982,7 +4982,7 @@ Allora
 I_{1} +I_{2} \leqslant \pi \varepsilon +2\Vert \varphi \Vert _{\infty } \varepsilon 
 \end{equation*}
 Per l'arbitrarietà di $\varepsilon $ segue la tesi.
-\end{nb}
+\end{rem}
 \Soluzione
 
 Studiamo le $f_{n}( x)$
@@ -5020,7 +5020,7 @@ Analizziamo in $L^{p}$
 \begin{equation*}
 \Vert g_{n} -g\Vert ^{p}_{L^{p}} =\Vert g_{n}\Vert ^{p}_{L^{p}} =\int ^{7}_{0}| \sin( nx)| ^{p} dx\overset{nx=y}{=}\frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy
 \end{equation*}
-\begin{obs}
+\begin{rem}
 $a >0$
 \begin{equation*}
 a\int ^{ka}_{0}| \sin y| ^{p} dy=\frac{2h\pi }{k}\int ^{2h\pi }_{0}| \sin y| ^{p} dy+\frac{1}{k}\int ^{ka}_{2h\pi }| \sin y| ^{p} dy
@@ -5032,7 +5032,7 @@ Se $k\rightarrow +\infty $ allora $\frac{2h\pi }{k}\rightarrow 1$ e
 \int ^{2h\pi }_{0}| \sin y| ^{p} dy=\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \forall h
 \end{equation*}
 mentre l'altro addendo è infinitesimo.
-\end{obs}
+\end{rem}
 Quindi
 \begin{equation*}
 \frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy\xrightarrow{n\rightarrow +\infty } 7\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \Rightarrow \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{p}(\mathbb{R})}} 0
@@ -5535,13 +5535,13 @@ Quindi, la trasformata sarà pari a
 \end{equation*}
 \chapter{Esercitazione 8 - Potrich}
 \ParteEsercizi
-\begin{definition}
+\begin{defn}
 Sia $u\in L^{1}(\mathbb{R})$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\mathbb{R}\rightarrow \mathbb{C}$ definita da
 \begin{equation*}
 \hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx
 \end{equation*}
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 [Proprietà] Ecco alcune utili proprietà della trasformata di Fourier.
 \begin{itemize}
 \item Scaling\begin{equation*}
@@ -5561,7 +5561,7 @@ u( x)\cos( \xi _{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}( \xi -\xi _{0}) +
 \widehat{u'}( \xi ) =i\xi \hat{u}( \xi )
 \end{equation*}
 \end{itemize}
-\end{theorem}
+\end{thm}
 \Esercizio{Una trasformata notevole}
 
 Calcolare la trasformata di Fourier di
@@ -5680,13 +5680,13 @@ Osserviamo che $| f( z)| \sim \frac{1}{z^{2}}$ per $| z| \rightarrow +\infty $, 
 \begin{equation*}
 \int ^{+\infty }_{-\infty } e^{-i\xi x}\frac{1}{1+x^{2}} dx=2\pi i\cdotp \mathrm{Res}\left(\frac{e^{-i\xi z}}{1+z^{2}} ,z=i\right) =\pi e^{\xi } \ \ \forall \xi < 0
 \end{equation*}
-\begin{nb}
+\begin{rem}
 Se $f$ è pari, allora $\hat{f}$ è pari.
-\end{nb}
+\end{rem}
 I valori per $\xi  >0$ si ottengono da quelli negativi imponendo che $\hat{f}$ sia pari
-\begin{nb}
+\begin{rem}
 $f\in L^{1} \Rightarrow \hat{f}$ è continua.
-\end{nb}
+\end{rem}
 Il valore in $0$ si ottiene per continuità.
 \begin{equation*}
 \Rightarrow \ \ \boxed{\hat{f}( \xi ) =\pi e^{-| \xi | } \ \ \forall \xi \in \mathbb{R}}
@@ -5984,12 +5984,12 @@ allora
  & =\frac{4}{\xi }\left\{-\frac{1}{\xi }\cos \xi +\frac{1}{\xi ^{2}}\sin( \xi )\right\}\\
  & =-\frac{4}{\xi ^{2}}\cos \xi +\frac{4}{\xi ^{3}}\sin \xi =4\left(\frac{\sin \xi -\xi \cos \xi }{\xi ^{3}}\right)
 \end{align*}
-\begin{theorem}
+\begin{thm}
 [Antitrasformata di Fourier] Siano $u,\hat{u} \in L^{1}(\mathbb{R})$
 \begin{equation*}
 \boxed{u( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\hat{u}( \xi ) d\xi \ \ \forall x\in \mathbb{R}}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Allora, ricordando che $\hat{f}$ è pari
 \begin{align*}
 f( x) & =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\hat{f}( \xi ) d\xi \\
@@ -6011,7 +6011,7 @@ Troviamo quindi il l'integrale richiesto, a meno di un segno
 \ParteEsercizi
 
 Richiami di teoria sulla Trasformata di Laplace.
-\begin{definition}
+\begin{defn}
 [Funzione di Heaviside] Si definisce
 \begin{equation*}
 H( t) =\begin{cases}
@@ -6019,7 +6019,7 @@ H( t) =\begin{cases}
 0, & t< 0
 \end{cases}
 \end{equation*}
-\end{definition}
+\end{defn}
 \begin{figure}[htpb]
 	\centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -6344,7 +6344,7 @@ Soluzione nella parte esercizi.
 \Soluzione
 
 \underline{\textbf{Con l'Analisi 2.}}
-\begin{theorem}
+\begin{thm}
 Ricordiamo questo risultato di Analisi 2.
 \begin{equation*}
 y'-\alpha y=f
@@ -6353,7 +6353,7 @@ L'integrale generale è
 \begin{equation*}
 y( x) =Ce^{\alpha x} +y^{\star }( x)
 \end{equation*}
-\end{theorem}
+\end{thm}
 Nel nostro caso
 \begin{equation*}
 f( x) =\begin{cases}
@@ -6463,12 +6463,12 @@ e^{-2x} , & x\geqslant 0\\
 \end{cases}
 \end{equation*}
 calcolare $\displaystyle f*f$ e la sua trasformata di Fourier $\displaystyle \mathcal{F}( f*f)$.
-\begin{nb}
+\begin{rem}
 [Prodotto di Convoluzione] È definito da
 \begin{equation*}
 ( u*v)( x) =\int _{\mathbb{R}} u( x-y) v( y) dy=\int _{\mathbb{R}} u( y) v( x-y) dy
 \end{equation*}
-\end{nb}
+\end{rem}
 \Esercizio{}
 
 Determinare la trasformata di Fourier di
@@ -6493,32 +6493,32 @@ Stabilire se $\displaystyle f_{0} \in L^{1}(\mathbb{R})$ e/o se $\displaystyle f
 \item Calcolare $\mathcal{F}\{f'_{0}\}$ e $\mathcal{F}\{f_{0}\}$.
 \end{enumerate}
 \Esercizio{}
-\begin{definition}
+\begin{defn}
 Sia $\displaystyle f:\mathbb{R} \ \rightarrow \mathbb{C}$ si dice Laplace-trasformabile se:
 \begin{equation*}
 \mathrm{supp} f\subset [ 0,+\infty ) \ \ \ \ \land \ \ \ \ \exists \lambda \in \mathbb{R} :e^{-\lambda t} f( t) \in L^{1}(\mathbb{R})
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Si dice Ascissa di convergenza di $\displaystyle f$:
 \begin{equation*}
 \lambda _{f} :=\inf\left\{\lambda \in \mathbb{R} :e^{-\lambda t} f( t) \in L^{1}(\mathbb{R})\right\}
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Sia $\displaystyle f$ una funzione Laplace-trasformabile, allora la funzione:
 \begin{equation*}
 \boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f}}
 \end{equation*}
 si dice Trasformata di Laplace di $\displaystyle f$.
-\end{definition}
-\begin{nb}
+\end{defn}
+\begin{rem}
 [Trasformate di Laplace notevoli] Si ha
 \begin{equation*}
 \mathcal{L}\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f} =0
 \end{equation*}
-\end{nb}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 [Proprietà] Valgono
 \begin{itemize}
 \item Riscalamento\begin{equation*}
@@ -6540,7 +6540,7 @@ si dice Trasformata di Laplace di $\displaystyle f$.
 \mathcal{L}\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\mathcal{L}\{f( t)\} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
 \end{equation*}
 \end{itemize}
-\end{theorem}
+\end{thm}
 Detta $\displaystyle H( x)$ la funzione di Heaviside, calcolare la trasformata di Laplace della funzione
 \begin{equation*}
 f( t) =H( t-1) te^{2t}
@@ -6590,9 +6590,9 @@ quindi
 ( f*f)( x) & =\int _{\mathbb{R}} f( x-y) f( x) dy=\int ^{x}_{0} e^{-2( x-y)} e^{-2y} dy\\
  & =\int ^{x}_{0} e^{-2x} \ dy=e^{-2x}\int ^{x}_{0} dy=xe^{-2x}
 \end{align*}
-\begin{theorem}
+\begin{thm}
 Date $\displaystyle u,v\in \mathcal{S}(\mathbb{R}) \Rightarrow \ \widehat{u*v} =\hat{u} \cdot \hat{v}$.
-\end{theorem}
+\end{thm}
 \begin{align*}
 \hat{f}( \xi ) & =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=\int _{\mathbb{R}} e^{-i\xi x} H( x) e^{-2x} dx=\int ^{+\infty }_{0} e^{-i\xi x} e^{-2x} dx\\
  & =\int ^{+\infty }_{0} e^{-x( i\xi +2)} dx=\left[ -\frac{e^{-x( i\xi +2)}}{i\xi +2}\right]^{+\infty }_{0} =\frac{1}{2+i\xi }\\
@@ -6607,7 +6607,7 @@ $f$ pari, allora $\hat{f}$ pari.
 \begin{equation*}
 \hat{f}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=...=4\frac{\sin( \xi ) -\xi \cos( \xi )}{\xi ^{3}}
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 [Identità di Plancherel] Se $\displaystyle u\in L^{2}\left(\mathbb{R}^{n}\right)$
 \begin{equation*}
 \Vert \hat{u}\Vert _{L^{2}} =( 2\pi )^{n/2}\Vert u\Vert _{L^{2}}
@@ -6616,7 +6616,7 @@ oppure elevando tutto alla seconda
 \begin{equation*}
 \Vert \hat{u}\Vert ^{2}_{L^{2}} =( 2\pi )^{n}\Vert u\Vert ^{2}_{L^{2}} \ \ \Rightarrow \ \ \int _{\mathbb{R}^{n}}| \hat{u}( \xi )| ^{2} d\xi =( 2\pi )^{n}\int _{\mathbb{R}^{n}}| u( x)| ^{2} dx
 \end{equation*}
-\end{theorem}
+\end{thm}
 Sfrutto il fatto che $f$ e $\hat{f}$ sono pari:
 \begin{align*}
 \int _{\mathbb{R}}| f( x)| ^{2} dx & =\int ^{1}_{-1}\left( 1-x^{2}\right)^{2} dx=2\int ^{1}_{0}\left( 1-x^{2}\right)^{2} dx\\
@@ -6631,12 +6631,12 @@ Usando Plancherel
 32\cdotp I=( 2\pi )^{n}\int _{\mathbb{R}}| f( x)| ^{2} dx\overset{n=1}{=} 2\pi \cdotp \frac{16}{15} \ \ \Rightarrow \ \ I=\frac{\pi }{15}
 \end{equation*}
 \Soluzione
-\begin{theorem}
+\begin{thm}
 [Trasformata della derivata] Date $u,u'\in L^{1}(\mathbb{R})$ e $u\in C^{1}$
 \begin{equation*}
 \mathcal{F}\left\{\frac{d^{n}}{dx^{n}} u( x)\right\} =( i\xi )^{n} \cdotp \mathcal{F}\{u( x)\}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \begin{enumerate}
 \item Nell'esercitazione scorsa abbiamo visto che:\begin{equation*}
 \hat{f}_{1}( \xi ) =\pi e^{-| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
@@ -7205,7 +7205,7 @@ s( s+1)^{2} Y( s) & =s^{2} +1+3s\\
 Y( s) & =\frac{s^{2} +1+3s}{s( s+1)^{2}}
 \end{align*}
 Antitrasformiamo, cerchiamo di ricondurci a qualcosa di noto coi fratti semplici
-\begin{nb}
+\begin{rem}
 Per scomporre in fratti semplici bisogna seguire alcune regole. Se nella scomposizione del polinomio al denominatore compare:
 \begin{equation*}
 \begin{array}{ l l }
@@ -7222,7 +7222,7 @@ x^{2} +bx+c\\
 \end{array} & \frac{A_{1} x+B_{1}}{x^{2} +bx+c} +\frac{A_{2} x+B_{2}}{\left( x^{2} +bx+c\right)^{2}} +\dotsc +\frac{A_{n} x+B_{n}}{\left( x^{2} +bx+c\right)^{n}}
 \end{array}
 \end{equation*}
-\end{nb}
+\end{rem}
 \begin{equation*}
 \frac{s^{2} +1+3s}{s( s+1)^{2}} =\frac{A}{s} +\frac{Bs+C}{( s+1)^{2}} =\frac{A( s+1)^{2} +s( Bs+C)}{s( s+1)^{2}} =\dotsc 
 \end{equation*}

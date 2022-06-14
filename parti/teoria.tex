@@ -7,13 +7,13 @@ Studieremo funzioni complesse $f:\mathbb{C}\rightarrow \mathbb{C}$, lavorando co
 z=x+iy=( x,y)
 \end{equation*}
 La differenza tra i numeri complessi e $\mathbb{R}^{2}$ è che i numeri complessi costituiscono un \textbf{campo}, ovvero rispetta certe proprietà e dove sono definiti determinati concetti. $\mathbb{R}^{2}$ è uno spazio vettoriale, non un campo. Questa struttura fa una differenza molto grossa in termini di differenziabilità.
-\begin{definition}
+\begin{defn}
 $f$ è differenziabile in senso complesso se $f( z+h)$ si può scrivere come
 \begin{equation*}
 f(z+h) =f(z) +f'(z) h+o(|h|)
 \end{equation*}
 per $h\rightarrow 0$, ricordando che $f'( z) \in \mathbb{C}$ e $h\in \mathbb{C}$.
-\end{definition}
+\end{defn}
 Quando diciamo che un numero complesso $h\rightarrow 0$ intendiamo che, detto $h=h_{R} +ih_{I}$, si ha $h^{2}_{R} +h^{2}_{I}\rightarrow 0$, entrambe le parti tendono a $0$. Otteniamo poi che
 \begin{equation*}
 \lim _{h\rightarrow 0}\frac{f( z+h) -f( z)}{h} =f'( z)
@@ -48,9 +48,9 @@ Uguagliando le rispettive parti reali e immaginarie otteniamo le \textbf{Equazio
 \begin{equation*}
 \boxed{u_{x} =v_{y}} \ \ \ \ \boxed{u_{y} =-v_{x}}
 \end{equation*}
-\begin{definition}
+\begin{defn}
 [Funzione Olomorfa] Sia $f:A\subset \mathbb{C}\rightarrow \mathbb{C}$ con $A$ \textbf{aperto}. Se $f\ $è derivabile in $A$ allora $f$ si dice \textbf{olomorfa} in $A$.
-\end{definition}
+\end{defn}
 È un concetto molto più forte della semplice derivabilità, anche se la definizione la fa sembrare la stessa cosa. Se una funzione è olomorfa, allora è differenziabile infinite volte (molto buono). Inoltre, se una funzione è olomorfa, allora può essere scritta come serie di potenze.
 
 Vale il seguente risultato
@@ -127,22 +127,22 @@ diverge se $z=1$, ma converge se $z=-1$
 
 diverge con $| z|  >1$, ma converge se $| z| \leqslant 1$
 \end{itemize}
-\begin{definition}
+\begin{defn}
 [Funzione Analitica] Una funzione è \textbf{analitica} se si può scrivere localmente in serie di potenze. Se il raggio della serie è infinito allora si dice anche \textbf{intera}.
-\end{definition}
-\begin{obs}
+\end{defn}
+\begin{rem}
 Osserviamo che si possono estendere al campo complesso tutte le consuete serie di McLaurin
 \begin{equation*}
 \sin z=\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n+1}}{( 2n+1) !} \ \ \ \ \cos z=\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n}}{( 2n) !} \ \ \ \ e^{z} =\sum\limits ^{\infty }_{n=0}\frac{z^{n}}{n!}
 \end{equation*}
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 Ricordiamo anche la forma esponenziale di un numero complesso e la formula di Eulero
 \begin{equation*}
 e^{i\vartheta } =\cos \vartheta +i\sin \vartheta 
 \end{equation*}
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 Consideriamo ora due serie, rispettivamente reale e complessa
 \begin{equation*}
 \frac{1}{1+x^{2}} =\sum\limits ^{\infty }_{n=0}\left( -x^{2}\right)^{n} \ \ \ \ R=1
@@ -152,10 +152,10 @@ il cui raggio di convergenza $R$ vale $1$
 \frac{1}{1+z^{2}} =\sum\limits ^{\infty }_{n=0}\left( -z^{2}\right)^{n}
 \end{equation*}
 Notiamo qui che il denominatore si annulla per $z=\pm i$, quindi il disco di convergenza deve per forza avere raggio $1$, abbiamo quindi un'ulteriore giustificazione al perché la sua restrizione ai numeri reale non può convergere oltre $1$. Vedremo a breve che $\pm 1$ si chiameranno poli.
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Se una funzione è differenziabile, non è detto che esista automaticamente un'estensione olomorfa\footnote{Per esempio $f( x) =| x| x$.}, ma se esiste è unica.
-\end{theorem}
+\end{thm}
 \section{Logaritmo complesso}
 
 Notiamo che in $\mathbb{C}$ si può risolvere $\sin z=2$ con le formule di Eulero. Una peculiarità da notare è il modo in cui il logaritmo viene gestito, come conseguenza importante del fatto che
@@ -207,12 +207,12 @@ L'integrale su una curva è dato da
 \end{equation*}
 valgono le proprietà di linearità, cambio verso, e le consuete maggiorazioni.
 \section{Teorema dell'Integrale Nullo di Cauchy}
-\begin{theorem}
+\begin{thm}
 [dell'Integrale Nullo di Cauchy] Sia $A\subset \mathbb{C}$ semplicemente connesso e $f\in H( A)$, allora
 \begin{equation*}
 \int _{\gamma } f( z) dz=0,\ \ \forall \gamma \ \text{chiusa} ,\gamma \subset A
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Semplificata al caso in cui $f\in C^{1}$.
@@ -236,12 +236,12 @@ Se ci sono \textit{buchi} nell'insieme $A$ si può semplicemente girarci intorno
 f\in H\left( A\setminus \bigcup\nolimits _{i} A_{i}\right) \cap C^{0}\left(\overline{A\setminus \bigcup\nolimits _{i} A_{i}}\right) \ \ \Rightarrow \ \ \int _{\partial A} f( z) dz+\sum\nolimits _{i}\int _{\partial A_{i}} f( z) dz=0
 \end{equation*}
 \section{Formula Integrale di Cauchy}
-\begin{theorem}
+\begin{thm}
 Se $f\in H( A) \cap C^{0}(\overline{A})$ e $A$ semplicemente connesso, allora $\forall z\in A$
 \begin{equation*}
 \boxed{f( z) =\frac{1}{2\pi i}\int _{\gamma }\frac{f( w)}{w-z} dw,\ \ \gamma =\partial A}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Poniamo $w=z+re^{i\vartheta } ,r >0,\vartheta \in [ 0,2\pi ]$, da cui $dw=rie^{i\vartheta } d\vartheta $, calcoliamo l'espressione
@@ -256,12 +256,12 @@ ma per continuità possiamo far tendere $r\rightarrow 0$
 \section{Esistenza di primitive}
 
 Non è sufficiente la continuità.
-\begin{theorem}
+\begin{thm}
 Sia $f\in C^{0}( A)$, $A$ aperto. Allora
 \begin{equation*}
 f\ \text{ammette primitiva} \ \ \Leftrightarrow \ \ udx-vdy\ \text{e} \ udy+vdx\ \text{sono esatte}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{itemize}
 \item $( \Rightarrow )$ consideriamo $\gamma $ chiusa\begin{equation*}
@@ -285,12 +285,12 @@ possiamo passare al limite\begin{gather*}
 \end{gather*}
 \end{itemize}
 \section{Serie di potenze}
-\begin{theorem}
+\begin{thm}
 [di Weierstrass] Sia $f\in H( A)$, $A$ aperto. Allora $f$ è analitica, ovvero si può scrivere localmente in serie di potenze
 \begin{equation*}
 f(z)=\sum ^{\infty }_{n=0} a_{n}( z-z_{0})^{n} ,\ \ \ \ a_{n} =\frac{1}{2\pi i}\int _{\gamma }\frac{f(w)}{( w-z_{0})^{n+1}} dw
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Per la formula di Cauchy
@@ -362,12 +362,12 @@ f^{(n)}( z_{0}) =\frac{n!}{2\pi i}\int _{\gamma }\frac{f(w)}{( w-z_{0})^{n+1}} d
 Vi sono dei punti particolari in certe funzioni dove non c'è convergenza della serie, ad esempio in $f( z) =\frac{1}{1-z}$ il punto $1$ è critico, e la serie geometrica associata non converge in tale punto (e di conseguenza nel disco). Queste "ostruzioni" sono di vario tipo e vengono opportunamente classificate.
 
 Per risolvere il problema si introduce la Serie di Laurent, una nuova espansione su una corona circolare $A$ (quindi \textit{non} semplicemente connessa) centrata nel punto stesso che compromette l'espansione in serie di Taylor. Il teorema inoltre non richiede che la funzione $f$ sia olomorfa su tutto il dominio ma esclusivamente sulla corona circolare $A$.
-\begin{theorem}
+\begin{thm}
 [Serie di Laurent] Sia $f\in H( A)$, $A=\{z\in \mathbb{C} :r< | z-z_{0}| < R\}$, $\gamma $ una curva regolare semplice chiusa in $A$ che concateni $z_{0}$. Allora
 \begin{equation*}
 \boxed{\forall z\in A,\ \ f( z) =\sum\limits ^{\infty }_{n=-\infty } a_{n}( z-z_{0})^{n} \ \ \ \ a_{n} =\frac{1}{2\pi i}\int _{\gamma }\frac{f( w)}{( w-z_{0})^{n+1}} dw}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Si noti che la curva è \textit{qualsiasi} purché concatenata con $z_{0}$; ciò deriva dal fatto che la funzione è olomorfa nel dominio dove si esegue l'integrazione, e pertanto l'integrale non varia per deformazione continua.
 
 Il teorema di Laurent è pertanto una generalizzazione del teorema di Weierstrass, in cui si include anche una somma sui \textbf{termini negativi}. Sono proprio le potenze negative, infatti, a dare informazioni sul comportamento delle singolarità.
@@ -451,9 +451,9 @@ f( z) =\frac{\sin z}{z} =\frac{1}{\cancel{z}}\sum\limits ^{\infty }_{n=0}\frac{(
 \end{equation*}
 Abbiamo potuto eliminare la singolarità!
 \subsection{Classificazione delle singolarità}
-\begin{definition}
+\begin{defn}
 [Punto singolare] Un punto $z_{0}$ si dice \textbf{singolare} (o critico) per una funzione $f( z)$ se non può essere incluso in nessun disco di convergenza della serie di potenze.
-\end{definition}
+\end{defn}
 Classifichiamo i punti singolari in base ai coefficienti $a_{n} \neq 0,n< 0$
 \begin{itemize}
 \item se non ce n'è \textit{nessuno:} \textbf{singolarità eliminabile} (esiste un prolungamento continuo)
@@ -478,19 +478,19 @@ in questo caso $z_{0}$ è un polo.
 z_{0} =0,\ \ f( z) =\sin\left(\frac{1}{z}\right) =\sum\limits ^{\infty }_{n=0}\frac{\left(\frac{1}{z}\right)^{2n+1}( -1)^{n}}{( 2n+1) !} =\sum\limits ^{-\infty }_{n=0}\frac{z^{2n-1}( -1)^{n}}{( 1-2n) !}
 \end{equation*}
 in questo caso $z_{0}$ è una singolarità essenziale.
-\begin{definition}
+\begin{defn}
 [Punto singolare isolato] Un punto singolare $z_{0}$ per $f( z)$ si dice \textbf{isolato} esiste un intorno che non contiene punti critici per $f$.
-\end{definition}
+\end{defn}
 In $\mathbb{C}$ non ha senso parlare di $\pm \infty $, essendoci infinite direzioni, tuttavia è utile considerare tutti i punti infinitamente distanti \textit{come un unico punto all'infinito}, più nello specifico vale la seguente definizione.
-\begin{definition}
+\begin{defn}
 [Punto singolare all'infinito] Il punto all'infinito $z_{\infty }$ è singolare per $f( z)$ se $z_{0} =0$ è singolare per $f\left(\frac{1}{z}\right)$.
-\end{definition}
+\end{defn}
 \textit{Esempio.}
 
 La funzione $f( z) =e^{z}$ ha singolarità isolata all'infinito, mentre $g( z) =\frac{1}{\sin z}$ ha punto all'infinito non isolato.
 
 
-\begin{theorem}
+\begin{thm}
 [Caratterizzazione dei poli] Sia $z_{0} \neq \infty $ un punto singolare isolato per $f$. Allora le seguenti affermazioni sono equivalenti:
 \begin{enumerate}
 \item $f$ ha un polo di ordine $n$ in $z_{0}$;
@@ -502,19 +502,19 @@ La funzione $f( z) =e^{z}$ ha singolarità isolata all'infinito, mentre $g( z) =
 \end{equation*}
 \item $\varphi (z)=\frac{1}{f(z)}$ ha in $z_{0}$ uno zero di ordine $n$.
 \end{enumerate}
-\end{theorem}
+\end{thm}
 
-\begin{theorem}
+\begin{thm}
 [Caratterizzazione delle singolarità] Valgono le seguenti affermazioni, con $z_{0}$ punto singolare isolato per $f$ :
 \begin{enumerate}
 \item $\lim _{z\rightarrow z_{0}} f(z)=\infty \Leftrightarrow z_{0}$ è un polo.
 \item $\lim _{z\rightarrow z_{0}} f(z)$ esiste finito $\Leftrightarrow z_{0}$ è una singolarità eliminabile.
 \item $\lim _{z\rightarrow z_{0}} f(z)$ non esiste $\Leftrightarrow z_{0}$ è una singolarità essenziale.
 \end{enumerate}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [Caratterizzazione delle singolarità essenziali] Sia $z_{0}$ una singolarità essenziale isolata per $f(z)$. Allora la funzione $\frac{1}{f(z)}$ ha in $z_{0}$ una singolarità essenziale oppure un punto di accumulazione di poli.
-\end{theorem}
+\end{thm}
 In generale si può sempre studiare la serie di Laurent centrata nel punto, ma ciò può risultare complicato e lungo da fare, specialmente se le singolarità sono molte.
 \section{Teorema dei residui}
 
@@ -523,24 +523,24 @@ Il coefficiente $a_{-1}$ della serie di Laurent centrata in $z_{0}$ è molto imp
 a_{n} =\frac{1}{2\pi i}\int _{\gamma }\frac{f( w)}{( w-z_{0})^{n+1}} dw\ \ \Rightarrow \ \ \mathrm{Res}( f,z_{0}) =a_{-1} =\frac{1}{2\pi i}\int _{\gamma } f( w) dw
 \end{equation*}
 Il seguente teorema semplifica tantissimi calcoli di integrali, anche reali.
-\begin{theorem}
+\begin{thm}
 [dei Residui] Sia $A\subset \mathbb{C}$ aperto, $f\in H( A\setminus \{z_{1} ,\dotsc ,z_{n}\} \cap C^{0}(\overline{A} \setminus \{z_{1} ,\dotsc ,z_{n}\})$. Allora
 \begin{equation*}
 \boxed{\int _{\gamma } f( z) dz=2\pi i\cdotp \sum\limits ^{n}_{j=1}\mathrm{Res}( f,z_{j})}
 \end{equation*}
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 Se consideriamo una $\gamma $ chiusa che contiene tutte le singolarità di $f( z)$ al finito, e $f\in H(| z|  >R)$, se consideriamo lo sviluppo di $f$ in un intorno dell'infinito, allora definiamo il \textbf{residuo all'infinito}
 \begin{equation*}
 \mathrm{Res}( f,\infty ) :=-a_{-1} =\frac{1}{2\pi i}\int _{-\gamma } f( w) dw
 \end{equation*}
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 Se abbiamo un numero finito di singolarità, la somma di tutte, sia al finito che all'infinito, vale zero.
 \begin{equation*}
 \sum\limits ^{n}_{j=1}\mathrm{Res}( f,z_{j}) +\mathrm{Res}( f,\infty ) =0
 \end{equation*}
-\end{theorem}
+\end{thm}
 \subsection{Come calcolare i residui}
 
 Se $z_{0} \neq \infty $
@@ -563,31 +563,31 @@ Consideriamo un generico arco di circonferenza:
 \begin{equation*}
 C_{R}( \vartheta _{1} ,\vartheta _{2}) =\left\{z\in \mathbb{C} :z=Re^{i\vartheta } ,\vartheta \in [ \vartheta _{1} ,\vartheta _{2}]\right\}
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 Sia $f(z)$ continua su $C_{R}$. Allora:
 \begin{equation*}
 \left| \int _{C_{R}} f(z)dz\right| \leqslant R( \vartheta _{2} -\vartheta _{1})\max_{|z\in C_{R}}| f(z)| 
 \end{equation*}
 dove $R( \vartheta _{2} -\vartheta _{1})$ non è altro che la lunghezza dell'arco.
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [Lemma di Jordan al cerchio grande] Sia $K >0$ e sia $f(z)$ continua per $|z| >K$. Se $\exists \alpha  >1,c >0$ tali che $|f(z)|\leqslant \frac{c}{|z|^{\alpha }} ,\ \forall z:|z| >K,$ allora:
 \begin{equation*}
 \lim _{R\rightarrow \infty }\int _{C_{R}( \vartheta _{1} ,\vartheta _{2})} f(z)dz=0\ \ \forall \vartheta _{1} ,\vartheta _{2}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{equation*}
 \left| \int f( z) dz\right| \leqslant R( \vartheta _{2} -\vartheta _{1})\frac{c}{|z|^{\alpha }} =R( \vartheta _{2} -\vartheta _{1})\frac{c}{R^{\alpha }}\xrightarrow[\alpha  >1]{R\rightarrow \infty } 0
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 [Lemma di Jordan al cerchio piccolo] Con analoghe ipotesi ma con $\alpha < 1$
 \begin{equation*}
 \lim _{R\rightarrow 0}\int _{C_{R}( \vartheta _{1} ,\vartheta _{2})} f(z)dz=0\ \ \forall \vartheta _{1} ,\vartheta _{2}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Tuttavia $f$ può andare a zero anche più lentamente per ottenere dei risultati interessanti
-\begin{theorem}
+\begin{thm}
 [Lemmi di Jordan] Sia $f(z)$ continua per $|z| >K.$ Siano inoltre $\vartheta _{1} ,\vartheta _{2} \in [0,2\pi ]$ e $a >0,$tali che:
 \begin{equation*}
 \lim _{R\rightarrow \infty }\sup _{z\in C_{R}}| f( z)| =0
@@ -615,7 +615,7 @@ Allora:
 \lim _{R\rightarrow \infty }\int _{C_{R}\left(\frac{\pi }{2} ,\frac{3}{2} \pi \right)} e^{az} f(z)dz=0
 \end{equation*}
 \end{enumerate}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione di }$( 1)$
 
 Sia $z=Re^{i\vartheta }$, $\vartheta \in [ 0,\pi ]$, sostituiamo
@@ -646,14 +646,14 @@ Per ipotesi $M\rightarrow 0$ e $a >0$, da cui la tesi.
 
 
 \chapter{Spazi di Banach e Spazi di Hilbert}
-\begin{definition}
+\begin{defn}
 [Norma] Sia $X$ uno spazio vettoriale. Si dice \textbf{norma} un'applicazione $\Vert \cdotp \Vert :X\rightarrow [ 0,+\infty )$ che verifica, $\forall \lambda \in \mathbb{R}$, $\forall x,y\in X$
 \begin{itemize}
 \item $\Vert x\Vert =0\Leftrightarrow x=0$
 \item $\Vert \lambda x\Vert =| \lambda | \Vert x\Vert $
 \item $\Vert x+y\Vert \leqslant \Vert x\Vert +\Vert y\Vert $
 \end{itemize}
-\end{definition}
+\end{defn}
 
 \textit{Esempio.}
 
@@ -670,25 +670,25 @@ L'applicazione $\Vert \cdotp \Vert :\mathbb{R}^{n}\rightarrow [ 0,+\infty )$ def
 \Vert x\Vert _{\infty } =\max\{| x_{1}| ,\dotsc ,| x_{n}| \}
 \end{equation*}
 è la norma infinito.
-\begin{definition}
+\begin{defn}
 [Spazio normato] Uno spazio vettoriale dotato di norma si dice \textbf{spazio normato}.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Metrica] La funzione $d:X\times X\rightarrow [ 0,+\infty )$ definita da $( u,v) =\Vert u-v\Vert $ è detta \textbf{metrica} indotta dalla norma, mentre la quantità $\Vert u-v\Vert $ è detta \textbf{distanza}.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Spazio metrico] Uno spazio vettoriale dotato di metrica si dice \textbf{spazio metrico}, quindi uno spazio normato è anche metrico.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Successione di Cauchy] Sia $V$ uno spazio normato. Una successione $x_{n}$ è di Cauchy se $\forall \varepsilon  >0$, $\exists N$ tale che $\forall n,m\geqslant N$ si ha $\Vert x_{n} -x_{m}\Vert < \varepsilon $. Ogni successione convergente è di Cauchy.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Spazio completo] Uno spazio metrico si dice \textbf{completo} se ogni successione di Cauchy è convergente.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Spazio di Banach] Uno spazio normato si dice di Banach se è completo.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Prodotto scalare] Il prodotto scalare è un'applicazione $( \cdotp ,\cdotp ) :X\times X\rightarrow \mathbb{C}$ tale che
 \begin{itemize}
 \item $( x,x) =0\Leftrightarrow x=0$
@@ -701,20 +701,20 @@ L'applicazione $\Vert \cdotp \Vert :\mathbb{R}^{n}\rightarrow [ 0,+\infty )$ def
 \item $( y,c_{1} x_{1} +c_{2} x_{2}) =\overline{c_{1}}( y,x_{1}) +\overline{c_{2}}( y,x_{2})$
 \end{itemize}
 \end{itemize}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Spazio di Hilbert] Uno spazio vettoriale \textit{dotato di prodotto scalare} (che induce quindi una norma $\Vert x\Vert =\sqrt{( x,x)}$ e una distanza) \textit{e completo} rispetto a quella norma si dice \textbf{spazio di Hilbert}.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Definiamo lo spazio delle successioni convergenti
 \begin{equation*}
 l^{2} =\left\{\{a_{n}\} \subset \mathbb{C} :\sum\limits ^{\infty }_{n=0}| a_{n}| ^{2} < +\infty \right\}
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Spazio convesso] Dato uno spazio di Hilbert $H$, $K\subset H$, $K$ è \textbf{convesso} se $\forall x,y\in K,\forall \lambda \in [ 0,1]$ allora $\lambda x+( 1-\lambda ) y\in K$.
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 [di proiezione] Sia $H$ di Hilbert e $C\subset H$ convesso e chiuso. Sia $\overline{x} \notin C$, allora $\exists P\in C$ tale che
 \begin{equation*}
 \Vert \overline{x} -P\Vert \leqslant \Vert \overline{x} -x\Vert \ \ \forall x\in C
@@ -723,7 +723,7 @@ e
 \begin{equation*}
 (\overline{x} -P,x-p) \leqslant 0\ \ \forall x\in C
 \end{equation*}
-\end{theorem}
+\end{thm}
 
 
 \begin{figure}[htpb]
@@ -805,14 +805,14 @@ Consideriamo $M\subset H$ sottospazio chiuso (essenziale per includere anche il 
 \end{figure}
 \FloatBarrier
 
-\begin{definition}
+\begin{defn}
 [Spazio ortogonale] Sia $H$ di Hilbert, sia $M\subset H$ un sottospazio chiuso. Chiamiamo spazio ortogonale a $M$ lo spazio
 \begin{equation*}
 M^{\perp } =\{x\in H:( x,y) =0,\forall y\in M\}
 \end{equation*}
-\end{definition}
+\end{defn}
 Uno spazio di Hilbert è la più naturale estensione di uno spazio euclideo a dimensione infinita.
-\begin{theorem}
+\begin{thm}
 [di proiezione] Sia $H$ di Hilbert, sia $M\subset H$ un sottospazio \textbf{chiuso proprio}. Allora
 \begin{enumerate}
 \item $\forall x\in H,\exists !$ decomposizione in $\mathbb{R}^{n}$ generica\begin{equation*}
@@ -828,61 +828,61 @@ tale che $P_{x} \in M$, $Q_{x} \in M^{\perp }$.
 \Vert x\Vert ^{2} =\Vert P\Vert ^{2} +\Vert Q\Vert ^{2}
 \end{equation*}
 \end{enumerate}
-\end{theorem}
+\end{thm}
 
 Il teorema ha come corollario del quarto punto che proiettando due punti non li possiamo allontanare più di quanto non lo erano
 \begin{equation*}
 \Vert P_{x} -P_{y}\Vert \leqslant \Vert x-y\Vert \ \ \forall x,y
 \end{equation*}
-\begin{obs}
+\begin{rem}
 I casi banali sono
 \begin{gather*}
 x\in M\Rightarrow P=x,Q=0\\
 x\in M^{\perp } \Rightarrow P=0,Q=x
 \end{gather*}
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 [Disuguaglianza di Schwarz]
 \begin{equation*}
 | ( x,y)| \leqslant \Vert x\Vert \Vert y\Vert \ \ \forall x,y\in H
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [Identità del parallelogramma] La somma dei quadrati sulle diagonali è uguale alla somma dei quadrati su tutti i lati
 \begin{equation*}
 \Vert x+y\Vert ^{2} +\Vert x-y\Vert ^{2} =2\left(\Vert x\Vert ^{2} +\Vert y\Vert ^{2}\right)
 \end{equation*}
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 [Spazio separabile] Uno spazio normato $X$ si dice separabile se $\exists Y\subset X$, $Y$ numerabile e tale che $\overline{Y} =X$.
-\end{definition}
+\end{defn}
 In uno spazio separabile si ha che $\forall x\in X,\exists \{y_{n}\} \subset Y$ tale che $y_{n}\rightarrow x$, cioè nel senso della norma $\Vert y_{n} -x\Vert \rightarrow 0$. Si dice che $Y$ è denso in $X$, ovvero possiamo sempre trovare una successione approssimante.
-\begin{definition}
+\begin{defn}
 [Base hilbertiana] Sia $H$ di Hilbert a dimensione infinita. Un insieme di vettori $\{e_{k}\} \subset H$ tali che $( e_{j} ,e_{k}) =\delta _{jk}$ si dice \textbf{base hilbertiana} se $\forall x\in H,\exists \{\lambda _{n}\} \subset \mathbb{C}$ tale che $x=\sum ^{\infty }_{n=1} \lambda _{n} e_{n}$.
-\end{definition}
-\begin{obs}
+\end{defn}
+\begin{rem}
 Non essendo finita, non è una base nel senso dell'algebra lineare, ma è la cosa più vicina in dimensione infinita.
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 È l'equivalente di una base ortonormale.
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 Se $n=\mathrm{dim}( V) < \infty $, $\{e_{1} ,\dotsc ,e_{n}\}$, $( e_{j} ,e_{k}) =\delta _{jk}$, allora $\forall v\in V\Rightarrow v=\sum ^{n}_{k=1} \lambda _{k} e_{k}$.
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 Dire
 \begin{equation*}
 x=\sum ^{\infty }_{n=1} \lambda _{n} e_{n} \ \ \text{è equivalente a dire} \ \ \lim\limits _{n\rightarrow +\infty }\left\Vert x-\sum ^{n}_{k=1} \lambda _{k} e_{k}\right\Vert =0
 \end{equation*}
 usando la norma indotta dal prodotto scalare.
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Ogni spazio di Hilbert separabile ammette base Hilbertiana.
-\end{theorem}
-\begin{obs}
+\end{thm}
+\begin{rem}
 Il concetto di separabilità è un concetto abbastanza debole con poche richieste, soddisfatte nella stragrande maggioranza dei casi.
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Sia $H$ separabile e sia $\{e_{n}\}$ una base hilbertiana. Allora $\forall x\in H$, $x$ si scrive come \textbf{serie di Fourier generalizzata}
 \begin{equation*}
 x=\sum ^{\infty }_{n=1}( x,e_{n}) e_{n}
@@ -895,7 +895,7 @@ inoltre vale l'\textbf{identità di Parseval}
 \begin{equation*}
 \Vert x\Vert ^{2} =\sum\limits ^{\infty }_{n=1}| ( x,e_{n})| ^{2}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Semi-dimostrazione.}
 
 Ammettendo base hilbertiana, esistono $\lambda _{n}$ tali che
@@ -906,9 +906,9 @@ moltiplichiamo \textit{a destra} scalarmente per un generico $e_{k}$
 \begin{equation*}
 ( x,e_{k}) =\left(\sum ^{\infty }_{n=1} \lambda _{n} e_{n} ,e_{k}\right) =\sum ^{\infty }_{n=1} \lambda _{n}( e_{n} ,e_{k})\overset{\delta _{nk}}{=} \lambda _{k}
 \end{equation*}
-\begin{obs}
+\begin{rem}
 È una semidimostrazione in quanto la linearità non vale per la serie che va a $\infty $, bisognerebbe passare al limite ma ci accontentiamo.
-\end{obs}
+\end{rem}
 Mostriamo ora Parseval
 \begin{gather*}
 \begin{aligned}
@@ -917,12 +917,12 @@ Mostriamo ora Parseval
 \end{aligned}\\
 \qed 
 \end{gather*}
-\begin{theorem}
+\begin{thm}
 Sia $H$ di Hilbert separabile. Allora $H$ è isomorfo a $l^{2}$. In particolare $\exists L:H\rightarrow l^{2}$, lineare, biiettiva ed isometria.
-\end{theorem}
-\begin{obs}
+\end{thm}
+\begin{rem}
 Quindi tutti gli spazi di Hilbert sono isomorfi tra di loro.
-\end{obs}
+\end{rem}
 \textit{Dimostrazione.}
 
 Essendo separabile esiste una BH\footnote{Base Hilbertiana.} $\{e_{n}\}$.
@@ -993,20 +993,20 @@ Consideriamo dei generici insiemi
 | C| =\inf\left\{| P| ,P\in \text{pluri-intervalli} ,P\supset C\right\}
 \end{equation*}
 \end{itemize}
-\begin{obs}
+\begin{rem}
 Gli insiemi aperti non sono chiusi per intersezioni numerabili.
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 Gli insiemi chiusi non sono chiusi per unioni numerabili.
-\end{obs}
+\end{rem}
 Dato un insieme limitato qualunque, si dice
 \begin{itemize}
 \item \textbf{misura esterna} di $E$, $| E| ^{*} =\inf\left\{| A| ,A\ \text{aperto} ,A\supset E\right\}$
 \item \textbf{misura interna} di $E$, $| E| _{*} =\sup \left\{| C| ,C\ \text{chiuso} ,C\subset E\right\}$
 \end{itemize}
-\begin{definition}
+\begin{defn}
 Un insieme $E$ si dice \textbf{misurabile secondo Lebesgue} se $| E| ^{*} =| E| _{*}$.
-\end{definition}
+\end{defn}
 Si ha quasi sempre questa condizione, tranne in casi patologici.
 
 \textbf{Proprietà.}
@@ -1016,20 +1016,20 @@ Siano $E_{1} ,\dotsc ,E_{n}$ un'infinità numerabile di insiemi misurabili.
 \item allora $\bigcup ^{\infty }_{n=1} E_{n}$ è misurabile $\left| \bigcup ^{\infty }_{n=1} E_{n}\right| \leqslant \sum\nolimits ^{\infty }_{n=1}| E_{n}| $, l'uguaglianza solo se sono disgiunti
 \item allora $\bigcap ^{\infty }_{n=1} E_{n}$ è misurabile.
 \end{itemize}
-\begin{definition}
+\begin{defn}
 Un insieme \textbf{illimitato} è misurabile se $E\cap B_{r}$ è misurabile. Si definisce $| E| :=\lim\limits _{r\rightarrow +\infty }| E\cap B_{r}| $.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Una funzione si dice\textbf{ a scala} se la sua immagine è finita.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Una funzione $f:A\subset \mathbb{R}^{n}\rightarrow \mathbb{R}$ è \textbf{misurabile secondo Lebesgue} se l'insieme
 \begin{equation*}
 \{x\in A:f( x) < c\}
 \end{equation*}
 è misurabile $\forall c\in \mathbb{R}$.
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Si dice integrale di Lebesgue di $f:A\subset \mathbb{R}^{n}\rightarrow [ 0,+\infty )$ e $A$ misurabile
 \begin{equation*}
 \int _{A} f( x) dx=\sup \int _{A} g( x) dx
@@ -1038,7 +1038,7 @@ dove $g( x)$ è una funzione a scala tale che $g( x) \leqslant f( x)$ e inoltre 
 \begin{equation*}
 \int _{A} g( x) dx=\sum\limits ^{N}_{i=1} g_{i}| A_{i}| ,\ \ g( x) =g_{i} \ \forall x\in A_{i}
 \end{equation*}
-\end{definition}
+\end{defn}
 
 
 \begin{figure}[htpb]
@@ -1091,9 +1091,9 @@ dove $g( x)$ è una funzione a scala tale che $g( x) \leqslant f( x)$ e inoltre 
 \end{figure}
 \FloatBarrier
 
-\begin{obs}
+\begin{rem}
 È una definizione più pulita di quella di Riemann. Il dominio e la funzione possono essere illimitati (e naturalmente l'integrale può valere $\infty $).
-\end{obs}
+\end{rem}
 Per definirlo per funzioni anche negative procediamo come segue.
 
 Sia $f:A\subset \mathbb{R}^{n}\rightarrow \mathbb{C}$
@@ -1111,12 +1111,12 @@ Allora definiamo
 \begin{equation*}
 \int _{A} f( x) dx=\int _{A} R^{+}( x) dx-\int _{A} R^{-}( x) dx+i\left[\int _{A} I^{+}( x) dx-\int _{A} I^{-}( x) dx\right]
 \end{equation*}
-\begin{definition}
+\begin{defn}
 Una funzione $f:A\subset \mathbb{R}^{n}\rightarrow \mathbb{C}$ si dice \textbf{Lebesgue-integrabile}
 \begin{equation*}
 \boxed{f\in L^{1} \ \ \Leftrightarrow \ \ \int _{A}| f( x)| dx< +\infty }
 \end{equation*}
-\end{definition}
+\end{defn}
 Per esempio la funzione
 \begin{equation*}
 f( x) =\begin{cases}
@@ -1125,32 +1125,32 @@ f( x) =\begin{cases}
 \end{cases}
 \end{equation*}
 non è integrabile secondo Riemann, ma il suo integrale di Lebesgue esiste e vale $0$.
-\begin{obs}
+\begin{rem}
 Se $f( x) =g( x) ,\forall x\in A$ tranne al più un insieme di misura nulla, allora
 \begin{equation*}
 \int _{A} f( x) dx=\int _{A} g( x) dx\ \ \text{quasi ovunque}
 \end{equation*}
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 [della Convergenza Monotona] Siano $f_{n} :A\rightarrow [ 0,+\infty )$. Sia $\lim\limits _{n\rightarrow +\infty } f_{n} =f( x)$ quasi ovunque, $f_{n}( x) \leqslant f_{n+1}( x) ,\forall x$ quasi ovunque e $\forall n$. Allora
 \begin{equation*}
 \boxed{\lim\limits _{n\rightarrow +\infty }\int _{A} f_{n}( x) dx=\int _{A}\lim\limits _{n\rightarrow +\infty } f_{n}( x) dx=\int _{A} f( x) dx}
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [della Convergenza Dominata] Siano $f_{n} :A\rightarrow \mathbb{C}$. Sia $\lim\limits _{n\rightarrow +\infty } f_{n} =f( x)$ quasi ovunque, $\exists g\in L^{1}( A)$ tale che $| f_{n}( x)| \leqslant g( x)$ quasi ovunque e $\forall n$. Allora
 \begin{equation*}
 \boxed{\lim\limits _{n\rightarrow +\infty }\int _{A} f_{n}( x) dx=\int _{A}\lim\limits _{n\rightarrow +\infty } f_{n}( x) dx=\int _{A} f( x) dx}
 \end{equation*}
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [di Fubini] Sia $f:\mathbb{R}^{n+m}\rightarrow \mathbb{C} ,f\in L^{1}\left(\mathbb{R}^{n+m}\right)$. Sia $f=f( x,y)$ con $x\in \mathbb{R}^{n}$ e $y\in \mathbb{R}^{m}$. Allora
 \begin{equation*}
 \boxed{\int _{\mathbb{R}^{n+m}} f( x,y) dxdy=\int _{\mathbb{R}^{n}}\left[\int _{\mathbb{R}^{m}} f( x,y) dy\right] dx}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \section{Spazi $L^{p}$}
-\begin{definition}
+\begin{defn}
 [Spazio $L^{p}$] Sia $A\subset \mathbb{R}^{n}$ misurabile. Sia $1\leqslant p< \infty $. Definiamo lo spazio
 \begin{equation*}
 L^{p}( A) =\left\{f:A\rightarrow \mathbb{C} \ \text{misurabili, tali che} \ \int _{A}| f( x)| ^{p} dx< \infty \right\}
@@ -1159,8 +1159,8 @@ con norma
 \begin{equation*}
 \Vert f\Vert _{L^{p}( A)} =\left(\int _{A}| f( x)| ^{p} dx\right)^{1/p}
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 Se $p=\infty $ si definisce
 \begin{equation*}
 L^{\infty }( A) =\left\{f:A\rightarrow \mathbb{C} \ \text{misurabili, tali che} \ \exists c\geqslant 0:| f( x)| \leqslant c\ \text{q.o. in} \ A\right\}
@@ -1169,8 +1169,8 @@ con norma
 \begin{equation*}
 \Vert f\Vert _{L^{\infty }( A)} =\inf\left\{c\geqslant 0:| f( x)| \leqslant c\ \text{q.o. in} \ A\right\}
 \end{equation*}
-\end{definition}
-\begin{definition}
+\end{defn}
+\begin{defn}
 [Estremo superiore essenziale] Consideriamo lo spazio $L^{\infty }( A)$, definiamo estremo superiore essenziale
 \begin{equation*}
 \begin{aligned}
@@ -1178,13 +1178,13 @@ con norma
  & =\inf\left\{c\in \mathbb{R} :| f( x)| < c\ \text{q.o. in} \ A\right\}
 \end{aligned}
 \end{equation*}
-\end{definition}
-\begin{obs}
+\end{defn}
+\begin{rem}
 $\Vert f\Vert _{L^{\infty }} =\mathrm{ess\ sup}| f( x)| $.
-\end{obs}
-\begin{theorem}
+\end{rem}
+\begin{thm}
 Sia $p\in [ 1,+\infty )$, $a,b\in L^{p}$, allora anche $( a+b) \in L^{p}$.
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Sia $f( x) =| x| ^{p} ,x\geqslant 0,p >1$ è una funzione convessa, ovvero
@@ -1203,7 +1203,7 @@ questo prova la tesi, se al posto di $x$ e $y$ immaginiamo che ci siano funzioni
 \begin{equation*}
 \qed 
 \end{equation*}
-\begin{definition}
+\begin{defn}
 [Esponenti coniugati] Due numeri $p,q\geqslant 1$ si dicono coniugati se
 \begin{equation*}
 \frac{1}{p} +\frac{1}{q} =1
@@ -1213,13 +1213,13 @@ Poniamo inoltre
 \frac{1}{\infty } =0\ \ \ \ \frac{1}{0} =\infty 
 \end{equation*}
 quindi se $p=1\Rightarrow q=+\infty $, osserviamo anche che se $p\in ( 1,+\infty ) \Rightarrow q\in ( 1,+\infty )$.
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 [Disuguaglianza di Young] Siano $p,q$ coniugati entrambi maggiori di $1$. Allora $\forall a,b\geqslant 0$
 \begin{equation*}
 \frac{a^{p}}{p} +\frac{b^{q}}{q} \geqslant ab
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 La funzione logaritmo è concava, poniamo $\lambda =\frac{1}{p}$ e di conseguenza $1-\lambda =\frac{1}{q}$
@@ -1227,12 +1227,12 @@ La funzione logaritmo è concava, poniamo $\lambda =\frac{1}{p}$ e di conseguenz
 \log\left(\frac{a^{p}}{p} +\frac{b^{q}}{q}\right) \geqslant \frac{\log a^{p}}{p} +\frac{\log b^{q}}{q} =\log( ab)\\
 \qed 
 \end{gather*}
-\begin{theorem}
+\begin{thm}
 [Disuguaglianza di Holder] Siano $p,q$ coniugati e siano $f\in L^{p} ,g\in L^{q}$. Allora
 \begin{equation*}
 f( x) g( x) \in L^{1} \ \ \text{e} \ \ \int | f( x) g( x)| dx\leqslant \Vert f\Vert _{L^{p}}\Vert g\Vert _{L^{q}}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{itemize}
 \item Se $p=1,q=+\infty $ allora $g\in L^{\infty }$ cioè $\mathrm{ess\ sup}| g( x)| < +\infty $\begin{align*}
@@ -1267,12 +1267,12 @@ sostituendolo nella (*) otteniamo la tesi.\begin{equation*}
 \qed 
 \end{equation*}
 \end{itemize}
-\begin{theorem}
+\begin{thm}
 [Disuguaglianza di Minkowski] Sia $p\geqslant 1,f\in L^{p} ,g\in L^{p}$. Allora
 \begin{equation*}
 ( f+g) \in L^{p} \ \ \text{e} \ \ \Vert f+g\Vert _{L^{p}} \leqslant \Vert f\Vert _{L^{p}} +\Vert g\Vert _{L^{p}}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{align*}
 \Vert f+g\Vert ^{p}_{L^{p}} & =\int | f( x) +g( x)| ^{p} dx\\
@@ -1301,22 +1301,22 @@ allora
 \Rightarrow \ \ \Vert f+g\Vert _{L^{p}} \leqslant \Vert f\Vert _{L^{p}} +\Vert g\Vert _{L^{p}}\\
 \qed 
 \end{gather*}
-\begin{theorem}
+\begin{thm}
 Per ogni $A\subset \mathbb{R}^{n}$ misurabile, per ogni $p\in [ 1,+\infty )$, lo spazio $L^{p}( A)$ è di Banach, ed è separabile tranne nel caso $p=\infty $.
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Lo spazio $L^{2}( A)$ è uno spazio di Hilbert rispetto al prodotto scalare
 \begin{equation*}
 ( f,g)_{2} =\int _{A} f( x)\overline{g( x)} dx
 \end{equation*}
-\end{theorem}
-\begin{obs}
+\end{thm}
+\begin{rem}
 L'unico esponente coniugato con se stesso è $2$. Lo spazio $L^{2}$ è il giusto \textit{equilibrio}.
-\end{obs}
+\end{rem}
 \section{Serie di Fourier}
 
 Consideriamo come spazio di lavoro $L^{2}([ -\pi ,\pi ])$.
-\begin{theorem}
+\begin{thm}
 Consideriamo
 \begin{equation*}
 B=\left\{\frac{1}{\sqrt{2}} ,\cos x,\sin x,\cos( 2x) ,\sin( 2x) ,\dotsc \right\}
@@ -1326,7 +1326,7 @@ Consideriamo $f,g\in L^{2}([ -\pi ,\pi ])$ e definiamo il prodotto scalare
 \boxed{( f,g) =\frac{1}{\pi }\int ^{\pi }_{-\pi } f( x) g( x) dx} \ \ \text{cioè} \ \ \Vert f\Vert ^{2}_{L^{2}} =\frac{1}{\pi }\int ^{\pi }_{-\pi } f^{2}( x) dx
 \end{equation*}
 allora $B$ è una base di Hilbert.
-\end{theorem}
+\end{thm}
 Si vede facilmente che i suoi vettori sono normali
 \begin{gather*}
 \left\Vert \frac{1}{\sqrt{2}}\right\Vert =\frac{1}{\pi }\int ^{\pi }_{-\pi }\left(\frac{1}{\sqrt{2}}\right)^{2} dx=1\\
@@ -1352,7 +1352,7 @@ Possiamo "togliere" dalla formula il termine blu e accorparlo nella formula comp
 \begin{equation*}
 \boxed{\forall f\in L^{2}([ -\pi ,\pi ]) ,\ \ f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}[ a_{n}\cos( nx) +b_{n}\sin( nx)]}
 \end{equation*}
-\begin{obs}
+\begin{rem}
 [Convergenza $L^{2}$] L'uguaglianza vale in senso $L^{2}$, ovvero che se indichiamo con $S_{N}( x)$ le somme parziali
 \begin{equation*}
 S_{N}( x) =\frac{a_{0}}{2} +\sum\limits ^{N}_{n=1}[ a_{n}\cos( nx) +b_{n}\sin( nx)]
@@ -1361,8 +1361,8 @@ vale il limite\footnote{come di consueto, dire che qualcosa si avvicina a un'alt
 \begin{equation*}
 \lim\limits _{N\rightarrow +\infty }\int ^{\pi }_{-\pi }[ f( x) -S_{N}( x)]^{2} dx=0
 \end{equation*}
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 La funzione che scegliamo di approssimare deve essere periodica di periodo $2\pi $, si può chiaramente generalizzare il risultato a periodi generici $T$
 \begin{equation*}
 \forall f\in L^{2}\left(\left[ -\frac{T}{2} ,\frac{T}{2}\right]\right) ,\ \ f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\cos\left(\frac{2n\pi }{T} x\right) +b_{n}\sin\left(\frac{2n\pi }{T} x\right)\right]
@@ -1375,8 +1375,8 @@ quindi per esempio
 \begin{equation*}
 a_{n} =\frac{2}{T}\int ^{T/2}_{-T/2} f( x)\cos\left(\frac{2n\pi }{T} x\right) dx
 \end{equation*}
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 [Convergenza uniforme] Dal momento che
 \begin{equation*}
 | a_{n}\cos( nx) +b_{n}\sin( nx)| \leqslant | a_{n}| +| b_{n}| 
@@ -1385,7 +1385,7 @@ Per il test di Weierstrass vale la seguente relazione che ci permette di stabili
 \begin{equation*}
 \sum\limits ^{\infty }_{n=1}(| a_{n}| +| b_{n}| ) < \infty \ \ \Rightarrow \ \ f( x) \ \text{converge uniformemente}
 \end{equation*}
-\end{obs}
+\end{rem}
 \textit{Esempio.}
 
 Sia $f( x) =| x| $ nell'intervallo $[ -\pi ,\pi ]$ estesa con periodicità a tutto $\mathbb{R}$, calcoliamo lo sviluppo di Fourier.
@@ -1402,17 +1402,17 @@ allora si scrive in serie di Fourier
 \begin{equation*}
 | x| =\frac{\pi }{2} +\sum\limits ^{\infty }_{n=1}\frac{2}{\pi n^{2}}\left[( -1)^{n} -1\right]\cos( nx)
 \end{equation*}
-\begin{definition}
+\begin{defn}
 Una funzione $f:[ -\pi ,\pi ]\rightarrow \mathbb{R}$ si dice \textbf{regolare a tratti} se è derivabile e ha un numero finito di punti di discontinuità $\{x_{n}\}_{n=1\dotsc N}$ e in tali punti esistono finiti i limiti
 \begin{equation*}
 \lim\limits _{x\rightarrow x^{+}_{n}} f( x) \ \ \ \ \ \ \lim\limits _{x\rightarrow x^{-}_{n}} f( x)
 \end{equation*}
 Escludiamo quindi asintoti, punti di cuspide, ma i limiti possono eventualmente essere diversi.
-\end{definition}
-\begin{theorem}
+\end{defn}
+\begin{thm}
 [Convergenza puntuale] Una funzione $f:[ -\pi ,\pi ]\rightarrow \mathbb{R}$ regolare a tratti. Allora la serie di Fourier converge $\forall x\in [ -\pi ,\pi ]$ tale che $f( x)$ è continua. Nei punti in cui non è continua invece converge al valore medio tra i due limiti.
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 [Derivazione] Per la derivazione possiamo dire che
 \begin{equation*}
 f'( x) =\sum\limits ^{\infty }_{n=1}[ -na_{n}\sin( nx) +nb_{n}\cos( nx)]
@@ -1429,10 +1429,10 @@ e naturalmente anche $f( x)$. La condizione \textit{sufficiente} affinché la se
 \begin{equation*}
 \sum\limits ^{\infty }_{n=1} n^{k}(| a_{n}| +| b_{n}| ) < \infty 
 \end{equation*}
-\end{theorem}
-\begin{obs}
+\end{thm}
+\begin{rem}
 Lo usiamo normalmente solo come controllo per sapere se abbiamo calcolato bene la serie di Fourier, di solito sappiamo già se $f$ è derivabile o meno.
-\end{obs}
+\end{rem}
 Esiste una base alternativa, che troviamo se scriviamo le relazioni complesse
 \begin{equation*}
 \cos( nx) =\frac{e^{inx} +e^{-inx}}{2} \ \ \ \ \ \ \ \ \sin( nx) =\frac{e^{inx} -e^{-inx}}{2i}
@@ -1441,10 +1441,10 @@ allora la serie di Fourier si scrive nella sua \textbf{forma esponenziale}
 \begin{equation*}
 f( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\frac{e^{inx} +e^{-inx}}{2} +b_{n}\frac{e^{inx} -e^{-inx}}{2i}\right] \ \ \Rightarrow \ \ \boxed{f( x) =\sum\limits ^{\infty }_{n=-\infty } c_{n} e^{inx}}
 \end{equation*}
-\begin{obs}
+\begin{rem}
 In generale questi coefficienti sono complessi $c_{n} =\overline{c_{-n}}$.
-\end{obs}
-\begin{obs}
+\end{rem}
+\begin{rem}
 La base $\left\{e^{inx}\right\}_{n\in \mathbb{Z}}$ è una base ortonormale
 \begin{equation*}
 \int ^{\pi }_{-\pi } e^{inx} e^{imx} dx=\int ^{\pi }_{-\pi } e^{i( n-m) x} dx=\begin{cases}
@@ -1461,7 +1461,7 @@ e i coefficienti saranno
 c_{n} =\frac{1}{2\pi }\int ^{\pi }_{-\pi } f( x) e^{-inx} dx
 \end{equation*}
 Il $-$ è dovuto al fatto che $g$ è coniugato nel prodotto scalare.
-\end{obs}
+\end{rem}
 
 
 
@@ -1473,37 +1473,37 @@ Il $-$ è dovuto al fatto che $g$ è coniugato nel prodotto scalare.
 Per arrivare a definirle e vedere a cosa servono dobbiamo fare alcuni passaggi preliminari. Definiamo il concetto di spazio duale. Parliamo di spazio duale non necessariamente, ma specialmente nel contesto degli spazi di Banach.
 
 Supponiamo di avere due spazi di Banach $X,Y$ in modo assolutamente generale, poi ci concentreremo su uno specifico.
-\begin{definition}
+\begin{defn}
 [Linearità] Possiamo considerare tutte le funzioni lineari da $X$ in $Y$
 \begin{equation*}
 L:X\rightarrow Y\ \ \ \ L( \alpha x_{1} +\beta x_{2}) =\alpha L( x_{1}) +\beta L( x_{2})
 \end{equation*}
-\end{definition}
+\end{defn}
 Teniamo presente che quando parliamo di spazi di Banach spesso intendiamo spazi a dimensione infinita, in questo caso certe idee che abbiamo molto naturali e intuitive delle funzioni lineari non valgono necessariemente. In particolare la continuità \textbf{non} è necessariamente garantita in caso di funzioni lineari. In uno spazio di Banach possiamo avere funzioni lineari continue e funzioni lineari non continue. 
-\begin{definition}
+\begin{defn}
 [Continuità] Una funzione è continua se
 \begin{equation*}
 x_{n}\rightarrow x\ \ \Rightarrow \ \ L( x_{n})\rightarrow L( x)
 \end{equation*}
-\end{definition}
+\end{defn}
 Ricordiamo un'altra definizione non scontata negli spazi a dimensione infinita
-\begin{definition}
+\begin{defn}
 [Limitatezza] Una funzione lineare è limitata se
 \begin{equation*}
 \exists c\ \ \Vert L( x)\Vert \leqslant c\Vert x\Vert \ \ \forall x\in X
 \end{equation*}
-\end{definition}
+\end{defn}
 Vale un teorema che collega queste due definizioni.
-\begin{theorem}
+\begin{thm}
 Siano $X,Y$ due spazi di Banach qualsiasi. Una funzione lineare $L:X\rightarrow Y$ è limitata se e solo se è continua.
-\end{theorem}
+\end{thm}
 Quello che ci interessa è un tipo particolare di funzioni tra spazi di Banach. Il secondo spazio sarà $\mathbb{R}$, che è esso stesso uno spazio di Banach, è uno spazio lineare dotato di norma (il valore assoluto) e continuo rispetto a questa norma.
 \begin{equation*}
 L:X\rightarrow \mathbb{R} \ \ \ \ X\ \text{di Banach}
 \end{equation*}
-\begin{definition}
+\begin{defn}
 Dato uno spazio $X$ di Banach, si dice \textbf{spazio duale} l'insieme di tutte le \underline{funzioni lineari continue} da $X$ in $\mathbb{R}$. Queste funzioni si chiamano anche \textbf{funzionali}. 
-\end{definition}
+\end{defn}
 Supponiamo per esempio che $X$ sia $\mathbb{R}^{n}$, possiamo considerare tutte le funzioni lineari (e quindi continue, essendo $\mathbb{R}^{n}$ a dimensione finita)
 \begin{equation*}
 L:\mathbb{R}^{n}\rightarrow \mathbb{R}
@@ -1511,9 +1511,9 @@ L:\mathbb{R}^{n}\rightarrow \mathbb{R}
 Come possiamo descriverle tutte? Le identifichiamo con il prodotto scalare con un altro vettore. Dato $y\in \mathbb{R}^{n}$ possiamo definire $L( x) :=( y,x)$. Per esempio il duale di $\mathbb{R}^{n}$ è $\mathbb{R}^{n}$ stesso.
 
 La categoria più importante di spazi di Banach che abbiamo visto fin'ora è $L^{p}$, cos'è il suo duale? Abbiamo un modo molto semplice.
-\begin{theorem}
+\begin{thm}
 Se $1< p< +\infty $, allora il duale di $L^{p}$ è $L^{q}$ dove $q$ è l'esponente coniugato di $p$: $\frac{1}{p} +\frac{1}{q} =1$.
-\end{theorem}
+\end{thm}
 Sia $f\in L^{p}$ e $L( f) \in \mathbb{R}$, possiamo dimostrare che $\forall L$ funzionale lineare su $L^{p}$ esiste una funzione $h\in L^{q}$ tale che $L( f) =\int hf$. Non stiamo specificando in quale dominio stiamo definendo questi spazi. Grazie alla disuguaglianza di Holder otteniamo questo risultato. Non indaghiamo ulteriormente.
 
 Torniamo alla definizione di duale. Una possibile notazione dello spazio duale di $X$ è $X'$. Questo spazio duale è lui stesso uno spazio di Banach. È ovviamente uno spazio vettoriale, ma dobbiamo far vedere che c'è una \textit{norma}. Un elemento del duale è un funzionale $L:X\rightarrow \mathbb{R}$, questo vuol dire che dato un elemento $x\in X$ allora $L( x) \in \mathbb{R}$
@@ -1521,33 +1521,33 @@ Torniamo alla definizione di duale. Una possibile notazione dello spazio duale d
 \Vert L\Vert =\sup _{\Vert x\Vert =1}| L( x)| 
 \end{equation*}
 È vero che questo è effettivamente un numero reale? Abbiamo detto che il duale è fatto da funzionali lineari continui, ovvero limitati, quindi sicuramente questo estremo superiore è limitato. La definizione di poco fa di funzione limitata era che $\exists c$ tale che $| L( x)| \leqslant c\Vert x\Vert $, quindi sicuramente questo estremo superiore è minore di $c$. Si tratta di far vedere che è effettivamente una norma, abbiamo allora questo teorema.
-\begin{theorem}
+\begin{thm}
 Sia $X$ spazio di Banach. Allora $X'$ è uno spazio di Banach lui stesso rispetto alla norma
 \begin{equation*}
 \Vert L\Vert =\sup _{\Vert x\Vert =1}| L( x)| 
 \end{equation*}
-\end{theorem}
-\begin{definition}
+\end{thm}
+\begin{defn}
 [Supporto di una funzione] Supponiamo ora di avere una funzione $f:A\subset \mathbb{R}^{n}\rightarrow \mathbb{R}$. Si dice supporto di $f$ l'insieme
 \begin{equation*}
 \mathrm{supp} f=\overline{\{x\in A,f( x) \neq 0\}}
 \end{equation*}
 È la chiusura dell'insieme dei punti dove la funzione non si annulla.
-\end{definition}
+\end{defn}
 Diamo la definizione di un nuovo spazio vettoriale, se abbiamo $A\subset \mathbb{R}^{n}$ sappiamo cos'è $L^{p}( A)$.
-\begin{definition}
+\begin{defn}
 Si dice $L^{p}_{\mathrm{loc}}$ l'insieme delle funzioni $f:A\rightarrow \mathbb{R}$ tali che $\forall K\subset A$ compatto
 \begin{equation*}
 \exists \ \ \int _{K}| f| ^{p} dx\ \ \text{finito} .
 \end{equation*}
-\end{definition}
+\end{defn}
 È molto più grande dello spazio $L^{p}$.
 
 \section{Funzioni test e distribuzioni}
 Adesso dobbiamo definire un nuovo spazio di funzioni, che non è uno spazio di Banach.
-\begin{definition}
+\begin{defn}
 [Spazio delle funzioni test] Sia $A\subset \mathbb{R}^{n}$ aperto. Chiamiamo funzioni $C^{\infty }$ a supporto compatto, o funzioni test, e lo indichiamo con $\mathcal{D}( A)$ l'insieme delle funzioni $f:A\rightarrow \mathbb{R}$, derivabili infinite volte $f\in C^{\infty }$ e tali che il supporto $\mathrm{supp} f$ è compatto.
-\end{definition}
+\end{defn}
 Una funzione in $\mathcal{D}( A)$ viene detta \textbf{funzione test}. Queste funzioni sono un insieme estremamente piccolo. Non è banale neanche fare degli esempi in $\mathcal{D}(\mathbb{R})$. Per esempio
 \begin{equation*}
 f( x) =\begin{cases}
@@ -1566,26 +1566,26 @@ Nessuna funzione elementare appartiene a questo insieme.
 Questo insieme non è uno spazio di Banach, se definiamo una norma, non può essere uno spazio di Banach rispetto a quella norma. Nonostante ciò vogliamo definire un concetto di convergenza.
 
 Daremo le prossime definizioni in dimensione $1$ per alleggerire le notazioni.
-\begin{definition}
+\begin{defn}
 [Convergenza in $\mathcal{D}$]Sia $A\subset \mathbb{R}$ aperto e consideriamo l'insieme $\mathcal{D}( A)$, consideriamo una successione di funzioni $\{f_{n}\} \subset \mathcal{D}( A)$. Diciamo che $f_{n}\rightarrow f$ in $\mathcal{D}( A)$ se
 \begin{enumerate}
 	\item $\exists K\subset A$ compatto tale che il supporto $\mathrm{supp} f_{n} \subset K$, ciascuna funzione è a supporto compatto, ma vogliamo che esista un compatto che contenga i supporti di tutte le funzioni.
 	\item $\forall k\in \mathbb{N}$ la derivata di ordine $k$ della successione di funzioni converge alla derivata di ordine $k$ della funzione uniformemente $f^{( k)}_{n}\rightarrow f^{( k)}$.
 \end{enumerate}
-\end{definition}
+\end{defn}
 Si può dimostrare che non possiamo definire questa convergenza in norma o distanza, motivo per cui l'abbiamo definita noi così. Ora possiamo finalmente arrivare alla definizione di distribuzione.
-\begin{definition}
+\begin{defn}
 [Distribuzione] Sia $A\subset \mathbb{R}$ aperto. Chiamiamo \textbf{distribuzione} in $A$ un funzionale (lineare e continuo) su $\mathcal{D}( A)$. Quindi lo spazio delle distribuzione è il suo duale $\mathcal{D} '( A)$.
-\end{definition}
+\end{defn}
 Stiamo cercando di generalizzare il concetto di funzione.
-\begin{theorem}
+\begin{thm}
 A ogni funzione $u\in L^{1}_{\mathrm{loc}}( A)$ corrisponde una distribuzione in $\mathcal{D} '( A)$.
 
 Indichiamo con $( u,f)$ il prodotto di dualità, cioè la distribuzione (funzionale lineare e continuo) associata ad $u$ che agisce sulla funzione test $f$
 \begin{equation*}
 \boxed{( u,f) =\int _{A} ufdx} \ \ \ \ u\in L^{1}_{\mathrm{loc}}( A) \ \ f\in \mathcal{D}( A)
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limitato).
@@ -1664,11 +1664,11 @@ Essendo $L^{1}$, quindi anche $L^{1}_{\mathrm{loc}}$, le possiamo vedere come di
 Più uno spazio è piccolo e più il suo duale è grande, e viceversa. Lo spazio $\mathcal{D}( A)$ è molto piccolo, quindi il duale (lo spazio delle distribuzioni) sarà molto grande, ma pur essendo molto grande, avrà delle proprietà molto forti (derivabilità infinita). \textit{Stiamo cercando capre e cavoli}.
 
 
-\begin{definition}
+\begin{defn}
 [Convergenza di una distribuzione] Cosa vuol dire avere una successione di distribuzioni $\{\Lambda _{n}\}$ che converge a $\Lambda $ \underline{nel senso delle distribuzioni}? Come prima, se $\forall \varphi \in \mathcal{D}( A) \Rightarrow ( \Lambda _{n} ,\varphi )\rightarrow ( \Lambda ,\varphi )$. La definizione è simmetrica rispetto all'altra.
-\end{definition}
+\end{defn}
 Veniamo al supporto. Una distribuzione non ha una variabile, non si annulla come una funzione, non è una funzione.
-\begin{definition}
+\begin{defn}
 [Supporto di una distribuzione] Sia $\Lambda \subset \mathcal{D} '( A)$. Consideriamo $B\subset A$ e $\varphi \in \mathcal{D}( B)$. Supponiamo che $( \Lambda ,\varphi ) =0\ \ \forall \varphi $. Questo è il modo per dire che "si annulla", diciamo
 \begin{equation*}
 \boxed{
@@ -1676,16 +1676,16 @@ Veniamo al supporto. Una distribuzione non ha una variabile, non si annulla come
 	\left(\bigcup_{\substack{B\subset A\\B\text{ aperti}} } \{B:(\Lambda,\varphi)=0,\ \forall \varphi \in \mathcal{D}(B)\}\right)^{C}
 }
 \end{equation*}
-\end{definition}
+\end{defn}
 
 
 NB. Quando diciamo che a $u\in L^{1}_{\mathrm{loc}}( A)$ corrisponde una distribuzione, diciame che esiste una $\Lambda _{u}$ distribuzione definita come $( \Lambda _{u} ,\varphi ) =\int _{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
-\begin{definition}
+\begin{defn}
 [Derivata di una distribuzione] Sia $\Lambda \in \mathcal{D} '( A)$ una distribuzione. Definiamo la sua distribuzione derivata $\Lambda '\in \mathcal{D} '( A)$. Per ogni $\varphi \in \mathcal{D}( A)$ dobbiamo definire quanto vale $( \Lambda ',\varphi )$
 \begin{equation*}
 \boxed{( \Lambda ',\varphi ) =-( \Lambda ,\varphi ')}
 \end{equation*}
-\end{definition}
+\end{defn}
 Questo somiglia molto all'integrazione per parti (in realtà è molto più che una somiglianza). Controlliamo che sia una distribuzione
 \begin{itemize}
 \item definita $\Lambda ':\mathcal{D}( A)\rightarrow \mathbb{R}$, sì per come è costruita, $\varphi '$ è comunque definito essendo $C^{\infty }$ a supporto compatto
@@ -1762,21 +1762,21 @@ estendiamo a un ordine $n$
 \section{Funzioni a decrescita rapida e distribuzioni temperate}
 
 Lo spazio delle $\varphi $ è lo spazio delle funzioni test, delle funzioni $C^{\infty }$ a supporto compatto, uno spazio molto stringente. Cerchiamo di allentarlo un po' introducendo un nuovo spazio chiamato \textbf{spazio delle funzioni a decrescita rapida} (o \textbf{spazio di Schwartz}\footnote{Si noti che si tratta di un matematico differente da quello del teorema sulle derivate seconde, Karl Hermann Amandus Schwarz (1843-1921). Qui si parla di Laurent Schwartz (1915-2002), medaglia Fields nel 1950.}).
-\begin{definition}
+\begin{defn}
 [Spazio delle funzioni a decrescita rapida] Diciamo che $f\in \mathcal{S}(\mathbb{R})$ se $\boxed{f\in C^{\infty }}$ e $\boxed{x^{k} f^{( n)}( x)}$ è \underline{limitata} $\forall k,n\in \mathbb{N}$.
-\end{definition}
+\end{defn}
 Le definiamo su tutto $\mathbb{R}$. Non chiediamo che si annullino fuori da un compatto, ma che si annullino più rapidamente di qualsiasi polinomio insieme a tutte le derivate per $x\rightarrow \pm \infty $. Una gaussiana per esempio tende a $0$ più velocemente di qualsiasi polinomio con le sue derivate, ma non si annulla mai. Questo spazio $\mathcal{S}(\mathbb{R})$ è tale che
 \begin{equation*}
 \mathcal{D}(\mathbb{R}) \subset \mathcal{S}(\mathbb{R})
 \end{equation*}
 Come si definisce la convergenza in questo insieme?
-\begin{definition}
+\begin{defn}
 [Convergenza in $\mathcal{S}$]Sia una successione $\{f_{n}\} \subset \mathcal{S}(\mathbb{R})$. Diciamo che $f_{n}\rightarrow f$ in $\mathcal{S}(\mathbb{R})$ se $x^{k} f^{( m)}_{n}( x)\xrightarrow{n\rightarrow +\infty } x^{k} f^{( m)}( x)$ uniformemente $\forall k,m\in \mathbb{N}$.
-\end{definition}
+\end{defn}
 Anche questo non è uno spazio di Banach e non c'è norma, motivo per cui \textit{definiamo} così la successione.
-\begin{definition}
+\begin{defn}
 [Distribuzione temperata] Un funzionale lineare $\Lambda :\mathcal{S}(\mathbb{R})\rightarrow \mathbb{R}$ continuo si dice distribuzione temperata.
-\end{definition}
+\end{defn}
 Una distribuzione temperata è anche una distribuzione normale, in altre parole, lo spazio delle distribuzioni temperate $\mathcal{S} '(\mathbb{R})$ è contenuto in $\mathcal{D} '(\mathbb{R})$
 \begin{equation*}
 \mathcal{S} '(\mathbb{R}) \subset \mathcal{D} '(\mathbb{R})
@@ -1825,25 +1825,25 @@ tuttavia se consideriamo come funzione test una funzione di $\mathcal{S}(\mathbb
 \begin{equation*}
 ( u,\varphi ) =\int _{\mathbb{R}} u\varphi dx=\int _{\mathbb{R}} dx=+\infty \ \ \Rightarrow \ \ \text{non è temperata}
 \end{equation*}
-\begin{definition}
+\begin{defn}
 [Convergenza di distribuzioni temperate] Sia $u_{n}$ una successione in $\{u_{n}\} \subset \mathcal{S} '(\mathbb{R})$. Diciamo che $u_{n}\rightarrow u\in \mathcal{S} '(\mathbb{R})$ se per ogni funzione test a decrescita rapida $\varphi \in \mathcal{S}(\mathbb{R})$, si ha $( u_{n} ,\varphi )\rightarrow ( u,\varphi )$.
-\end{definition}
+\end{defn}
 La definizione di derivata è la stessa.
 
 Ora chiediamoci, se consideriamo una funzione $u\in L^{1}_{\mathrm{loc}}$, possiamo dire che vi è associata una distribuzione temperata? Abbiamo questo risultato.
-\begin{theorem}
+\begin{thm}
 Se $\exists n\in \mathbb{N}$ tale che $( 1+| x| )^{-n} u( x) \in L^{1}(\mathbb{R})$ allora esiste una distribuzione temperata associata $u\in \mathcal{S} '(\mathbb{R})$.
-\end{theorem}
-\begin{theorem}
+\end{thm}
+\begin{thm}
 Se $u\in L^{p}(\mathbb{R})$ per un qualsiasi $p\in [ 1,+\infty ]$ allora esiste una distribuzione temperata associata $u\in \mathcal{S} '(\mathbb{R})$.
-\end{theorem}
+\end{thm}
 \chapter{Trasformate integrali}
 \section{Introduzione}
 
 È la versione \textit{continua} della serie di Fourier. Vedremo tutto sulla retta reale, ma si può applicare anche in $\mathbb{R}^{n}$. Consideriamo $\mathcal{D}(\mathbb{R}) \subset L^{p}(\mathbb{R}) \ \ \forall p\in [ 1,+\infty ]$, questa inclusione è densa $\forall p< +\infty $ (escluso).
-\begin{definition}
+\begin{defn}
 [Inclusione densa] Dire che l'inclusione è densa significa dire che $\forall p< +\infty ,\forall f\in L^{p}(\mathbb{R})$ esiste $\varphi _{n} \in \mathcal{D}(\mathbb{R})$ tale che $\varphi _{n}\rightarrow f$ in senso $L^{p}$, cioè $\Vert \varphi _{n} -f\Vert _{L^{p}}\rightarrow 0$.
-\end{definition}
+\end{defn}
 Posso \textit{approssimare} ogni funzione in $L^{p}$ con $p< +\infty $ (funzioni anche molto irregolari e discontinue) con funzioni di $\mathcal{D}(\mathbb{R})$ (funzioni molto regolari e con cui è più semplice fare i conti), nel senso della norma ovviamente.
 
 
@@ -1858,12 +1858,12 @@ Sia $f\in L^{1}(\mathbb{R})$ definiamo la funzione traslata
 \begin{equation*}
 f_{y}( x) =f( x-y)
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 Sia $f\in L^{1}(\mathbb{R})$, allora
 \begin{equation*}
 \lim\limits _{y\rightarrow 0}\Vert f_{y} -f\Vert _{L^{1}} =0
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 È basata sulla densità a cui abbiamo accennato. Sia $\varepsilon  >0$, $\exists \varphi \in \mathcal{D}(\mathbb{R})$ tale che $\Vert f-\varphi \Vert < \varepsilon $. Se trasliamo una funzione, essa non cambia di norma $\Rightarrow \ \Vert f_{y} -\varphi _{y}\Vert < \varepsilon $. Chiamiamo $K$ un certo insieme che contiene sia il supporto di $\varphi $ che della sua traslata $\varphi _{y}$, per un certo $y$ sufficientemente piccolo. Allora\footnote{Teorema di Heine-Cantor. Una funzione continua su un compatto è uniformemente continua.} la funzione $\varphi $ è uniformemente continua, cioè
@@ -1921,12 +1921,12 @@ c_{n} =\frac{1}{\pi }\int ^{\pi }_{-\pi } e^{-inx} f( x) dx
 | f( x)| =\left| e^{-ixz} f( x)\right| 
 \end{equation*}
 ma $f$, e quindi anche $| f| $, è integrabile secondo Lebesgue, quindi anche il secondo membro è integrabile e convergente. Ha senso dare questa definizione! Vediamo di capire le proprietà, riassunte nel teorema fondamentale.
-\begin{theorem}
+\begin{thm}
 [di Riemann-Lebesgue] Sia $f\in L^{1}(\mathbb{R})$, allora
 \begin{equation*}
 \boxed{\hat{f} \in C^{0}_{0}(\mathbb{R})} \ \ \ \ \boxed{\Vert \hat{f}\Vert _{\infty } \leqslant \Vert f\Vert _{L^{1}}}
 \end{equation*}
-\end{theorem}
+\end{thm}
 La trasformata ha proprietà molto diverse e molto più regolari della $f$, che è banalmente integrabile, sta in uno spazio compeltamente diverso.
 
 \textit{Dimostrazione.}
@@ -2026,12 +2026,12 @@ Notazione: indichiamo con $\mathcal{F}( f( x) ,z) =\hat{f}( z)$ la trasformata d
 \end{itemize}
 
 Cerchiamo di capire se una trasformata di Fourier è derivabile, quindi anche $C^{1}$.
-\begin{theorem}
+\begin{thm}
 [Derivata della trasformata] Sia $f\in L^{1}$, $g( x) =xf( x)$, $g\in L^{1}$. Allora $\hat{f} \in C^{1}$ e
 \begin{equation*}
 \hat{f} '( z) =-i\hat{g}( z) \ \ \text{cioè} \ \ \boxed{\frac{d^{n}}{dz^{n}}\mathcal{F}( f( x) ,z)= \mathcal{F}\left(( -ix)^{n} \cdotp f( x) ,z\right)}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Chiedere che anche $xf( x)$ stia in $L^{1}$ significa che la $f$ deve in qualche senso tendere a $0$ abbastanza rapidamente, vogliamo che l'integrale su $\mathbb{R}$ converga.
 
 \textit{Dimostrazione.}
@@ -2050,20 +2050,20 @@ dove possiamo passare al limite sotto il segno di integrale perché in generale
 \begin{equation*}
 \left| e^{i\lambda } -1\right| \leqslant | \lambda | \ \ \lambda \in \mathbb{R} \ \ \ \ \ \ \ \ \lambda =-xh\ \ \Rightarrow \ \ \text{l'integrale converge per conv. dom.}\qed 
 \end{equation*}
-\begin{theorem}
+\begin{thm}
 [Trasformata della derivata] Sia $f\in L^{1} \cap C^{1}$, $f'\in L^{1}$.
 \begin{equation*}
 \boxed{\mathcal{F}\left(\frac{d^{n}}{dx^{n}} f( x) ,z\right) =( iz)^{n} \cdotp \mathcal{F}( f( x) ,z)}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Tutto questo è vero purché le cose scritte abbiano senso, da cui le ipotesi.
 \section{Trasformazione inversa}
-\begin{theorem}
+\begin{thm}
 Sia $f\in L^{1}$ e tale che $\hat{f} \in L^{1}$. Allora $f\in C^{0}_{0}$ e
 \begin{equation*}
 \boxed{f( x) =\frac{1}{2\pi }\int e^{ixz}\hat{f}( z) dz}
 \end{equation*}
-\end{theorem}
+\end{thm}
 Perché le richieste sugli spazi di appartenenza? Supponiamo che questa sia l'antitrasformata, ha senso? È corretta? C'è in generale questo problema
 \begin{equation*}
 \begin{array}{ c c c }
@@ -2083,13 +2083,13 @@ La trasformata di Fourier non è simmetrica, lavora su spazi diversi. Se vogliam
 \mathcal{F} :L^{2}\rightarrow L^{2}
 \end{equation*}
 \section{Convoluzione}
-\begin{theorem}
+\begin{thm}
 Siano $u,v\in L^{1}(\mathbb{R})$. Allora la funzione
 \begin{equation*}
 \boxed{( u*v)( x) =\int _{\mathbb{R}} u( x-t) v( t) dt}
 \end{equation*}
 è definita per \underline{quasi ogni} $x\in \mathbb{R}$, $( u*v) \in L^{1}$ e inoltre, stando in $L^{1}$, avrà una norma $\Vert u*v\Vert _{L^{1}} \leqslant \Vert u\Vert _{L^{1}}\Vert v\Vert _{L^{1}}$.
-\end{theorem}
+\end{thm}
 Discende direttamente dal teorema di Fubini.
 \begin{itemize}
 \item È simmetrica
@@ -2140,12 +2140,12 @@ Introduzione
 \item Lavoriamo in $\boxed{\mathcal{S}(\mathbb{R})}$ per estendere la trasformata perché la trasformata di una funzione in $\mathcal{S}(\mathbb{R})$ è ancora una funzione in $\mathcal{S}(\mathbb{R})$, mentre la trasformata di una funzione in $\mathcal{D}(\mathbb{R})$ è ancora $C^{\infty }$, ma non più necessariamente a supporto compatto.
 \end{itemize}
 \subsection{Allo spazio di funzioni a descrescenza rapida}
-\begin{theorem}
+\begin{thm}
 La trasformata agisce su
 \begin{equation*}
 \mathcal{F} :\mathcal{S}(\mathbb{R})\rightarrow \mathcal{S}(\mathbb{R})
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 
 Lo spazio di partenza ha senso essendo densamente incluso in $L^{p}(\mathbb{R}) ,p=1$.
@@ -2173,12 +2173,12 @@ Vogliamo mostrare che
 \mathcal{F} :L^{2}(\mathbb{R})\rightarrow L^{2}(\mathbb{R})
 \end{equation*}
 Non possiamo definirla in $L^{2}$ come $\int e^{-ixz} u( x) dx$ perché se $u\in L^{2}$ non abbiamo nessuna garanzia che la funzione sia integrabile. Partiamo definendo la trasformata in $L^{1}(\mathbb{R}) \cap L^{2}(\mathbb{R})$.
-\begin{theorem}
+\begin{thm}
 [di Plancherel] Sia $u\in L^{1}(\mathbb{R}) \cap L^{2}(\mathbb{R})$, allora
 \begin{equation*}
 \boxed{\Vert \hat{u}\Vert _{L^{2}} =\sqrt{2\pi }\Vert u\Vert _{L^{2}}} \ \ \text{quindi} \ \ \boxed{\hat{u} \in L^{2}(\mathbb{R})}
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{itemize}
 \item \textit{Dimostrazione nel caso di }$u\in \mathcal{S}(\mathbb{R})$
@@ -2239,11 +2239,11 @@ Supponiamo che $u$ sia una distribuzione temperata $u\in \mathcal{S} '(\mathbb{R
 \boxed{(\hat{u} ,\varphi ) =( u,\hat{\varphi })} \ \ \ \ \varphi \in \mathcal{S}(\mathbb{R})
 \end{equation*}
 dato che se $\varphi \in \mathcal{S}(\mathbb{R})$ allora $\hat{\varphi } \in \mathcal{S}(\mathbb{R})$.
-\begin{theorem}
+\begin{thm}
 La trasformata di Fourier $\mathcal{F} :\mathcal{S} '(\mathbb{R})\rightarrow \mathcal{S} '(\mathbb{R})$ è un'applicazione
 
 lineare biunivoca e continua.
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{itemize}
 \item È effettivamente un funzionale \textbf{lineare} dalla definizione
@@ -2295,7 +2295,7 @@ H( x) =\begin{cases}
 
 Chiamiamo $\lambda ( u)$ l'estremo inferiore di questi $\lambda $
 \end{itemize}
-\begin{definition}
+\begin{defn}
 [Trasformata di Laplace] Definiamo
 \begin{equation*}
 \boxed{\mathcal{L}( u( x) ,s) =\int ^{+\infty }_{0} e^{-sx} u( x) dx} \ \ \ \ s\in \mathbb{C}
@@ -2305,7 +2305,7 @@ dove
 e^{-sx} =e^{-s_{R} x} e^{-is_{I} x}
 \end{equation*}
 Questo integrale ha senso purché $e^{-\lambda x} u( x) \in L^{1}(\mathbb{R})$, cioè $\mathrm{Re}( s)  >\lambda ( u)$, che è quindi il dominio della trasformata, mentre Fourier aveva senso sempre.
-\end{definition}
+\end{defn}
 \textbf{Proprietà}
 \begin{itemize}
 \item Linearità $\boxed{\mathcal{L}( \alpha u( x) +\beta v( x) ,s) =\alpha \mathcal{L}( u( x) ,s) +\beta \mathcal{L}( v( x) ,s)}$
@@ -2385,12 +2385,12 @@ per capirlo meglio possiamo vedere la Delta come\begin{gather*}
 \mathcal{L}( u_{\varepsilon }( x) ,s) =\frac{1}{\varepsilon }\int ^{\varepsilon }_{0} e^{-sx} dx=e^{-sx_{\varepsilon }}\rightarrow 1\ \ x_{\varepsilon } \in ( 0,\varepsilon )
 \end{gather*}
 \end{itemize}
-\begin{theorem}
+\begin{thm}
 [Derivata della trasformata] Sia $u$ una funzione $\mathcal{L}$-trasformabile.
 \begin{equation*}
 \boxed{\frac{d^{n}}{ds^{n}}\mathcal{L}( u( x) ,s) =(\mathcal{-1)^{n} L}\left( x^{n} u( x) ,s\right)} \ \ \ \ \forall s\ \text{tale che} \ \mathrm{Re}( s)  >\lambda ( u)
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{align*}
 \lim\limits _{h\rightarrow 0}\frac{\mathcal{L}( u( x) ,s+h) -\mathcal{L}( u( x) ,s)}{h} & =\lim\limits _{h\rightarrow 0}\int ^{+\infty }_{0} e^{-sx}\frac{e^{-hx} -1}{h} u( x) dx\\
@@ -2401,7 +2401,7 @@ per capirlo meglio possiamo vedere la Delta come\begin{gather*}
 Possiamo passare al limite sotto il segno di integrale? Sì perché la quantità rossa è limitata, il resto è $L^{1}$.
 
 È derivabile in un aperto in senso complesso, quindi la funzione trasformata di Laplace è olomorfa, quindi è anche $C^{\infty }$.
-\begin{theorem}
+\begin{thm}
 [Trasformata della derivata] Sia $u$ una funzione $\mathcal{L}$-trasformabile e $u\in C^{1}([ 0,+\infty ))$. Chiamiamo $v( x)$ la derivata
 \begin{equation*}
 v( x) =\begin{cases}
@@ -2425,7 +2425,7 @@ Se $v\in L^{1}$, allora $\lambda ( u) \leqslant 0$ e
 \begin{equation*}
 \lim\limits _{s\rightarrow 0,\ \mathrm{Re}( s)  >0} s\mathcal{L}( u( x) ,s) =\lim _{x\rightarrow +\infty } u( x)
 \end{equation*}
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione della prima parte.}
 \begin{equation*}
 \begin{aligned}
@@ -2555,9 +2555,9 @@ Per Laplace abbiamo le seguenti richieste sulle funzioni affinché siano $\mathc
 \item $\mathrm{supp} f\subset [ 0,+\infty ) ,\ \mathrm{supp} g\subset [ 0,+\infty )$
 \item $\exists \lambda _{1} ,\lambda _{2} \ \Rightarrow \ e^{-\lambda _{1} x} f( x) \in L^{1}(\mathbb{R}) ,\ e^{-\lambda _{2} x} g( x) \in L^{1}(\mathbb{R})$
 \end{itemize}
-\begin{theorem}
+\begin{thm}
 La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile secondo Laplace.
-\end{theorem}
+\end{thm}
 \textit{Dimostrazione.}
 \begin{equation*}
 \begin{aligned}

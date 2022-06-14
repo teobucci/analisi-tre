@@ -2,7 +2,17 @@
 
 \input{style}
 
-%%%%%%%% ESERCIZI
+\usepackage[
+	left=2.5cm, % inner
+	right=2.5cm, % outer
+	top=2.5cm,
+	bottom=3cm,
+	%showframe,
+	]{geometry}
+
+\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
+
+%%%%%%%% PARTE ESERCIZI
 
 \usepackage{titlesec}
 \usepackage{titletoc}
@@ -14,22 +24,8 @@
 \newcommand{\ParteEsercizi}{\section{Esercizi}}
 \newcommand{\ParteSoluzioni}{\section{Soluzioni}}
 
-% MI ASSICURO QUESTA COSA IMPORTANTE
-
-\setcounter{secnumdepth}{2}
-%\setcounter{tocdepth}{1}
-\setcounter{tocdepth}{1}
-
-
-%%%%%%%%%%%%%%%%%%%%
-
-	\usepackage{geometry}
-	\geometry{
-		nomarginpar, % Toglie doppi margini
-		margin=1in, % Imposta i margini a 1 inch
-	}
-
-\allowdisplaybreaks[4] % Consente di rompere equazioni su più pagine
+\setcounter{secnumdepth}{2} % mi assicuro che gli esercizi siano numerati
+\setcounter{tocdepth}{1} % solo 1 per non avere tutti gli esercizi nel contents
 
 \begin{document}
 
