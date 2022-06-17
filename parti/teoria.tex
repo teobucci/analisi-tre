@@ -213,16 +213,14 @@ valgono le proprietà di linearità, cambio verso, e le consuete maggiorazioni.
 \int _{\gamma } f( z) dz=0,\ \ \forall \gamma \ \text{chiusa} ,\gamma \subset A
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
-
+\begin{proof}
 Semplificata al caso in cui $f\in C^{1}$.
 \begin{equation*}
 \int _{\gamma } f( z) dz=\int _{\gamma }( u+iv)( dx+idy) =\int _{\gamma }( udx-vdy) +i\int _{\gamma }( udy+vdx) =0
 \end{equation*}
 in quanto per le condizioni di (CR) quelle sono due forme differenziali esatte.
-\begin{equation*}
-\qed 
-\end{equation*}
+\end{proof}
+
 \subsection{Estensione alla frontiera}
 
 La tesi vale anche se chiediamo che $f$ sia continua fino al bordo e non che $A$ sia semplicemente connesso.
@@ -242,7 +240,9 @@ Se $f\in H( A) \cap C^{0}(\overline{A})$ e $A$ semplicemente connesso, allora $\
 \boxed{f( z) =\frac{1}{2\pi i}\int _{\gamma }\frac{f( w)}{w-z} dw,\ \ \gamma =\partial A}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
+	
+
 
 Poniamo $w=z+re^{i\vartheta } ,r >0,\vartheta \in [ 0,2\pi ]$, da cui $dw=rie^{i\vartheta } d\vartheta $, calcoliamo l'espressione
 \begin{equation*}
@@ -250,9 +250,9 @@ Poniamo $w=z+re^{i\vartheta } ,r >0,\vartheta \in [ 0,2\pi ]$, da cui $dw=rie^{i
 \end{equation*}
 ma per continuità possiamo far tendere $r\rightarrow 0$
 \begin{gather*}
-\int _{\gamma }\frac{f( w)}{w-z} dw\xrightarrow{r\rightarrow 0} if( z)\int ^{2\pi }_{0} d\vartheta =2\pi i\cdotp f( z)\\
-\qed 
+\int _{\gamma }\frac{f( w)}{w-z} dw\xrightarrow{r\rightarrow 0} if( z)\int ^{2\pi }_{0} d\vartheta =2\pi i\cdotp f( z)
 \end{gather*}
+\end{proof}
 \section{Esistenza di primitive}
 
 Non è sufficiente la continuità.
@@ -262,7 +262,9 @@ Sia $f\in C^{0}( A)$, $A$ aperto. Allora
 f\ \text{ammette primitiva} \ \ \Leftrightarrow \ \ udx-vdy\ \text{e} \ udy+vdx\ \text{sono esatte}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
+	
+
 \begin{itemize}
 \item $( \Rightarrow )$ consideriamo $\gamma $ chiusa\begin{equation*}
 \int _{\gamma } f( z) dz=\int _{\gamma } F'( z) dz=\int ^{b}_{a} F'( \gamma ( t)) \gamma '( t) dt=F( \gamma ( b)) -F( \gamma ( a)) =0
@@ -280,10 +282,11 @@ parametrizziamo il segmento $w=z+th,t\in [ 0,1]$ da cui anche $dw=hdt$\begin{equ
 \end{equation*}
 
 possiamo passare al limite\begin{gather*}
-\lim\limits _{h\rightarrow 0}\frac{F( z+h) -F( z)}{h} =\lim\limits _{h\rightarrow 0}\int ^{1}_{0} f( z+th) dt=\int ^{1}_{0} f( z) dt=f( z)\int ^{1}_{0} dt=f( z)\\
-\qed 
+\lim\limits _{h\rightarrow 0}\frac{F( z+h) -F( z)}{h} =\lim\limits _{h\rightarrow 0}\int ^{1}_{0} f( z+th) dt=\int ^{1}_{0} f( z) dt=f( z)\int ^{1}_{0} dt=f( z)
 \end{gather*}
+
 \end{itemize}
+\end{proof}
 \section{Serie di potenze}
 \begin{thm}
 [di Weierstrass] Sia $f\in H( A)$, $A$ aperto. Allora $f$ è analitica, ovvero si può scrivere localmente in serie di potenze
@@ -291,7 +294,9 @@ possiamo passare al limite\begin{gather*}
 f(z)=\sum ^{\infty }_{n=0} a_{n}( z-z_{0})^{n} ,\ \ \ \ a_{n} =\frac{1}{2\pi i}\int _{\gamma }\frac{f(w)}{( w-z_{0})^{n+1}} dw
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+
+\begin{proof}
+	
 
 Per la formula di Cauchy
 \begin{equation*}
@@ -354,9 +359,9 @@ Si noti che la regione considerata, come si vede in figura, è quindi una palla 
 
 Si ottiene anche la \textbf{formula per derivate}
 \begin{gather*}
-f^{(n)}( z_{0}) =\frac{n!}{2\pi i}\int _{\gamma }\frac{f(w)}{( w-z_{0})^{n+1}} dw\\
-\qed 
+f^{(n)}( z_{0}) =\frac{n!}{2\pi i}\int _{\gamma }\frac{f(w)}{( w-z_{0})^{n+1}} dw
 \end{gather*}
+\end{proof}
 \section{Serie di Laurent}
 
 Vi sono dei punti particolari in certe funzioni dove non c'è convergenza della serie, ad esempio in $f( z) =\frac{1}{1-z}$ il punto $1$ è critico, e la serie geometrica associata non converge in tale punto (e di conseguenza nel disco). Queste "ostruzioni" sono di vario tipo e vengono opportunamente classificate.
@@ -372,7 +377,9 @@ Si noti che la curva è \textit{qualsiasi} purché concatenata con $z_{0}$; ciò
 
 Il teorema di Laurent è pertanto una generalizzazione del teorema di Weierstrass, in cui si include anche una somma sui \textbf{termini negativi}. Sono proprio le potenze negative, infatti, a dare informazioni sul comportamento delle singolarità.
 
-\textit{Dimostrazione.}
+\begin{proof}
+	
+
 
 Tutto si basa sul \textit{fare un giro attorno al punto}
 
@@ -442,9 +449,7 @@ Termine $B$, quello \textit{sospetto} che non c'era nel caso di Weierstrass
  & =\sum\limits ^{\infty }_{n=1}\frac{( w-z_{0})^{n-1}}{( z-z_{0})^{n}} =\sum\limits ^{-\infty }_{n=-1}\frac{( z-z_{0})^{n}}{( w-z_{0})^{n+1}}
 \end{align*}
 Sostituendo tale quantità in $B$ si ottiene la tesi.
-\begin{equation*}
-\qed 
-\end{equation*}
+\end{proof}
 \textit{Esempio.}
 \begin{equation*}
 f( z) =\frac{\sin z}{z} =\frac{1}{\cancel{z}}\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n\cancel{+1}}}{( 2n+1) !} =\sum\limits ^{\infty }_{n=0}\frac{( -1)^{n} z^{2n}}{( 2n+1) !}
@@ -576,7 +581,7 @@ dove $R( \vartheta _{2} -\vartheta _{1})$ non è altro che la lunghezza dell'arc
 \lim _{R\rightarrow \infty }\int _{C_{R}( \vartheta _{1} ,\vartheta _{2})} f(z)dz=0\ \ \forall \vartheta _{1} ,\vartheta _{2}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 \begin{equation*}
 \left| \int f( z) dz\right| \leqslant R( \vartheta _{2} -\vartheta _{1})\frac{c}{|z|^{\alpha }} =R( \vartheta _{2} -\vartheta _{1})\frac{c}{R^{\alpha }}\xrightarrow[\alpha  >1]{R\rightarrow \infty } 0
 \end{equation*}
@@ -616,7 +621,7 @@ Allora:
 \end{equation*}
 \end{enumerate}
 \end{thm}
-\textit{Dimostrazione di }$( 1)$
+\begin{proof}[di $(1)$]
 
 Sia $z=Re^{i\vartheta }$, $\vartheta \in [ 0,\pi ]$, sostituiamo
 \begin{equation*}
@@ -639,10 +644,7 @@ Di conseguenza
 ( *) \leqslant 2MR\int ^{\pi /2}_{0} e^{-aR\frac{2\vartheta }{\pi }} d\vartheta =\cancel{2} M\cancel{R}\left[\left( -\frac{\pi }{\cancel{2} a\cancel{R}}\right) e^{-aR\frac{2\vartheta }{\pi }}\right]^{\pi /2}_{0} =-\frac{\pi M}{a}\underbrace{\left[ e^{-aR} -1\right]}_{\in [ -1,0]} \leqslant \frac{\pi M}{a}
 \end{equation*}
 Per ipotesi $M\rightarrow 0$ e $a >0$, da cui la tesi.
-\begin{equation*}
-\qed 
-\end{equation*}
-
+\end{proof}
 
 
 \chapter{Spazi di Banach e Spazi di Hilbert}
@@ -896,7 +898,9 @@ inoltre vale l'\textbf{identità di Parseval}
 \Vert x\Vert ^{2} =\sum\limits ^{\infty }_{n=1}| ( x,e_{n})| ^{2}
 \end{equation*}
 \end{thm}
-\textit{Semi-dimostrazione.}
+\begin{proof}[(Semi-dimostrazione)]
+	
+
 
 Ammettendo base hilbertiana, esistono $\lambda _{n}$ tali che
 \begin{equation*}
@@ -910,20 +914,18 @@ moltiplichiamo \textit{a destra} scalarmente per un generico $e_{k}$
 È una semidimostrazione in quanto la linearità non vale per la serie che va a $\infty $, bisognerebbe passare al limite ma ci accontentiamo.
 \end{rem}
 Mostriamo ora Parseval
-\begin{gather*}
-\begin{aligned}
+\begin{align*}
 \Vert x\Vert ^{2} & =( x,x) =\left(\sum ^{\infty }_{n=1}( x,e_{n}) e_{n} ,\sum ^{\infty }_{k=1}( x,e_{k}) e_{k}\right)\\
  & =\sum\limits ^{\infty }_{n,k=1}( x,e_{n})\overline{( x,e_{k})}( e_{n} ,e_{k}) =\sum\limits ^{\infty }_{n=1}| ( x,e_{n})| ^{2}
-\end{aligned}\\
-\qed 
-\end{gather*}
+\end{align*}
+\end{proof}
 \begin{thm}
 Sia $H$ di Hilbert separabile. Allora $H$ è isomorfo a $l^{2}$. In particolare $\exists L:H\rightarrow l^{2}$, lineare, biiettiva ed isometria.
 \end{thm}
 \begin{rem}
 Quindi tutti gli spazi di Hilbert sono isomorfi tra di loro.
 \end{rem}
-\textit{Dimostrazione.}
+\begin{proof}
 
 Essendo separabile esiste una BH\footnote{Base Hilbertiana.} $\{e_{n}\}$.
 \begin{equation*}
@@ -970,10 +972,11 @@ e dimostrare che
 
 \begin{gather*}
 \Vert x_{k} -x_{l}\Vert =\left\Vert \sum\limits ^{k}_{n=l+1} \lambda _{n} e_{n}\right\Vert =\sum\limits ^{k}_{n=l+1}| \lambda _{n}| ^{2} =\mu _{k} -\mu _{l}\\
-\Rightarrow \ \ x_{k} =\sum ^{k}_{n=1} \lambda _{n} e_{n} \ \ \text{è di Cauchy} \ \ \Rightarrow \ \ \text{converge per completezza.}\\
-\qed 
+\Rightarrow \ \ x_{k} =\sum ^{k}_{n=1} \lambda _{n} e_{n} \ \ \text{è di Cauchy} \ \ \Rightarrow \ \ \text{converge per completezza.}
 \end{gather*}
+
 \end{itemize}
+\end{proof}
 \section{Integrale di Lebesgue}
 
 Consideriamo un \textbf{plurirettangolo}
@@ -1185,7 +1188,7 @@ $\Vert f\Vert _{L^{\infty }} =\mathrm{ess\ sup}| f( x)| $.
 \begin{thm}
 Sia $p\in [ 1,+\infty )$, $a,b\in L^{p}$, allora anche $( a+b) \in L^{p}$.
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 
 Sia $f( x) =| x| ^{p} ,x\geqslant 0,p >1$ è una funzione convessa, ovvero
 \begin{equation*}
@@ -1200,9 +1203,7 @@ integriamo
 \int \left| \frac{1}{2} x+\frac{1}{2} y\right| ^{p} dx\leqslant \frac{1}{2}\int | x| ^{p} dx+\frac{1}{2}\int | y| ^{p} dx
 \end{equation*}
 questo prova la tesi, se al posto di $x$ e $y$ immaginiamo che ci siano funzioni in $L^{p}$.
-\begin{equation*}
-\qed 
-\end{equation*}
+\end{proof}
 \begin{defn}
 [Esponenti coniugati] Due numeri $p,q\geqslant 1$ si dicono coniugati se
 \begin{equation*}
@@ -1220,20 +1221,20 @@ quindi se $p=1\Rightarrow q=+\infty $, osserviamo anche che se $p\in ( 1,+\infty
 \frac{a^{p}}{p} +\frac{b^{q}}{q} \geqslant ab
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 
 La funzione logaritmo è concava, poniamo $\lambda =\frac{1}{p}$ e di conseguenza $1-\lambda =\frac{1}{q}$
 \begin{gather*}
-\log\left(\frac{a^{p}}{p} +\frac{b^{q}}{q}\right) \geqslant \frac{\log a^{p}}{p} +\frac{\log b^{q}}{q} =\log( ab)\\
-\qed 
+\log\left(\frac{a^{p}}{p} +\frac{b^{q}}{q}\right) \geqslant \frac{\log a^{p}}{p} +\frac{\log b^{q}}{q} =\log( ab) 
 \end{gather*}
+\end{proof}
 \begin{thm}
 [Disuguaglianza di Holder] Siano $p,q$ coniugati e siano $f\in L^{p} ,g\in L^{q}$. Allora
 \begin{equation*}
 f( x) g( x) \in L^{1} \ \ \text{e} \ \ \int | f( x) g( x)| dx\leqslant \Vert f\Vert _{L^{p}}\Vert g\Vert _{L^{q}}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}\leavevmode
 \begin{itemize}
 \item Se $p=1,q=+\infty $ allora $g\in L^{\infty }$ cioè $\mathrm{ess\ sup}| g( x)| < +\infty $\begin{align*}
 \Rightarrow  & | g( x)| \leqslant \Vert g\Vert _{L^{\infty }} \ \ \text{q.o. in} \ x\\
@@ -1263,17 +1264,17 @@ Per dimostrare il risultato della disuguaglianza cerchiamo il minimo in funzione
 \lambda  & =\left[\frac{\Vert g\Vert ^{q}_{L^{q}}}{\Vert f\Vert ^{p}_{L^{p}}}\right]^{1/p}
 \end{align*}
 
-sostituendolo nella (*) otteniamo la tesi.\begin{equation*}
-\qed 
-\end{equation*}
+sostituendolo nella (*) otteniamo la tesi.
+
 \end{itemize}
+\end{proof}
 \begin{thm}
 [Disuguaglianza di Minkowski] Sia $p\geqslant 1,f\in L^{p} ,g\in L^{p}$. Allora
 \begin{equation*}
 ( f+g) \in L^{p} \ \ \text{e} \ \ \Vert f+g\Vert _{L^{p}} \leqslant \Vert f\Vert _{L^{p}} +\Vert g\Vert _{L^{p}}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 \begin{align*}
 \Vert f+g\Vert ^{p}_{L^{p}} & =\int | f( x) +g( x)| ^{p} dx\\
  & =\int | f( x) +g( x)| ^{p-1}| f( x) +g( x)| dx\\
@@ -1298,9 +1299,9 @@ osserviamo il termine che si presenta due volte
 allora
 \begin{gather*}
 \Vert f+g\Vert ^{p}_{L^{p}} \leqslant \Vert f\Vert _{L^{p}}\Vert f+g\Vert ^{p-1}_{L^{p}} +\Vert g\Vert _{L^{p}}\Vert f+g\Vert ^{p-1}_{L^{p}}\\
-\Rightarrow \ \ \Vert f+g\Vert _{L^{p}} \leqslant \Vert f\Vert _{L^{p}} +\Vert g\Vert _{L^{p}}\\
-\qed 
+\Rightarrow \ \ \Vert f+g\Vert _{L^{p}} \leqslant \Vert f\Vert _{L^{p}} +\Vert g\Vert _{L^{p}} 
 \end{gather*}
+\end{proof}
 \begin{thm}
 Per ogni $A\subset \mathbb{R}^{n}$ misurabile, per ogni $p\in [ 1,+\infty )$, lo spazio $L^{p}( A)$ è di Banach, ed è separabile tranne nel caso $p=\infty $.
 \end{thm}
@@ -1586,7 +1587,7 @@ Indichiamo con $( u,f)$ il prodotto di dualità, cioè la distribuzione (funzion
 \boxed{( u,f) =\int _{A} ufdx} \ \ \ \ u\in L^{1}_{\mathrm{loc}}( A) \ \ f\in \mathcal{D}( A)
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 
 Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limitato).
 \begin{itemize}
@@ -1604,10 +1605,9 @@ Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limi
 \left| \int _{K} u( f_{n} -f) dx\right| \leqslant \Vert u\Vert _{L^{1}( K)}\Vert f_{n} -f\Vert _{\infty }\rightarrow 0
 \end{equation*}allora abbiamo fatto vedere che\begin{equation*}
 \int _{A} u( f_{n} -f) dx\rightarrow 0\ \ \ \ \Leftrightarrow \ \ \ \ \int _{A} uf_{n} dx\rightarrow \int _{A} ufdx
-\end{equation*}quindi qualsiasi funzione $L^{1}_{\mathrm{loc}}$ è una distribuzione su quell'insieme.\begin{equation*}
-\qed 
-\end{equation*}
+\end{equation*}quindi qualsiasi funzione $L^{1}_{\mathrm{loc}}$ è una distribuzione su quell'insieme.
 \end{itemize}
+\end{proof}
 
 Si noti che lo spazio $L^{1}_{\mathrm{loc}}$ è molto più grande di $L^{1}$, ad esempio banalmente qualunque polinomio non identicamente nullo non è integrabile su tutto $\mathbb{R}$, ma è integrabile su qualunque compatto.
 
@@ -1615,7 +1615,7 @@ Tutte le distribuzioni si possono vedere come associate a una funzione $L^{1}_{\
 \begin{equation*}
 \boxed{( \delta _{y} ,f) =f( y) \in \mathbb{R}}
 \end{equation*}
-\textit{Dimostrazione.}
+\begin{proof}\leavevmode
 \begin{itemize}
 \item ha valori in $\mathbb{R}$, $\delta _{y} :\mathcal{D}(\mathbb{R})\rightarrow \mathbb{R}$
 \item è lineare $( \delta _{y} ,c_{1} f_{1} +c_{2} f_{2}) =( c_{1} f_{1} +c_{2} f_{2})( y) =c_{1} f_{1}( y) +c_{2} f_{2}( y)$ che è proprio uguale a $c_{1}( \delta _{y} ,f_{1}) +c_{2}( \delta _{y} ,f_{2})$
@@ -1625,10 +1625,9 @@ Tutte le distribuzioni si possono vedere come associate a una funzione $L^{1}_{\
 \item se $y\in K$ allora $( \delta _{y} ,f_{n}) =f_{n}( y)\rightarrow f( y) =( \delta _{y} ,f)$
 \end{itemize}
 
-\begin{equation*}
-\qed 
-\end{equation*}
+
 \end{itemize}
+\end{proof}
 Spesso si scrive
 \begin{equation*}
 ( \delta _{y} ,f) =\int _{\mathbb{R}} \delta _{y}( x) f( x) dx=f( y)
@@ -1697,10 +1696,10 @@ Questo somiglia molto all'integrazione per parti (in realtà è molto più che u
 \end{equation*}
 
 infatti, dato che $\varphi '_{k}\rightarrow \varphi '$\begin{gather*}
-( \Lambda ',\varphi _{k}) =-( \Lambda ,\varphi '_{k})\rightarrow -( \Lambda ,\varphi ') =( \Lambda ',\varphi )\\
-\qed 
+( \Lambda ',\varphi _{k}) =-( \Lambda ,\varphi '_{k})\rightarrow -( \Lambda ,\varphi ') =( \Lambda ',\varphi ) 
 \end{gather*}
 \end{itemize}
+\end{proof}
 
 Andiamo ora a capire che ha le stesse proprietà di una derivata. Consideriamo una funzione derivabile $u\in C^{1}( A) \subset L^{1}_{\mathrm{loc}}( A)$, ma allora è associata ad una distribuzione, che continueremo a chiamare $u$
 \begin{equation*}
@@ -1864,7 +1863,7 @@ Sia $f\in L^{1}(\mathbb{R})$, allora
 \lim\limits _{y\rightarrow 0}\Vert f_{y} -f\Vert _{L^{1}} =0
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 
 È basata sulla densità a cui abbiamo accennato. Sia $\varepsilon  >0$, $\exists \varphi \in \mathcal{D}(\mathbb{R})$ tale che $\Vert f-\varphi \Vert < \varepsilon $. Se trasliamo una funzione, essa non cambia di norma $\Rightarrow \ \Vert f_{y} -\varphi _{y}\Vert < \varepsilon $. Chiamiamo $K$ un certo insieme che contiene sia il supporto di $\varphi $ che della sua traslata $\varphi _{y}$, per un certo $y$ sufficientemente piccolo. Allora\footnote{Teorema di Heine-Cantor. Una funzione continua su un compatto è uniformemente continua.} la funzione $\varphi $ è uniformemente continua, cioè
 \begin{gather*}
@@ -1886,9 +1885,7 @@ Veniamo ora a
  & =\varepsilon ( 2+| K| )
 \end{align*}
 dove $( 2+| K| )$ è costante e $\varepsilon $ è arbitrario, cioè $\Vert f_{y} -f\Vert $ è tanto piccola quanto vogliamo.
-\begin{equation*}
-\qed 
-\end{equation*}
+\end{proof}
 
 Prima di procedere riassumiamo brevemente le inclusioni fra gli spazi che abbiamo visto
 
@@ -1929,7 +1926,7 @@ ma $f$, e quindi anche $| f| $, è integrabile secondo Lebesgue, quindi anche il
 \end{thm}
 La trasformata ha proprietà molto diverse e molto più regolari della $f$, che è banalmente integrabile, sta in uno spazio compeltamente diverso.
 
-\textit{Dimostrazione.}
+\begin{proof}
 
 \textit{Continuità.}
 
@@ -1987,9 +1984,7 @@ passiamo al modulo
 \end{align*}
 Quando $z\rightarrow \pm \infty $ la traslazione $-\pi /z\rightarrow 0$ e quindi, per quanto detto prima sulla traslazione di funzioni $L^{1}$ abbiamo $2| \hat{f}( z)| \rightarrow 0$.
 
-\begin{equation*}
-\qed 
-\end{equation*}
+\end{proof}
 
 Questo vuol dire che se chiamiamo
 \begin{equation*}
@@ -2034,7 +2029,7 @@ Cerchiamo di capire se una trasformata di Fourier è derivabile, quindi anche $C
 \end{thm}
 Chiedere che anche $xf( x)$ stia in $L^{1}$ significa che la $f$ deve in qualche senso tendere a $0$ abbastanza rapidamente, vogliamo che l'integrale su $\mathbb{R}$ converga.
 
-\textit{Dimostrazione.}
+\begin{proof}
 
 Calcoliamo il limite del rapporto incrementale
 \begin{equation*}
@@ -2048,8 +2043,9 @@ Calcoliamo il limite del rapporto incrementale
 \end{equation*}
 dove possiamo passare al limite sotto il segno di integrale perché in generale
 \begin{equation*}
-\left| e^{i\lambda } -1\right| \leqslant | \lambda | \ \ \lambda \in \mathbb{R} \ \ \ \ \ \ \ \ \lambda =-xh\ \ \Rightarrow \ \ \text{l'integrale converge per conv. dom.}\qed 
+\left| e^{i\lambda } -1\right| \leqslant | \lambda | \ \ \lambda \in \mathbb{R} \ \ \ \ \ \ \ \ \lambda =-xh\ \ \Rightarrow \ \ \text{l'integrale converge per conv. dom.} 
 \end{equation*}
+\end{proof}
 \begin{thm}
 [Trasformata della derivata] Sia $f\in L^{1} \cap C^{1}$, $f'\in L^{1}$.
 \begin{equation*}
@@ -2146,7 +2142,7 @@ La trasformata agisce su
 \mathcal{F} :\mathcal{S}(\mathbb{R})\rightarrow \mathcal{S}(\mathbb{R})
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 
 Lo spazio di partenza ha senso essendo densamente incluso in $L^{p}(\mathbb{R}) ,p=1$.
 
@@ -2163,9 +2159,9 @@ dato che $v$ sta in $L^{1}$, $\hat{v}$ sta in $C^{0}_{0}$, quindi la quantità $
 
 moltiplichiamola per $z^{M}$, il termine che otteniamo a destra abbiamo appena fatto vedere che, a meno di coefficienti $i$ opportunamente elevati, è limitato\begin{equation*}
 z^{M}\hat{u}^{( N)} =z^{M}( -i)^{N}\hat{v} \ \ \boxed{\in L^{\infty }(\mathbb{R})} \ \ \forall N,M\geqslant 0
-\end{equation*}ma questa è proprio la definizione di funzione a descrescenza rapida, quindi $\hat{u} \in \mathcal{S}(\mathbb{R})$ e abbiamo dimostrato la tesi.\begin{equation*}
-\end{equation*}
+\end{equation*}ma questa è proprio la definizione di funzione a descrescenza rapida, quindi $\hat{u} \in \mathcal{S}(\mathbb{R})$ e abbiamo dimostrato la tesi.
 \end{itemize}
+\end{proof}
 \subsection{Allo spazio $L^{2}$}
 
 Vogliamo mostrare che
@@ -2179,7 +2175,7 @@ Non possiamo definirla in $L^{2}$ come $\int e^{-ixz} u( x) dx$ perché se $u\in
 \boxed{\Vert \hat{u}\Vert _{L^{2}} =\sqrt{2\pi }\Vert u\Vert _{L^{2}}} \ \ \text{quindi} \ \ \boxed{\hat{u} \in L^{2}(\mathbb{R})}
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}\leavevmode
 \begin{itemize}
 \item \textit{Dimostrazione nel caso di }$u\in \mathcal{S}(\mathbb{R})$
 
@@ -2221,9 +2217,10 @@ Grazie alla completezza dello spazio $L^{2}$, se $u_{n}$ converge, è di Cauchy,
 \item Con questo ragionamento potremmo anche dedurre che
 
 \begin{equation*}
-( u,v) =\frac{1}{2\pi }(\hat{u} ,\hat{v}) \ \ \ \ \text{(si mantiene l'ortogonalità)}\qed 
+( u,v) =\frac{1}{2\pi }(\hat{u} ,\hat{v}) \ \ \ \ \text{(si mantiene l'ortogonalità)} 
 \end{equation*}
 \end{itemize}
+\end{proof}
 \section{Trasformata di Fourier di una distribuzione temperata}
 
 Ci manca solo la trasformata di Fourier di una distribuzione temperata, consideriamo quindi $S'(\mathbb{R})$. Vogliamo mostrare che
@@ -2244,7 +2241,7 @@ La trasformata di Fourier $\mathcal{F} :\mathcal{S} '(\mathbb{R})\rightarrow \ma
 
 lineare biunivoca e continua.
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}\leavevmode
 \begin{itemize}
 \item È effettivamente un funzionale \textbf{lineare} dalla definizione
 \item \textbf{Continuo} grazie alla (non dimostrata) continuità della trasformata di Fourier delle funzioni in $\mathcal{S}(\mathbb{R})$.\begin{equation*}
@@ -2263,9 +2260,10 @@ Data una distribuzione temperata $v\in \mathcal{S} '(\mathbb{R})$ tale che $v=\h
 \item \textbf{Iniettiva}.
 
 Dobbiamo far vedere che se abbiamo $u_{1} ,u_{2} \in \mathcal{S} '(\mathbb{R})$ e $\hat{u}_{1} =\hat{u}_{2}$ allora $u_{1} =u_{2}$. Prendiamo una nuova funzione test $\psi $ tale che $\hat{\psi } =\varphi $.\begin{equation*}
-( u_{1} ,\varphi ) =( u_{1} ,\hat{\psi }) =(\hat{u}_{1} ,\psi ) =(\hat{u}_{2} ,\psi ) =( u_{2} ,\hat{\psi }) =( u_{2} ,\varphi )\qed 
+( u_{1} ,\varphi ) =( u_{1} ,\hat{\psi }) =(\hat{u}_{1} ,\psi ) =(\hat{u}_{2} ,\psi ) =( u_{2} ,\hat{\psi }) =( u_{2} ,\varphi )
 \end{equation*}
 \end{itemize}
+\end{proof}
 \textit{Esempio.}
 
 Calcoliamo la trasformata di Fourier di una costante, cioè una funzione $L^{1}_{\mathrm{loc}}$ a cui quindi è associata una distribuzione temperata\footnote{Si noti che in testi differenti si potrebbe trovare un risultato diverso in base a come si è definita la trasformata di Fourier. Non tutti, infatti, sono d'accordo sull'uso della costante $2\pi $ tra la trasformazione diretta e quella inversa.}
@@ -2310,18 +2308,21 @@ Questo integrale ha senso purché $e^{-\lambda x} u( x) \in L^{1}(\mathbb{R})$, 
 \begin{itemize}
 \item Linearità $\boxed{\mathcal{L}( \alpha u( x) +\beta v( x) ,s) =\alpha \mathcal{L}( u( x) ,s) +\beta \mathcal{L}( v( x) ,s)}$
 
-Attenzione, dobbiamo intersecare i due domini\begin{equation*}
+Attenzione, dobbiamo intersecare i due domini
+\begin{equation*}
 \boxed{\mathrm{Re}( s)  >\max( \lambda ( u) ,\lambda ( v))}
 \end{equation*}
 \item $\boxed{\lim\limits _{\mathrm{Re}( s)\rightarrow +\infty }\mathcal{L}( u( x) ,s) =0}$
 
-\textit{Dimostrazione.}\begin{equation*}
+\begin{proof}
+\begin{equation*}
 \lim\limits _{\mathrm{Re}( s)\rightarrow +\infty }\mathcal{L}( u( x) ,s) =\lim\limits _{\mathrm{Re}( s)\rightarrow +\infty }\int ^{+\infty }_{0} e^{-s_{R} x} e^{-is_{I} x} u( x) dx
 \end{equation*}
 
 possiamo portare il limite dentro per convergenza dominata, purché $\mathrm{Re}( s)  >\lambda ( u)$ possiamo trovare una funzione che la domini\begin{equation*}
 \lim\limits _{\mathrm{Re}( s)\rightarrow +\infty }\int ^{+\infty }_{0} e^{-s_{R} x} e^{-is_{I} x} u( x) dx=\int ^{+\infty }_{0}\lim\limits _{\mathrm{Re}( s)\rightarrow +\infty } e^{-s_{R} x} e^{-is_{I} x} u( x) dx=0
 \end{equation*}
+\end{proof}
 \item $\boxed{\mathcal{L}( u( x-x_{0}) ,s) =e^{-sx_{0}}\mathcal{L}( u( x) ,s)}$
 
 Attenzione che essendo $\mathrm{supp}( u) \in [ 0,+\infty )$
@@ -2330,7 +2331,8 @@ Attenzione che essendo $\mathrm{supp}( u) \in [ 0,+\infty )$
 \item se $x_{0} < 0$ il supporto potrebbe includere numeri negativi, quindi scartiamo questo caso
 \end{itemize}
 
-\textit{Dimostrazione.}\begin{equation*}
+\begin{proof}
+\begin{equation*}
 \begin{aligned}
 \mathcal{L}( u( x-x_{0}) ,s) & =\int ^{+\infty }_{0} e^{-sx} u( x-x_{0}) dx & x'=x-x_{0}\\
  & =\int ^{+\infty }_{-x_{0}} e^{-s( x'+x_{0})} u( x') dx' & \\
@@ -2338,20 +2340,25 @@ Attenzione che essendo $\mathrm{supp}( u) \in [ 0,+\infty )$
  & =e^{-sx_{0}}\mathcal{L}( u( x) ,s) & 
 \end{aligned}
 \end{equation*}
+\end{proof}
 \item $\boxed{\mathcal{L}\left( e^{s_{0} x} u( x) ,s\right) =\mathcal{L}( u( x) ,s-s_{0})}$ $\boxed{\mathrm{Re}( s-s_{0})  >\lambda ( u)}$
 
-\textit{Dimostrazione.}\begin{equation*}
+\begin{proof}
+\begin{equation*}
 \mathcal{L}\left( e^{s_{0} x} u( x) ,s\right) =\int ^{+\infty }_{0} e^{-x( s-s_{0})} u( x) dx=\mathcal{L}( u( x) ,s-s_{0})
 \end{equation*}
+\end{proof}
 \item $\boxed{\mathcal{L}( u( cx) ,s) =\frac{1}{c}\mathcal{L}\left( u( x) ,\frac{s}{c}\right)}$ $\boxed{c\in \mathbb{R} ,c >0}$
 
-\textit{Dimostrazione.}\begin{equation*}
+\begin{proof}
+\begin{equation*}
 \begin{aligned}
 \mathcal{L}( u( cx) ,s) & =\int ^{+\infty }_{0} e^{-sx} u( cx) dx & x'=cx\ \ \Rightarrow \ \ dx'=cdx\\
  & =\int ^{+\infty }_{0} e^{-s\frac{x'}{c}} u( x')\frac{1}{c} dx' & \\
  & =\frac{1}{c}\mathcal{L}\left( u( x) ,\frac{s}{c}\right) & 
 \end{aligned}
 \end{equation*}
+\end{proof}
 \end{itemize}
 \subsection{Trasformate di funzioni notevoli}
 \begin{itemize}
@@ -2391,7 +2398,7 @@ per capirlo meglio possiamo vedere la Delta come\begin{gather*}
 \boxed{\frac{d^{n}}{ds^{n}}\mathcal{L}( u( x) ,s) =(\mathcal{-1)^{n} L}\left( x^{n} u( x) ,s\right)} \ \ \ \ \forall s\ \text{tale che} \ \mathrm{Re}( s)  >\lambda ( u)
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 \begin{align*}
 \lim\limits _{h\rightarrow 0}\frac{\mathcal{L}( u( x) ,s+h) -\mathcal{L}( u( x) ,s)}{h} & =\lim\limits _{h\rightarrow 0}\int ^{+\infty }_{0} e^{-sx}\frac{e^{-hx} -1}{h} u( x) dx\\
  & =\int ^{+\infty }_{0}\lim\limits _{h\rightarrow 0} e^{-sx}\textcolor[rgb]{0.82,0.01,0.11}{\frac{e^{-hx} -1}{-hx}}( -x) u( x) dx\\
@@ -2491,9 +2498,9 @@ e^{-\lambda x} u( x) =u( 0) +\int ^{x}_{0}\frac{d}{dt}\left( e^{-\lambda t} u( t
 \end{equation*}
 il limite a destra esiste finito, allora esiste finito il limite di $e^{-\lambda x} u( x)$, ma se ammette limite deve necessariamente essere
 \begin{gather*}
-\lim _{x\rightarrow +\infty } e^{-sx} u( x) =0\\
-\qed 
+\lim _{x\rightarrow +\infty } e^{-sx} u( x) =0 
 \end{gather*}
+\end{proof}
 \subsection{Trasformazione inversa}
 
 Se abbiamo $f( s) =\mathcal{L}( u( x) ,s)$ come troviamo $u( x) =\mathcal{L}^{-1}( f( s) ,s)$?
@@ -2558,7 +2565,7 @@ Per Laplace abbiamo le seguenti richieste sulle funzioni affinché siano $\mathc
 \begin{thm}
 La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile secondo Laplace.
 \end{thm}
-\textit{Dimostrazione.}
+\begin{proof}
 \begin{equation*}
 \begin{aligned}
 ( f*g)( x) & =\int _{\mathbb{R}} f( x-t) g( t) dt=\int ^{x}_{0} f( x-t) g( t) dt\\
@@ -2583,9 +2590,9 @@ Soddisfa i requisiti, calcoliamone l'espressione
 \end{align*}
 cambiamo la variabile $x'=x-t$
 \begin{gather*}
-( *) =\left[\int _{\mathbb{R}} e^{-sx'} f( x') dx'\right]\left[\int _{\mathbb{R}} e^{-st} g( t) dt\right] =\mathcal{L}( f) \cdotp \mathcal{L}( g)\\
-\qed 
+( *) =\left[\int _{\mathbb{R}} e^{-sx'} f( x') dx'\right]\left[\int _{\mathbb{R}} e^{-st} g( t) dt\right] =\mathcal{L}( f) \cdotp \mathcal{L}( g) 
 \end{gather*}
+\end{proof}
 \chapter{Conclusioni}
 \section{EDP e Fourier}
 
