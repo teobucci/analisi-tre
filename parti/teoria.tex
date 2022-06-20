@@ -37,8 +37,8 @@ ovvero
 Possiamo considerare per esempio due direzioni
 \begin{equation*}
 \begin{aligned}
-v = (1, 0) = 1 & \ \ \Rightarrow \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
-v = (0, 1) = i & \ \ \Rightarrow \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
+v = (1, 0) = 1 & \ \ \implies \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
+v = (0, 1) = i & \ \ \implies \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
 \end{aligned}
 \end{equation*}
 mettendo insieme i pezzi
@@ -57,7 +57,7 @@ Sia $f: A\subset \CC\rightarrow \CC$ con $A$ \textbf{aperto}. Se $f\ $è derivab
 
 Vale il seguente risultato
 \begin{equation*}
-\boxed{f\in H(A) \ \ \Leftrightarrow \ \
+\boxed{f\in H(A) \ \ \iff \ \
 \begin{cases}
 u, v\ \text{differenziabili in} \ A\\
 \text{valgono le (CR)}
@@ -68,7 +68,7 @@ Consideriamo ora $u, v\in C^{2}$ e deriviamole. Usando il teorema di Schwarz
 \begin{cases}
 \partial_{yy} u = - \partial_{xy} v\ \ \ \ \\
 \partial_{xx} u = \partial_{xy} v
-\end{cases} \Rightarrow \ \ \partial_{yy} u + \partial_{xx} u = \Delta u = 0
+\end{cases} \implies \ \ \partial_{yy} u + \partial_{xx} u = \Delta u = 0
 \end{equation*}
 Analogamente per $v$
 \begin{equation*}
@@ -177,7 +177,7 @@ e^{z} = w, \ \ w\neq 0, w\in \CC
 \end{equation*}
 allora
 \begin{equation*}
-e^{z} = w\ \ \Rightarrow \ \ e^{z + 2\pi i\cdot k} =| w| e^{i\arg w} \ \ \Rightarrow \ \ \log e^{z + 2\pi i\cdot k} = \log| w| e^{i\arg w}
+e^{z} = w\ \ \implies \ \ e^{z + 2\pi i\cdot k} =| w| e^{i\arg w} \ \ \implies \ \ \log e^{z + 2\pi i\cdot k} = \log| w| e^{i\arg w}
 \end{equation*}
 da cui uguagliando le due parti otteniamo la formulazione del logaritmo complesso
 \begin{equation*}
@@ -237,14 +237,14 @@ in quanto per le condizioni di (CR) quelle sono due forme differenziali esatte.
 
 La tesi vale anche se chiediamo che $f$ sia continua fino al bordo e non che $A$ sia semplicemente connesso.
 \begin{equation*}
-f\in H(A) \cap C^{0}(\overline{A}) \ \ \Rightarrow \ \ \int_{\gamma} f(z) dz = 0, \ \ \gamma = \partial A
+f\in H(A) \cap C^{0}(\overline{A}) \ \ \implies \ \ \int_{\gamma} f(z) dz = 0, \ \ \gamma = \partial A
 \end{equation*}
 
 \subsection{Estensione a regioni a contorno multiplo}
 
 Se ci sono \textit{buchi} nell'insieme $A$ si può semplicemente girarci intorno e tenere conto di tali contributi, mentre i contributi delle linee rette si cancellano
 \begin{equation*}
-f\in H\left(A\setminus \bigcup\nolimits_{i} A_{i}\right) \cap C^{0}\left(\overline{A\setminus \bigcup\nolimits_{i} A_{i}}\right) \ \ \Rightarrow \ \ \int_{\partial A} f(z) dz + \sum\nolimits_{i}\int_{\partial A_{i}} f(z) dz = 0
+f\in H\left(A\setminus \bigcup\nolimits_{i} A_{i}\right) \cap C^{0}\left(\overline{A\setminus \bigcup\nolimits_{i} A_{i}}\right) \ \ \implies \ \ \int_{\partial A} f(z) dz + \sum\nolimits_{i}\int_{\partial A_{i}} f(z) dz = 0
 \end{equation*}
 
 \section{Formula Integrale di Cauchy}
@@ -273,17 +273,17 @@ Non è sufficiente la continuità.
 \begin{thm}
 Sia $f\in C^{0}(A)$, $A$ aperto. Allora
 \begin{equation*}
-f\ \text{ammette primitiva} \ \ \Leftrightarrow \ \ udx - vdy\ \text{e} \ udy + vdx\ \text{sono esatte}
+f\ \text{ammette primitiva} \ \ \iff \ \ udx - vdy\ \text{e} \ udy + vdx\ \text{sono esatte}
 \end{equation*}
 \end{thm}
 \begin{proof}
 
 \begin{itemize}
-\item $(\Rightarrow)$ consideriamo $\gamma $ chiusa
+\item $(\implies)$ consideriamo $\gamma $ chiusa
 \begin{equation*}
 \int_{\gamma} f(z) dz = \int_{\gamma} F'(z) dz = \int^{b}_{a} F'(\gamma (t)) \gamma'(t) dt = F(\gamma (b)) - F(\gamma (a)) = 0
 \end{equation*}
-\item $(\Leftarrow)$ Consideriamo una certa $F$ definita da
+\item $(\impliedby)$ Consideriamo una certa $F$ definita da
 \begin{equation*}
 F(z) = \int^{z}_{z_{0}} f(w) dw
 \end{equation*}
@@ -328,7 +328,7 @@ Osserviamo che
 \end{equation*}
 fintanto che ci mettiamo in una regione in cui
 \begin{equation*}
-\left| \frac{z - z_{0}}{w - z_{0}}\right| < 1\ \ \Leftrightarrow \ \ | z - z_{0}| < | w - z_{0}|
+\left| \frac{z - z_{0}}{w - z_{0}}\right| < 1\ \ \iff \ \ | z - z_{0}| < | w - z_{0}|
 \end{equation*}
 
 \begin{figure}[htpb]
@@ -450,7 +450,7 @@ Analizziamo i termini.
 Termine $A$
 \begin{gather*}
 \frac{1}{w - z} = \frac{1}{w - z_{0} - (z - z_{0})} = \frac{1}{w - z_{0}}\frac{1}{1 - \frac{z - z_{0}}{w - z_{0}}} = \sum\limits^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}}\\
-\Rightarrow \ \ A = \frac{1}{2\pi i}\int_{\gamma_{1}} f(w)\sum\limits^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}} dw = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}
+\implies \ \ A = \frac{1}{2\pi i}\int_{\gamma_{1}} f(w)\sum\limits^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}} dw = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}
 \end{gather*}
 Termine $B$, quello \textit{sospetto} che non c'era nel caso di Weierstrass
 \begin{align*}
@@ -526,9 +526,9 @@ Sia $z_{0} \neq \infty $ un punto singolare isolato per $f$. Allora le seguenti 
 \begin{thm}
 [Caratterizzazione delle singolarità] Valgono le seguenti affermazioni, con $z_{0}$ punto singolare isolato per $f$ :
 \begin{enumerate}
-\item $\lim_{z\rightarrow z_{0}} f(z) = \infty \Leftrightarrow z_{0}$ è un polo.
-\item $\lim_{z\rightarrow z_{0}} f(z)$ esiste finito $\Leftrightarrow z_{0}$ è una singolarità eliminabile.
-\item $\lim_{z\rightarrow z_{0}} f(z)$ non esiste $\Leftrightarrow z_{0}$ è una singolarità essenziale.
+\item $\lim_{z\rightarrow z_{0}} f(z) = \infty \iff z_{0}$ è un polo.
+\item $\lim_{z\rightarrow z_{0}} f(z)$ esiste finito $\iff z_{0}$ è una singolarità eliminabile.
+\item $\lim_{z\rightarrow z_{0}} f(z)$ non esiste $\iff z_{0}$ è una singolarità essenziale.
 \end{enumerate}
 \end{thm}
 \begin{thm}
@@ -540,7 +540,7 @@ In generale si può sempre studiare la serie di Laurent centrata nel punto, ma c
 
 Il coefficiente $a_{- 1}$ della serie di Laurent centrata in $z_{0}$ è molto importante e prende il nome di \textbf{residuo integrale}
 \begin{equation*}
-a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw\ \ \Rightarrow \ \ \mathrm{Res}(f, z_{0}) = a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) dw
+a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw\ \ \implies \ \ \mathrm{Res}(f, z_{0}) = a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) dw
 \end{equation*}
 Il seguente teorema semplifica tantissimi calcoli di integrali, anche reali.
 \begin{thm}
@@ -674,7 +674,7 @@ Per ipotesi $M\rightarrow 0$ e $a > 0$, da cui la tesi.
 [Norma]
 Sia $X$ uno spazio vettoriale. Si dice \textbf{norma} un'applicazione $ \Vert \cdot \Vert : X\rightarrow [0, + \infty)$ che verifica, $\forall \lambda \in \RR$, $\forall x, y\in X$
 \begin{itemize}
-\item $ \Vert x \Vert = 0\Leftrightarrow x = 0$
+\item $ \Vert x \Vert = 0\iff x = 0$
 \item $ \Vert \lambda x \Vert =| \lambda | \Vert x \Vert $
 \item $ \Vert x + y \Vert \leq \Vert x \Vert + \Vert y \Vert $
 \end{itemize}
@@ -723,7 +723,7 @@ Uno spazio normato si dice di Banach se è completo.
 [Prodotto scalare]
 Il prodotto scalare è un'applicazione $(\cdot, \cdot) : X\times X\rightarrow \CC$ tale che
 \begin{itemize}
-\item $(x, x) = 0\Leftrightarrow x = 0$
+\item $(x, x) = 0\iff x = 0$
 \item $(x, x) \geq 0, \forall x\in X$
 \item $(x, y) = \overline{(y, x)}$
 \item Vale la \textit{sesquilinearità}
@@ -873,8 +873,8 @@ Il teorema ha come corollario del quarto punto che proiettando due punti non li 
 \begin{rem}
 I casi banali sono
 \begin{gather*}
-x\in M\Rightarrow P = x, Q = 0\\
-x\in M^{\perp} \Rightarrow P = 0, Q = x
+x\in M\implies P = x, Q = 0\\
+x\in M^{\perp} \implies P = 0, Q = x
 \end{gather*}
 \end{rem}
 \begin{thm}
@@ -905,7 +905,7 @@ Non essendo finita, non è una base nel senso dell'algebra lineare, ma è la cos
 È l'equivalente di una base ortonormale.
 \end{rem}
 \begin{rem}
-Se $n = \mathrm{dim}(V) < \infty $, $\{e_{1}, \dotsc, e_{n}\}$, $(e_{j}, e_{k}) = \delta_{jk}$, allora $\forall v\in V\Rightarrow v = \sum^{n}_{k = 1} \lambda_{k} e_{k}$.
+Se $n = \mathrm{dim}(V) < \infty $, $\{e_{1}, \dotsc, e_{n}\}$, $(e_{j}, e_{k}) = \delta_{jk}$, allora $\forall v\in V\implies v = \sum^{n}_{k = 1} \lambda_{k} e_{k}$.
 \end{rem}
 \begin{rem}
 Dire
@@ -989,7 +989,7 @@ Per Parseval
 
 Isometria significa che $ \Vert L(x) \Vert = \Vert x \Vert $, grazie a questo possiamo dire che\footnote{Un'applicazione \textit{lineare} tra spazi di dimensione infinita \textit{può non essere continua}, ma se è isometria lo è di sicuro.}
 \begin{equation*}
-L(x) = L(y) \ \ \Rightarrow \ \ \Vert L(x) - L(y) \Vert = 0\ \ \Rightarrow \ \ \Vert x - y \Vert = 0\ \ \Rightarrow \ \ x = y
+L(x) = L(y) \ \ \implies \ \ \Vert L(x) - L(y) \Vert = 0\ \ \implies \ \ \Vert x - y \Vert = 0\ \ \implies \ \ x = y
 \end{equation*}
 \item \textit{Suriettività.}
 
@@ -1000,7 +1000,7 @@ x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n}
 
 Usiamo la \textbf{completezza} dello spazio
 \begin{equation*}
-\lambda \subset l^{2} \ \ \Rightarrow \ \ \sum\limits^{\infty}_{n = 1}| \lambda_{n}|^{2} < + \infty \ \ \Rightarrow \ \ \mu_{k} = \sum\limits^{k}_{n = 1}| \lambda_{n}|^{2} \ \ \text{è di Cauchy}
+\lambda \subset l^{2} \ \ \implies \ \ \sum\limits^{\infty}_{n = 1}| \lambda_{n}|^{2} < + \infty \ \ \implies \ \ \mu_{k} = \sum\limits^{k}_{n = 1}| \lambda_{n}|^{2} \ \ \text{è di Cauchy}
 \end{equation*}
 
 da cui possiamo considerare
@@ -1012,7 +1012,7 @@ e dimostrare che
 
 \begin{gather*}
 \Vert x_{k} - x_{l} \Vert = \left \Vert \sum\limits^{k}_{n = l + 1} \lambda_{n} e_{n}\right \Vert = \sum\limits^{k}_{n = l + 1}| \lambda_{n}|^{2} = \mu_{k} - \mu_{l}\\
-\Rightarrow \ \ x_{k} = \sum^{k}_{n = 1} \lambda_{n} e_{n} \ \ \text{è di Cauchy} \ \ \Rightarrow \ \ \text{converge per completezza.}
+\implies \ \ x_{k} = \sum^{k}_{n = 1} \lambda_{n} e_{n} \ \ \text{è di Cauchy} \ \ \implies \ \ \text{converge per completezza.}
 \end{gather*}
 
 \end{itemize}
@@ -1158,7 +1158,7 @@ Allora definiamo
 \begin{defn}
 Una funzione $f: A\subset \RR^{n}\rightarrow \CC$ si dice \textbf{Lebesgue - integrabile}
 \begin{equation*}
-\boxed{f\in L^{1} \ \ \Leftrightarrow \ \ \int_{A}| f(x)| dx < + \infty}
+\boxed{f\in L^{1} \ \ \iff \ \ \int_{A}| f(x)| dx < + \infty}
 \end{equation*}
 \end{defn}
 Per esempio la funzione
@@ -1262,7 +1262,7 @@ Poniamo inoltre
 \begin{equation*}
 \frac{1}{\infty} = 0\ \ \ \ \frac{1}{0} = \infty
 \end{equation*}
-quindi se $p = 1\Rightarrow q = + \infty $, osserviamo anche che se $p\in (1, + \infty) \Rightarrow q\in (1, + \infty)$.
+quindi se $p = 1\implies q = + \infty $, osserviamo anche che se $p\in (1, + \infty) \implies q\in (1, + \infty)$.
 \end{defn}
 \begin{thm}
 [Disuguaglianza di Young]
@@ -1289,8 +1289,8 @@ f(x) g(x) \in L^{1} \ \ \text{e} \ \ \int | f(x) g(x)| dx\leq \Vert f \Vert_{L^{
 \begin{itemize}
 \item Se $p = 1, q = + \infty $ allora $g\in L^{\infty}$ cioè $\mathrm{ess\ sup}| g(x)| < + \infty $
 \begin{align*}
-\Rightarrow & | g(x)| \leq \Vert g \Vert_{L^{\infty}} \ \ \text{q.o. in} \ x\\
-\Rightarrow & \int | f(x) g(x)| dx\leq \Vert g \Vert_{L^{\infty}}\int | f(x)| dx = \Vert g \Vert_{L^{\infty}} \Vert f \Vert_{L^{1}}
+\implies & | g(x)| \leq \Vert g \Vert_{L^{\infty}} \ \ \text{q.o. in} \ x\\
+\implies & \int | f(x) g(x)| dx\leq \Vert g \Vert_{L^{\infty}}\int | f(x)| dx = \Vert g \Vert_{L^{\infty}} \Vert f \Vert_{L^{1}}
 \end{align*}
 \item Se $p, q > 1$ allora
 \begin{equation*}
@@ -1299,7 +1299,7 @@ f(x) g(x) \in L^{1} \ \ \text{e} \ \ \int | f(x) g(x)| dx\leq \Vert f \Vert_{L^{
 
 Notiamo che
 \begin{equation*}
-\frac{1}{p} + \frac{1}{q} = 1\ \ \Rightarrow \ \ \frac{1}{q} = 1 - \frac{1}{p} = \frac{p - 1}{p}
+\frac{1}{p} + \frac{1}{q} = 1\ \ \implies \ \ \frac{1}{q} = 1 - \frac{1}{p} = \frac{p - 1}{p}
 \end{equation*}
 
 voglio utilizzare la disuguaglianza di Young
@@ -1310,13 +1310,13 @@ voglio utilizzare la disuguaglianza di Young
 
 leggiamo tutta la maggiorazione
 \begin{equation}
-\int | f(x) g(x)| dx\leq \frac{\lambda^{p - 1}}{p}\underbrace{\int | f(x)|^{p} dx}_{ \Vert f \Vert^{p}_{L^{p}}} + \frac{1}{\lambda q}\underbrace{\int | g(x)|^{q} dx}_{ \Vert g \Vert^{q}_{L^{q}}} \ \ \Rightarrow \ \ fg\in L^{1} \tag{*}
+\int | f(x) g(x)| dx\leq \frac{\lambda^{p - 1}}{p}\underbrace{\int | f(x)|^{p} dx}_{ \Vert f \Vert^{p}_{L^{p}}} + \frac{1}{\lambda q}\underbrace{\int | g(x)|^{q} dx}_{ \Vert g \Vert^{q}_{L^{q}}} \ \ \implies \ \ fg\in L^{1} \tag{*}
 \end{equation}
 
 Per dimostrare il risultato della disuguaglianza cerchiamo il minimo in funzione di $\lambda > 0$ derivando
 \begin{align*}
 \frac{p - 1}{p} \lambda^{p - 2} \Vert f \Vert^{p}_{L^{p}} - \frac{1}{\lambda^{2} q} \Vert g \Vert^{q}_{L^{q}} & = 0\\
-\Rightarrow \ \ \frac{p - 1}{p} \lambda^{p} \Vert f \Vert^{p}_{L^{p}} & = \frac{1}{q} \Vert g \Vert^{q}_{L^{q}}\\
+\implies \ \ \frac{p - 1}{p} \lambda^{p} \Vert f \Vert^{p}_{L^{p}} & = \frac{1}{q} \Vert g \Vert^{q}_{L^{q}}\\
 \lambda^{p} & = \cancel{\frac{1}{q}} \Vert g \Vert^{q}_{L^{q}} \cdot \cancel{\frac{p}{p - 1}} \cdot \frac{1}{ \Vert f \Vert^{p}_{L^{p}}}\\
 \lambda & = \left[\frac{ \Vert g \Vert^{q}_{L^{q}}}{ \Vert f \Vert^{p}_{L^{p}}}\right]^{1/p}
 \end{align*}
@@ -1357,7 +1357,7 @@ osserviamo il termine che si presenta due volte
 allora
 \begin{gather*}
 \Vert f + g \Vert^{p}_{L^{p}} \leq \Vert f \Vert_{L^{p}} \Vert f + g \Vert^{p - 1}_{L^{p}} + \Vert g \Vert_{L^{p}} \Vert f + g \Vert^{p - 1}_{L^{p}}\\
-\Rightarrow \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
+\implies \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
 \end{gather*}
 \end{proof}
 \begin{thm}
@@ -1444,7 +1444,7 @@ Dal momento che
 \end{equation*}
 Per il test di Weierstrass vale la seguente relazione che ci permette di stabilire se la serie converge uniformemente
 \begin{equation*}
-\sum\limits^{\infty}_{n = 1}(| a_{n}| + | b_{n}|) < \infty \ \ \Rightarrow \ \ f(x) \ \text{converge uniformemente}
+\sum\limits^{\infty}_{n = 1}(| a_{n}| + | b_{n}|) < \infty \ \ \implies \ \ f(x) \ \text{converge uniformemente}
 \end{equation*}
 \end{rem}
 \textit{Esempio.}
@@ -1486,7 +1486,7 @@ osserviamo che
 \end{equation*}
 per cui per il test di Weierstrass se
 \begin{equation*}
-\sum\limits^{\infty}_{n = 1} n(| a_{n}| + | b_{n}|) < \infty \ \ \Rightarrow \ \ f'(x) \ \text{converge uniformemente}
+\sum\limits^{\infty}_{n = 1} n(| a_{n}| + | b_{n}|) < \infty \ \ \implies \ \ f'(x) \ \text{converge uniformemente}
 \end{equation*}
 e naturalmente anche $f(x)$. La condizione \textit{sufficiente} affinché la serie di Fourier sia derivabile $k$ volte è che
 \begin{equation*}
@@ -1502,7 +1502,7 @@ Esiste una base alternativa, che troviamo se scriviamo le relazioni complesse
 \end{equation*}
 allora la serie di Fourier si scrive nella sua \textbf{forma esponenziale}
 \begin{equation*}
-f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}\left[a_{n}\frac{e^{inx} + e^{- inx}}{2} + b_{n}\frac{e^{inx} - e^{- inx}}{2i}\right] \ \ \Rightarrow \ \ \boxed{f(x) = \sum\limits^{\infty}_{n = - \infty} c_{n} e^{inx}}
+f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}\left[a_{n}\frac{e^{inx} + e^{- inx}}{2} + b_{n}\frac{e^{inx} - e^{- inx}}{2i}\right] \ \ \implies \ \ \boxed{f(x) = \sum\limits^{\infty}_{n = - \infty} c_{n} e^{inx}}
 \end{equation*}
 \begin{rem}
 In generale questi coefficienti sono complessi $c_{n} = \overline{c_{- n}}$.
@@ -1544,7 +1544,7 @@ Teniamo presente che quando parliamo di spazi di Banach spesso intendiamo spazi 
 \begin{defn}
 [Continuità] Una funzione è continua se
 \begin{equation*}
-x_{n}\rightarrow x\ \ \Rightarrow \ \ L(x_{n})\rightarrow L(x)
+x_{n}\rightarrow x\ \ \implies \ \ L(x_{n})\rightarrow L(x)
 \end{equation*}
 \end{defn}
 Ricordiamo un'altra definizione non scontata negli spazi a dimensione infinita
@@ -1676,7 +1676,7 @@ Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limi
 \left| \int_{K} u(f_{n} - f) dx\right| \leq \Vert u \Vert_{L^{1}(K)} \Vert f_{n} - f \Vert_{\infty}\rightarrow 0
 \end{equation*}allora abbiamo fatto vedere che
 \begin{equation*}
-\int_{A} u(f_{n} - f) dx\rightarrow 0\ \ \ \ \Leftrightarrow \ \ \ \ \int_{A} uf_{n} dx\rightarrow \int_{A} ufdx
+\int_{A} u(f_{n} - f) dx\rightarrow 0\ \ \ \ \iff \ \ \ \ \int_{A} uf_{n} dx\rightarrow \int_{A} ufdx
 \end{equation*}quindi qualsiasi funzione $L^{1}_{\mathrm{loc}}$ è una distribuzione su quell'insieme.
 \end{itemize}
 \end{proof}
@@ -1733,7 +1733,7 @@ Più uno spazio è piccolo e più il suo duale è grande, e viceversa. Lo spazio
 
 \begin{defn}
 [Convergenza di una distribuzione]
-Cosa vuol dire avere una successione di distribuzioni $\{\Lambda_{n}\}$ che converge a $\Lambda $ \underline{nel senso delle distribuzioni}? Come prima, se $\forall \varphi \in \Dc(A) \Rightarrow (\Lambda_{n}, \varphi)\rightarrow (\Lambda, \varphi)$. La definizione è simmetrica rispetto all'altra.
+Cosa vuol dire avere una successione di distribuzioni $\{\Lambda_{n}\}$ che converge a $\Lambda $ \underline{nel senso delle distribuzioni}? Come prima, se $\forall \varphi \in \Dc(A) \implies (\Lambda_{n}, \varphi)\rightarrow (\Lambda, \varphi)$. La definizione è simmetrica rispetto all'altra.
 \end{defn}
 Veniamo al supporto. Una distribuzione non ha una variabile, non si annulla come una funzione, non è una funzione.
 \begin{defn}
@@ -1764,7 +1764,7 @@ Questo somiglia molto all'integrazione per parti (in realtà è molto più che u
 \end{equation*}
 \item continuo:
 \begin{equation*}
-\varphi_{k}\rightarrow \varphi \ \ \text{in} \ \Dc(A) \ \ \Rightarrow \ \ (\Lambda', \varphi_{k})\rightarrow (\Lambda', \varphi)
+\varphi_{k}\rightarrow \varphi \ \ \text{in} \ \Dc(A) \ \ \implies \ \ (\Lambda', \varphi_{k})\rightarrow (\Lambda', \varphi)
 \end{equation*}
 
 infatti, dato che $\varphi'_{k}\rightarrow \varphi'$
@@ -1891,11 +1891,11 @@ In generale se abbiamo due spazi qualsiasi $A\subset B$, i loro duali sono legat
 \FloatBarrier
 Questa riduzione dello spazio, è una riduzione stretta, cioè perdiamo alcuni elementi, vediamo un esempio.
 \begin{equation*}
-u = e^{x^{2}} \in L^{1}_{\mathrm{loc}} \ \ \Rightarrow \ \ \text{c'è una distribuzione associata}
+u = e^{x^{2}} \in L^{1}_{\mathrm{loc}} \ \ \implies \ \ \text{c'è una distribuzione associata}
 \end{equation*}
 tuttavia se consideriamo come funzione test una funzione di $\Sc(\RR)$ $\varphi = e^{- x^{2}}$
 \begin{equation*}
-(u, \varphi) = \int_{\RR} u\varphi dx = \int_{\RR} dx = + \infty \ \ \Rightarrow \ \ \text{non è temperata}
+(u, \varphi) = \int_{\RR} u\varphi dx = \int_{\RR} dx = + \infty \ \ \implies \ \ \text{non è temperata}
 \end{equation*}
 \begin{defn}
 [Convergenza di distribuzioni temperate]
@@ -1940,7 +1940,7 @@ Sia $f\in L^{1}(\RR)$, allora
 \end{thm}
 \begin{proof}
 
-È basata sulla densità a cui abbiamo accennato. Sia $\varepsilon > 0$, $\exists \varphi \in \Dc(\RR)$ tale che $ \Vert f - \varphi \Vert < \varepsilon $. Se trasliamo una funzione, essa non cambia di norma $\Rightarrow \ \Vert f_{y} - \varphi_{y} \Vert < \varepsilon $. Chiamiamo $K$ un certo insieme che contiene sia il supporto di $\varphi $ che della sua traslata $\varphi_{y}$, per un certo $y$ sufficientemente piccolo. Allora\footnote{Teorema di Heine - Cantor. Una funzione continua su un compatto è uniformemente continua.} la funzione $\varphi $ è uniformemente continua, cioè
+È basata sulla densità a cui abbiamo accennato. Sia $\varepsilon > 0$, $\exists \varphi \in \Dc(\RR)$ tale che $ \Vert f - \varphi \Vert < \varepsilon $. Se trasliamo una funzione, essa non cambia di norma $\implies \ \Vert f_{y} - \varphi_{y} \Vert < \varepsilon $. Chiamiamo $K$ un certo insieme che contiene sia il supporto di $\varphi $ che della sua traslata $\varphi_{y}$, per un certo $y$ sufficientemente piccolo. Allora\footnote{Teorema di Heine - Cantor. Una funzione continua su un compatto è uniformemente continua.} la funzione $\varphi $ è uniformemente continua, cioè
 \begin{gather*}
 \forall \varepsilon > 0\ \ \exists \delta \ \ | \varphi (x) - \varphi (y)| < \varepsilon \ \ \text{purché} \ | x - y| < \delta \\
 \Updownarrow \\
@@ -2011,7 +2011,7 @@ Sia $z_{n}\rightarrow z\in \RR$
 \end{equation*}
 Notiamo che abbiamo la convergenza puntuale, quasi $\forall x$. Se usassimo l'integrale di Riemann non avremmo questo risultato, con Lebesgue, sì, usando la convergenza dominata.
 \begin{equation*}
-g_{n}\rightarrow g\ \text{q.o.}, \ \exists h\in L^{1}, \ | g_{n}| \leq h\ \forall n\ \ \Rightarrow \ \ \lim\limits_{n\rightarrow + \infty}\int g_{n} = \int \lim\limits_{n\rightarrow + \infty} g_{n}
+g_{n}\rightarrow g\ \text{q.o.}, \ \exists h\in L^{1}, \ | g_{n}| \leq h\ \forall n\ \ \implies \ \ \lim\limits_{n\rightarrow + \infty}\int g_{n} = \int \lim\limits_{n\rightarrow + \infty} g_{n}
 \end{equation*}
 qui possiamo maggiorare
 \begin{equation*}
@@ -2090,10 +2090,10 @@ Notazione: indichiamo con $\Fc(f(x), z) = \hat{f}(z)$ la trasformata di $f(x)$ s
 \end{aligned}
 \end{equation*}
 \item $\Fc\left(\overline{f(x)}, z\right) = \overline{\hat{f}(- z)}$
-\item $f$ pari $\Rightarrow $ $\hat{f}$ pari
-\item $f$ dispari $\Rightarrow $ $\hat{f}$ dispari
-\item $f$ pari e reale $\Rightarrow $ $\hat{f}$ pari e reale
-\item $f$ dispari e reale $\Rightarrow $ $\hat{f}$ dispari e immaginaria
+\item $f$ pari $\implies $ $\hat{f}$ pari
+\item $f$ dispari $\implies $ $\hat{f}$ dispari
+\item $f$ pari e reale $\implies $ $\hat{f}$ pari e reale
+\item $f$ dispari e reale $\implies $ $\hat{f}$ dispari e immaginaria
 \end{itemize}
 
 Cerchiamo di capire se una trasformata di Fourier è derivabile, quindi anche $C^{1}$.
@@ -2120,7 +2120,7 @@ Calcoliamo il limite del rapporto incrementale
 \end{equation*}
 dove possiamo passare al limite sotto il segno di integrale perché in generale
 \begin{equation*}
-\left| e^{i\lambda} - 1\right| \leq | \lambda | \ \ \lambda \in \RR \ \ \ \ \ \ \ \ \lambda = - xh\ \ \Rightarrow \ \ \text{l'integrale converge per conv. dom.}
+\left| e^{i\lambda} - 1\right| \leq | \lambda | \ \ \lambda \in \RR \ \ \ \ \ \ \ \ \lambda = - xh\ \ \implies \ \ \text{l'integrale converge per conv. dom.}
 \end{equation*}
 \end{proof}
 \begin{thm}
@@ -2288,7 +2288,7 @@ Sostituiamo
 \Vert u \Vert^{2}_{L^{2}} & = \frac{1}{2\pi}\int \overline{u(x)}\int e^{ixz}\hat{u}(z) dzdx & \\
  & = \frac{1}{2\pi}\int \hat{u}(z)\int \overline{e^{- ixz} u(x)} dxdz & \text{(Fubini)}\\
  & = \frac{1}{2\pi}\int \hat{u}(z)\overline{\hat{u}(z)} dz & \\
- & = \frac{1}{2\pi} \Vert \hat{u} \Vert^{2}_{L^{2}} \ \ \Rightarrow \ \ \Vert \hat{u} \Vert_{L^{2}} = \sqrt{2\pi} \Vert u \Vert_{L^{2}} &
+ & = \frac{1}{2\pi} \Vert \hat{u} \Vert^{2}_{L^{2}} \ \ \implies \ \ \Vert \hat{u} \Vert_{L^{2}} = \sqrt{2\pi} \Vert u \Vert_{L^{2}} &
 \end{aligned}
 \end{equation*}
 
@@ -2372,7 +2372,7 @@ Calcoliamo la trasformata di Fourier di una costante, cioè una funzione $L^{1}_
 \end{equation*}
 allora
 \begin{equation*}
-\Fc\left\{\frac{1}{2\pi}\right\} = \delta_{0}(\xi) \ \ \Rightarrow \ \ \boxed{\Fc\{1\} = 2\pi \delta_{0}(\xi)}
+\Fc\left\{\frac{1}{2\pi}\right\} = \delta_{0}(\xi) \ \ \implies \ \ \boxed{\Fc\{1\} = 2\pi \delta_{0}(\xi)}
 \end{equation*}
 
 \section{Trasformata di Laplace}
@@ -2458,7 +2458,7 @@ Attenzione che essendo $\mathrm{supp}(u) \in [0, + \infty)$
 \begin{proof}
 \begin{equation*}
 \begin{aligned}
-\Lc(u(cx), s) & = \int^{+ \infty}_{0} e^{- sx} u(cx) dx & x'= cx\ \ \Rightarrow \ \ dx'= cdx\\
+\Lc(u(cx), s) & = \int^{+ \infty}_{0} e^{- sx} u(cx) dx & x'= cx\ \ \implies \ \ dx'= cdx\\
  & = \int^{+ \infty}_{0} e^{- s\frac{x'}{c}} u(x')\frac{1}{c} dx' & \\
  & = \frac{1}{c}\Lc\left(u(x), \frac{s}{c}\right) &
 \end{aligned}
@@ -2676,7 +2676,7 @@ Per Laplace abbiamo le seguenti richieste sulle funzioni affinché siano $\Lc$ -
 \begin{itemize}
 \item $f, g\in L^{1}_{\mathrm{loc}}$
 \item $\mathrm{supp} f\subset [0, + \infty), \ \mathrm{supp} g\subset [0, + \infty)$
-\item $\exists \lambda_{1}, \lambda_{2} \ \Rightarrow \ e^{- \lambda_{1} x} f(x) \in L^{1}(\RR), \ e^{- \lambda_{2} x} g(x) \in L^{1}(\RR)$
+\item $\exists \lambda_{1}, \lambda_{2} \ \implies \ e^{- \lambda_{1} x} f(x) \in L^{1}(\RR), \ e^{- \lambda_{2} x} g(x) \in L^{1}(\RR)$
 \end{itemize}
 \begin{thm}
 La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile secondo Laplace.
@@ -2686,7 +2686,7 @@ La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile 
 \begin{aligned}
 (f*g)(x) & = \int_{\RR} f(x - t) g(t) dt = \int^{x}_{0} f(x - t) g(t) dt\\
  & \\
- & f(x - t) = 0\ \text{se} \ x - t < 0\ \Rightarrow \ t > x\\
+ & f(x - t) = 0\ \text{se} \ x - t < 0\ \implies \ t > x\\
  & g(t) = 0\ \text{se} \ t < 0
 \end{aligned}
 \end{equation*}
@@ -2695,7 +2695,7 @@ allora esiste l'integrale.
 \begin{aligned}
 e^{- \lambda x}(f*g)(x) & = e^{- \lambda x}\int^{x}_{0} f(x - t) g(t) dt\\
  & = \int^{x}_{0} e^{- \lambda (x - t)} f(x - t) e^{- \lambda t} g(t) dt\\
- & = \left(e^{- \lambda x} f(x)\right) *\left(e^{- \lambda x} g(x)\right) \ \ \ \ \lambda \geq \max(\lambda (f), \lambda (g)) \ \Rightarrow \ \in L^{1}
+ & = \left(e^{- \lambda x} f(x)\right) *\left(e^{- \lambda x} g(x)\right) \ \ \ \ \lambda \geq \max(\lambda (f), \lambda (g)) \ \implies \ \in L^{1}
 \end{aligned}
 \end{equation*}
 Soddisfa i requisiti, calcoliamone l'espressione
@@ -2802,7 +2802,7 @@ a_{2}\left(s^{2}\Lc(y(t), s) - sy_{0} - y_{1}\right) + a_{1}(s\Lc(y(t), s) - y_{
 \left(a_{2} s^{2} + a_{1} s + a_{0}\right)\Lc(y(t), s)\underbrace{- a_{2}(sy_{0} + y_{1}) - a_{1} y_{0}}_{\text{polinomio in} \ s} & = \Lc(f(t), s)
 \end{aligned}\\
 \\
-\Rightarrow \ \ \Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
+\implies \ \ \Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
 \end{gather*}
 ci permette di introdurre in maniera naturale anche i dati iniziali.
 \begin{gather*}
