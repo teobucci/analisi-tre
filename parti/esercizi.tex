@@ -2647,14 +2647,14 @@ Si interpreta $\int _{\gamma _{R,\varepsilon }} =\lim\limits _{\alpha \rightarro
 
 Dobbiamo usare la determinazione del logaritmo che esclude l'asse reale positivo
 \begin{equation*}
-\mathrm{Log}_{\left( 2\pi \right)} :=\ln z+i\vartheta \ \ \ \ \vartheta \in \arg z\cap \left( 0,2\pi \right)
+\Log_{\left( 2\pi \right)} :=\ln z+i\vartheta \ \ \ \ \vartheta \in \arg z\cap \left( 0,2\pi \right)
 \end{equation*}
 Si considera rispettivamente
 \begin{equation*}
 \begin{array}{ c l }
-A & f\left( z\right) =e^{\alpha \cdotp \mathrm{Log}_{\left( 2\pi \right)} z} R\left( z\right)\\
-B & f\left( z\right) =\mathrm{Log}_{\left( 2\pi \right)} z\cdotp R\left( z\right)\\
-C & f\left( z\right) =\left(\mathrm{Log}_{\left( 2\pi \right)} z\right)^{2} R\left( z\right)
+A & f\left( z\right) =e^{\alpha \cdotp \Log_{\left( 2\pi \right)} z} R\left( z\right)\\
+B & f\left( z\right) =\Log_{\left( 2\pi \right)} z\cdotp R\left( z\right)\\
+C & f\left( z\right) =\left(\Log_{\left( 2\pi \right)} z\right)^{2} R\left( z\right)
 \end{array}
 \end{equation*}
 
@@ -2818,7 +2818,7 @@ Resta solo da calcolare il residuo.
 
 Devo considerare la forma $A$
 \begin{gather*}
-f( z) =e^{-\frac{1}{2}\mathrm{Log}_{( 2\pi )} z} \cdotp \frac{1}{1+z}\\
+f( z) =e^{-\frac{1}{2}\Log_{( 2\pi )} z} \cdotp \frac{1}{1+z}\\
 \int _{\gamma _{\varepsilon ,R}} f( z) dz=2\pi i\cdotp \sum \Res ( f) =2\pi i\cdotp \Res ( f,-1)
 \end{gather*}
 Ugualmente
@@ -2842,7 +2842,7 @@ t\in [ \varepsilon ,R]
 
 Siamo nel caso $B$
 \begin{gather*}
-f\left( z\right) =\mathrm{Log}_{\left( 2\pi \right)} z\cdotp R\left( z\right) =f\left( z\right) =\frac{\mathrm{Log}_{\left( 2\pi \right)} z}{\left( z^{2} +4\right)\left( z+1\right)}\\
+f\left( z\right) =\Log_{\left( 2\pi \right)} z\cdotp R\left( z\right) =f\left( z\right) =\frac{\Log_{\left( 2\pi \right)} z}{\left( z^{2} +4\right)\left( z+1\right)}\\
 \int _{\gamma _{\varepsilon ,R}} f\left( z\right) dz=2\pi i\cdotp \sum \Res \left( f,z_{i}\right)
 \end{gather*}
 Il denominatore si annulla per $z=-1,\pm 2i$.
@@ -3666,7 +3666,7 @@ T( \varphi ) =\langle T,\varphi \rangle
 [Convergenza di funzioni test] Diciamo che $\varphi _{k}\xrightarrow{D( A)} \varphi $ se $\forall \alpha ,D^{\alpha } \varphi _{k}\rightarrow D^{\alpha } \varphi $.
 \end{defn}
 \begin{defn}
-[Prodotto di dualità] Data $T\in D'( A)$, se $T\in L^{1}_{\mathrm{loc}}( A) \implies \langle T,\varphi \rangle =\int _{A} T( x) \varphi ( x) dx$. Se invece $T\notin L^{1}_{\mathrm{loc}} \implies \langle T,\varphi \rangle $ lo dobbiamo definire manualmente, per esempio la Delta di Dirac che è definita come
+[Prodotto di dualità] Data $T\in D'( A)$, se $T\in L^{1}_{\loc}( A) \implies \langle T,\varphi \rangle =\int _{A} T( x) \varphi ( x) dx$. Se invece $T\notin L^{1}_{\loc} \implies \langle T,\varphi \rangle $ lo dobbiamo definire manualmente, per esempio la Delta di Dirac che è definita come
 \begin{equation*}
 \langle \delta ,\varphi \rangle =\varphi ( 0)
 \end{equation*}
@@ -3862,7 +3862,7 @@ Notiamo che non c'è convergenza in $L^{1}$:
 \begin{equation*}
 \Vert f_{n} -F\Vert _{L^{1}(\RR )} =2\int ^{\infty }_{0} ne^{-nx} dx=2\left[ -e^{-nx}\right]^{\infty }_{0} =2\nrightarrow 0
 \end{equation*}
-Tuttavia $f_{n} \in L^{1}_{\mathrm{loc}}(\RR )$, quindi sono anche associate a una distribuzione.
+Tuttavia $f_{n} \in L^{1}_{\loc}(\RR )$, quindi sono anche associate a una distribuzione.
 \begin{equation*}
 \begin{aligned}
 \langle f_{n} ,\varphi \rangle  & =\int _{\RR } ne^{-n| x| } \varphi ( x) dx=\int ^{0}_{-\infty } ne^{nx} \varphi ( x) dx+\int ^{\infty }_{0} ne^{-nx} \varphi ( x) dx\\
@@ -4440,7 +4440,7 @@ f(x)=\begin{cases}
 \ParteSoluzioni
 \Soluzione
 
-Dato che $f\in L^{1}_{\mathrm{loc}} (\RR  )\implies f\in D'(\RR  )$.
+Dato che $f\in L^{1}_{\loc} (\RR  )\implies f\in D'(\RR  )$.
 
 Sappiamo anche che $f\in \Sc  '(\RR )$, lo spazio delle distribuzioni temperate.
 
@@ -4466,7 +4466,7 @@ f'(x)\overset{D'}{=} \pi \delta _{0} -\frac{1}{1+x^{2}}
 che può essere rappresentata come la funzione $1/\left( 1+x^{2}\right)$ con un salto in $x=0$ verso l'alto di ampiezza $\pi $.
 \Soluzione
 
-Dato che $f\in L^{1}_{\mathrm{loc}} (0,5)\implies f\in D'(0,5)$.
+Dato che $f\in L^{1}_{\loc} (0,5)\implies f\in D'(0,5)$.
 
 \fg{0.7}{13-2}
 
@@ -4628,7 +4628,7 @@ F( x) -f_{n}( x) , & x\geqslant n
 Quindi non c'è convergenza in $L^{\infty }(\RR )$.
 \item Convergenza in $D'(\RR )$?
 
-Sono distribuzioni in quanto $f_{n} ,F\in L^{1}_{\mathrm{loc}}(\RR )$.
+Sono distribuzioni in quanto $f_{n} ,F\in L^{1}_{\loc}(\RR )$.
 
 \begin{equation*}
 \langle f_{n} ,\varphi \rangle \rightarrow \langle F,\varphi \rangle \ \ \forall \varphi \in D(\RR ) \ \ \iff \ \ \langle F-f_{n} ,\varphi \rangle \rightarrow 0
@@ -4694,7 +4694,7 @@ La serie cercata è
 \begin{equation*}
 f( x) \sim \sum\limits ^{\infty }_{k=0}\frac{4}{( 2k+1) \pi }\sin(( 2k+1) x)
 \end{equation*}
-Questa funzione è anche una distribuzione? Sì, $f\in L^{1}_{\mathrm{loc}}(\RR )$.
+Questa funzione è anche una distribuzione? Sì, $f\in L^{1}_{\loc}(\RR )$.
 \begin{equation*}
 \langle u,\varphi \rangle =\langle u,\varphi ( x+T) \rangle 
 \end{equation*}
@@ -4991,7 +4991,7 @@ Studiamo le $f_{n}( x)$
 \end{equation*}
 ma allora
 \begin{equation*}
-f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{1}_{\mathrm{loc}}(\RR )} f\equiv 0\ \ \begin{cases}
+f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{1}_{\loc}(\RR )} f\equiv 0\ \ \begin{cases}
 \implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\RR )} f\equiv 0\\
 \implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{\Sc  '(\RR )} f\equiv 0
 \end{cases}
@@ -5069,7 +5069,7 @@ n^{2} xe^{-nx} , & x\geqslant 0\\
 \end{cases}
 \end{equation*}
 
-$\forall n\in \NN  ,\ g_{n} \in L^{1}_{\mathrm{loc}}(\RR )$ e $\forall \varphi \in D(\RR )$\begin{equation*}
+$\forall n\in \NN  ,\ g_{n} \in L^{1}_{\loc}(\RR )$ e $\forall \varphi \in D(\RR )$\begin{equation*}
 \langle g_{n} ,\varphi \rangle =\int _{\RR } g_{n}( x) \varphi ( x) dx=\int ^{+\infty }_{0} n^{2}\textcolor[rgb]{0.82,0.01,0.11}{x} e^{-nx}\textcolor[rgb]{0.82,0.01,0.11}{\varphi }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} dx
 \end{equation*}
 

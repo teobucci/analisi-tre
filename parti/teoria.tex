@@ -1598,7 +1598,7 @@ Supponiamo ora di avere una funzione $f: A\subset \RR^{n}\rightarrow \RR$. Si di
 \end{defn}
 Diamo la definizione di un nuovo spazio vettoriale, se abbiamo $A\subset \RR^{n}$ sappiamo cos'è $L^{p}(A)$.
 \begin{defn}
-Si dice $L^{p}_{\mathrm{loc}}$ l'insieme delle funzioni $f: A\rightarrow \RR$ tali che $\forall K\subset A$ compatto
+Si dice $L^{p}_{\loc}$ l'insieme delle funzioni $f: A\rightarrow \RR$ tali che $\forall K\subset A$ compatto
 \begin{equation*}
 \exists \ \ \int_{K}| f|^{p} dx\ \ \text{finito} .
 \end{equation*}
@@ -1645,11 +1645,11 @@ Sia $A\subset \RR$ aperto. Chiamiamo \textbf{distribuzione} in $A$ un funzionale
 \end{defn}
 Stiamo cercando di generalizzare il concetto di funzione.
 \begin{thm}
-A ogni funzione $u\in L^{1}_{\mathrm{loc}}(A)$ corrisponde una distribuzione in $\Dc'(A)$.
+A ogni funzione $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione in $\Dc'(A)$.
 
 Indichiamo con $(u, f)$ il prodotto di dualità, cioè la distribuzione (funzionale lineare e continuo) associata ad $u$ che agisce sulla funzione test $f$
 \begin{equation*}
-\boxed{(u, f) = \int_{A} ufdx} \ \ \ \ u\in L^{1}_{\mathrm{loc}}(A) \ \ f\in \Dc(A)
+\boxed{(u, f) = \int_{A} ufdx} \ \ \ \ u\in L^{1}_{\loc}(A) \ \ f\in \Dc(A)
 \end{equation*}
 \end{thm}
 \begin{proof}
@@ -1659,7 +1659,7 @@ Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limi
 \item \textit{ben definito.} Il supporto di $f$ è un certo insieme $K\subset A$ compatto, quindi si annulla al di fuori di $K$, allora
 \begin{equation*}
 \int_{A} ufdx = \int_{K} ufdx
-\end{equation*}ma $f$ è anche limitata (essendo continua a supporto compatto) e $u\in L^{1}_{\mathrm{loc}}$:
+\end{equation*}ma $f$ è anche limitata (essendo continua a supporto compatto) e $u\in L^{1}_{\loc}$:
 \begin{equation*}
 \left| \int_{K} ufdx\right| \leq \sup | f| \left| \int_{K} udx\right| < + \infty
 \end{equation*}
@@ -1670,19 +1670,19 @@ Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limi
 \begin{equation*}
 \int_{A} u(c_{1} f_{1} + c_{2} f_{2}) dx = c_{1}\int_{A} uf_{1} dx + c_{2}\int_{A} uf_{2} dx = c_{1}(u, f_{1}) + c_{2}(u, f_{2})
 \end{equation*}
-\item \textit{continuo, o limitato} (sono equivalenti). Per ipotesi $f_{n}\rightarrow f$ in $\Dc(A)$ e $u\in L^{1}_{\mathrm{loc}}$. Allora la convergenza in $\Dc(A)$ garantisce che il supporto di tutte le $f_{n}$ sia contenuto in un compatto $K\subset A$, e inoltre $f_{n}\rightarrow f$ (e le derivate) uniformemente, cioè $ \Vert f_{n} - f \Vert_{\infty}\rightarrow 0$. Per definizione di $L^{1}_{\mathrm{loc}}$ la funzione $u$ ristretta al compatto $K$ è $L^{1}(K)$. Possiamo allora usare la disuguaglianza di Holder con $p = 1, q = \infty $ per far vedere che
+\item \textit{continuo, o limitato} (sono equivalenti). Per ipotesi $f_{n}\rightarrow f$ in $\Dc(A)$ e $u\in L^{1}_{\loc}$. Allora la convergenza in $\Dc(A)$ garantisce che il supporto di tutte le $f_{n}$ sia contenuto in un compatto $K\subset A$, e inoltre $f_{n}\rightarrow f$ (e le derivate) uniformemente, cioè $ \Vert f_{n} - f \Vert_{\infty}\rightarrow 0$. Per definizione di $L^{1}_{\loc}$ la funzione $u$ ristretta al compatto $K$ è $L^{1}(K)$. Possiamo allora usare la disuguaglianza di Holder con $p = 1, q = \infty $ per far vedere che
 \begin{equation*}
 \left| \int_{K} u(f_{n} - f) dx\right| \leq \Vert u \Vert_{L^{1}(K)} \Vert f_{n} - f \Vert_{\infty}\rightarrow 0
 \end{equation*}allora abbiamo fatto vedere che
 \begin{equation*}
 \int_{A} u(f_{n} - f) dx\rightarrow 0\ \ \ \ \iff \ \ \ \ \int_{A} uf_{n} dx\rightarrow \int_{A} ufdx
-\end{equation*}quindi qualsiasi funzione $L^{1}_{\mathrm{loc}}$ è una distribuzione su quell'insieme.
+\end{equation*}quindi qualsiasi funzione $L^{1}_{\loc}$ è una distribuzione su quell'insieme.
 \end{itemize}
 \end{proof}
 
-Si noti che lo spazio $L^{1}_{\mathrm{loc}}$ è molto più grande di $L^{1}$, ad esempio banalmente qualunque polinomio non identicamente nullo non è integrabile su tutto $\RR$, ma è integrabile su qualunque compatto.
+Si noti che lo spazio $L^{1}_{\loc}$ è molto più grande di $L^{1}$, ad esempio banalmente qualunque polinomio non identicamente nullo non è integrabile su tutto $\RR$, ma è integrabile su qualunque compatto.
 
-Tutte le distribuzioni si possono vedere come associate a una funzione $L^{1}_{\mathrm{loc}}$? No, vediamo un controesempio con la \textbf{delta di Dirac}, che definiamo come distribuzione su $\RR$. Ad ogni funzione $f\in \Dc(\RR)$ e $y\in \RR$ vogliamo associare una distribuzione $\delta_{y} \in \Dc'(\RR)$
+Tutte le distribuzioni si possono vedere come associate a una funzione $L^{1}_{\loc}$? No, vediamo un controesempio con la \textbf{delta di Dirac}, che definiamo come distribuzione su $\RR$. Ad ogni funzione $f\in \Dc(\RR)$ e $y\in \RR$ vogliamo associare una distribuzione $\delta_{y} \in \Dc'(\RR)$
 \begin{equation*}
 \boxed{(\delta_{y}, f) = f(y) \in \RR}
 \end{equation*}
@@ -1702,7 +1702,7 @@ Spesso si scrive
 \begin{equation*}
 (\delta_{y}, f) = \int_{\RR} \delta_{y}(x) f(x) dx = f(y)
 \end{equation*}
-La delta di Dirac nasce per estrarre in modo semplice il valore di una funzione in un punto, e da qui si è poi sviluppata la teoria delle distribuzioni. Ad ogni funzione $L^{1}_{\mathrm{loc}}$ si può quindi associare una distribuzione, ma non viceversa, le distribuzioni sono di più.
+La delta di Dirac nasce per estrarre in modo semplice il valore di una funzione in un punto, e da qui si è poi sviluppata la teoria delle distribuzioni. Ad ogni funzione $L^{1}_{\loc}$ si può quindi associare una distribuzione, ma non viceversa, le distribuzioni sono di più.
 
 Un altro modo di interpretare la delta di Dirac è il limite di una gaussiana
 \begin{equation*}
@@ -1726,7 +1726,7 @@ Notiamo che
 \begin{equation*}
 f_{n}(x) = \frac{n}{\sqrt{2\pi}} e^{- \frac{1}{2}(nx)^{2}}\xrightarrow{n\rightarrow \infty} 0\ \ \forall x\neq 0
 \end{equation*}
-Essendo $L^{1}$, quindi anche $L^{1}_{\mathrm{loc}}$, le possiamo vedere come distribuzioni. Possiamo dimostrare che $\forall \varphi \in \Dc(A)$, $(f_{n}, \varphi)\rightarrow (\delta_{0}, \varphi)$.
+Essendo $L^{1}$, quindi anche $L^{1}_{\loc}$, le possiamo vedere come distribuzioni. Possiamo dimostrare che $\forall \varphi \in \Dc(A)$, $(f_{n}, \varphi)\rightarrow (\delta_{0}, \varphi)$.
 
 Più uno spazio è piccolo e più il suo duale è grande, e viceversa. Lo spazio $\Dc(A)$ è molto piccolo, quindi il duale (lo spazio delle distribuzioni) sarà molto grande, ma pur essendo molto grande, avrà delle proprietà molto forti (derivabilità infinita). \textit{Stiamo cercando capre e cavoli}.
 
@@ -1746,7 +1746,7 @@ Sia $\Lambda \subset \Dc'(A)$. Consideriamo $B\subset A$ e $\varphi \in \Dc(B)$.
 \end{equation*}
 \end{defn}
 
-NB. Quando diciamo che a $u\in L^{1}_{\mathrm{loc}}(A)$ corrisponde una distribuzione, diciame che esiste una $\Lambda_{u}$ distribuzione definita come $(\Lambda_{u}, \varphi) = \int_{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
+NB. Quando diciamo che a $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione, diciame che esiste una $\Lambda_{u}$ distribuzione definita come $(\Lambda_{u}, \varphi) = \int_{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
 \begin{defn}
 [Derivata di una distribuzione]
 Sia $\Lambda \in \Dc'(A)$ una distribuzione. Definiamo la sua distribuzione derivata $\Lambda'\in \Dc'(A)$. Per ogni $\varphi \in \Dc(A)$ dobbiamo definire quanto vale $(\Lambda', \varphi)$
@@ -1772,11 +1772,11 @@ infatti, dato che $\varphi'_{k}\rightarrow \varphi'$
 \end{gather*}
 \end{itemize}
 
-Andiamo ora a capire che ha le stesse proprietà di una derivata. Consideriamo una funzione derivabile $u\in C^{1}(A) \subset L^{1}_{\mathrm{loc}}(A)$, ma allora è associata ad una distribuzione, che continueremo a chiamare $u$
+Andiamo ora a capire che ha le stesse proprietà di una derivata. Consideriamo una funzione derivabile $u\in C^{1}(A) \subset L^{1}_{\loc}(A)$, ma allora è associata ad una distribuzione, che continueremo a chiamare $u$
 \begin{equation*}
 (u, \varphi) = \int_{A} u(x) \varphi (x) dx
 \end{equation*}
-Sappiamo che esiste $u'\in C^{0}(A) \subset L^{1}_{\mathrm{loc}}$, associata a sua a volta ad una distribuzione
+Sappiamo che esiste $u'\in C^{0}(A) \subset L^{1}_{\loc}$, associata a sua a volta ad una distribuzione
 \begin{gather*}
 \underbrace{(u', \varphi) = - (u, \varphi')}_{\text{definizione di prima}}\\
 (u', \varphi) = \int_{A} u'(x) \varphi (x) dx = \cancel{u(b) \varphi (b)} - \cancel{u(a) \varphi (a)} - \int^{b}_{a} u(x) \varphi'(x) dx\ \ \ \ A =[a, b]
@@ -1794,7 +1794,7 @@ x & x\geq 0\\
 0 & x < 0
 \end{cases}
 \end{equation*}
-Non è derivabile nell'origine, ma è $L^{1}_{\mathrm{loc}}$, quindi derivabile nel senso delle distribuzioni. Sia $\varphi \in \Dc(\RR)$
+Non è derivabile nell'origine, ma è $L^{1}_{\loc}$, quindi derivabile nel senso delle distribuzioni. Sia $\varphi \in \Dc(\RR)$
 \begin{equation*}
 (u', \varphi) = - (u, \varphi') = - \int_{\RR} u(x) \varphi'(x) dx = - \int^{M}_{0} x\varphi'(x) dx
 \end{equation*}
@@ -1890,7 +1890,7 @@ In generale se abbiamo due spazi qualsiasi $A\subset B$, i loro duali sono legat
 \FloatBarrier
 Questa riduzione dello spazio, è una riduzione stretta, cioè perdiamo alcuni elementi, vediamo un esempio.
 \begin{equation*}
-u = e^{x^{2}} \in L^{1}_{\mathrm{loc}} \ \ \implies \ \ \text{c'è una distribuzione associata}
+u = e^{x^{2}} \in L^{1}_{\loc} \ \ \implies \ \ \text{c'è una distribuzione associata}
 \end{equation*}
 tuttavia se consideriamo come funzione test una funzione di $\Sc(\RR)$ $\varphi = e^{- x^{2}}$
 \begin{equation*}
@@ -1902,7 +1902,7 @@ Sia $u_{n}$ una successione in $\{u_{n}\} \subset \Sc'(\RR)$. Diciamo che $u_{n}
 \end{defn}
 La definizione di derivata è la stessa.
 
-Ora chiediamoci, se consideriamo una funzione $u\in L^{1}_{\mathrm{loc}}$, possiamo dire che vi è associata una distribuzione temperata? Abbiamo questo risultato.
+Ora chiediamoci, se consideriamo una funzione $u\in L^{1}_{\loc}$, possiamo dire che vi è associata una distribuzione temperata? Abbiamo questo risultato.
 \begin{thm}
 Se $\exists n\in \NN$ tale che $(1 + | x|)^{- n} u(x) \in L^{1}(\RR)$ allora esiste una distribuzione temperata associata $u\in \Sc'(\RR)$.
 \end{thm}
@@ -2365,7 +2365,7 @@ Dobbiamo far vedere che se abbiamo $u_{1}, u_{2} \in \Sc'(\RR)$ e $\hat{u}_{1} =
 \end{proof}
 \textit{Esempio.}
 
-Calcoliamo la trasformata di Fourier di una costante, cioè una funzione $L^{1}_{\mathrm{loc}}$ a cui quindi è associata una distribuzione temperata\footnote{Si noti che in testi differenti si potrebbe trovare un risultato diverso in base a come si è definita la trasformata di Fourier. Non tutti, infatti, sono d'accordo sull'uso della costante $2\pi $ tra la trasformazione diretta e quella inversa.}
+Calcoliamo la trasformata di Fourier di una costante, cioè una funzione $L^{1}_{\loc}$ a cui quindi è associata una distribuzione temperata\footnote{Si noti che in testi differenti si potrebbe trovare un risultato diverso in base a come si è definita la trasformata di Fourier. Non tutti, infatti, sono d'accordo sull'uso della costante $2\pi $ tra la trasformazione diretta e quella inversa.}
 \begin{equation*}
 \Fc^{- 1}\{\delta_{0}(\xi)\} = \frac{1}{2\pi}\int_{\RR} e^{i\xi x} \delta_{0}(\xi) d\xi = \frac{1}{2\pi} \langle \delta_{0}(\xi), e^{i\xi x} \rangle = \frac{1}{2\pi}
 \end{equation*}
@@ -2390,7 +2390,7 @@ H(x) =
 0, & \text{se} \ x < 0
 \end{cases}
 \end{equation*}
-\item $u\in L^{1}_{\mathrm{loc}}$
+\item $u\in L^{1}_{\loc}$
 \item $\exists \lambda \in \RR$ tale che $e^{- \lambda x} u(x) \in L^{1}(\RR)$
 
 Chiamiamo $\lambda (u)$ l'estremo inferiore di questi $\lambda $
@@ -2673,7 +2673,7 @@ Con Fourier abbiamo, utile in entrambi i versi,
 \end{equation*}
 Per Laplace abbiamo le seguenti richieste sulle funzioni affinché siano $\Lc$ - trasformabili
 \begin{itemize}
-\item $f, g\in L^{1}_{\mathrm{loc}}$
+\item $f, g\in L^{1}_{\loc}$
 \item $\mathrm{supp} f\subset [0, + \infty), \ \mathrm{supp} g\subset [0, + \infty)$
 \item $\exists \lambda_{1}, \lambda_{2} \ \implies \ e^{- \lambda_{1} x} f(x) \in L^{1}(\RR), \ e^{- \lambda_{2} x} g(x) \in L^{1}(\RR)$
 \end{itemize}
