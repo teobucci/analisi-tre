@@ -413,10 +413,12 @@ x^{2} - y^{2} - 2ixy & = \frac{i}{2}
 \begin{cases}
 x^{2} - y^{2} = 0\\
 - 2xy = \frac{1}{2}
-\end{cases} \ \ \implies \ \ \begin{cases}
+\end{cases} \ \ \implies \ \ 
+\begin{cases}
 x^{2} - \frac{1}{16x^{2}} = 0\\
 y = -\frac{1}{4x}
-\end{cases} \ \ \implies \ \ \begin{cases}
+\end{cases} \ \ \implies \ \ 
+\begin{cases}
 16x^{4} - 1 = 0\\
 y = -\frac{1}{4x}
 \end{cases}
@@ -445,7 +447,8 @@ deduciamo che $u$ è armonica. Trovare la funzione armonica coniugata di $u$ equ
 \begin{cases}
 u_{x} = v_{y}\\
 u_{y} = - v_{x}
-\end{cases} \ \ \implies \ \ \begin{cases}
+\end{cases} \ \ \implies \ \ 
+\begin{cases}
 2 - 2y = v_{y}\\
 - 2x = -v_{x}
 \end{cases} \ \ \implies \ \ v\left(x,y\right) = x^{2} - y^{2} + 2y + c,\ \ c\in \RR 
@@ -638,7 +641,8 @@ z = k\pi ,\ \ k\in \ZZ
 In particolare
 \begin{itemize}
 \item $z = 0$ è una singolarità eliminabile, perché annulla sia il denominatore che il numeratore, quindi ha residuo nullo.\footnote{L'implicazione \textit{singolarità eliminabile} allora \textit{residuo nullo} vale solo per i \textbf{punti finiti}, non per il punto all'infinito.}
-\item $z = k\pi $ sono poli del I ordine, $k\in \ZZ  ,k\neq 0$, il cui residuo vale\begin{equation*}
+\item $z = k\pi $ sono poli del I ordine, $k\in \ZZ  ,k\neq 0$, il cui residuo vale
+\begin{equation*}
 \Res \left(f,k\pi \right) = \frac{g\left(k\pi \right)}{h'\left(k\pi \right)} = \frac{\left(k\pi \right)^{2}}{\left(\sin k\pi \right) '} = \frac{\left(k\pi \right)^{2}}{\cos k\pi } = \frac{\left(k\pi \right)^{2}}{\left(- 1\right)^{k}}
 \end{equation*}
 \item $z_{\infty }$ è una singolarità non isolata perché non esiste un raggio che contiene tutti i punti singolari. Andando all'infinito avremo infiniti punti singolari.
@@ -707,22 +711,27 @@ La funzione $f\left(z\right)$ è olomorfa, allora
 {\displaystyle \int\nolimits _{\gamma } f\left(z\right) dz = 0 = \int\nolimits _{\gamma _{1}} f\left(z\right) dz + \int\nolimits _{\gamma _{2}} f\left(z\right) dz + \int\nolimits _{\gamma _{3}} f}\left(z\right) dz
 \end{equation*}
 \begin{itemize}
-\item La curva $\gamma _{3}$ ha parametrizzazione $z = re^{i\vartheta }$ con $r$ variabile e $\vartheta $ fissato. Il valore di $\vartheta $ si determina imponendo di potersi ricondurre all'integrale di Gauss, ovvero\begin{equation*}
+\item La curva $\gamma _{3}$ ha parametrizzazione $z = re^{i\vartheta }$ con $r$ variabile e $\vartheta $ fissato. Il valore di $\vartheta $ si determina imponendo di potersi ricondurre all'integrale di Gauss, ovvero
+\begin{equation*}
 iz^{2} = i\left(re^{i\vartheta }\right)^{2} = - r^{2} \ \ \implies \ \ \vartheta = \frac{\pi }{4}
 \end{equation*}
 
-Deduciamo il nuovo differenziale\begin{equation*}
+Deduciamo il nuovo differenziale
+\begin{equation*}
 z = re^{i\vartheta } \ \ \implies \ \ dz = e^{i\vartheta } dr = e^{i\frac{\pi }{4}} dr
 \end{equation*}
 
-Allora il terzo integrale diventa\begin{equation*}
+Allora il terzo integrale diventa
+\begin{equation*}
 \int\nolimits _{\gamma _{3}} e^{iz^{2}} dz = \int\nolimits ^{0}_{R} e^{ - r^{2}} e^{i\frac{\pi }{4}} dr
 \end{equation*}
 
-Facciamo ora tendere $R\rightarrow + \infty $\begin{equation*}
+Facciamo ora tendere $R\rightarrow + \infty $
+\begin{equation*}
 \lim\limits _{R\rightarrow + \infty }\int\nolimits ^{0}_{R} e^{ - r^{2}} e^{i\frac{\pi }{4}} dr = e^{i\frac{\pi }{4}}\lim\limits _{R\rightarrow + \infty }\int\nolimits ^{0}_{R} e^{ - r^{2}} dr = -e^{i\frac{\pi }{4}}\int\nolimits ^{ + \infty }_{0} e^{ - r^{2}} dr = -e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}
 \end{equation*}
-\item La curva $\gamma _{2}$ ha parametrizzazione $z = Re^{i\vartheta }$, con $R$ fissato e $\vartheta $ variabile in $\left[ 0,\frac{\pi }{4}\right]$. Deduciamo il nuovo differenziale\begin{equation*}
+\item La curva $\gamma _{2}$ ha parametrizzazione $z = Re^{i\vartheta }$, con $R$ fissato e $\vartheta $ variabile in $\left[ 0,\frac{\pi }{4}\right]$. Deduciamo il nuovo differenziale
+\begin{equation*}
 z = Re^{i\vartheta } \ \ \implies \ \ dz = Rie^{i\vartheta } d\vartheta 
 \end{equation*}Il secondo integrale diventa
 
@@ -734,23 +743,28 @@ z = Re^{i\vartheta } \ \ \implies \ \ dz = Rie^{i\vartheta } d\vartheta
  & = \int\nolimits ^{\pi /4}_{0} iRe^{iR^{2}\cos\left(2\vartheta \right)} e^{ - R^{2}\sin\left(2\vartheta \right)} e^{i\vartheta } d\vartheta 
 \end{align*}
 
-Poi\begin{align*}
+Poi
+\begin{align*}
 \left| \int\nolimits _{\gamma _{2}} e^{iz^{2}} dz\right|  & = \left| \int\nolimits ^{\pi /4}_{0} iRe^{iR^{2}\cos\left(2\vartheta \right)} e^{ - R^{2}\sin\left(2\vartheta \right)} e^{i\vartheta } d\vartheta \right| \\
  & \leq \int\nolimits ^{\pi /4}_{0}\left| i\right| \left| R\right| \left| e^{iR^{2}\cos\left(2\vartheta \right)}\right| \left| e^{ - R^{2}\sin\left(2\vartheta \right)}\right| \left| e^{i\vartheta }\right| d\vartheta = R\int\nolimits ^{\pi /4}_{0} e^{ - R^{2}\sin\left(2\vartheta \right)} d\vartheta 
 \end{align*}
 
-Ricordando ora la seguente disugaglianza\begin{equation*}
+Ricordando ora la seguente disugaglianza
+\begin{equation*}
 \sin\left(2\vartheta \right)  > \frac{4\vartheta }{\pi }
 \end{equation*}
 
-otteniamo\begin{equation*}
+otteniamo
+\begin{equation*}
 R\int\nolimits ^{\pi /4}_{0} e^{ - R^{2}\sin\left(2\vartheta \right)} d\vartheta \leq R\int\nolimits ^{\pi /4}_{0} e^{ - R^{2}\frac{4\vartheta }{\pi }} d\vartheta = \left[ - \frac{\pi }{4R^{2}} e^{ - R^{2}\frac{4\vartheta }{\pi }}\right]^{\pi /4}_{0} = \frac{\pi }{4R^{2}}\left(1 - e^{ - R^{2}}\right)
 \end{equation*}
 
-la quale\begin{equation*}
+la quale
+\begin{equation*}
 \frac{\pi }{4R^{2}}\left(1 - e^{ - R^{2}}\right)\xrightarrow{R\rightarrow + \infty } 0
 \end{equation*}
-\item La curva $\gamma _{1}$ ha parametrizzazione $z = x = R$, tuttavia non serve fare calcoli in quanto sappiamo che la somma dei tre integrali fa $0$ e ne abbiamo già calcolati due, pertanto\begin{equation*}
+\item La curva $\gamma _{1}$ ha parametrizzazione $z = x = R$, tuttavia non serve fare calcoli in quanto sappiamo che la somma dei tre integrali fa $0$ e ne abbiamo già calcolati due, pertanto
+\begin{equation*}
 \int\nolimits _{\gamma _{1}} e^{iz^{2}} dz = -\int\nolimits _{\gamma _{3}} e^{iz^{2}} dz = e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}
 \end{equation*}
 \end{itemize}
@@ -826,7 +840,8 @@ f\left(z\right) = \frac{e^{\frac{1}{z - 1}}}{z - 2}
 
 Si tratta di due integrali che convergono in senso improprio. Dimostriamolo:
 \begin{equation*}
-\int\nolimits ^{ + \infty }_{0}\cos t^{2} dt = \left\{\begin{array}{ c }
+\int\nolimits ^{ + \infty }_{0}\cos t^{2} dt = \left\{
+\begin{array}{ c }
 t^{2} = x\\
 t = \sqrt{x}\\
 dt = \frac{1}{2\sqrt{x}} dx
@@ -914,10 +929,12 @@ le cui parti sono parametrizzate come segue
 
 Analizziamo cosa succede all'integrale di $f\left(z\right)$ sui vari percorsi
 \begin{itemize}
-\item su $\gamma _{1}$\begin{equation*}
+\item su $\gamma _{1}$
+\begin{equation*}
 \int\nolimits _{\gamma _{1}} f\left(z\right) dz = \int\nolimits ^{R}_{0} e^{it^{2}} dt\xrightarrow{R\rightarrow + \infty }\int\nolimits ^{ + \infty }_{0} e^{it^{2}} dt = J
 \end{equation*}
-\item su $\gamma _{3}$\begin{align*}
+\item su $\gamma _{3}$
+\begin{align*}
 \int\nolimits _{\gamma _{3}} f\left(z\right) dz & = - \int\nolimits ^{R}_{0} f\left(\gamma \left(t\right)\right) \gamma '\left(t\right) dt = -\int\nolimits ^{R}_{0} e^{it^{2} e^{i\frac{\pi }{2}}} e^{i\frac{\pi }{4}} dt\\
  & = - \int\nolimits ^{R}_{0} e^{it^{2} i} e^{i\frac{\pi }{4}} dt = -e^{i\frac{\pi }{4}}\int\nolimits ^{R}_{0} e^{ - t^{2}} dt\xrightarrow{R\rightarrow + \infty } - e^{i\frac{\pi }{4}}\int\nolimits ^{ + \infty }_{0} e^{ - t^{2}} dt
 \end{align*}
@@ -929,13 +946,16 @@ Ricordiamo l'integrale di Gauss
 \end{equation*}
 \end{rem}
 
-Otteniamo che\begin{equation*}
+Otteniamo che
+\begin{equation*}
 \int\nolimits _{\gamma _{3}} f\left(z\right) dz\xrightarrow{R\rightarrow + \infty } - e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}
 \end{equation*}
-\item su $\gamma _{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| = e^{\Re \left(z\right)}$\begin{align*}
+\item su $\gamma _{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| = e^{\Re \left(z\right)}$
+\begin{align*}
 0 & \leq \left| \int\nolimits _{\gamma _{2}} f\left(z\right) dz\right| = \left| \int\nolimits ^{\pi /4}_{0} f\left(\gamma \left(t\right)\right) \gamma '\left(t\right) dt\right| = \left| \int\nolimits ^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
  & \leq R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits ^{\pi /4}_{0} e^{\Re \left[ iR^{2}\left(\cos\left(2t\right) + i\sin\left(2t\right)\right)\right]} dt\\
- & = R\int\nolimits ^{\pi /4}_{0} e^{ - R^{2}\sin\left(2t\right)} dt = \left\{\begin{array}{ c }
+ & = R\int\nolimits ^{\pi /4}_{0} e^{ - R^{2}\sin\left(2t\right)} dt = \left\{
+ \begin{array}{ c }
 2t = x\\
 dt = \frac{dx}{2}
 \end{array}\right\} = \frac{R}{2}\int\nolimits ^{\pi /2}_{0} e^{ - R^{2}\sin x} dx
@@ -980,7 +1000,8 @@ minoriamo ora il seno
 \FloatBarrier
 
 
-otteniamo\begin{align*}
+otteniamo
+\begin{align*}
 \frac{R}{2}\int\nolimits ^{\pi /2}_{0} e^{ - R^{2}\sin x} dx & \leq \frac{R}{2}\int\nolimits ^{\pi /2}_{0} e^{ - \frac{2}{\pi } R^{2} x} dx\\
  & = \frac{R}{2}\left[ - \frac{\pi }{2R^{2}} e^{ - \frac{2R^{2}}{\pi } x}\right]^{\pi /2}_{0} = \frac{\pi }{4R}\left(1 - e^{ - R^{2}}\right)\xrightarrow{R\rightarrow + \infty } 0
 \end{align*}
@@ -1096,13 +1117,16 @@ Si dice residuo di $f$ in $z_{0}$
 Sia $f\in \Hc \left(\CC  \setminus \overline{D\left(z_{0} ,R\right)}\right)$ ed $M = \left\{n\in \ZZ  :n > 0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
 
 \begin{itemize}
-\item \textbf{singolarità eliminabile} se e solo se\begin{equation*}
+\item \textbf{singolarità eliminabile} se e solo se
+\begin{equation*}
 \exists \lim\limits _{z\rightarrow \infty } f\left(z\right) \in \CC  \ \ \iff \ \ M = \emptyset 
 \end{equation*}
-\item \textbf{polo} se e solo se\begin{equation*}
+\item \textbf{polo} se e solo se
+\begin{equation*}
 \exists \lim\limits _{z\rightarrow \infty } f\left(z\right) = \infty \ \ \iff \ \ 0 < \left| M\right| < \infty 
 \end{equation*}
-\item \textbf{singolarità essenziale} se e solo se\begin{equation*}
+\item \textbf{singolarità essenziale} se e solo se
+\begin{equation*}
 \nexists \lim\limits _{z\rightarrow + \infty } f\left(z\right) \ \ \iff \ \ \left| M\right| = \infty 
 \end{equation*}
 \end{itemize}
@@ -1157,17 +1181,20 @@ Nei punti all'infinito si definisce
 \end{equation*}
 Nei punti $z_{0} \neq \infty $
 \begin{enumerate}
-\item se è una singolarità eliminabile:\begin{equation*}
+\item se è una singolarità eliminabile:
+\begin{equation*}
 \Res \left(f,z_{0}\right) = 0
 \end{equation*}
 
 (attenzione: solo per i punti finiti)
 \item se è un polo, c'è la \textbf{formula dei poli}
 \begin{enumerate}
-\item semplice (di ordine $p = 1$)\begin{equation*}
+\item semplice (di ordine $p = 1$)
+\begin{equation*}
 \Res \left(f,z_{0}\right) = \lim\limits _{z\rightarrow z_{0}} f\left(z\right)\left(z - z_{0}\right)
 \end{equation*}
-\item di ordine $p\geq 2$\begin{equation*}
+\item di ordine $p\geq 2$
+\begin{equation*}
 \Res \left(f,z_{0}\right) = \frac{1}{\left(p - 1\right) !}\lim\limits _{z\rightarrow z_{0}}\left\{\frac{d^{p - 1}}{dz^{p - 1}}\left[ f\left(z\right)\left(z - z_{0}\right)^{p}\right]\right\}
 \end{equation*}
 \end{enumerate}
@@ -1175,7 +1202,8 @@ Nei punti $z_{0} \neq \infty $
 \end{enumerate}
 \end{rem}
 \begin{thm}
-Sia $F = \frac{f}{g}$. Se $f\in \Hc \left(\Uc \left(z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left(z_{0}\right) = 0$ e $g'\left(z_{0}\right) \neq 0$), allora\begin{equation*}
+Sia $F = \frac{f}{g}$. Se $f\in \Hc \left(\Uc \left(z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left(z_{0}\right) = 0$ e $g'\left(z_{0}\right) \neq 0$), allora
+\begin{equation*}
 \Res \left(\frac{f}{g} ,z_{0}\right) = \frac{f\left(z_{0}\right)}{g'\left(z_{0}\right)}
 \end{equation*}
 
@@ -1259,16 +1287,20 @@ e^{z} = \sum\limits ^{\infty }_{n = 0}\frac{z^{n}}{n!} ,\ \ z\in \CC  \ \ \ \ \ 
 \end{equation*}
 \end{rem}
 
-Qui\begin{equation*}
+Qui
+\begin{equation*}
 e^{\frac{1}{z - 1}} = \sum\limits ^{\infty }_{h = 0}\frac{1}{h!\left(z - 1\right)^{h}}
-\end{equation*}mentre\begin{equation*}
+\end{equation*}mentre
+\begin{equation*}
 \frac{1}{z - 2} = - \frac{1}{2 - z} = - \frac{1}{1 - \left(z - 1\right)} = - \sum\limits ^{\infty }_{k = 0}\left(z - 1\right)^{k}
-\end{equation*}La prima serie converge in $\left| z - 1\right|  > 0$ e la seconda in $\left| z - 1\right| < 1$. La serie di Laurent converge quindi in $0 < \left| z - 1\right| < 1$.\begin{rem}
+\end{equation*}La prima serie converge in $\left| z - 1\right|  > 0$ e la seconda in $\left| z - 1\right| < 1$. La serie di Laurent converge quindi in $0 < \left| z - 1\right| < 1$.
+\begin{rem}
 Per scrivere la serie di Laurent sfruttiamo il prodotto alla Cauchy.
 \begin{equation*}
 \left(\sum\limits ^{\infty }_{n = 0} a_{n}\right)\left(\sum\limits ^{\infty }_{n = 0} b_{n}\right) = \sum\limits ^{\infty }_{n = 0}\left(\sum\limits ^{n}_{k = 0} a_{k} b_{n - k}\right)
 \end{equation*}
-\end{rem}Quindi\begin{equation*}
+\end{rem}Quindi
+\begin{equation*}
 f\left(z\right) = - \sum\limits ^{\infty }_{k = 0}\sum\limits ^{k}_{h = 0}\frac{\left(z - 1\right)^{k - 2h}}{h!}
 \end{equation*}
 \item $\Res \left(f,2\right) = e$ per la formula dei poli
@@ -1276,7 +1308,8 @@ f\left(z\right) = - \sum\limits ^{\infty }_{k = 0}\sum\limits ^{k}_{h = 0}\frac{
 $\Res \left(f,1\right) = a_{ - 1}$ lo trovo ponendo $k - 2h = -1$, quindi $a_{ - 1} = - \sum\limits ^{\infty }_{h = 1}\frac{1}{h!} = 1 - e$
 
 $\Res \left(f,\infty \right) = - 1$
-\item Applico il teorema dei residui\begin{equation*}
+\item Applico il teorema dei residui
+\begin{equation*}
 \int\nolimits _{\gamma } f\left(z\right) dz = 2\pi i\left[\Res \left(f,1\right) + \Res \left(f,2\right)\right] = 2\pi i
 \end{equation*}
 \end{enumerate}
@@ -1666,7 +1699,8 @@ I = \boxed{\int ^{2\pi }_{0} R\left(\cos t,\sin t\right) dt}
 \end{equation*}
 dove $R$ si intende una funzione razionale.
 \begin{equation*}
-I = \left\{\begin{array}{ c c }
+I = \left\{
+\begin{array}{ c c }
 z = e^{it} & \cos t = \frac{e^{it} + e^{ - it}}{2}\\
 dz = ie^{it} dt & \sin t = \frac{e^{it} - e^{ - it}}{2i}
 \end{array}\right\} = \int _{\left| z\right| = 1} R\left(\frac{z + z^{ - 1}}{2} ,\frac{z - z^{ - 1}}{2i}\right)\frac{1}{iz} dz
@@ -1679,7 +1713,8 @@ Calcolare
 
 Vediamo una seconda tipologia di integrali
 \begin{equation*}
-\boxed{\int ^{ + \infty }_{ - \infty } R\left(x\right) dx} \ \ \ \text{oppure} \ \ \ \ \boxed{\int ^{ + \infty }_{ - \infty } R\left(x\right)\left\{\begin{array}{ c }
+\boxed{\int ^{ + \infty }_{ - \infty } R\left(x\right) dx} \ \ \ \text{oppure} \ \ \ \ \boxed{\int ^{ + \infty }_{ - \infty } R\left(x\right)\left\{
+\begin{array}{ c }
 e^{ix}\\
 \cos x\\
 \sin x
@@ -1752,7 +1787,8 @@ Calcolare
 
 Vediamo una terza tipologia di integrali
 \begin{equation*}
-\boxed{\int ^{ + \infty }_{ - \infty } R\left(e^{x}\right)\left\{\begin{array}{ c }
+\boxed{\int ^{ + \infty }_{ - \infty } R\left(e^{x}\right)\left\{
+\begin{array}{ c }
 1\\
 e^{ix}
 \end{array}\right\} dx}
@@ -1827,16 +1863,20 @@ d\left(- i,i + 1\right) = \left| - i - 1 - i\right| = \left| - 2i - 1\right| = \
 \end{gather*}
 Allora
 \begin{itemize}
-\item se $0 < R < 1$ per il teorema dei residui\begin{equation*}
+\item se $0 < R < 1$ per il teorema dei residui
+\begin{equation*}
 I_{R} = 0
 \end{equation*}
-\item se $1 < R < \sqrt{2}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = i$\begin{equation*}
+\item se $1 < R < \sqrt{2}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = i$
+\begin{equation*}
 I_{R} = 2\pi i\cdot \Res \left(f,i\right) = \left(1 + i\right) \pi 
 \end{equation*}
-\item se $\sqrt{2} < R < \sqrt{5}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = i$ e $z = 0$\begin{equation*}
+\item se $\sqrt{2} < R < \sqrt{5}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = i$ e $z = 0$
+\begin{equation*}
 I_{R} = 2\pi i\cdot \left[\Res \left(f,i\right) + \Res \left(f,0\right)\right] = \pi + i\pi \left(3 + 2\pi\right)
 \end{equation*}
-\item se $R > \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma _{R}$. $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = \pm i$ e $z = 0$\begin{equation*}
+\item se $R > \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma _{R}$. $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z = \pm i$ e $z = 0$
+\begin{equation*}
 I_{R} = 2\pi i\cdot \left[\Res \left(f,0\right) + \Res \left(f,i\right) + \Res \left(f, - i\right)\right] = i2\pi (2 + \pi)
 \end{equation*}
 \end{itemize}
@@ -1849,7 +1889,8 @@ Per $R = 1,\sqrt{2} ,\sqrt{5}$, $I_{R}$ non può essere calcolato perché $\gamm
 \end{align*}
 Le singolarità sono
 \begin{equation*}
-z^{2} + 6iz - 1 = 0\ \ \iff \ \ \begin{cases}
+z^{2} + 6iz - 1 = 0\ \ \iff \ \ 
+\begin{cases}
 z_{1} = i\left(- 3 - 2\sqrt{2}\right)\\
 z_{2} = i\left(- 3 + 2\sqrt{2}\right)
 \end{cases}
@@ -2148,7 +2189,8 @@ Per $R\rightarrow + \infty $
 \end{equation*}
 \Soluzione
 
-C'è un asintoto verticale in $x = -1$, quindi non converge.\begin{equation*}
+C'è un asintoto verticale in $x = -1$, quindi non converge.
+\begin{equation*}
 \int _{\RR }\frac{e^{ix}}{x^{3} + x^{2} + x + 1} dx = \int _{\RR }\frac{e^{ix}}{(x^{2} + 1)(x + 1)} dx
 \end{equation*}
 
@@ -2334,21 +2376,24 @@ Vediamo il grafico
 
 Calcoliamo il limite puntuale
 \begin{equation*}
-f_{n} (x) = \frac{\sqrt{n}}{1 + (nx)^{2}}\xrightarrow{n\rightarrow \infty } F(x) = \begin{cases}
+f_{n} (x) = \frac{\sqrt{n}}{1 + (nx)^{2}}\xrightarrow{n\rightarrow \infty } F(x) = 
+\begin{cases}
 + \infty , & x = 0\\
 0, & x\neq 0
 \end{cases} \ \ \implies \ \ f_{n}\xrightarrow[\text{q.o.}]{n\rightarrow \infty } 0
 \end{equation*}
 Controlliamo la convergenza in $L^{1}$
 \begin{equation*}
-\Vert f_{n} - F\Vert _{L^{1}} = \int _{\RR }\frac{\sqrt{n}}{1 + (nx)^{2}} dx = \left\{\begin{array}{ c }
+\Vert f_{n} - F\Vert _{L^{1}} = \int _{\RR }\frac{\sqrt{n}}{1 + (nx)^{2}} dx = \left\{
+\begin{array}{ c }
 nx = t\\
 dx = \frac{1}{n} dt
 \end{array}\right\} = \frac{1}{\sqrt{n}}\int _{\RR }\frac{1}{1 + t^{2}} dt\xrightarrow{n\rightarrow \infty } 0
 \end{equation*}
 Controlliamo la convergenza in $L^{p}$:
 \begin{gather*}
-\Vert f_{n} - F\Vert ^{p}_{L^{p}} = \int _{\RR }\frac{n^{p/2}}{(1 + (nx)^{2})^{p}} = \left\{\begin{array}{ c }
+\Vert f_{n} - F\Vert ^{p}_{L^{p}} = \int _{\RR }\frac{n^{p/2}}{(1 + (nx)^{2})^{p}} = \left\{
+\begin{array}{ c }
 nx = t\\
 dx = \frac{1}{n} dt
 \end{array}\right\} = n^{\frac{p}{2} - 1}\int _{\RR }\frac{1}{(1 + t^{2})^{p}} dt\\
@@ -2547,7 +2592,8 @@ I = \int ^{ + \infty }_{0}\frac{x^{\alpha }}{1 + x^{3}} dx\ \ \ \ \alpha \in \RR
 
 Vediamo una quinta tipologia
 \begin{equation*}
-\boxed{\begin{array}{ c l }
+\boxed{
+\begin{array}{ c l }
 A & \int ^{ + \infty }_{0} x^{\alpha } R(x) dx\ \ \alpha \neq 0\\
 B & \int ^{ + \infty }_{0} R(x) dx\\
 C & \int ^{ + \infty }_{0}\ln(x) R(x) dx
@@ -2678,7 +2724,8 @@ Si considerino le seguenti funzioni definite su $\left(0, + \infty \right)$ nel 
 f\left(x\right) = \frac{1}{\sqrt{x}} \ \ \ \ g\left(x\right) = \frac{1}{\sqrt{x + 1}}
 \end{equation*}
 \begin{enumerate}
-\item Stabilire per quali $p\in \left[ 1, + \infty \right]$ le seguenti funzioni stanno in $L^{p}\left(1, + \infty \right)$:\begin{equation*}
+\item Stabilire per quali $p\in \left[ 1, + \infty \right]$ le seguenti funzioni stanno in $L^{p}\left(1, + \infty \right)$:
+\begin{equation*}
 f\ \ \ \ g\ \ \ \ f - g\ \ \ \ \frac{g}{f}
 \end{equation*}
 \item Stessa domanda in $\left(0,1\right)$
@@ -2786,26 +2833,30 @@ $e^{i\pi /3}$ è l'unico punto interno alla curva in cui si annulla il denominat
 \begin{aligned}
 \int _{\gamma _{R,\varepsilon }} & = \int _{\sigma _{1}} + \int _{\varphi } + \int _{\sigma _{2}} + \int _{\psi }\\
  & \\
-\int _{\sigma _{1}} & = \left\{\begin{array}{ c }
+\int _{\sigma _{1}} & = \left\{
+\begin{array}{ c }
 z = t\\
 t\in [ \varepsilon ,R]
 \end{array}\right\} = \int ^{R}_{\varepsilon }\frac{e^{\alpha \ln t}}{1 + t^{3}} dt\xrightarrow[R\rightarrow + \infty ]{\varepsilon \rightarrow 0^{ + }} I\\
  & \\
-\int _{\sigma _{2}} & = \left\{\begin{array}{ c }
+\int _{\sigma _{2}} & = \left\{
+\begin{array}{ c }
 z = te^{i2\pi /3}\\
 t\in [ \varepsilon ,R]
 \end{array}\right\} = - \int ^{R}_{\varepsilon }\frac{e^{\alpha \ln te^{i2\pi /3}}}{1 + t^{3}} e^{i2\pi /3} dt = -\int ^{R}_{\varepsilon }\frac{e^{\alpha \left(\ln t + \ln e^{i2\pi /3}\right)}}{1 + t^{3}} e^{i2\pi /3} dt\\
  & = - \int ^{R}_{\varepsilon }\frac{e^{\alpha (\ln t + i2\pi /3)}}{1 + t^{3}} e^{i2\pi /3} dt = -e^{i\frac{2}{3} \pi (1 + \alpha)}\int ^{R}_{\varepsilon }\frac{e^{\alpha \ln t}}{1 + t^{3}} dt\\
  & \xrightarrow[R\rightarrow + \infty ]{\varepsilon \rightarrow 0^{ + }} - e^{i\frac{2}{3} \pi (1 + \alpha)} I\\
  & \\
-\left| \int _{\varphi }\right|  & = \left\{\begin{array}{ c }
+\left| \int _{\varphi }\right|  & = \left\{
+\begin{array}{ c }
 z = Re^{it}\\
 t\in [ 0,2\pi /3]
 \end{array}\right\} = \left| \int ^{2\pi /3}_{0}\frac{e^{\alpha (\ln R + it)}}{1 + R^{3} e^{i3t}}\textcolor[rgb]{0.29,0.56,0.89}{\underbrace{Rie^{it}}_{\gamma '}} dt\right| = \int ^{2\pi /3}_{0}\frac{\left| e^{\alpha (\ln R + it)}\right| }{\left| 1 + R^{3} e^{i3t}\right| }\textcolor[rgb]{0.82,0.01,0.11}{\left| Rie^{it}\right| } dt\\
  & \textcolor[rgb]{0.96,0.65,0.14}{| | a| - | b| | \leq | a + b| \leq | a| + | b| }\\
  & \leq \int ^{2\pi /3}_{0}\frac{\left| e^{\alpha (\ln R + it)}\right| }{\left| 1 - R^{3}\right| }\textcolor[rgb]{0.82,0.01,0.11}{R} dt\leq \frac{R^{\alpha + 1}}{\left| 1 - R^{3}\right| }\frac{2\pi }{3} dt\sim \frac{2\pi }{3}\frac{1}{R^{2 - \alpha }}\xrightarrow[\alpha \in (- 1,2)]{R\rightarrow + \infty } 0\\
  & \\
-\left| \int _{\psi }\right|  & = \left\{\begin{array}{ c }
+\left| \int _{\psi }\right|  & = \left\{
+\begin{array}{ c }
 z = \varepsilon e^{it}\\
 t\in [ 0,2\pi /3]
 \end{array}\right\} = \left| \int ^{2\pi /3}_{0}\frac{e^{\alpha (\ln \varepsilon + it)}}{1 + \varepsilon ^{3} e^{i3t}}\textcolor[rgb]{0.29,0.56,0.89}{\underbrace{\varepsilon ie^{it}}_{\gamma '}} dt\right| \leq \dotsc \leq \frac{2\pi }{3} \varepsilon ^{\alpha + 1}\xrightarrow[\alpha \in (- 1,2)]{\varepsilon \rightarrow 0^{ + }} 0\\
@@ -2826,7 +2877,8 @@ Ugualmente
 \begin{aligned}
 \int _{\gamma _{R,\varepsilon }} & = \int _{\sigma _{1}} + \int _{\varphi } + \int _{\sigma _{2}} + \int _{\psi }\\
  & \\
-\int _{\sigma _{1} \cup \sigma _{2}} & = \left\{\begin{array}{ c }
+\int _{\sigma _{1} \cup \sigma _{2}} & = \left\{
+\begin{array}{ c }
 z = t\\
 t\in [ \varepsilon ,R]
 \end{array}\right\} = \int ^{R}_{\varepsilon }\frac{1}{1 + t}\left[ e^{ - \frac{1}{2}\ln t} - e^{ - \frac{1}{2}(\ln t + 2\pi i)}\right] dt\\
@@ -2850,7 +2902,8 @@ Il denominatore si annulla per $z = -1,\pm 2i$.
 \begin{aligned}
 \int _{\gamma _{R,\varepsilon }} & = \int _{\sigma _{1}} + \int _{\varphi } + \int _{\sigma _{2}} + \int _{\psi }\\
  & \\
-\int _{\sigma _{1} \cup \sigma _{2}} & = \left\{\begin{array}{ c }
+\int _{\sigma _{1} \cup \sigma _{2}} & = \left\{
+\begin{array}{ c }
 z = t\\
 t\in \left[ \varepsilon ,R\right]
 \end{array}\right\} = \int ^{R}_{\varepsilon }\frac{1}{\left(t + 1\right)\left(t^{2} + 4\right)}\left[\ln t - \left(\ln t + 2\pi i\right)\right] dt\xrightarrow[R\rightarrow + \infty ]{\varepsilon \rightarrow 0^{ + }} - 2\pi iI\\
@@ -2863,7 +2916,8 @@ t\in \left[ \varepsilon ,R\right]
 
 Rispondiamo al punto $1$.
 \begin{equation*}
-\ \begin{aligned}
+\ 
+\begin{aligned}
 \left| f\left(x\right)\right| ^{p} & = \frac{1}{x^{p/2}} \ \ \implies \ \ f\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ \frac{p}{2}  > 1\ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
  & \\
 \left| g\left(x\right)\right| ^{p} & = \frac{1}{\left(x + 1\right)^{p/2}}\overset{x\rightarrow + \infty }{\sim }\frac{1}{x^{p/2}} \ \ \implies \ \ g\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
@@ -2922,12 +2976,15 @@ f\in L^{1}(\Omega) ,\ \ \ \ \lim _{n\rightarrow + \infty }\int _{\Omega } f_{n}(
 \begin{enumerate}
 \item Le $f_{n}$ sono continue su $E = (0, + \infty)$ e quindi misurabili su $E$
 
-$\forall n > 0$ fissato si ha\begin{equation*}
+$\forall n > 0$ fissato si ha
+\begin{equation*}
 | f_{n}(x)| \leq \frac{n^{2}}{\left(x^{2}\right)^{3/2}\log^{3/2}\left(x^{2}\right)} = \frac{n^{2}}{x^{3}(2\log x)^{3/2}} = \frac{n^{2}}{2^{3/2} x^{3}(\log x)^{3/2}} \ \ x\rightarrow + \infty 
 \end{equation*}
 
-$f_{n}$ è integrabile nell'intorno di $ + \infty ,\forall n > 0$.\begin{equation*}
-\text{per} \ x\rightarrow 0\ \ f(x) \sim \begin{cases}
+$f_{n}$ è integrabile nell'intorno di $ + \infty ,\forall n > 0$.
+\begin{equation*}
+\text{per} \ x\rightarrow 0\ \ f(x) \sim 
+\begin{cases}
 \frac{x^{2}}{n^{3}\log^{3/2}\left(n^{2}\right)} , & n\geq 2\\
 \frac{x^{2}}{\log^{3/2}\left(x^{2} + 1\right)} \sim \frac{x^{2}}{x^{3}} = \frac{1}{x} , & n = 1
 \end{cases}
@@ -2936,7 +2993,8 @@ $f_{n}$ è integrabile nell'intorno di $ + \infty ,\forall n > 0$.\begin{equatio
 $f_{n}$ sono integrabili in $U\left(0^{ + }\right) ,\forall n\geq 2$.
 
 $\implies f_{n} \in L^{1}(0, + \infty) \iff n\geq 2$.
-\item Calcoliamo\begin{equation*}
+\item Calcoliamo
+\begin{equation*}
 \begin{aligned}
 \lim _{n\rightarrow + \infty } f_{n}(x_{0}) & = \left\{x_{0} \ \text{è fissato}\right\}\\
  & = \lim _{n\rightarrow + \infty }\frac{n^{2}\sin\left(\frac{x^{2}_{0}}{n^{2}}\right)}{\left(x^{2}_{0} + n^{2}\right)^{3/2}\log^{3/2}\left(x^{2}_{0} + n^{2}\right)}\\
@@ -2945,11 +3003,13 @@ $\implies f_{n} \in L^{1}(0, + \infty) \iff n\geq 2$.
 \end{equation*}
 
 $f_{n}$ converge puntualmente alla funzione limite $f(x) \equiv 0$.
-\item Osservo\begin{equation*}
+\item Osservo
+\begin{equation*}
 | \sin x| \leq x\ \ \forall x\in (0, + \infty) \ \ \implies \ \ n^{2}\sin\left(\frac{x^{2}}{n^{2}}\right) \leq n^{2}\frac{x^{2}}{n^{2}} = x^{2}
 \end{equation*}
 
-Per $n\geq 2$\begin{equation*}
+Per $n\geq 2$
+\begin{equation*}
 | f_{n}(x)| \leq g(x) \coloneqq \frac{x^{2}}{\left(x^{2} + 2^{2}\right)^{3/2}\log^{3/2}\left(x^{2} + 2^{2}\right)} \in L^{1}(0, + \infty)
 \end{equation*}
 \begin{enumerate}
@@ -2972,21 +3032,25 @@ f_{n}\xrightarrow[n\rightarrow + \infty ]{L^{p}} f\ (p\in [ 1, + \infty)) \ \ \i
 \item se $x_{0} \neq 0\ \ \implies \ \ \lim\limits _{n\rightarrow + \infty } f_{n}(x) = \frac{\pi }{2}$
 \end{enumerate}
 
-$\implies \ \ \{f_{n}\}_{n\in \NN }$ converge puntualmente a $f(x) = \begin{cases}
+$\implies \ \ \{f_{n}\}_{n\in \NN }$ converge puntualmente a $f(x) = 
+\begin{cases}
 0, & x = 0\\
 \pi /2, & x\neq 0
 \end{cases}$
 
 \fg{0.7}{08 - 7}
-\item Se $x > 0$\begin{gather*}
+\item Se $x > 0$
+\begin{gather*}
 f(x) - f_{n}(x) = \frac{\pi }{2} - \arctan(nx) = \arctan\left(\frac{1}{nx}\right)\\
 \implies \ \ \Vert f_{n} - f\Vert ^{p}_{L^{p}} = \int ^{ + \infty }_{0}\left(\arctan\left(\frac{1}{nx}\right)\right)^{p} dx
 \end{gather*}
 
 Escludo $p = 1$, perché $\arctan\left(\frac{1}{nx}\right) \sim \frac{1}{nx}$ e $\frac{1}{x}$ non è integrabile a $ + \infty $.
 
-Verifichiamo le ipotesi della convergenza dominata.\begin{equation*}
-\left| \left(\arctan\left(\frac{1}{nx}\right)\right)^{p}\right| \leq g(x) \coloneqq \begin{cases}
+Verifichiamo le ipotesi della convergenza dominata.
+\begin{equation*}
+\left| \left(\arctan\left(\frac{1}{nx}\right)\right)^{p}\right| \leq g(x) \coloneqq 
+\begin{cases}
 \left(\frac{\pi }{2}\right)^{p} , & 0 < x < 1\ \left(\text{integrabile in zero} \ \forall p\right)\\
 \left| \frac{1}{x}\right| ^{p} & x\geq 1\ \left(\text{uso proprio} \ n = 1\ \text{per maggiorare}\right)
 \end{cases}
@@ -3077,7 +3141,8 @@ Vediamo come sono fatte le $f_{n}$.
 
 \fg{0.7}{09 - 2}
 \begin{equation*}
-F(x) = \lim _{n\rightarrow \infty }\left[ \pi - 2\arctan (|x|^{n})\right] = \begin{cases}
+F(x) = \lim _{n\rightarrow \infty }\left[ \pi - 2\arctan (|x|^{n})\right] = 
+\begin{cases}
 \pi , & |x| < 1\\
 \frac{\pi }{2} , & |x| = 1\\
 0, & |x| > 1
@@ -3093,7 +3158,8 @@ La funzione converge a $F(x)$ in $L^{1} ,L^{p}$? Con la definizione
 \begin{equation*}
 \begin{aligned}
 \lim _{x\rightarrow + \infty }\frac{f_{n} (x)}{\left(\frac{1}{x}\right)^{\alpha }} & = \lim _{x\rightarrow + \infty }\frac{\pi - 2\arctan (x^{n})}{x^{ - \alpha }}\\
- & \overset{\text{H}}{ = }\lim _{x\rightarrow \infty }\frac{ - 2\frac{nx^{n - 1}}{1 + x^{2n}}}{ - \alpha x^{ - \alpha - 1}} = \lim _{x\rightarrow \infty }\frac{2n}{\alpha }\frac{x^{ - n - 1}}{x^{ - \alpha - 1}} = \begin{cases}
+ & \overset{\text{H}}{ = }\lim _{x\rightarrow \infty }\frac{ - 2\frac{nx^{n - 1}}{1 + x^{2n}}}{ - \alpha x^{ - \alpha - 1}} = \lim _{x\rightarrow \infty }\frac{2n}{\alpha }\frac{x^{ - n - 1}}{x^{ - \alpha - 1}} = 
+ \begin{cases}
 \infty , & \alpha  > n\\
 2, & \alpha = n\\
 0, & \alpha < n
@@ -3118,7 +3184,8 @@ dalla quale si può risalire a quella cercata con la disuguaglianza triangolare.
 
 Scegliamo quindi
 \begin{equation*}
-h(x) = \begin{cases}
+h(x) = 
+\begin{cases}
 \pi , & |x|\leq 1\\
 f_{2} (x), & |x| > 1
 \end{cases}
@@ -3126,7 +3193,8 @@ f_{2} (x), & |x| > 1
 \Soluzione
 \begin{itemize}
 \item Se gli $a_{n}$ e i $b_{n}$ tendono a $0$ in maniera monotona, allora la serie converge salvo in $0,2\pi ,4\pi \dotsc $
-\item Vale\begin{equation*}
+\item Vale
+\begin{equation*}
 \sum\limits ^{\infty }_{n = 0}(| a_{n}| + | b_{n}|) < \infty \ \ \implies \ \ \text{la serie converge a una funzione continua}
 \end{equation*}
 \end{itemize}
@@ -3201,7 +3269,8 @@ b_{n} & = \frac{1}{T/2}\int ^{T}_{0} f(x)\sin\left(\frac{2\pi n}{T} x\right) dx 
  & = 2\int ^{1}_{0} f(x)\sin(\pi nx) dx = 2\int ^{1}_{0}\left(x - x^{2}\right)\sin(\pi nx) dx\\
  & \overset{\text{ipp}}{ = } 2\left\{\cancel{\left[ - \frac{x - x^{2}}{n\pi }\cos(n\pi x)\right]^{1}_{0}} + \frac{1}{n\pi }\int ^{1}_{0}(1 - 2x)\cos(n\pi x) dx\right\}\\
  & \overset{\text{ipp}}{ = }\frac{2}{n\pi }\left\{\cancel{\left[\frac{1 - 2x}{n\pi }\sin(n\pi x)\right]^{1}_{0}} + \frac{2}{n\pi }\int ^{1}_{0}\sin(n\pi x) dx\right\}\\
- & = \frac{4}{n^{2} \pi ^{2}}\left[ - \frac{1}{n\pi }\cos (nx)\right]^{1}_{0} = \frac{4}{n^{3} \pi ^{3}}\left[ 1 - (- 1)^{n}\right] = \begin{cases}
+ & = \frac{4}{n^{2} \pi ^{2}}\left[ - \frac{1}{n\pi }\cos (nx)\right]^{1}_{0} = \frac{4}{n^{3} \pi ^{3}}\left[ 1 - (- 1)^{n}\right] = 
+ \begin{cases}
 0, & n\ \text{pari}\\
 \frac{8}{n^{3} \pi ^{3}} , & n\ \text{dispari}
 \end{cases}
@@ -3230,7 +3299,8 @@ f_{n} (x) = \frac{2n^{2}\left(1 - \cos\frac{x}{n}\right)}{\left(1 + \frac{x}{n}\
 \item Stabilire per quale $n\in \NN $ si ha $f_{n} \in L^{1}((1, + \infty))$ e per quale $n\in \NN $ si ha 
 
 $f_{n} \in L^{2}((1, + \infty))$
-\item Calcolare\begin{equation*}
+\item Calcolare
+\begin{equation*}
 \lim\limits _{n\rightarrow + \infty }\int ^{ + \infty }_{0} f_{n}(x) dx\ \ \ \ \ \ \ \ \lim\limits _{n\rightarrow + \infty }\int ^{ + \infty }_{0}[ f_{n}(x)]^{2} dx
 \end{equation*}
 \end{enumerate}
@@ -3248,7 +3318,8 @@ f_{n,\alpha }(x) = \frac{n^{\alpha }}{\left(x^{2} + n^{2}\right)\left(x^{2} + 4n
 
 Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $ - periodica che sull'intervallo $(- \pi ,\pi ]$ è definita da
 \begin{equation*}
-f(x) = x + | x| = \begin{cases}
+f(x) = x + | x| = 
+\begin{cases}
 2x, & x\in [ 0,\pi ]\\
 0, & x\in (- \pi ,0)
 \end{cases}
@@ -3269,7 +3340,8 @@ f(x) = \cos\left(\sqrt{2} \cdot x\right) \ \ \ \ \forall x\in \left[ - \frac{\pi
 ripetuta periodicamente
 \begin{enumerate}
 \item Calcolare i coefficienti di Fourier di $f$.
-\item Calcolare il valore di\begin{equation*}
+\item Calcolare il valore di
+\begin{equation*}
 \sum\limits ^{\infty }_{k = 1}\frac{1}{2k^{2} - 1}
 \end{equation*}
 \item Studiare la convergenza della serie (puntuale, in media quadratica, uniforme).
@@ -3284,7 +3356,8 @@ Sia $x_{0} \in [ 0, + \infty)$ fissato
 \end{itemize}
 allora $\{f_{n}\}_{n\in \NN }$ converge puntualmente alla funzione limite
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 + \infty , & x = 0\\
 0, & x\geq 0
 \end{cases}
@@ -3326,13 +3399,15 @@ Vediamo il grafico
 
 Per $x\rightarrow + \infty ,\ | f_{n}(x)| \leq \frac{4n^{2}}{\left(\frac{x}{n}\right)^{n}}$ è integrabile in $U(+ \infty)$ per $n > 1$
 
-$ \begin{array}{l}
+$ 
+\begin{array}{l}
 \implies f_{n} \in L^{1}((1, + \infty)) \ \ \forall n\geq 2\\
 \implies f_{n} \in L^{2}((1, + \infty)) \ \ \forall n\geq 1
 \end{array}$
 \item $0\leq 1 - \cos t\leq \frac{t^{2}}{2} \ \forall t$
 
-$n\mapsto \left(1 + \frac{x}{n}\right)^{n}$ è crescente $\forall x > 0$\begin{equation*}
+$n\mapsto \left(1 + \frac{x}{n}\right)^{n}$ è crescente $\forall x > 0$
+\begin{equation*}
 \implies \ \ 0\leq | f_{n} (x)| \leq \frac{x^{2}}{\left(1 + \frac{x}{4}\right)^{4}} \ \ \forall x > 0,\forall n\geq 4
 \end{equation*}
 
@@ -3346,14 +3421,17 @@ scegliamo il $4$ perché così la maggiorante $\in L^{1}((0, + \infty))$ e non d
 \end{aligned}
 \end{equation*}
 
-Analogamente si trova una maggiorante $L^{1}$ per $f^{2}_{n}$\begin{equation*}
+Analogamente si trova una maggiorante $L^{1}$ per $f^{2}_{n}$
+\begin{equation*}
 \overset{\text{Dom}}{\implies }\lim\limits _{n\rightarrow + \infty }\int ^{ + \infty }_{0} f^{2}_{n}(x) dx = \int ^{ + \infty }_{0}\lim\limits _{n\rightarrow + \infty } f^{2}_{n}(x) dx = \int ^{ + \infty }_{0} x^{4} e^{ - 2x}\overset{\text{ipp}}{ = }\frac{3}{4}
 \end{equation*}
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
-\item Sia $x_{0} \in \RR $ fissato\begin{equation*}
-f_{n,\alpha }(x_{0}) \sim \frac{n^{\alpha }}{4n^{4}} = \frac{1}{4n^{4 - \alpha }}\xrightarrow{n\rightarrow + \infty }\begin{cases}
+\item Sia $x_{0} \in \RR $ fissato
+\begin{equation*}
+f_{n,\alpha }(x_{0}) \sim \frac{n^{\alpha }}{4n^{4}} = \frac{1}{4n^{4 - \alpha }}\xrightarrow{n\rightarrow + \infty }
+\begin{cases}
 0, & \alpha \in [ 0,4)\\
 \frac{1}{4} , & \alpha = 4
 \end{cases}
@@ -3362,7 +3440,8 @@ f_{n,\alpha }(x_{0}) \sim \frac{n^{\alpha }}{4n^{4}} = \frac{1}{4n^{4 - \alpha }
 
 Tuttavia se $\alpha = 4$, $F_{4} \notin L^{1}(\RR) \implies f_{n,4} \nrightarrow F_{4}$ in $L^{1}(\RR)$ per $n\rightarrow + \infty $.
 
-Mentre se $\alpha \in [ 0,4)$\begin{equation*}
+Mentre se $\alpha \in [ 0,4)$
+\begin{equation*}
 \begin{aligned}
 \Vert f_{n,\alpha } - F_{\alpha }\Vert _{L^{1}} & = \Vert f_{n,\alpha }\Vert = \int _{\RR }\frac{n^{\alpha }}{\left(x^{2} + n^{2}\right)\left(x^{2} + 4n^{2}\right)} dx\\
  & = n^{\alpha }\int _{\RR }\frac{1}{\left(x^{2} + n^{2}\right)\left(x^{2} + 4n^{2}\right)} dx = n^{\alpha } \cdot I_{n}
@@ -3371,7 +3450,8 @@ Mentre se $\alpha \in [ 0,4)$\begin{equation*}
 
 Calcoliamo $I_{n}$ usando la teoria dei residui.
 
-Poniamo\begin{equation*}
+Poniamo
+\begin{equation*}
 g_{n}(z) = \frac{1}{\left(z^{2} + n^{2}\right)\left(z^{2} + 4n^{2}\right)}
 \end{equation*}
 
@@ -3440,7 +3520,8 @@ I^{\star }_{n} & = \underbrace{\int _{\sigma _{R}} g(z) dz}_{\xrightarrow{R\righ
 
 Studiamo ora la norma $L^{\infty }$
 
-Per $\alpha \in [ 0,4)$\begin{equation*}
+Per $\alpha \in [ 0,4)$
+\begin{equation*}
 \begin{aligned}
 \Vert f_{n,\alpha } - F_{\alpha }\Vert _{L^{\infty }} & = \Vert f_{n,\alpha }\Vert _{L^{\infty }} & \\
  & = \max_{x\in \RR } f_{n,\alpha }(x) & \left(f_{n} \ \text{sono continue e positive}\right)\\
@@ -3448,7 +3529,8 @@ Per $\alpha \in [ 0,4)$\begin{equation*}
  & = \frac{1}{4n^{4 - \alpha }}\xrightarrow{n\rightarrow + \infty } 0 & \\
  & \implies \ \ f_{n,\alpha }\xrightarrow[n\rightarrow + \infty ]{L^{\infty }(\RR)} F_{\alpha } & 
 \end{aligned}
-\end{equation*}Per $\alpha = 4$\begin{equation*}
+\end{equation*}Per $\alpha = 4$
+\begin{equation*}
 \begin{aligned}
 \Vert f_{n,4} - F_{4}\Vert _{L^{\infty }} & = \left\Vert f_{n,4} - \frac{1}{4}\right\Vert _{L^{\infty }}\\
  & = \max_{x\in \RR }\left[\frac{n^{4}}{\left(x^{2} + n^{2}\right)\left(x^{2} + 4n^{2}\right)} - \frac{1}{4}\right]\\
@@ -3459,7 +3541,8 @@ Per $\alpha \in [ 0,4)$\begin{equation*}
 \end{enumerate}
 \Soluzione
 \begin{thm}
-Sia $f:\RR \rightarrow \RR $, $T$ - periodica, allora la serie di Fourier associata ad $f$ è\begin{equation*}
+Sia $f:\RR \rightarrow \RR $, $T$ - periodica, allora la serie di Fourier associata ad $f$ è
+\begin{equation*}
 F(x) = \frac{a_{0}}{2} + \sum\limits ^{\infty }_{n = 1}\left[ a_{n}\cos\left(\frac{2\pi n}{T} x\right) + b_{n}\sin\left(\frac{2\pi n}{T} x\right)\right]
 \end{equation*}
 
@@ -3536,20 +3619,24 @@ a_{n} = \frac{2}{T}\int ^{\frac{T}{2}}_{ - \frac{T}{2}} f(x)\cos\left(\frac{2\pi
 
 nel nostro caso $f$ è continua in ogni punto $x\neq (2k + 1) \pi ,k\in \ZZ $ e presenta delle discontinuità di I specie (tipo salto) nei punti $x = (2k + 1) \pi ,k\in \ZZ $.
 \begin{enumerate}
-\item $F(x)$ converge puntualmente a\begin{equation*}
+\item $F(x)$ converge puntualmente a
+\begin{equation*}
 f(x) \ \ \ \ \forall x\neq (2k + 1) \pi ,k\in \ZZ 
 \end{equation*}
-\item $F(x)$ converge puntualmente a\begin{equation*}
+\item $F(x)$ converge puntualmente a
+\begin{equation*}
 \frac{f\left(x^{ + }\right) + f\left(x^{ - }\right)}{2} = \frac{0 + 2\pi }{2} = \pi \ \ \ \ \forall x = (2k + 1) \pi ,k\in \ZZ 
 \end{equation*}
 \end{enumerate}
-\item Calcoliamo i coefficienti\begin{align*}
+\item Calcoliamo i coefficienti
+\begin{align*}
 a_{0} & = \frac{2}{2\pi }\int ^{\pi }_{ - \pi } f(x) dx = \frac{1}{\pi }\left\{\int ^{0}_{ - \pi } f(x) dx + \int ^{\pi }_{0} f(x) dx\right\}\\
  & = \frac{1}{\pi }\int ^{\pi }_{0} f(x) dx = \frac{1}{\pi }\int ^{\pi }_{0} 2xdx = \frac{1}{\pi }\left[ x^{2}\right]^{\pi }_{0} = \frac{1}{\pi } \pi ^{2} = \textcolor[rgb]{0.82,0.01,0.11}{\pi }\\
  & \\
 a_{n} & \overset{n\geq 1}{ = }\frac{1}{\pi }\int ^{\pi }_{ - \pi } f(x)\cos(nx) dx = \frac{1}{\pi }\int ^{\pi }_{0} 2x\cos(nx) dx\\
  & \\
- & \begin{array}{ l l }
+ & 
+ \begin{array}{ l l }
 h(x) = 2x & h'(x) = 2\\
 g(x) = \frac{1}{n}\sin(nx) & g'(x) = \cos(nx)
 \end{array}\\
@@ -3561,7 +3648,8 @@ g(x) = \frac{1}{n}\sin(nx) & g'(x) = \cos(nx)
  & \\
 b_{n} & = \frac{1}{\pi }\int ^{\pi }_{ - \pi } f(x)\sin(nx) dx = \frac{1}{\pi }\int ^{\pi }_{0} 2x\sin(nx) dx\\
  & \\
- & \begin{array}{ l l }
+ & 
+ \begin{array}{ l l }
 k(x) = 2x & k'(x) = 2\\
 r(x) = - \frac{1}{n}\cos(nx) & r'(x) = \sin(nx)
 \end{array}\\
@@ -3571,10 +3659,12 @@ r(x) = - \frac{1}{n}\cos(nx) & r'(x) = \sin(nx)
  & = \frac{1}{\pi }\left\{ - \frac{2\pi }{n}(- 1)^{n}\right\} = \textcolor[rgb]{0.82,0.01,0.11}{\frac{2}{n}}\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{ - 1}\textcolor[rgb]{0.82,0.01,0.11}{)}\textcolor[rgb]{0.82,0.01,0.11}{^{n + 1}}
 \end{align*}
 
-La serie di Fourier di $f$ è\begin{equation*}
+La serie di Fourier di $f$ è
+\begin{equation*}
 F(x) = \frac{\pi }{2} + 2\sum\limits ^{\infty }_{n = 1}\left[\frac{(- 1)^{n} - 1}{\pi n^{2}}\cos(nx) + \frac{(- 1)^{n + 1}}{n}\sin(nx)\right]
 \end{equation*}
-\item Poiché $f\in L^{2}([ - \pi ,\pi ])$\begin{equation*}
+\item Poiché $f\in L^{2}([ - \pi ,\pi ])$
+\begin{equation*}
 \int ^{\pi }_{ - \pi }| f(x)| ^{2} dx = \int ^{\pi }_{0}(2x)^{2} dx = \int ^{\pi }_{0} 4x^{2} dx = \frac{4}{3} \pi ^{3} < + \infty 
 \end{equation*}
 
@@ -3583,17 +3673,20 @@ allora $F(x)$ di $f$ converge in media quadratica.
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
-\item $f$ è pari $\implies b_{n} = 0\ \forall n\in \NN $\begin{equation*}
+\item $f$ è pari $\implies b_{n} = 0\ \forall n\in \NN $
+\begin{equation*}
 a_{k} = \frac{2}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\cos\left(\sqrt{2} x\right)\cos(2kx) dx\ \ \forall k\in \NN 
 \end{equation*}
 
 modo $A$: calcolo per parti e ottengo un integrale ciclico.
 
-modo $B$: usare la formula di Werner, usiamo questo\begin{equation*}
+modo $B$: usare la formula di Werner, usiamo questo
+\begin{equation*}
 \cos \alpha \cos \beta = \frac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)]
 \end{equation*}
 
-Procediamo al calcolo\begin{align*}
+Procediamo al calcolo
+\begin{align*}
 a_{k} & = \frac{\cancel{2}}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\frac{1}{\cancel{2}}\left\{\cos\left(\sqrt{2} x + 2kx\right) + \cos\left(\sqrt{2} x - 2kx\right)\right\} dx\\
  & = \frac{1}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\left\{\cos\left(\left(\sqrt{2} + 2k\right) x\right) + \cos\left(\left(\sqrt{2} - 2k\right) x\right)\right\} dx\\
  & = \frac{1}{\pi }\left\{\left[\frac{\sin\left(\left(\sqrt{2} + 2k\right) x\right)}{\sqrt{2} + 2k}\right]^{\frac{\pi }{2}}_{ - \frac{\pi }{2}} + \left[\frac{\sin\left(\left(\sqrt{2} - 2k\right) x\right)}{\sqrt{2} - 2k}\right]^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\right\}\\
@@ -3603,11 +3696,13 @@ a_{k} & = \frac{\cancel{2}}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\frac
  & = \frac{2(- 1)^{k}\sin\left(\frac{\pi }{\sqrt{2}}\right)}{\pi }\left(\frac{1}{2k + \sqrt{2}} - \frac{1}{2k - \sqrt{2}}\right)\\
  & = - \frac{2\sqrt{2}(- 1)^{k}\sin\left(\frac{\pi }{\sqrt{2}}\right)}{\pi \left(2k^{2} - 1\right)}
 \end{align*}
-\item La serie di Fourier di $f$ è\begin{equation*}
+\item La serie di Fourier di $f$ è
+\begin{equation*}
 F(x) = \frac{a_{0}}{2} + \sum\limits ^{\infty }_{k = 1} a_{k}\cos(2kx)
 \end{equation*}
 
-per $x = \frac{\pi }{2}$\begin{equation*}
+per $x = \frac{\pi }{2}$
+\begin{equation*}
 \begin{aligned}
 F\left(\frac{\pi }{2}\right) & = \cos\left(\sqrt{2} \cdot \frac{\pi }{2}\right) = \textcolor[rgb]{0.25,0.46,0.02}{\cos\left(\frac{\pi }{\sqrt{2}}\right)}\\
 F\left(\frac{\pi }{2}\right) & = \frac{\sqrt{2}}{\pi }\sin\left(\frac{\pi }{\sqrt{2}}\right) + \sum\limits ^{\infty }_{k = 1} a_{k}(- 1)^{k}\\
@@ -3619,7 +3714,8 @@ F\left(\frac{\pi }{2}\right) & = \frac{\sqrt{2}}{\pi }\sin\left(\frac{\pi }{\sqr
 \end{equation*}
 \item $f\in L^{2}\left(\left[ - \frac{\pi }{2} ,\frac{\pi }{2}\right]\right) \implies $ ho convergenza in media quadratica
 
-Criterio di Weierstrass, prendo il termine generale in modulo\begin{gather*}
+Criterio di Weierstrass, prendo il termine generale in modulo
+\begin{gather*}
 | a_{k}\cos(2k\pi)| \leq \frac{2\sqrt{2}}{\pi \left(2k^{2} - 1\right)}\\
 \sum\limits ^{\infty }_{k = 1}\frac{2\sqrt{2}}{\pi \left(2k^{2} - 1\right)} < + \infty \ \ \implies \ \ \text{convergenza è uniforme su} \ \RR 
 \end{gather*}
@@ -3637,7 +3733,8 @@ Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota
 
 Data una funzione $3$ - periodica
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 0, & 0\leq x < 1\\
 1, & 1\leq x < 2\\
 2, & 2\leq x < 3
@@ -3650,7 +3747,8 @@ Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota
 \end{defn}
 \textit{Esempio.}
 \begin{equation*}
-\varphi (x) = \begin{cases}
+\varphi (x) = 
+\begin{cases}
 e^{ - \frac{1}{1 - x^{2}}} , & | x| < 1\\
 0, & | x| \geq 1
 \end{cases}
@@ -3686,7 +3784,8 @@ f_{n} (x) = ne^{ - n|x|}
 
 Studiare la convergenza in distribuzione della seguente successione
 \begin{equation*}
-f_{n} (x) = \begin{cases}
+f_{n} (x) = 
+\begin{cases}
 - 3n, & |x|\leq \frac{1}{n}\\
 2n, & \frac{1}{n} < |x|\leq \frac{2}{n}\\
 0, & |x| > \frac{2}{n}
@@ -3726,19 +3825,23 @@ Inoltre
 \end{equation*}
 Ricaviamo alcune serie notevoli.
 \begin{itemize}
-\item in $x = \pi $\begin{gather*}
+\item in $x = \pi $
+\begin{gather*}
 \pi ^{2} = f(\pi) = \frac{\pi ^{2}}{3} + \sum ^{\infty }_{n = 1} (- 1)^{n}\frac{4}{n^{2}}\cos (n\pi) = \frac{\pi ^{2}}{3} + 4\sum ^{\infty }_{n = 1}\frac{1}{n^{2}}\\
 \implies \ \ \boxed{\sum ^{\infty }_{n = 1}\frac{1}{n^{2}} = \frac{\pi ^{2}}{6}}
 \end{gather*}
-\item in $x = 0$\begin{gather*}
+\item in $x = 0$
+\begin{gather*}
 0 = f(0) = \frac{\pi ^{2}}{3} + \sum ^{\infty }_{n = 1} (- 1)^{n}\frac{4}{n^{2}}\cos (0) = \frac{\pi ^{2}}{3} + 4\sum ^{\infty }_{n = 1}\frac{(- 1)^{n}}{n^{2}}\\
 \implies \ \ \boxed{\sum ^{\infty }_{n = 1}\frac{(- 1)^{n}}{n^{2}} = - \frac{\pi ^{2}}{12}}
 \end{gather*}
-\item Parseval\begin{equation*}
+\item Parseval
+\begin{equation*}
 \int ^{2\pi }_{0}[ f(x)]^{2} dx = \pi \left[\frac{a^{2}_{0}}{2} + \sum ^{\infty }_{n = 1} (a^{2}_{n} + b^{2}_{n})\right]
 \end{equation*}
 
-Allora\begin{equation*}
+Allora
+\begin{equation*}
 \begin{aligned}
 \int ^{\pi }_{ - \pi }\left(x^{2}\right)^{2} dx & = \pi \left[\frac{\left(\frac{2}{3} \pi ^{2}\right)^{2}}{2} + \sum\limits ^{\infty }_{n = 1}\frac{16}{n^{4}}\right]\\
 2\cdot \frac{\pi ^{5}}{5} & = \pi \left[\frac{2}{9} \pi ^{4} + 16\sum\limits ^{\infty }_{n = 1}\frac{1}{n^{4}}\right]\\
@@ -3750,7 +3853,8 @@ Allora\begin{equation*}
 
 Iniziamo osservando che la funzione
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 0, & 0\leq x < 1\\
 1, & 1\leq x < 2\\
 2, & 2\leq x < 3
@@ -3833,11 +3937,13 @@ a_{n} & = \frac{1}{3/2}\int ^{3}_{0} f(x)\cos\left(\frac{2n\pi }{3}\right) dx = 
 b_{n} & = \frac{2}{3}\int ^{3}_{0} f(x)\sin\left(\frac{2n\pi }{3}\right) dx = \frac{2}{3}\left\{\int ^{2}_{1} 1\sin\left(\frac{2n\pi }{3}\right) dx + \int ^{3}_{2} 2\sin\left(\frac{2n\pi }{3}\right) dx\right\}\\
  & = \frac{2}{3}\frac{3}{2n\pi }\left\{\left[ - \cos\left(\frac{2n\pi }{3}\right)\right]^{2}_{1} - 2\left[\cos\left(\frac{2n\pi }{3}\right)\right]^{3}_{2}\right\}\\
  & = - \frac{1}{n\pi }\left\{\cos\left(\frac{4n\pi }{3}\right) - \cos\left(\frac{2n\pi }{3}\right) + 2\cos(2n\pi) - 2\cos\left(\frac{4n\pi }{3}\right)\right\}\\
- & = - \frac{1}{n\pi } \cdot \begin{cases}
+ & = - \frac{1}{n\pi } \cdot 
+ \begin{cases}
 1, & n = 1,4,7,\dotsc \\
 1, & n = 2,5,8,\dotsc \\
 0, & \text{altrimenti}
-\end{cases} = \begin{cases}
+\end{cases} = 
+\begin{cases}
 0, & n = 3k,k\in \ZZ \\
 - \frac{1}{n\pi } , & \text{altrimenti}
 \end{cases}
@@ -3851,7 +3957,8 @@ La funzione è una funzione dispari traslata di $1$ verso l'alto.
 
 Limite puntuale
 \begin{equation*}
-f_{n} (x) = ne^{ - n|x|} \ \ \ \ \lim\limits _{n\rightarrow + \infty } f_{n}(x) = \begin{cases}
+f_{n} (x) = ne^{ - n|x|} \ \ \ \ \lim\limits _{n\rightarrow + \infty } f_{n}(x) = 
+\begin{cases}
 0, & x\neq 0\\
 + \infty , & x = 0
 \end{cases} \ \ \implies \ \ f_{n}\xrightarrow{\text{q.o.}} F(x) \equiv 0
@@ -3882,7 +3989,8 @@ Quindi
 
 Limite puntuale
 \begin{equation*}
-\lim\limits _{n\rightarrow + \infty } f_{n}(x) = \begin{cases}
+\lim\limits _{n\rightarrow + \infty } f_{n}(x) = 
+\begin{cases}
 - \infty , & x = 0\\
 0, & x\neq 0
 \end{cases} \ \ \implies \ \ f_{n}\xrightarrow{\text{q.o.}} F(x) \equiv 0
@@ -3920,7 +4028,8 @@ procediamo coi calcoli
 \end{equation*}
 Facendo lo stesso gioco su una funzione
 \begin{equation*}
-g_{n} (x) = \begin{cases}
+g_{n} (x) = 
+\begin{cases}
 - n, & |x|\leq \frac{1}{n}\\
 2n, & \frac{1}{n} < |x|\leq \frac{2}{n}\\
 0, & |x| > \frac{2}{n}
@@ -3964,7 +4073,8 @@ Date $f_{n}(x) = nx^{n} \chi _{(0,1)}(x)$, calcolare il limite in $D'(0,1)$.
 
 Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $ - periodica dispari definita da
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 \sin x, & x\in \left[ 0,\frac{\pi }{2}\right)\\
 0, & x\in \left[\frac{\pi }{2} ,\pi \right]
 \end{cases}
@@ -3975,10 +4085,12 @@ f(x) = \begin{cases}
 \item Stabilire se la serie di Fourier converge puntualmente.
 \item Stabilire se la serie di Fourier converge uniformemente.
 \item Scrivere la serie di Fourier di $f$.
-\item Dire che cosa accade per $x = \frac{\pi }{4}$ e calcolare\begin{equation*}
+\item Dire che cosa accade per $x = \frac{\pi }{4}$ e calcolare
+\begin{equation*}
 \sum\limits ^{\infty }_{n = 0}(- 1)^{n}\frac{2n + 1}{4(2n + 1)^{2} - 1}
 \end{equation*}
-\item Scrivere l'identità di Parseval per $f$ e sfruttarla per calcolare\begin{equation*}
+\item Scrivere l'identità di Parseval per $f$ e sfruttarla per calcolare
+\begin{equation*}
 \sum\limits ^{\infty }_{n = 1}\frac{n^{2}}{\left(4n^{2} - 1\right)^{2}}
 \end{equation*}
 \end{enumerate}
@@ -4002,7 +4114,8 @@ estesa con $2\pi $ - periodicità all'asse reale. Calcolare
 
 Data la successione di funzioni
 \begin{equation*}
-f_{n}(x) = \begin{cases}
+f_{n}(x) = 
+\begin{cases}
 ne^{n(x - 1)} , & x\leq 1\\
 0, & x > 1
 \end{cases}
@@ -4019,7 +4132,8 @@ f_{n,\alpha }(x) = n^{\alpha }\sqrt{1 - n| x| } \cdot \chi _{\left[ - \frac{1}{n
 \end{equation*}
 dove
 \begin{equation*}
-\chi _{\left[ - \frac{1}{n} ,\frac{1}{n}\right]}(x) = \begin{cases}
+\chi _{\left[ - \frac{1}{n} ,\frac{1}{n}\right]}(x) = 
+\begin{cases}
 1, & x\in \left[ - \frac{1}{n} ,\frac{1}{n}\right]\\
 0, & \text{altrove}
 \end{cases}
@@ -4137,7 +4251,8 @@ b_{n} & = \frac{2}{\pi }\int ^{\pi }_{0} f(x)\sin(nx) dx\\
 \end{aligned}
 \end{equation*}
 
-Possiamo fare un integrale ciclico o usare le formule di Werner. Usiamo il primo\begin{align*}
+Possiamo fare un integrale ciclico o usare le formule di Werner. Usiamo il primo
+\begin{align*}
 \frac{2}{\pi }\int ^{\frac{\pi }{2}}_{0}\sin x\sin(nx) dx & \overset{\text{ipp}}{ = }\frac{2}{\pi }\left\{\cancel{[ - \cos x\sin(nx)]^{\frac{\pi }{2}}_{0}} + n\int ^{\frac{\pi }{2}}_{0}\cos x\cos(nx) dx\right\}\\
  & = \frac{2n}{\pi }\int ^{\frac{\pi }{2}}_{0}\cos x\cos(nx) dx\\
  & \overset{\text{ipp}}{ = }\frac{2n}{\pi }\left\{[\sin x\cos(nx)]^{\frac{\pi }{2}}_{0} + n\int ^{\frac{\pi }{2}}_{0}\sin x\sin(nx) dx\right\}\\
@@ -4147,14 +4262,17 @@ Possiamo fare un integrale ciclico o usare le formule di Werner. Usiamo il primo
 \left(1 - n^{2}\right) b_{n} & = \frac{2n}{\pi }\cos\left(n\frac{\pi }{2}\right)
 \end{align*}
 
-per $n\neq 1$\begin{equation*}
-b_{n} = \frac{2}{\pi }\frac{n}{1 - n^{2}}\cos\left(n\frac{\pi }{2}\right) = \begin{cases}
+per $n\neq 1$
+\begin{equation*}
+b_{n} = \frac{2}{\pi }\frac{n}{1 - n^{2}}\cos\left(n\frac{\pi }{2}\right) = 
+\begin{cases}
 (- 1)^{\frac{n}{2}}\frac{2}{\pi }\frac{n}{1 - n^{2}} , & n\ \text{pari}\\
 0, & n\ \text{dispari}
 \end{cases}
 \end{equation*}
 
-per $n = 1$\begin{equation*}
+per $n = 1$
+\begin{equation*}
 \begin{aligned}
 b_{1} & = \frac{2}{\pi }\int ^{\pi }_{0} f(x)\sin(x) dx = \frac{2}{\pi }\int ^{\frac{\pi }{2}}_{0}\sin^{2}(x) dx = \frac{2}{\pi }\int ^{\frac{\pi }{2}}_{0}\frac{1 - \cos 2x}{2} dx\\
  & = \frac{1}{\pi }\left[ x - \frac{1}{2}\sin(2x)\right]^{\frac{\pi }{2}}_{0} = \frac{1}{\pi }\left[\frac{\pi }{2} - 0 + 0 - 0\right] = \frac{1}{2}
@@ -4166,7 +4284,8 @@ Allora $(n = 2k,\ k\in \NN)$:
 \begin{equation*}
 F(x) = \frac{1}{2}\sin x + \frac{2}{\pi }\sum ^{ + \infty }_{k = 1}(- 1)^{k}\frac{2k}{1 - 4k^{2}}\sin(2kx)
 \end{equation*}
-\item In $x = \frac{\pi }{4}$ la $f$ è continua, quindi la $F(x)$ converge puntualmente a $f(x)$.\begin{align*}
+\item In $x = \frac{\pi }{4}$ la $f$ è continua, quindi la $F(x)$ converge puntualmente a $f(x)$.
+\begin{align*}
 F\left(\frac{\pi }{4}\right) & = \sin\left(\frac{\pi }{4}\right) = \frac{1}{\sqrt{2}}\\
 F\left(\frac{\pi }{4}\right) & = \frac{1}{2}\sin\left(\frac{\pi }{4}\right) + \frac{4}{\pi }\sum ^{ + \infty }_{k = 1}(- 1)^{k - 1}\frac{k}{4k^{2} - 1}\sin\left(k\frac{\pi }{2}\right)\\
 \implies \ \ \frac{1}{\sqrt{2}} & = \frac{1}{2\sqrt{2}} + \frac{4}{\pi }\sum ^{ + \infty }_{k = 0}(- 1)^{k - 1}\frac{k}{4k^{2} - 1}\sin\left(k\frac{\pi }{2}\right)
@@ -4193,14 +4312,16 @@ Nel nostro caso $f$ è dispari, $a_{n} = 0,\ \forall n\in \NN $, e si ha
 \underbrace{\frac{1}{\pi }\int ^{\pi }_{ - \pi }| f(x)| ^{2} dx}_{A} = \underbrace{\sum\limits ^{\infty }_{n = 1} b^{2}_{n}}_{B}
 \end{equation*}
 
-Termine $A$\begin{equation*}
+Termine $A$
+\begin{equation*}
 \begin{aligned}
 \frac{1}{\pi }\int ^{\pi }_{ - \pi }| f(x)| ^{2} dx & = \frac{1}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\sin^{2}(x) dx = \frac{1}{\pi }\int ^{\frac{\pi }{2}}_{ - \frac{\pi }{2}}\frac{1 - \cos(2x)}{2} dx\\
  & = \frac{1}{2\pi }\left[ x - \frac{1}{2}\sin(2x)\right]^{\pi /2}_{ - \pi /2} = \frac{1}{2\pi }\left[\frac{\pi }{2} + \frac{\pi }{2}\right] = \frac{1}{2}
 \end{aligned}
 \end{equation*}
 
-Termine $B$\begin{equation*}
+Termine $B$
+\begin{equation*}
 \begin{aligned}
 \sum\limits ^{\infty }_{n = 1} b^{2}_{n} & = b^{2}_{1} + \sum\limits ^{\infty }_{n = 1} b^{2}_{2n}\\
  & = \left(\frac{1}{2}\right)^{2} + \frac{4}{\pi ^{2}}\sum\limits ^{\infty }_{n = 1}\frac{4n^{2}}{\left(4n^{2} - 1\right)^{2}}
@@ -4223,7 +4344,8 @@ a_{0} & = \frac{2}{\pi }\int ^{\pi }_{0} xdx = \frac{2}{\pi }\frac{\pi ^{2}}{2} 
  & \\
 a_{n} & \overset{n\geq 1}{ = }\frac{1}{\pi }\int ^{\pi }_{ - \pi } f(x)\cos(nx) dx = \frac{2}{\pi }\int ^{\pi }_{0} x\cos(nx) dx\\
  & \overset{\text{ipp}}{ = }\frac{2}{\pi }\left\{\cancel{\left[\frac{x\sin(nx)}{n}\right]^{\pi }_{0}} - \frac{1}{n}\int ^{\pi }_{0}\sin(nx) dx\right\}\\
- & = - \frac{2}{\pi n}\left[ - \frac{\cos(nx)}{n}\right]^{\pi }_{0} = \frac{2}{\pi n^{2}}\left[(- 1)^{n} - 1\right] = \begin{cases}
+ & = - \frac{2}{\pi n}\left[ - \frac{\cos(nx)}{n}\right]^{\pi }_{0} = \frac{2}{\pi n^{2}}\left[(- 1)^{n} - 1\right] = 
+ \begin{cases}
 0, & n\ \text{pari}\\
 - \frac{4}{\pi n^{2}} , & n\ \text{dispari}
 \end{cases}
@@ -4268,7 +4390,8 @@ b_{n} & = \frac{1}{\pi }\int ^{\pi }_{ - \pi } f(x)\sin(nx) dx\\
  & = \frac{4}{\pi n^{2}}\left\{\int ^{\pi }_{0}\sin(nx) dx\right\}\\
  & = \frac{4}{\pi n^{2}}\left[ - \frac{\cos(nx)}{n}\right]^{\pi }_{0}\\
  & = \frac{4}{\pi n^{3}}[ 1 - \cos(n\pi)]\\
- & = \frac{4}{\pi n^{3}}\left[ 1 - (- 1)^{n}\right] = \begin{cases}
+ & = \frac{4}{\pi n^{3}}\left[ 1 - (- 1)^{n}\right] = 
+ \begin{cases}
 \frac{8}{\pi n^{3}} , & n\ \text{dispari}\\
 0, & n\ \text{pari}
 \end{cases}
@@ -4298,7 +4421,8 @@ J & = \frac{\pi ^{6}}{960} + \frac{1}{2^{6}} J\\
 
 Disegnamo il grafico di
 \begin{equation*}
-f_{n}(x) = \begin{cases}
+f_{n}(x) = 
+\begin{cases}
 ne^{n(x - 1)} , & x\leq 1\\
 0, & x > 1
 \end{cases}
@@ -4312,14 +4436,16 @@ ne^{n(x - 1)} , & x\leq 1\\
 \end{enumerate}
 
 Quindi converge puntualmente alla funzione limite $f(x) \equiv 0\ \forall x\neq 1$.
-\item $\forall \varphi \in D(\RR)$, cioè per ogni $\varphi $ a supporto compatto in $\RR $,\begin{align*}
+\item $\forall \varphi \in D(\RR)$, cioè per ogni $\varphi $ a supporto compatto in $\RR $,
+\begin{align*}
 \langle f_{n} ,\varphi \rangle  & = \int _{\RR } f_{n}(x) \varphi (x) dx\\
  & = \int ^{1}_{ - \infty } ne^{n(x - 1)} \varphi (x) dx\\
  & \overset{\text{ipp}}{ = }\left[ e^{n(x - 1)} \varphi (x)\right]^{1}_{ - \infty } - \int ^{1}_{ - \infty } e^{n(x - 1)} \varphi '(x) dx\\
  & = \varphi (1) - \int ^{1}_{ - \infty } e^{n(x - 1)} \varphi '(x) dx
 \end{align*}
 
-Obiettivo: calcolare il limite per $n\rightarrow + \infty $\begin{align*}
+Obiettivo: calcolare il limite per $n\rightarrow + \infty $
+\begin{align*}
 \lim\limits _{n\rightarrow + \infty } \langle f_{n} ,\varphi \rangle  & = \lim\limits _{n\rightarrow + \infty }\left[ \varphi (1) - \int ^{1}_{ - \infty } e^{n(x - 1)} \varphi '(x) dx\right]\\
  & = \varphi (1) - \lim\limits _{n\rightarrow + \infty }\int ^{1}_{ - \infty } e^{n(x - 1)} \varphi '(x) dx\\
  & \overset{\text{Dom}}{ = } \varphi (1) - \int ^{1}_{ - \infty }\underbrace{\lim\limits _{n\rightarrow + \infty } e^{n(x - 1)} \varphi '(x)}_{ = 0} dx = \varphi (1)
@@ -4345,12 +4471,14 @@ nel senso delle distribuzioni.
 
 \begin{gather*}
 f_{n,\alpha }(x) = n^{\alpha }\sqrt{1 - n| x| } \cdot \chi _{\left[ - \frac{1}{n} ,\frac{1}{n}\right]}(x)\\
-\lim\limits _{n\rightarrow + \infty } f_{n,\alpha }(x) = \begin{cases}
+\lim\limits _{n\rightarrow + \infty } f_{n,\alpha }(x) = 
+\begin{cases}
 + \infty , & x = 0\\
 0, & x\neq 0
 \end{cases} \ \ \implies \ \ f_{n,\alpha }(x)\xrightarrow{n\rightarrow + \infty } f(x) \equiv 0\ \text{q.o.}
 \end{gather*}
-\item Calcoliamo il limite della norma elevata alla $p$ della differenza e per quali condizioni tende a zero\begin{align*}
+\item Calcoliamo il limite della norma elevata alla $p$ della differenza e per quali condizioni tende a zero
+\begin{align*}
  & \int _{\RR }[ f_{n,\alpha }(x) - 0]^{p} d\xrightarrow{n\rightarrow + \infty } 0\\
  & \iff \ \ 2\int ^{1/n}_{0} n^{\alpha p}(1 - nx)^{p/2} dx\xrightarrow{n\rightarrow + \infty } 0\\
  & \iff \ \ 2n^{\alpha p}\int ^{1/n}_{0}(1 - nx)^{p/2} dx\xrightarrow{n\rightarrow + \infty } 0\\
@@ -4361,7 +4489,8 @@ f_{n,\alpha }(x) = n^{\alpha }\sqrt{1 - n| x| } \cdot \chi _{\left[ - \frac{1}{n
  & \iff \ \ \alpha < \frac{1}{p} \land \alpha  > 0
 \end{align*}
 
-Notiamo infine che le $f_{n,\alpha }$ non sono limitate, quindi\begin{equation*}
+Notiamo infine che le $f_{n,\alpha }$ non sono limitate, quindi
+\begin{equation*}
 f_{n,\alpha }\cancel{\xrightarrow[n\rightarrow + \infty ]{L^{\infty }(\RR)}} 0
 \end{equation*}
 \item Per $\alpha = 1$
@@ -4370,10 +4499,12 @@ f_{n,\alpha }\cancel{\xrightarrow[n\rightarrow + \infty ]{L^{\infty }(\RR)}} 0
 f_{n,1}(x) = n\sqrt{1 - n| x| } \cdot \chi _{\left[ - \frac{1}{n} ,\frac{1}{n}\right]}(x)
 \end{equation*}
 
-Per ogni $\varphi \in D(\RR)$\begin{align*}
+Per ogni $\varphi \in D(\RR)$
+\begin{align*}
 \langle f_{n,1} ,\varphi \rangle  & = \int _{\RR } f_{n,1}(x) \varphi (x) dx = n\int ^{\frac{1}{n}}_{ - \frac{1}{n}}\sqrt{1 - n| x| } \cdot \varphi (x) dx\\
  & = n\left\{\int ^{0}_{ - \frac{1}{n}}\sqrt{1 + nx} \cdot \varphi (x) dx + \int ^{\frac{1}{n}}_{0}\sqrt{1 - nx} \cdot \varphi (x) dx\right\}\\
- & \begin{array}{ c c }
+ & 
+ \begin{array}{ c c }
 \varphi (x) & \varphi '(x)\\
 \frac{1}{n}\frac{(1 + nx)^{3/2}}{\frac{3}{2}} & \sqrt{1 + nx}\\
 - \frac{1}{n}\frac{(1 - nx)^{3/2}}{\frac{3}{2}} & \sqrt{1 - nx}
@@ -4395,7 +4526,8 @@ A questo punto osserviamo che
 \varphi \in D(\RR) \ \ \implies \ \ M = \max_{x\in [ - 1,1]} \varphi (x)
 \end{equation*}
 
-Con un ragionamento analogo a prima\begin{equation*}
+Con un ragionamento analogo a prima
+\begin{equation*}
 \implies \ \ f_{n,1}\xrightarrow[n\rightarrow + \infty ]{D'(\RR)}\frac{4}{3} \delta _{0}
 \end{equation*}
 \end{enumerate}
@@ -4411,7 +4543,8 @@ f(x) = \arctan\left(\frac{1}{x}\right)
 
 Calcolare la derivata prima e seconda nel senso delle distribuzioni in $D'(0,5)$ di
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 x + x^{2} , & 0 < x < 2\\
 6, & 2 < x < 5
 \end{cases}
@@ -4432,7 +4565,8 @@ g(x) = H(x)e^{ - x} \ \ \ \ f_{n} (x) = g(x)*\chi _{(0,n)}
 
 Calcolare la serie di Fourier associata alla funzione $2\pi $ - periodica dispari
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 1, & 0 < x < \pi \\
 - 1, & - \pi < x < 0
 \end{cases}
@@ -4480,7 +4614,8 @@ Questo significa che la funzione $\varphi (x)$ sarà identicamente nulla su qual
 \end{align*}
 Definiamo
 \begin{equation*}
-g(x) = \begin{cases}
+g(x) = 
+\begin{cases}
 2x + 1, & 0 < x < 2\\
 0, & 2 < x < 5
 \end{cases} \ \ \implies \ \ \langle f',\varphi \rangle = \int _{\RR } g(x) \varphi (x) dx = \langle g,\varphi \rangle 
@@ -4494,7 +4629,8 @@ Derivata seconda. Si prosegue in maniera analoga:
 \begin{aligned}
 \langle f'',\varphi \rangle  & = - \langle f',\varphi '\rangle = - \langle g,\varphi '\rangle = - \int ^{2}_{0} (1 + 2x)\varphi '(x)dx & \\
  & = - \left\{[ (1 + 2x)\varphi (x)]^{2}_{0} - \int ^{2}_{0} 2\varphi (x)dx\right\} & \\
- & = - \left\{5\varphi (2) - 0 - \int ^{2}_{0} 2\varphi (x)dx\right\} & h(x) = \begin{cases}
+ & = - \left\{5\varphi (2) - 0 - \int ^{2}_{0} 2\varphi (x)dx\right\} & h(x) = 
+ \begin{cases}
 2, & 0 < x < 2\\
 0, & 2 < x < 5
 \end{cases}\\
@@ -4581,13 +4717,15 @@ f_{n} (x) = g(x)*\chi _{(0,n)} = \int _{\RR } e^{ - (x - t)} H(x - t)\chi _{(0,n
 0, & x < 0\\
 \int ^{x}_{0} e^{ - x} e^{t} dt, & 0\leq x\leq n\\
 \int ^{n}_{0} e^{ - x} e^{t} dt, & x > n
-\end{cases} = \begin{cases}
+\end{cases} = 
+\begin{cases}
 0, & x < 0\\
 e^{ - x}\left(e^{x} - 1\right) = 1 - e^{ - x} & 0\leq x\leq n\\
 e^{ - x} (e^{n} - 1) & x > n
 \end{cases}\\
 \\
-\xrightarrow{n\rightarrow \infty } F(x) = \begin{cases}
+\xrightarrow{n\rightarrow \infty } F(x) = 
+\begin{cases}
 0, & x < 0\\
 1 - e^{ - x} , & x\geq 0
 \end{cases}
@@ -4610,10 +4748,12 @@ Notiamo che
 Tuttavia non possiamo concludere da queste due affermazioni che c'è convergenza in $L^{\infty }$, quello che ci interessa è la \textit{differenza} in norma infinito.
 
 \begin{equation*}
-\Vert f_{n} - F\Vert _{L^{\infty }(\RR)} = \begin{cases}
+\Vert f_{n} - F\Vert _{L^{\infty }(\RR)} = 
+\begin{cases}
 0, & x < n\\
 F(x) - f_{n}(x) , & x\geq n
-\end{cases} = \begin{cases}
+\end{cases} = 
+\begin{cases}
 0, & x < n\\
 1 - e^{n - x} , & x\geq n
 \end{cases}
@@ -4647,11 +4787,13 @@ Quindi
 \begin{equation*}
 f_{n}\xrightarrow{D'(\RR)} F
 \end{equation*}
-\item Convergenza in $\Sc  '(\RR)$?\begin{equation*}
+\item Convergenza in $\Sc  '(\RR)$?
+\begin{equation*}
 \langle f_{n} ,\psi \rangle \rightarrow \langle F,\psi \rangle \ \ \forall \psi \in S(\RR) \ \ \iff \ \ \langle F - f_{n} ,\psi \rangle \rightarrow 0
 \end{equation*}
 
-dove $S$ è lo spazio di Schwarz, lo spazio delle funzioni a decrescita rapida\begin{equation*}
+dove $S$ è lo spazio di Schwarz, lo spazio delle funzioni a decrescita rapida
+\begin{equation*}
 \psi \in C^{\infty } \ \ \land \ \ \lim\limits _{x\rightarrow + \infty } x^{n} \psi (x) = 0
 \end{equation*}
 
@@ -4685,7 +4827,8 @@ f(x) \sim \sum\limits ^{\infty }_{n = 1} b_{n}\sin(nx)
 \end{equation*}
 Calcoliamo i coefficienti
 \begin{equation*}
-b_{n} = \frac{2}{\pi }\int ^{\pi }_{0} 1\cdot \sin(nx) dx = \frac{2}{\pi }\left[ - \frac{1}{n}\cos(nx)\right]^{\pi }_{0} = \frac{2}{\pi n}\left(1 - (- 1)^{n}\right) = \begin{cases}
+b_{n} = \frac{2}{\pi }\int ^{\pi }_{0} 1\cdot \sin(nx) dx = \frac{2}{\pi }\left[ - \frac{1}{n}\cos(nx)\right]^{\pi }_{0} = \frac{2}{\pi n}\left(1 - (- 1)^{n}\right) = 
+\begin{cases}
 \frac{4}{n\pi } , & n\ \text{dispari}\\
 0, & n\ \text{pari}
 \end{cases}
@@ -4807,7 +4950,8 @@ Mostrare che, per ogni $n\in \NN ^{ + }$, si ha
 
 Sia $a\in \RR $, $f\in C^{1}((- \infty ,a))$, $g\in C^{1}((a, + \infty))$ con $f'\in L^{1}((- \infty ,a))$ e $g'\in L^{1}((a, + \infty))$ e definiamo
 \begin{equation*}
-u(x) = \begin{cases}
+u(x) = 
+\begin{cases}
 f(x) , & x < a\\
 g(x) , & x > a
 \end{cases}
@@ -4839,12 +4983,15 @@ f_{n}(x) = n^{2} xe^{ - n| x| }
 \begin{enumerate}
 \item Determinare il limite puntuale
 \item Stabilire se $f_{n}$ converge in $L^{p}$, con $p\in [ 1, + \infty ]$
-\item Determinare il limite di\begin{equation*}
+\item Determinare il limite di
+\begin{equation*}
 g_{n}(x) = f_{n}(x) H(x) \ \ \text{in} \ D'(\RR)
 \end{equation*}
 
-dove\begin{equation*}
-H(x) = \begin{cases}
+dove
+\begin{equation*}
+H(x) = 
+\begin{cases}
 1, & x\geq 0\\
 0, & x < 0
 \end{cases}
@@ -4856,10 +5003,12 @@ detta \textbf{Funzione di Heaviside}.
 \ParteSoluzioni
 \Soluzione
 \begin{enumerate}
-\item $\forall \varphi \in D(\RR)$\begin{equation*}
+\item $\forall \varphi \in D(\RR)$
+\begin{equation*}
 \langle x\delta ,\varphi \rangle = \langle \delta ,x\varphi \rangle = 0\cdot \varphi (0) = 0\qed 
 \end{equation*}
-\item $\forall \varphi \in D(\RR)$\begin{gather*}
+\item $\forall \varphi \in D(\RR)$
+\begin{gather*}
 \begin{aligned}
 \langle x\delta ',\varphi \rangle  & = \langle \delta ',x\varphi \rangle = - \langle \delta ,(x\varphi) '\rangle \\
  & = - \langle \delta ,\varphi + x\varphi '\rangle \\
@@ -4872,14 +5021,17 @@ detta \textbf{Funzione di Heaviside}.
 
 Per induzione
 \begin{itemize}
-\item La formula è vera per $n = 1$, per l'esercizio precedente\begin{equation*}
+\item La formula è vera per $n = 1$, per l'esercizio precedente
+\begin{equation*}
 x\delta '(x) = - \delta (x)
 \end{equation*}
-\item Supponiamo vera la tesi per $n$ generico\begin{equation*}
+\item Supponiamo vera la tesi per $n$ generico
+\begin{equation*}
 \langle x^{n} \delta ^{(n)} ,\varphi \rangle = (- 1)^{n} n!\langle \delta ,\varphi \rangle \ \ \forall \varphi \in D
 \end{equation*}
 
-dobbiamo mostrare che vale anche per $n + 1$\begin{gather*}
+dobbiamo mostrare che vale anche per $n + 1$
+\begin{gather*}
 \begin{aligned}
 \langle x^{n + 1} \delta ^{(n + 1)} ,\varphi \rangle  & = \langle \delta ^{(n + 1)} ,x^{n + 1} \varphi \rangle = - \langle \delta ^{(n)} ,\left(x^{n + 1} \varphi \right) '\rangle \\
  & = - \langle \delta ^{(n)} ,(n + 1) x^{n} \varphi + x^{n + 1} \varphi '\rangle \\
@@ -4917,7 +5069,8 @@ integro per parti
 \end{gather*}
 \textit{Esempio.}
 \begin{equation*}
-\sgn(x) = \begin{cases}
+\sgn(x) = 
+\begin{cases}
 1, & x > 0\\
 - 1, & x < 0
 \end{cases}
@@ -4932,7 +5085,8 @@ $\sgn(x)$ presenta un salto in $x = 0$ di ampiezza $2$.
 \end{equation*}
 \textit{Esempio.}
 \begin{equation*}
-f(x) = \frac{1}{2}\sgn xe^{ - | x| } = \begin{cases}
+f(x) = \frac{1}{2}\sgn xe^{ - | x| } = 
+\begin{cases}
 \frac{1}{2} e^{ - x} , & x > 0\\
 - \frac{1}{2} e^{x} , & x < 0
 \end{cases}
@@ -4991,7 +5145,8 @@ Studiamo le $f_{n}(x)$
 \end{equation*}
 ma allora
 \begin{equation*}
-f_{n}\xrightarrow[n\rightarrow + \infty ]{L^{1}_{\loc}(\RR)} f\equiv 0\ \ \begin{cases}
+f_{n}\xrightarrow[n\rightarrow + \infty ]{L^{1}_{\loc}(\RR)} f\equiv 0\ \ 
+\begin{cases}
 \implies \ \ f_{n}\xrightarrow[n\rightarrow + \infty ]{D'(\RR)} f\equiv 0\\
 \implies \ \ f_{n}\xrightarrow[n\rightarrow + \infty ]{\Sc  '(\RR)} f\equiv 0
 \end{cases}
@@ -5047,47 +5202,57 @@ Quindi
 \end{enumerate}
 
 \fg{0.7}{14 - 6}
-\item Se $p\in [ 1, + \infty)$\begin{equation*}
+\item Se $p\in [ 1, + \infty)$
+\begin{equation*}
 \Vert f_{n}\Vert ^{p}_{L^{p}} = \int _{\RR } n^{2p} x^{p} e^{ - np| x| } dx = 2\int ^{ + \infty }_{0} n^{2p} x^{p} e^{ - npx} dx = (*)
 \end{equation*}
 
-poniamo $npx = t\implies npdx = dt$\begin{equation*}
+poniamo $npx = t\implies npdx = dt$
+\begin{equation*}
 (*) = 2\int ^{ + \infty }_{0} n^{2p}\frac{t^{p}}{n^{p} p^{p}} e^{ - t}\frac{dt}{np} = \frac{2}{p^{p + 1}} n^{p - 1}\int ^{ + \infty }_{0} t^{p} e^{ - t} dt\cancel{\xrightarrow{n\rightarrow + \infty }} 0
 \end{equation*}
 
 l'integrale non dipende da $n$, siamo nel caso $p\geq 1$, quindi non c'è convergenza.
 
-Se $p = \infty $\begin{equation*}
+Se $p = \infty $
+\begin{equation*}
 \Vert f_{n} - f\Vert _{\infty } = \Vert f_{n}\Vert _{\infty } = \max_{\RR }| f_{n}(x)| = \left| f_{n}\left(\frac{1}{n}\right)\right| = n^{2}\frac{1}{n} e^{ - n\frac{1}{n}} = ne^{ - 1}\cancel{\xrightarrow{n\rightarrow + \infty }} 0
 \end{equation*}
 
 quindi non c'è convergenza.
-\item La successione $g_{n}$ è\begin{equation*}
-g_{n}(x) = f_{n}(x) H(x) = \begin{cases}
+\item La successione $g_{n}$ è
+\begin{equation*}
+g_{n}(x) = f_{n}(x) H(x) = 
+\begin{cases}
 n^{2} xe^{ - nx} , & x\geq 0\\
 0, & x < 0
 \end{cases}
 \end{equation*}
 
-$\forall n\in \NN  ,\ g_{n} \in L^{1}_{\loc}(\RR)$ e $\forall \varphi \in D(\RR)$\begin{equation*}
+$\forall n\in \NN  ,\ g_{n} \in L^{1}_{\loc}(\RR)$ e $\forall \varphi \in D(\RR)$
+\begin{equation*}
 \langle g_{n} ,\varphi \rangle = \int _{\RR } g_{n}(x) \varphi (x) dx = \int ^{ + \infty }_{0} n^{2}\textcolor[rgb]{0.82,0.01,0.11}{x} e^{ - nx}\textcolor[rgb]{0.82,0.01,0.11}{\varphi }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} dx
 \end{equation*}
 
-integriamo per parti con\begin{gather*}
+integriamo per parti con
+\begin{gather*}
 \textcolor[rgb]{0.82,0.01,0.11}{f}\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} = x\varphi (x) \ \ \rightarrow \ \ f'(x) = \varphi (x) + x\varphi '(x)\\
 g(x) = - ne^{ - nx} \ \ \rightarrow \ \ g'(x) = n^{2} e^{ - nx}
 \end{gather*}
 
-da cui\begin{equation*}
+da cui
+\begin{equation*}
 \overset{\text{ipp}}{ = }\underbrace{\left[ - ne^{ - nx} x\varphi (x)\right]^{ + \infty }_{0}}_{ = 0} + \int ^{ + \infty }_{0} ne^{ - nx}[\textcolor[rgb]{0.25,0.46,0.02}{\varphi }\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{)}\textcolor[rgb]{0.25,0.46,0.02}{ + x\varphi '}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{)}] dx
 \end{equation*}
 
-integriamo per parti con\begin{gather*}
+integriamo per parti con
+\begin{gather*}
 \textcolor[rgb]{0.25,0.46,0.02}{f}\textcolor[rgb]{0.25,0.46,0.02}{(}\textcolor[rgb]{0.25,0.46,0.02}{x}\textcolor[rgb]{0.25,0.46,0.02}{)} = \varphi (x) + x\varphi '(x) \ \ \rightarrow \ \ f'(x) = 2\varphi '(x) + x\varphi ''(x)\\
 g(x) = - e^{ - nx} \ \ \rightarrow \ \ g'(x) = ne^{ - nx}
 \end{gather*}
 
-da cui\begin{gather*}
+da cui
+\begin{gather*}
 \overset{\text{ipp}}{ = }\underbrace{\left[ - e^{ - nx}(\varphi (x) + x\varphi '(x))\right]^{ + \infty }_{0}}_{\varphi (0)} + \int ^{ + \infty }_{0} e^{ - nx}[ 2\varphi '(x) + x\varphi ''(x)] dx\\
 \begin{aligned}
 \implies  & \langle g_{n} ,\varphi \rangle = \varphi (0) + \int ^{ + \infty }_{0} e^{ - nx}[ 2\varphi '(x) + x\varphi ''(x)] dx\\
@@ -5096,33 +5261,39 @@ da cui\begin{gather*}
 \end{aligned}
 \end{gather*}
 
-essendo $\varphi \in D(\RR) \implies \exists M > 0$ tale che $| 2\varphi '(x) + x\varphi ''(x)| < M,\ \forall x\in \RR $ e\begin{equation*}
+essendo $\varphi \in D(\RR) \implies \exists M > 0$ tale che $| 2\varphi '(x) + x\varphi ''(x)| < M,\ \forall x\in \RR $ e
+\begin{equation*}
 \left| e^{ - nx}[ 2\varphi '(x) + x\varphi ''(x)]\right| \leq Me^{ - x} \in L^{1}([ 0, + \infty))
 \end{equation*}
 
-quindi\begin{equation*}
+quindi
+\begin{equation*}
 g_{n}\xrightarrow[n\rightarrow + \infty ]{D'(\RR)} \delta _{0}
 \end{equation*}
-\item $\forall \varphi \in D(\RR)$\begin{equation*}
+\item $\forall \varphi \in D(\RR)$
+\begin{equation*}
 \begin{aligned}
 \langle f_{n} ,\varphi \rangle  & = \int _{\RR } n^{2} xe^{ - n| x| } \varphi (x) dx\\
  & = \int ^{0}_{ - \infty } n^{2} xe^{nx} \varphi (x) dx + \int ^{ + \infty }_{0} n^{2} xe^{ - nx} \varphi (x) dx
 \end{aligned}
 \end{equation*}
 
-integrazione per parti due volte per entrambi gli integrali e teorema della convergenza dominata\begin{align*}
+integrazione per parti due volte per entrambi gli integrali e teorema della convergenza dominata
+\begin{align*}
 \langle f_{n} ,\varphi \rangle  & = \int _{\RR } n^{2} xe^{ - n| x| } dx\\
  & = \int ^{0}_{ - \infty } n^{2} xe^{nx} \varphi (x) dx + \int ^{\infty }_{0} n^{2} xe^{ - nx} \varphi (x) dx
 \end{align*}
 
-ponendo $f = x\varphi (x)$ e $g'$ l'altro pezzo per entrambi gli integrali\begin{align*}
+ponendo $f = x\varphi (x)$ e $g'$ l'altro pezzo per entrambi gli integrali
+\begin{align*}
  & \overset{\text{ipp}}{ = }\cancel{\left[ ne^{nx} \cdot x\varphi (x)\right]^{0}_{ - \infty }} - \int ^{0}_{ - \infty } ne^{nx}[ \varphi (x) + x\varphi '(x)] dx\\
  & \ \ \ \ + \cancel{\left[ - ne^{ - nx} \cdot x\varphi (x)\right]^{\infty }_{0}} + \int ^{\infty }_{0} ne^{ - nx}[ \varphi (x) + x\varphi '(x)] dx\\
  & \overset{\text{ipp}}{ = } - \left\{\left[ e^{nx} \cdot (\varphi (x) + x\varphi '(x))\right]^{0}_{ - \infty } - \int ^{0}_{ - \infty } e^{nx}[ \varphi '(x) - \varphi '(x) - x\varphi ''(x)] dx\right\}\\
  & \ \ \ \ + \left\{\left[ - e^{ - nx}(\varphi (x) + x\varphi '(x))\right]^{\infty }_{0} + \int ^{\infty }_{0} e^{ - nx}[ \varphi '(x) + \varphi '(x) + x\varphi ''(x)] dx\right\}
 \end{align*}
 
-al limite i due integrali si cancellano per convergenza dominata, rimane\begin{equation*}
+al limite i due integrali si cancellano per convergenza dominata, rimane
+\begin{equation*}
 - [ \varphi (0) - 0] + [ 0 - (- \varphi (0))] = - \varphi (0) + \varphi (0) = - \delta _{0} + \delta _{0} = 0
 \end{equation*}
 \end{enumerate}
@@ -5544,20 +5715,25 @@ Sia $u\in L^{1}(\RR)$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzion
 \begin{thm}
 [Proprietà] Ecco alcune utili proprietà della trasformata di Fourier.
 \begin{itemize}
-\item Scaling\begin{equation*}
+\item Scaling
+\begin{equation*}
 u(ax) \ \ \rightarrow \ \ \frac{1}{| a| }\hat{u}\left(\frac{\xi }{a}\right)
 \end{equation*}
-\item Shifting\begin{equation*}
+\item Shifting
+\begin{equation*}
 u(x - a) \ \ \rightarrow \ \ e^{ - ia\xi }\hat{u}(\xi)
 \end{equation*}
-\item Modulazione\begin{gather*}
+\item Modulazione
+\begin{gather*}
 u(x) e^{iax} \ \ \rightarrow \ \ \hat{u}(\xi - a)\\
 u(x)\cos(\xi _{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}(\xi - \xi _{0}) + \hat{u}(\xi + \xi _{0})]
 \end{gather*}
-\item Linearità\begin{equation*}
+\item Linearità
+\begin{equation*}
 \Fc \{\alpha u + \beta v\} = \alpha \Fc \{u\} + \beta \Fc \{v\} \ \ \forall \alpha ,\beta \in \RR  ,\ \forall u,v\in L^{1}(\RR)
 \end{equation*}
-\item Derivazione\begin{equation*}
+\item Derivazione
+\begin{equation*}
 \widehat{u'}(\xi) = i\xi \hat{u}(\xi)
 \end{equation*}
 \end{itemize}
@@ -5582,7 +5758,8 @@ f(x) = \frac{\sin x}{\left(1 + x^{2}\right)\left(4 + x^{2}\right)}
 \end{equation*}
 \Esercizio{}
 
-Calcolare la trasformata di Fourier di\begin{equation*}
+Calcolare la trasformata di Fourier di
+\begin{equation*}
 u(x) = \frac{2\cos x}{1 + x^{2}}
 \end{equation*}
 \Esercizio{}
@@ -5595,7 +5772,8 @@ f(\tau) = \int _{\RR } e^{ - i\left(\tau ^{2} - 2\right) x}\frac{\cos(2x)}{1 + x
 
 Sia
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 1, & 0 < x < 1\\
 - 1, & - 1 < x < 0
 \end{cases}
@@ -5608,16 +5786,19 @@ f(x) = \begin{cases}
 
 Sia $H$ la funzione di Heaviside
 \begin{equation*}
-H(t) = \begin{cases}
+H(t) = 
+\begin{cases}
 1, & t\geq 0\\
 0, & t < 0
 \end{cases}
 \end{equation*}
 \begin{enumerate}
-\item Calcolare la trasformata di Fourier di\begin{equation*}
+\item Calcolare la trasformata di Fourier di
+\begin{equation*}
 f(x) = \left(1 - x^{2}\right) H\left(1 - x^{2}\right)
 \end{equation*}
-\item Utilizzare il risultato trovato per calcolare\begin{equation*}
+\item Utilizzare il risultato trovato per calcolare
+\begin{equation*}
 \int ^{ + \infty }_{0}\frac{x\cos x - \sin x}{x^{3}}\cos\left(\frac{x}{2}\right) dx
 \end{equation*}
 \end{enumerate}
@@ -5942,7 +6123,8 @@ f(\tau) = \hat{g}\left(\tau ^{2} - 2\right) = \frac{\pi }{2}\left(e^{ - \left| \
 \end{equation*}
 \Soluzione
 \begin{enumerate}
-\item Calcoliamo\begin{equation*}
+\item Calcoliamo
+\begin{equation*}
 \begin{aligned}
 \hat{f}(\xi) & = \int _{\RR } e^{ - i\xi x} f(x) dx\\
  & = \int ^{0}_{ - 1} - e^{ - i\xi x} dx + \int ^{1}_{0} e^{ - i\xi x} dx\\
@@ -5951,7 +6133,8 @@ f(\tau) = \hat{g}\left(\tau ^{2} - 2\right) = \frac{\pi }{2}\left(e^{ - \left| \
  & = \frac{1}{i\xi }\left(2 - \textcolor[rgb]{0.29,0.56,0.89}{\left(e^{i\xi } + e^{ - i\xi }\right)}\right) = \frac{1}{i\xi }(2 - \textcolor[rgb]{0.29,0.56,0.89}{2\cos\xi })
 \end{aligned}
 \end{equation*}
-\item Calcoliamo\begin{equation*}
+\item Calcoliamo
+\begin{equation*}
 \hat{g}(\xi) = i\frac{d}{d\xi }\hat{f}(\xi) = i\frac{d}{d\xi }\frac{2 - 2\cos \xi }{i\xi } = \frac{2(1 - \cos \xi - \xi \sin \xi)}{\xi ^{2}}
 \end{equation*}
 \end{enumerate}
@@ -5959,7 +6142,8 @@ f(\tau) = \hat{g}\left(\tau ^{2} - 2\right) = \frac{\pi }{2}\left(e^{ - \left| \
 
 $f$ può essere riscritta
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 1 - x^{2} , & - 1\leq x\leq 1\\
 0, & \text{altrove}
 \end{cases}
@@ -6014,7 +6198,8 @@ Richiami di teoria sulla Trasformata di Laplace.
 \begin{defn}
 [Funzione di Heaviside] Si definisce
 \begin{equation*}
-H(t) = \begin{cases}
+H(t) = 
+\begin{cases}
 1, & t\geq 0\\
 0, & t < 0
 \end{cases}
@@ -6125,7 +6310,8 @@ Calcolare
 
 Sia
 \begin{equation*}
-f(t) = \begin{cases}
+f(t) = 
+\begin{cases}
 t, & 0 < t < 2\\
 4 - t, & 2\leq t < 4\\
 0, & \text{altrimenti}
@@ -6184,7 +6370,8 @@ f(t) & = t[ H(t) - H(t - 2)] + (4 - t)[ H(t - 2) - H(t - 4)]\\
 
 Sia
 \begin{equation*}
-g(t) = \begin{cases}
+g(t) = 
+\begin{cases}
 t, & 0 < t < 1\\
 2 - t, & 1\leq t < 2\\
 t - 2, & 2\leq t
@@ -6356,14 +6543,16 @@ y(x) = Ce^{\alpha x} + y^{\star }(x)
 \end{thm}
 Nel nostro caso
 \begin{equation*}
-f(x) = \begin{cases}
+f(x) = 
+\begin{cases}
 0, & x < 0\\
 e^{ - \alpha x} , & x\geq 0
 \end{cases}
 \end{equation*}
 Quindi come equazione particolare
 \begin{equation*}
-y^{\star }(x) = \begin{cases}
+y^{\star }(x) = 
+\begin{cases}
 0, & x < 0\\
 Ae^{ - \alpha x} = - \frac{1}{2\alpha } e^{ - \alpha x} , & x\geq 0
 \end{cases}
@@ -6371,11 +6560,13 @@ Ae^{ - \alpha x} = - \frac{1}{2\alpha } e^{ - \alpha x} , & x\geq 0
 Quindi l'integrale generale è
 \begin{equation*}
 \begin{aligned}
-y(x) & = \begin{cases}
+y(x) & = 
+\begin{cases}
 C_{1} e^{\alpha x} , & x < 0\\
 C_{2} e^{\alpha x} - \frac{1}{2\alpha } e^{ - \alpha x} , & x\geq 0
 \end{cases} & C_{1} = C_{2} - \frac{1}{2\alpha }\\
- & = \begin{cases}
+ & = 
+ \begin{cases}
 Ce^{\alpha x} , & x < 0\\
 \left(C + \frac{1}{2\alpha }\right) e^{\alpha x} - \frac{1}{2\alpha } e^{ - \alpha x} , & x\geq 0
 \end{cases} & 
@@ -6457,7 +6648,8 @@ $\hat{u}$ è pari, quindi $u$ è pari.
 
 Sia
 \begin{equation*}
-f(x) = H(x) e^{ - 2x} = \begin{cases}
+f(x) = H(x) e^{ - 2x} = 
+\begin{cases}
 e^{ - 2x} , & x\geq 0\\
 0, & x < 0
 \end{cases}
@@ -6481,10 +6673,12 @@ I = \int ^{ + \infty }_{0}\frac{(x\cos x - \sin x)^{2}}{x^{6}} dx
 \end{equation*}
 \Esercizio{}
 \begin{enumerate}
-\item Calcolare la trasformata di Fourier delle funzioni:\begin{equation*}
+\item Calcolare la trasformata di Fourier delle funzioni:
+\begin{equation*}
 f_{1}(x) = \frac{1}{1 + x^{2}} \ \ \ \ f_{2}(x) = \frac{x}{\left(1 + x^{2}\right)^{2}}
 \end{equation*}
-\item Considerare la funzione:\begin{equation*}
+\item Considerare la funzione:
+\begin{equation*}
 f_{0}(x) = \arctan\left(\frac{1}{x}\right)
 \end{equation*}
 
@@ -6521,22 +6715,28 @@ si dice Trasformata di Laplace di $\displaystyle f$.
 \begin{thm}
 [Proprietà] Valgono
 \begin{itemize}
-\item Riscalamento\begin{equation*}
+\item Riscalamento
+\begin{equation*}
 \Lc\{f(at)\} = \frac{1}{a} F\left(\frac{s}{a}\right) \ \ \ \ \Re (s)  > a\lambda _{f}
 \end{equation*}
-\item Ritardo\begin{equation*}
+\item Ritardo
+\begin{equation*}
 \Lc\{f(t - a)\} = e^{ - as} F(s) \ \ \ \ \Re (s)  > \lambda _{f}
 \end{equation*}
-\item Prodotto con esponenziale\begin{equation*}
+\item Prodotto con esponenziale
+\begin{equation*}
 \Lc\left\{e^{at} f(t)\right\} = F(s - a) \ \ \ \ \Re (s)  > \lambda _{f} + \Re (a)
 \end{equation*}
-\item Linearità\begin{equation*}
+\item Linearità
+\begin{equation*}
 \Lc\{af + bg\} = a\Lc\{f\} + b\Lc\{g\} \ \ \ \ \forall a,b\in \CC  ,\forall s:\Re (s)  > \max\{\lambda _{f} ,\lambda _{g}\}
 \end{equation*}
-\item Derivata della trasformata\begin{equation*}
+\item Derivata della trasformata
+\begin{equation*}
 \frac{d^{n}}{ds^{n}} F(s) = \Lc\left\{(- t)^{n} f(t)\right\}
 \end{equation*}
-\item La primitiva di una funzione $\Lc$ - trasformabile è anch'essa una funzione $\Lc$ - trasformabile\begin{equation*}
+\item La primitiva di una funzione $\Lc$ - trasformabile è anch'essa una funzione $\Lc$ - trasformabile
+\begin{equation*}
 \Lc\left\{\int ^{t}_{0} f(\tau) d\tau \right\} = \frac{1}{s}\Lc\{f(t)\} \ \ \ \ \forall s\in \CC  :\Re (s)  > \max\{\lambda _{f} ,0\}
 \end{equation*}
 \end{itemize}
@@ -6638,18 +6838,23 @@ Usando Plancherel
 \end{equation*}
 \end{thm}
 \begin{enumerate}
-\item Nell'esercitazione scorsa abbiamo visto che:\begin{equation*}
+\item Nell'esercitazione scorsa abbiamo visto che:
+\begin{equation*}
 \hat{f}_{1}(\xi) = \pi e^{ - | \xi | } \ \ \ \ \forall \xi \in \RR 
-\end{equation*}Osserviamo che\begin{equation*}
+\end{equation*}Osserviamo che
+\begin{equation*}
 f_{2}(x) = - \frac{1}{2} f_{1} '(x)
-\end{equation*}Allora\begin{equation*}
+\end{equation*}Allora
+\begin{equation*}
 \hat{f}_{2}(\xi) = - \frac{1}{2}\Fc (f_{1} '(x) ,\xi) = - \frac{1}{2} \cdot i\xi \cdot \pi e^{ - | \xi | } \ \ \ \ \forall \xi \in \RR 
 \end{equation*}
 \item Notiamo che $f_{0}$ è limitata, allora $f_{0} \in L^{\infty }(\RR)$, mentre per $| x| \rightarrow \infty $ è asintotica a $1/x$, che non è integrabile, quindi $f_{0} \notin L^{1}(\RR)$. Tuttavia $f_{0} \in L^{2}(\RR)$.
-\item $f_{0}$ è continua $\forall x\neq 0$, dove c'è una discontinuità di tipo salto di ampiezza $\pi $. Senza indugi e senza calcoli, deduciamo subito che\begin{equation*}
+\item $f_{0}$ è continua $\forall x\neq 0$, dove c'è una discontinuità di tipo salto di ampiezza $\pi $. Senza indugi e senza calcoli, deduciamo subito che
+\begin{equation*}
 f_{0} '(x)\overset{D(\RR)}{ = } \pi \delta _{0}(x) - \frac{1}{1 + x^{2}}
 \end{equation*}
-\item Usando le proprietà della trasformata\begin{align*}
+\item Usando le proprietà della trasformata
+\begin{align*}
 \Fc (f_{0} '(x) ,\xi) & = \Fc (\pi \delta _{0} - f_{1}(x) ,\xi) = \pi - \pi e^{ - | \xi | }\\
  & \\
 i\xi \cdot\Fc (f_{0}(x) ,\xi) & = \Fc (f_{0} '(x) ,\xi) = \pi - \pi e^{ - | \xi | }\\
@@ -6682,14 +6887,16 @@ Provando vari $\displaystyle k$ mi accorgo che:
 
 Abbiamo che
 \begin{equation*}
-f_{a}(x) = H(x) e^{ax^{2} + 2x}\sin^{2}(x) = \begin{cases}
+f_{a}(x) = H(x) e^{ax^{2} + 2x}\sin^{2}(x) = 
+\begin{cases}
 e^{ax^{2} + 2x}\sin^{2}(x) , & x\geq 0\\
 0, & x < 0
 \end{cases}
 \end{equation*}
 Hanno il supporto in $\displaystyle [ 0, + \infty) ,\forall a\in \RR $. Moltiplichiamo per il solito esponenziale
 \begin{equation*}
-e^{ - \lambda x} f_{a}(x) = \begin{cases}
+e^{ - \lambda x} f_{a}(x) = 
+\begin{cases}
 e^{ax^{2} + (2 - \lambda) x}\sin^{2}(x) , & x\geq 0\\
 0, & x < 0
 \end{cases} \ \in L^{1} \ \ \iff \ \ a < 0
@@ -6871,7 +7078,8 @@ allora
 \begin{align*}
 u(t) & = \frac{1}{e}\frac{(t - 1)^{2}}{2} e^{ - (t - 1)} H(t - 1) - \frac{1}{e^{2}}\frac{(t - 2)^{2}}{2} e^{ - (t - 2)} H(t - 2)\\
  & = \frac{e^{ - t}}{2}\left[(t - 1)^{2} H(t - 1) - (t - 2)^{2} H(t - 2)\right]\\
- & = \begin{cases}
+ & = 
+ \begin{cases}
 0, & t < 1\\
 \frac{e^{ - t}}{2}(t - 1)^{2} , & 1\leq t < 2\\
 \frac{e^{ - t}}{2}(2t - 3) , & t\geq 2
@@ -6899,17 +7107,20 @@ u(x) = \frac{1}{2}\int _{\RR } e^{ - | t| } \chi _{(- 1,1)}(x - t) dt
 Dobbiamo dividere i vari casi
 \begin{gather*}
 \begin{aligned}
-\chi _{(- 1,1)}(x - t) & = \begin{cases}
+\chi _{(- 1,1)}(x - t) & = 
+\begin{cases}
 1, & - 1 < x - t < 1\\
 0, & \text{altrove}
 \end{cases}\\
- & = \begin{cases}
+ & = 
+ \begin{cases}
 1, & x - 1 < t < x + 1\\
 0, & \text{altrove}
 \end{cases}
 \end{aligned}\\
 \\
-\implies \ \ u(x) = \frac{1}{2}\int ^{x + 1}_{x - 1} e^{ - | t| } dt = \begin{cases}
+\implies \ \ u(x) = \frac{1}{2}\int ^{x + 1}_{x - 1} e^{ - | t| } dt = 
+\begin{cases}
 A, & x < - 1\\
 B, & - 1\leq x\leq 1\\
 C, & x > 1
@@ -6923,7 +7134,8 @@ C & = \frac{1}{2}\int ^{x + 1}_{x - 1} e^{ - t} dt = \frac{1}{2}\left(e^{ - x - 
 \end{align*}
 mettendo insieme concludiamo
 \begin{equation*}
-u(x) = \begin{cases}
+u(x) = 
+\begin{cases}
 1 - e^{ - 1}\cosh x, & | x| < 1\\
 e^{ - | x| }\sinh 1, & | x| \geq 1
 \end{cases}
@@ -6940,7 +7152,8 @@ U\cdot \frac{(s + 2)\left(s^{2} + 1\right) - 2}{\cancel{s^{2} + 1}} & = \frac{s^
 U(s) & = \frac{s^{2} + 3s + 1}{s^{3} + 2s^{2} + s} = \frac{s^{2} + 3s + 1}{s(s + 1)^{2}} = \\
  & = \frac{A}{s} + \frac{Bs + C}{(s + 1)^{2}} = \frac{A(s + 1)^{2} + (Bs + C) s}{s(s + 1)^{2}}\\
  & \\
- & \begin{array}{ l c l }
+ & 
+ \begin{array}{ l c l }
 s = -1 & \rightarrow  & B - C = -1\\
 s = 1 & \rightarrow  & 4A + B + C = 5\\
 s = 0 & \rightarrow  & A = 1\ \ \rightarrow \ \ B = 0\ \ C = 1
@@ -7212,11 +7425,11 @@ Per scomporre in fratti semplici bisogna seguire alcune regole. Se nella scompos
 \text{se a denom. c'è:} & \text{allora si associa}\\
 x - a & \frac{A}{x - a}\\
 (x - a)^{n} & \frac{A_{1}}{x - a} + \frac{A_{2}}{(x - a)^{2}} + \dotsc + \frac{A_{n}}{(x - a)^{n}}\\
- \begin{array}{l}
+\begin{array}{l}
 x^{2} + bx + c\\
 (\Delta < 0)
 \end{array} & \frac{Ax + B}{x^{2} + bx + c}\\
- \begin{array}{l}
+\begin{array}{l}
 \left(x^{2} + bx + c\right)^{n}\\
 (\Delta < 0)
 \end{array} & \frac{A_{1} x + B_{1}}{x^{2} + bx + c} + \frac{A_{2} x + B_{2}}{\left(x^{2} + bx + c\right)^{2}} + \dotsc + \frac{A_{n} x + B_{n}}{\left(x^{2} + bx + c\right)^{n}}
@@ -7310,17 +7523,20 @@ Uguagliamo i polinomi
 1 & = B - 2C + 2D\\
 1 & = - 4A + 4C + 4D\\
 0 & = - 4B - 8C + 8D
-\end{aligned} \ \ \iff \ \ \begin{bmatrix}
+\end{aligned} \ \ \iff \ \ 
+\begin{bmatrix}
 1 & 0 & 1 & 1\\
 0 & 1 & - 2 & 2\\
 - 4 & 0 & 4 & 4\\
 0 & - 4 & - 8 & 8
-\end{bmatrix}\begin{bmatrix}
+\end{bmatrix}
+\begin{bmatrix}
 A\\
 B\\
 C\\
 D
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix} = 
+\begin{bmatrix}
 1\\
 1\\
 1\\
@@ -7334,7 +7550,8 @@ A\\
 B\\
 C\\
 D
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix} = 
+\begin{bmatrix}
 3/8\\
 1/2\\
 3/16\\
