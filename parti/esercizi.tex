@@ -5188,11 +5188,11 @@ Visto che c'è un valore assoluto la cosa migliore da fare è quella di spezzare
 \end{equation*}
 Ricordiamo la regola
 \begin{equation*}
-\mathcal{F}\{u(\alpha x)\} =\frac{1}{| \alpha | }\hat{u}\left(\frac{\xi }{\alpha }\right)
+\Fc \{u(\alpha x)\} =\frac{1}{| \alpha | }\hat{u}\left(\frac{\xi }{\alpha }\right)
 \end{equation*}
 Sapendo questo, deduciamo quanto vale, dato $\alpha  >0$
 \begin{equation*}
-\mathcal{F}\left\{e^{-\alpha | x| }\right\} =\frac{1}{\alpha } \cdotp \frac{2}{1+\left(\frac{\xi }{\alpha }\right)^{2}} =\frac{2\alpha }{\alpha ^{2} +\xi ^{2}}
+\Fc \left\{e^{-\alpha | x| }\right\} =\frac{1}{\alpha } \cdotp \frac{2}{1+\left(\frac{\xi }{\alpha }\right)^{2}} =\frac{2\alpha }{\alpha ^{2} +\xi ^{2}}
 \end{equation*}
 Ricordiamo la formula dell'antitrasformata
 \begin{equation*}
@@ -5200,7 +5200,7 @@ f( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\left(\frac{2}{1+\xi ^{2}}\ri
 \end{equation*}
 Sapendo questo, deduciamo quanto vale
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{1+x^{2}}\right\} =\int _{\mathbb{R}} e^{-i\xi x}\left(\frac{1}{1+x^{2}}\right) dx\overset{\text{parità}}{=} \pi e^{-| \xi | }
+\Fc \left\{\frac{1}{1+x^{2}}\right\} =\int _{\mathbb{R}} e^{-i\xi x}\left(\frac{1}{1+x^{2}}\right) dx\overset{\text{parità}}{=} \pi e^{-| \xi | }
 \end{equation*}
 \Soluzione
 \begin{equation*}
@@ -5296,11 +5296,11 @@ quindi questi due integrali sono uguali al limite
 \end{equation*}
 Quindi
 \begin{equation*}
-\boxed{\mathcal{F}\left\{e^{-x^{2}}\right\} =\sqrt{\pi } e^{-\frac{\xi ^{2}}{4}}}
+\boxed{\Fc \left\{e^{-x^{2}}\right\} =\sqrt{\pi } e^{-\frac{\xi ^{2}}{4}}}
 \end{equation*}
 Deduciamo anche, per $\alpha  >0$
 \begin{equation*}
-\boxed{\mathcal{F}\left\{e^{-\alpha x^{2}}\right\} =\mathcal{F}\left\{e^{-(\sqrt{\alpha } x)^{2}}\right\} =\sqrt{\frac{\pi }{\alpha }} e^{-\frac{\xi ^{2}}{4\alpha }}}
+\boxed{\Fc \left\{e^{-\alpha x^{2}}\right\} =\Fc \left\{e^{-(\sqrt{\alpha } x)^{2}}\right\} =\sqrt{\frac{\pi }{\alpha }} e^{-\frac{\xi ^{2}}{4\alpha }}}
 \end{equation*}
 \textbf{Equazione differenziale.}
 
@@ -5310,7 +5310,7 @@ u(x)=e^{-x^{2}} \ \ \implies \ \ u^{'} (x)=-2xe^{-x^{2}} \ \ \implies \ \ u^{'} 
 \end{equation*}
 Ora
 \begin{equation*}
-\mathcal{F}\{u\} =\hat{u} \ \ \ \ \mathcal{F}\{xu\} =i\frac{d}{d\xi }\hat{u} \ \ \ \ \mathcal{F}\{u'\} =i\xi \hat{u} '
+\Fc \{u\} =\hat{u} \ \ \ \ \Fc \{xu\} =i\frac{d}{d\xi }\hat{u} \ \ \ \ \Fc \{u'\} =i\xi \hat{u} '
 \end{equation*}
 L'equazione differenziale si riscrive
 \begin{equation*}
@@ -5328,7 +5328,7 @@ Allora
 
 \fg{0.7}{15-4}
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{\cosh x}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\cosh x} dx=\int _{\mathbb{R}}\frac{2e^{-i\xi x}}{e^{x} +e^{-x}} dx\ \ \implies \ \ f( x) =\frac{2e^{-i\xi z}}{e^{z} +e^{-z}}
+\Fc \left\{\frac{1}{\cosh x}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\cosh x} dx=\int _{\mathbb{R}}\frac{2e^{-i\xi x}}{e^{x} +e^{-x}} dx\ \ \implies \ \ f( x) =\frac{2e^{-i\xi z}}{e^{z} +e^{-z}}
 \end{equation*}
 Tutte le singolarità sono tutti i punti del piano complesso in cui si annulla il denominatore 
 \begin{equation*}
@@ -5394,29 +5394,29 @@ Scriviamo i vari pezzi
 \begin{align*}
 \int _{\gamma _{R}} f( z) dz & =2\pi e^{\frac{\xi \pi }{2}} =\int _{\gamma _{1}} +\int _{\gamma _{2}} +\int _{\gamma _{3}} +\int _{\gamma _{4}}\\
  & \\
-\int _{\gamma _{1}} & =\int ^{R}_{-R}\frac{e^{-i\xi x}}{\cosh (x)} dx\xrightarrow{R\rightarrow +\infty }\mathcal{F}\left\{\frac{1}{\cosh (x)}\right\}\\
+\int _{\gamma _{1}} & =\int ^{R}_{-R}\frac{e^{-i\xi x}}{\cosh (x)} dx\xrightarrow{R\rightarrow +\infty }\Fc \left\{\frac{1}{\cosh (x)}\right\}\\
  & \\
 \int _{\gamma _{2}} & =2\int ^{\pi i}_{0}\frac{e^{-i\xi (R+iy)}}{e^{R+iy} +e^{-R-iy}} idy\\
 \left| \int _{\gamma _{2}}\right|  & =2\left| \int ^{\pi }_{0}\frac{e^{-i\xi R} e^{y}}{e^{R}\left( e^{iy} +e^{-2R-iy}\right)} idy\right| \leqslant \frac{2}{e^{R}}\underbrace{\int ^{\pi }_{0}\left| \frac{e^{y}}{e^{iy} +e^{-2R-iy}}\right| dy}_{\text{limitata}}\xrightarrow{R\rightarrow +\infty } 0\\
  & \\
 \int _{\gamma _{3}} = & -\int ^{R}_{-R}\frac{2e^{-i\xi ( x+i\pi )}}{e^{x+i\pi } +e^{-x-i\pi }} dx=\int ^{R}_{-R}\frac{2e^{-i\xi x} e^{\pi \xi }}{e^{x} +e^{-x}} dx\\
- & =e^{\pi \xi }\int ^{R}_{-R}\frac{e^{-i\xi x}}{\frac{e^{x} +e^{-x}}{2}} dx\xrightarrow{R\rightarrow +\infty } e^{\pi \xi }\mathcal{F}\left\{\frac{1}{\cosh (x)}\right\}\\
+ & =e^{\pi \xi }\int ^{R}_{-R}\frac{e^{-i\xi x}}{\frac{e^{x} +e^{-x}}{2}} dx\xrightarrow{R\rightarrow +\infty } e^{\pi \xi }\Fc \left\{\frac{1}{\cosh (x)}\right\}\\
  & \\
 \left| \int _{\gamma _{4}}\right|  & \xrightarrow{R\rightarrow +\infty } 0
 \end{align*}
 In totale avremo
 \begin{equation*}
-2\pi e^{\xi \frac{\pi }{2}} =\int _{\gamma _{R}} f( z) dz\xrightarrow{R\rightarrow +\infty }\mathcal{F}\left\{\frac{1}{\cosh (x)}\right\}\left( 1+e^{\pi \xi }\right)
+2\pi e^{\xi \frac{\pi }{2}} =\int _{\gamma _{R}} f( z) dz\xrightarrow{R\rightarrow +\infty }\Fc \left\{\frac{1}{\cosh (x)}\right\}\left( 1+e^{\pi \xi }\right)
 \end{equation*}
 Dunque
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{\cosh (x)}\right\} =\frac{2\pi e^{\xi \frac{\pi }{2}}}{e^{\pi \xi } +1} =\frac{2\pi }{e^{\xi \frac{\pi }{2}} +e^{-\xi \frac{\pi }{2}}} =\frac{\pi }{\cosh\left(\frac{\pi }{2} \xi \right)}
+\Fc \left\{\frac{1}{\cosh (x)}\right\} =\frac{2\pi e^{\xi \frac{\pi }{2}}}{e^{\pi \xi } +1} =\frac{2\pi }{e^{\xi \frac{\pi }{2}} +e^{-\xi \frac{\pi }{2}}} =\frac{\pi }{\cosh\left(\frac{\pi }{2} \xi \right)}
 \end{equation*}
 \Soluzione
 
 \fg{0.7}{15-5}
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx
+\Fc \left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx
 \end{equation*}
 $f$ pari, allora $\hat{f}$ pari.
 
@@ -5483,7 +5483,7 @@ Il residuo allora sarà pari a
 \end{equation*}
 La trasformata vale quindi
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =-2\pi i\cdotp i\frac{e^{-\xi }}{4} (1+\xi )=\frac{\pi }{2} e^{-\xi }( 1+\xi ) \ \ \ \ \xi  >0
+\Fc \left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =-2\pi i\cdotp i\frac{e^{-\xi }}{4} (1+\xi )=\frac{\pi }{2} e^{-\xi }( 1+\xi ) \ \ \ \ \xi  >0
 \end{equation*}
 Per le $\xi < 0$ basta raddoppiare
 \begin{equation*}
@@ -5511,11 +5511,11 @@ Considerando la dualità con una qualsiasi funzione dello spazio di Schwartz que
 \end{gather*}
 Ne consegue che possiamo scrivere:
 \begin{equation*}
-\mathcal{F}\{u\} =\lim _{n\rightarrow \infty }\mathcal{F}\{u_{n}\}
+\Fc \{u\} =\lim _{n\rightarrow \infty }\Fc \{u_{n}\}
 \end{equation*}
 Calcoliamo le trasformate delle $u_{n}$ in senso classico
 \begin{equation*}
-\mathcal{F}\{u_{n}\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\sqrt{|} x|} \chi _{[-n,n]} (u)dx=\int ^{n}_{-n}\frac{\cos( \xi x) -i\sin (\xi x)}{\sqrt{| x| }} dx=2\int ^{n}_{0}\frac{\cos( \xi x)}{\sqrt{x}} dx
+\Fc \{u_{n}\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\sqrt{|} x|} \chi _{[-n,n]} (u)dx=\int ^{n}_{-n}\frac{\cos( \xi x) -i\sin (\xi x)}{\sqrt{| x| }} dx=2\int ^{n}_{0}\frac{\cos( \xi x)}{\sqrt{x}} dx
 \end{equation*}
 Sostituzione
 \begin{equation*}
@@ -5531,7 +5531,7 @@ Ricordiamo l'integrale di Fresnel
 \end{equation*}
 Quindi, la trasformata sarà pari a
 \begin{equation*}
-\mathcal{F}\{u\} =\lim _{n\rightarrow \infty }\mathcal{F}\{u_{n}\} =\lim _{n\rightarrow \infty }\frac{4}{\sqrt{| \xi | }} \ \int ^{\sqrt{| \xi | n}}_{0}\cos\left( t^{2}\right) dt=\frac{4}{\sqrt{| \xi | }} \ \sqrt{\frac{\pi }{8}} =\ \sqrt{\frac{2\pi }{| \xi | }}
+\Fc \{u\} =\lim _{n\rightarrow \infty }\Fc \{u_{n}\} =\lim _{n\rightarrow \infty }\frac{4}{\sqrt{| \xi | }} \ \int ^{\sqrt{| \xi | n}}_{0}\cos\left( t^{2}\right) dt=\frac{4}{\sqrt{| \xi | }} \ \sqrt{\frac{\pi }{8}} =\ \sqrt{\frac{2\pi }{| \xi | }}
 \end{equation*}
 \chapter{Esercitazione 8 - Potrich}
 \ParteEsercizi
@@ -5555,7 +5555,7 @@ u( x) e^{iax} \ \ \rightarrow \ \ \hat{u}( \xi -a)\\
 u( x)\cos( \xi _{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}( \xi -\xi _{0}) +\hat{u}( \xi +\xi _{0})]
 \end{gather*}
 \item Linearità\begin{equation*}
-\mathcal{F}\{\alpha u+\beta v\} =\alpha \mathcal{F}\{u\} +\beta \mathcal{F}\{v\} \ \ \forall \alpha ,\beta \in \mathbb{R} ,\ \forall u,v\in L^{1}(\mathbb{R})
+\Fc \{\alpha u+\beta v\} =\alpha \Fc \{u\} +\beta \Fc \{v\} \ \ \forall \alpha ,\beta \in \mathbb{R} ,\ \forall u,v\in L^{1}(\mathbb{R})
 \end{equation*}
 \item Derivazione\begin{equation*}
 \widehat{u'}( \xi ) =i\xi \hat{u}( \xi )
@@ -5885,10 +5885,10 @@ e che possiamo scrivere le identità
 in modo da far apparire il termine per usare la proprietà
 \begin{equation*}
 \begin{aligned}
-\mathcal{F}( f( x) ,\xi ) & =\mathcal{F}\left(\frac{\sin x}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
- & =\mathcal{F}\left(\frac{e^{ix} -e^{-ix}}{2i\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
- & =\frac{1}{2i}\mathcal{F}\left(\frac{e^{ix}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right) +\frac{1}{2i}\mathcal{F}\left(\frac{-e^{-ix}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
- & =\frac{1}{2i}\left\{\mathcal{F}\left(\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi -1\right) -\mathcal{F}\left(\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi +1\right)\right\}\\
+\Fc ( f( x) ,\xi ) & =\Fc \left(\frac{\sin x}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
+ & =\Fc \left(\frac{e^{ix} -e^{-ix}}{2i\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
+ & =\frac{1}{2i}\Fc \left(\frac{e^{ix}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right) +\frac{1}{2i}\Fc \left(\frac{-e^{-ix}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi \right)\\
+ & =\frac{1}{2i}\left\{\Fc \left(\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi -1\right) -\Fc \left(\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)} ,\xi +1\right)\right\}\\
  & =\frac{1}{2i}\left\{\frac{\pi }{3} e^{-| \xi -1| } -\frac{\pi }{6} e^{-2| \xi -1| } -\frac{\pi }{3} e^{-| \xi +1| } +\frac{\pi }{6} e^{-2| \xi +1| }\right\}
 \end{aligned}
 \end{equation*}
@@ -5900,13 +5900,13 @@ u( x) =\frac{2\cos x}{1+x^{2}} =u( x) =\frac{2\frac{e^{ix} +e^{-ix}}{2}}{1+x^{2}
 \end{equation*}
 Sappiamo dal primo esercizio che
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{1+x^{2}} ,\xi \right\} =\pi e^{-| \xi | }
+\Fc \left\{\frac{1}{1+x^{2}} ,\xi \right\} =\pi e^{-| \xi | }
 \end{equation*}
 Allora
 \begin{equation*}
 \begin{aligned}
-\mathcal{F}\{u( x) ,\xi \} & =\mathcal{F}\left\{\frac{e^{ix} +e^{-ix}}{1+x^{2}} ,\xi \right\}\\
- & =\mathcal{F}\left\{\frac{e^{ix}}{1+x^{2}} ,\xi \right\} +\mathcal{F}\left\{\frac{e^{-ix}}{1+x^{2}} ,\xi \right\}\\
+\Fc \{u( x) ,\xi \} & =\Fc \left\{\frac{e^{ix} +e^{-ix}}{1+x^{2}} ,\xi \right\}\\
+ & =\Fc \left\{\frac{e^{ix}}{1+x^{2}} ,\xi \right\} +\Fc \left\{\frac{e^{-ix}}{1+x^{2}} ,\xi \right\}\\
  & =\pi e^{-| \xi -1| } +\pi e^{-| \xi +1| }
 \end{aligned}
 \end{equation*}
@@ -5926,7 +5926,7 @@ f( \tau ) =\hat{g}\left( \tau ^{2} -2\right)
 \end{equation*}
 Sappiamo per il primo esercizio che
 \begin{equation*}
-\mathcal{F}\left\{\frac{1}{1+x^{2}} ,\xi \right\} =\pi e^{-| \xi | }
+\Fc \left\{\frac{1}{1+x^{2}} ,\xi \right\} =\pi e^{-| \xi | }
 \end{equation*}
 Inoltre
 \begin{equation*}
@@ -5934,7 +5934,7 @@ g( x) =\frac{\cos( 2x)}{1+x^{2}} =\frac{e^{2ix} +e^{-2ix}}{2\left( 1+x^{2}\right
 \end{equation*}
 Allora
 \begin{equation*}
-\hat{g}( \xi ) =\mathcal{F}\{g( x) ,\xi \} =\frac{\pi }{2}\left( e^{-| \xi -2| } +e^{-| \xi +2| }\right)
+\hat{g}( \xi ) =\Fc \{g( x) ,\xi \} =\frac{\pi }{2}\left( e^{-| \xi -2| } +e^{-| \xi +2| }\right)
 \end{equation*}
 E determiniamo $f( \tau )$ come
 \begin{equation*}
@@ -6386,7 +6386,7 @@ Ce^{\alpha x} , & x< 0\\
 Trasformiamo secondo Fourier
 \begin{equation*}
 \begin{aligned}
-\mathcal{F}\left\{e^{-\alpha x} H( x)\right\} & =\int ^{+\infty }_{0} e^{-i\xi x} e^{-\alpha x} dx=\int ^{+\infty }_{0} e^{-( \alpha +i\xi ) x} dx\\
+\Fc \left\{e^{-\alpha x} H( x)\right\} & =\int ^{+\infty }_{0} e^{-i\xi x} e^{-\alpha x} dx=\int ^{+\infty }_{0} e^{-( \alpha +i\xi ) x} dx\\
  & =\left[ -\frac{1}{\alpha +i\xi } e^{-( \alpha +i\xi ) x}\right]^{+\infty }_{0} =\frac{1}{\alpha +i\xi }
 \end{aligned}
 \end{equation*}
@@ -6399,7 +6399,7 @@ i\xi \hat{u} -\alpha \hat{u} =\frac{1}{\alpha +i\xi } \ \  & \implies \ \ ( i\xi
 \end{equation*}
 Ci ricordiamo che
 \begin{equation*}
-\mathcal{F}\left\{e^{-\alpha | x| }\right\} =\frac{2\alpha }{\alpha ^{2} +\xi ^{2}} \ \ \implies \ \ u( x) =-\frac{1}{2\alpha } e^{-\alpha | x| }
+\Fc \left\{e^{-\alpha | x| }\right\} =\frac{2\alpha }{\alpha ^{2} +\xi ^{2}} \ \ \implies \ \ u( x) =-\frac{1}{2\alpha } e^{-\alpha | x| }
 \end{equation*}
 Ma quelle trovate con l'Analisi 2 dove sono finite?
 \begin{equation*}
@@ -6413,9 +6413,9 @@ C+\frac{1}{2\alpha } =0\ \ \implies \ \ u( x) =-\frac{1}{2\alpha } e^{-| x| }
 
 È un'equazione lineare del II ordine omogenea, ma \textit{\underline{non a coefficienti costanti}}.
 \begin{itemize}
-\item $\mathcal{F}\{u\} =\hat{u}$
-\item $\mathcal{F}\{u''\} =-\xi ^{2}\hat{u}$
-\item $\mathcal{F}\{xu'\} =i\frac{d}{d\xi }\mathcal{F}\{u'\} =i\frac{d}{d\xi }( i\xi \hat{u}) =-(\hat{u} +\xi \hat{u} ')$
+\item $\Fc \{u\} =\hat{u}$
+\item $\Fc \{u''\} =-\xi ^{2}\hat{u}$
+\item $\Fc \{xu'\} =i\frac{d}{d\xi }\Fc \{u'\} =i\frac{d}{d\xi }( i\xi \hat{u}) =-(\hat{u} +\xi \hat{u} ')$
 \end{itemize}
 
 Allora
@@ -6427,17 +6427,17 @@ Allora
 \end{equation*}
 ma
 \begin{equation*}
-\mathcal{F}\left\{e^{-x^{2}}\right\} =\sqrt{\pi } e^{-\frac{\xi ^{2}}{4}} \ \ \implies \ \ u( x) =De^{-x^{2}}
+\Fc \left\{e^{-x^{2}}\right\} =\sqrt{\pi } e^{-\frac{\xi ^{2}}{4}} \ \ \implies \ \ u( x) =De^{-x^{2}}
 \end{equation*}
 $u( x)$ dovrebbe essere la combinazione lineare di due integrali particolari, qui abbiamo trovato solo quello che sta in $L^{1}$.
 \Soluzione
 
 Trasformiamo
 \begin{itemize}
-\item $\mathcal{F}\{xu''\} =i\frac{d}{d\xi }\left( -\xi ^{2}\hat{u}\right) =i\left( -2\xi \hat{u} -\xi ^{2}\hat{u} '\right)$
-\item $\mathcal{F}\{u'\} =i\xi \hat{u}$
-\item $\mathcal{F}\{xu\} =i\hat{u} '$
-\item $\mathcal{F}\left\{xe^{-| x| }\right\} =i\frac{d}{d\xi }\frac{2}{1+\xi ^{2}} =i\cdotp \left[\frac{-4\xi }{\left( 1+\xi ^{2}\right)^{2}}\right]$
+\item $\Fc \{xu''\} =i\frac{d}{d\xi }\left( -\xi ^{2}\hat{u}\right) =i\left( -2\xi \hat{u} -\xi ^{2}\hat{u} '\right)$
+\item $\Fc \{u'\} =i\xi \hat{u}$
+\item $\Fc \{xu\} =i\hat{u} '$
+\item $\Fc \left\{xe^{-| x| }\right\} =i\frac{d}{d\xi }\frac{2}{1+\xi ^{2}} =i\cdotp \left[\frac{-4\xi }{\left( 1+\xi ^{2}\right)^{2}}\right]$
 \end{itemize}
 
 Allora
@@ -6462,7 +6462,7 @@ e^{-2x} , & x\geqslant 0\\
 0, & x< 0
 \end{cases}
 \end{equation*}
-calcolare $\displaystyle f*f$ e la sua trasformata di Fourier $\displaystyle \mathcal{F}( f*f)$.
+calcolare $\displaystyle f*f$ e la sua trasformata di Fourier $\displaystyle \Fc ( f*f)$.
 \begin{rem}
 [Prodotto di Convoluzione] È definito da
 \begin{equation*}
@@ -6490,7 +6490,7 @@ f_{0}( x) =\arctan\left(\frac{1}{x}\right)
 
 Stabilire se $\displaystyle f_{0} \in L^{1}(\mathbb{R})$ e/o se $\displaystyle f_{0} \in L^{2}(\mathbb{R})$.
 \item Calcolare la derivata di $\displaystyle f_{0}$ nel senso delle distribuzioni.
-\item Calcolare $\mathcal{F}\{f'_{0}\}$ e $\mathcal{F}\{f_{0}\}$.
+\item Calcolare $\Fc \{f'_{0}\}$ e $\Fc \{f_{0}\}$.
 \end{enumerate}
 \Esercizio{}
 \begin{defn}
@@ -6634,7 +6634,7 @@ Usando Plancherel
 \begin{thm}
 [Trasformata della derivata] Date $u,u'\in L^{1}(\mathbb{R})$ e $u\in C^{1}$
 \begin{equation*}
-\mathcal{F}\left\{\frac{d^{n}}{dx^{n}} u( x)\right\} =( i\xi )^{n} \cdotp \mathcal{F}\{u( x)\}
+\Fc \left\{\frac{d^{n}}{dx^{n}} u( x)\right\} =( i\xi )^{n} \cdotp \Fc \{u( x)\}
 \end{equation*}
 \end{thm}
 \begin{enumerate}
@@ -6643,18 +6643,18 @@ Usando Plancherel
 \end{equation*}Osserviamo che\begin{equation*}
 f_{2}( x) =-\frac{1}{2} f_{1} '( x)
 \end{equation*}Allora\begin{equation*}
-\hat{f}_{2}( \xi ) =-\frac{1}{2}\mathcal{F}( f_{1} '( x) ,\xi ) =-\frac{1}{2} \cdotp i\xi \cdotp \pi e^{-| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
+\hat{f}_{2}( \xi ) =-\frac{1}{2}\Fc ( f_{1} '( x) ,\xi ) =-\frac{1}{2} \cdotp i\xi \cdotp \pi e^{-| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
 \end{equation*}
 \item Notiamo che $f_{0}$ è limitata, allora $f_{0} \in L^{\infty }(\mathbb{R})$, mentre per $| x| \rightarrow \infty $ è asintotica a $1/x$, che non è integrabile, quindi $f_{0} \notin L^{1}(\mathbb{R})$. Tuttavia $f_{0} \in L^{2}(\mathbb{R})$.
 \item $f_{0}$ è continua $\forall x\neq 0$, dove c'è una discontinuità di tipo salto di ampiezza $\pi $. Senza indugi e senza calcoli, deduciamo subito che\begin{equation*}
 f_{0} '( x)\overset{D(\mathbb{R})}{=} \pi \delta _{0}( x) -\frac{1}{1+x^{2}}
 \end{equation*}
 \item Usando le proprietà della trasformata\begin{align*}
-\mathcal{F}( f_{0} '( x) ,\xi ) & =\mathcal{F}( \pi \delta _{0} -f_{1}( x) ,\xi ) =\pi -\pi e^{-| \xi | }\\
+\Fc ( f_{0} '( x) ,\xi ) & =\Fc ( \pi \delta _{0} -f_{1}( x) ,\xi ) =\pi -\pi e^{-| \xi | }\\
  & \\
-i\xi \cdotp\mathcal{F}( f_{0}( x) ,\xi ) & =\mathcal{F}( f_{0} '( x) ,\xi ) =\pi -\pi e^{-| \xi | }\\
+i\xi \cdotp\Fc ( f_{0}( x) ,\xi ) & =\Fc ( f_{0} '( x) ,\xi ) =\pi -\pi e^{-| \xi | }\\
  & \\
- & \implies \ \ \mathcal{F}( f_{0}( x) ,\xi ) =\frac{\pi -\pi e^{-| \xi | }}{i\xi } =i\pi \frac{e^{-| \xi | } -1}{\xi }
+ & \implies \ \ \Fc ( f_{0}( x) ,\xi ) =\frac{\pi -\pi e^{-| \xi | }}{i\xi } =i\pi \frac{e^{-| \xi | } -1}{\xi }
 \end{align*}
 \end{enumerate}
 \Soluzione
@@ -6801,9 +6801,9 @@ u''+2xu'+4u=0
 \ParteSoluzioni
 \Soluzione
 \begin{gather*}
-\mathcal{F}\left( e^{-| x| }\right) =\frac{2}{1+\xi ^{2}}\\
+\Fc \left( e^{-| x| }\right) =\frac{2}{1+\xi ^{2}}\\
 \begin{aligned}
-\mathcal{F}\left( e^{-| x| }\cos x\right) & =\frac{1}{2}\mathcal{F}\left\{e^{ix} e^{-| x| } +e^{-ix} e^{-| x| }\right\} =\\
+\Fc \left( e^{-| x| }\cos x\right) & =\frac{1}{2}\Fc \left\{e^{ix} e^{-| x| } +e^{-ix} e^{-| x| }\right\} =\\
  & =\frac{1}{2}\left\{\frac{2}{1+( \xi -1)^{2}} +\frac{2}{1+( \xi +1)^{2}}\right\} =\\
  & =\frac{1}{\xi ^{2} -2\xi +2} +\frac{1}{\xi ^{2} -2\xi +2} =\frac{2\left( \xi ^{2} +2\right)}{\xi ^{4} +4}
 \end{aligned}
@@ -6881,11 +6881,11 @@ u( t) & =\frac{1}{e}\frac{( t-1)^{2}}{2} e^{-( t-1)} H( t-1) -\frac{1}{e^{2}}\fr
 
 Trasformiamo e usiamo il prodotto di convoluzione
 \begin{equation*}
-\left( \xi ^{2} +1\right)\hat{u} =\mathcal{F}\{\chi _{( -1,1)}( x)\}
+\left( \xi ^{2} +1\right)\hat{u} =\Fc \{\chi _{( -1,1)}( x)\}
 \end{equation*}
 allora
 \begin{align*}
-\implies \ \ \hat{u}( \xi ) & =\frac{1}{1+\xi ^{2}} \cdotp \mathcal{F}\{\chi _{( -1,1)}( x)\}\\
+\implies \ \ \hat{u}( \xi ) & =\frac{1}{1+\xi ^{2}} \cdotp \Fc \{\chi _{( -1,1)}( x)\}\\
 \implies \ \ u( x) & =\frac{1}{2} e^{-| x| } *\chi _{( -1,1)}( x)
 \end{align*}
 Ricordiamo che
@@ -6982,7 +6982,7 @@ u( x) =\frac{e^{-| x| }}{4}(| x| +1)
 
 Trasformiamo i vari termini
 \begin{equation*}
-\mathcal{F}( u'') =-\xi ^{2}\hat{u} \ \ \ \ \ \ \ \ \mathcal{F}( xu') =i\frac{d}{d\xi }( i\xi \hat{u}) =-\xi \hat{u} '-\hat{u}
+\Fc ( u'') =-\xi ^{2}\hat{u} \ \ \ \ \ \ \ \ \Fc ( xu') =i\frac{d}{d\xi }( i\xi \hat{u}) =-\xi \hat{u} '-\hat{u}
 \end{equation*}
 sostituiamo
 \begin{align*}
@@ -7002,7 +7002,7 @@ $\forall C$, $\hat{u}$ dispari allora $C=D\cdotp i,\ D\in \mathbb{R}$
 \ParteEsercizi
 \Esercizio{}
 
-Determinare le soluzioni $\displaystyle \mathcal{F}$-trasformabili della seguente equazione differenziale
+Determinare le soluzioni $\displaystyle \Fc $-trasformabili della seguente equazione differenziale
 \begin{equation*}
 xu''+2u'-xu=xe^{-| x| }
 \end{equation*}
@@ -7053,23 +7053,23 @@ y( 0) =1
 
 Per le regole di derivazione
 \begin{equation*}
-\mathcal{F}\left\{u^{( n)}( x)\right\} =( i\xi )^{n}\mathcal{F}\{u( x)\} \ \ \implies \ \ \mathcal{F}\{u''( x)\} =-\xi ^{2}\mathcal{F}\{u( x)\}
+\Fc \left\{u^{( n)}( x)\right\} =( i\xi )^{n}\Fc \{u( x)\} \ \ \implies \ \ \Fc \{u''( x)\} =-\xi ^{2}\Fc \{u( x)\}
 \end{equation*}
 e inoltre che
 \begin{equation*}
-\frac{d^{n}}{d\xi ^{n}}\mathcal{F}\{u( x)\} =\mathcal{F}\left\{( -ix)^{n} u( x)\right\} \ \ \implies \ \ \mathcal{F}\{xu( x)\} =i\frac{d}{d\xi }\mathcal{F}\{u( x)\}
+\frac{d^{n}}{d\xi ^{n}}\Fc \{u( x)\} =\Fc \left\{( -ix)^{n} u( x)\right\} \ \ \implies \ \ \Fc \{xu( x)\} =i\frac{d}{d\xi }\Fc \{u( x)\}
 \end{equation*}
 Quindi
 \begin{equation*}
-\mathcal{F}\{xu''( x)\} =i\frac{d}{d\xi }\left( -\xi ^{2}\mathcal{F}\{u( x)\}\right) =i\left[ -2\xi \hat{u}( \xi ) -\xi ^{2}\frac{d}{d\xi }\hat{u}\right] =-2i\xi \hat{u}( \xi ) -i\xi ^{2}\hat{u} '( \xi )
+\Fc \{xu''( x)\} =i\frac{d}{d\xi }\left( -\xi ^{2}\Fc \{u( x)\}\right) =i\left[ -2\xi \hat{u}( \xi ) -\xi ^{2}\frac{d}{d\xi }\hat{u}\right] =-2i\xi \hat{u}( \xi ) -i\xi ^{2}\hat{u} '( \xi )
 \end{equation*}
 Trasformiamo il secondo termine
 \begin{equation*}
-\mathcal{F}\left\{e^{-| x| } ,\xi \right\} =\frac{2}{1+\xi ^{2}}
+\Fc \left\{e^{-| x| } ,\xi \right\} =\frac{2}{1+\xi ^{2}}
 \end{equation*}
 Usando le proprietà
 \begin{equation*}
-\mathcal{F}\left\{xe^{-| x| } ,\xi \right\} =i\frac{d}{d\xi }\frac{2}{1+\xi ^{2}}
+\Fc \left\{xe^{-| x| } ,\xi \right\} =i\frac{d}{d\xi }\frac{2}{1+\xi ^{2}}
 \end{equation*}
 Otteniamo
 \begin{align*}
@@ -7124,16 +7124,16 @@ Trasformiamo entrambi i membri
 \end{equation*}
 Possiamo calcolare la trasformata della derivata della Delta con la dualità
 \begin{align*}
-\langle \mathcal{F}\{\delta ''( x) ,\xi \} ,\varphi ( x) \rangle  & =\langle \delta ''( x) ,\mathcal{F}\{\varphi ( x) ,\xi \} \rangle \\
- & =-\langle \delta '( x) ,\frac{d}{d\xi }\mathcal{F}\{\varphi ( x) ,\xi \} \rangle \\
- & =\langle \delta ( x) ,\frac{d^{2}}{d\xi ^{2}}\mathcal{F}\{\varphi ( x) ,\xi \} \rangle \\
- & =\langle \delta ( x) ,\mathcal{F}\left\{( -ix)^{2} \varphi ( x) ,\xi \right\} \rangle \\
+\langle \Fc \{\delta ''( x) ,\xi \} ,\varphi ( x) \rangle  & =\langle \delta ''( x) ,\Fc \{\varphi ( x) ,\xi \} \rangle \\
+ & =-\langle \delta '( x) ,\frac{d}{d\xi }\Fc \{\varphi ( x) ,\xi \} \rangle \\
+ & =\langle \delta ( x) ,\frac{d^{2}}{d\xi ^{2}}\Fc \{\varphi ( x) ,\xi \} \rangle \\
+ & =\langle \delta ( x) ,\Fc \left\{( -ix)^{2} \varphi ( x) ,\xi \right\} \rangle \\
  & \overset{\xi =0}{=}\int _{\mathbb{R}}( -ix)^{2} \varphi ( x) dx\\
  & =\langle ( -ix)^{2} ,\varphi ( x) \rangle 
 \end{align*}
 allora
 \begin{equation*}
-\mathcal{F}\{\delta ''( x) ,\xi \} =( -i\xi )^{2} =-\xi ^{2}
+\Fc \{\delta ''( x) ,\xi \} =( -i\xi )^{2} =-\xi ^{2}
 \end{equation*}
 Sostituendo nell'equazione
 \begin{equation*}
