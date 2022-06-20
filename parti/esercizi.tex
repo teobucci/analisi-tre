@@ -196,11 +196,11 @@ f(z) = \sum^{\infty}_{n = 0}\left(1 - \frac{1}{2^{n + 1}}\right) z^{n}
 Il raggio di convergenza è l'intersezione tra $|z| < 1$ e $|z| < 2$, ovvero $|z| < 1$.
 \Soluzione
 \begin{equation*}
-f(z) = \frac{e^{z}}{1 + 2z} = e^{z} \cdot \frac{1}{1 - (- 2z)} = (*)
+f(z) = \frac{e^{z}}{1 + 2z} = e^{z} \cdot \frac{1}{1 - (- 2z)} = (\star)
 \end{equation*}
 Sviluppiamo in serie e scriviamo la serie prodotto secondo Cauchy
 \begin{equation*}
-(*) = \sum^{\infty}_{n = 0}\frac{z^{n}}{n!} \cdot \sum^{\infty}_{m = 0} (- 2z)^{m} = \sum^{\infty}_{n = 0}\sum^{n}_{k = 0}\frac{z^{k}}{k!} (- 2)^{n - k} z^{n - k} = \sum^{\infty}_{n = 0}\left(\sum^{n}_{k = 0}\frac{(- 2)^{n - k}}{k!}\right) z^{n}
+(\star) = \sum^{\infty}_{n = 0}\frac{z^{n}}{n!} \cdot \sum^{\infty}_{m = 0} (- 2z)^{m} = \sum^{\infty}_{n = 0}\sum^{n}_{k = 0}\frac{z^{k}}{k!} (- 2)^{n - k} z^{n - k} = \sum^{\infty}_{n = 0}\left(\sum^{n}_{k = 0}\frac{(- 2)^{n - k}}{k!}\right) z^{n}
 \end{equation*}
 In alternativa, sfruttando Mertens
 \begin{equation*}
@@ -2173,9 +2173,9 @@ Ho due vie:
 
 Riconoscendo che la funzione integranda è pari posso scrivere che:
 \begin{equation*}
-\int^{+ \infty}_{0}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx\overset{\text{(pari)}}{=}\frac{1}{2}\int_{\RR}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx\overset{\text{(*)}}{=}\frac{1}{2}\left(\int_{\RR}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx + i\int_{\RR}\frac{\sin (\alpha x)}{x^{2} + \beta^{2}} dx\right)
+\int^{+ \infty}_{0}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx\overset{\text{(pari)}}{=}\frac{1}{2}\int_{\RR}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx\overset{(\star)}{=}\frac{1}{2}\left(\int_{\RR}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx + i\int_{\RR}\frac{\sin (\alpha x)}{x^{2} + \beta^{2}} dx\right)
 \end{equation*}
-Nel passaggio (*) abbiamo sfruttato l'annullamento dell'integrale di una funzione dispari su tutto $\RR $. Riconosciamo ora che possiamo riscriverla come:
+Nel passaggio $(\star)$ abbiamo sfruttato l'annullamento dell'integrale di una funzione dispari su tutto $\RR $. Riconosciamo ora che possiamo riscriverla come:
 
 \begin{equation*}
 \frac{1}{2}\int_{\RR}\frac{e^{i\alpha x}}{x^{2} + \beta^{2}} dx
@@ -5055,12 +5055,12 @@ $\forall \varphi \in D(\RR)$
 \end{equation*}
 la funzione $u$ è definita a tratti
 \begin{equation*}
-- \int^{+ \infty}_{- \infty} u(x) \varphi '(x) dx = -\int^{a}_{- \infty} f(x) \varphi '(x) dx - \int^{+ \infty}_{a} g(x) \varphi '(x) dx = (*)
+- \int^{+ \infty}_{- \infty} u(x) \varphi '(x) dx = -\int^{a}_{- \infty} f(x) \varphi '(x) dx - \int^{+ \infty}_{a} g(x) \varphi '(x) dx = (\star)
 \end{equation*}
 integro per parti
 \begin{gather*}
 \begin{aligned}
-(*) & = - [ f(x) \varphi (x)]^{a}_{- \infty} + \int^{a}_{- \infty} f'(x) \varphi (x) dx - [ g(x) \varphi (x)]^{+ \infty}_{a} + \int^{+ \infty}_{a} g'(x) \varphi (x) dx\\
+(\star) & = - [ f(x) \varphi (x)]^{a}_{- \infty} + \int^{a}_{- \infty} f'(x) \varphi (x) dx - [ g(x) \varphi (x)]^{+ \infty}_{a} + \int^{+ \infty}_{a} g'(x) \varphi (x) dx\\
  & = - f(a) \varphi (a) + \int^{a}_{- \infty} f'(x) \varphi (x) dx + g(a) \varphi (a) + \int^{+ \infty}_{a} g'(x) \varphi (x) dx\\
  & = \varphi (a)[ g(a) - f(a)] + \int^{a}_{- \infty} f'(x) \varphi (x) dx + \int^{+ \infty}_{a} g'(x) \varphi (x) dx\\
  & = [ u(a_{+}) - u(a_{-})] \langle \delta_{x = a}, \varphi \rangle + \int^{a}_{- \infty} f'(x) \varphi (x) dx + \int^{+ \infty}_{a} g'(x) \varphi (x) dx
@@ -5204,12 +5204,12 @@ Quindi
 \fg{0.7}{14 - 6}
 \item Se $p\in [ 1, + \infty)$
 \begin{equation*}
-\Vert f_{n}\Vert^{p}_{L^{p}} = \int_{\RR} n^{2p} x^{p} e^{- np| x|} dx = 2\int^{+ \infty}_{0} n^{2p} x^{p} e^{- npx} dx = (*)
+\Vert f_{n}\Vert^{p}_{L^{p}} = \int_{\RR} n^{2p} x^{p} e^{- np| x|} dx = 2\int^{+ \infty}_{0} n^{2p} x^{p} e^{- npx} dx = (\star)
 \end{equation*}
 
 poniamo $npx = t\implies npdx = dt$
 \begin{equation*}
-(*) = 2\int^{+ \infty}_{0} n^{2p}\frac{t^{p}}{n^{p} p^{p}} e^{- t}\frac{dt}{np} = \frac{2}{p^{p + 1}} n^{p - 1}\int^{+ \infty}_{0} t^{p} e^{- t} dt\cancel{\xrightarrow{n\rightarrow + \infty}} 0
+(\star) = 2\int^{+ \infty}_{0} n^{2p}\frac{t^{p}}{n^{p} p^{p}} e^{- t}\frac{dt}{np} = \frac{2}{p^{p + 1}} n^{p - 1}\int^{+ \infty}_{0} t^{p} e^{- t} dt\cancel{\xrightarrow{n\rightarrow + \infty}} 0
 \end{equation*}
 
 l'integrale non dipende da $n$, siamo nel caso $p \geq 1$, quindi non c'è convergenza.
@@ -5886,9 +5886,9 @@ Completiamo il quadrato
 \end{equation*}
 Sfruttiamo la seguente uguaglianza
 \begin{equation*}
-\int^{+ \infty}_{- \infty} e^{- (x + ib)^{2}} dx\overset{(*)}{=}\int^{+ \infty}_{- \infty} e^{- x^{2}} dx = \sqrt{\pi} \ \ \implies \ \ \boxed{\hat{u}(\xi) = \sqrt{\pi} e^{- \frac{\xi^{2}}{4}}}
+\int^{+ \infty}_{- \infty} e^{- (x + ib)^{2}} dx\overset{(\star)}{=}\int^{+ \infty}_{- \infty} e^{- x^{2}} dx = \sqrt{\pi} \ \ \implies \ \ \boxed{\hat{u}(\xi) = \sqrt{\pi} e^{- \frac{\xi^{2}}{4}}}
 \end{equation*}
-Resta da provare $(*)$. Consideriamo la funzione analitica intera (senza singolarità) $z\mapsto e^{- z^{2}}$, prolungamento analitico di $e^{- x^{2}}, x\in \RR $.
+Resta da provare $(\star)$. Consideriamo la funzione analitica intera (senza singolarità) $z\mapsto e^{- z^{2}}$, prolungamento analitico di $e^{- x^{2}}, x\in \RR $.
 
 
 \begin{figure}[htpb]
@@ -5965,7 +5965,7 @@ Allora possiamo dire
 \begin{equation*}
 \implies \ \ \int^{B}_{A} e^{- z^{2}} dz = -\int^{D}_{C} e^{- z^{2}} dz + o\left(\frac{1}{R}\right)
 \end{equation*}
-Passando al limite per $R\rightarrow + \infty $ si ottiene $(*)$.
+Passando al limite per $R\rightarrow + \infty $ si ottiene $(\star)$.
 
 
 
@@ -6150,7 +6150,7 @@ f(x) =
 \end{equation*}
 $f$ è pari, allora $\hat{f}$ è pari e reale.
 \begin{equation*}
-\hat{f}(\xi) = \int_{\RR} e^{- i\xi x} f(x) dx = \int^{1}_{- 1} e^{- i\xi x}\left(1 - x^{2}\right) dx = (*)
+\hat{f}(\xi) = \int_{\RR} e^{- i\xi x} f(x) dx = \int^{1}_{- 1} e^{- i\xi x}\left(1 - x^{2}\right) dx = (\star)
 \end{equation*}
 Usando l'analisi complessa
 \begin{equation*}
@@ -6158,7 +6158,7 @@ Usando l'analisi complessa
 \end{equation*}
 allora
 \begin{align*}
-(*) & = \int^{1}_{- 1}[\cos(\xi x) - i\sin(\xi x)]\left(1 - x^{2}\right) dx\\
+(\star) & = \int^{1}_{- 1}[\cos(\xi x) - i\sin(\xi x)]\left(1 - x^{2}\right) dx\\
  & = \int^{1}_{- 1}\underbrace{\cos(\xi x)\left(1 - x^{2}\right)}_{\text{pari}} dx - i\int^{1}_{- 1}\underbrace{\sin(\xi x)\left(1 - x^{2}\right)}_{\text{dispari}} dx\\
  & = 2\int^{1}_{0}\underbrace{\cos(\xi x)}_{g'}\underbrace{\left(1 - x^{2}\right)}_{f} - i \cdot 0\\
  & \overset{\text{ipp}}{=} 2\left\{\cancel{\left[\left(1 - x^{2}\right)\frac{1}{\xi}\sin(2\xi)\right]^{1}_{0}} - \int^{1}_{0}\frac{- 2x}{\xi}\sin(\xi x) dx\right\}\\
@@ -6429,12 +6429,12 @@ g(t) & = t[ H(t) - H(t - 1)] + (2 - t)[ H(t - 1) - H(t - 2)] + (t - 2)[ H(t - 2)
 
 Calcolare l'antitrasformata
 \begin{equation*}
-\Lc^{- 1}\left\{\frac{2s^{2} - 4}{(s + 1)(s - 2)(s - 3)}\right\} = \Lc^{- 1}\{(*)\}
+\Lc^{- 1}\left\{\frac{2s^{2} - 4}{(s + 1)(s - 2)(s - 3)}\right\} = \Lc^{- 1}\{(\star)\}
 \end{equation*}
 Scomponiamo in fratti semplici
 \begin{equation*}
 \begin{aligned}
-(*) & = \frac{A}{s + 1} + \frac{B}{s - 2} + \frac{C}{s - 3}\\
+(\star) & = \frac{A}{s + 1} + \frac{B}{s - 2} + \frac{C}{s - 3}\\
  & = \frac{A(s - 2)(s - 3) + B(s + 1)(s - 3) + C(s + 1)(s - 2)}{(s + 1)(s - 2)(s - 3)}\\
  & \implies \ \ A = -\frac{1}{6} \ \ \ \ B = -\frac{3}{8} \ \ \ \ C = \frac{7}{2}
 \end{aligned}
@@ -6442,7 +6442,7 @@ Scomponiamo in fratti semplici
 Quindi
 \begin{equation*}
 \begin{aligned}
-\Lc^{- 1}\{(*)\} & = \Lc^{- 1}\left\{- \frac{1}{6}\frac{1}{s + 1} - \frac{3}{8}\frac{1}{s - 2} + \frac{7}{2}\frac{1}{s - 3}\right\}\\
+\Lc^{- 1}\{(\star)\} & = \Lc^{- 1}\left\{- \frac{1}{6}\frac{1}{s + 1} - \frac{3}{8}\frac{1}{s - 2} + \frac{7}{2}\frac{1}{s - 3}\right\}\\
  & = \left[ - \frac{1}{6} e^{- t} - \frac{3}{8} e^{2t} + \frac{7}{2} e^{3t}\right] H(t)
 \end{aligned}
 \end{equation*}
@@ -6450,12 +6450,12 @@ Quindi
 
 Calcolare l'antitrasformata
 \begin{equation*}
-\Lc^{- 1}\left\{\frac{3s + 1}{(s - 1)\left(s^{2} + 1\right)}\right\} = \Lc^{- 1}\{(*)\}
+\Lc^{- 1}\left\{\frac{3s + 1}{(s - 1)\left(s^{2} + 1\right)}\right\} = \Lc^{- 1}\{(\star)\}
 \end{equation*}
 Scomponiamo in fratti semplici
 \begin{equation*}
 \begin{aligned}
-(*) & = \frac{A}{s - 1} + \frac{Bs + C}{\left(s^{2} + 1\right)}\\
+(\star) & = \frac{A}{s - 1} + \frac{Bs + C}{\left(s^{2} + 1\right)}\\
  & = \frac{A\left(s^{2} + 1\right) + (Bs + C)(s - 1)}{(s - 1)\left(s^{2} + 1\right)}\\
  & \implies \ \ A = 2\ \ \ \ C = 1\ \ \ \ B = -2
 \end{aligned}
@@ -6463,7 +6463,7 @@ Scomponiamo in fratti semplici
 Quindi
 \begin{equation*}
 \begin{aligned}
-\Lc^{- 1}\{(*)\} & = \Lc^{- 1}\left\{\frac{2}{s - 1} + \frac{- 2s + 1}{s^{2} + 1}\right\}\\
+\Lc^{- 1}\{(\star)\} & = \Lc^{- 1}\left\{\frac{2}{s - 1} + \frac{- 2s + 1}{s^{2} + 1}\right\}\\
  & = \Lc^{- 1}\left\{\frac{2}{s - 1} - \frac{2s}{s^{2} + 1} + \frac{1}{s^{2} + 1}\right\}\\
  & = \left[ 2e^{t} + \sin t - 2\cos t\right] H(t)
 \end{aligned}
@@ -6876,11 +6876,11 @@ e^{- \lambda t} te^{2t} = te^{t(2 - \lambda)} \in L^{1}(\RR) \ \ \iff \ \ \lambd
 
 Usiamo le proprietà
 \begin{equation*}
-F(s) = \Lc\left\{H(t)\sum^{m}_{k = 0} a_{k} t^{k}\right\} = \sum^{m}_{k = 0} a_{k}\Lc\left\{H(t) t^{k}\right\} = \sum^{m}_{k = 0} a_{k}(- 1)^{k}\left(\frac{1}{s}\right)^{(k)} = (*)
+F(s) = \Lc\left\{H(t)\sum^{m}_{k = 0} a_{k} t^{k}\right\} = \sum^{m}_{k = 0} a_{k}\Lc\left\{H(t) t^{k}\right\} = \sum^{m}_{k = 0} a_{k}(- 1)^{k}\left(\frac{1}{s}\right)^{(k)} = (\star)
 \end{equation*}
 Provando vari $\displaystyle k$ mi accorgo che:
 \begin{equation*}
-(*) = \sum^{m}_{k = 0} a_{k}\frac{k!}{s^{k + 1}}
+(\star) = \sum^{m}_{k = 0} a_{k}\frac{k!}{s^{k + 1}}
 \end{equation*}
 È il risultato generale della \textbf{trasformata di un polinomio!}
 \Soluzione

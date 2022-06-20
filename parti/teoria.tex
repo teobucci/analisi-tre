@@ -289,12 +289,12 @@ F(z) = \int^{z}_{z_{0}} f(w) dw
 
 da cui
 \begin{equation*}
-F(z + h) - F(z) = \int^{z + h}_{z_{0}} f(w) dw - \int^{z}_{z_{0}} f(w) dw = \int^{z + h}_{z} f(w) dw = (*)
+F(z + h) - F(z) = \int^{z + h}_{z_{0}} f(w) dw - \int^{z}_{z_{0}} f(w) dw = \int^{z + h}_{z} f(w) dw = (\star)
 \end{equation*}
 
 parametrizziamo il segmento $w = z + th, t\in [0, 1]$ da cui anche $dw = hdt$
 \begin{equation*}
-(*) = \int^{1}_{0} f(z + th) hdt
+(\star) = \int^{1}_{0} f(z + th) hdt
 \end{equation*}
 
 possiamo passare al limite
@@ -654,7 +654,7 @@ e^{iaRe^{i\vartheta}} = e^{iaR[\cos \vartheta + i\sin \vartheta]} = \underbrace{
 \end{equation*}
 Maggioriamo
 \begin{equation*}
-\left| \int_{C_{R} (0, \pi)} e^{iaz} f(z)dz\right| \leq M\int^{\pi}_{0}\left| e^{iaRe^{i\vartheta}} iRe^{i\vartheta}\right| d\vartheta = 2MR\int^{\pi /2}_{0} e^{- aR\sin \vartheta} d\vartheta = (*)
+\left| \int_{C_{R} (0, \pi)} e^{iaz} f(z)dz\right| \leq M\int^{\pi}_{0}\left| e^{iaRe^{i\vartheta}} iRe^{i\vartheta}\right| d\vartheta = 2MR\int^{\pi /2}_{0} e^{- aR\sin \vartheta} d\vartheta = (\star)
 \end{equation*}
 a questo punto possiamo minorare il seno con la retta che passa per $0$ e $(\pi /2, 1)$
 \begin{equation*}
@@ -662,7 +662,7 @@ a questo punto possiamo minorare il seno con la retta che passa per $0$ e $(\pi 
 \end{equation*}
 Di conseguenza
 \begin{equation*}
-(*) \leq 2MR\int^{\pi /2}_{0} e^{- aR\frac{2\vartheta}{\pi}} d\vartheta = \cancel{2} M\cancel{R}\left[\left(- \frac{\pi}{\cancel{2} a\cancel{R}}\right) e^{- aR\frac{2\vartheta}{\pi}}\right]^{\pi /2}_{0} = - \frac{\pi M}{a}\underbrace{\left[e^{- aR} - 1\right]}_{\in [ - 1, 0]} \leq \frac{\pi M}{a}
+(\star) \leq 2MR\int^{\pi /2}_{0} e^{- aR\frac{2\vartheta}{\pi}} d\vartheta = \cancel{2} M\cancel{R}\left[\left(- \frac{\pi}{\cancel{2} a\cancel{R}}\right) e^{- aR\frac{2\vartheta}{\pi}}\right]^{\pi /2}_{0} = - \frac{\pi M}{a}\underbrace{\left[e^{- aR} - 1\right]}_{\in [ - 1, 0]} \leq \frac{\pi M}{a}
 \end{equation*}
 Per ipotesi $M\rightarrow 0$ e $a > 0$, da cui la tesi.
 \end{proof}
@@ -1320,7 +1320,7 @@ Per dimostrare il risultato della disuguaglianza cerchiamo il minimo in funzione
 \lambda & = \left[\frac{\Vert g \Vert^{q}_{L^{q}}}{\Vert f \Vert^{p}_{L^{p}}}\right]^{1/p}
 \end{align*}
 
-sostituendolo nella (*) otteniamo la tesi.
+sostituendolo nella $(\star)$ otteniamo la tesi.
 
 \end{itemize}
 \end{proof}
@@ -2701,11 +2701,11 @@ Soddisfa i requisiti, calcoliamone l'espressione
 \begin{align*}
 \Lc((f*g), s) & = \int_{\RR} e^{- sx}\left(\int_{\RR} f(x - t) g(t) dt\right) dx\\
  & = \iint_{\RR^{2}} e^{- s(x - t)} e^{- st} f(x - t) g(t) dtdx\\
- & = \int_{\RR} e^{- s(x - t)} f(x - t)\int_{\RR} e^{- st} g(t) dtdx = (*)
+ & = \int_{\RR} e^{- s(x - t)} f(x - t)\int_{\RR} e^{- st} g(t) dtdx = (\star)
 \end{align*}
 cambiamo la variabile $x' = x - t$
 \begin{gather*}
-(*) = \left[\int_{\RR} e^{- sx'} f(x') dx'\right]\left[\int_{\RR} e^{- st} g(t) dt\right] = \Lc(f) \cdot \Lc(g)
+(\star) = \left[\int_{\RR} e^{- sx'} f(x') dx'\right]\left[\int_{\RR} e^{- st} g(t) dt\right] = \Lc(f) \cdot \Lc(g)
 \end{gather*}
 \end{proof}
 
