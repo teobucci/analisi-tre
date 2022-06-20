@@ -491,12 +491,12 @@ u_{y} = - v_{x}
 \begin{defn}
 Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua in $\Omega $, $\gamma :\left[ a, b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
 \begin{equation*}
-\int\nolimits_{\gamma} f(z) dz = \int\nolimits^{b}_{a} f\left(\gamma (t)\right) \gamma '(t) dt
+\int\nolimits_{\gamma} f(z) dz = \int\nolimits^{b}_{a} f\left(\gamma (t)\right) \gamma'(t) dt
 \end{equation*}
 dove
 \begin{gather*}
 \gamma (t) = x(t) + iy(t)\\
-\gamma '(t) = x'(t) + iy'(t)
+\gamma'(t) = x'(t) + iy'(t)
 \end{gather*}
 \end{defn}
 \begin{rem}
@@ -516,7 +516,7 @@ Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua. TFAE (
 \end{thm}
 \textbf{\underline{1 modo}}
 \begin{align*}
-\int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz & = \int\nolimits^{0}_{- 1}\underbrace{\left[\left(t - it^{2}\right) + \left(t + it^{2} + 1\right)^{7}\right]}_{f\left(\gamma (t)\right)}\underbrace{\left(1 + 2it\right)}_{\gamma '(t)} dt\\
+\int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz & = \int\nolimits^{0}_{- 1}\underbrace{\left[\left(t - it^{2}\right) + \left(t + it^{2} + 1\right)^{7}\right]}_{f\left(\gamma (t)\right)}\underbrace{\left(1 + 2it\right)}_{\gamma'(t)} dt\\
  & = \int\nolimits^{0}_{- 1}\left[\left(t + 2it^{2} - it^{2} + 2t^{3}\right) + \left(t + it^{2} + 1\right)^{7}\left(1 + 2it\right)\right] dt\\
  & = \int\nolimits^{0}_{- 1}\left[\left(t + it^{2} + 2t^{3}\right) + \left(t + it^{2} + 1\right)^{7}\left(1 + 2it\right)\right] dt\\
  & = \left[\frac{t^{2}}{2} + i\frac{t^{3}}{3} + \frac{t^{4}}{2} + \frac{\left(t + it^{2} + 1\right)^{8}}{8}\right]^{0}_{- 1}\\
@@ -692,7 +692,7 @@ In particolare
 \item $z = 0$ è una singolarità eliminabile, perché annulla sia il denominatore che il numeratore, quindi ha residuo nullo.\footnote{L'implicazione \textit{singolarità eliminabile} allora \textit{residuo nullo} vale solo per i \textbf{punti finiti}, non per il punto all'infinito.}
 \item $z = k\pi $ sono poli del I ordine, $k\in \ZZ, k\neq 0$, il cui residuo vale
 \begin{equation*}
-\Res \left(f, k\pi \right) = \frac{g\left(k\pi \right)}{h'\left(k\pi \right)} = \frac{\left(k\pi \right)^{2}}{\left(\sin k\pi \right) '} = \frac{\left(k\pi \right)^{2}}{\cos k\pi} = \frac{\left(k\pi \right)^{2}}{\left(- 1\right)^{k}}
+\Res \left(f, k\pi \right) = \frac{g\left(k\pi \right)}{h'\left(k\pi \right)} = \frac{\left(k\pi \right)^{2}}{\left(\sin k\pi \right)'} = \frac{\left(k\pi \right)^{2}}{\cos k\pi} = \frac{\left(k\pi \right)^{2}}{\left(- 1\right)^{k}}
 \end{equation*}
 \item $z_{\infty}$ è una singolarità non isolata perché non esiste un raggio che contiene tutti i punti singolari. Andando all'infinito avremo infiniti punti singolari.
 \end{itemize}
@@ -997,7 +997,7 @@ Analizziamo cosa succede all'integrale di $f(z)$ sui vari percorsi
 \end{equation*}
 \item su $\gamma_{3}$
 \begin{align*}
-\int\nolimits_{\gamma_{3}} f(z) dz & = - \int\nolimits^{R}_{0} f\left(\gamma (t)\right) \gamma '(t) dt = -\int\nolimits^{R}_{0} e^{it^{2} e^{i\frac{\pi}{2}}} e^{i\frac{\pi}{4}} dt\\
+\int\nolimits_{\gamma_{3}} f(z) dz & = - \int\nolimits^{R}_{0} f\left(\gamma (t)\right) \gamma'(t) dt = -\int\nolimits^{R}_{0} e^{it^{2} e^{i\frac{\pi}{2}}} e^{i\frac{\pi}{4}} dt\\
  & = - \int\nolimits^{R}_{0} e^{it^{2} i} e^{i\frac{\pi}{4}} dt = -e^{i\frac{\pi}{4}}\int\nolimits^{R}_{0} e^{- t^{2}} dt\xrightarrow{R\rightarrow + \infty} - e^{i\frac{\pi}{4}}\int\nolimits^{+ \infty}_{0} e^{- t^{2}} dt
 \end{align*}
 
@@ -1014,7 +1014,7 @@ Otteniamo che
 \end{equation*}
 \item su $\gamma_{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| = e^{\Re (z)}$
 \begin{align*}
-0 & \leq \left| \int\nolimits_{\gamma_{2}} f(z) dz\right| = \left| \int\nolimits^{\pi /4}_{0} f\left(\gamma (t)\right) \gamma '(t) dt\right| = \left| \int\nolimits^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
+0 & \leq \left| \int\nolimits_{\gamma_{2}} f(z) dz\right| = \left| \int\nolimits^{\pi /4}_{0} f\left(\gamma (t)\right) \gamma'(t) dt\right| = \left| \int\nolimits^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
  & \leq R\int\nolimits^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits^{\pi /4}_{0} e^{\Re \left[ iR^{2}\left(\cos\left(2t\right) + i\sin\left(2t\right)\right)\right]} dt\\
  & = R\int\nolimits^{\pi /4}_{0} e^{- R^{2}\sin\left(2t\right)} dt = \left\{
  \begin{array}{c}
@@ -2974,7 +2974,7 @@ t\in [ \varepsilon, R]
 \begin{array}{c}
 z = Re^{it}\\
 t\in [ 0, 2\pi /3]
-\end{array}\right\} = \left| \int^{2\pi /3}_{0}\frac{e^{\alpha (\ln R + it)}}{1 + R^{3} e^{i3t}}\textcolor[rgb]{0.29, 0.56, 0.89}{\underbrace{Rie^{it}}_{\gamma '}} dt\right| = \int^{2\pi /3}_{0}\frac{\left| e^{\alpha (\ln R + it)}\right|}{\left| 1 + R^{3} e^{i3t}\right|}\textcolor[rgb]{0.82, 0.01, 0.11}{\left| Rie^{it}\right|} dt\\
+\end{array}\right\} = \left| \int^{2\pi /3}_{0}\frac{e^{\alpha (\ln R + it)}}{1 + R^{3} e^{i3t}}\textcolor[rgb]{0.29, 0.56, 0.89}{\underbrace{Rie^{it}}_{\gamma'}} dt\right| = \int^{2\pi /3}_{0}\frac{\left| e^{\alpha (\ln R + it)}\right|}{\left| 1 + R^{3} e^{i3t}\right|}\textcolor[rgb]{0.82, 0.01, 0.11}{\left| Rie^{it}\right|} dt\\
  & \textcolor[rgb]{0.96, 0.65, 0.14}{| | a| - | b| | \leq | a + b| \leq | a| + | b|}\\
  & \leq \int^{2\pi /3}_{0}\frac{\left| e^{\alpha (\ln R + it)}\right|}{\left| 1 - R^{3}\right|}\textcolor[rgb]{0.82, 0.01, 0.11}{R} dt \leq \frac{R^{\alpha + 1}}{\left| 1 - R^{3}\right|}\frac{2\pi}{3} dt\sim \frac{2\pi}{3}\frac{1}{R^{2 - \alpha}}\xrightarrow[\alpha \in (- 1, 2)]{R\rightarrow + \infty} 0\\
  & \\
@@ -2982,7 +2982,7 @@ t\in [ 0, 2\pi /3]
 \begin{array}{c}
 z = \varepsilon e^{it}\\
 t\in [ 0, 2\pi /3]
-\end{array}\right\} = \left| \int^{2\pi /3}_{0}\frac{e^{\alpha (\ln \varepsilon + it)}}{1 + \varepsilon^{3} e^{i3t}}\textcolor[rgb]{0.29, 0.56, 0.89}{\underbrace{\varepsilon ie^{it}}_{\gamma '}} dt\right| \leq \dotsc \leq \frac{2\pi}{3} \varepsilon^{\alpha + 1}\xrightarrow[\alpha \in (- 1, 2)]{\varepsilon \rightarrow 0^{+}} 0\\
+\end{array}\right\} = \left| \int^{2\pi /3}_{0}\frac{e^{\alpha (\ln \varepsilon + it)}}{1 + \varepsilon^{3} e^{i3t}}\textcolor[rgb]{0.29, 0.56, 0.89}{\underbrace{\varepsilon ie^{it}}_{\gamma'}} dt\right| \leq \dotsc \leq \frac{2\pi}{3} \varepsilon^{\alpha + 1}\xrightarrow[\alpha \in (- 1, 2)]{\varepsilon \rightarrow 0^{+}} 0\\
  & \\
 \implies & \ \ \frac{2\pi i \cdot \Res \left(f, e^{i\pi /3}\right)}{1 - e^{i\frac{2}{3} \pi (1 + \alpha)}} = I
 \end{aligned}
@@ -4143,13 +4143,13 @@ Tuttavia $f_{n} \in L^{1}_{\loc}(\RR)$, quindi sono anche associate a una distri
 \begin{equation*}
 \begin{aligned}
 \langle f_{n}, \varphi \rangle & = \int_{\RR} ne^{- n| x|} \varphi (x) dx = \int^{0}_{- \infty} ne^{nx} \varphi (x) dx + \int^{\infty}_{0} ne^{- nx} \varphi (x) dx\\
- & \overset{\text{ipp}}{=}\left[ e^{nx} \varphi (x)\right]^{0}_{- \infty} - \int^{0}_{- \infty} e^{nx} \varphi '(x) dx + \left[ - e^{- nx}\right]^{\infty}_{0} + \int^{\infty}_{0} e^{- nx} \varphi '(x) dx\\
- & = \varphi (0) - \underbrace{\int^{0}_{- \infty} e^{nx} \varphi '(x) dx}_{\xrightarrow{\text{Dom}} 0} + \varphi (0) + \underbrace{\int^{\infty}_{0} e^{- nx} \varphi '(x) dx}_{\xrightarrow{\text{Dom}} 0}\rightarrow 2\varphi (0)
+ & \overset{\text{ipp}}{=}\left[ e^{nx} \varphi (x)\right]^{0}_{- \infty} - \int^{0}_{- \infty} e^{nx} \varphi'(x) dx + \left[ - e^{- nx}\right]^{\infty}_{0} + \int^{\infty}_{0} e^{- nx} \varphi'(x) dx\\
+ & = \varphi (0) - \underbrace{\int^{0}_{- \infty} e^{nx} \varphi'(x) dx}_{\xrightarrow{\text{Dom}} 0} + \varphi (0) + \underbrace{\int^{\infty}_{0} e^{- nx} \varphi'(x) dx}_{\xrightarrow{\text{Dom}} 0}\rightarrow 2\varphi (0)
 \end{aligned}
 \end{equation*}
-Prendiamo $g_{n}(x) = e^{- nx} \varphi '(x)$ su $(0, + \infty)$, $g_{n}(x)\rightarrow 0$ puntualmente, inoltre
+Prendiamo $g_{n}(x) = e^{- nx} \varphi'(x)$ su $(0, + \infty)$, $g_{n}(x)\rightarrow 0$ puntualmente, inoltre
 \begin{equation*}
-| \varphi '(x)| \leq K\ \ \implies \ \ | g_{n}(x)| \leq Ke^{- x} \in L^{1}(0, + \infty)
+| \varphi'(x)| \leq K\ \ \implies \ \ | g_{n}(x)| \leq Ke^{- x} \in L^{1}(0, + \infty)
 \end{equation*}
 Quindi
 \begin{equation*}
@@ -4224,13 +4224,13 @@ f_{n} (x) = nx^{n} \chi_{(0, 1)} (x)\ \ \ \ \lim\limits_{n\rightarrow + \infty} 
 \fg{0.3}{11-5}
 \begin{equation*}
 \begin{aligned}
-\langle f_{n}, \varphi \rangle & = \int^{1}_{0} nx^{n} \varphi (x) dx\overset{\text{ipp}}{=}\left[\frac{n}{n + 1} x^{n + 1} \varphi (x)\right]^{1}_{0} - \int^{1}_{0}\frac{n}{n + 1} x^{n + 1} \varphi '(x) dx\\
- & = \frac{n}{n + 1} \varphi (1) - \frac{n}{n + 1}\underbrace{\int^{1}_{0} x^{n + 1} \varphi '(x) dx}_{\xrightarrow{\text{Dom}} 0}\xrightarrow{n\rightarrow + \infty} \varphi (1)
+\langle f_{n}, \varphi \rangle & = \int^{1}_{0} nx^{n} \varphi (x) dx\overset{\text{ipp}}{=}\left[\frac{n}{n + 1} x^{n + 1} \varphi (x)\right]^{1}_{0} - \int^{1}_{0}\frac{n}{n + 1} x^{n + 1} \varphi'(x) dx\\
+ & = \frac{n}{n + 1} \varphi (1) - \frac{n}{n + 1}\underbrace{\int^{1}_{0} x^{n + 1} \varphi'(x) dx}_{\xrightarrow{\text{Dom}} 0}\xrightarrow{n\rightarrow + \infty} \varphi (1)
 \end{aligned}
 \end{equation*}
-Dato che $g_{n}(x) = x^{n + 1} \varphi '(x)\xrightarrow{n\rightarrow + \infty} 0, \ \forall x\in (0, 1)$
+Dato che $g_{n}(x) = x^{n + 1} \varphi'(x)\xrightarrow{n\rightarrow + \infty} 0, \ \forall x\in (0, 1)$
 \begin{equation*}
-| g_{n}(x)| \leq \varphi '(x) \in L^{1}
+| g_{n}(x)| \leq \varphi'(x) \in L^{1}
 \end{equation*}
 In conclusione
 \begin{equation*}
@@ -4624,21 +4624,21 @@ Quindi converge puntualmente alla funzione limite $f(x) \equiv 0\ \forall x\neq 
 \begin{align*}
 \langle f_{n}, \varphi \rangle & = \int_{\RR} f_{n}(x) \varphi (x) dx\\
  & = \int^{1}_{- \infty} ne^{n(x - 1)} \varphi (x) dx\\
- & \overset{\text{ipp}}{=}\left[ e^{n(x - 1)} \varphi (x)\right]^{1}_{- \infty} - \int^{1}_{- \infty} e^{n(x - 1)} \varphi '(x) dx\\
- & = \varphi (1) - \int^{1}_{- \infty} e^{n(x - 1)} \varphi '(x) dx
+ & \overset{\text{ipp}}{=}\left[ e^{n(x - 1)} \varphi (x)\right]^{1}_{- \infty} - \int^{1}_{- \infty} e^{n(x - 1)} \varphi'(x) dx\\
+ & = \varphi (1) - \int^{1}_{- \infty} e^{n(x - 1)} \varphi'(x) dx
 \end{align*}
 
 Obiettivo: calcolare il limite per $n\rightarrow + \infty $
 \begin{align*}
-\lim\limits_{n\rightarrow + \infty} \langle f_{n}, \varphi \rangle & = \lim\limits_{n\rightarrow + \infty}\left[ \varphi (1) - \int^{1}_{- \infty} e^{n(x - 1)} \varphi '(x) dx\right]\\
- & = \varphi (1) - \lim\limits_{n\rightarrow + \infty}\int^{1}_{- \infty} e^{n(x - 1)} \varphi '(x) dx\\
- & \overset{\text{Dom}}{=} \varphi (1) - \int^{1}_{- \infty}\underbrace{\lim\limits_{n\rightarrow + \infty} e^{n(x - 1)} \varphi '(x)}_{= 0} dx = \varphi (1)
+\lim\limits_{n\rightarrow + \infty} \langle f_{n}, \varphi \rangle & = \lim\limits_{n\rightarrow + \infty}\left[ \varphi (1) - \int^{1}_{- \infty} e^{n(x - 1)} \varphi'(x) dx\right]\\
+ & = \varphi (1) - \lim\limits_{n\rightarrow + \infty}\int^{1}_{- \infty} e^{n(x - 1)} \varphi'(x) dx\\
+ & \overset{\text{Dom}}{=} \varphi (1) - \int^{1}_{- \infty}\underbrace{\lim\limits_{n\rightarrow + \infty} e^{n(x - 1)} \varphi'(x)}_{= 0} dx = \varphi (1)
 \end{align*}
 
-Posso applicare il teorema della convergenza dominata perché $\varphi \in D(\RR)$. $\exists M$ tale che $| \varphi '(x)| < M, \ \forall x\in \RR $.
+Posso applicare il teorema della convergenza dominata perché $\varphi \in D(\RR)$. $\exists M$ tale che $| \varphi'(x)| < M, \ \forall x\in \RR $.
 
 \begin{equation*}
-\left| e^{n(x - 1)} \varphi '(x)\right| \leq Me^{x - 1} \in L^{1}((- \infty, 1))
+\left| e^{n(x - 1)} \varphi'(x)\right| \leq Me^{x - 1} \in L^{1}((- \infty, 1))
 \end{equation*}
 
 Quindi concludiamo che
@@ -4691,13 +4691,13 @@ Per ogni $\varphi \in D(\RR)$
  & = n\left\{\int^{0}_{- \frac{1}{n}}\sqrt{1 + nx} \cdot \varphi (x) dx + \int^{\frac{1}{n}}_{0}\sqrt{1 - nx} \cdot \varphi (x) dx\right\}\\
  &
 \begin{array}{c c}
-\varphi (x) & \varphi '(x)\\
+\varphi (x) & \varphi'(x)\\
 \frac{1}{n}\frac{(1 + nx)^{3/2}}{\frac{3}{2}} & \sqrt{1 + nx}\\
 - \frac{1}{n}\frac{(1 - nx)^{3/2}}{\frac{3}{2}} & \sqrt{1 - nx}
 \end{array}\\
- & \overset{\text{ipp}}{=} n\left\{\left[\frac{2}{3n}\sqrt{(1 + nx)^{3}} \varphi (x)\right]^{0}_{- 1/n} - \frac{2}{3n}\int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi '(x)dx + \right. \\
- & \left. + \left[ - \frac{2}{3n}\sqrt{(1 - nx)^{3}} \varphi (x)\right]^{1/n}_{0} + \frac{2}{3n}\int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi '(x)dx\right\}\\
- & = 2 \cdot \frac{2}{3} \varphi (0) + \frac{2}{3}\left\{- \int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi '(x)dx + \int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi '(x)dx\right\}
+ & \overset{\text{ipp}}{=} n\left\{\left[\frac{2}{3n}\sqrt{(1 + nx)^{3}} \varphi (x)\right]^{0}_{- 1/n} - \frac{2}{3n}\int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi'(x)dx + \right. \\
+ & \left. + \left[ - \frac{2}{3n}\sqrt{(1 - nx)^{3}} \varphi (x)\right]^{1/n}_{0} + \frac{2}{3n}\int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi'(x)dx\right\}\\
+ & = 2 \cdot \frac{2}{3} \varphi (0) + \frac{2}{3}\left\{- \int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi'(x)dx + \int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi'(x)dx\right\}
 \end{align*}
 
 Quindi
@@ -4743,12 +4743,12 @@ x + x^{2}, & 0 < x < 2\\
 
 Trovare l'equivalente in $D'(\RR)$ di
 \begin{equation*}
-u(x) = x\delta '_{0} (x)
+u(x) = x\delta'_{0} (x)
 \end{equation*}
 
 \Esercizio{}
 
-Calcolare il limite delle $f_{n}$ in $L^{p} (\RR)$, $D'(\RR)$ e $\Sc '(\RR)$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
+Calcolare il limite delle $f_{n}$ in $L^{p} (\RR)$, $D'(\RR)$ e $\Sc'(\RR)$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
 \begin{equation*}
 g(x) = H(x)e^{- x} \ \ \ \ f_{n} (x) = g(x)*\chi_{(0, n)}
 \end{equation*}
@@ -4770,7 +4770,7 @@ f(x) =
 
 Dato che $f\in L^{1}_{\loc} (\RR)\implies f\in D'(\RR)$.
 
-Sappiamo anche che $f\in \Sc '(\RR)$, lo spazio delle distribuzioni temperate.
+Sappiamo anche che $f\in \Sc'(\RR)$, lo spazio delle distribuzioni temperate.
 
 \fg{0.7}{13-1}
 
@@ -4780,8 +4780,8 @@ Calcolo quindi la derivata nel senso delle distribuzioni. Ricordiamo innanzitutt
 \end{equation*}
 Calcoliamo
 \begin{align*}
-\langle f', \varphi \rangle & = - \langle f, \varphi '\rangle = - \int_{\RR}\arctan\left(\frac{1}{x}\right) \varphi '(x)dx = \\
- & = - \int^{0}_{- \infty}\arctan\left(\frac{1}{x}\right) \varphi '(x)dx - \int^{+ \infty}_{0}\arctan\left(\frac{1}{x}\right) \varphi '(x)dx = \\
+\langle f', \varphi \rangle & = - \langle f, \varphi'\rangle = - \int_{\RR}\arctan\left(\frac{1}{x}\right) \varphi'(x)dx = \\
+ & = - \int^{0}_{- \infty}\arctan\left(\frac{1}{x}\right) \varphi'(x)dx - \int^{+ \infty}_{0}\arctan\left(\frac{1}{x}\right) \varphi'(x)dx = \\
  & \overset{\text{ipp}}{=} - \left[\arctan\left(\frac{1}{x}\right) \varphi (x)\right]^{0}_{- \infty} + \int^{+ \infty}_{0}\frac{- 1}{1 + x^{2}} \varphi (x) dx\\
  & \ \ \ \ \ - \left[\arctan\left(\frac{1}{x}\right) \varphi (x)\right]^{+ \infty}_{0} + \int^{+ \infty}_{0}\frac{- 1}{1 + x^{2}} \varphi (x) dx\\
  & = \frac{\pi}{2} \varphi (0) + \frac{\pi}{2} \varphi (0) + \int_{\RR}\frac{- 1}{1 + x^{2}} \varphi (x)dx\\
@@ -4801,8 +4801,8 @@ Dato che $f\in L^{1}_{\loc} (0, 5)\implies f\in D'(0, 5)$.
 
 Questo significa che la funzione $\varphi (x)$ sarà identicamente nulla su qualsiasi intervallo esterno a $(0, 5)$, cioé in particolare $\varphi (0) = \varphi (5) = 0$.
 \begin{align*}
-\langle f', \varphi \rangle & = - \langle f, \varphi '\rangle = - \int^{5}_{0} f(x)\varphi '(x)dx\\
- & = - \left\{\int^{2}_{0} (x + x^{2})\varphi '(x)dx + \int^{5}_{2} 6\varphi '(x)dx\right\}\\
+\langle f', \varphi \rangle & = - \langle f, \varphi'\rangle = - \int^{5}_{0} f(x)\varphi'(x)dx\\
+ & = - \left\{\int^{2}_{0} (x + x^{2})\varphi'(x)dx + \int^{5}_{2} 6\varphi'(x)dx\right\}\\
  & \overset{\text{ipp}}{=} - \left\{\left[ (x + x^{2})\varphi (x)\right]^{2}_{0} - \int^{2}_{0} (1 + 2x)\varphi (x)dx + [ 6\varphi (x)]^{5}_{2}\right\}\\
  & = - \left\{\cancel{6\varphi (2)} - 0 - \int^{2}_{0}(1 + 2x) \varphi (x) dx + \cancel{6\varphi (5)} - \cancel{6\varphi (2)}\right\}\\
  & = \int^{2}_{0}(1 + 2x) \varphi (x) dx
@@ -4822,7 +4822,7 @@ f'(x)\overset{D'(0, 5)}{=} g(x)
 Derivata seconda. Si prosegue in maniera analoga:
 \begin{equation*}
 \begin{aligned}
-\langle f'', \varphi \rangle & = - \langle f', \varphi '\rangle = - \langle g, \varphi '\rangle = - \int^{2}_{0} (1 + 2x)\varphi '(x)dx & \\
+\langle f'', \varphi \rangle & = - \langle f', \varphi'\rangle = - \langle g, \varphi'\rangle = - \int^{2}_{0} (1 + 2x)\varphi'(x)dx & \\
  & = - \left\{[ (1 + 2x)\varphi (x)]^{2}_{0} - \int^{2}_{0} 2\varphi (x)dx\right\} & \\
  & = - \left\{5\varphi (2) - 0 - \int^{2}_{0} 2\varphi (x)dx\right\} & h(x) =
 \begin{cases}
@@ -4895,11 +4895,11 @@ Si può dimostrare che se $v\in D'(\RR)$, $\psi \in C^{\infty}(\RR) \implies \ps
 \end{rem}
 Quindi
 \begin{equation*}
-\langle x\delta '_{0} (x), \varphi \rangle = \langle \delta '_{0} (x), x\varphi (x) \rangle = - \langle \delta_{0}, x\varphi '(x) + \varphi (x) \rangle = - \varphi (0) = \langle - \delta_{0}, \varphi \rangle
+\langle x\delta'_{0} (x), \varphi \rangle = \langle \delta'_{0} (x), x\varphi (x) \rangle = - \langle \delta_{0}, x\varphi'(x) + \varphi (x) \rangle = - \varphi (0) = \langle - \delta_{0}, \varphi \rangle
 \end{equation*}
 Cioè in $D'(\RR)$
 \begin{equation*}
-x\delta '_{0} = - \delta_{0}
+x\delta'_{0} = - \delta_{0}
 \end{equation*}
 \textit{Esercizio per casa.}
 
@@ -4986,7 +4986,7 @@ Quindi
 \begin{equation*}
 f_{n}\xrightarrow{D'(\RR)} F
 \end{equation*}
-\item Convergenza in $\Sc '(\RR)$?
+\item Convergenza in $\Sc'(\RR)$?
 \begin{equation*}
 \langle f_{n}, \psi \rangle \rightarrow \langle F, \psi \rangle \ \ \forall \psi \in S(\RR) \ \ \iff \ \ \langle F - f_{n}, \psi \rangle \rightarrow 0
 \end{equation*}
@@ -5122,7 +5122,7 @@ f'(x)\overset{D'(\RR)}{\sim}\sum\limits^{\infty}_{k = 0}\frac{4}{\pi}\cos((2k + 
 \begin{defn}
 Se \ $u\in D'(\RR)$, allora la derivata distribuzionale di $u$ è la distribuzione $u'\in D'(\RR)$ definita univocamente da
 \begin{equation*}
-\int_{\RR} u'\varphi = - \int_{\RR} u\varphi '\ \ \forall \varphi \in D(\RR)
+\int_{\RR} u'\varphi = - \int_{\RR} u\varphi'\ \ \forall \varphi \in D(\RR)
 \end{equation*}
 \end{defn}
 \begin{defn}
@@ -5142,7 +5142,7 @@ Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\in
 Provare che valgono le seguenti identità in $D'(\RR)$:
 \begin{enumerate}
 \item $x\delta (x) = 0$
-\item $x\delta '(x) = - \delta (x)$
+\item $x\delta'(x) = - \delta (x)$
 \end{enumerate}
 
 \Esercizio{(TDE 6/07/2015)}
@@ -5173,7 +5173,7 @@ Si consideri
 \begin{equation*}
 f_{n}(x) = \frac{n}{1 + n^{2} x^{2}}
 \end{equation*}
-provare che $f_{n}\rightarrow \pi \delta $ in $\Sc '(\RR)$ e in $D'(\RR)$.
+provare che $f_{n}\rightarrow \pi \delta $ in $\Sc'(\RR)$ e in $D'(\RR)$.
 
 \Esercizio{}
 
@@ -5181,7 +5181,7 @@ Si considerino
 \begin{equation*}
 f_{n}(x) = \frac{1}{\sqrt{n}} \chi_{[ 0, n]}(x) \ \ \ \ \ \ \ \ g_{n}(x) = \sin(nx) \chi_{[ 0, 7]}(x)
 \end{equation*}
-Stabilire se le successioni sono convergenti in $L^{1}(\RR), L^{2}(\RR), L^{\infty}(\RR), D'(\RR), \Sc '(\RR)$.
+Stabilire se le successioni sono convergenti in $L^{1}(\RR), L^{2}(\RR), L^{\infty}(\RR), D'(\RR), \Sc'(\RR)$.
 
 \Esercizio{}
 
@@ -5222,9 +5222,9 @@ detta \textbf{Funzione di Heaviside}.
 \item $\forall \varphi \in D(\RR)$
 \begin{gather*}
 \begin{aligned}
-\langle x\delta ', \varphi \rangle & = \langle \delta ', x\varphi \rangle = - \langle \delta, (x\varphi) '\rangle \\
- & = - \langle \delta, \varphi + x\varphi '\rangle \\
- & = - \langle \delta, \varphi \rangle - \langle \delta, x\varphi '\rangle = - \varphi (0)
+\langle x\delta', \varphi \rangle & = \langle \delta', x\varphi \rangle = - \langle \delta, (x\varphi)'\rangle \\
+ & = - \langle \delta, \varphi + x\varphi'\rangle \\
+ & = - \langle \delta, \varphi \rangle - \langle \delta, x\varphi'\rangle = - \varphi (0)
 \end{aligned}\\
 \qed
 \end{gather*}
@@ -5236,7 +5236,7 @@ Per induzione
 \begin{itemize}
 \item La formula è vera per $n = 1$, per l'esercizio precedente
 \begin{equation*}
-x\delta '(x) = - \delta (x)
+x\delta'(x) = - \delta (x)
 \end{equation*}
 \item Supponiamo vera la tesi per $n$ generico
 \begin{equation*}
@@ -5246,11 +5246,11 @@ x\delta '(x) = - \delta (x)
 dobbiamo mostrare che vale anche per $n + 1$
 \begin{gather*}
 \begin{aligned}
-\langle x^{n + 1} \delta^{(n + 1)}, \varphi \rangle & = \langle \delta^{(n + 1)}, x^{n + 1} \varphi \rangle = - \langle \delta^{(n)}, \left(x^{n + 1} \varphi \right) '\rangle \\
- & = - \langle \delta^{(n)}, (n + 1) x^{n} \varphi + x^{n + 1} \varphi '\rangle \\
- & = - \langle x^{n} \delta^{(n)}, (n + 1) \varphi + x\varphi '\rangle \\
- & \overset{\text{induz.}}{=} - \langle (- 1)^{n} n!\delta, (n + 1) \varphi + x\varphi '\rangle \\
- & = (- 1)^{n + 1}(n + 1) !\langle \delta, \varphi \rangle \underbrace{- (- 1)^{n} n!\langle \delta, x\varphi '\rangle}_{= 0}\\
+\langle x^{n + 1} \delta^{(n + 1)}, \varphi \rangle & = \langle \delta^{(n + 1)}, x^{n + 1} \varphi \rangle = - \langle \delta^{(n)}, \left(x^{n + 1} \varphi \right)'\rangle \\
+ & = - \langle \delta^{(n)}, (n + 1) x^{n} \varphi + x^{n + 1} \varphi'\rangle \\
+ & = - \langle x^{n} \delta^{(n)}, (n + 1) \varphi + x\varphi'\rangle \\
+ & \overset{\text{induz.}}{=} - \langle (- 1)^{n} n!\delta, (n + 1) \varphi + x\varphi'\rangle \\
+ & = (- 1)^{n + 1}(n + 1) !\langle \delta, \varphi \rangle \underbrace{- (- 1)^{n} n!\langle \delta, x\varphi'\rangle}_{= 0}\\
  & = (- 1)^{n + 1}(n + 1) !\langle \delta, \varphi \rangle
 \end{aligned}\\
 \qed
@@ -5265,11 +5265,11 @@ Questi termini esistono finiti perché $f', g'$ sono integrabili.
 
 $\forall \varphi \in D(\RR)$
 \begin{equation*}
-\langle u', \varphi \rangle = - \langle u, \varphi '\rangle = - \int^{+ \infty}_{- \infty} u(x) \varphi '(x) dx
+\langle u', \varphi \rangle = - \langle u, \varphi'\rangle = - \int^{+ \infty}_{- \infty} u(x) \varphi'(x) dx
 \end{equation*}
 la funzione $u$ è definita a tratti
 \begin{equation*}
-- \int^{+ \infty}_{- \infty} u(x) \varphi '(x) dx = -\int^{a}_{- \infty} f(x) \varphi '(x) dx - \int^{+ \infty}_{a} g(x) \varphi '(x) dx = (\star)
+- \int^{+ \infty}_{- \infty} u(x) \varphi'(x) dx = -\int^{a}_{- \infty} f(x) \varphi'(x) dx - \int^{+ \infty}_{a} g(x) \varphi'(x) dx = (\star)
 \end{equation*}
 integro per parti
 \begin{gather*}
@@ -5289,13 +5289,13 @@ integro per parti
 - 1, & x < 0
 \end{cases}
 \end{equation*}
-Per $x > 0$, $\sgn '(x) = 0$.
+Per $x > 0$, $\sgn'(x) = 0$.
 
-Per $x < 0$, $\sgn '(x) = 0$.
+Per $x < 0$, $\sgn'(x) = 0$.
 
 $\sgn(x)$ presenta un salto in $x = 0$ di ampiezza $2$.
 \begin{equation*}
-\implies \ \ \sgn '(x) = 0 + 0 + 2\delta (x)
+\implies \ \ \sgn'(x) = 0 + 0 + 2\delta (x)
 \end{equation*}
 \textit{Esempio.}
 \begin{equation*}
@@ -5318,7 +5318,7 @@ $f(x)$ presenta un salto in $x = 0$ di ampiezza $1$.
 
 \fg{0.45}{14-4}
 
-Se dimostro in $\Sc '(\RR)$, quella in $D'(\RR)$ segue automaticamente.
+Se dimostro in $\Sc'(\RR)$, quella in $D'(\RR)$ segue automaticamente.
 
 Devo provare che
 \begin{equation*}
@@ -5364,7 +5364,7 @@ ma allora
 f_{n}\xrightarrow[n\rightarrow + \infty ]{L^{1}_{\loc}(\RR)} f\equiv 0\ \
 \begin{cases}
 \implies \ \ f_{n}\xrightarrow[n\rightarrow + \infty ]{D'(\RR)} f\equiv 0\\
-\implies \ \ f_{n}\xrightarrow[n\rightarrow + \infty ]{\Sc '(\RR)} f\equiv 0
+\implies \ \ f_{n}\xrightarrow[n\rightarrow + \infty ]{\Sc'(\RR)} f\equiv 0
 \end{cases}
 \end{equation*}
 Stimiamo
@@ -5379,9 +5379,9 @@ Poi
 
 Studiamo le $g_{n}(x)$
 
-Dimostro che $g_{n}$ converge in $\Sc '(\RR)$, da cui si ottiene che $g_{n}$ converge anche in $D'(\RR)$.
+Dimostro che $g_{n}$ converge in $\Sc'(\RR)$, da cui si ottiene che $g_{n}$ converge anche in $D'(\RR)$.
 \begin{equation*}
-\int_{\RR} g_{n}(x) \varphi (x) dx = \overset{\text{ipp}}{=} - \frac{1}{n}[\cos(nx) \varphi (x)]^{7}_{0} + \int^{7}_{0}\frac{1}{n}\cos(nx) \varphi '(x) dx\xrightarrow{n\rightarrow + \infty} 0
+\int_{\RR} g_{n}(x) \varphi (x) dx = \overset{\text{ipp}}{=} - \frac{1}{n}[\cos(nx) \varphi (x)]^{7}_{0} + \int^{7}_{0}\frac{1}{n}\cos(nx) \varphi'(x) dx\xrightarrow{n\rightarrow + \infty} 0
 \end{equation*}
 Analizziamo in $L^{\infty}$
 \begin{equation*}
@@ -5454,34 +5454,34 @@ $\forall n\in \NN, \ g_{n} \in L^{1}_{\loc}(\RR)$ e $\forall \varphi \in D(\RR)$
 
 integriamo per parti con
 \begin{gather*}
-\textcolor[rgb]{0.82, 0.01, 0.11}{f}\textcolor[rgb]{0.82, 0.01, 0.11}{(}\textcolor[rgb]{0.82, 0.01, 0.11}{x}\textcolor[rgb]{0.82, 0.01, 0.11}{)} = x\varphi (x) \ \ \rightarrow \ \ f'(x) = \varphi (x) + x\varphi '(x)\\
+\textcolor[rgb]{0.82, 0.01, 0.11}{f}\textcolor[rgb]{0.82, 0.01, 0.11}{(}\textcolor[rgb]{0.82, 0.01, 0.11}{x}\textcolor[rgb]{0.82, 0.01, 0.11}{)} = x\varphi (x) \ \ \rightarrow \ \ f'(x) = \varphi (x) + x\varphi'(x)\\
 g(x) = - ne^{- nx} \ \ \rightarrow \ \ g'(x) = n^{2} e^{- nx}
 \end{gather*}
 
 da cui
 \begin{equation*}
-\overset{\text{ipp}}{=}\underbrace{\left[ - ne^{- nx} x\varphi (x)\right]^{+ \infty}_{0}}_{= 0} + \int^{+ \infty}_{0} ne^{- nx}[\textcolor[rgb]{0.25, 0.46, 0.02}{\varphi}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)}\textcolor[rgb]{0.25, 0.46, 0.02}{+ x\varphi '}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)}] dx
+\overset{\text{ipp}}{=}\underbrace{\left[ - ne^{- nx} x\varphi (x)\right]^{+ \infty}_{0}}_{= 0} + \int^{+ \infty}_{0} ne^{- nx}[\textcolor[rgb]{0.25, 0.46, 0.02}{\varphi}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)}\textcolor[rgb]{0.25, 0.46, 0.02}{+ x\varphi'}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)}] dx
 \end{equation*}
 
 integriamo per parti con
 \begin{gather*}
-\textcolor[rgb]{0.25, 0.46, 0.02}{f}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)} = \varphi (x) + x\varphi '(x) \ \ \rightarrow \ \ f'(x) = 2\varphi '(x) + x\varphi ''(x)\\
+\textcolor[rgb]{0.25, 0.46, 0.02}{f}\textcolor[rgb]{0.25, 0.46, 0.02}{(}\textcolor[rgb]{0.25, 0.46, 0.02}{x}\textcolor[rgb]{0.25, 0.46, 0.02}{)} = \varphi (x) + x\varphi'(x) \ \ \rightarrow \ \ f'(x) = 2\varphi'(x) + x\varphi''(x)\\
 g(x) = - e^{- nx} \ \ \rightarrow \ \ g'(x) = ne^{- nx}
 \end{gather*}
 
 da cui
 \begin{gather*}
-\overset{\text{ipp}}{=}\underbrace{\left[ - e^{- nx}(\varphi (x) + x\varphi '(x))\right]^{+ \infty}_{0}}_{\varphi (0)} + \int^{+ \infty}_{0} e^{- nx}[ 2\varphi '(x) + x\varphi ''(x)] dx\\
+\overset{\text{ipp}}{=}\underbrace{\left[ - e^{- nx}(\varphi (x) + x\varphi'(x))\right]^{+ \infty}_{0}}_{\varphi (0)} + \int^{+ \infty}_{0} e^{- nx}[ 2\varphi'(x) + x\varphi''(x)] dx\\
 \begin{aligned}
-\implies & \langle g_{n}, \varphi \rangle = \varphi (0) + \int^{+ \infty}_{0} e^{- nx}[ 2\varphi '(x) + x\varphi ''(x)] dx\\
-\implies & \lim\limits_{n\rightarrow + \infty} \langle g_{n}, \varphi \rangle = \varphi (0) + \lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} e^{- nx}[ 2\varphi '(x) + x\varphi ''(x)] dx\\
-\overset{\text{Dom}}{\implies} & \lim\limits_{n\rightarrow + \infty} \langle g_{n}, \varphi \rangle = \varphi (0) + \int^{+ \infty}_{0}\lim\limits_{n\rightarrow + \infty} e^{- nx}[ 2\varphi '(x) + x\varphi ''(x)] dx = \varphi (0)
+\implies & \langle g_{n}, \varphi \rangle = \varphi (0) + \int^{+ \infty}_{0} e^{- nx}[ 2\varphi'(x) + x\varphi''(x)] dx\\
+\implies & \lim\limits_{n\rightarrow + \infty} \langle g_{n}, \varphi \rangle = \varphi (0) + \lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} e^{- nx}[ 2\varphi'(x) + x\varphi''(x)] dx\\
+\overset{\text{Dom}}{\implies} & \lim\limits_{n\rightarrow + \infty} \langle g_{n}, \varphi \rangle = \varphi (0) + \int^{+ \infty}_{0}\lim\limits_{n\rightarrow + \infty} e^{- nx}[ 2\varphi'(x) + x\varphi''(x)] dx = \varphi (0)
 \end{aligned}
 \end{gather*}
 
-essendo $\varphi \in D(\RR) \implies \exists M > 0$ tale che $| 2\varphi '(x) + x\varphi ''(x)| < M, \ \forall x\in \RR $ e
+essendo $\varphi \in D(\RR) \implies \exists M > 0$ tale che $| 2\varphi'(x) + x\varphi''(x)| < M, \ \forall x\in \RR $ e
 \begin{equation*}
-\left| e^{- nx}[ 2\varphi '(x) + x\varphi ''(x)]\right| \leq Me^{- x} \in L^{1}([ 0, + \infty))
+\left| e^{- nx}[ 2\varphi'(x) + x\varphi''(x)]\right| \leq Me^{- x} \in L^{1}([ 0, + \infty))
 \end{equation*}
 
 quindi
@@ -5504,10 +5504,10 @@ integrazione per parti due volte per entrambi gli integrali e teorema della conv
 
 ponendo $f = x\varphi (x)$ e $g'$ l'altro pezzo per entrambi gli integrali
 \begin{align*}
- & \overset{\text{ipp}}{=}\cancel{\left[ ne^{nx} \cdot x\varphi (x)\right]^{0}_{- \infty}} - \int^{0}_{- \infty} ne^{nx}[ \varphi (x) + x\varphi '(x)] dx\\
- & \ \ \ \ + \cancel{\left[ - ne^{- nx} \cdot x\varphi (x)\right]^{\infty}_{0}} + \int^{\infty}_{0} ne^{- nx}[ \varphi (x) + x\varphi '(x)] dx\\
- & \overset{\text{ipp}}{=} - \left\{\left[ e^{nx} \cdot (\varphi (x) + x\varphi '(x))\right]^{0}_{- \infty} - \int^{0}_{- \infty} e^{nx}[ \varphi '(x) - \varphi '(x) - x\varphi ''(x)] dx\right\}\\
- & \ \ \ \ + \left\{\left[ - e^{- nx}(\varphi (x) + x\varphi '(x))\right]^{\infty}_{0} + \int^{\infty}_{0} e^{- nx}[ \varphi '(x) + \varphi '(x) + x\varphi ''(x)] dx\right\}
+ & \overset{\text{ipp}}{=}\cancel{\left[ ne^{nx} \cdot x\varphi (x)\right]^{0}_{- \infty}} - \int^{0}_{- \infty} ne^{nx}[ \varphi (x) + x\varphi'(x)] dx\\
+ & \ \ \ \ + \cancel{\left[ - ne^{- nx} \cdot x\varphi (x)\right]^{\infty}_{0}} + \int^{\infty}_{0} ne^{- nx}[ \varphi (x) + x\varphi'(x)] dx\\
+ & \overset{\text{ipp}}{=} - \left\{\left[ e^{nx} \cdot (\varphi (x) + x\varphi'(x))\right]^{0}_{- \infty} - \int^{0}_{- \infty} e^{nx}[ \varphi'(x) - \varphi'(x) - x\varphi''(x)] dx\right\}\\
+ & \ \ \ \ + \left\{\left[ - e^{- nx}(\varphi (x) + x\varphi'(x))\right]^{\infty}_{0} + \int^{\infty}_{0} e^{- nx}[ \varphi'(x) + \varphi'(x) + x\varphi''(x)] dx\right\}
 \end{align*}
 
 al limite i due integrali si cancellano per convergenza dominata, rimane
@@ -5569,7 +5569,7 @@ f\notin C^{\infty} (\RR)\ \ \implies \ \ f\notin \Sc (\RR) \ \ \implies \ \ \hat
 \end{equation*}
 In compenso visto che $f$ è sicuramente una distribuzione temperata anche $\hat{f}$ lo sarà
 \begin{equation*}
-f\in \Sc '(\RR) \ \ \implies \ \ \hat{f} \in \Sc '(\RR)
+f\in \Sc'(\RR) \ \ \implies \ \ \hat{f} \in \Sc'(\RR)
 \end{equation*}
 Inoltre
 \begin{equation*}
@@ -5710,11 +5710,11 @@ u(x) = e^{- x^{2}} \ \ \implies \ \ u^{'} (x) = -2xe^{- x^{2}} \ \ \implies \ \ 
 \end{equation*}
 Ora
 \begin{equation*}
-\Fc \{u\} = \hat{u} \ \ \ \ \Fc \{xu\} = i\frac{d}{d\xi}\hat{u} \ \ \ \ \Fc \{u'\} = i\xi \hat{u} '
+\Fc \{u\} = \hat{u} \ \ \ \ \Fc \{xu\} = i\frac{d}{d\xi}\hat{u} \ \ \ \ \Fc \{u'\} = i\xi \hat{u}'
 \end{equation*}
 L'equazione differenziale si riscrive
 \begin{equation*}
-i\xi \hat{u} + 2i\hat{u} ' = 0\ \ \implies \ \ \hat{u} ' + \frac{\xi}{2}\hat{u} = 0\ \ \implies \ \ \hat{u}(\xi) = Ce^{- \int \frac{\xi}{2} d\xi} = Ce^{- \xi^{2} /4}
+i\xi \hat{u} + 2i\hat{u}' = 0\ \ \implies \ \ \hat{u}' + \frac{\xi}{2}\hat{u} = 0\ \ \implies \ \ \hat{u}(\xi) = Ce^{- \int \frac{\xi}{2} d\xi} = Ce^{- \xi^{2} /4}
 \end{equation*}
 Determiniamo la costante
 \begin{equation*}
@@ -5910,7 +5910,7 @@ Considerando la dualità con una qualsiasi funzione dello spazio di Schwartz que
 \begin{gather*}
 \langle (u - u_{n}), \psi \rangle = \int^{- n}_{- \infty}\frac{1}{\sqrt{| x|}} \psi (x) dx + \ \int^{+ \infty}_{n}\frac{1}{\sqrt{x}} \psi (x) dx\\
 \\
-| \langle (u - u_{n}), \ \psi \rangle | \leq \frac{1}{\sqrt{n}} \ \int_{\RR}| \psi (x)| dx\xrightarrow{n\rightarrow \infty} 0\ \ \implies \ \ u_{n}\xrightarrow[\Sc ']{n\rightarrow \infty} u
+| \langle (u - u_{n}), \ \psi \rangle | \leq \frac{1}{\sqrt{n}} \ \int_{\RR}| \psi (x)| dx\xrightarrow{n\rightarrow \infty} 0\ \ \implies \ \ u_{n}\xrightarrow[\Sc']{n\rightarrow \infty} u
 \end{gather*}
 Ne consegue che possiamo scrivere:
 \begin{equation*}
@@ -6222,7 +6222,7 @@ u'(x) = - 2xu(x), \ \ x\in \RR
 \end{equation*}
 in quanto $e^{- x^{2}}$ è soluzione di questa equazione differenziale. Andiamo a trasformare tutti i termini di questa equazione.
 \begin{equation*}
-i\xi \hat{u}(\xi) = - 2i\hat{u} '(\xi) \ \ \implies \ \ \hat{u}(\xi) = Ce^{- \frac{\xi^{2}}{4}}
+i\xi \hat{u}(\xi) = - 2i\hat{u}'(\xi) \ \ \implies \ \ \hat{u}(\xi) = Ce^{- \frac{\xi^{2}}{4}}
 \end{equation*}
 per cui si deve scegliere
 \begin{equation*}
@@ -6876,14 +6876,14 @@ C + \frac{1}{2\alpha} = 0\ \ \implies \ \ u(x) = - \frac{1}{2\alpha} e^{- | x|}
 \begin{itemize}
 \item $\Fc \{u\} = \hat{u}$
 \item $\Fc \{u''\} = - \xi^{2}\hat{u}$
-\item $\Fc \{xu'\} = i\frac{d}{d\xi}\Fc \{u'\} = i\frac{d}{d\xi}(i\xi \hat{u}) = - (\hat{u} + \xi \hat{u} ')$
+\item $\Fc \{xu'\} = i\frac{d}{d\xi}\Fc \{u'\} = i\frac{d}{d\xi}(i\xi \hat{u}) = - (\hat{u} + \xi \hat{u}')$
 \end{itemize}
 
 Allora
 \begin{equation*}
 \begin{array}{l}
-\implies \ \ - \xi^{2}\hat{u} - 2\left(\cancel{\hat{u}} + \xi \hat{u} '\right) + \cancel{2\hat{u}} = 0\ \ \implies \ \ 2\xi \hat{u} ' + \xi^{2}\hat{u} = 0\\
-\implies \ \ \hat{u} ' + \frac{\xi}{2}\hat{u} = 0\ \ \implies \ \ \hat{u}(\xi) = Ce^{- \frac{\xi^{2}}{4}}
+\implies \ \ - \xi^{2}\hat{u} - 2\left(\cancel{\hat{u}} + \xi \hat{u}'\right) + \cancel{2\hat{u}} = 0\ \ \implies \ \ 2\xi \hat{u}' + \xi^{2}\hat{u} = 0\\
+\implies \ \ \hat{u}' + \frac{\xi}{2}\hat{u} = 0\ \ \implies \ \ \hat{u}(\xi) = Ce^{- \frac{\xi^{2}}{4}}
 \end{array}
 \end{equation*}
 ma
@@ -6896,18 +6896,18 @@ $u(x)$ dovrebbe essere la combinazione lineare di due integrali particolari, qui
 
 Trasformiamo
 \begin{itemize}
-\item $\Fc \{xu''\} = i\frac{d}{d\xi}\left(- \xi^{2}\hat{u}\right) = i\left(- 2\xi \hat{u} - \xi^{2}\hat{u} '\right)$
+\item $\Fc \{xu''\} = i\frac{d}{d\xi}\left(- \xi^{2}\hat{u}\right) = i\left(- 2\xi \hat{u} - \xi^{2}\hat{u}'\right)$
 \item $\Fc \{u'\} = i\xi \hat{u}$
-\item $\Fc \{xu\} = i\hat{u} '$
+\item $\Fc \{xu\} = i\hat{u}'$
 \item $\Fc \left\{xe^{- | x|}\right\} = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = i \cdot \left[\frac{- 4\xi}{\left(1 + \xi^{2}\right)^{2}}\right]$
 \end{itemize}
 
 Allora
 \begin{equation*}
 \begin{aligned}
-\cancel{- 2i\xi \hat{u}} - i\xi^{2}\hat{u} ' + \cancel{2i\xi \hat{u}} - i\hat{u} ' & = - i\frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}\\
-\left(1 + \xi^{2}\right)\hat{u} ' & = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}\\
-\hat{u} ' & = \frac{4\xi}{\left(1 + \xi^{2}\right)^{3}} \ \ \implies \ \ \hat{u}(\xi) = - \frac{1}{\left(1 + \xi^{2}\right)^{2}} + c
+\cancel{- 2i\xi \hat{u}} - i\xi^{2}\hat{u}' + \cancel{2i\xi \hat{u}} - i\hat{u}' & = - i\frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}\\
+\left(1 + \xi^{2}\right)\hat{u}' & = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}\\
+\hat{u}' & = \frac{4\xi}{\left(1 + \xi^{2}\right)^{3}} \ \ \implies \ \ \hat{u}(\xi) = - \frac{1}{\left(1 + \xi^{2}\right)^{2}} + c
 \end{aligned}
 \end{equation*}
 dove $c = 0$ perché altrimenti non è infinitesima all'infinito e non è la trasformata di alcuna funzione $L^{1}$.
@@ -7129,21 +7129,21 @@ Usando Plancherel
 \hat{f}_{1}(\xi) = \pi e^{- | \xi |} \ \ \ \ \forall \xi \in \RR
 \end{equation*}Osserviamo che
 \begin{equation*}
-f_{2}(x) = - \frac{1}{2} f_{1} '(x)
+f_{2}(x) = - \frac{1}{2} f_{1}'(x)
 \end{equation*}Allora
 \begin{equation*}
-\hat{f}_{2}(\xi) = - \frac{1}{2}\Fc (f_{1} '(x), \xi) = - \frac{1}{2} \cdot i\xi \cdot \pi e^{- | \xi |} \ \ \ \ \forall \xi \in \RR
+\hat{f}_{2}(\xi) = - \frac{1}{2}\Fc (f_{1}'(x), \xi) = - \frac{1}{2} \cdot i\xi \cdot \pi e^{- | \xi |} \ \ \ \ \forall \xi \in \RR
 \end{equation*}
 \item Notiamo che $f_{0}$ è limitata, allora $f_{0} \in L^{\infty}(\RR)$, mentre per $| x| \rightarrow \infty $ è asintotica a $1/x$, che non è integrabile, quindi $f_{0} \notin L^{1}(\RR)$. Tuttavia $f_{0} \in L^{2}(\RR)$.
 \item $f_{0}$ è continua $\forall x\neq 0$, dove c'è una discontinuità di tipo salto di ampiezza $\pi $. Senza indugi e senza calcoli, deduciamo subito che
 \begin{equation*}
-f_{0} '(x)\overset{D(\RR)}{=} \pi \delta_{0}(x) - \frac{1}{1 + x^{2}}
+f_{0}'(x)\overset{D(\RR)}{=} \pi \delta_{0}(x) - \frac{1}{1 + x^{2}}
 \end{equation*}
 \item Usando le proprietà della trasformata
 \begin{align*}
-\Fc (f_{0} '(x), \xi) & = \Fc (\pi \delta_{0} - f_{1}(x), \xi) = \pi - \pi e^{- | \xi |}\\
+\Fc (f_{0}'(x), \xi) & = \Fc (\pi \delta_{0} - f_{1}(x), \xi) = \pi - \pi e^{- | \xi |}\\
  & \\
-i\xi \cdot\Fc (f_{0}(x), \xi) & = \Fc (f_{0} '(x), \xi) = \pi - \pi e^{- | \xi |}\\
+i\xi \cdot\Fc (f_{0}(x), \xi) & = \Fc (f_{0}'(x), \xi) = \pi - \pi e^{- | \xi |}\\
  & \\
  & \implies \ \ \Fc (f_{0}(x), \xi) = \frac{\pi - \pi e^{- | \xi |}}{i\xi} = i\pi \frac{e^{- | \xi |} - 1}{\xi}
 \end{align*}
@@ -7220,11 +7220,11 @@ Funzione $G(s)$.
 
 Notiamo che
 \begin{equation*}
-\omega = 1\ \ \implies \ \ \Lc\{H(t)\sin(t)\} = \frac{1}{s^{2} + 1} = :\varphi (s) \ \ \implies \ \ G(s) = - \frac{1}{2} \varphi '(s)
+\omega = 1\ \ \implies \ \ \Lc\{H(t)\sin(t)\} = \frac{1}{s^{2} + 1} = :\varphi (s) \ \ \implies \ \ G(s) = - \frac{1}{2} \varphi'(s)
 \end{equation*}
 Allora
 \begin{equation*}
-G(s) = - \frac{1}{2} \varphi '(s) = - \frac{1}{2}\frac{d}{ds}\Lc\{H(t)\sin(t)\} = \frac{1}{2}\Lc\{H(t) t\sin(t)\}
+G(s) = - \frac{1}{2} \varphi'(s) = - \frac{1}{2}\frac{d}{ds}\Lc\{H(t)\sin(t)\} = \frac{1}{2}\Lc\{H(t) t\sin(t)\}
 \end{equation*}
 quindi la sua antitrasformata è
 \begin{equation*}
@@ -7502,13 +7502,13 @@ u(x) = \frac{e^{- | x|}}{4}(| x| + 1)
 
 Trasformiamo i vari termini
 \begin{equation*}
-\Fc (u'') = - \xi^{2}\hat{u} \ \ \ \ \ \ \ \ \Fc (xu') = i\frac{d}{d\xi}(i\xi \hat{u}) = - \xi \hat{u} ' - \hat{u}
+\Fc (u'') = - \xi^{2}\hat{u} \ \ \ \ \ \ \ \ \Fc (xu') = i\frac{d}{d\xi}(i\xi \hat{u}) = - \xi \hat{u}' - \hat{u}
 \end{equation*}
 sostituiamo
 \begin{align*}
-- \xi^{2}\hat{u} - 2\xi \hat{u} ' - 2\hat{u} + 4\hat{u} & = 0\\
-- 2\xi \hat{u} ' + \left(2 - \xi^{2}\right)\hat{u} & = 0\\
-\hat{u} ' + \frac{2 - \xi^{2}}{- 2\xi}\hat{u} & = 0
+- \xi^{2}\hat{u} - 2\xi \hat{u}' - 2\hat{u} + 4\hat{u} & = 0\\
+- 2\xi \hat{u}' + \left(2 - \xi^{2}\right)\hat{u} & = 0\\
+\hat{u}' + \frac{2 - \xi^{2}}{- 2\xi}\hat{u} & = 0
 \end{align*}
 quindi la trasformata vale
 \begin{equation*}
@@ -7533,7 +7533,7 @@ xu'' + 2u' - xu = xe^{- | x|}
 
 Determinare le soluzioni $\displaystyle u\in S'(\RR)$ dell'equazione differenziale
 \begin{equation*}
-- u'' + u = 1 + \delta_{0} ''
+- u'' + u = 1 + \delta_{0}''
 \end{equation*}
 
 \Esercizio{}
@@ -7590,7 +7590,7 @@ e inoltre che
 \end{equation*}
 Quindi
 \begin{equation*}
-\Fc \{xu''(x)\} = i\frac{d}{d\xi}\left(- \xi^{2}\Fc \{u(x)\}\right) = i\left[ - 2\xi \hat{u}(\xi) - \xi^{2}\frac{d}{d\xi}\hat{u}\right] = - 2i\xi \hat{u}(\xi) - i\xi^{2}\hat{u} '(\xi)
+\Fc \{xu''(x)\} = i\frac{d}{d\xi}\left(- \xi^{2}\Fc \{u(x)\}\right) = i\left[ - 2\xi \hat{u}(\xi) - \xi^{2}\frac{d}{d\xi}\hat{u}\right] = - 2i\xi \hat{u}(\xi) - i\xi^{2}\hat{u}'(\xi)
 \end{equation*}
 Trasformiamo il secondo termine
 \begin{equation*}
@@ -7602,13 +7602,13 @@ Usando le proprietà
 \end{equation*}
 Otteniamo
 \begin{align*}
-\cancel{- 2i\xi \hat{u}} - i\xi^{2}\hat{u} ' + \cancel{2i\xi \hat{u}} - i\hat{u} ' & = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
-- \xi^{2}\hat{u} ' - \hat{u} ' & = \frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
-\hat{u} '\left(1 + \xi^{2}\right) & = - \frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = - \frac{- 2 \cdot 2\xi}{\left(1 + \xi^{2}\right)^{2}} = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}
+\cancel{- 2i\xi \hat{u}} - i\xi^{2}\hat{u}' + \cancel{2i\xi \hat{u}} - i\hat{u}' & = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
+- \xi^{2}\hat{u}' - \hat{u}' & = \frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
+\hat{u}'\left(1 + \xi^{2}\right) & = - \frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = - \frac{- 2 \cdot 2\xi}{\left(1 + \xi^{2}\right)^{2}} = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}
 \end{align*}
 dato che $1 + \xi^{2} \neq 0$
 \begin{equation*}
-\hat{u} ' = \frac{4\xi}{\left(1 + \xi^{2}\right)^{3}} \ \ \implies \ \ \hat{u} = - \frac{1}{\left(1 + \xi^{2}\right)^{2}} + c
+\hat{u}' = \frac{4\xi}{\left(1 + \xi^{2}\right)^{3}} \ \ \implies \ \ \hat{u} = - \frac{1}{\left(1 + \xi^{2}\right)^{2}} + c
 \end{equation*}
 Affinché $\hat{u}$ sia la trasformata di una funzione trasformabile, questa costante deve essere nulla, altrimenti non sarebbe infinitesima a infinito.
 \begin{equation*}
@@ -7640,7 +7640,7 @@ u(x) = - \frac{e^{- | x|}}{4}(| x| + 1)
 
 Risolvo separatamente prima
 \begin{equation*}
-- u'' + u = \delta_{0} ''
+- u'' + u = \delta_{0}''
 \end{equation*}
 poi
 \begin{equation*}
@@ -7654,8 +7654,8 @@ Trasformiamo entrambi i membri
 \end{equation*}
 Possiamo calcolare la trasformata della derivata della Delta con la dualità
 \begin{align*}
-\langle \Fc \{\delta ''(x), \xi \}, \varphi (x) \rangle & = \langle \delta ''(x), \Fc \{\varphi (x), \xi \} \rangle \\
- & = - \langle \delta '(x), \frac{d}{d\xi}\Fc \{\varphi (x), \xi \} \rangle \\
+\langle \Fc \{\delta''(x), \xi \}, \varphi (x) \rangle & = \langle \delta''(x), \Fc \{\varphi (x), \xi \} \rangle \\
+ & = - \langle \delta'(x), \frac{d}{d\xi}\Fc \{\varphi (x), \xi \} \rangle \\
  & = \langle \delta (x), \frac{d^{2}}{d\xi^{2}}\Fc \{\varphi (x), \xi \} \rangle \\
  & = \langle \delta (x), \Fc \left\{(- ix)^{2} \varphi (x), \xi \right\} \rangle \\
  & \overset{\xi = 0}{=}\int_{\RR}(- ix)^{2} \varphi (x) dx\\
@@ -7663,7 +7663,7 @@ Possiamo calcolare la trasformata della derivata della Delta con la dualità
 \end{align*}
 allora
 \begin{equation*}
-\Fc \{\delta ''(x), \xi \} = (- i\xi)^{2} = - \xi^{2}
+\Fc \{\delta''(x), \xi \} = (- i\xi)^{2} = - \xi^{2}
 \end{equation*}
 Sostituendo nell'equazione
 \begin{equation*}
@@ -7677,7 +7677,7 @@ Per quanto riguarda
 \begin{equation*}
 - u'' + u = 1
 \end{equation*}
-l'unica soluzione in $\Sc '(\RR)$ è $u(x) = 1$, in conclusione
+l'unica soluzione in $\Sc'(\RR)$ è $u(x) = 1$, in conclusione
 \begin{equation*}
 u(x) = 1 - \delta + \frac{1}{2} e^{- | x|}
 \end{equation*}
