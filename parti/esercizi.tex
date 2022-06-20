@@ -345,7 +345,7 @@ Se $\Omega \equiv \CC $ allora $f$ è \textbf{intera}.
 \begin{thm}
 [di Cauchy-Riemann] Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ definita come
 \begin{equation*}
-f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\Re \left( z\right) +i\mathrm{Im}\left( z\right)
+f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\Re \left( z\right) +i\Im \left( z\right)
 \end{equation*}
 è olomorfa in $\Omega $ se e solo se $u,v:\Omega \rightarrow \RR $ sono differenziabili in senso classico in $\Omega $ e valgono le \textbf{condizioni di Cauchy-Riemann}
 \begin{equation}
@@ -364,7 +364,7 @@ Infatti
 \begin{equation*}
 \begin{array}{ l }
 x=\Re \left( z\right) =\frac{z+\overline{z}}{2}\\
-y=\mathrm{Im}\left( z\right) =-i\frac{z-\overline{z}}{2}
+y=\Im \left( z\right) =-i\frac{z-\overline{z}}{2}
 \end{array}
 \end{equation*}
 allora
@@ -1001,7 +1001,7 @@ J=\int\nolimits ^{+\infty }_{0} e^{it^{2}} dt=e^{i\frac{\pi }{4}}\frac{\sqrt{\pi
 ma quindi
 \begin{align*}
 \int\nolimits ^{+\infty }_{0}\cos t^{2} dt & =\Re \left( J\right) =\frac{\sqrt{2\pi }}{4}\\
-\int\nolimits ^{+\infty }_{0}\sin t^{2} dt & =\mathrm{Im}\left( J\right) =\frac{\sqrt{2\pi }}{4}
+\int\nolimits ^{+\infty }_{0}\sin t^{2} dt & =\Im \left( J\right) =\frac{\sqrt{2\pi }}{4}
 \end{align*}
 \Soluzione
 \begin{align*}
@@ -1905,7 +1905,7 @@ dove è stata usata la disuguaglianza triangolare
 
 \Soluzione
 \begin{equation*}
-I=\int ^{+\infty }_{0}\frac{\sin x}{x} dx=\frac{1}{2}\int ^{+\infty }_{-\infty }\frac{\sin x}{x} dx=\frac{1}{2}\mathrm{Im}\left( J\right) \ \ \ \ \ \ \ \ J=\int ^{+\infty }_{-\infty }\frac{e^{ix}}{x} dx
+I=\int ^{+\infty }_{0}\frac{\sin x}{x} dx=\frac{1}{2}\int ^{+\infty }_{-\infty }\frac{\sin x}{x} dx=\frac{1}{2}\Im \left( J\right) \ \ \ \ \ \ \ \ J=\int ^{+\infty }_{-\infty }\frac{e^{ix}}{x} dx
 \end{equation*}
 Posto $f\left( z\right) =\frac{e^{iz}}{z}$, $f\in \Hc \left(\CC  \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
 \begin{equation*}
@@ -1932,7 +1932,7 @@ mentre il semicerchio grande:
 \end{align*}
 allora
 \begin{equation*}
-0=J-\pi i+0\ \ \ \ \implies \ \ \ \ J=\pi i\ \ \ \ \implies \ \ \ \ I=\frac{1}{2}\mathrm{Im}\left( J\right) =\frac{\pi }{2}
+0=J-\pi i+0\ \ \ \ \implies \ \ \ \ J=\pi i\ \ \ \ \implies \ \ \ \ I=\frac{1}{2}\Im \left( J\right) =\frac{\pi }{2}
 \end{equation*}
 \Soluzione
 
@@ -1974,7 +1974,7 @@ quindi
 \end{equation*}
 ma l'integrale di partenza è proprio la parte immaginaria di questo integrale
 \begin{equation*}
-\int ^{+\infty }_{-\infty }\frac{\sin\left( \pi x\right)}{\left( x-3\right)\left( x^{2} -2x+2\right)} dx=\mathrm{Im}\left[ -\frac{\pi i}{5} +\frac{\pi e^{-\pi }}{5}\left( 2+i\right)\right] =\frac{\pi }{5}\left( e^{-\pi } -1\right)
+\int ^{+\infty }_{-\infty }\frac{\sin\left( \pi x\right)}{\left( x-3\right)\left( x^{2} -2x+2\right)} dx=\Im \left[ -\frac{\pi i}{5} +\frac{\pi e^{-\pi }}{5}\left( 2+i\right)\right] =\frac{\pi }{5}\left( e^{-\pi } -1\right)
 \end{equation*}
 \Soluzione
 
@@ -6820,7 +6820,7 @@ $\hat{u}$ reale pari, allora $u$ reale pari, quindi studiamo le $x >0$ per poi s
 
 Usando il Lemma di Jordan (semipiano superiore). Sia
 \begin{equation*}
-f( z) =\frac{2\left( 1+z^{2}\right) e^{ixz}}{z^{4} +4} \ \ \implies \ \ u( x) =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k})
+f( z) =\frac{2\left( 1+z^{2}\right) e^{ixz}}{z^{4} +4} \ \ \implies \ \ u( x) =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \sum _{\Im ( z_{k})  >0}\Res ( f,z_{k})
 \end{equation*}
 Il denominatore si annulla in
 \begin{equation*}
@@ -6833,12 +6833,12 @@ Determiniamo i residui
 \end{align*}
 calcoliamo
 \begin{align*}
-\sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k}) & =-\frac{1}{8}\left\{( 1+i)( 1+2i) e^{( -1+i) x} +( -1+i)( 1-2i) e^{( -1-i) x}\right\}\\
+\sum _{\Im ( z_{k})  >0}\Res ( f,z_{k}) & =-\frac{1}{8}\left\{( 1+i)( 1+2i) e^{( -1+i) x} +( -1+i)( 1-2i) e^{( -1-i) x}\right\}\\
  & =-\frac{e^{-x}}{8}\left\{( -1+3i) e^{ix} +( 1+3i) e^{-ix}\right\}
 \end{align*}
 Per le $x >0$
 \begin{align*}
-u( x) & =i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k})\\
+u( x) & =i\cdotp \sum _{\Im ( z_{k})  >0}\Res ( f,z_{k})\\
  & =\frac{e^{-x}}{4}\left\{\frac{3+i}{2} e^{ix} +\frac{3-i}{2} e^{-ix}\right\}\\
  & =\frac{e^{-x}}{4}\left\{3\frac{e^{ix} +e^{-ix}}{2} -\frac{e^{ix} -e^{-ix}}{2i}\right\}\\
  & =\frac{e^{-x}}{4}( 3\cos x-\sin x)
