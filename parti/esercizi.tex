@@ -1089,7 +1089,7 @@ dove $-\min M=k$ è l'\textbf{ordine} del polo.
 \begin{defn}
 Si dice residuo di $f$ in $z_{0}$
 \begin{equation*}
-\Res \left( f,z_{0}\right) :=a_{-1}
+\Res \left( f,z_{0}\right) \coloneqq a_{-1}
 \end{equation*}
 \end{defn}
 \begin{thm}
@@ -1110,7 +1110,7 @@ Sia $f\in \Hc \left(\CC  \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed
 \begin{defn}
 Si dice residuo di $f$ in $\infty $
 \begin{equation*}
-\Res \left( f,\infty \right) :=-a_{-1}
+\Res \left( f,\infty \right) \coloneqq -a_{-1}
 \end{equation*}
 \end{defn}
 \begin{thm}
@@ -2647,7 +2647,7 @@ Si interpreta $\int _{\gamma _{R,\varepsilon }} =\lim\limits _{\alpha \rightarro
 
 Dobbiamo usare la determinazione del logaritmo che esclude l'asse reale positivo
 \begin{equation*}
-\Log_{\left( 2\pi \right)} :=\ln z+i\vartheta \ \ \ \ \vartheta \in \arg z\cap \left( 0,2\pi \right)
+\Log_{\left( 2\pi \right)} \coloneqq \ln z+i\vartheta \ \ \ \ \vartheta \in \arg z\cap \left( 0,2\pi \right)
 \end{equation*}
 Si considera rispettivamente
 \begin{equation*}
@@ -2950,7 +2950,7 @@ $f_{n}$ converge puntualmente alla funzione limite $f( x) \equiv 0$.
 \end{equation*}
 
 Per $n\geqslant 2$\begin{equation*}
-| f_{n}( x)| \leqslant g( x) :=\frac{x^{2}}{\left( x^{2} +2^{2}\right)^{3/2}\log^{3/2}\left( x^{2} +2^{2}\right)} \in L^{1}( 0,+\infty )
+| f_{n}( x)| \leqslant g( x) \coloneqq \frac{x^{2}}{\left( x^{2} +2^{2}\right)^{3/2}\log^{3/2}\left( x^{2} +2^{2}\right)} \in L^{1}( 0,+\infty )
 \end{equation*}
 \begin{enumerate}
 \item diminuisco il denominatore
@@ -2986,7 +2986,7 @@ f( x) -f_{n}( x) =\frac{\pi }{2} -\arctan( nx) =\arctan\left(\frac{1}{nx}\right)
 Escludo $p=1$, perché $\arctan\left(\frac{1}{nx}\right) \sim \frac{1}{nx}$ e $\frac{1}{x}$ non è integrabile a $+\infty $.
 
 Verifichiamo le ipotesi della convergenza dominata.\begin{equation*}
-\left| \left(\arctan\left(\frac{1}{nx}\right)\right)^{p}\right| \leqslant g( x) :=\begin{cases}
+\left| \left(\arctan\left(\frac{1}{nx}\right)\right)^{p}\right| \leqslant g( x) \coloneqq \begin{cases}
 \left(\frac{\pi }{2}\right)^{p} , & 0< x< 1\ \left(\text{integrabile in zero} \ \forall p\right)\\
 \left| \frac{1}{x}\right| ^{p} & x\geqslant 1\ \left(\text{uso proprio} \ n=1\ \text{per maggiorare}\right)
 \end{cases}
@@ -4557,7 +4557,7 @@ Il salto verso l'alto in $x=0$ non lo possiamo vedere perché le funzioni test s
 \begin{rem}
 Si può dimostrare che se $v\in D'(\RR )$, $\psi \in C^{\infty }(\RR ) \implies \psi v\in D'(\RR )$ e il suo effetto su una funzione test $\varphi $ è
 \begin{equation*}
-\langle \psi v,\varphi \rangle :=\langle v,\psi \varphi \rangle 
+\langle \psi v,\varphi \rangle \coloneqq \langle v,\psi \varphi \rangle 
 \end{equation*}
 \end{rem}
 Quindi
@@ -4787,7 +4787,7 @@ Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\in
 \end{defn}
 \begin{rem}
 \begin{equation*}
-\langle u,\varphi \rangle :=\int _{\Omega } u( x) \varphi ( x) dx,\ \ u\in D'( \Omega ) ,\ \varphi \in D( \Omega )
+\langle u,\varphi \rangle \coloneqq \int _{\Omega } u( x) \varphi ( x) dx,\ \ u\in D'( \Omega ) ,\ \varphi \in D( \Omega )
 \end{equation*}
 \end{rem}
 \Esercizio{}
@@ -4893,7 +4893,7 @@ dobbiamo mostrare che vale anche per $n+1$\begin{gather*}
 \end{itemize}
 \Soluzione
 
-Per comodità $u( a_{-}) =f( a) :=f( a_{-})$ e $u( a_{+}) =g( a) :=g( a_{+})$.
+Per comodità $u( a_{-}) =f( a) \coloneqq f( a_{-})$ e $u( a_{+}) =g( a) \coloneqq g( a_{+})$.
 
 Questi termini esistono finiti perché $f',g'$ sono integrabili.
 
@@ -6502,13 +6502,13 @@ Sia $\displaystyle f:\RR  \ \rightarrow \CC $ si dice Laplace-trasformabile se:
 \begin{defn}
 Si dice Ascissa di convergenza di $\displaystyle f$:
 \begin{equation*}
-\lambda _{f} :=\inf\left\{\lambda \in \RR  :e^{-\lambda t} f( t) \in L^{1}(\RR )\right\}
+\lambda _{f} \coloneqq \inf\left\{\lambda \in \RR  :e^{-\lambda t} f( t) \in L^{1}(\RR )\right\}
 \end{equation*}
 \end{defn}
 \begin{defn}
 Sia $\displaystyle f$ una funzione Laplace-trasformabile, allora la funzione:
 \begin{equation*}
-\boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \CC  :\Re ( s)  >\lambda _{f}}
+\boxed{F( s) \coloneqq \int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \CC  :\Re ( s)  >\lambda _{f}}
 \end{equation*}
 si dice Trasformata di Laplace di $\displaystyle f$.
 \end{defn}
