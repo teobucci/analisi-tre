@@ -331,19 +331,19 @@ all'interno del suo disco di convergenza.
 \ParteSoluzioni
 \Soluzione
 \begin{defn}
-Siano $\Omega \subseteq \mathbb{C}$, $f:\Omega \rightarrow \mathbb{C}$ è derivabile, in senso complesso, in $z_{0}$ se $\exists $ finito
+Siano $\Omega \subseteq \CC $, $f:\Omega \rightarrow \CC $ è derivabile, in senso complesso, in $z_{0}$ se $\exists $ finito
 \begin{equation*}
-\lim\limits _{h\rightarrow 0}\frac{f\left( z_{0} +h\right) -f\left( z_{0}\right)}{h} ,\ \ \ \ h\in \mathbb{C}
+\lim\limits _{h\rightarrow 0}\frac{f\left( z_{0} +h\right) -f\left( z_{0}\right)}{h} ,\ \ \ \ h\in \CC 
 \end{equation*}
 \end{defn}
 \begin{defn}
-Sia $\Omega \in \mathbb{C}$ aperto. Se $f$ è derivabile in ogni punto di $\Omega $, allora $f$ è \textbf{olomorfa} in $\Omega $, $f\in \Hc \left( \Omega \right)$.
+Sia $\Omega \in \CC $ aperto. Se $f$ è derivabile in ogni punto di $\Omega $, allora $f$ è \textbf{olomorfa} in $\Omega $, $f\in \Hc \left( \Omega \right)$.
 \end{defn}
 \begin{rem}
-Se $\Omega \equiv \mathbb{C}$ allora $f$ è \textbf{intera}.
+Se $\Omega \equiv \CC $ allora $f$ è \textbf{intera}.
 \end{rem}
 \begin{thm}
-[di Cauchy-Riemann] Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ definita come
+[di Cauchy-Riemann] Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ definita come
 \begin{equation*}
 f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\mathrm{Re}\left( z\right) +i\mathrm{Im}\left( z\right)
 \end{equation*}
@@ -452,7 +452,7 @@ u_{y} =-v_{x}
 \end{equation*}
 \Soluzione
 \begin{defn}
-Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ continua in $\Omega $, $\gamma :\left[ a,b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
+Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua in $\Omega $, $\gamma :\left[ a,b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
 \begin{equation*}
 \int\nolimits _{\gamma } f\left( z\right) dz=\int\nolimits ^{b}_{a} f\left( \gamma \left( t\right)\right) \gamma '\left( t\right) dt
 \end{equation*}
@@ -469,7 +469,7 @@ L'integrale curvilineo dipende dall'orientazione di $\gamma $
 \end{equation*}
 \end{rem}
 \begin{thm}
-Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ continua. TFAE (the followings are equivalent):
+Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua. TFAE (the followings are equivalent):
 
 1) $\int _{\gamma } f\left( z\right) dz$ dipende solo dagli estremi di $\gamma $
 
@@ -554,7 +554,7 @@ Utilizziamo il criterio del rapporto per determinare $R$
 \end{equation*}
 Il raggio di convergenza è $R=1$.
 
-La serie converge assolutamente $\forall z\in \mathbb{C} :\left| z\right| < 1$ e non converge per $\left| z\right|  >1$. Se $\left| z\right| =1$ la serie non converge perché il suo termine generale non tende a $0$. Per ogni $z\in \mathbb{C} :\left| z\right| < 1$ si ha
+La serie converge assolutamente $\forall z\in \CC  :\left| z\right| < 1$ e non converge per $\left| z\right|  >1$. Se $\left| z\right| =1$ la serie non converge perché il suo termine generale non tende a $0$. Per ogni $z\in \CC  :\left| z\right| < 1$ si ha
 \begin{align*}
 \sum\limits ^{\infty }_{n=1}\left( 3n+7\right) z^{n} & =3\sum\limits ^{\infty }_{n=1} nz^{n} +7\sum\limits ^{\infty }_{n=1} z^{n}\\
  & =3z\sum\limits ^{\infty }_{n=1} nz^{n-1} +7\sum\limits ^{\infty }_{n=1} z^{n}\\
@@ -789,7 +789,7 @@ f\left( z\right) =\frac{1}{2iz-z^{2}}
 \end{equation*}
 in
 \begin{equation*}
-A=\left\{z\in \mathbb{C} :0< \left| z\right| < 2\right\} \ \ \ \ \ \ \ \ B=\left\{z\in \mathbb{C} :\left| z-2i\right|  >2\right\}
+A=\left\{z\in \CC  :0< \left| z\right| < 2\right\} \ \ \ \ \ \ \ \ B=\left\{z\in \CC  :\left| z-2i\right|  >2\right\}
 \end{equation*}
 \Esercizio{}
 
@@ -867,7 +867,7 @@ J=\int\nolimits ^{+\infty }_{0} e^{it^{2}} dt=\int\nolimits ^{+\infty }_{0}\cos 
 \end{equation*}
 Poniamo
 \begin{equation*}
-f\left( z\right) =e^{iz^{2}} \in \Hc \left(\mathbb{C}\right)
+f\left( z\right) =e^{iz^{2}} \in \Hc \left(\CC \right)
 \end{equation*}
 Consideriamo una curva $\gamma =\gamma _{1} \cup \gamma _{2} \cup \gamma _{3}$ fatta come
 
@@ -1021,7 +1021,7 @@ La seconda serie converge se
 \end{equation*}
 ossia $\left| z\right| ^{2} < 9$, cioè $\left| z\right| < 3$.
 
-Allora l'anello di convergenza è $A=\left\{z\in \mathbb{C} :\frac{1}{3} < \left| z\right| < 3\right\}$.
+Allora l'anello di convergenza è $A=\left\{z\in \CC  :\frac{1}{3} < \left| z\right| < 3\right\}$.
 \Soluzione
 
 Possiamo vedere la $f$ come
@@ -1069,7 +1069,7 @@ Sia $M=\left\{n\in \mathbb{Z} :n< 0,a_{n} \neq 0\right\}$ l'insieme degli indici
 \item \textbf{singolarità eliminabile} se
 
 \begin{equation*}
-\exists \lim\limits _{z\rightarrow z_{0}} f\left( z\right) \in \mathbb{C} \ \ \iff \ \ M=\emptyset \ \ \iff \ \ f\ \text{è limitata su} \ \Uc \left( z_{0}\right)
+\exists \lim\limits _{z\rightarrow z_{0}} f\left( z\right) \in \CC  \ \ \iff \ \ M=\emptyset \ \ \iff \ \ f\ \text{è limitata su} \ \Uc \left( z_{0}\right)
 \end{equation*}
 \item \textbf{polo} se
 
@@ -1082,7 +1082,7 @@ dove $-\min M=k$ è l'\textbf{ordine} del polo.
 
 \begin{gather*}
 \nexists \lim\limits _{z\rightarrow z_{0}} f\left( z\right) \ \ \iff \ \ \left| M\right| =\infty \\
-\iff \ \ \forall \varepsilon \in \left( 0,R\right) \ \text{l'insieme immagine} \ f\left(\left\{0< \left| z-z_{0}\right| < \varepsilon \right\}\right) \ \text{è denso in} \ \mathbb{C}
+\iff \ \ \forall \varepsilon \in \left( 0,R\right) \ \text{l'insieme immagine} \ f\left(\left\{0< \left| z-z_{0}\right| < \varepsilon \right\}\right) \ \text{è denso in} \ \CC 
 \end{gather*}
 \end{itemize}
 \end{thm}
@@ -1093,11 +1093,11 @@ Si dice residuo di $f$ in $z_{0}$
 \end{equation*}
 \end{defn}
 \begin{thm}
-Sia $f\in \Hc \left(\mathbb{C} \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
+Sia $f\in \Hc \left(\CC  \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
 
 \begin{itemize}
 \item \textbf{singolarità eliminabile} se e solo se\begin{equation*}
-\exists \lim\limits _{z\rightarrow \infty } f\left( z\right) \in \mathbb{C} \ \ \iff \ \ M=\emptyset 
+\exists \lim\limits _{z\rightarrow \infty } f\left( z\right) \in \CC  \ \ \iff \ \ M=\emptyset 
 \end{equation*}
 \item \textbf{polo} se e solo se\begin{equation*}
 \exists \lim\limits _{z\rightarrow \infty } f\left( z\right) =\infty \ \ \iff \ \ 0< \left| M\right| < \infty 
@@ -1138,13 +1138,13 @@ Siano $f(z)$ e $g(z)$ tali che $f\left( z_{0}\right) =0=g\left( z_{0}\right)$ e 
 \end{itemize}
 \end{thm}
 \begin{thm}
-Sia $f\in \Hc \left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
+Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
 \begin{equation*}
 \sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right) +\mathrm{Res}\left( f,\infty \right) =0
 \end{equation*}
 \end{thm}
 \begin{thm}
-Sia $f\in \Hc \left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
+Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
 \begin{equation*}
 \int\nolimits _{\partial D\left( 0,R\right)} f\left( z\right) dz=2\pi i\left[\sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right)\right]
 \end{equation*}
@@ -1250,12 +1250,12 @@ $z=1$ è singolarità essenziale perché $\nexists \lim\limits _{z\rightarrow 1}
 
 $z=2$ è $1$-polo perché annulla il denominatore con molteplicità $1$ e non annulla il numeratore.
 
-$z=\infty $ è singolarità eliminabile perché $\exists \lim\limits _{z\rightarrow \infty } f\left( z\right) \in \mathbb{C}$.
+$z=\infty $ è singolarità eliminabile perché $\exists \lim\limits _{z\rightarrow \infty } f\left( z\right) \in \CC $.
 \item Ricordiamo che
 
 \begin{rem}
 \begin{equation*}
-e^{z} =\sum\limits ^{\infty }_{n=0}\frac{z^{n}}{n!} ,\ \ z\in \mathbb{C} \ \ \ \ \ \ \ \ \frac{1}{1-z} =\sum\limits ^{\infty }_{n=0} z^{n} ,\ \ \left| z\right| < 1
+e^{z} =\sum\limits ^{\infty }_{n=0}\frac{z^{n}}{n!} ,\ \ z\in \CC  \ \ \ \ \ \ \ \ \frac{1}{1-z} =\sum\limits ^{\infty }_{n=0} z^{n} ,\ \ \left| z\right| < 1
 \end{equation*}
 \end{rem}
 
@@ -1766,7 +1766,7 @@ Calcolare
 \ParteSoluzioni
 \Soluzione
 
-$f\in \Hc (\mathbb{C} \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semplici, mentre $0$ è un polo del II ordine. 
+$f\in \Hc (\CC  \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semplici, mentre $0$ è un polo del II ordine. 
 
 
 \begin{figure}[htpb]
@@ -1907,7 +1907,7 @@ dove è stata usata la disuguaglianza triangolare
 \begin{equation*}
 I=\int ^{+\infty }_{0}\frac{\sin x}{x} dx=\frac{1}{2}\int ^{+\infty }_{-\infty }\frac{\sin x}{x} dx=\frac{1}{2}\mathrm{Im}\left( J\right) \ \ \ \ \ \ \ \ J=\int ^{+\infty }_{-\infty }\frac{e^{ix}}{x} dx
 \end{equation*}
-Posto $f\left( z\right) =\frac{e^{iz}}{z}$, $f\in \Hc \left(\mathbb{C} \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
+Posto $f\left( z\right) =\frac{e^{iz}}{z}$, $f\in \Hc \left(\CC  \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
 \begin{equation*}
 J=\lim _{\varepsilon \rightarrow 0^{+} ,R\rightarrow +\infty }\int _{\left[ -R,R\right] \setminus \left( -\varepsilon ,\varepsilon \right)}\frac{e^{iz}}{z} dz
 \end{equation*}
@@ -1944,7 +1944,7 @@ poniamo
 \begin{equation*}
 f\left( z\right) =\frac{e^{i\pi z}}{\left( z-3\right)\left( z^{2} -2z+2\right)}
 \end{equation*}
-$f\in \Hc \left(\mathbb{C} \setminus \left\{3,1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
+$f\in \Hc \left(\CC  \setminus \left\{3,1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
 \begin{align*}
 \int _{\gamma _{R,\varepsilon }} f\left( z\right) dz & =2\pi i\cdotp \mathrm{Res}\left( f,1+i\right) =2\pi i\cdotp \lim _{z\rightarrow 1+i} f\left( z\right)\left( z-\left( 1+i\right)\right) =\\
  & =2\pi i\cdotp \lim _{z\rightarrow 1+i}\frac{e^{\pi iz}}{\left( z-3\right)\left( z-1+i\right)} =\dotsc =\frac{\pi e^{-\pi }}{5}\left( 2+i\right)
@@ -4762,7 +4762,7 @@ f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\
 [Distribuzione] Una distribuzione è un operatore $u$ che a ogni funzione test $\varphi $ (funzione $C^{\infty }(\mathbb{R})$ il cui supporto è un compatto $\Omega $ contenuto in $\mathbb{R}$) associa un numero, reale o complesso, $\langle u,\varphi \rangle $ chiamato \textbf{dualità} tra $u$ e $\varphi $ tale che:
 \begin{equation*}
 \begin{array}{ l }
-\langle u,a\varphi +b\psi \rangle =a\langle u,\varphi \rangle +b\langle u,\psi \rangle \ \ \forall a,b\in \mathbb{C} ,\ \forall \varphi ,\psi \in D( \Omega )\\
+\langle u,a\varphi +b\psi \rangle =a\langle u,\varphi \rangle +b\langle u,\psi \rangle \ \ \forall a,b\in \CC  ,\ \forall \varphi ,\psi \in D( \Omega )\\
 \varphi _{j}\rightarrow \varphi \ \text{in} \ D( \Omega ) \ \ \implies \ \ \langle u,\varphi _{j} \rangle \rightarrow \langle u,\varphi \rangle 
 \end{array}
 \end{equation*}
@@ -5536,7 +5536,7 @@ Quindi, la trasformata sarà pari a
 \chapter{Esercitazione 8 - Potrich}
 \ParteEsercizi
 \begin{defn}
-Sia $u\in L^{1}(\mathbb{R})$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\mathbb{R}\rightarrow \mathbb{C}$ definita da
+Sia $u\in L^{1}(\mathbb{R})$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\mathbb{R}\rightarrow \CC $ definita da
 \begin{equation*}
 \hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx
 \end{equation*}
@@ -5815,7 +5815,7 @@ u( x) =\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}\\
 \end{gather*}
 Poniamo
 \begin{equation*}
-u( z) =\frac{1}{\left( 1+z^{2}\right)\left( 4+z^{2}\right)} \in \Hc (\mathbb{C} \setminus \{\pm i,\pm 2i\})
+u( z) =\frac{1}{\left( 1+z^{2}\right)\left( 4+z^{2}\right)} \in \Hc (\CC  \setminus \{\pm i,\pm 2i\})
 \end{equation*}
 Le singolarità sono poli semplici.
 
@@ -6494,7 +6494,7 @@ Stabilire se $\displaystyle f_{0} \in L^{1}(\mathbb{R})$ e/o se $\displaystyle f
 \end{enumerate}
 \Esercizio{}
 \begin{defn}
-Sia $\displaystyle f:\mathbb{R} \ \rightarrow \mathbb{C}$ si dice Laplace-trasformabile se:
+Sia $\displaystyle f:\mathbb{R} \ \rightarrow \CC $ si dice Laplace-trasformabile se:
 \begin{equation*}
 \mathrm{supp} f\subset [ 0,+\infty ) \ \ \ \ \land \ \ \ \ \exists \lambda \in \mathbb{R} :e^{-\lambda t} f( t) \in L^{1}(\mathbb{R})
 \end{equation*}
@@ -6508,14 +6508,14 @@ Si dice Ascissa di convergenza di $\displaystyle f$:
 \begin{defn}
 Sia $\displaystyle f$ una funzione Laplace-trasformabile, allora la funzione:
 \begin{equation*}
-\boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f}}
+\boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\lambda _{f}}
 \end{equation*}
 si dice Trasformata di Laplace di $\displaystyle f$.
 \end{defn}
 \begin{rem}
 [Trasformate di Laplace notevoli] Si ha
 \begin{equation*}
-\Lc\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f} =0
+\Lc\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\lambda _{f} =0
 \end{equation*}
 \end{rem}
 \begin{thm}
@@ -6531,13 +6531,13 @@ si dice Trasformata di Laplace di $\displaystyle f$.
 \Lc\left\{e^{at} f( t)\right\} =F( s-a) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f} +\mathrm{Re}( a)
 \end{equation*}
 \item Linearità\begin{equation*}
-\Lc\{af+bg\} =a\Lc\{f\} +b\Lc\{g\} \ \ \ \ \forall a,b\in \mathbb{C} ,\forall s:\mathrm{Re}( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
+\Lc\{af+bg\} =a\Lc\{f\} +b\Lc\{g\} \ \ \ \ \forall a,b\in \CC  ,\forall s:\mathrm{Re}( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
 \end{equation*}
 \item Derivata della trasformata\begin{equation*}
 \frac{d^{n}}{ds^{n}} F( s) =\Lc\left\{( -t)^{n} f( t)\right\}
 \end{equation*}
 \item La primitiva di una funzione $\Lc$-trasformabile è anch'essa una funzione $\Lc$-trasformabile\begin{equation*}
-\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\Lc\{f( t)\} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
+\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\Lc\{f( t)\} \ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
 \end{equation*}
 \end{itemize}
 \end{thm}
