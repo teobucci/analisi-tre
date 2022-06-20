@@ -539,26 +539,26 @@ In generale si può sempre studiare la serie di Laurent centrata nel punto, ma c
 
 Il coefficiente $a_{- 1}$ della serie di Laurent centrata in $z_{0}$ è molto importante e prende il nome di \textbf{residuo integrale}
 \begin{equation*}
-a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw\ \ \implies \ \ \mathrm{Res}(f, z_{0}) = a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) dw
+a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw\ \ \implies \ \ \Res (f, z_{0}) = a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) dw
 \end{equation*}
 Il seguente teorema semplifica tantissimi calcoli di integrali, anche reali.
 \begin{thm}
 [dei Residui]
 Sia $A\subset \CC$ aperto, $f\in H(A\setminus \{z_{1}, \dotsc, z_{n}\} \cap C^{0}(\overline{A} \setminus \{z_{1}, \dotsc, z_{n}\})$. Allora
 \begin{equation*}
-\boxed{\int_{\gamma} f(z) dz = 2\pi i\cdot \sum\limits^{n}_{j = 1}\mathrm{Res}(f, z_{j})}
+\boxed{\int_{\gamma} f(z) dz = 2\pi i\cdot \sum\limits^{n}_{j = 1}\Res (f, z_{j})}
 \end{equation*}
 \end{thm}
 \begin{defn}
 Se consideriamo una $\gamma $ chiusa che contiene tutte le singolarità di $f(z)$ al finito, e $f\in H(| z| > R)$, se consideriamo lo sviluppo di $f$ in un intorno dell'infinito, allora definiamo il \textbf{residuo all'infinito}
 \begin{equation*}
-\mathrm{Res}(f, \infty) : = - a_{- 1} = \frac{1}{2\pi i}\int_{- \gamma} f(w) dw
+\Res (f, \infty) : = - a_{- 1} = \frac{1}{2\pi i}\int_{- \gamma} f(w) dw
 \end{equation*}
 \end{defn}
 \begin{thm}
 Se abbiamo un numero finito di singolarità, la somma di tutte, sia al finito che all'infinito, vale zero.
 \begin{equation*}
-\sum\limits^{n}_{j = 1}\mathrm{Res}(f, z_{j}) + \mathrm{Res}(f, \infty) = 0
+\sum\limits^{n}_{j = 1}\Res (f, z_{j}) + \Res (f, \infty) = 0
 \end{equation*}
 \end{thm}
 
@@ -566,17 +566,17 @@ Se abbiamo un numero finito di singolarità, la somma di tutte, sia al finito ch
 
 Se $z_{0} \neq \infty $
 \begin{itemize}
-\item se è eliminabile allora $\mathrm{Res}(f, z_{0}) = 0$
-\item se è polo di ordine $n$ allora $\mathrm{Res}(f, z_{0}) = \frac{1}{(n - 1)!}\lim\limits_{z\rightarrow z_{0}}\frac{d^{n - 1}}{dz^{n - 1}}(z - z_0)^n f(z)$
-\item se è polo di ordine $1$ allora $\mathrm{Res}\left(\frac{f}{g}, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g'(z)}$
+\item se è eliminabile allora $\Res (f, z_{0}) = 0$
+\item se è polo di ordine $n$ allora $\Res (f, z_{0}) = \frac{1}{(n - 1)!}\lim\limits_{z\rightarrow z_{0}}\frac{d^{n - 1}}{dz^{n - 1}}(z - z_0)^n f(z)$
+\item se è polo di ordine $1$ allora $\Res \left(\frac{f}{g}, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g'(z)}$
 \item vale L'Hopital $\lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g(z)} = \lim\limits_{z\rightarrow z_{0}}\frac{f'(z)}{g'(z)}$
 \end{itemize}
 
 Se $z_{0} = \infty $
 \begin{itemize}
-\item $\mathrm{Res}(f, \infty) = \mathrm{Res}\left(- \frac{1}{z^{2}} f\left(\frac{1}{z}\right), 0\right)$
-\item se è zero di ordine $1$ allora $\mathrm{Res}(f, \infty) = - \lim\limits_{z\rightarrow \infty} zf(z)$
-\item se è zero di ordine $\geq 2$ allora $\mathrm{Res}(f, \infty) = 0$
+\item $\Res (f, \infty) = \Res \left(- \frac{1}{z^{2}} f\left(\frac{1}{z}\right), 0\right)$
+\item se è zero di ordine $1$ allora $\Res (f, \infty) = - \lim\limits_{z\rightarrow \infty} zf(z)$
+\item se è zero di ordine $\geq 2$ allora $\Res (f, \infty) = 0$
 \end{itemize}
 
 \section{Lemmi di Jordan}

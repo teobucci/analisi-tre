@@ -639,7 +639,7 @@ In particolare
 \begin{itemize}
 \item $z=0$ è una singolarità eliminabile, perché annulla sia il denominatore che il numeratore, quindi ha residuo nullo.\footnote{L'implicazione \textit{singolarità eliminabile} allora \textit{residuo nullo} vale solo per i \textbf{punti finiti}, non per il punto all'infinito.}
 \item $z=k\pi $ sono poli del I ordine, $k\in \ZZ  ,k\neq 0$, il cui residuo vale\begin{equation*}
-\mathrm{Res}\left( f,k\pi \right) =\frac{g\left( k\pi \right)}{h'\left( k\pi \right)} =\frac{\left( k\pi \right)^{2}}{\left(\sin k\pi \right) '} =\frac{\left( k\pi \right)^{2}}{\cos k\pi } =\frac{\left( k\pi \right)^{2}}{\left( -1\right)^{k}}
+\Res \left( f,k\pi \right) =\frac{g\left( k\pi \right)}{h'\left( k\pi \right)} =\frac{\left( k\pi \right)^{2}}{\left(\sin k\pi \right) '} =\frac{\left( k\pi \right)^{2}}{\cos k\pi } =\frac{\left( k\pi \right)^{2}}{\left( -1\right)^{k}}
 \end{equation*}
 \item $z_{\infty }$ è una singolarità non isolata perché non esiste un raggio che contiene tutti i punti singolari. Andando all'infinito avremo infiniti punti singolari.
 \end{itemize}
@@ -1089,7 +1089,7 @@ dove $-\min M=k$ è l'\textbf{ordine} del polo.
 \begin{defn}
 Si dice residuo di $f$ in $z_{0}$
 \begin{equation*}
-\mathrm{Res}\left( f,z_{0}\right) :=a_{-1}
+\Res \left( f,z_{0}\right) :=a_{-1}
 \end{equation*}
 \end{defn}
 \begin{thm}
@@ -1110,7 +1110,7 @@ Sia $f\in \Hc \left(\CC  \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed
 \begin{defn}
 Si dice residuo di $f$ in $\infty $
 \begin{equation*}
-\mathrm{Res}\left( f,\infty \right) :=-a_{-1}
+\Res \left( f,\infty \right) :=-a_{-1}
 \end{equation*}
 \end{defn}
 \begin{thm}
@@ -1140,35 +1140,35 @@ Siano $f(z)$ e $g(z)$ tali che $f\left( z_{0}\right) =0=g\left( z_{0}\right)$ e 
 \begin{thm}
 Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
 \begin{equation*}
-\sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right) +\mathrm{Res}\left( f,\infty \right) =0
+\sum\limits ^{n}_{k=1}\Res \left( f,z_{k}\right) +\Res \left( f,\infty \right) =0
 \end{equation*}
 \end{thm}
 \begin{thm}
 Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
 \begin{equation*}
-\int\nolimits _{\partial D\left( 0,R\right)} f\left( z\right) dz=2\pi i\left[\sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right)\right]
+\int\nolimits _{\partial D\left( 0,R\right)} f\left( z\right) dz=2\pi i\left[\sum\limits ^{n}_{k=1}\Res \left( f,z_{k}\right)\right]
 \end{equation*}
 \end{thm}
 \begin{rem}
 Come si calcolano i residui?
 Nei punti all'infinito si definisce
 \begin{equation*}
-\mathrm{Res}\left( f,\infty \right) =\mathrm{Res}\left( -\frac{1}{z^{2}} f\left(\frac{1}{z}\right) ,0\right)
+\Res \left( f,\infty \right) =\Res \left( -\frac{1}{z^{2}} f\left(\frac{1}{z}\right) ,0\right)
 \end{equation*}
 Nei punti $z_{0} \neq \infty $
 \begin{enumerate}
 \item se è una singolarità eliminabile:\begin{equation*}
-\mathrm{Res}\left( f,z_{0}\right) =0
+\Res \left( f,z_{0}\right) =0
 \end{equation*}
 
 (attenzione: solo per i punti finiti)
 \item se è un polo, c'è la \textbf{formula dei poli}
 \begin{enumerate}
 \item semplice (di ordine $p=1$)\begin{equation*}
-\mathrm{Res}\left( f,z_{0}\right) =\lim\limits _{z\rightarrow z_{0}} f\left( z\right)\left( z-z_{0}\right)
+\Res \left( f,z_{0}\right) =\lim\limits _{z\rightarrow z_{0}} f\left( z\right)\left( z-z_{0}\right)
 \end{equation*}
 \item di ordine $p\geqslant 2$\begin{equation*}
-\mathrm{Res}\left( f,z_{0}\right) =\frac{1}{\left( p-1\right) !}\lim\limits _{z\rightarrow z_{0}}\left\{\frac{d^{p-1}}{dz^{p-1}}\left[ f\left( z\right)\left( z-z_{0}\right)^{p}\right]\right\}
+\Res \left( f,z_{0}\right) =\frac{1}{\left( p-1\right) !}\lim\limits _{z\rightarrow z_{0}}\left\{\frac{d^{p-1}}{dz^{p-1}}\left[ f\left( z\right)\left( z-z_{0}\right)^{p}\right]\right\}
 \end{equation*}
 \end{enumerate}
 \item se è una singolarità essenziale bisogna per forza fare lo sviluppo di Laurent (che è valido in tutti i casi in realtà, ma è decisamente più laborioso la maggior parte delle volte)
@@ -1176,7 +1176,7 @@ Nei punti $z_{0} \neq \infty $
 \end{rem}
 \begin{thm}
 Sia $F=\frac{f}{g}$. Se $f\in \Hc \left(\Uc \left( z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left( z_{0}\right) =0$ e $g'\left( z_{0}\right) \neq 0$), allora\begin{equation*}
-\mathrm{Res}\left(\frac{f}{g} ,z_{0}\right) =\frac{f\left( z_{0}\right)}{g'\left( z_{0}\right)}
+\Res \left(\frac{f}{g} ,z_{0}\right) =\frac{f\left( z_{0}\right)}{g'\left( z_{0}\right)}
 \end{equation*}
 
 Ricordiamo che se $f$ non si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ un polo del I ordine. Se $f$ si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ una singolarità eliminabile.
@@ -1185,9 +1185,9 @@ Le singolarità isolate sono $0,1,-1,\infty $.
 
 $z=0,z=1,z=-1$ annullano il denominatore con molteplicità $1$ e non annullano il numeratore, quindi sono degli $1$-poli. Per il teorema appena enunciato:
 \begin{align*}
-\mathrm{Res}\left( F,\phantom{-}0\right) &=\left\{g\left( z\right) =  z,\ f\left( z\right) =\frac{1}{1-z^{2}}\right\} =\frac{1}{1} =1\\
-\mathrm{Res}\left( F,\phantom{-}1\right) &=\left\{g\left( z\right) =1-z,\ f\left( z\right) =\frac{1}{z\left( 1+z\right)}\right\} =\frac{\frac{1}{2}}{-1} =-\frac{1}{2}\\
-\mathrm{Res}\left( F,-1\right) 			 &=\left\{g\left( z\right) =1+z,\ f\left( z\right) =\frac{1}{z\left( 1-z\right)}\right\} =-\frac{1}{2}
+\Res \left( F,\phantom{-}0\right) &=\left\{g\left( z\right) =  z,\ f\left( z\right) =\frac{1}{1-z^{2}}\right\} =\frac{1}{1} =1\\
+\Res \left( F,\phantom{-}1\right) &=\left\{g\left( z\right) =1-z,\ f\left( z\right) =\frac{1}{z\left( 1+z\right)}\right\} =\frac{\frac{1}{2}}{-1} =-\frac{1}{2}\\
+\Res \left( F,-1\right) 			 &=\left\{g\left( z\right) =1+z,\ f\left( z\right) =\frac{1}{z\left( 1-z\right)}\right\} =-\frac{1}{2}
 \end{align*}
 Mentre
 \begin{equation*}
@@ -1195,18 +1195,18 @@ F\left( z\right) =\frac{1}{z\left( 1+z\right)\left( 1-z\right)} \sim \frac{1}{z^
 \end{equation*}
 quindi $\infty $ è una singolarità eliminabile.
 \begin{equation*}
-\mathrm{Res}\left( F,\infty \right) =-\sum\limits ^{3}_{k=1}\mathrm{Res}\left( F,z_{k}\right) =-\left( 1-\frac{1}{2} -\frac{1}{2}\right) =0
+\Res \left( F,\infty \right) =-\sum\limits ^{3}_{k=1}\Res \left( F,z_{k}\right) =-\left( 1-\frac{1}{2} -\frac{1}{2}\right) =0
 \end{equation*}
 \begin{rem}
-Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\mathrm{Res}\left( f,\infty \right) =0$. Infatti $f\left( z\right) =\frac{1}{z}\rightarrow 0$ per $z\rightarrow +\infty $ quindi $\infty $ è singolarità eliminabile, ma $\mathrm{Res}\left( f,\infty \right) =-a_{-1} =-1\neq 0$.
+Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\Res \left( f,\infty \right) =0$. Infatti $f\left( z\right) =\frac{1}{z}\rightarrow 0$ per $z\rightarrow +\infty $ quindi $\infty $ è singolarità eliminabile, ma $\Res \left( f,\infty \right) =-a_{-1} =-1\neq 0$.
 \end{rem}
 \begin{rem}
 Nel nostro caso è vero perchè vale il seguente teorema.
 \end{rem}
 \begin{thm}
-Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\mathrm{Res}\left( f,\infty \right) =0$, perché
+Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\Res \left( f,\infty \right) =0$, perché
 \begin{equation*}
-f\left( z\right) =\sum\limits ^{-2}_{n=-\infty } a_{n} z^{n} \ \ \implies \ \ \mathrm{Res}\left( f,\infty \right) =-a_{-1} =0
+f\left( z\right) =\sum\limits ^{-2}_{n=-\infty } a_{n} z^{n} \ \ \implies \ \ \Res \left( f,\infty \right) =-a_{-1} =0
 \end{equation*}
 \end{thm}
 \Soluzione
@@ -1215,11 +1215,11 @@ Le singolarità isolate di $f$ sono $i,\infty $.
 
 $z=i$ annulla il denominatore con molteplicità $2$ e non annulla il numeratore, quindi è un polo. Usando la formula dei poli
 \begin{equation*}
-\mathrm{Res}\left( f,i\right) =\frac{d}{dz} f\left( z\right)\left( z-i\right)^{2} =\left. -5z^{4}\right| _{z=i} =-5
+\Res \left( f,i\right) =\frac{d}{dz} f\left( z\right)\left( z-i\right)^{2} =\left. -5z^{4}\right| _{z=i} =-5
 \end{equation*}
 $f\left( z\right) \sim -z^{3}$ per $z\rightarrow +\infty $ quindi $\infty $ è un $3$-polo.
 \begin{equation*}
-\mathrm{Res}\left( f,\infty \right) =-\mathrm{Res}\left( f,i\right) =5
+\Res \left( f,\infty \right) =-\Res \left( f,i\right) =5
 \end{equation*}
 \Soluzione
 
@@ -1227,20 +1227,20 @@ Le singolarità isolate di $f$ sono $1,0,\pm 2i,\infty $.
 
 $z=\pm 2i$ sono zeri di molteplicità $1$ per il denominatore di $f$ e non annullano il denominatore, quindi sono $1$-poli. Usando la formula dei poli
 \begin{gather*}
-\mathrm{Res}\left( f,2i\right) =\lim\limits _{z\rightarrow 2i}\left( z-2i\right) f\left( z\right) =\dotsc =\frac{e^{-\frac{1+2i}{5}}}{16} i\\
-\mathrm{Res}\left( f,-2i\right) =\lim\limits _{z\rightarrow -2i}\left( z+2i\right) f\left( z\right) =\dotsc =-\frac{e^{\frac{2i-1}{5}}}{16} i
+\Res \left( f,2i\right) =\lim\limits _{z\rightarrow 2i}\left( z-2i\right) f\left( z\right) =\dotsc =\frac{e^{-\frac{1+2i}{5}}}{16} i\\
+\Res \left( f,-2i\right) =\lim\limits _{z\rightarrow -2i}\left( z+2i\right) f\left( z\right) =\dotsc =-\frac{e^{\frac{2i-1}{5}}}{16} i
 \end{gather*}
 $z=0$ è uno zero di molteplicità $2$ per il denominatore di $f$ e non annulla il denominatore, quindi è un $2$-polo. Usando la formula dei poli
 \begin{equation*}
-\mathrm{Res}\left( f,0\right) =\lim\limits _{z\rightarrow 0}\frac{d}{dz} z^{2} f\left( z\right) =\dotsc =-\frac{1}{4e}
+\Res \left( f,0\right) =\lim\limits _{z\rightarrow 0}\frac{d}{dz} z^{2} f\left( z\right) =\dotsc =-\frac{1}{4e}
 \end{equation*}
 $z=1$ è una singolarità essenziale perché $\nexists \lim\limits _{z\rightarrow 1} f\left( z\right)$.
 
-Abbiamo che $f\left( z\right) \sim \frac{e}{z^{4}}$ per $z\rightarrow +\infty $, allora per il teorema $\mathrm{Res}\left( f,\infty \right) =0$.
+Abbiamo che $f\left( z\right) \sim \frac{e}{z^{4}}$ per $z\rightarrow +\infty $, allora per il teorema $\Res \left( f,\infty \right) =0$.
 
 Infine
 \begin{equation*}
-\mathrm{Res}\left( f,1\right) =-\sum \mathrm{Res}\left( f,\dotsc \right) =\frac{1}{4e} -\frac{\sin\left(\frac{2}{5}\right)}{8e^{\frac{1}{5}}}
+\Res \left( f,1\right) =-\sum \Res \left( f,\dotsc \right) =\frac{1}{4e} -\frac{\sin\left(\frac{2}{5}\right)}{8e^{\frac{1}{5}}}
 \end{equation*}
 \Soluzione
 \begin{enumerate}
@@ -1271,13 +1271,13 @@ Per scrivere la serie di Laurent sfruttiamo il prodotto alla Cauchy.
 \end{rem}Quindi\begin{equation*}
 f\left( z\right) =-\sum\limits ^{\infty }_{k=0}\sum\limits ^{k}_{h=0}\frac{\left( z-1\right)^{k-2h}}{h!}
 \end{equation*}
-\item $\mathrm{Res}\left( f,2\right) =e$ per la formula dei poli
+\item $\Res \left( f,2\right) =e$ per la formula dei poli
 
-$\mathrm{Res}\left( f,1\right) =a_{-1}$ lo trovo ponendo $k-2h=-1$, quindi $a_{-1} =-\sum\limits ^{\infty }_{h=1}\frac{1}{h!} =1-e$
+$\Res \left( f,1\right) =a_{-1}$ lo trovo ponendo $k-2h=-1$, quindi $a_{-1} =-\sum\limits ^{\infty }_{h=1}\frac{1}{h!} =1-e$
 
-$\mathrm{Res}\left( f,\infty \right) =-1$
+$\Res \left( f,\infty \right) =-1$
 \item Applico il teorema dei residui\begin{equation*}
-\int\nolimits _{\gamma } f\left( z\right) dz=2\pi i\left[\mathrm{Res}\left( f,1\right) +\mathrm{Res}\left( f,2\right)\right] =2\pi i
+\int\nolimits _{\gamma } f\left( z\right) dz=2\pi i\left[\Res \left( f,1\right) +\Res \left( f,2\right)\right] =2\pi i
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 3 - Boella}
@@ -1370,12 +1370,12 @@ Calcoliamo ora l'integrale
 \end{equation*}
 che vale, per il teorema dei residui
 \begin{equation*}
-\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\left[\mathrm{Res}\left( f,-a+ia\right) +\mathrm{Res}\left( f,a+ia\right)\right]
+\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\left[\Res \left( f,-a+ia\right) +\Res \left( f,a+ia\right)\right]
 \end{equation*}
 Calcoliamo ora questi residui
 \begin{gather*}
-\mathrm{Res}\left( f,-a+ia\right) =\frac{g\left( z_{0}\right)}{h'\left( z_{0}\right)} =\left. \frac{1}{4z^{3}}\right| _{z=-a+ia} =\left. \frac{z}{4z^{4}}\right| _{z=-a+ia} =\frac{a+ia}{-16a^{4}}\\
-\mathrm{Res}\left( f,a+ia\right) =\frac{g\left( z_{0}\right)}{h'\left( z_{0}\right)} =\left. \frac{1}{4z^{3}}\right| _{z=a+ia} =\left. \frac{z}{4z^{4}}\right| _{z=a+ia} =\frac{-a+ia}{-16a^{4}}
+\Res \left( f,-a+ia\right) =\frac{g\left( z_{0}\right)}{h'\left( z_{0}\right)} =\left. \frac{1}{4z^{3}}\right| _{z=-a+ia} =\left. \frac{z}{4z^{4}}\right| _{z=-a+ia} =\frac{a+ia}{-16a^{4}}\\
+\Res \left( f,a+ia\right) =\frac{g\left( z_{0}\right)}{h'\left( z_{0}\right)} =\left. \frac{1}{4z^{3}}\right| _{z=a+ia} =\left. \frac{z}{4z^{4}}\right| _{z=a+ia} =\frac{-a+ia}{-16a^{4}}
 \end{gather*}
 Allora
 \begin{equation*}
@@ -1465,7 +1465,7 @@ Analizziamo il caso $\lambda  >0$. Applichiamo il Lemma di Jordan, il quale ci d
 \FloatBarrier
 
 \begin{equation*}
-\int _{\RR }\frac{e^{-i\lambda x}}{x^{6} +64} dx=-\lim\limits _{R\rightarrow \infty }\int _{\gamma _{R}}\frac{e^{-i\lambda z}}{z^{6} +64} dz=-2\pi i\left[\sum \mathrm{Res}\left( f,z_{k}\right)\right]
+\int _{\RR }\frac{e^{-i\lambda x}}{x^{6} +64} dx=-\lim\limits _{R\rightarrow \infty }\int _{\gamma _{R}}\frac{e^{-i\lambda z}}{z^{6} +64} dz=-2\pi i\left[\sum \Res \left( f,z_{k}\right)\right]
 \end{equation*}
 Gli zeri al denominatore di $f$ sono nelle $6$ radici seste di $-64$ (i vertici di un esagono)
 \begin{equation*}
@@ -1477,13 +1477,13 @@ Quelli che stanno dentro la parte di piano interessata sono
 \end{equation*}
 Per calcolare il residuo in tali punti utilizziamo la formula di calcolo vista anche nel precedente esercizio
 \begin{equation*}
-\mathrm{Res}\left( f,z_{k}\right) =\left. \frac{e^{-i\lambda z}}{6z^{5}}\right| _{z=z_{k}} =\left. \frac{ze^{-i\lambda z}}{6z^{6}}\right| _{z=z_{k}}
+\Res \left( f,z_{k}\right) =\left. \frac{e^{-i\lambda z}}{6z^{5}}\right| _{z=z_{k}} =\left. \frac{ze^{-i\lambda z}}{6z^{6}}\right| _{z=z_{k}}
 \end{equation*}
 Pertanto
 \begin{itemize}
-\item $\mathrm{Res}\left( f,-\sqrt{3} -i\right) =\frac{\left( -\sqrt{3} -i\right) e^{-i\lambda \left( -\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)}$
-\item $\mathrm{Res}\left( f,\sqrt{3} -i\right) =\frac{\left(\sqrt{3} -i\right) e^{-i\lambda \left(\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)}$
-\item $\mathrm{Res}\left( f,-2i\right) =\frac{\left( -2i\right) e^{-i\lambda \left( -2i\right)}}{6\cdotp \left( -64\right)}$
+\item $\Res \left( f,-\sqrt{3} -i\right) =\frac{\left( -\sqrt{3} -i\right) e^{-i\lambda \left( -\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)}$
+\item $\Res \left( f,\sqrt{3} -i\right) =\frac{\left(\sqrt{3} -i\right) e^{-i\lambda \left(\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)}$
+\item $\Res \left( f,-2i\right) =\frac{\left( -2i\right) e^{-i\lambda \left( -2i\right)}}{6\cdotp \left( -64\right)}$
 \end{itemize}
 
 Allora
@@ -1536,15 +1536,15 @@ la radice col $+$ è interna alla circonferenza, quella con il meno sta a sinist
 \end{equation*}
 allora
 \begin{equation*}
-\frac{1}{i}\int _{\left| z\right| =1}\frac{1}{bz^{2} +2az+b} dz=\frac{1}{i} \cdotp 2\pi i\cdotp \mathrm{Res}\left( f,\overline{z}\right) =2\pi \cdotp \mathrm{Res}\left( f,\overline{z}\right)
+\frac{1}{i}\int _{\left| z\right| =1}\frac{1}{bz^{2} +2az+b} dz=\frac{1}{i} \cdotp 2\pi i\cdotp \Res \left( f,\overline{z}\right) =2\pi \cdotp \Res \left( f,\overline{z}\right)
 \end{equation*}
 il residuo vale
 \begin{equation*}
-\mathrm{Res}\left( f,\overline{z}\right) =\left. \frac{1}{2bz+2a}\right| _{z=\overline{z}} =\frac{1}{2\sqrt{a^{2} -b^{2}}}
+\Res \left( f,\overline{z}\right) =\left. \frac{1}{2bz+2a}\right| _{z=\overline{z}} =\frac{1}{2\sqrt{a^{2} -b^{2}}}
 \end{equation*}
 sostituiamo nel nostro integrale
 \begin{equation*}
-2\pi \cdotp \mathrm{Res}\left( f,\overline{z}\right) =\cancel{2} \pi \cdotp \frac{1}{\cancel{2}\sqrt{a^{2} -b^{2}}} =\frac{\pi }{\sqrt{a^{2} -b^{2}}}
+2\pi \cdotp \Res \left( f,\overline{z}\right) =\cancel{2} \pi \cdotp \frac{1}{\cancel{2}\sqrt{a^{2} -b^{2}}} =\frac{\pi }{\sqrt{a^{2} -b^{2}}}
 \end{equation*}
 abbiamo calcolato un integrale facendo una derivata!
 \Soluzione
@@ -1623,7 +1623,7 @@ infinite lungo l'asse immaginaria. Non ha senso prendere una semicirconferenza p
 \FloatBarrier
 
 \begin{equation*}
-\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\left[\mathrm{Res}\left( f,\pi i\right)\right] =2\pi i\left[\frac{e^{\alpha z}}{e^{z}}\right]_{z=\pi i} =-2\pi ie^{i\alpha \pi }
+\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\left[\Res \left( f,\pi i\right)\right] =2\pi i\left[\frac{e^{\alpha z}}{e^{z}}\right]_{z=\pi i} =-2\pi ie^{i\alpha \pi }
 \end{equation*}
 Vediamo quanto valgono i vari integrali. Quello su $\gamma _{2}$ (e analogamente su $\gamma _{4}$)
 \begin{align*}
@@ -1691,7 +1691,7 @@ Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente L
 \begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \Hc \left( D\left( z_{0} ,r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }\left( t\right) =z_{0} +\varepsilon e^{it}$ con $t\in \left[ \alpha ,\beta \right]$. Allora
 \begin{equation*}
-\lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f\left( z\right) dz=\left( \beta -\alpha \right) i\cdotp \mathrm{Res}\left( f,z_{0}\right)
+\lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f\left( z\right) dz=\left( \beta -\alpha \right) i\cdotp \Res \left( f,z_{0}\right)
 \end{equation*}
 \end{thm}
 \begin{figure}[htpb]
@@ -1815,9 +1815,9 @@ $f\in \Hc (\CC  \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semplici, mentre 
 
 Calcoliamo i residui
 \begin{gather*}
-\mathrm{Res}\left( f,0\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\left(\left( z-0\right)^{2}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z^{2} +1\right)}\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\frac{\left( z+1\right) e^{\pi z}}{z^{2} +1} =\dotsc =1+\pi \\
-\mathrm{Res}\left( f,i\right) =\lim _{z\rightarrow i}\left( z-i\right) f\left( z\right) =\lim _{z\rightarrow i}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z+i\right)} =\dotsc =\frac{1+i}{2i}\\
-\mathrm{Res}\left( f,-i\right) =\lim _{z\rightarrow -i}\left( z+i\right) f\left( z\right) =\dotsc =-\frac{1-i}{2i}
+\Res \left( f,0\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\left(\left( z-0\right)^{2}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z^{2} +1\right)}\right) =\lim _{z\rightarrow 0}\frac{d}{dz}\frac{\left( z+1\right) e^{\pi z}}{z^{2} +1} =\dotsc =1+\pi \\
+\Res \left( f,i\right) =\lim _{z\rightarrow i}\left( z-i\right) f\left( z\right) =\lim _{z\rightarrow i}\frac{\left( z+1\right) e^{\pi z}}{z^{2}\left( z+i\right)} =\dotsc =\frac{1+i}{2i}\\
+\Res \left( f,-i\right) =\lim _{z\rightarrow -i}\left( z+i\right) f\left( z\right) =\dotsc =-\frac{1-i}{2i}
 \end{gather*}
 Le distanze dei punti singolari di $f$ dal centro della curva $\gamma _{R}$ sono
 \begin{gather*}
@@ -1831,13 +1831,13 @@ Allora
 I_{R} =0
 \end{equation*}
 \item se $1< R< \sqrt{2}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=i$\begin{equation*}
-I_{R} =2\pi i\cdotp \mathrm{Res}\left( f,i\right) =\left( 1+i\right) \pi 
+I_{R} =2\pi i\cdotp \Res \left( f,i\right) =\left( 1+i\right) \pi 
 \end{equation*}
 \item se $\sqrt{2} < R< \sqrt{5}$ $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=i$ e $z=0$\begin{equation*}
-I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,0\right)\right] =\pi +i\pi \left( 3 +2\pi\right)
+I_{R} =2\pi i\cdotp \left[\Res \left( f,i\right) +\Res \left( f,0\right)\right] =\pi +i\pi \left( 3 +2\pi\right)
 \end{equation*}
 \item se $R> \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma _{R}$. $f$ è olomorfa all'interno di $\gamma _{R}$ tranne che in $z=\pm i$ e $z=0$\begin{equation*}
-I_{R} =2\pi i\cdotp \left[\mathrm{Res}\left( f,0\right) +\mathrm{Res}\left( f,i\right) +\mathrm{Res}\left( f,-i\right)\right] = i2\pi (2+\pi )
+I_{R} =2\pi i\cdotp \left[\Res \left( f,0\right) +\Res \left( f,i\right) +\Res \left( f,-i\right)\right] = i2\pi (2+\pi )
 \end{equation*}
 \end{itemize}
 
@@ -1856,11 +1856,11 @@ z_{2} =i\left( -3+2\sqrt{2}\right)
 \end{equation*}
 di cui solo $z_{2}$ sta dentro il cerchio unitario
 \begin{equation*}
-2\int _{\left| z\right| =1}\frac{i}{z^{2} +6iz-1} dz=2\cdotp 2\pi i\cdotp \mathrm{Res}\left( f,i\left( -3+2\sqrt{2}\right)\right)
+2\int _{\left| z\right| =1}\frac{i}{z^{2} +6iz-1} dz=2\cdotp 2\pi i\cdotp \Res \left( f,i\left( -3+2\sqrt{2}\right)\right)
 \end{equation*}
 ricordando che è un polo semplice
 \begin{equation*}
-4\pi i\cdotp \mathrm{Res}\left( f,i\left( -3+2\sqrt{2}\right)\right) =4\pi i\lim\limits _{z\rightarrow i\left( -3+2\sqrt{2}\right)}\left[ z-i\left( -3+2\sqrt{2}\right)\right] f\left( z\right) =\dotsc =\frac{\pi }{\sqrt{2}}
+4\pi i\cdotp \Res \left( f,i\left( -3+2\sqrt{2}\right)\right) =4\pi i\lim\limits _{z\rightarrow i\left( -3+2\sqrt{2}\right)}\left[ z-i\left( -3+2\sqrt{2}\right)\right] f\left( z\right) =\dotsc =\frac{\pi }{\sqrt{2}}
 \end{equation*}
 \Soluzione
 \begin{equation*}
@@ -1880,7 +1880,7 @@ z^{2k} =-\alpha ^{2} =\alpha ^{2} e^{\pi i} \ \ \implies \ \ z_{j} =\alpha ^{\fr
 \end{equation*}
 allora per il teorema dei residui
 \begin{equation*}
-\int _{\gamma _{R}} f\left( z\right) dz=\int _{\sigma } f\left( z\right) dz+\int _{\varphi } f\left( z\right) dz=2\pi i\cdotp \sum\limits ^{k-1}_{j=0}\mathrm{Res}\left( f,z_{j}\right)
+\int _{\gamma _{R}} f\left( z\right) dz=\int _{\sigma } f\left( z\right) dz+\int _{\varphi } f\left( z\right) dz=2\pi i\cdotp \sum\limits ^{k-1}_{j=0}\Res \left( f,z_{j}\right)
 \end{equation*}
 Nello specifico il pezzo su $\sigma $ tende proprio al nostro integrale
 \begin{equation*}
@@ -1921,7 +1921,7 @@ Analizziamo i vari pezzi
 \end{equation*}
 il morso:
 \begin{equation*}
-\int _{\psi } f\left( z\right) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left( \beta -\alpha \right) \cdotp \mathrm{Res}\left( f,0\right) =\left( 0-\pi \right) i\cdotp \mathrm{Res}\left( f,0\right) =-\pi i\frac{e^{0}}{1} =-\pi i
+\int _{\psi } f\left( z\right) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left( \beta -\alpha \right) \cdotp \Res \left( f,0\right) =\left( 0-\pi \right) i\cdotp \Res \left( f,0\right) =-\pi i\frac{e^{0}}{1} =-\pi i
 \end{equation*}
 mentre il semicerchio grande:
 \begin{align*}
@@ -1946,7 +1946,7 @@ f\left( z\right) =\frac{e^{i\pi z}}{\left( z-3\right)\left( z^{2} -2z+2\right)}
 \end{equation*}
 $f\in \Hc \left(\CC  \setminus \left\{3,1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
 \begin{align*}
-\int _{\gamma _{R,\varepsilon }} f\left( z\right) dz & =2\pi i\cdotp \mathrm{Res}\left( f,1+i\right) =2\pi i\cdotp \lim _{z\rightarrow 1+i} f\left( z\right)\left( z-\left( 1+i\right)\right) =\\
+\int _{\gamma _{R,\varepsilon }} f\left( z\right) dz & =2\pi i\cdotp \Res \left( f,1+i\right) =2\pi i\cdotp \lim _{z\rightarrow 1+i} f\left( z\right)\left( z-\left( 1+i\right)\right) =\\
  & =2\pi i\cdotp \lim _{z\rightarrow 1+i}\frac{e^{\pi iz}}{\left( z-3\right)\left( z-1+i\right)} =\dotsc =\frac{\pi e^{-\pi }}{5}\left( 2+i\right)
 \end{align*}
 ma questo integrale possiamo vederlo come la somma di tre pezzi
@@ -1959,7 +1959,7 @@ di cui il primo tende proprio all'integrale che vogliamo calcolare
 \end{equation*}
 occupiamoci del pezzo sul morso sfruttando il Lemma del cerchio piccolo
 \begin{align*}
-\lim _{\varepsilon \rightarrow 0^{+}}\int _{\psi } f\left( z\right) dz & =-\pi i\cdotp \mathrm{Res}\left( f,3\right)\\
+\lim _{\varepsilon \rightarrow 0^{+}}\int _{\psi } f\left( z\right) dz & =-\pi i\cdotp \Res \left( f,3\right)\\
  & =-\pi i\cdotp \lim _{z\rightarrow 3} f\left( z\right)\left( z-3\right) =-\pi i\cdotp \lim _{z\rightarrow 3}\frac{e^{i\pi z}}{z^{2} -2z+2} =\dotsc =\frac{\pi i}{5}
 \end{align*}
 ed infine del semicerchio grande
@@ -1993,7 +1993,7 @@ il cui denominatore si annulla in
 \end{gather*}
 Integriamo sul rettangolo che contiene il residuo in $\pi i/2$
 \begin{equation*}
-\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\cdotp \mathrm{Res}\left( f,\frac{\pi i}{2}\right) =2\pi i\cdotp \left. \frac{e^{iz}}{\sinh}\right| _{z=\frac{\pi i}{2}} =\dotsc =\frac{2\pi }{e^{\frac{\pi }{2}}}
+\int _{\gamma _{R}} f\left( z\right) dz=2\pi i\cdotp \Res \left( f,\frac{\pi i}{2}\right) =2\pi i\cdotp \left. \frac{e^{iz}}{\sinh}\right| _{z=\frac{\pi i}{2}} =\dotsc =\frac{2\pi }{e^{\frac{\pi }{2}}}
 \end{equation*}
 il circuito lo possiamo vedere come $4$ lati di un rettangolo, numerati in senso antiorario partendo da quello in basso
 
@@ -2140,7 +2140,7 @@ Nel passaggio (*) abbiamo sfruttato l'annullamento dell'integrale di una funzion
 \frac{1}{2}\int _{\RR }\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}} dx
 \end{equation*}Prendiamo ora in esame $f(z)=\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}}$, sfruttiamo il Lemma di Jordan ($\alpha  >0$) e il Teorema dei residui, integrando sulla semicirconferenza superiore.
 \begin{equation*}
-\int _{\gamma _{R}} f( z) dz=2\pi i\cdotp \mathrm{Res}( f,z=i\beta ) =2\pi i\cdotp \left. \frac{e^{i\alpha x}}{2z}\right| _{z=i\beta } =\frac{\pi }{\beta } e^{-\alpha \beta }
+\int _{\gamma _{R}} f( z) dz=2\pi i\cdotp \Res ( f,z=i\beta ) =2\pi i\cdotp \left. \frac{e^{i\alpha x}}{2z}\right| _{z=i\beta } =\frac{\pi }{\beta } e^{-\alpha \beta }
 \end{equation*}
 Per $R\rightarrow +\infty $
 \begin{equation*}
@@ -2208,7 +2208,7 @@ Rinfrescate le idee, ora consideriamo come dominio di integrazione una semicirco
 \FloatBarrier
 
 \begin{equation*}
-\int _{\gamma _{R,\varepsilon }} f(z)dz=2\pi i\cdot \mathrm{Res} (f,z=i)=2\pi i\cdotp \left. \frac{e^{iz}}{3z^{2} +2z+1}\right| _{z=i} =2\pi i\cdotp \frac{e^{-1}}{2i-2}
+\int _{\gamma _{R,\varepsilon }} f(z)dz=2\pi i\cdot \Res  (f,z=i)=2\pi i\cdotp \left. \frac{e^{iz}}{3z^{2} +2z+1}\right| _{z=i} =2\pi i\cdotp \frac{e^{-1}}{2i-2}
 \end{equation*}
 Quando $\varepsilon \rightarrow 0^{+} ,R\rightarrow \infty $
 \begin{equation*}
@@ -2217,24 +2217,24 @@ Quando $\varepsilon \rightarrow 0^{+} ,R\rightarrow \infty $
 \begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \Hc ( D( z_{0} ,r) \setminus \{z_{0}\})$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }( t) =z_{0} +\varepsilon e^{it}$ con $t\in [ \alpha ,\beta ]$. Allora
 \begin{equation*}
-\lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f( z) dz=( \beta -\alpha ) i\cdotp \mathrm{Res}( f,z_{0})
+\lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f( z) dz=( \beta -\alpha ) i\cdotp \Res ( f,z_{0})
 \end{equation*}
 \end{thm}
 Per Jordan, quello su $\sigma _{R}$ tende a $0$.
 
-Per il lemma del cerchio piccolo, quello su $\sigma _{\varepsilon }$ tende a $( 0-\pi ) i\cdotp \mathrm{Res}( f,-1)$.
+Per il lemma del cerchio piccolo, quello su $\sigma _{\varepsilon }$ tende a $( 0-\pi ) i\cdotp \Res ( f,-1)$.
 
 Applichiamo anche il teorema dei residui sull'integrale su $\gamma _{R,\varepsilon }$.
 \begin{equation*}
 \begin{aligned}
 \int _{\gamma _{R,\varepsilon }} & =\int ^{-1-\varepsilon }_{-R} +\int ^{R}_{-1-\varepsilon } +\int _{\sigma _{\varepsilon }} +\int _{\sigma _{R}}\\
-2\pi i\cdotp \mathrm{Res} (f,i) & =\int _{\RR } f( x) dx-\pi i\cdotp \mathrm{Res}( f,-1) +0
+2\pi i\cdotp \Res  (f,i) & =\int _{\RR } f( x) dx-\pi i\cdotp \Res ( f,-1) +0
 \end{aligned}
 \end{equation*}
 Ovvero
 \begin{equation*}
 \begin{aligned}
-\int _{\RR } f( x) dx & =2\pi i\cdotp \mathrm{Res} (f,i)+\pi i\cdotp \mathrm{Res}( f,-1)\\
+\int _{\RR } f( x) dx & =2\pi i\cdotp \Res  (f,i)+\pi i\cdotp \Res ( f,-1)\\
  & =2\pi i\cdotp \frac{e^{-1}}{2i-2} +\pi i\cdotp \frac{e^{-i}}{2}\\
  & =\pi i\left(\frac{e^{-1}}{i-1} +\frac{e^{-i}}{2}\right)
 \end{aligned}
@@ -2779,7 +2779,7 @@ Chiamo l'intera curva $\gamma _{R,\varepsilon } =\sigma _{1} \cup \varphi \cup \
 
 Per il teorema dei residui
 \begin{equation*}
-\int _{\gamma _{R,\varepsilon }} f\left( z\right) dz=2\pi i\cdotp \mathrm{Res}\left( f,e^{i\pi /3}\right)
+\int _{\gamma _{R,\varepsilon }} f\left( z\right) dz=2\pi i\cdotp \Res \left( f,e^{i\pi /3}\right)
 \end{equation*}
 $e^{i\pi /3}$ è l'unico punto interno alla curva in cui si annulla il denominatore.
 \begin{equation*}
@@ -2810,7 +2810,7 @@ z=\varepsilon e^{it}\\
 t\in [ 0,2\pi /3]
 \end{array}\right\} =\left| \int ^{2\pi /3}_{0}\frac{e^{\alpha (\ln \varepsilon +it)}}{1+\varepsilon ^{3} e^{i3t}}\textcolor[rgb]{0.29,0.56,0.89}{\underbrace{\varepsilon ie^{it}}_{\gamma '}} dt\right| \leqslant \dotsc \leqslant \frac{2\pi }{3} \varepsilon ^{\alpha +1}\xrightarrow[\alpha \in ( -1,2)]{\varepsilon \rightarrow 0^{+}} 0\\
  & \\
-\implies  & \ \ \frac{2\pi i\cdotp \mathrm{Res}\left( f,e^{i\pi /3}\right)}{1-e^{i\frac{2}{3} \pi ( 1+\alpha )}} =I
+\implies  & \ \ \frac{2\pi i\cdotp \Res \left( f,e^{i\pi /3}\right)}{1-e^{i\frac{2}{3} \pi ( 1+\alpha )}} =I
 \end{aligned}
 \end{equation*}
 Resta solo da calcolare il residuo.
@@ -2819,7 +2819,7 @@ Resta solo da calcolare il residuo.
 Devo considerare la forma $A$
 \begin{gather*}
 f( z) =e^{-\frac{1}{2}\mathrm{Log}_{( 2\pi )} z} \cdotp \frac{1}{1+z}\\
-\int _{\gamma _{\varepsilon ,R}} f( z) dz=2\pi i\cdotp \sum \mathrm{Res}( f) =2\pi i\cdotp \mathrm{Res}( f,-1)
+\int _{\gamma _{\varepsilon ,R}} f( z) dz=2\pi i\cdotp \sum \Res ( f) =2\pi i\cdotp \Res ( f,-1)
 \end{gather*}
 Ugualmente
 \begin{equation*}
@@ -2835,7 +2835,7 @@ t\in [ \varepsilon ,R]
 \int _{\varphi } & \xrightarrow{R\rightarrow +\infty } 0\\
 \int _{\psi } & \xrightarrow{\varepsilon \rightarrow 0^{+}} 0\\
  & \\
-\implies  & \ \ 2I=2\pi i\cdotp \mathrm{Res}( f,-1) \ \ \implies \ \ I=\pi i\cdotp \mathrm{Res}( f,-1)
+\implies  & \ \ 2I=2\pi i\cdotp \Res ( f,-1) \ \ \implies \ \ I=\pi i\cdotp \Res ( f,-1)
 \end{aligned}
 \end{equation*}
 \Soluzione
@@ -2843,7 +2843,7 @@ t\in [ \varepsilon ,R]
 Siamo nel caso $B$
 \begin{gather*}
 f\left( z\right) =\mathrm{Log}_{\left( 2\pi \right)} z\cdotp R\left( z\right) =f\left( z\right) =\frac{\mathrm{Log}_{\left( 2\pi \right)} z}{\left( z^{2} +4\right)\left( z+1\right)}\\
-\int _{\gamma _{\varepsilon ,R}} f\left( z\right) dz=2\pi i\cdotp \sum \mathrm{Res}\left( f,z_{i}\right)
+\int _{\gamma _{\varepsilon ,R}} f\left( z\right) dz=2\pi i\cdotp \sum \Res \left( f,z_{i}\right)
 \end{gather*}
 Il denominatore si annulla per $z=-1,\pm 2i$.
 \begin{equation*}
@@ -3431,7 +3431,7 @@ ha $4$ poli semplici in $z=\pm ni$ e $z=\pm 2ni$.
 \FloatBarrier
 \begin{equation*}
 \begin{aligned}
-I^{\star }_{n} & =2\pi i\cdotp \{\mathrm{Res}( g_{n} ,2ni) +\mathrm{Res}( g_{n} ,ni)\} =2\pi i\cdotp \left\{-\frac{i}{6n^{3}} +\frac{i}{12n^{3}}\right\}\\
+I^{\star }_{n} & =2\pi i\cdotp \{\Res ( g_{n} ,2ni) +\Res ( g_{n} ,ni)\} =2\pi i\cdotp \left\{-\frac{i}{6n^{3}} +\frac{i}{12n^{3}}\right\}\\
 I^{\star }_{n} & =\underbrace{\int _{\sigma _{R}} g( z) dz}_{\xrightarrow{R\rightarrow +\infty } 0} +\underbrace{\int ^{R}_{-R} g( z) dz}_{\xrightarrow{R\rightarrow +\infty } I_{n}}\\
  & \implies I_{n} =\frac{\pi }{6n^{3}}\\
  & \implies \Vert f_{n,\alpha } -F_{\alpha }\Vert _{L^{1}} =n^{\alpha } \cdotp \frac{\pi }{6n^{3}}\xrightarrow{n\rightarrow +\infty } 0\ \ \iff \ \ \alpha < 3\land \alpha \in [ 0,4)
@@ -5386,7 +5386,7 @@ Disegno il grafico con il solito rettangolo della gamma che contenga solo un res
 Calcolo
 \begin{equation*}
 \begin{aligned}
-\int _{\gamma _{R}} f(z)dz & =2\pi i\cdotp \mathrm{Res}\left( f,z=\frac{i\pi }{2}\right) =2\pi i\left. \frac{2e^{-i\xi z}}{e^{z} -e^{-z}}\right| _{z=i\pi /2}\\
+\int _{\gamma _{R}} f(z)dz & =2\pi i\cdotp \Res \left( f,z=\frac{i\pi }{2}\right) =2\pi i\left. \frac{2e^{-i\xi z}}{e^{z} -e^{-z}}\right| _{z=i\pi /2}\\
  & =2\pi i\cdotp \frac{2e^{\xi \frac{\pi }{2}}}{e^{\frac{i\pi }{2}} -e^{-\frac{i\pi }{2}}} =2\pi i\cdotp \frac{2e^{\xi \frac{\pi }{2}}}{i-( -i)} =2\pi e^{\xi \frac{\pi }{2}}
 \end{aligned}
 \end{equation*}
@@ -5469,14 +5469,14 @@ Nel nostro caso si parla di $-\xi $ per calcolare quanto vale questa trasformata
 
 Per $\xi  >0$
 \begin{equation*}
-\int _{R}\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx=-2\pi i\cdotp \mathrm{Res}( f,z=-i)
+\int _{R}\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx=-2\pi i\cdotp \Res ( f,z=-i)
 \end{equation*}
 Il segno meno è giustificato dal fatto che percorriamo la semicirconferenza in senso \textit{antiorario}.
 
 Il residuo allora sarà pari a
 \begin{equation*}
 \begin{aligned}
-\mathrm{Res}( f,z=-i) & =\left. \frac{d}{dz}\frac{e^{-i\xi z}}{( z-i)^{2}}\right| _{z=-i}\\
+\Res ( f,z=-i) & =\left. \frac{d}{dz}\frac{e^{-i\xi z}}{( z-i)^{2}}\right| _{z=-i}\\
  & =\left. \frac{-i\xi e^{-i\xi z}( z-i)^{2} -e^{-i\xi z} 2(z-i)}{( z-i)^{4}}\right| _{z=-i}\\
  & =\frac{e^{-\xi }( 4i+4i\xi )}{16} =i\frac{e^{-\xi }}{4} (1+\xi )
 \end{aligned}
@@ -5678,7 +5678,7 @@ e sono dei poli semplici.
 
 Osserviamo che $| f( z)| \sim \frac{1}{z^{2}}$ per $| z| \rightarrow +\infty $, allora col teorema dei residui e il lemma di Jordan
 \begin{equation*}
-\int ^{+\infty }_{-\infty } e^{-i\xi x}\frac{1}{1+x^{2}} dx=2\pi i\cdotp \mathrm{Res}\left(\frac{e^{-i\xi z}}{1+z^{2}} ,z=i\right) =\pi e^{\xi } \ \ \forall \xi < 0
+\int ^{+\infty }_{-\infty } e^{-i\xi x}\frac{1}{1+x^{2}} dx=2\pi i\cdotp \Res \left(\frac{e^{-i\xi z}}{1+z^{2}} ,z=i\right) =\pi e^{\xi } \ \ \forall \xi < 0
 \end{equation*}
 \begin{rem}
 Se $f$ è pari, allora $\hat{f}$ è pari.
@@ -5860,7 +5860,7 @@ Le singolarità sono poli semplici.
 Notiamo che $| u( z)| \sim \frac{1}{z^{4}}$ per $| z| \rightarrow +\infty $. Per il teorema dei residui e il lemma di Jordan
 \begin{equation*}
 \begin{aligned}
-\hat{u}( \xi ) & =\int ^{+\infty }_{-\infty }\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}\overset{\xi < 0}{=} 2\pi i\cdotp \{\mathrm{Res}( u,i) +\mathrm{Res}( u,2i)\}\\
+\hat{u}( \xi ) & =\int ^{+\infty }_{-\infty }\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}\overset{\xi < 0}{=} 2\pi i\cdotp \{\Res ( u,i) +\Res ( u,2i)\}\\
  & =2\pi i\cdotp \left\{\frac{e^{\xi }}{6i} -\frac{e^{2\xi }}{12i}\right\} =\frac{\pi }{3} e^{\xi } -\frac{\pi }{6} e^{2\xi } \ \ ( \xi < 0)
 \end{aligned}
 \end{equation*}
@@ -6820,7 +6820,7 @@ $\hat{u}$ reale pari, allora $u$ reale pari, quindi studiamo le $x >0$ per poi s
 
 Usando il Lemma di Jordan (semipiano superiore). Sia
 \begin{equation*}
-f( z) =\frac{2\left( 1+z^{2}\right) e^{ixz}}{z^{4} +4} \ \ \implies \ \ u( x) =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\mathrm{Res}( f,z_{k})
+f( z) =\frac{2\left( 1+z^{2}\right) e^{ixz}}{z^{4} +4} \ \ \implies \ \ u( x) =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k})
 \end{equation*}
 Il denominatore si annulla in
 \begin{equation*}
@@ -6828,17 +6828,17 @@ z^{4} +4=0\ \ \iff \ \ z=\pm 1\pm i
 \end{equation*}
 Determiniamo i residui
 \begin{align*}
-\mathrm{Res}( f,1+i) & =\left. \frac{2\left( 1+z^{2}\right) e^{ixz}}{4z^{3}}\right| _{z=1+i} =\left. \frac{2z\left( 1+z^{2}\right) e^{ixz}}{4z^{4}}\right| _{z=1+i}\\
-\mathrm{Res}( f,-1+i) & =\left. \frac{2\left( 1+z^{2}\right) e^{ixz}}{4z^{3}}\right| _{z=-1+i} =\left. \frac{2z\left( 1+z^{2}\right) e^{ixz}}{4z^{4}}\right| _{z=-1+i}
+\Res ( f,1+i) & =\left. \frac{2\left( 1+z^{2}\right) e^{ixz}}{4z^{3}}\right| _{z=1+i} =\left. \frac{2z\left( 1+z^{2}\right) e^{ixz}}{4z^{4}}\right| _{z=1+i}\\
+\Res ( f,-1+i) & =\left. \frac{2\left( 1+z^{2}\right) e^{ixz}}{4z^{3}}\right| _{z=-1+i} =\left. \frac{2z\left( 1+z^{2}\right) e^{ixz}}{4z^{4}}\right| _{z=-1+i}
 \end{align*}
 calcoliamo
 \begin{align*}
-\sum _{\mathrm{Im}( z_{k})  >0}\mathrm{Res}( f,z_{k}) & =-\frac{1}{8}\left\{( 1+i)( 1+2i) e^{( -1+i) x} +( -1+i)( 1-2i) e^{( -1-i) x}\right\}\\
+\sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k}) & =-\frac{1}{8}\left\{( 1+i)( 1+2i) e^{( -1+i) x} +( -1+i)( 1-2i) e^{( -1-i) x}\right\}\\
  & =-\frac{e^{-x}}{8}\left\{( -1+3i) e^{ix} +( 1+3i) e^{-ix}\right\}
 \end{align*}
 Per le $x >0$
 \begin{align*}
-u( x) & =i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\mathrm{Res}( f,z_{k})\\
+u( x) & =i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\Res ( f,z_{k})\\
  & =\frac{e^{-x}}{4}\left\{\frac{3+i}{2} e^{ix} +\frac{3-i}{2} e^{-ix}\right\}\\
  & =\frac{e^{-x}}{4}\left\{3\frac{e^{ix} +e^{-ix}}{2} -\frac{e^{ix} -e^{-ix}}{2i}\right\}\\
  & =\frac{e^{-x}}{4}( 3\cos x-\sin x)
@@ -6968,7 +6968,7 @@ u( x) =\frac{1}{2\pi }\int _{\RR } e^{ix\xi }\frac{1}{\left( 1+\xi ^{2}\right)^{
 \end{equation*}
 Per $x >0$, usando il lemma di Jordan
 \begin{align*}
-u( x) & =\frac{1}{\cancel{2\pi }} \cdotp \cancel{2\pi } i\cdotp \mathrm{Res}\left\{\frac{e^{ixz}}{\left( 1+z^{2}\right)^{2}} ,z=i\right\}\\
+u( x) & =\frac{1}{\cancel{2\pi }} \cdotp \cancel{2\pi } i\cdotp \Res \left\{\frac{e^{ixz}}{\left( 1+z^{2}\right)^{2}} ,z=i\right\}\\
  & =i\cdotp \frac{d}{dz}\left. \left[\cancel{( z-i)^{2}} \cdotp \frac{e^{ixz}}{( z+i)^{2}\cancel{( z-i)^{2}}}\right]\right| _{z=i}\\
  & =i\cdotp \left. \frac{ixe^{ixz}( z+i)^{2} -e^{ixz} 2( z+i)}{( z+i)^{4}}\right| _{z=i}\\
  & =i\cdotp \frac{1}{16} e^{-x}( -4ix-4i)\\
@@ -7093,7 +7093,7 @@ u( x) =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\hat{u}( \xi ) d\xi =\frac{1}{2\pi 
 \end{equation*}
 applico il teorema dei residui e il Lemma di Jordan sulla semicirconferenza superiore
 \begin{equation*}
-=\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \mathrm{Res}\left( -\frac{e^{izx}}{\left( 1+z^{2}\right)^{2}} ,z=i\right) =
+=\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \Res \left( -\frac{e^{izx}}{\left( 1+z^{2}\right)^{2}} ,z=i\right) =
 \end{equation*}
 è un polo del secondo ordine
 \begin{equation*}
