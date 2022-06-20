@@ -345,7 +345,7 @@ Se $\Omega \equiv \CC $ allora $f$ è \textbf{intera}.
 \begin{thm}
 [di Cauchy-Riemann] Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ definita come
 \begin{equation*}
-f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\mathrm{Re}\left( z\right) +i\mathrm{Im}\left( z\right)
+f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\Re \left( z\right) +i\mathrm{Im}\left( z\right)
 \end{equation*}
 è olomorfa in $\Omega $ se e solo se $u,v:\Omega \rightarrow \RR $ sono differenziabili in senso classico in $\Omega $ e valgono le \textbf{condizioni di Cauchy-Riemann}
 \begin{equation}
@@ -363,7 +363,7 @@ Un altro modo per scrivere le (1) è
 Infatti
 \begin{equation*}
 \begin{array}{ l }
-x=\mathrm{Re}\left( z\right) =\frac{z+\overline{z}}{2}\\
+x=\Re \left( z\right) =\frac{z+\overline{z}}{2}\\
 y=\mathrm{Im}\left( z\right) =-i\frac{z-\overline{z}}{2}
 \end{array}
 \end{equation*}
@@ -765,7 +765,7 @@ non è altro che un integrale complesso, fatto però sulla curva $\gamma _{1}$, 
 \end{equation*}
 che sarà quindi una quantità complessa, ma l'integrale richiesto è proprio la parte reale di questa quantità
 \begin{equation*}
-\int\nolimits ^{+\infty }_{0}\cos\left( x^{2}\right) dx=\mathrm{Re}\left(\int\nolimits ^{+\infty }_{0} e^{ix^{2}} dz\right) =\mathrm{Re}\left( e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}\right) =\cos\left(\frac{\pi }{4}\right)\frac{\sqrt{\pi }}{2} =\sqrt{\frac{\pi }{8}}
+\int\nolimits ^{+\infty }_{0}\cos\left( x^{2}\right) dx=\Re \left(\int\nolimits ^{+\infty }_{0} e^{ix^{2}} dz\right) =\Re \left( e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}\right) =\cos\left(\frac{\pi }{4}\right)\frac{\sqrt{\pi }}{2} =\sqrt{\frac{\pi }{8}}
 \end{equation*}
 \chapter{Esercitazione 2 - Potrich}
 \ParteEsercizi
@@ -932,9 +932,9 @@ Ricordiamo l'integrale di Gauss
 Otteniamo che\begin{equation*}
 \int\nolimits _{\gamma _{3}} f\left( z\right) dz\xrightarrow{R\rightarrow +\infty } -e^{i\frac{\pi }{4}}\frac{\sqrt{\pi }}{2}
 \end{equation*}
-\item su $\gamma _{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| =e^{\mathrm{Re}\left( z\right)}$\begin{align*}
+\item su $\gamma _{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| =e^{\Re \left( z\right)}$\begin{align*}
 0 & \leqslant \left| \int\nolimits _{\gamma _{2}} f\left( z\right) dz\right| =\left| \int\nolimits ^{\pi /4}_{0} f\left( \gamma \left( t\right)\right) \gamma '\left( t\right) dt\right| =\left| \int\nolimits ^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
- & \leqslant R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt=R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt=R\int\nolimits ^{\pi /4}_{0} e^{\mathrm{Re}\left[ iR^{2}\left(\cos\left( 2t\right) +i\sin\left( 2t\right)\right)\right]} dt\\
+ & \leqslant R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt=R\int\nolimits ^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt=R\int\nolimits ^{\pi /4}_{0} e^{\Re \left[ iR^{2}\left(\cos\left( 2t\right) +i\sin\left( 2t\right)\right)\right]} dt\\
  & =R\int\nolimits ^{\pi /4}_{0} e^{-R^{2}\sin\left( 2t\right)} dt=\left\{\begin{array}{ c }
 2t=x\\
 dt=\frac{dx}{2}
@@ -1000,7 +1000,7 @@ J=\int\nolimits ^{+\infty }_{0} e^{it^{2}} dt=e^{i\frac{\pi }{4}}\frac{\sqrt{\pi
 \end{equation*}
 ma quindi
 \begin{align*}
-\int\nolimits ^{+\infty }_{0}\cos t^{2} dt & =\mathrm{Re}\left( J\right) =\frac{\sqrt{2\pi }}{4}\\
+\int\nolimits ^{+\infty }_{0}\cos t^{2} dt & =\Re \left( J\right) =\frac{\sqrt{2\pi }}{4}\\
 \int\nolimits ^{+\infty }_{0}\sin t^{2} dt & =\mathrm{Im}\left( J\right) =\frac{\sqrt{2\pi }}{4}
 \end{align*}
 \Soluzione
@@ -1926,7 +1926,7 @@ il morso:
 mentre il semicerchio grande:
 \begin{align*}
 \left| \int _{\varphi } f\left( z\right) dz\right|  & =\left\{z=Re^{it} ,dz=Rie^{it} dt\right\} =\left| \int ^{\pi }_{0}\frac{e^{iRe^{it}}}{\cancel{Re^{it}}} i\cancel{Re^{it}} dt\right| \\
- & \leqslant \int ^{\pi }_{0}\left| e^{iRe^{it}}\right| dt=\left\{\left| e^{z}\right| =e^{\mathrm{Re}\left( z\right)}\right\}\\
+ & \leqslant \int ^{\pi }_{0}\left| e^{iRe^{it}}\right| dt=\left\{\left| e^{z}\right| =e^{\Re \left( z\right)}\right\}\\
  & =\int ^{\pi }_{0} e^{-R\sin t} dt=2\int ^{\frac{\pi }{2}}_{0} e^{-R\sin t} dt\leqslant 2\int ^{\frac{\pi }{2}}_{0} e^{-\frac{2Rt}{\pi }} dt\\
  & =\frac{\pi }{R}\left( 1-e^{-R}\right) \leqslant \frac{\pi }{R}\xrightarrow{R\rightarrow +\infty } 0
 \end{align*}
@@ -2081,7 +2081,7 @@ isoliamo il nostro integrale
 \end{equation*}
 ma l'integrale di partenza è proprio la parte reale di questo integrale
 \begin{equation*}
-\int ^{+\infty }_{-\infty }\frac{\cos x}{\cosh x} dx=\mathrm{Re}\left[\int ^{+\infty }_{-\infty }\frac{e^{it}}{\cosh t} dt\right] =\frac{\pi }{\cosh\left(\frac{\pi }{2}\right)}
+\int ^{+\infty }_{-\infty }\frac{\cos x}{\cosh x} dx=\Re \left[\int ^{+\infty }_{-\infty }\frac{e^{it}}{\cosh t} dt\right] =\frac{\pi }{\cosh\left(\frac{\pi }{2}\right)}
 \end{equation*}
 \chapter{Esercitazione 4 - Boella}
 \ParteEsercizi
@@ -5774,7 +5774,7 @@ Sul pezzo $BC$ affermiamo
 dato che se $R >2b$ si ottiene, per ogni $z\in BC$,
 \begin{gather*}
 z=| z| (\cos \vartheta +i\sin \vartheta )\\
-\left| e^{-z^{2}}\right| =e^{\mathrm{Re}\left( -z^{2}\right)} =e^{-| z| ^{2}\cos 2\vartheta } \leqslant e^{-R^{2}\cos 2\vartheta } =e^{-R^{2}\left(\cos^{2} \vartheta -\sin^{2} \vartheta \right)} \leqslant e^{-\frac{R^{2}}{4}}\xrightarrow{R\rightarrow +\infty } 0
+\left| e^{-z^{2}}\right| =e^{\Re \left( -z^{2}\right)} =e^{-| z| ^{2}\cos 2\vartheta } \leqslant e^{-R^{2}\cos 2\vartheta } =e^{-R^{2}\left(\cos^{2} \vartheta -\sin^{2} \vartheta \right)} \leqslant e^{-\frac{R^{2}}{4}}\xrightarrow{R\rightarrow +\infty } 0
 \end{gather*}
 Analogamente
 \begin{equation*}
@@ -6067,7 +6067,7 @@ $\Lc\left\{t^{n} H( t)\right\} =\frac{n!}{s^{n+1}}$
 \item $\Gamma \left(\frac{1}{2}\right) =\sqrt{\pi }$
 \end{itemize}
 
-$\Lc\left\{t^{\alpha } H( t)\right\} =\frac{\Gamma ( \alpha +1)}{s^{\alpha +1}}$ se $\mathrm{Re}( \alpha )  >-1$
+$\Lc\left\{t^{\alpha } H( t)\right\} =\frac{\Gamma ( \alpha +1)}{s^{\alpha +1}}$ se $\Re ( \alpha )  >-1$
 \item $\Lc\left\{\frac{1}{\sqrt{t}} H( t)\right\} =\frac{\Gamma \left(\frac{1}{2}\right)}{\sqrt{s}} =\frac{\sqrt{\pi }}{\sqrt{s}}$
 \end{itemize}
 
@@ -6508,36 +6508,36 @@ Si dice Ascissa di convergenza di $\displaystyle f$:
 \begin{defn}
 Sia $\displaystyle f$ una funzione Laplace-trasformabile, allora la funzione:
 \begin{equation*}
-\boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\lambda _{f}}
+\boxed{F( s) :=\int ^{+\infty }_{0} e^{-st} f( t) dt\ \ \ \ \forall s\in \CC  :\Re ( s)  >\lambda _{f}}
 \end{equation*}
 si dice Trasformata di Laplace di $\displaystyle f$.
 \end{defn}
 \begin{rem}
 [Trasformate di Laplace notevoli] Si ha
 \begin{equation*}
-\Lc\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\lambda _{f} =0
+\Lc\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \CC  :\Re ( s)  >\lambda _{f} =0
 \end{equation*}
 \end{rem}
 \begin{thm}
 [Proprietà] Valgono
 \begin{itemize}
 \item Riscalamento\begin{equation*}
-\Lc\{f( at)\} =\frac{1}{a} F\left(\frac{s}{a}\right) \ \ \ \ \mathrm{Re}( s)  >a\lambda _{f}
+\Lc\{f( at)\} =\frac{1}{a} F\left(\frac{s}{a}\right) \ \ \ \ \Re ( s)  >a\lambda _{f}
 \end{equation*}
 \item Ritardo\begin{equation*}
-\Lc\{f( t-a)\} =e^{-as} F( s) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f}
+\Lc\{f( t-a)\} =e^{-as} F( s) \ \ \ \ \Re ( s)  >\lambda _{f}
 \end{equation*}
 \item Prodotto con esponenziale\begin{equation*}
-\Lc\left\{e^{at} f( t)\right\} =F( s-a) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f} +\mathrm{Re}( a)
+\Lc\left\{e^{at} f( t)\right\} =F( s-a) \ \ \ \ \Re ( s)  >\lambda _{f} +\Re ( a)
 \end{equation*}
 \item Linearità\begin{equation*}
-\Lc\{af+bg\} =a\Lc\{f\} +b\Lc\{g\} \ \ \ \ \forall a,b\in \CC  ,\forall s:\mathrm{Re}( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
+\Lc\{af+bg\} =a\Lc\{f\} +b\Lc\{g\} \ \ \ \ \forall a,b\in \CC  ,\forall s:\Re ( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
 \end{equation*}
 \item Derivata della trasformata\begin{equation*}
 \frac{d^{n}}{ds^{n}} F( s) =\Lc\left\{( -t)^{n} f( t)\right\}
 \end{equation*}
 \item La primitiva di una funzione $\Lc$-trasformabile è anch'essa una funzione $\Lc$-trasformabile\begin{equation*}
-\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\Lc\{f( t)\} \ \ \ \ \forall s\in \CC  :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
+\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\Lc\{f( t)\} \ \ \ \ \forall s\in \CC  :\Re ( s)  >\max\{\lambda _{f} ,0\}
 \end{equation*}
 \end{itemize}
 \end{thm}

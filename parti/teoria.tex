@@ -1144,8 +1144,8 @@ Sia $f: A\subset \RR^{n}\rightarrow \CC$
 f(x) = R^{+}(x) - R^{-}(x) + I^{+}(x) - I^{-}(x)
 \end{equation*}
 \begin{itemize}
-\item $R^{+}(x) = \max(\mathrm{Re}(f(x)), 0), \forall x$
-\item $R^{-}(x) = \max(- \mathrm{Re}(f(x)), 0), \forall x$
+\item $R^{+}(x) = \max(\Re (f(x)), 0), \forall x$
+\item $R^{-}(x) = \max(- \Re (f(x)), 0), \forall x$
 \item $I^{+}(x) = \max(\mathrm{Im}(f(x)), 0), \forall x$
 \item $I^{-}(x) = \max(- \mathrm{Im}(f(x)), 0), \forall x$
 \end{itemize}
@@ -2405,7 +2405,7 @@ dove
 \begin{equation*}
 e^{- sx} = e^{- s_{R} x} e^{- is_{I} x}
 \end{equation*}
-Questo integrale ha senso purché $e^{- \lambda x} u(x) \in L^{1}(\RR)$, cioè $\mathrm{Re}(s) > \lambda (u)$, che è quindi il dominio della trasformata, mentre Fourier aveva senso sempre.
+Questo integrale ha senso purché $e^{- \lambda x} u(x) \in L^{1}(\RR)$, cioè $\Re (s) > \lambda (u)$, che è quindi il dominio della trasformata, mentre Fourier aveva senso sempre.
 \end{defn}
 \textbf{Proprietà}
 \begin{itemize}
@@ -2413,18 +2413,18 @@ Questo integrale ha senso purché $e^{- \lambda x} u(x) \in L^{1}(\RR)$, cioè $
 
 Attenzione, dobbiamo intersecare i due domini
 \begin{equation*}
-\boxed{\mathrm{Re}(s) > \max(\lambda (u), \lambda (v))}
+\boxed{\Re (s) > \max(\lambda (u), \lambda (v))}
 \end{equation*}
-\item $\boxed{\lim\limits_{\mathrm{Re}(s)\rightarrow + \infty}\Lc(u(x), s) = 0}$
+\item $\boxed{\lim\limits_{\Re (s)\rightarrow + \infty}\Lc(u(x), s) = 0}$
 
 \begin{proof}
 \begin{equation*}
-\lim\limits_{\mathrm{Re}(s)\rightarrow + \infty}\Lc(u(x), s) = \lim\limits_{\mathrm{Re}(s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx
+\lim\limits_{\Re (s)\rightarrow + \infty}\Lc(u(x), s) = \lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx
 \end{equation*}
 
-possiamo portare il limite dentro per convergenza dominata, purché $\mathrm{Re}(s) > \lambda (u)$ possiamo trovare una funzione che la domini
+possiamo portare il limite dentro per convergenza dominata, purché $\Re (s) > \lambda (u)$ possiamo trovare una funzione che la domini
 \begin{equation*}
-\lim\limits_{\mathrm{Re}(s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = \int^{+ \infty}_{0}\lim\limits_{\mathrm{Re}(s)\rightarrow + \infty} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = 0
+\lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = \int^{+ \infty}_{0}\lim\limits_{\Re (s)\rightarrow + \infty} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = 0
 \end{equation*}
 \end{proof}
 \item $\boxed{\Lc(u(x - x_{0}), s) = e^{- sx_{0}}\Lc(u(x), s)}$
@@ -2445,7 +2445,7 @@ Attenzione che essendo $\mathrm{supp}(u) \in [0, + \infty)$
 \end{aligned}
 \end{equation*}
 \end{proof}
-\item $\boxed{\Lc\left(e^{s_{0} x} u(x), s\right) = \Lc(u(x), s - s_{0})}$ $\boxed{\mathrm{Re}(s - s_{0}) > \lambda (u)}$
+\item $\boxed{\Lc\left(e^{s_{0} x} u(x), s\right) = \Lc(u(x), s - s_{0})}$ $\boxed{\Re (s - s_{0}) > \lambda (u)}$
 
 \begin{proof}
 \begin{equation*}
@@ -2472,7 +2472,7 @@ Attenzione che essendo $\mathrm{supp}(u) \in [0, + \infty)$
 \begin{align*}
 \Lc(H(x), s) & = \int^{+ \infty}_{0} e^{- sx} H(x) dx = \int^{+ \infty}_{0} e^{- sx} dx\\
  & = \left[- \frac{e^{- sx}}{s}\right]^{+ \infty}_{0} = \frac{1}{s} - \lim_{r\rightarrow + \infty}\frac{e^{- sr}}{s}\\
- & = \frac{1}{s} \ \ \ \ \text{purché} \ \mathrm{Re}(s) > 0
+ & = \frac{1}{s} \ \ \ \ \text{purché} \ \Re (s) > 0
 \end{align*}
 
 il che ci dice anche che $\lambda (H) = 0$, confermato da
@@ -2509,7 +2509,7 @@ per capirlo meglio possiamo vedere la Delta come
 [Derivata della trasformata]
 Sia $u$ una funzione $\Lc$ - trasformabile.
 \begin{equation*}
-\boxed{\frac{d^{n}}{ds^{n}}\Lc(u(x), s) = (- 1)^{n} \Lc\left(x^{n} u(x), s\right)} \ \ \ \ \forall s\ \text{tale che} \ \mathrm{Re}(s) > \lambda (u)
+\boxed{\frac{d^{n}}{ds^{n}}\Lc(u(x), s) = (- 1)^{n} \Lc\left(x^{n} u(x), s\right)} \ \ \ \ \forall s\ \text{tale che} \ \Re (s) > \lambda (u)
 \end{equation*}
 \end{thm}
 \begin{proof}
@@ -2542,11 +2542,11 @@ attenzione che in realtà $u(0)$ è il limite per $x\rightarrow 0^{+}$, dato che
 
 Inoltre
 \begin{equation*}
-\lim_{\mathrm{Re}(s)\rightarrow + \infty} s\Lc(u(x), s) = u(0)
+\lim_{\Re (s)\rightarrow + \infty} s\Lc(u(x), s) = u(0)
 \end{equation*}
 Se $v\in L^{1}$, allora $\lambda (u) \leq 0$ e
 \begin{equation*}
-\lim\limits_{s\rightarrow 0, \ \mathrm{Re}(s) > 0} s\Lc(u(x), s) = \lim_{x\rightarrow + \infty} u(x)
+\lim\limits_{s\rightarrow 0, \ \Re (s) > 0} s\Lc(u(x), s) = \lim_{x\rightarrow + \infty} u(x)
 \end{equation*}
 \end{thm}
 \textit{Dimostrazione della prima parte.}
