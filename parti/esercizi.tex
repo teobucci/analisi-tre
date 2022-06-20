@@ -6047,19 +6047,19 @@ H( t) =\begin{cases}
 \end{tikzpicture}
 \end{figure}
 \FloatBarrier
-Diciamo che $\mathcal{L}\{f( t)\} =F( s)$.
+Diciamo che $\Lc\{f( t)\} =F( s)$.
 
 \textbf{Alcune trasformate notevoli.}
 \begin{itemize}
-\item $\mathcal{L}\{H( t)\} =\int ^{+\infty }_{0} e^{-st} dt=\frac{1}{s}$, in questo caso $\lambda =0$
-\item $\mathcal{L}\left\{t^{k} f( t)\right\} =( -1)^{k}\frac{d^{k}}{ds^{k}} F( s)$
-\item $\mathcal{L}\{tH( t)\} =\frac{1}{s^{2}}$
+\item $\Lc\{H( t)\} =\int ^{+\infty }_{0} e^{-st} dt=\frac{1}{s}$, in questo caso $\lambda =0$
+\item $\Lc\left\{t^{k} f( t)\right\} =( -1)^{k}\frac{d^{k}}{ds^{k}} F( s)$
+\item $\Lc\{tH( t)\} =\frac{1}{s^{2}}$
 
-$\mathcal{L}\left\{t^{2} H( t)\right\} =-\left( -\frac{2}{s^{3}}\right) =\frac{2}{s^{3}}$
+$\Lc\left\{t^{2} H( t)\right\} =-\left( -\frac{2}{s^{3}}\right) =\frac{2}{s^{3}}$
 
-$\mathcal{L}\left\{t^{3} H( t)\right\} =-\frac{d}{ds}\left(\frac{2}{s^{3}}\right) =\frac{6}{s^{4}}$
+$\Lc\left\{t^{3} H( t)\right\} =-\frac{d}{ds}\left(\frac{2}{s^{3}}\right) =\frac{6}{s^{4}}$
 
-$\mathcal{L}\left\{t^{n} H( t)\right\} =\frac{n!}{s^{n+1}}$
+$\Lc\left\{t^{n} H( t)\right\} =\frac{n!}{s^{n+1}}$
 \item $\Gamma ( x) =\int ^{+\infty }_{0} t^{x-1} e^{-t} dt$
 \begin{itemize}
 \item $\Gamma ( n) =( n-1) !$ se $n$ è intero
@@ -6067,57 +6067,57 @@ $\mathcal{L}\left\{t^{n} H( t)\right\} =\frac{n!}{s^{n+1}}$
 \item $\Gamma \left(\frac{1}{2}\right) =\sqrt{\pi }$
 \end{itemize}
 
-$\mathcal{L}\left\{t^{\alpha } H( t)\right\} =\frac{\Gamma ( \alpha +1)}{s^{\alpha +1}}$ se $\mathrm{Re}( \alpha )  >-1$
-\item $\mathcal{L}\left\{\frac{1}{\sqrt{t}} H( t)\right\} =\frac{\Gamma \left(\frac{1}{2}\right)}{\sqrt{s}} =\frac{\sqrt{\pi }}{\sqrt{s}}$
+$\Lc\left\{t^{\alpha } H( t)\right\} =\frac{\Gamma ( \alpha +1)}{s^{\alpha +1}}$ se $\mathrm{Re}( \alpha )  >-1$
+\item $\Lc\left\{\frac{1}{\sqrt{t}} H( t)\right\} =\frac{\Gamma \left(\frac{1}{2}\right)}{\sqrt{s}} =\frac{\sqrt{\pi }}{\sqrt{s}}$
 \end{itemize}
 
 \textbf{Proprietà.}
 \begin{itemize}
-\item $\mathcal{L}\{f( \alpha t)\} =\frac{1}{\alpha } F\left(\frac{s}{\alpha }\right)$
-\item $\mathcal{L}\{f( t-\alpha )\} =e^{-\alpha s} F( s)$
-\item $\mathcal{L}\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha )$
-\item $\mathcal{L}\{f'( t)\} =sF( s) -f\left( 0^{+}\right)$
-\item $\mathcal{L}\{f''( t)\} =s^{2} F( s) -sf\left( 0^{+}\right) -f'\left( 0^{+}\right)$
-\item $\mathcal{L}\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s} F( s)$
-\item $\mathcal{L}\left\{\frac{1}{t} f( t)\right\} =\int ^{+\infty }_{s} F( \sigma ) d\sigma $
+\item $\Lc\{f( \alpha t)\} =\frac{1}{\alpha } F\left(\frac{s}{\alpha }\right)$
+\item $\Lc\{f( t-\alpha )\} =e^{-\alpha s} F( s)$
+\item $\Lc\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha )$
+\item $\Lc\{f'( t)\} =sF( s) -f\left( 0^{+}\right)$
+\item $\Lc\{f''( t)\} =s^{2} F( s) -sf\left( 0^{+}\right) -f'\left( 0^{+}\right)$
+\item $\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s} F( s)$
+\item $\Lc\left\{\frac{1}{t} f( t)\right\} =\int ^{+\infty }_{s} F( \sigma ) d\sigma $
 \end{itemize}
 
 \textbf{Altre trasformate notevoli.}
 \begin{itemize}
-\item $\mathcal{L}\left\{e^{\alpha t} H( t)\right\} =\frac{1}{s-\alpha }$
-\item $\mathcal{L}\{\sin( \omega t) H( t)\} =\frac{\omega }{s^{2} +\omega ^{2}}$, pari in $s$
-\item $\mathcal{L}\{\cos( \omega t) H( t)\} =\frac{s}{s^{2} +\omega ^{2}}$, dispari in $s$
-\item $\mathcal{L}\{\sinh( \omega t) H( t)\} =\frac{\omega }{s^{2} -\omega ^{2}}$
-\item $\mathcal{L}\{\cosh( \omega t) H( t)\} =\frac{s}{s^{2} -\omega ^{2}}$
+\item $\Lc\left\{e^{\alpha t} H( t)\right\} =\frac{1}{s-\alpha }$
+\item $\Lc\{\sin( \omega t) H( t)\} =\frac{\omega }{s^{2} +\omega ^{2}}$, pari in $s$
+\item $\Lc\{\cos( \omega t) H( t)\} =\frac{s}{s^{2} +\omega ^{2}}$, dispari in $s$
+\item $\Lc\{\sinh( \omega t) H( t)\} =\frac{\omega }{s^{2} -\omega ^{2}}$
+\item $\Lc\{\cosh( \omega t) H( t)\} =\frac{s}{s^{2} -\omega ^{2}}$
 \end{itemize}
 \Esercizio{}
 
 Calcolare
 \begin{equation*}
-\mathcal{L}\left\{e^{-\alpha t}\sin( \omega t) H( t)\right\} =\frac{\omega }{\omega ^{2} +( s+\alpha )^{2}}
+\Lc\left\{e^{-\alpha t}\sin( \omega t) H( t)\right\} =\frac{\omega }{\omega ^{2} +( s+\alpha )^{2}}
 \end{equation*}
 Calcolare
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}\left\{e^{-t}\sin^{2}( t) H( t)\right\} & =\frac{1}{2}\mathcal{L}\left\{e^{-t}( 1-\cos 2t) H( t)\right\} =\frac{1}{2}\left[\frac{1}{s+1} -\frac{s+1}{4+( s+1)^{2}}\right]\\
+\Lc\left\{e^{-t}\sin^{2}( t) H( t)\right\} & =\frac{1}{2}\Lc\left\{e^{-t}( 1-\cos 2t) H( t)\right\} =\frac{1}{2}\left[\frac{1}{s+1} -\frac{s+1}{4+( s+1)^{2}}\right]\\
  & =\frac{1}{2}\frac{4}{( s+1)\left( 4+( s+1)^{2}\right)} =\frac{2}{( s+1)\left( 4+( s+1)^{2}\right)}
 \end{aligned}
 \end{equation*}
 Calcolare
 \begin{equation*}
-\mathcal{L}\left\{\int ^{t}_{0}\sin( 2\tau ) d\tau \right\} =\frac{2}{s\left( 4+s^{2}\right)}
+\Lc\left\{\int ^{t}_{0}\sin( 2\tau ) d\tau \right\} =\frac{2}{s\left( 4+s^{2}\right)}
 \end{equation*}
 Calcolare
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}\left\{t^{2} e^{2t} H( t)\right\} & =\mathcal{L}\left\{e^{2t}\left[ t^{2} H( t)\right]\right\} =\frac{2}{( s-2)^{3}}\\
- & =\mathcal{L}\left\{t^{2}\left[ e^{2t} H( t)\right]\right\} =\frac{d^{2}}{ds^{2}}\frac{1}{s-2} =\frac{2}{( s-2)^{3}} \ 
+\Lc\left\{t^{2} e^{2t} H( t)\right\} & =\Lc\left\{e^{2t}\left[ t^{2} H( t)\right]\right\} =\frac{2}{( s-2)^{3}}\\
+ & =\Lc\left\{t^{2}\left[ e^{2t} H( t)\right]\right\} =\frac{d^{2}}{ds^{2}}\frac{1}{s-2} =\frac{2}{( s-2)^{3}} \ 
 \end{aligned}
 \end{equation*}
 Calcolare
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}\left\{\frac{\sin t}{t} H( t)\right\} & =\mathcal{L}\left\{\frac{1}{t}[\sin( t) H( t)]\right\} =\int ^{+\infty }_{s}\frac{1}{1+\sigma ^{2}} d\sigma \\
+\Lc\left\{\frac{\sin t}{t} H( t)\right\} & =\Lc\left\{\frac{1}{t}[\sin( t) H( t)]\right\} =\int ^{+\infty }_{s}\frac{1}{1+\sigma ^{2}} d\sigma \\
  & =[\arctan \sigma ]^{+\infty }_{s} =\frac{\pi }{2} -\arctan s
 \end{aligned}
 \end{equation*}
@@ -6177,7 +6177,7 @@ Scriviamo diversamente la $f$
 f( t) & =t[ H( t) -H( t-2)] +( 4-t)[ H( t-2) -H( t-4)]\\
  & =tH( t) -2( t-2) H( t-2) +( t-4) H( t-4)\\
  & \\
- & \implies \ \ \mathcal{L}\{f( t)\} =\frac{1}{s^{2}} -2\frac{e^{-2s}}{s^{2}} +\frac{e^{-4s}}{s^{2}}
+ & \implies \ \ \Lc\{f( t)\} =\frac{1}{s^{2}} -2\frac{e^{-2s}}{s^{2}} +\frac{e^{-4s}}{s^{2}}
 \end{aligned}
 \end{equation*}
 \Esercizio{}
@@ -6235,14 +6235,14 @@ Scriviamo diversamente la $g$
 \begin{aligned}
 g( t) & =t[ H( t) -H( t-1)] +( 2-t)[ H( t-1) -H( t-2)] +( t-2)[ H( t-2)\\
  & \\
- & \implies \ \ \mathcal{L}\{g( t)\} =\frac{1}{s^{2}} -2\frac{e^{-s}}{s^{2}} +2\frac{e^{-2s}}{s^{2}}
+ & \implies \ \ \Lc\{g( t)\} =\frac{1}{s^{2}} -2\frac{e^{-s}}{s^{2}} +2\frac{e^{-2s}}{s^{2}}
 \end{aligned}
 \end{equation*}
 \Esercizio{}
 
 Calcolare l'antitrasformata
 \begin{equation*}
-\mathcal{L}^{-1}\left\{\frac{2s^{2} -4}{( s+1)( s-2)( s-3)}\right\} =\mathcal{L}^{-1}\{( *)\}
+\Lc^{-1}\left\{\frac{2s^{2} -4}{( s+1)( s-2)( s-3)}\right\} =\Lc^{-1}\{( *)\}
 \end{equation*}
 Scomponiamo in fratti semplici
 \begin{equation*}
@@ -6255,7 +6255,7 @@ Scomponiamo in fratti semplici
 Quindi
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}^{-1}\{( *)\} & =\mathcal{L}^{-1}\left\{-\frac{1}{6}\frac{1}{s+1} -\frac{3}{8}\frac{1}{s-2} +\frac{7}{2}\frac{1}{s-3}\right\}\\
+\Lc^{-1}\{( *)\} & =\Lc^{-1}\left\{-\frac{1}{6}\frac{1}{s+1} -\frac{3}{8}\frac{1}{s-2} +\frac{7}{2}\frac{1}{s-3}\right\}\\
  & =\left[ -\frac{1}{6} e^{-t} -\frac{3}{8} e^{2t} +\frac{7}{2} e^{3t}\right] H( t)
 \end{aligned}
 \end{equation*}
@@ -6263,7 +6263,7 @@ Quindi
 
 Calcolare l'antitrasformata
 \begin{equation*}
-\mathcal{L}^{-1}\left\{\frac{3s+1}{( s-1)\left( s^{2} +1\right)}\right\} =\mathcal{L}^{-1}\{( *)\}
+\Lc^{-1}\left\{\frac{3s+1}{( s-1)\left( s^{2} +1\right)}\right\} =\Lc^{-1}\{( *)\}
 \end{equation*}
 Scomponiamo in fratti semplici
 \begin{equation*}
@@ -6276,8 +6276,8 @@ Scomponiamo in fratti semplici
 Quindi
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}^{-1}\{( *)\} & =\mathcal{L}^{-1}\left\{\frac{2}{s-1} +\frac{-2s+1}{s^{2} +1}\right\}\\
- & =\mathcal{L}^{-1}\left\{\frac{2}{s-1} -\frac{2s}{s^{2} +1} +\frac{1}{s^{2} +1}\right\}\\
+\Lc^{-1}\{( *)\} & =\Lc^{-1}\left\{\frac{2}{s-1} +\frac{-2s+1}{s^{2} +1}\right\}\\
+ & =\Lc^{-1}\left\{\frac{2}{s-1} -\frac{2s}{s^{2} +1} +\frac{1}{s^{2} +1}\right\}\\
  & =\left[ 2e^{t} +\sin t-2\cos t\right] H( t)
 \end{aligned}
 \end{equation*}
@@ -6285,12 +6285,12 @@ Quindi
 
 Calcolare
 \begin{equation*}
-\mathcal{L}^{-1}\left\{\frac{1}{( s+3)^{2}}\right\} =e^{-3t} tH( t)
+\Lc^{-1}\left\{\frac{1}{( s+3)^{2}}\right\} =e^{-3t} tH( t)
 \end{equation*}
 Calcolare
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}^{-1}\left\{\frac{e^{-2s}}{s^{3} +s}\right\} & =\mathcal{L}^{-1}\left\{\frac{1}{s}\frac{e^{-2s}}{s^{2} +1}\right\}\\
+\Lc^{-1}\left\{\frac{e^{-2s}}{s^{3} +s}\right\} & =\Lc^{-1}\left\{\frac{1}{s}\frac{e^{-2s}}{s^{2} +1}\right\}\\
  & =\int ^{t}_{0}\sin( \tau -2) H( \tau -2) d\tau \\
  & =H( t-2)\int ^{t}_{2}\sin( \tau -2) d\tau \\
  & =H( t-2)[ -\cos( \tau -2)]^{t}_{2}\\
@@ -6300,7 +6300,7 @@ Calcolare
 Calcolare
 \begin{equation*}
 \begin{aligned}
-\mathcal{L}^{-1}\left\{\frac{4e^{-2s}\sinh s}{s^{2} +4}\right\} & =\mathcal{L}^{-1}\left\{\frac{2\left( e^{-s} -e^{-3s}\right)}{s^{2} +4}\right\}\\
+\Lc^{-1}\left\{\frac{4e^{-2s}\sinh s}{s^{2} +4}\right\} & =\Lc^{-1}\left\{\frac{2\left( e^{-s} -e^{-3s}\right)}{s^{2} +4}\right\}\\
  & =\sin[ 2( t-1)] H( t-1) -\sin[ 2( t-3)] H( t-3)
 \end{aligned}
 \end{equation*}
@@ -6515,29 +6515,29 @@ si dice Trasformata di Laplace di $\displaystyle f$.
 \begin{rem}
 [Trasformate di Laplace notevoli] Si ha
 \begin{equation*}
-\mathcal{L}\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f} =0
+\Lc\{H( t)\} =\frac{1}{s} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\lambda _{f} =0
 \end{equation*}
 \end{rem}
 \begin{thm}
 [Proprietà] Valgono
 \begin{itemize}
 \item Riscalamento\begin{equation*}
-\mathcal{L}\{f( at)\} =\frac{1}{a} F\left(\frac{s}{a}\right) \ \ \ \ \mathrm{Re}( s)  >a\lambda _{f}
+\Lc\{f( at)\} =\frac{1}{a} F\left(\frac{s}{a}\right) \ \ \ \ \mathrm{Re}( s)  >a\lambda _{f}
 \end{equation*}
 \item Ritardo\begin{equation*}
-\mathcal{L}\{f( t-a)\} =e^{-as} F( s) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f}
+\Lc\{f( t-a)\} =e^{-as} F( s) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f}
 \end{equation*}
 \item Prodotto con esponenziale\begin{equation*}
-\mathcal{L}\left\{e^{at} f( t)\right\} =F( s-a) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f} +\mathrm{Re}( a)
+\Lc\left\{e^{at} f( t)\right\} =F( s-a) \ \ \ \ \mathrm{Re}( s)  >\lambda _{f} +\mathrm{Re}( a)
 \end{equation*}
 \item Linearità\begin{equation*}
-\mathcal{L}\{af+bg\} =a\mathcal{L}\{f\} +b\mathcal{L}\{g\} \ \ \ \ \forall a,b\in \mathbb{C} ,\forall s:\mathrm{Re}( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
+\Lc\{af+bg\} =a\Lc\{f\} +b\Lc\{g\} \ \ \ \ \forall a,b\in \mathbb{C} ,\forall s:\mathrm{Re}( s)  >\max\{\lambda _{f} ,\lambda _{g}\}
 \end{equation*}
 \item Derivata della trasformata\begin{equation*}
-\frac{d^{n}}{ds^{n}} F( s) =\mathcal{L}\left\{( -t)^{n} f( t)\right\}
+\frac{d^{n}}{ds^{n}} F( s) =\Lc\left\{( -t)^{n} f( t)\right\}
 \end{equation*}
-\item La primitiva di una funzione $\mathcal{L}$-trasformabile è anch'essa una funzione $\mathcal{L}$-trasformabile\begin{equation*}
-\mathcal{L}\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\mathcal{L}\{f( t)\} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
+\item La primitiva di una funzione $\Lc$-trasformabile è anch'essa una funzione $\Lc$-trasformabile\begin{equation*}
+\Lc\left\{\int ^{t}_{0} f( \tau ) d\tau \right\} =\frac{1}{s}\Lc\{f( t)\} \ \ \ \ \forall s\in \mathbb{C} :\mathrm{Re}( s)  >\max\{\lambda _{f} ,0\}
 \end{equation*}
 \end{itemize}
 \end{thm}
@@ -6671,7 +6671,7 @@ e^{-\lambda t} te^{2t} =te^{t( 2-\lambda )} \in L^{1}(\mathbb{R}) \ \ \iff \ \ \
 
 Usiamo le proprietà
 \begin{equation*}
-F( s) =\mathcal{L}\left\{H( t)\sum ^{m}_{k=0} a_{k} t^{k}\right\} =\sum ^{m}_{k=0} a_{k}\mathcal{L}\left\{H( t) t^{k}\right\} =\sum ^{m}_{k=0} a_{k}( -1)^{k}\left(\frac{1}{s}\right)^{( k)} =( *)
+F( s) =\Lc\left\{H( t)\sum ^{m}_{k=0} a_{k} t^{k}\right\} =\sum ^{m}_{k=0} a_{k}\Lc\left\{H( t) t^{k}\right\} =\sum ^{m}_{k=0} a_{k}( -1)^{k}\left(\frac{1}{s}\right)^{( k)} =( *)
 \end{equation*}
 Provando vari $\displaystyle k$ mi accorgo che:
 \begin{equation*}
@@ -6702,10 +6702,10 @@ a=0\ \ \implies \ \ f_{0}( x) =H( x) e^{2x}\sin^{2}( x)
 \end{equation*}
 Calcoliamo
 \begin{align*}
-\mathcal{L}\{f_{0}( x) ,s\} & =\mathcal{L}\left\{H( x) e^{2x}\sin^{2}( x)\right\} \ =\mathcal{L}\left\{H( x) e^{2x}\frac{1-\cos( 2x)}{2}\right\}\\
- & =\frac{1}{2}\mathcal{L}\left\{H( x) e^{2x}\right\} -\frac{1}{2}\mathcal{L}\left\{H( x) e^{2x}\cos( 2x)\right\}\\
- & =\frac{1}{2}\mathcal{L}\left\{H( x) e^{2x}\right\} -\frac{1}{2}\mathcal{L}\left\{H( x) e^{2x}\frac{e^{i2x} +e^{-i2x}}{2}\right\}\\
- & =\frac{1}{2}\mathcal{L}\left\{H( x) e^{2x}\right\} -\frac{1}{4}\mathcal{L}\left\{H( x) e^{2( 1+i) x}\right\} -\frac{1}{4}\mathcal{L}\left\{H( x) e^{2( 1-i) x}\right\}\\
+\Lc\{f_{0}( x) ,s\} & =\Lc\left\{H( x) e^{2x}\sin^{2}( x)\right\} \ =\Lc\left\{H( x) e^{2x}\frac{1-\cos( 2x)}{2}\right\}\\
+ & =\frac{1}{2}\Lc\left\{H( x) e^{2x}\right\} -\frac{1}{2}\Lc\left\{H( x) e^{2x}\cos( 2x)\right\}\\
+ & =\frac{1}{2}\Lc\left\{H( x) e^{2x}\right\} -\frac{1}{2}\Lc\left\{H( x) e^{2x}\frac{e^{i2x} +e^{-i2x}}{2}\right\}\\
+ & =\frac{1}{2}\Lc\left\{H( x) e^{2x}\right\} -\frac{1}{4}\Lc\left\{H( x) e^{2( 1+i) x}\right\} -\frac{1}{4}\Lc\left\{H( x) e^{2( 1-i) x}\right\}\\
  & =\frac{1}{2} \cdotp \frac{1}{s-2} -\frac{1}{4} \cdotp \frac{1}{s-2( 1+i)} -\frac{1}{4} \cdotp \frac{1}{s-2( 1-i)}\\
  & =\frac{1}{2}\frac{1}{s-2} -\frac{1}{2}\frac{s-2}{( s-2)^{2} +4}
 \end{align*}
@@ -6713,8 +6713,8 @@ Calcoliamo
 
 Calcoliamo trasformata di $f$
 \begin{align*}
-\mathcal{L}\{f( t)\} & =\mathcal{L}\{H( t)\sin( \omega t)\} =\mathcal{L}\left\{H( t)\frac{e^{i\omega t} -e^{-i\omega t}}{2i}\right\}\\
- & =\frac{1}{2i}\mathcal{L}\left\{H( t) e^{i\omega t}\right\} -\frac{1}{2i}\mathcal{L}\left\{H( t) e^{-i\omega t}\right\}\\
+\Lc\{f( t)\} & =\Lc\{H( t)\sin( \omega t)\} =\Lc\left\{H( t)\frac{e^{i\omega t} -e^{-i\omega t}}{2i}\right\}\\
+ & =\frac{1}{2i}\Lc\left\{H( t) e^{i\omega t}\right\} -\frac{1}{2i}\Lc\left\{H( t) e^{-i\omega t}\right\}\\
  & =\frac{1}{2i} \cdotp \frac{1}{s-i\omega } -\frac{1}{2i} \cdotp \frac{1}{s+i\omega }\\
  & =\frac{1}{2i}\frac{s+i\omega -s+i\omega }{s^{2} +\omega ^{2}}\\
  & =\frac{\omega }{s^{2} +\omega ^{2}}
@@ -6723,11 +6723,11 @@ Funzione $G( s)$.
 
 Notiamo che
 \begin{equation*}
-\omega =1\ \ \implies \ \ \mathcal{L}\{H( t)\sin( t)\} =\frac{1}{s^{2} +1} =:\varphi ( s) \ \ \implies \ \ G( s) =-\frac{1}{2} \varphi '( s)
+\omega =1\ \ \implies \ \ \Lc\{H( t)\sin( t)\} =\frac{1}{s^{2} +1} =:\varphi ( s) \ \ \implies \ \ G( s) =-\frac{1}{2} \varphi '( s)
 \end{equation*}
 Allora
 \begin{equation*}
-G( s) =-\frac{1}{2} \varphi '( s) =-\frac{1}{2}\frac{d}{ds}\mathcal{L}\{H( t)\sin( t)\} =\frac{1}{2}\mathcal{L}\{H( t) t\sin( t)\}
+G( s) =-\frac{1}{2} \varphi '( s) =-\frac{1}{2}\frac{d}{ds}\Lc\{H( t)\sin( t)\} =\frac{1}{2}\Lc\{H( t) t\sin( t)\}
 \end{equation*}
 quindi la sua antitrasformata è
 \begin{equation*}
@@ -6737,8 +6737,8 @@ Funzione $J( s)$.
 
 Notiamo che
 \begin{align*}
-J( s) & =\frac{1}{s} G( s) =\frac{1}{s}\frac{1}{2}\mathcal{L}\{H( t) t\sin( t)\} =\frac{1}{2}\mathcal{L}\left\{\int ^{t}_{0} H( \tau ) \tau \sin( \tau ) d\tau \right\}\\
- & \overset{\text{ipp}}{=}\frac{1}{2}\mathcal{L}\{(\sin( t) -t\cos( t)) H( t)\}
+J( s) & =\frac{1}{s} G( s) =\frac{1}{s}\frac{1}{2}\Lc\{H( t) t\sin( t)\} =\frac{1}{2}\Lc\left\{\int ^{t}_{0} H( \tau ) \tau \sin( \tau ) d\tau \right\}\\
+ & \overset{\text{ipp}}{=}\frac{1}{2}\Lc\{(\sin( t) -t\cos( t)) H( t)\}
 \end{align*}
 quindi la sua antitrasformata è
 \begin{equation*}
@@ -6748,7 +6748,7 @@ Funzione $K( s)$.
 
 Notiamo che
 \begin{equation*}
-K( s) =\frac{1}{s}\mathcal{L}\left\{\frac{1}{2}H( t)\sin( 2t)\right\} =\frac{1}{2}\mathcal{L}\left\{\int ^{t}_{0} H( \tau )\sin( 2\tau ) d\tau \right\} =\mathcal{L}\left\{\frac{1}{4}( 1-\cos( 2t)) H( t)\right\}
+K( s) =\frac{1}{s}\Lc\left\{\frac{1}{2}H( t)\sin( 2t)\right\} =\frac{1}{2}\Lc\left\{\int ^{t}_{0} H( \tau )\sin( 2\tau ) d\tau \right\} =\Lc\left\{\frac{1}{4}( 1-\cos( 2t)) H( t)\right\}
 \end{equation*}
 quindi la sua antitrasformata è
 \begin{equation*}
@@ -6779,7 +6779,7 @@ Determinare le soluzioni $u\in L^{1}$ di
 \end{equation*}
 \Esercizio{}
 
-Determinare la soluzione $\mathcal{L}$-trasformabile di
+Determinare la soluzione $\Lc$-trasformabile di
 \begin{equation*}
 \begin{cases}
 u'+2u=2\int ^{t}_{0} u( \tau )\sin( t-\tau ) d\tau +3\cos t\\
@@ -6850,11 +6850,11 @@ u( x) =\frac{e^{-| x| }}{4}( 3\cos x-\sin| x| )
 \Soluzione
 \begin{gather*}
 \begin{aligned}
-\mathcal{L}\left( e^{-t} \chi _{( 1,2)}( t)\right) & =\int ^{2}_{1} e^{-( s+1) t} dt=\left[ -\frac{e^{-( s+1) t}}{s+1}\right]^{2}_{1}\\
+\Lc\left( e^{-t} \chi _{( 1,2)}( t)\right) & =\int ^{2}_{1} e^{-( s+1) t} dt=\left[ -\frac{e^{-( s+1) t}}{s+1}\right]^{2}_{1}\\
  & =\frac{e^{-s-1}}{s+1} -\frac{e^{-2s-2}}{s+1} =\frac{1}{e}\frac{e^{-s}}{s+1} -\frac{1}{e^{2}}\frac{e^{-2s}}{s+1}
 \end{aligned}\\
 \\
-\mathcal{L}( u) =U( s) \ \ \ \ \mathcal{L}( u') =sU( s) \ \ \ \ \mathcal{L}( u'') =s^{2} U( s)
+\Lc( u) =U( s) \ \ \ \ \Lc( u') =sU( s) \ \ \ \ \Lc( u'') =s^{2} U( s)
 \end{gather*}
 Sostituiamo tutto
 \begin{equation*}
@@ -6865,7 +6865,7 @@ U( s) & =\frac{1}{e}\frac{e^{-s}}{( s+1)^{3}} -\frac{1}{e^{2}}\frac{e^{-2s}}{( s
 \end{equation*}
 Antitrasformiamo, ricordiamo che
 \begin{equation*}
-\mathcal{L}^{-1}\left\{\frac{1}{s^{3}}\right\} =\frac{t^{2}}{2} H( t) \ \ \ \ \mathcal{L}^{-1}\left\{\frac{1}{( s+1)^{3}}\right\} =\frac{t^{2}}{2} e^{-t} H( t) \ \ \ \ \mathcal{L}\{f( t-\alpha )\} =e^{-\alpha s} F( s)
+\Lc^{-1}\left\{\frac{1}{s^{3}}\right\} =\frac{t^{2}}{2} H( t) \ \ \ \ \Lc^{-1}\left\{\frac{1}{( s+1)^{3}}\right\} =\frac{t^{2}}{2} e^{-t} H( t) \ \ \ \ \Lc\{f( t-\alpha )\} =e^{-\alpha s} F( s)
 \end{equation*}
 allora
 \begin{align*}
@@ -6930,10 +6930,10 @@ e^{-| x| }\sinh 1, & | x| \geqslant 1
 \end{equation*}
 \Soluzione
 \begin{equation*}
-\mathcal{L}( u) =U( s) \ \ \ \ \mathcal{L}( u') =sU( s) -1
+\Lc( u) =U( s) \ \ \ \ \Lc( u') =sU( s) -1
 \end{equation*}
 \begin{align*}
-\implies \ \ sU( s) -1+2U( s) & =2U( s) \cdotp \mathcal{L}\{\sin tH( t)\} +3\mathcal{L}\{\cos t\}\\
+\implies \ \ sU( s) -1+2U( s) & =2U( s) \cdotp \Lc\{\sin tH( t)\} +3\Lc\{\cos t\}\\
 sU-1+2U & =U\frac{2}{s^{2} +1} +3\frac{s}{s^{2} +1}\\
 U\left( s+2-\frac{2}{s^{2} +1}\right) & =3\frac{s}{s^{2} +1} +1\\
 U\cdotp \frac{( s+2)\left( s^{2} +1\right) -2}{\cancel{s^{2} +1}} & =\frac{s^{2} +3s+1}{\cancel{s^{2} +1}}\\
@@ -7014,7 +7014,7 @@ Determinare le soluzioni $\displaystyle u\in S'(\mathbb{R})$ dell'equazione diff
 \end{equation*}
 \Esercizio{}
 
-Trovare la soluzione $\mathcal{L}$-trasformabile dell'equazione
+Trovare la soluzione $\Lc$-trasformabile dell'equazione
 \begin{equation*}
 \begin{cases}
 y'( t) -( t*y)( t) =1\\
@@ -7023,7 +7023,7 @@ y( 0) =-1
 \end{equation*}
 \Esercizio{}
 
-Determinare la soluzione $\mathcal{L}$-trasformabile di
+Determinare la soluzione $\Lc$-trasformabile di
 \begin{equation*}
 \begin{cases}
 2y( t) +y'( t) =2\int ^{t}_{0} y( \tau )\sin( t-\tau ) d\tau +3\cos( t)\\
@@ -7155,8 +7155,8 @@ u( x) =1-\delta +\frac{1}{2} e^{-| x| }
 
 Usiamo le proprietà della trasformata di Laplace
 \begin{gather*}
-\mathcal{L}\{y,s\} =Y( s) \ \ \ \ \mathcal{L}\left\{\frac{d}{dt} y( t) ,s\right\} =sY( s) -y\left( 0^{+}\right)\\
-\mathcal{L}\{f*g,s\} =F( s) G( s) \ \ \ \ \mathcal{L}\{tH( t)\} =\frac{1}{s^{2}}
+\Lc\{y,s\} =Y( s) \ \ \ \ \Lc\left\{\frac{d}{dt} y( t) ,s\right\} =sY( s) -y\left( 0^{+}\right)\\
+\Lc\{f*g,s\} =F( s) G( s) \ \ \ \ \Lc\{tH( t)\} =\frac{1}{s^{2}}
 \end{gather*}
 Trasformando secondo Laplace i membri dell'equazione
 \begin{align*}
@@ -7168,7 +7168,7 @@ Y( s) & =-\frac{s}{s^{2} +s+1}
 \end{align*}
 Dobbiamo antitrasformare, ricordiamo che
 \begin{equation*}
-\mathcal{L}\{H( t)\cos( \omega t)\} =\frac{s}{s^{2} +\omega ^{2}} \ \ \ \ \mathcal{L}\{H( t)\sin( \omega t)\} =\frac{\omega }{s^{2} +\omega ^{2}}
+\Lc\{H( t)\cos( \omega t)\} =\frac{s}{s^{2} +\omega ^{2}} \ \ \ \ \Lc\{H( t)\sin( \omega t)\} =\frac{\omega }{s^{2} +\omega ^{2}}
 \end{equation*}
 Provo a ricondurmi a queste forme
 \begin{equation*}
@@ -7185,11 +7185,11 @@ Trasformiamo i termini di
 2y( t) +y'( t) =2\int ^{t}_{0} y( \tau )\sin( t-\tau ) d\tau +3\cos( t)
 \end{equation*}
 \begin{align*}
-\mathcal{L}\{y( t)\} & =Y( s)\\
-\mathcal{L}\{y'( t)\} & =sY( s) -y\left( 0^{+}\right)\\
-\mathcal{L}\left\{\int ^{t}_{0} y( \tau )\sin( t-\tau ) d\tau \right\} & =\mathcal{L}\{( y*\sin)( t)\} =\mathcal{L}\{y( t)\} \cdotp \mathcal{L}\{\sin( t)\}\\
-\mathcal{L}\{H( t)\cos( \omega t)\} & =\frac{s}{s^{2} +\omega ^{2}}\\
-\mathcal{L}\{H( t)\sin( \omega t)\} & =\frac{\omega }{s^{2} +\omega ^{2}}
+\Lc\{y( t)\} & =Y( s)\\
+\Lc\{y'( t)\} & =sY( s) -y\left( 0^{+}\right)\\
+\Lc\left\{\int ^{t}_{0} y( \tau )\sin( t-\tau ) d\tau \right\} & =\Lc\{( y*\sin)( t)\} =\Lc\{y( t)\} \cdotp \Lc\{\sin( t)\}\\
+\Lc\{H( t)\cos( \omega t)\} & =\frac{s}{s^{2} +\omega ^{2}}\\
+\Lc\{H( t)\sin( \omega t)\} & =\frac{\omega }{s^{2} +\omega ^{2}}
 \end{align*}
 Sostituiamo
 \begin{equation*}
@@ -7232,7 +7232,7 @@ Y( s) =\frac{s^{2} +1+3s}{s( s+1)^{2}} =\frac{1}{s} +\frac{1}{( 1+s)^{2}}
 \end{equation*}
 Ricordando
 \begin{equation*}
-\mathcal{L}\{tH( t)\} =\frac{1}{s^{2}} \ \ \ \ \mathcal{L}\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha )
+\Lc\{tH( t)\} =\frac{1}{s^{2}} \ \ \ \ \Lc\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha )
 \end{equation*}
 Si ottiene
 \begin{equation*}
@@ -7246,10 +7246,10 @@ y''+2y'+y=e^{-t} \chi _{[ 1,2]}( t)
 \end{equation*}
 trasformiamo e usiamo le proprietà
 \begin{align*}
-\mathcal{L}\{y( t)\} & =Y( s)\\
-\mathcal{L}\{y'( t)\} & =sY( s) -\cancel{y\left( 0^{+}\right)} =sY( s)\\
-\mathcal{L}\{y''( t)\} & =s\left( sY( s) -\cancel{y\left( 0^{+}\right)}\right) -\cancel{y'\left( 0^{+}\right) \ } =s^{2} Y( s)\\
-\mathcal{L}\left\{e^{-t} \chi _{[ 1,2]}( t)\right\} & =\int ^{\infty }_{0} e^{-st} e^{-t} \chi _{[ 1,2]}( t) dt=\int ^{2}_{1} e^{-( s+1) t} dt\\
+\Lc\{y( t)\} & =Y( s)\\
+\Lc\{y'( t)\} & =sY( s) -\cancel{y\left( 0^{+}\right)} =sY( s)\\
+\Lc\{y''( t)\} & =s\left( sY( s) -\cancel{y\left( 0^{+}\right)}\right) -\cancel{y'\left( 0^{+}\right) \ } =s^{2} Y( s)\\
+\Lc\left\{e^{-t} \chi _{[ 1,2]}( t)\right\} & =\int ^{\infty }_{0} e^{-st} e^{-t} \chi _{[ 1,2]}( t) dt=\int ^{2}_{1} e^{-( s+1) t} dt\\
  & =\left[ -\frac{e^{-( s+1) t}}{s+1}\right]^{2}_{1} =\frac{e^{-( s+1)} -e^{-2( s+1)}}{s+1} =\frac{e^{-s}}{e( s+1)} -\frac{e^{-2s}}{e^{2}( s+1)}
 \end{align*}
 Sostituiamo nell'equazione
@@ -7260,13 +7260,13 @@ Y( s) & =\frac{e^{-s}}{e( s+1)^{3}} -\frac{e^{-2s}}{e^{2}( s+1)^{3}}
 \end{align*}
 Per antitrasformare notiamo che
 \begin{gather*}
-\mathcal{L}\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha ) \ \ \ \ \mathcal{L}\left\{t^{2} H( t)\right\} =( -1)^{2}\frac{d^{2}}{ds^{2}}\frac{1}{s} =\frac{d}{ds}\left( -\frac{1}{s^{2}}\right) =\frac{2}{s^{3}}\\
-\mathcal{L}\{f( t-\alpha )\} =e^{-\alpha s} F( s)
+\Lc\left\{e^{\alpha t} f( t)\right\} =F( s-\alpha ) \ \ \ \ \Lc\left\{t^{2} H( t)\right\} =( -1)^{2}\frac{d^{2}}{ds^{2}}\frac{1}{s} =\frac{d}{ds}\left( -\frac{1}{s^{2}}\right) =\frac{2}{s^{3}}\\
+\Lc\{f( t-\alpha )\} =e^{-\alpha s} F( s)
 \end{gather*}
 Allora
 \begin{gather*}
-\mathcal{L}\left\{\frac{1}{2} t^{2} H( t)\right\} =\frac{1}{s^{3}} \ \ \implies \ \ \mathcal{L}\left\{\frac{1}{2} t^{2} H( t) e^{-t}\right\} =\frac{1}{( s+1)^{3}}\\
-\implies \ \ \mathcal{L}\left\{\frac{1}{2}( t-1)^{2} H( t-1) e^{-( t-1)}\right\} =\frac{e^{-s}}{( s+1)^{3}}
+\Lc\left\{\frac{1}{2} t^{2} H( t)\right\} =\frac{1}{s^{3}} \ \ \implies \ \ \Lc\left\{\frac{1}{2} t^{2} H( t) e^{-t}\right\} =\frac{1}{( s+1)^{3}}\\
+\implies \ \ \Lc\left\{\frac{1}{2}( t-1)^{2} H( t-1) e^{-( t-1)}\right\} =\frac{e^{-s}}{( s+1)^{3}}
 \end{gather*}
 Quindi
 \begin{equation*}
@@ -7280,10 +7280,10 @@ y'( t) =1+t+8\int ^{t}_{0}( t-\tau )^{2} y( \tau ) d\tau
 \end{equation*}
 antitrasformiamo
 \begin{align*}
-\mathcal{L}\{y'( t)\} & =sY( s) -y\left( 0^{+}\right) =sY( s) -1\\
-\mathcal{L}\{1H( t)\} & =\frac{1}{s}\\
-\mathcal{L}\{tH( t)\} & =( -1)^{1}\frac{d}{ds}\frac{1}{s} =\frac{1}{s^{2}}\\
-\mathcal{L}\left\{\int ^{t}_{0}( t-\tau )^{2} y( \tau ) d\tau \right\} & =\mathcal{L}\left\{t^{2} *y( t)\right\} =\mathcal{L}\left\{t^{2} H( t)\right\} \cdotp \mathcal{L}\{y( t)\}\\
+\Lc\{y'( t)\} & =sY( s) -y\left( 0^{+}\right) =sY( s) -1\\
+\Lc\{1H( t)\} & =\frac{1}{s}\\
+\Lc\{tH( t)\} & =( -1)^{1}\frac{d}{ds}\frac{1}{s} =\frac{1}{s^{2}}\\
+\Lc\left\{\int ^{t}_{0}( t-\tau )^{2} y( \tau ) d\tau \right\} & =\Lc\left\{t^{2} *y( t)\right\} =\Lc\left\{t^{2} H( t)\right\} \cdotp \Lc\{y( t)\}\\
  & =\frac{2}{s^{3}} \cdotp Y( s)
 \end{align*}
 Sostituiamo nell'equazione
@@ -7351,8 +7351,8 @@ Notiamo che
 \end{equation*}
 Antitrasformiamo
 \begin{align*}
-\mathcal{L}^{-1}\left\{\frac{3}{8} \cdotp \frac{s}{s^{2} +4}\right\} & =\frac{3}{8}\mathcal{L}^{-1}\left\{\frac{s}{s^{2} +4}\right\} =\frac{3}{8}\cos( 2t) H( t)\\
-\mathcal{L}^{-1}\left\{\frac{1}{2} \cdotp \frac{1}{s^{2} +4}\right\} & =\frac{1}{4}\mathcal{L}^{-1}\left\{\frac{2}{s^{2} +4}\right\} =\frac{1}{4}\sin( 2t) H( t)
+\Lc^{-1}\left\{\frac{3}{8} \cdotp \frac{s}{s^{2} +4}\right\} & =\frac{3}{8}\Lc^{-1}\left\{\frac{s}{s^{2} +4}\right\} =\frac{3}{8}\cos( 2t) H( t)\\
+\Lc^{-1}\left\{\frac{1}{2} \cdotp \frac{1}{s^{2} +4}\right\} & =\frac{1}{4}\Lc^{-1}\left\{\frac{2}{s^{2} +4}\right\} =\frac{1}{4}\sin( 2t) H( t)
 \end{align*}
 In conclusione
 \begin{equation*}
