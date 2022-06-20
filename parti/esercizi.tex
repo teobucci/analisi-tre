@@ -159,7 +159,7 @@ c_{n} = \sum\limits^{n}_{k = 0} a_{k} b_{n - k}
 \end{equation*}
 \end{defn}
 \begin{thm}
-La serie $C$ converge assolutamente ad $A\cdot B$, per il teorema di Mertens, se almeno una fra $A$ e $B$ converge assolutamente.
+La serie $C$ converge assolutamente ad $A \cdot B$, per il teorema di Mertens, se almeno una fra $A$ e $B$ converge assolutamente.
 
 Se $A$ e $B$ hanno $R = +\infty, $ si può ovviamente applicare il teorema di Mertens, e si può scrivere
 \begin{equation*}
@@ -1421,7 +1421,7 @@ Ci resta da far vedere che
 Non possiamo usare il Lemma di Jordan, perché al numeratore non c'è un esponenziale immaginario. Dobbiamo sporcarci le mani. In generale sarà un numero complesso, quindi conviene prenderne il modulo e maggiorarlo.
 \begin{rem}
 \begin{equation*}
-\left| \int_{\gamma} f\left(z\right) dz\right| \leq M\cdot \text{lunghezza}\left(\gamma \right)
+\left| \int_{\gamma} f\left(z\right) dz\right| \leq M \cdot \text{lunghezza}\left(\gamma \right)
 \end{equation*}
 dove $M$ è il massimo valore che $f$ può assumere lungo $\gamma $.
 \end{rem}
@@ -1514,22 +1514,22 @@ Per calcolare il residuo in tali punti utilizziamo la formula di calcolo vista a
 \end{equation*}
 Pertanto
 \begin{itemize}
-\item $\Res \left(f, - \sqrt{3} - i\right) = \frac{\left(- \sqrt{3} - i\right) e^{- i\lambda \left(- \sqrt{3} - i\right)}}{6\cdot \left(- 64\right)}$
-\item $\Res \left(f, \sqrt{3} - i\right) = \frac{\left(\sqrt{3} - i\right) e^{- i\lambda \left(\sqrt{3} - i\right)}}{6\cdot \left(- 64\right)}$
-\item $\Res \left(f, - 2i\right) = \frac{\left(- 2i\right) e^{- i\lambda \left(- 2i\right)}}{6\cdot \left(- 64\right)}$
+\item $\Res \left(f, - \sqrt{3} - i\right) = \frac{\left(- \sqrt{3} - i\right) e^{- i\lambda \left(- \sqrt{3} - i\right)}}{6 \cdot \left(- 64\right)}$
+\item $\Res \left(f, \sqrt{3} - i\right) = \frac{\left(\sqrt{3} - i\right) e^{- i\lambda \left(\sqrt{3} - i\right)}}{6 \cdot \left(- 64\right)}$
+\item $\Res \left(f, - 2i\right) = \frac{\left(- 2i\right) e^{- i\lambda \left(- 2i\right)}}{6 \cdot \left(- 64\right)}$
 \end{itemize}
 
 Allora
 \begin{align*}
-\int_{\RR}\frac{e^{- i\lambda x}}{x^{6} + 64} dx & = - 2\pi i\left[\frac{\left(- \sqrt{3} - i\right) e^{- i\lambda \left(- \sqrt{3} - i\right)}}{6\cdot \left(- 64\right)} + \frac{\left(\sqrt{3} - i\right) e^{- i\lambda \left(\sqrt{3} - i\right)}}{6\cdot \left(- 64\right)} + \frac{\left(- 2i\right) e^{- i\lambda \left(- 2i\right)}}{6\cdot \left(- 64\right)}\right]\\
- & = \frac{2\pi i}{6\cdot 64}\left[\left(- \sqrt{3} - i\right) e^{i\lambda \sqrt{3} - \lambda} + \left(\sqrt{3} - i\right) e^{- i\lambda \sqrt{3} - \lambda} + \left(- 2i\right) e^{- 2\lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64}\left[ - \sqrt{3} e^{i\lambda \sqrt{3} - \lambda} - ie^{i\lambda \sqrt{3} - \lambda} + \sqrt{3} e^{- i\lambda \sqrt{3} - \lambda} - ie^{- i\lambda \sqrt{3} - \lambda} - 2ie^{- 2\lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64}\left[ - \frac{\sqrt{3}}{e^{\lambda}} e^{i\lambda \sqrt{3}} - \frac{i}{e^{\lambda}} e^{i\lambda \sqrt{3}} + \frac{\sqrt{3}}{e^{\lambda}} e^{- i\lambda \sqrt{3}} - \frac{i}{e^{\lambda}} e^{- i\lambda \sqrt{3}} - 2ie^{- 2\lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64\cdot e^{\lambda}}\left[ - \sqrt{3} e^{i\lambda \sqrt{3}} - ie^{i\lambda \sqrt{3}} + \sqrt{3} e^{- i\lambda \sqrt{3}} - ie^{- i\lambda \sqrt{3}} - 2ie^{- \lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64\cdot e^{\lambda}}\left[ - \sqrt{3}\left(e^{i\lambda \sqrt{3}} - e^{- i\lambda \sqrt{3}}\right) - i\left(e^{i\lambda \sqrt{3}} + e^{- i\lambda \sqrt{3}}\right) - 2ie^{- \lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64\cdot e^{\lambda}}\left[ - 2i\sqrt{3}\frac{\left(e^{i\lambda \sqrt{3}} - e^{- i\lambda \sqrt{3}}\right)}{2i} - 2i\frac{\left(e^{i\lambda \sqrt{3}} + e^{- i\lambda \sqrt{3}}\right)}{2} - 2ie^{- \lambda}\right]\\
- & = \frac{2\pi i}{6\cdot 64\cdot e^{\lambda}}\left[ - 2i\sqrt{3}\sin\left(\lambda \sqrt{3}\right) - 2i\cos\left(\lambda \sqrt{3}\right) - 2ie^{- \lambda}\right]\\
- & = \frac{4\pi}{6\cdot 64\cdot e^{\lambda}}\left[\sqrt{3}\sin\left(\lambda \sqrt{3}\right) + \cos\left(\lambda \sqrt{3}\right) + e^{- \lambda}\right]\\
+\int_{\RR}\frac{e^{- i\lambda x}}{x^{6} + 64} dx & = - 2\pi i\left[\frac{\left(- \sqrt{3} - i\right) e^{- i\lambda \left(- \sqrt{3} - i\right)}}{6 \cdot \left(- 64\right)} + \frac{\left(\sqrt{3} - i\right) e^{- i\lambda \left(\sqrt{3} - i\right)}}{6 \cdot \left(- 64\right)} + \frac{\left(- 2i\right) e^{- i\lambda \left(- 2i\right)}}{6 \cdot \left(- 64\right)}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64}\left[\left(- \sqrt{3} - i\right) e^{i\lambda \sqrt{3} - \lambda} + \left(\sqrt{3} - i\right) e^{- i\lambda \sqrt{3} - \lambda} + \left(- 2i\right) e^{- 2\lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64}\left[ - \sqrt{3} e^{i\lambda \sqrt{3} - \lambda} - ie^{i\lambda \sqrt{3} - \lambda} + \sqrt{3} e^{- i\lambda \sqrt{3} - \lambda} - ie^{- i\lambda \sqrt{3} - \lambda} - 2ie^{- 2\lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64}\left[ - \frac{\sqrt{3}}{e^{\lambda}} e^{i\lambda \sqrt{3}} - \frac{i}{e^{\lambda}} e^{i\lambda \sqrt{3}} + \frac{\sqrt{3}}{e^{\lambda}} e^{- i\lambda \sqrt{3}} - \frac{i}{e^{\lambda}} e^{- i\lambda \sqrt{3}} - 2ie^{- 2\lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64 \cdot e^{\lambda}}\left[ - \sqrt{3} e^{i\lambda \sqrt{3}} - ie^{i\lambda \sqrt{3}} + \sqrt{3} e^{- i\lambda \sqrt{3}} - ie^{- i\lambda \sqrt{3}} - 2ie^{- \lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64 \cdot e^{\lambda}}\left[ - \sqrt{3}\left(e^{i\lambda \sqrt{3}} - e^{- i\lambda \sqrt{3}}\right) - i\left(e^{i\lambda \sqrt{3}} + e^{- i\lambda \sqrt{3}}\right) - 2ie^{- \lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64 \cdot e^{\lambda}}\left[ - 2i\sqrt{3}\frac{\left(e^{i\lambda \sqrt{3}} - e^{- i\lambda \sqrt{3}}\right)}{2i} - 2i\frac{\left(e^{i\lambda \sqrt{3}} + e^{- i\lambda \sqrt{3}}\right)}{2} - 2ie^{- \lambda}\right]\\
+ & = \frac{2\pi i}{6 \cdot 64 \cdot e^{\lambda}}\left[ - 2i\sqrt{3}\sin\left(\lambda \sqrt{3}\right) - 2i\cos\left(\lambda \sqrt{3}\right) - 2ie^{- \lambda}\right]\\
+ & = \frac{4\pi}{6 \cdot 64 \cdot e^{\lambda}}\left[\sqrt{3}\sin\left(\lambda \sqrt{3}\right) + \cos\left(\lambda \sqrt{3}\right) + e^{- \lambda}\right]\\
  & = \frac{\pi}{96} e^{- \lambda}\left[\sqrt{3}\sin\left(\lambda \sqrt{3}\right) + \cos\left(\lambda \sqrt{3}\right) + e^{- \lambda}\right]
 \end{align*}
 Abbiamo appena calcolato la nostra prima trasformata di Fourier. Fare per casa i casi $\lambda = 0, \lambda < 0$.
@@ -1569,7 +1569,7 @@ la radice col $ + $ è interna alla circonferenza, quella con il meno sta a sini
 \end{equation*}
 allora
 \begin{equation*}
-\frac{1}{i}\int_{\left| z\right| = 1}\frac{1}{bz^{2} + 2az + b} dz = \frac{1}{i} \cdot 2\pi i\cdot \Res \left(f, \overline{z}\right) = 2\pi \cdot \Res \left(f, \overline{z}\right)
+\frac{1}{i}\int_{\left| z\right| = 1}\frac{1}{bz^{2} + 2az + b} dz = \frac{1}{i} \cdot 2\pi i \cdot \Res \left(f, \overline{z}\right) = 2\pi \cdot \Res \left(f, \overline{z}\right)
 \end{equation*}
 il residuo vale
 \begin{equation*}
@@ -1726,7 +1726,7 @@ Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente L
 \begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \Hc \left(D\left(z_{0}, r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi_{\varepsilon}\left(t\right) = z_{0} + \varepsilon e^{it}$ con $t\in \left[ \alpha, \beta \right]$. Allora
 \begin{equation*}
-\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f\left(z\right) dz = \left(\beta - \alpha \right) i\cdot \Res \left(f, z_{0}\right)
+\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f\left(z\right) dz = \left(\beta - \alpha \right) i \cdot \Res \left(f, z_{0}\right)
 \end{equation*}
 \end{thm}
 \begin{figure}[htpb]
@@ -1869,15 +1869,15 @@ I_{R} = 0
 \end{equation*}
 \item se $1 < R < \sqrt{2}$ $f$ è olomorfa all'interno di $\gamma_{R}$ tranne che in $z = i$
 \begin{equation*}
-I_{R} = 2\pi i\cdot \Res \left(f, i\right) = \left(1 + i\right) \pi 
+I_{R} = 2\pi i \cdot \Res \left(f, i\right) = \left(1 + i\right) \pi 
 \end{equation*}
 \item se $\sqrt{2} < R < \sqrt{5}$ $f$ è olomorfa all'interno di $\gamma_{R}$ tranne che in $z = i$ e $z = 0$
 \begin{equation*}
-I_{R} = 2\pi i\cdot \left[\Res \left(f, i\right) + \Res \left(f, 0\right)\right] = \pi + i\pi \left(3 + 2\pi\right)
+I_{R} = 2\pi i \cdot \left[\Res \left(f, i\right) + \Res \left(f, 0\right)\right] = \pi + i\pi \left(3 + 2\pi\right)
 \end{equation*}
 \item se $R > \sqrt{5}$ tutte le singolarità sono all'interno di $\gamma_{R}$. $f$ è olomorfa all'interno di $\gamma_{R}$ tranne che in $z = \pm i$ e $z = 0$
 \begin{equation*}
-I_{R} = 2\pi i\cdot \left[\Res \left(f, 0\right) + \Res \left(f, i\right) + \Res \left(f, - i\right)\right] = i2\pi (2 + \pi)
+I_{R} = 2\pi i \cdot \left[\Res \left(f, 0\right) + \Res \left(f, i\right) + \Res \left(f, - i\right)\right] = i2\pi (2 + \pi)
 \end{equation*}
 \end{itemize}
 
@@ -1897,11 +1897,11 @@ z_{2} = i\left(- 3 + 2\sqrt{2}\right)
 \end{equation*}
 di cui solo $z_{2}$ sta dentro il cerchio unitario
 \begin{equation*}
-2\int_{\left| z\right| = 1}\frac{i}{z^{2} + 6iz - 1} dz = 2\cdot 2\pi i\cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right)
+2\int_{\left| z\right| = 1}\frac{i}{z^{2} + 6iz - 1} dz = 2 \cdot 2\pi i \cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right)
 \end{equation*}
 ricordando che è un polo semplice
 \begin{equation*}
-4\pi i\cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right) = 4\pi i\lim\limits_{z\rightarrow i\left(- 3 + 2\sqrt{2}\right)}\left[ z - i\left(- 3 + 2\sqrt{2}\right)\right] f\left(z\right) = \dotsc = \frac{\pi}{\sqrt{2}}
+4\pi i \cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right) = 4\pi i\lim\limits_{z\rightarrow i\left(- 3 + 2\sqrt{2}\right)}\left[ z - i\left(- 3 + 2\sqrt{2}\right)\right] f\left(z\right) = \dotsc = \frac{\pi}{\sqrt{2}}
 \end{equation*}
 \Soluzione
 \begin{equation*}
@@ -1921,7 +1921,7 @@ z^{2k} = - \alpha^{2} = \alpha^{2} e^{\pi i} \ \ \implies \ \ z_{j} = \alpha^{\f
 \end{equation*}
 allora per il teorema dei residui
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = \int_{\sigma} f\left(z\right) dz + \int_{\varphi} f\left(z\right) dz = 2\pi i\cdot \sum\limits^{k - 1}_{j = 0}\Res \left(f, z_{j}\right)
+\int_{\gamma_{R}} f\left(z\right) dz = \int_{\sigma} f\left(z\right) dz + \int_{\varphi} f\left(z\right) dz = 2\pi i \cdot \sum\limits^{k - 1}_{j = 0}\Res \left(f, z_{j}\right)
 \end{equation*}
 Nello specifico il pezzo su $\sigma $ tende proprio al nostro integrale
 \begin{equation*}
@@ -1962,7 +1962,7 @@ Analizziamo i vari pezzi
 \end{equation*}
 il morso:
 \begin{equation*}
-\int_{\psi} f\left(z\right) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left(\beta - \alpha \right) \cdot \Res \left(f, 0\right) = \left(0 - \pi \right) i\cdot \Res \left(f, 0\right) = - \pi i\frac{e^{0}}{1} = - \pi i
+\int_{\psi} f\left(z\right) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left(\beta - \alpha \right) \cdot \Res \left(f, 0\right) = \left(0 - \pi \right) i \cdot \Res \left(f, 0\right) = - \pi i\frac{e^{0}}{1} = - \pi i
 \end{equation*}
 mentre il semicerchio grande:
 \begin{align*}
@@ -1987,8 +1987,8 @@ f\left(z\right) = \frac{e^{i\pi z}}{\left(z - 3\right)\left(z^{2} - 2z + 2\right
 \end{equation*}
 $f\in \Hc \left(\CC  \setminus \left\{3, 1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
 \begin{align*}
-\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz & = 2\pi i\cdot \Res \left(f, 1 + i\right) = 2\pi i\cdot \lim_{z\rightarrow 1 + i} f\left(z\right)\left(z - \left(1 + i\right)\right) = \\
- & = 2\pi i\cdot \lim_{z\rightarrow 1 + i}\frac{e^{\pi iz}}{\left(z - 3\right)\left(z - 1 + i\right)} = \dotsc = \frac{\pi e^{- \pi}}{5}\left(2 + i\right)
+\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz & = 2\pi i \cdot \Res \left(f, 1 + i\right) = 2\pi i \cdot \lim_{z\rightarrow 1 + i} f\left(z\right)\left(z - \left(1 + i\right)\right) = \\
+ & = 2\pi i \cdot \lim_{z\rightarrow 1 + i}\frac{e^{\pi iz}}{\left(z - 3\right)\left(z - 1 + i\right)} = \dotsc = \frac{\pi e^{- \pi}}{5}\left(2 + i\right)
 \end{align*}
 ma questo integrale possiamo vederlo come la somma di tre pezzi
 \begin{equation*}
@@ -2000,8 +2000,8 @@ di cui il primo tende proprio all'integrale che vogliamo calcolare
 \end{equation*}
 occupiamoci del pezzo sul morso sfruttando il Lemma del cerchio piccolo
 \begin{align*}
-\lim_{\varepsilon \rightarrow 0^{+}}\int_{\psi} f\left(z\right) dz & = - \pi i\cdot \Res \left(f, 3\right)\\
- & = - \pi i\cdot \lim_{z\rightarrow 3} f\left(z\right)\left(z - 3\right) = - \pi i\cdot \lim_{z\rightarrow 3}\frac{e^{i\pi z}}{z^{2} - 2z + 2} = \dotsc = \frac{\pi i}{5}
+\lim_{\varepsilon \rightarrow 0^{+}}\int_{\psi} f\left(z\right) dz & = - \pi i \cdot \Res \left(f, 3\right)\\
+ & = - \pi i \cdot \lim_{z\rightarrow 3} f\left(z\right)\left(z - 3\right) = - \pi i \cdot \lim_{z\rightarrow 3}\frac{e^{i\pi z}}{z^{2} - 2z + 2} = \dotsc = \frac{\pi i}{5}
 \end{align*}
 ed infine del semicerchio grande
 \begin{align*}
@@ -2034,7 +2034,7 @@ il cui denominatore si annulla in
 \end{gather*}
 Integriamo sul rettangolo che contiene il residuo in $\pi i/2$
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i\cdot \Res \left(f, \frac{\pi i}{2}\right) = 2\pi i\cdot \left. \frac{e^{iz}}{\sinh}\right|_{z = \frac{\pi i}{2}} = \dotsc = \frac{2\pi}{e^{\frac{\pi}{2}}}
+\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i \cdot \Res \left(f, \frac{\pi i}{2}\right) = 2\pi i \cdot \left. \frac{e^{iz}}{\sinh}\right|_{z = \frac{\pi i}{2}} = \dotsc = \frac{2\pi}{e^{\frac{\pi}{2}}}
 \end{equation*}
 il circuito lo possiamo vedere come $4$ lati di un rettangolo, numerati in senso antiorario partendo da quello in basso
 
@@ -2181,7 +2181,7 @@ Nel passaggio (*) abbiamo sfruttato l'annullamento dell'integrale di una funzion
 \frac{1}{2}\int_{\RR}\frac{e^{i\alpha x}}{x^{2} + \beta^{2}} dx
 \end{equation*}Prendiamo ora in esame $f(z) = \frac{e^{i\alpha x}}{x^{2} + \beta^{2}}$, sfruttiamo il Lemma di Jordan ($\alpha  > 0$) e il Teorema dei residui, integrando sulla semicirconferenza superiore.
 \begin{equation*}
-\int_{\gamma_{R}} f(z) dz = 2\pi i\cdot \Res (f, z = i\beta) = 2\pi i\cdot \left. \frac{e^{i\alpha x}}{2z}\right|_{z = i\beta} = \frac{\pi}{\beta} e^{- \alpha \beta}
+\int_{\gamma_{R}} f(z) dz = 2\pi i \cdot \Res (f, z = i\beta) = 2\pi i \cdot \left. \frac{e^{i\alpha x}}{2z}\right|_{z = i\beta} = \frac{\pi}{\beta} e^{- \alpha \beta}
 \end{equation*}
 Per $R\rightarrow + \infty $
 \begin{equation*}
@@ -2250,7 +2250,7 @@ Rinfrescate le idee, ora consideriamo come dominio di integrazione una semicirco
 \FloatBarrier
 
 \begin{equation*}
-\int_{\gamma_{R, \varepsilon}} f(z)dz = 2\pi i\cdot \Res  (f, z = i) = 2\pi i\cdot \left. \frac{e^{iz}}{3z^{2} + 2z + 1}\right|_{z = i} = 2\pi i\cdot \frac{e^{- 1}}{2i - 2}
+\int_{\gamma_{R, \varepsilon}} f(z)dz = 2\pi i \cdot \Res  (f, z = i) = 2\pi i \cdot \left. \frac{e^{iz}}{3z^{2} + 2z + 1}\right|_{z = i} = 2\pi i \cdot \frac{e^{- 1}}{2i - 2}
 \end{equation*}
 Quando $\varepsilon \rightarrow 0^{+}, R\rightarrow \infty $
 \begin{equation*}
@@ -2259,25 +2259,25 @@ Quando $\varepsilon \rightarrow 0^{+}, R\rightarrow \infty $
 \begin{thm}
 [Lemma del cerchio piccolo] Sia $f\in \Hc (D(z_{0}, r) \setminus \{z_{0}\})$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi_{\varepsilon}(t) = z_{0} + \varepsilon e^{it}$ con $t\in [ \alpha, \beta ]$. Allora
 \begin{equation*}
-\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f(z) dz = (\beta - \alpha) i\cdot \Res (f, z_{0})
+\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f(z) dz = (\beta - \alpha) i \cdot \Res (f, z_{0})
 \end{equation*}
 \end{thm}
 Per Jordan, quello su $\sigma_{R}$ tende a $0$.
 
-Per il lemma del cerchio piccolo, quello su $\sigma_{\varepsilon}$ tende a $(0 - \pi) i\cdot \Res (f, - 1)$.
+Per il lemma del cerchio piccolo, quello su $\sigma_{\varepsilon}$ tende a $(0 - \pi) i \cdot \Res (f, - 1)$.
 
 Applichiamo anche il teorema dei residui sull'integrale su $\gamma_{R, \varepsilon}$.
 \begin{equation*}
 \begin{aligned}
 \int_{\gamma_{R, \varepsilon}} & = \int^{- 1 - \varepsilon}_{- R} + \int^{R}_{- 1 - \varepsilon} + \int_{\sigma_{\varepsilon}} + \int_{\sigma_{R}}\\
-2\pi i\cdot \Res  (f, i) & = \int_{\RR} f(x) dx - \pi i\cdot \Res (f, - 1) + 0
+2\pi i \cdot \Res  (f, i) & = \int_{\RR} f(x) dx - \pi i \cdot \Res (f, - 1) + 0
 \end{aligned}
 \end{equation*}
 Ovvero
 \begin{equation*}
 \begin{aligned}
-\int_{\RR} f(x) dx & = 2\pi i\cdot \Res  (f, i) + \pi i\cdot \Res (f, - 1)\\
- & = 2\pi i\cdot \frac{e^{- 1}}{2i - 2} + \pi i\cdot \frac{e^{- i}}{2}\\
+\int_{\RR} f(x) dx & = 2\pi i \cdot \Res  (f, i) + \pi i \cdot \Res (f, - 1)\\
+ & = 2\pi i \cdot \frac{e^{- 1}}{2i - 2} + \pi i \cdot \frac{e^{- i}}{2}\\
  & = \pi i\left(\frac{e^{- 1}}{i - 1} + \frac{e^{- i}}{2}\right)
 \end{aligned}
 \end{equation*}
@@ -2342,7 +2342,7 @@ f(\rho, \vartheta) = \frac{\sqrt[3]{\rho} e^{i\vartheta /3}}{\rho^{2} e^{2i\vart
 I poli sono in $\pm 2i$
 \begin{equation*}
 \begin{aligned}
-\int_{\gamma_{R, \varepsilon}} f(z) dz & = 2\pi i\cdot \left(\frac{\sqrt[3]{2} e^{i\frac{\pi}{2} /3}}{4i} + \frac{\sqrt[3]{2} e^{i\frac{3\pi}{2} /3}}{- 4i}\right) = \frac{\pi \sqrt[3]{2}}{2}\left(e^{i\frac{\pi}{6}} - e^{i\frac{\pi}{2}}\right)\\
+\int_{\gamma_{R, \varepsilon}} f(z) dz & = 2\pi i \cdot \left(\frac{\sqrt[3]{2} e^{i\frac{\pi}{2} /3}}{4i} + \frac{\sqrt[3]{2} e^{i\frac{3\pi}{2} /3}}{- 4i}\right) = \frac{\pi \sqrt[3]{2}}{2}\left(e^{i\frac{\pi}{6}} - e^{i\frac{\pi}{2}}\right)\\
 \int_{\gamma_{R, \varepsilon}} f(z) dz & = \int^{R}_{\varepsilon} + \int_{\sigma_{R}} + \int^{\varepsilon}_{R} + \int_{\sigma_{\varepsilon}}
 \end{aligned}
 \end{equation*}
@@ -2699,7 +2699,7 @@ Si considera rispettivamente
 \begin{equation*}
 \begin{array}{c l}
 A & f\left(z\right) = e^{\alpha \cdot \Log_{\left(2\pi \right)} z} R\left(z\right)\\
-B & f\left(z\right) = \Log_{\left(2\pi \right)} z\cdot R\left(z\right)\\
+B & f\left(z\right) = \Log_{\left(2\pi \right)} z \cdot R\left(z\right)\\
 C & f\left(z\right) = \left(\Log_{\left(2\pi \right)} z\right)^{2} R\left(z\right)
 \end{array}
 \end{equation*}
@@ -2826,7 +2826,7 @@ Chiamo l'intera curva $\gamma_{R, \varepsilon} = \sigma_{1} \cup \varphi \cup \s
 
 Per il teorema dei residui
 \begin{equation*}
-\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz = 2\pi i\cdot \Res \left(f, e^{i\pi /3}\right)
+\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz = 2\pi i \cdot \Res \left(f, e^{i\pi /3}\right)
 \end{equation*}
 $e^{i\pi /3}$ è l'unico punto interno alla curva in cui si annulla il denominatore.
 \begin{equation*}
@@ -2861,7 +2861,7 @@ z = \varepsilon e^{it}\\
 t\in [ 0, 2\pi /3]
 \end{array}\right\} = \left| \int^{2\pi /3}_{0}\frac{e^{\alpha (\ln \varepsilon + it)}}{1 + \varepsilon^{3} e^{i3t}}\textcolor[rgb]{0.29, 0.56, 0.89}{\underbrace{\varepsilon ie^{it}}_{\gamma '}} dt\right| \leq \dotsc \leq \frac{2\pi}{3} \varepsilon^{\alpha + 1}\xrightarrow[\alpha \in (- 1, 2)]{\varepsilon \rightarrow 0^{+}} 0\\
  & \\
-\implies  & \ \ \frac{2\pi i\cdot \Res \left(f, e^{i\pi /3}\right)}{1 - e^{i\frac{2}{3} \pi (1 + \alpha)}} = I
+\implies  & \ \ \frac{2\pi i \cdot \Res \left(f, e^{i\pi /3}\right)}{1 - e^{i\frac{2}{3} \pi (1 + \alpha)}} = I
 \end{aligned}
 \end{equation*}
 Resta solo da calcolare il residuo.
@@ -2870,7 +2870,7 @@ Resta solo da calcolare il residuo.
 Devo considerare la forma $A$
 \begin{gather*}
 f(z) = e^{- \frac{1}{2}\Log_{(2\pi)} z} \cdot \frac{1}{1 + z}\\
-\int_{\gamma_{\varepsilon, R}} f(z) dz = 2\pi i\cdot \sum \Res (f) = 2\pi i\cdot \Res (f, - 1)
+\int_{\gamma_{\varepsilon, R}} f(z) dz = 2\pi i \cdot \sum \Res (f) = 2\pi i \cdot \Res (f, - 1)
 \end{gather*}
 Ugualmente
 \begin{equation*}
@@ -2887,15 +2887,15 @@ t\in [ \varepsilon, R]
 \int_{\varphi} & \xrightarrow{R\rightarrow + \infty} 0\\
 \int_{\psi} & \xrightarrow{\varepsilon \rightarrow 0^{+}} 0\\
  & \\
-\implies  & \ \ 2I = 2\pi i\cdot \Res (f, - 1) \ \ \implies \ \ I = \pi i\cdot \Res (f, - 1)
+\implies  & \ \ 2I = 2\pi i \cdot \Res (f, - 1) \ \ \implies \ \ I = \pi i \cdot \Res (f, - 1)
 \end{aligned}
 \end{equation*}
 \Soluzione
 
 Siamo nel caso $B$
 \begin{gather*}
-f\left(z\right) = \Log_{\left(2\pi \right)} z\cdot R\left(z\right) = f\left(z\right) = \frac{\Log_{\left(2\pi \right)} z}{\left(z^{2} + 4\right)\left(z + 1\right)}\\
-\int_{\gamma_{\varepsilon, R}} f\left(z\right) dz = 2\pi i\cdot \sum \Res \left(f, z_{i}\right)
+f\left(z\right) = \Log_{\left(2\pi \right)} z \cdot R\left(z\right) = f\left(z\right) = \frac{\Log_{\left(2\pi \right)} z}{\left(z^{2} + 4\right)\left(z + 1\right)}\\
+\int_{\gamma_{\varepsilon, R}} f\left(z\right) dz = 2\pi i \cdot \sum \Res \left(f, z_{i}\right)
 \end{gather*}
 Il denominatore si annulla per $z = -1, \pm 2i$.
 \begin{equation*}
@@ -3511,7 +3511,7 @@ ha $4$ poli semplici in $z = \pm ni$ e $z = \pm 2ni$.
 \FloatBarrier
 \begin{equation*}
 \begin{aligned}
-I^{\star}_{n} & = 2\pi i\cdot \{\Res (g_{n}, 2ni) + \Res (g_{n}, ni)\} = 2\pi i\cdot \left\{- \frac{i}{6n^{3}} + \frac{i}{12n^{3}}\right\}\\
+I^{\star}_{n} & = 2\pi i \cdot \{\Res (g_{n}, 2ni) + \Res (g_{n}, ni)\} = 2\pi i \cdot \left\{- \frac{i}{6n^{3}} + \frac{i}{12n^{3}}\right\}\\
 I^{\star}_{n} & = \underbrace{\int_{\sigma_{R}} g(z) dz}_{\xrightarrow{R\rightarrow + \infty} 0} + \underbrace{\int^{R}_{- R} g(z) dz}_{\xrightarrow{R\rightarrow + \infty} I_{n}}\\
  & \implies I_{n} = \frac{\pi}{6n^{3}}\\
  & \implies \Vert f_{n, \alpha} - F_{\alpha}\Vert_{L^{1}} = n^{\alpha} \cdot \frac{\pi}{6n^{3}}\xrightarrow{n\rightarrow + \infty} 0\ \ \iff \ \ \alpha < 3\land \alpha \in [ 0, 4)
@@ -3551,9 +3551,9 @@ dove
 a_{0} = \frac{2}{T}\int^{\frac{T}{2}}_{- \frac{T}{2}} f(x) dx\\
 a_{n} = \frac{2}{T}\int^{\frac{T}{2}}_{- \frac{T}{2}} f(x)\cos\left(\frac{2\pi n}{T} x\right) dx\ \ \ \ b_{n} = \frac{2}{T}\int^{\frac{T}{2}}_{- \frac{T}{2}} f(x)\sin\left(\frac{2\pi n}{T} x\right) dx
 \end{gather*}
-\textbf{NB.} Se $f$ è pari, il seno è dispari, $P\cdot D = D\implies b_{n} = 0\ \forall n\geq 1$.
+\textbf{NB.} Se $f$ è pari, il seno è dispari, $P \cdot D = D\implies b_{n} = 0\ \forall n\geq 1$.
 
-\textbf{NB.} Se $f$ è dispari, il coseno è pari, $D\cdot P = D\implies a_{n} = 0\ \forall n\geq 0$.
+\textbf{NB.} Se $f$ è dispari, il coseno è pari, $D \cdot P = D\implies a_{n} = 0\ \forall n\geq 0$.
 \end{thm}
 \begin{enumerate}
 \item Disegnamo la funzione
@@ -3844,7 +3844,7 @@ Allora
 \begin{equation*}
 \begin{aligned}
 \int^{\pi}_{- \pi}\left(x^{2}\right)^{2} dx & = \pi \left[\frac{\left(\frac{2}{3} \pi^{2}\right)^{2}}{2} + \sum\limits^{\infty}_{n = 1}\frac{16}{n^{4}}\right]\\
-2\cdot \frac{\pi^{5}}{5} & = \pi \left[\frac{2}{9} \pi^{4} + 16\sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}}\right]\\
+2 \cdot \frac{\pi^{5}}{5} & = \pi \left[\frac{2}{9} \pi^{4} + 16\sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}}\right]\\
 \left(\frac{2}{5} - \frac{2}{9}\right) \pi^{4} & = 16\sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}} \ \ \implies \ \ \boxed{\sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}} = \frac{\pi^{4}}{90}}
 \end{aligned}
 \end{equation*}
@@ -4484,7 +4484,7 @@ f_{n, \alpha}(x) = n^{\alpha}\sqrt{1 - n| x|} \cdot \chi_{\left[ - \frac{1}{n}, 
  & \iff \ \ 2n^{\alpha p}\int^{1/n}_{0}(1 - nx)^{p/2} dx\xrightarrow{n\rightarrow + \infty} 0\\
  & \iff \ \ 2n^{\alpha p}\left[\frac{(1 - nx)^{p/2 + 1}}{\frac{p}{2} + 1} \cdot \left(\frac{1}{- n}\right)\right]^{1/n}_{0}\xrightarrow{n\rightarrow + \infty} 0\\
  & \iff \ \ 2n^{\alpha p} \cdot \frac{1}{n\left(\frac{p}{2} + 1\right)}\xrightarrow{n\rightarrow + \infty} 0\\
- & \iff \ \ C\cdot n^{\alpha p - 1}\xrightarrow{n\rightarrow + \infty} 0\\
+ & \iff \ \ C \cdot n^{\alpha p - 1}\xrightarrow{n\rightarrow + \infty} 0\\
  & \iff \ \ \alpha p - 1 < 0\\
  & \iff \ \ \alpha < \frac{1}{p} \land \alpha  > 0
 \end{align*}
@@ -4511,7 +4511,7 @@ Per ogni $\varphi \in D(\RR)$
 \end{array}\\
  & \overset{\text{ipp}}{=} n\left\{\left[\frac{2}{3n}\sqrt{(1 + nx)^{3}} \varphi (x)\right]^{0}_{- 1/n} - \frac{2}{3n}\int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi '(x)dx + \right. \\
  & \left. + \left[ - \frac{2}{3n}\sqrt{(1 - nx)^{3}} \varphi (x)\right]^{1/n}_{0} + \frac{2}{3n}\int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi '(x)dx\right\}\\
- & = 2\cdot \frac{2}{3} \varphi (0) + \frac{2}{3}\left\{- \int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi '(x)dx + \int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi '(x)dx\right\}
+ & = 2 \cdot \frac{2}{3} \varphi (0) + \frac{2}{3}\left\{- \int^{0}_{- \frac{1}{n}}\sqrt{(1 + nx)^{3}} \varphi '(x)dx + \int^{1/n}_{0}\sqrt{(1 + nx)^{3}} \varphi '(x)dx\right\}
 \end{align*}
 
 Quindi
@@ -4827,7 +4827,7 @@ f(x) \sim \sum\limits^{\infty}_{n = 1} b_{n}\sin(nx)
 \end{equation*}
 Calcoliamo i coefficienti
 \begin{equation*}
-b_{n} = \frac{2}{\pi}\int^{\pi}_{0} 1\cdot \sin(nx) dx = \frac{2}{\pi}\left[ - \frac{1}{n}\cos(nx)\right]^{\pi}_{0} = \frac{2}{\pi n}\left(1 - (- 1)^{n}\right) = 
+b_{n} = \frac{2}{\pi}\int^{\pi}_{0} 1 \cdot \sin(nx) dx = \frac{2}{\pi}\left[ - \frac{1}{n}\cos(nx)\right]^{\pi}_{0} = \frac{2}{\pi n}\left(1 - (- 1)^{n}\right) = 
 \begin{cases}
 \frac{4}{n\pi}, & n\ \text{dispari}\\
 0, & n\ \text{pari}
@@ -5005,7 +5005,7 @@ detta \textbf{Funzione di Heaviside}.
 \begin{enumerate}
 \item $\forall \varphi \in D(\RR)$
 \begin{equation*}
-\langle x\delta, \varphi \rangle = \langle \delta, x\varphi \rangle = 0\cdot \varphi (0) = 0\qed 
+\langle x\delta, \varphi \rangle = \langle \delta, x\varphi \rangle = 0 \cdot \varphi (0) = 0\qed 
 \end{equation*}
 \item $\forall \varphi \in D(\RR)$
 \begin{gather*}
@@ -5557,8 +5557,8 @@ Disegno il grafico con il solito rettangolo della gamma che contenga solo un res
 Calcolo
 \begin{equation*}
 \begin{aligned}
-\int_{\gamma_{R}} f(z)dz & = 2\pi i\cdot \Res \left(f, z = \frac{i\pi}{2}\right) = 2\pi i\left. \frac{2e^{- i\xi z}}{e^{z} - e^{- z}}\right|_{z = i\pi /2}\\
- & = 2\pi i\cdot \frac{2e^{\xi \frac{\pi}{2}}}{e^{\frac{i\pi}{2}} - e^{- \frac{i\pi}{2}}} = 2\pi i\cdot \frac{2e^{\xi \frac{\pi}{2}}}{i - (- i)} = 2\pi e^{\xi \frac{\pi}{2}}
+\int_{\gamma_{R}} f(z)dz & = 2\pi i \cdot \Res \left(f, z = \frac{i\pi}{2}\right) = 2\pi i\left. \frac{2e^{- i\xi z}}{e^{z} - e^{- z}}\right|_{z = i\pi /2}\\
+ & = 2\pi i \cdot \frac{2e^{\xi \frac{\pi}{2}}}{e^{\frac{i\pi}{2}} - e^{- \frac{i\pi}{2}}} = 2\pi i \cdot \frac{2e^{\xi \frac{\pi}{2}}}{i - (- i)} = 2\pi e^{\xi \frac{\pi}{2}}
 \end{aligned}
 \end{equation*}
 Scriviamo i vari pezzi
@@ -5640,7 +5640,7 @@ Nel nostro caso si parla di $ - \xi $ per calcolare quanto vale questa trasforma
 
 Per $\xi  > 0$
 \begin{equation*}
-\int_{R}\frac{e^{- i\xi x}}{\left(1 + x^{2}\right)^{2}} dx = -2\pi i\cdot \Res (f, z = -i)
+\int_{R}\frac{e^{- i\xi x}}{\left(1 + x^{2}\right)^{2}} dx = -2\pi i \cdot \Res (f, z = -i)
 \end{equation*}
 Il segno meno è giustificato dal fatto che percorriamo la semicirconferenza in senso \textit{antiorario}.
 
@@ -5654,7 +5654,7 @@ Il residuo allora sarà pari a
 \end{equation*}
 La trasformata vale quindi
 \begin{equation*}
-\Fc \left\{\frac{1}{\left(1 + x^{2}\right)^{2}}\right\} = - 2\pi i\cdot i\frac{e^{- \xi}}{4} (1 + \xi) = \frac{\pi}{2} e^{- \xi}(1 + \xi) \ \ \ \ \xi  > 0
+\Fc \left\{\frac{1}{\left(1 + x^{2}\right)^{2}}\right\} = - 2\pi i \cdot i\frac{e^{- \xi}}{4} (1 + \xi) = \frac{\pi}{2} e^{- \xi}(1 + \xi) \ \ \ \ \xi  > 0
 \end{equation*}
 Per le $\xi < 0$ basta raddoppiare
 \begin{equation*}
@@ -5859,7 +5859,7 @@ e sono dei poli semplici.
 
 Osserviamo che $| f(z)| \sim \frac{1}{z^{2}}$ per $| z| \rightarrow + \infty $, allora col teorema dei residui e il lemma di Jordan
 \begin{equation*}
-\int^{+ \infty}_{- \infty} e^{- i\xi x}\frac{1}{1 + x^{2}} dx = 2\pi i\cdot \Res \left(\frac{e^{- i\xi z}}{1 + z^{2}}, z = i\right) = \pi e^{\xi} \ \ \forall \xi < 0
+\int^{+ \infty}_{- \infty} e^{- i\xi x}\frac{1}{1 + x^{2}} dx = 2\pi i \cdot \Res \left(\frac{e^{- i\xi z}}{1 + z^{2}}, z = i\right) = \pi e^{\xi} \ \ \forall \xi < 0
 \end{equation*}
 \begin{rem}
 Se $f$ è pari, allora $\hat{f}$ è pari.
@@ -6041,8 +6041,8 @@ Le singolarità sono poli semplici.
 Notiamo che $| u(z)| \sim \frac{1}{z^{4}}$ per $| z| \rightarrow + \infty $. Per il teorema dei residui e il lemma di Jordan
 \begin{equation*}
 \begin{aligned}
-\hat{u}(\xi) & = \int^{+ \infty}_{- \infty}\frac{e^{- i\xi x}}{\left(1 + x^{2}\right)\left(4 + x^{2}\right)}\overset{\xi < 0}{=} 2\pi i\cdot \{\Res (u, i) + \Res (u, 2i)\}\\
- & = 2\pi i\cdot \left\{\frac{e^{\xi}}{6i} - \frac{e^{2\xi}}{12i}\right\} = \frac{\pi}{3} e^{\xi} - \frac{\pi}{6} e^{2\xi} \ \ (\xi < 0)
+\hat{u}(\xi) & = \int^{+ \infty}_{- \infty}\frac{e^{- i\xi x}}{\left(1 + x^{2}\right)\left(4 + x^{2}\right)}\overset{\xi < 0}{=} 2\pi i \cdot \{\Res (u, i) + \Res (u, 2i)\}\\
+ & = 2\pi i \cdot \left\{\frac{e^{\xi}}{6i} - \frac{e^{2\xi}}{12i}\right\} = \frac{\pi}{3} e^{\xi} - \frac{\pi}{6} e^{2\xi} \ \ (\xi < 0)
 \end{aligned}
 \end{equation*}
 $u(x)$ è pari, allora $\hat{u}(\xi)$ è pari e reale.
@@ -6160,7 +6160,7 @@ allora
 \begin{align*}
 (*) & = \int^{1}_{- 1}[\cos(\xi x) - i\sin(\xi x)]\left(1 - x^{2}\right) dx\\
  & = \int^{1}_{- 1}\underbrace{\cos(\xi x)\left(1 - x^{2}\right)}_{\text{pari}} dx - i\int^{1}_{- 1}\underbrace{\sin(\xi x)\left(1 - x^{2}\right)}_{\text{dispari}} dx\\
- & = 2\int^{1}_{0}\underbrace{\cos(\xi x)}_{g'}\underbrace{\left(1 - x^{2}\right)}_{f} - i\cdot 0\\
+ & = 2\int^{1}_{0}\underbrace{\cos(\xi x)}_{g'}\underbrace{\left(1 - x^{2}\right)}_{f} - i \cdot 0\\
  & \overset{\text{ipp}}{=} 2\left\{\cancel{\left[\left(1 - x^{2}\right)\frac{1}{\xi}\sin(2\xi)\right]^{1}_{0}} - \int^{1}_{0}\frac{- 2x}{\xi}\sin(\xi x) dx\right\}\\
  & = \frac{4}{\xi}\int^{1}_{0}\underbrace{x}_{f}\underbrace{\sin(\xi x)}_{g'} dx\\
  & \overset{\text{ipp}}{=}\frac{4}{\xi}\left\{\left[ - \frac{x}{\xi}\cos(\xi x)\right]^{1}_{0} - \int^{1}_{0} - \frac{1}{\xi}\cos(\xi x) dx\right\}\\
@@ -6628,7 +6628,7 @@ Trasformiamo
 \item $\Fc \{xu''\} = i\frac{d}{d\xi}\left(- \xi^{2}\hat{u}\right) = i\left(- 2\xi \hat{u} - \xi^{2}\hat{u} '\right)$
 \item $\Fc \{u'\} = i\xi \hat{u}$
 \item $\Fc \{xu\} = i\hat{u} '$
-\item $\Fc \left\{xe^{- | x|}\right\} = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = i\cdot \left[\frac{- 4\xi}{\left(1 + \xi^{2}\right)^{2}}\right]$
+\item $\Fc \left\{xe^{- | x|}\right\} = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = i \cdot \left[\frac{- 4\xi}{\left(1 + \xi^{2}\right)^{2}}\right]$
 \end{itemize}
 
 Allora
@@ -6824,11 +6824,11 @@ Sfrutto il fatto che $f$ e $\hat{f}$ sono pari:
  & \\
 \int_{\RR}| \hat{f}(\xi)|^{2} d\xi  & = \int^{+ \infty}_{- \infty}\left| 4\frac{(\sin \xi - \xi \ \cos \xi)}{\xi^{3}}\right|^{2} d\xi \\
  & = 16\int^{+ \infty}_{- \infty}\frac{(\sin \xi - \xi \ \cos \xi)^{2}}{\xi^{6}} d\xi \\
- & = 32\int^{+ \infty}_{0}\frac{(\sin \xi - \xi \ \cos \xi)^{2}}{\xi^{6}} d\xi = 32\cdot I
+ & = 32\int^{+ \infty}_{0}\frac{(\sin \xi - \xi \ \cos \xi)^{2}}{\xi^{6}} d\xi = 32 \cdot I
 \end{align*}
 Usando Plancherel
 \begin{equation*}
-32\cdot I = (2\pi)^{n}\int_{\RR}| f(x)|^{2} dx\overset{n = 1}{=} 2\pi \cdot \frac{16}{15} \ \ \implies \ \ I = \frac{\pi}{15}
+32 \cdot I = (2\pi)^{n}\int_{\RR}| f(x)|^{2} dx\overset{n = 1}{=} 2\pi \cdot \frac{16}{15} \ \ \implies \ \ I = \frac{\pi}{15}
 \end{equation*}
 \Soluzione
 \begin{thm}
@@ -7027,7 +7027,7 @@ $\hat{u}$ reale pari, allora $u$ reale pari, quindi studiamo le $x > 0$ per poi 
 
 Usando il Lemma di Jordan (semipiano superiore). Sia
 \begin{equation*}
-f(z) = \frac{2\left(1 + z^{2}\right) e^{ixz}}{z^{4} + 4} \ \ \implies \ \ u(x) = \frac{1}{2\pi} \cdot 2\pi i\cdot \sum_{\Im (z_{k})  > 0}\Res (f, z_{k})
+f(z) = \frac{2\left(1 + z^{2}\right) e^{ixz}}{z^{4} + 4} \ \ \implies \ \ u(x) = \frac{1}{2\pi} \cdot 2\pi i \cdot \sum_{\Im (z_{k})  > 0}\Res (f, z_{k})
 \end{equation*}
 Il denominatore si annulla in
 \begin{equation*}
@@ -7045,7 +7045,7 @@ calcoliamo
 \end{align*}
 Per le $x > 0$
 \begin{align*}
-u(x) & = i\cdot \sum_{\Im (z_{k})  > 0}\Res (f, z_{k})\\
+u(x) & = i \cdot \sum_{\Im (z_{k})  > 0}\Res (f, z_{k})\\
  & = \frac{e^{- x}}{4}\left\{\frac{3 + i}{2} e^{ix} + \frac{3 - i}{2} e^{- ix}\right\}\\
  & = \frac{e^{- x}}{4}\left\{3\frac{e^{ix} + e^{- ix}}{2} - \frac{e^{ix} - e^{- ix}}{2i}\right\}\\
  & = \frac{e^{- x}}{4}(3\cos x - \sin x)
@@ -7148,7 +7148,7 @@ e^{- | x|}\sinh 1, & | x| \geq 1
 \implies \ \ sU(s) - 1 + 2U(s) & = 2U(s) \cdot \Lc\{\sin tH(t)\} + 3\Lc\{\cos t\}\\
 sU - 1 + 2U & = U\frac{2}{s^{2} + 1} + 3\frac{s}{s^{2} + 1}\\
 U\left(s + 2 - \frac{2}{s^{2} + 1}\right) & = 3\frac{s}{s^{2} + 1} + 1\\
-U\cdot \frac{(s + 2)\left(s^{2} + 1\right) - 2}{\cancel{s^{2} + 1}} & = \frac{s^{2} + 3s + 1}{\cancel{s^{2} + 1}}\\
+U \cdot \frac{(s + 2)\left(s^{2} + 1\right) - 2}{\cancel{s^{2} + 1}} & = \frac{s^{2} + 3s + 1}{\cancel{s^{2} + 1}}\\
 U(s) & = \frac{s^{2} + 3s + 1}{s^{3} + 2s^{2} + s} = \frac{s^{2} + 3s + 1}{s(s + 1)^{2}} = \\
  & = \frac{A}{s} + \frac{Bs + C}{(s + 1)^{2}} = \frac{A(s + 1)^{2} + (Bs + C) s}{s(s + 1)^{2}}\\
  & \\
@@ -7169,7 +7169,7 @@ Trasformiamo
 \begin{align*}
 4\hat{u} - \frac{16\xi^{2}}{1 + \xi^{2}}\hat{u} & = - \frac{d^{2}}{d\xi^{2}}\frac{2}{1 + \xi^{2}}\\
 \hat{u} \cdot \frac{4 - 12\xi^{2}}{1 + \xi^{2}} & = - \frac{d}{d\xi}\left[\frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\right] = - \frac{d}{d\xi}\left[\frac{- 4\xi}{\left(1 + \xi^{2}\right)^{2}}\right]\\
- & = - \frac{- 4\cdot \left(1 + \xi^{2}\right)^{2} + 4\xi \cdot 2\left(1 + \xi^{2}\right) 2\xi}{\left(1 + \xi^{2}\right)^{4}} = \frac{4 - 12\xi^{2}}{\left(1 + \xi^{2}\right)^{3}}
+ & = - \frac{- 4 \cdot \left(1 + \xi^{2}\right)^{2} + 4\xi \cdot 2\left(1 + \xi^{2}\right) 2\xi}{\left(1 + \xi^{2}\right)^{4}} = \frac{4 - 12\xi^{2}}{\left(1 + \xi^{2}\right)^{3}}
 \end{align*}
 quindi
 \begin{equation*}
@@ -7181,10 +7181,10 @@ u(x) = \frac{1}{2\pi}\int_{\RR} e^{ix\xi}\frac{1}{\left(1 + \xi^{2}\right)^{2}} 
 \end{equation*}
 Per $x > 0$, usando il lemma di Jordan
 \begin{align*}
-u(x) & = \frac{1}{\cancel{2\pi}} \cdot \cancel{2\pi} i\cdot \Res \left\{\frac{e^{ixz}}{\left(1 + z^{2}\right)^{2}}, z = i\right\}\\
- & = i\cdot \frac{d}{dz}\left. \left[\cancel{(z - i)^{2}} \cdot \frac{e^{ixz}}{(z + i)^{2}\cancel{(z - i)^{2}}}\right]\right|_{z = i}\\
- & = i\cdot \left. \frac{ixe^{ixz}(z + i)^{2} - e^{ixz} 2(z + i)}{(z + i)^{4}}\right|_{z = i}\\
- & = i\cdot \frac{1}{16} e^{- x}(- 4ix - 4i)\\
+u(x) & = \frac{1}{\cancel{2\pi}} \cdot \cancel{2\pi} i \cdot \Res \left\{\frac{e^{ixz}}{\left(1 + z^{2}\right)^{2}}, z = i\right\}\\
+ & = i \cdot \frac{d}{dz}\left. \left[\cancel{(z - i)^{2}} \cdot \frac{e^{ixz}}{(z + i)^{2}\cancel{(z - i)^{2}}}\right]\right|_{z = i}\\
+ & = i \cdot \left. \frac{ixe^{ixz}(z + i)^{2} - e^{ixz} 2(z + i)}{(z + i)^{4}}\right|_{z = i}\\
+ & = i \cdot \frac{1}{16} e^{- x}(- 4ix - 4i)\\
  & = \frac{1}{4} \ e^{- x}(x + 1)
 \end{align*}
 Per $x\in \RR $
@@ -7207,9 +7207,9 @@ quindi la trasformata vale
 \begin{equation*}
 \hat{u}(\xi) = Ce^{- \int \frac{2 - \xi^{2}}{- 2\xi} d\xi} = C\xi e^{- \frac{\xi^{2}}{4}}
 \end{equation*}
-$\forall C$, $\hat{u}$ dispari allora $C = D\cdot i, \ D\in \RR $
+$\forall C$, $\hat{u}$ dispari allora $C = D \cdot i, \ D\in \RR $
 \begin{equation*}
-\ \hat{u}(\xi) = D\cdot i\xi e^{- \frac{\xi^{2}}{4}} \ \ \implies \ \ u(x) = D\cdot \frac{d}{dx}\left(e^{- x^{2}}\right) = K\cdot xe^{- x^{2}}
+\ \hat{u}(\xi) = D \cdot i\xi e^{- \frac{\xi^{2}}{4}} \ \ \implies \ \ u(x) = D \cdot \frac{d}{dx}\left(e^{- x^{2}}\right) = K \cdot xe^{- x^{2}}
 \end{equation*}
 \chapter{Esercitazione 10 - Potrich}
 \ParteEsercizi
@@ -7288,7 +7288,7 @@ Otteniamo
 \begin{align*}
 \cancel{- 2i\xi \hat{u}} - i\xi^{2}\hat{u} ' + \cancel{2i\xi \hat{u}} - i\hat{u} ' & = i\frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
 - \xi^{2}\hat{u} ' - \hat{u} ' & = \frac{d}{d\xi}\frac{2}{1 + \xi^{2}}\\
-\hat{u} '\left(1 + \xi^{2}\right) & = - \frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = - \frac{- 2\cdot 2\xi}{\left(1 + \xi^{2}\right)^{2}} = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}
+\hat{u} '\left(1 + \xi^{2}\right) & = - \frac{d}{d\xi}\frac{2}{1 + \xi^{2}} = - \frac{- 2 \cdot 2\xi}{\left(1 + \xi^{2}\right)^{2}} = \frac{4\xi}{\left(1 + \xi^{2}\right)^{2}}
 \end{align*}
 dato che $1 + \xi^{2} \neq 0$
 \begin{equation*}
@@ -7306,7 +7306,7 @@ u(x) = \frac{1}{2\pi}\int_{\RR} e^{i\xi x}\hat{u}(\xi) d\xi = \frac{1}{2\pi}\int
 \end{equation*}
 applico il teorema dei residui e il Lemma di Jordan sulla semicirconferenza superiore
 \begin{equation*}
-= \frac{1}{2\pi}\int_{\RR} e^{i\xi x}\left[ - \frac{1}{\left(1 + \xi^{2}\right)^{2}}\right] d\xi = \frac{1}{2\pi} \cdot 2\pi i\cdot \Res \left(- \frac{e^{izx}}{\left(1 + z^{2}\right)^{2}}, z = i\right) =
+= \frac{1}{2\pi}\int_{\RR} e^{i\xi x}\left[ - \frac{1}{\left(1 + \xi^{2}\right)^{2}}\right] d\xi = \frac{1}{2\pi} \cdot 2\pi i \cdot \Res \left(- \frac{e^{izx}}{\left(1 + z^{2}\right)^{2}}, z = i\right) =
 \end{equation*}
 è un polo del secondo ordine
 \begin{equation*}
@@ -7501,7 +7501,7 @@ antitrasformiamo
 \end{align*}
 Sostituiamo nell'equazione
 \begin{align*}
-sY(s) - 1 & = \frac{1}{s} + \frac{1}{s^{2}} + 8\cdot \frac{2}{s^{3}} \cdot Y(s)\\
+sY(s) - 1 & = \frac{1}{s} + \frac{1}{s^{2}} + 8 \cdot \frac{2}{s^{3}} \cdot Y(s)\\
 \left(s - \frac{16}{s^{3}}\right) Y(s) & = \frac{1}{s} + \frac{1}{s^{2}} + 1\\
 \left(\frac{s^{4} - 16}{s^{3}}\right) Y(s) & = \frac{s + 1 + s^{2}}{s^{2}}\\
 \left(\frac{\left(s^{2} + 4\right)\left(s^{2} - 4\right)}{s}\right) Y(s) & = s + 1 + s^{2}\\

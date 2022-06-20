@@ -28,11 +28,11 @@ f(z) = u(x, y) + iv(x, y)
 \end{equation*}
 Il teorema sulla derivata direzionale si può estendere ai numeri complessi
 \begin{equation*}
-\lim_{h\rightarrow 0}\frac{f(x + hv) - f(x)}{h} = v\cdot \nabla f(x) \ \ \ \ | v| = 1, v\in \CC, h\in \RR
+\lim_{h\rightarrow 0}\frac{f(x + hv) - f(x)}{h} = v \cdot \nabla f(x) \ \ \ \ | v| = 1, v\in \CC, h\in \RR
 \end{equation*}
 ovvero
 \begin{equation*}
-\partial_{v} f(z) = v\cdot f'(z)
+\partial_{v} f(z) = v \cdot f'(z)
 \end{equation*}
 Possiamo considerare per esempio due direzioni
 \begin{equation*}
@@ -169,7 +169,7 @@ Se una funzione è differenziabile, non è detto che esista automaticamente un'e
 
 Notiamo che in $\CC$ si può risolvere $\sin z = 2$ con le formule di Eulero. Una peculiarità da notare è il modo in cui il logaritmo viene gestito, come conseguenza importante del fatto che
 \begin{equation*}
-e^{z} = e^{z + 2\pi i\cdot k}, \ \ k\in \ZZ
+e^{z} = e^{z + 2\pi i \cdot k}, \ \ k\in \ZZ
 \end{equation*}
 Consideriamo quindi
 \begin{equation*}
@@ -177,11 +177,11 @@ e^{z} = w, \ \ w\neq 0, w\in \CC
 \end{equation*}
 allora
 \begin{equation*}
-e^{z} = w\ \ \implies \ \ e^{z + 2\pi i\cdot k} = | w| e^{i\arg w} \ \ \implies \ \ \log e^{z + 2\pi i\cdot k} = \log| w| e^{i\arg w}
+e^{z} = w\ \ \implies \ \ e^{z + 2\pi i \cdot k} = | w| e^{i\arg w} \ \ \implies \ \ \log e^{z + 2\pi i \cdot k} = \log| w| e^{i\arg w}
 \end{equation*}
 da cui uguagliando le due parti otteniamo la formulazione del logaritmo complesso
 \begin{equation*}
-\boxed{z = \log_{\CC} w = \ln| w| + i\arg w + 2\pi i\cdot k, \ \ k\in \ZZ}
+\boxed{z = \log_{\CC} w = \ln| w| + i\arg w + 2\pi i \cdot k, \ \ k\in \ZZ}
 \end{equation*}
 dove $\log_{\CC}$ indica il logaritmo complesso, mentre $\ln$ è il consueto logaritmo.
 
@@ -263,7 +263,7 @@ Poniamo $w = z + re^{i\vartheta}, r > 0, \vartheta \in [0, 2\pi]$, da cui $dw = 
 \end{equation*}
 ma per continuità possiamo far tendere $r\rightarrow 0$
 \begin{gather*}
-\int_{\gamma}\frac{f(w)}{w - z} dw\xrightarrow{r\rightarrow 0} if(z)\int^{2\pi}_{0} d\vartheta = 2\pi i\cdot f(z)
+\int_{\gamma}\frac{f(w)}{w - z} dw\xrightarrow{r\rightarrow 0} if(z)\int^{2\pi}_{0} d\vartheta = 2\pi i \cdot f(z)
 \end{gather*}
 \end{proof}
 
@@ -546,7 +546,7 @@ Il seguente teorema semplifica tantissimi calcoli di integrali, anche reali.
 [dei Residui]
 Sia $A\subset \CC$ aperto, $f\in H(A\setminus \{z_{1}, \dotsc, z_{n}\} \cap C^{0}(\overline{A} \setminus \{z_{1}, \dotsc, z_{n}\})$. Allora
 \begin{equation*}
-\boxed{\int_{\gamma} f(z) dz = 2\pi i\cdot \sum\limits^{n}_{j = 1}\Res (f, z_{j})}
+\boxed{\int_{\gamma} f(z) dz = 2\pi i \cdot \sum\limits^{n}_{j = 1}\Res (f, z_{j})}
 \end{equation*}
 \end{thm}
 \begin{defn}
@@ -720,7 +720,7 @@ Uno spazio normato si dice di Banach se è completo.
 \end{defn}
 \begin{defn}
 [Prodotto scalare]
-Il prodotto scalare è un'applicazione $(\cdot, \cdot) : X\times X\rightarrow \CC$ tale che
+Il prodotto scalare è un'applicazione $( \cdot, \cdot) : X\times X\rightarrow \CC$ tale che
 \begin{itemize}
 \item $(x, x) = 0\iff x = 0$
 \item $(x, x) \geq 0, \forall x\in X$
@@ -1451,7 +1451,7 @@ Per il test di Weierstrass vale la seguente relazione che ci permette di stabili
 Sia $f(x) = | x| $ nell'intervallo $[ - \pi, \pi]$ estesa con periodicità a tutto $\RR$, calcoliamo lo sviluppo di Fourier.
 \begin{align*}
 a_{n} & = \frac{1}{\pi}\int^{\pi}_{- \pi}| x| \cos(nx) dx = \frac{2}{\pi}\int^{\pi}_{0} x\cos(nx) dx\\
- & = \frac{2}{\pi}\left\{\cancel{x\cdot \left. \frac{\sin(nx)}{n}\right|^{\pi}_{0}} - \int^{\pi}_{0}\frac{\sin(nx)}{n} dx\right\}\\
+ & = \frac{2}{\pi}\left\{\cancel{x \cdot \left. \frac{\sin(nx)}{n}\right|^{\pi}_{0}} - \int^{\pi}_{0}\frac{\sin(nx)}{n} dx\right\}\\
  & = \frac{2}{\pi}\left\{\left. \frac{\cos(nx)}{n^{2}}\right|^{\pi}_{0}\right\} = \frac{2}{\pi n^{2}}\left[(- 1)^{n} - 1\right]\\
  & \\
 b_{n} & = \frac{1}{\pi}\int^{\pi}_{- \pi}| x| \sin(nx) dx = 0\\
