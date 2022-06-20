@@ -45,25 +45,30 @@
 
 
 \chapter{Esercitazione 1 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Risolvere l'equazione
 \begin{equation*}
 \sin z = 2
 \end{equation*}
+
 \Esercizio{}
 
 Scrivere la serie di potenze di
 \begin{equation*}
 f(z) = \frac{1}{z^{2} - 3z + 2}
 \end{equation*}
+
 \Esercizio{}
 
 Scrivere la serie di potenze di
 \begin{equation*}
 f(z) = \frac{e^{z}}{1 + 2z}
 \end{equation*}
+
 \Esercizio{}
 
 La funzione
@@ -71,26 +76,32 @@ La funzione
 u(x, y) = y^{3} - 3x^{2} y
 \end{equation*}
 è armonica? Qual è la sua armonica coniugata?
+
 \Esercizio{}
 
 Calcolare $\int\nolimits_{\gamma_{1}} f(z)dz$ con
 \begin{equation*}
 f(z) = \overline{z} \ \ \ \ \gamma_{1} = \left(t, it^{2}\right) \ \ \ \ t\in [0, 1]
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare $\int\nolimits_{\gamma_{1}} f(z)dz$ con
 \begin{equation*}
 f(z) = \overline{z} \ \ \ \ \gamma_{2} = (t, it)\ \ \ \
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare $\int_{\gamma_{1}} g(z)dz$ e $\int_{\gamma_{2}} g(z)dz$ con
 \begin{equation*}
 g(z) = z^{2} \ \ \ \ \gamma_{1} = \left(t, it^{2}\right) \ \ \ \ \gamma_{2} = (t, it)\ \ \ \ t\in [0, 1]
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
+
 \begin{thm}
 [Formule di Eulero] Il seno e il coseno complessi possono essere espressi come
 \begin{equation*}
@@ -124,7 +135,9 @@ Uguagliando l'argomento abbiamo
 e^{ix} = e^{i\pi /2} \ \ \implies \ \ x = \frac{\pi}{2} + 2k\pi
 \end{equation*}
 L'equazione ha quindi \textit{infinite} soluzioni, date da infinite coppie di punti disposti su due rette parallele.
+
 \Soluzione
+
 \begin{defn}
 La serie centra nel punto $z_{0}$ è data da
 \begin{equation*}
@@ -194,7 +207,9 @@ pertanto
 f(z) = \sum^{\infty}_{n = 0}\left(1 - \frac{1}{2^{n + 1}}\right) z^{n}
 \end{equation*}
 Il raggio di convergenza è l'intersezione tra $|z| < 1$ e $|z| < 2$, ovvero $|z| < 1$.
+
 \Soluzione
+
 \begin{equation*}
 f(z) = \frac{e^{z}}{1 + 2z} = e^{z} \cdot \frac{1}{1 - (- 2z)} = (\star)
 \end{equation*}
@@ -206,7 +221,9 @@ In alternativa, sfruttando Mertens
 \begin{equation*}
 f(z) = \frac{e^{z}}{1 + 2z} = \sum^{\infty}_{n = 0}\frac{z^{n}}{n!} \cdot \sum^{\infty}_{n = 0} (- 2z)^{n} = \sum^{\infty}_{n, m = 0}\frac{z^{n}}{n!} (- 2)^{m} z^{m}
 \end{equation*}
+
 \Soluzione
+
 \begin{defn}
 Una funzione si dice \textbf{armonica} se la somma delle sue derivate seconda è pari a zero.
 \end{defn}
@@ -245,6 +262,7 @@ f(z) & = f(x, y)\\
  & = \left(y^{3} - 3x^{2} y\right) + i\left(x^{3} - 3xy^{2}\right)\\
  & = iz^{3}
 \end{align*}
+
 \Soluzione
 
 È noto che
@@ -258,6 +276,7 @@ Pertanto
  & = \left[\frac{t^{2}}{2} + i\frac{t^{3}}{3} + \frac{t^{4}}{2}\right]^{1}_{0}\\
  & = 1 + \frac{i}{3}
 \end{align*}
+
 \Soluzione
 
 È noto che
@@ -272,6 +291,7 @@ Pertanto
 \int_{\gamma_{2}} f(z)dz = \int^{1}_{0} (t - it)(1 + i)dt = \int^{1}_{0} 2tdt = 1
 \end{equation*}
 Notiamo che l'integrale dipende dal percorso scelto, essendo $\overline{z}$ una funzione \textit{non} olomorfa.
+
 \Soluzione
 
 Osserviamo che
@@ -287,7 +307,9 @@ Pertanto
 \end{align*}
 \textit{Esercizio:} svolgere l'integrale $\gamma_{2}$, spiegando perché ora il risultato sia uguale.
 \chapter{Esercitazione 1 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Determinare in quali punti del piano complesso la funzione
@@ -295,6 +317,7 @@ Determinare in quali punti del piano complesso la funzione
 f(z) = z^{2}\left| z\right|^{2} e^{i\overline{z}^{2}}
 \end{equation*}
 è derivabile in senso complesso.
+
 \Esercizio{}
 
 Mostrare che
@@ -302,12 +325,14 @@ Mostrare che
 u\left(x, y\right) = 2x - 2xy
 \end{equation*}
 è armonica e trovare la sua armonica coniugata.
+
 \Esercizio{}
 
 Sia $\gamma (t) = t + it^{2}, t\in \left[ - 1, 0\right]$. Calcolare
 \begin{equation*}
 \int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare
@@ -315,12 +340,14 @@ Calcolare
 \int\nolimits_{\gamma}\left(\overline{z}\right)^{2} dz
 \end{equation*}
 dove $\gamma $ è la circonferenza centrata in $z = 1$ e raggio unitario percorsa in senso antiorario.
+
 \Esercizio{}
 
 Risolvere
 \begin{equation*}
 \sin z = 3
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare la somma della serie
@@ -328,8 +355,11 @@ Calcolare la somma della serie
 \sum\limits^{\infty}_{n = 1}\left(3n + 7\right) z^{n}
 \end{equation*}
 all'interno del suo disco di convergenza.
+
 \ParteSoluzioni
+
 \Soluzione
+
 \begin{defn}
 Siano $\Omega \subseteq \CC $, $f:\Omega \rightarrow \CC $ è derivabile, in senso complesso, in $z_{0}$ se $\exists $ finito
 \begin{equation*}
@@ -428,7 +458,9 @@ Le cui soluzioni sono
 x_{2} = \frac{1}{2} \ \ \rightarrow \ \ y_{2} = - \frac{1}{2} \ \ \rightarrow \ \ z_{2} = \frac{1}{2} - \frac{i}{2}\\
 x_{3} = - \frac{1}{2} \ \ \rightarrow \ \ y_{3} = \frac{1}{2} \ \ \rightarrow \ \ z_{3} = - \frac{1}{2} + \frac{i}{2}
 \end{gather*}
+
 \Soluzione
+
 \begin{defn}
 Le condizioni che verificano l'armonicità di $u$ sono
 \begin{equation}
@@ -453,7 +485,9 @@ u_{y} = - v_{x}
 - 2x = -v_{x}
 \end{cases} \ \ \implies \ \ v\left(x, y\right) = x^{2} - y^{2} + 2y + c, \ \ c\in \RR
 \end{equation*}
+
 \Soluzione
+
 \begin{defn}
 Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua in $\Omega $, $\gamma :\left[ a, b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
 \begin{equation*}
@@ -513,6 +547,7 @@ La funzione $H(z) = \frac{\left(z + 1\right)^{8}}{8}$ è tale che $H'(z) = h(z)$
 \begin{equation*}
 \int\nolimits_{\gamma} f(z) dz = \int\nolimits_{\gamma}\overline{z} dz + \underbrace{H\left(\gamma (0)\right) - H\left(\gamma (1)\right)}_{\int\nolimits_{\gamma}\left(z + 1\right)^{7} dz} = \dotsc
 \end{equation*}
+
 \Soluzione
 
 Scriviamo una possibile parametrizzazione della curva
@@ -528,6 +563,7 @@ e calcoliamo
  & = \left[ e^{it} + 2it - e^{it}\right]^{2\pi}_{0} = 4\pi i
 \end{align*}
 \textit{Domanda:} $f(z) = \left(\overline{z}\right)^{2}$ ammette primitiva in un qualsiasi dominio $D$ contenente $\gamma $? No, se per assurdo la ammettesse, allora ogni integrale lungo qualsiasi curva chiusa sarebbe nullo.
+
 \Soluzione
 
 Ragioniamo come segue
@@ -549,6 +585,7 @@ Allora
 z_{k} = - i\ln\left| 3\pm 2\sqrt{2}\right| + \left(\frac{\pi}{2} + 2k\pi \right), \ \ \ \ k\in \ZZ
 \end{equation*}
 Che può essere facilmente rappresentato nel piano di Gauss come un insieme di punti.
+
 \Soluzione
 
 Utilizziamo il criterio del rapporto per determinare $R$
@@ -567,44 +604,53 @@ La serie converge assolutamente $\forall z\in \CC :\left| z\right| < 1$ e non co
  & = \frac{3z}{\left(1 - z\right)^{2}} + \frac{7}{1 - z} - 7
 \end{align*}
 \chapter{Esercitazione 2 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Scrivere la serie di potenze di
 \begin{equation*}
 f(z) = \frac{1}{1 - z} - \frac{1}{2 - z}
 \end{equation*}
+
 \Esercizio{}
 
 Scrivere la serie di potenze di
 \begin{equation*}
 f(z) = z^{3}\sin\frac{1}{z}
 \end{equation*}
+
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
 f(z) = \frac{z^{2}}{\sin z}
 \end{equation*}
+
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
 f(z) = \frac{z^{2}}{\cos^{2}\left(\frac{1}{z}\right)}
 \end{equation*}
+
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
 f(z) = \frac{e^{1/z}}{1 + z^{2}}
 \end{equation*}
+
 \Esercizio{(Integrale di Fresnel)}
 
 Calcolare
 \begin{equation*}
 \int^{+ \infty}_{0}\cos x^{2} dx
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Osserviamo che ha singolarità in $1$ e $2$, che sono due poli di ordine $1$.
@@ -624,7 +670,9 @@ Le due serie convergono per
 \begin{equation*}
 1 < \left| z\right| < 2
 \end{equation*}
+
 \Soluzione
+
 \begin{align*}
 f(z) & = z^{3}\sin\frac{1}{z}\\
  & = z^{3}\sum\limits^{\infty}_{n = 0}\frac{\left(- 1\right)^{n}}{\left(2n + 1\right) !}\left(\frac{1}{z}\right)^{2n + 1}\\
@@ -632,6 +680,7 @@ f(z) & = z^{3}\sin\frac{1}{z}\\
  & = z^{2} - \frac{1}{3!} + \frac{1}{5!z^{2}}
 \end{align*}
 Ha singolarità in $z = 0$ di tipo essenziale (ci sono infinite potenze negative nello sviluppo). Il raggio di convergenza è $R = +\infty $. Il residuo nell'origine è $0$ (è il coefficiente $a_{- 1}$ dello sviluppo). All'infinito la funzione si comporta come $z^{2}$. Il punto all'infinito è un polo di ordine $2$. Lo sviluppo vale sia all'infinito che nell'origine.
+
 \Soluzione
 
 I punti singolari sono
@@ -647,6 +696,7 @@ In particolare
 \end{equation*}
 \item $z_{\infty}$ è una singolarità non isolata perché non esiste un raggio che contiene tutti i punti singolari. Andando all'infinito avremo infiniti punti singolari.
 \end{itemize}
+
 \Soluzione
 
 I punti di singolarità sono dati da
@@ -654,6 +704,7 @@ I punti di singolarità sono dati da
 \frac{1}{z_{k}} = \frac{\pi}{2} + k\pi \ \ \ \ k\in \ZZ \ \ \ \ \implies \ \ \ \ z_{k} = \frac{1}{\pi \left(\frac{1}{2} + k\right)}
 \end{equation*}
 Sono poli del II ordine perché il coseno qui si annulla con ordine $2$. In $z = 0$ è una singolarità non isolata dato che gli $z_{k}$ si addensano intorno a $0$. Il punto $z_{\infty}$ è un polo di ordine II perché per $z\rightarrow z_{\infty}, f(z) \sim z^{2}$.
+
 \Soluzione
 
 Il denominatore si annulla in $z = \pm i$, con un polo di ordine $1$. Ricordando
@@ -668,6 +719,7 @@ che converge per $\left| z\right| < 1$. Il residuo vale
 \begin{equation*}
 a_{- 1} = \sum\limits^{\infty}_{m = 0, n = 2m + 1}\frac{\left(- 1\right)^{m}}{n!} = \sum\limits^{\infty}_{m = 0}\frac{\left(- 1\right)^{m}}{\left(2m + 1\right) !} = \sin 1
 \end{equation*}
+
 \Soluzione
 
 Consideriamo $f(z) = e^{iz^{2}}$ e $\gamma = \gamma_{1} + \gamma_{2} + \gamma_{3}$
@@ -782,19 +834,23 @@ che sarà quindi una quantità complessa, ma l'integrale richiesto è proprio la
 \int\nolimits^{+ \infty}_{0}\cos\left(x^{2}\right) dx = \Re \left(\int\nolimits^{+ \infty}_{0} e^{ix^{2}} dz\right) = \Re \left(e^{i\frac{\pi}{4}}\frac{\sqrt{\pi}}{2}\right) = \cos\left(\frac{\pi}{4}\right)\frac{\sqrt{\pi}}{2} = \sqrt{\frac{\pi}{8}}
 \end{equation*}
 \chapter{Esercitazione 2 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{(Integrali di Fresnel)}
 
 Calcolare
 \begin{equation*}
 \int\nolimits^{+ \infty}_{0}\cos t^{2} dt\ \ \ \ \ \ \ \ \int\nolimits^{+ \infty}_{0}\sin t^{2} dt
 \end{equation*}
+
 \Esercizio{}
 
 Determinare l'anello di convergenza della seguente serie di Laurent
 \begin{equation*}
 f(z) = \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare lo sviluppo di Laurent di
@@ -805,24 +861,28 @@ in
 \begin{equation*}
 A = \left\{z\in \CC :0 < \left| z\right| < 2\right\} \ \ \ \ \ \ \ \ B = \left\{z\in \CC :\left| z - 2i\right| > 2\right\}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le singolarità e i residui.
 \begin{equation*}
 F(z) = \frac{1}{z - z^{3}} = \frac{1}{z\left(1 - z^{2}\right)} = \frac{1}{z\left(1 + z\right)\left(1 - z\right)}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le singolarità e i residui.
 \begin{equation*}
 f(z) = \frac{z^{5}}{\left(1 + iz\right)^{2}}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le singolarità e i residui.
 \begin{equation*}
 f(z) = \frac{e^{\frac{1}{z - 1}}}{z^{2}\left(z^{2} + 4\right)}
 \end{equation*}
+
 \Esercizio{}
 
 Sia
@@ -835,7 +895,9 @@ f(z) = \frac{e^{\frac{1}{z - 1}}}{z - 2}
 \item Calcolare i residui di $f$
 \item Calcolare $\int_{\gamma} f(z) dz$ dove $\gamma :\left| z\right| = 4$ percorsa in senso antiorario
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Si tratta di due integrali che convergono in senso improprio. Dimostriamolo:
@@ -1024,7 +1086,9 @@ ma quindi
 \int\nolimits^{+ \infty}_{0}\cos t^{2} dt & = \Re (J) = \frac{\sqrt{2\pi}}{4}\\
 \int\nolimits^{+ \infty}_{0}\sin t^{2} dt & = \Im (J) = \frac{\sqrt{2\pi}}{4}
 \end{align*}
+
 \Soluzione
+
 \begin{align*}
 f(z) = & \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}} = \sum_{n < 0}\frac{z^{2n}}{9^{\left| n\right|}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}\\
  & = \sum_{n > 0}\frac{z^{- 2n}}{9^{n}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}\\
@@ -1043,6 +1107,7 @@ La seconda serie converge se
 ossia $\left| z\right|^{2} < 9$, cioè $\left| z\right| < 3$.
 
 Allora l'anello di convergenza è $A = \left\{z\in \CC :\frac{1}{3} < \left| z\right| < 3\right\}$.
+
 \Soluzione
 
 Possiamo vedere la $f$ come
@@ -1076,7 +1141,9 @@ f(z) & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \sum\limits^{\infty}_{n = 0}
  & = - \frac{i}{2}\left\{\frac{1}{z - 2i}\sum\limits^{\infty}_{n = 1}\left(\frac{- 2i}{z - 2i}\right)^{n}\right\}\\
  & = - \frac{i}{2}\left\{\sum\limits^{\infty}_{n = 1}\frac{\left(- 2i\right)^{n}}{\left(z - 2i\right)^{n + 1}}\right\}
 \end{align*}
+
 \Soluzione
+
 \begin{thm}
 Sia $f\in \Hc \left(D\left(z_{0}, R\right) \setminus \left\{z_{0}\right\}\right)$, cioè $z_{0}$ è una \textbf{singolarità isolata} per $f$. Allora localmente
 \begin{equation*}
@@ -1237,6 +1304,7 @@ Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\Res \left(f, \inft
 f(z) = \sum\limits^{- 2}_{n = -\infty} a_{n} z^{n} \ \ \implies \ \ \Res \left(f, \infty \right) = - a_{- 1} = 0
 \end{equation*}
 \end{thm}
+
 \Soluzione
 
 Le singolarità isolate di $f$ sono $i, \infty $.
@@ -1249,6 +1317,7 @@ $f(z) \sim - z^{3}$ per $z\rightarrow + \infty $ quindi $\infty $ è un $3$ - po
 \begin{equation*}
 \Res \left(f, \infty \right) = - \Res \left(f, i\right) = 5
 \end{equation*}
+
 \Soluzione
 
 Le singolarità isolate di $f$ sono $1, 0, \pm 2i, \infty $.
@@ -1270,7 +1339,9 @@ Infine
 \begin{equation*}
 \Res \left(f, 1\right) = - \sum \Res \left(f, \dotsc \right) = \frac{1}{4e} - \frac{\sin\left(\frac{2}{5}\right)}{8e^{\frac{1}{5}}}
 \end{equation*}
+
 \Soluzione
+
 \begin{enumerate}
 \item Le singolarità di $f$ sono $1, 2, \infty $.
 
@@ -1314,38 +1385,46 @@ $\Res \left(f, \infty \right) = - 1$
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 3 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Calcolare il seguente integrale
 \begin{equation*}
 \int_{\RR}\frac{1}{x^{4} + 4a^{4}} dx
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il seguente integrale
 \begin{equation*}
 \int_{\RR}\frac{e^{- i\lambda x}}{x^{6} + 64} dx\ \ \ \ \forall \lambda \in \RR
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il seguente integrale
 \begin{equation*}
 \int^{\pi}_{0}\frac{1}{a + b\cos \vartheta} d\vartheta \ \ \ \ 0 < b < a
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il seguente integrale, per i valori di $\alpha $ in cui converge
 \begin{equation*}
 \int_{\RR}\frac{e^{\alpha x}}{1 + e^{x}} dx\ \ \ \ \alpha \in \RR
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il seguente integrale
 \begin{equation*}
 \int^{+ \infty}_{0}\frac{\cos\left(\alpha x\right)}{x^{2} + \beta^{2}} dx\ \ \ \ \alpha \neq 0, \beta \neq 0
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Per cominciare pensiamo il nostro integrale come
@@ -1441,7 +1520,9 @@ Pertanto il nostro integrale iniziale vale
 \begin{equation*}
 \int_{\RR}\frac{1}{x^{4} + 4a^{4}} dx = \frac{\pi}{4a^{3}}
 \end{equation*}
+
 \Soluzione
+
 \begin{thm}
 Lemmi di Jordan. Considerando
 \begin{equation*}
@@ -1533,6 +1614,7 @@ Allora
  & = \frac{\pi}{96} e^{- \lambda}\left[\sqrt{3}\sin\left(\lambda \sqrt{3}\right) + \cos\left(\lambda \sqrt{3}\right) + e^{- \lambda}\right]
 \end{align*}
 Abbiamo appena calcolato la nostra prima trasformata di Fourier. Fare per casa i casi $\lambda = 0, \lambda < 0$.
+
 \Soluzione
 
 Questa è un'altra tipologia di integrali, in cui $R$ è una funzione razionale, con seni e coseni, e le loro potenze
@@ -1580,6 +1662,7 @@ sostituiamo nel nostro integrale
 2\pi \cdot \Res \left(f, \overline{z}\right) = \cancel{2} \pi \cdot \frac{1}{\cancel{2}\sqrt{a^{2} - b^{2}}} = \frac{\pi}{\sqrt{a^{2} - b^{2}}}
 \end{equation*}
 abbiamo calcolato un integrale facendo una derivata!
+
 \Soluzione
 
 Per il criterio del confronto asintotico, per $x\rightarrow + \infty $
@@ -1679,7 +1762,9 @@ in conclusione
 \int_{\RR} f(x) dx = \frac{2\pi ie^{i\alpha \pi}}{e^{i2\pi \alpha} - 1} = 2\pi i\frac{e^{i\alpha \pi}}{e^{2i\alpha \pi} - 1} \cdot \frac{e^{- i\alpha \pi}}{e^{- i\alpha \pi}} = 2\pi i\frac{1}{e^{i\alpha \pi} - e^{- i\alpha \pi}} = \frac{\pi}{\sin\left(\alpha \pi \right)}
 \end{equation*}
 \chapter{Esercitazione 3 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Calcolare, al variare di $R > 0$
@@ -1691,6 +1776,7 @@ dove
 \gamma_{R} :\left| z - 1 - i\right| = R
 \end{equation*}
 percorsa positivamente.
+
 \Esercizio{}
 
 Vediamo alcuni integrali reali con metodi di analisi complessa.
@@ -1709,6 +1795,7 @@ Calcolare
 \begin{equation*}
 \int^{2\pi}_{0}\frac{1}{3 + \sin t} dt
 \end{equation*}
+
 \Esercizio{}
 
 Vediamo una seconda tipologia di integrali
@@ -1771,18 +1858,21 @@ Calcolare
 \begin{equation*}
 I_{\alpha, k} = \int^{+ \infty}_{- \infty}\frac{x^{k}}{\alpha^{2} + x^{2k}} dx\ \ \ \ \alpha > 0, k\in \NN
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{\sin x}{x} dx
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare
 \begin{equation*}
 \int^{+ \infty}_{- \infty}\frac{\sin\left(\pi x\right)}{\left(x - 3\right)\left(x^{2} - 2x + 2\right)} dx
 \end{equation*}
+
 \Esercizio{}
 
 Vediamo una terza tipologia di integrali
@@ -1799,7 +1889,9 @@ Calcolare
 \begin{equation*}
 \int^{+ \infty}_{- \infty}\frac{\cos x}{\cosh x} dx
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 $f\in \Hc (\CC \setminus \{0, \pm i\})$ dove $\pm i$ sono poli semplici, mentre $0$ è un polo del II ordine.
@@ -1882,7 +1974,9 @@ I_{R} = 2\pi i \cdot \left[\Res \left(f, 0\right) + \Res \left(f, i\right) + \Re
 \end{itemize}
 
 Per $R = 1, \sqrt{2}, \sqrt{5}$, $I_{R}$ non può essere calcolato perché $\gamma_{R}$ passa attraverso una singolarità
+
 \Soluzione
+
 \begin{align*}
 \int^{2\pi}_{0}\frac{1}{3 + \sin t} dt & = \int_{\left| z\right| = 1}\frac{1}{3 + \frac{z - z^{- 1}}{2i}}\frac{1}{iz} dz\\
  & = \int_{\left| z\right| = 1}\frac{2\cancel{iz}}{z^{2} + 6iz - 1}\frac{1}{\cancel{iz}} dz = 2\int_{\left| z\right| = 1}\frac{i}{z^{2} + 6iz - 1} dz
@@ -1903,7 +1997,9 @@ ricordando che è un polo semplice
 \begin{equation*}
 4\pi i \cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right) = 4\pi i\lim\limits_{z\rightarrow i\left(- 3 + 2\sqrt{2}\right)}\left[ z - i\left(- 3 + 2\sqrt{2}\right)\right] f(z) = \dotsc = \frac{\pi}{\sqrt{2}}
 \end{equation*}
+
 \Soluzione
+
 \begin{equation*}
 I_{\alpha, k} = \int^{+ \infty}_{- \infty}\frac{x^{k}}{\alpha^{2} + x^{2k}} dx\ \ \ \ \alpha > 0, k\in \NN
 \end{equation*}
@@ -1945,6 +2041,7 @@ dove è stata usata la disuguaglianza triangolare
 \end{rem}
 
 \Soluzione
+
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{\sin x}{x} dx = \frac{1}{2}\int^{+ \infty}_{- \infty}\frac{\sin x}{x} dx = \frac{1}{2}\Im (J) \ \ \ \ \ \ \ \ J = \int^{+ \infty}_{- \infty}\frac{e^{ix}}{x} dx
 \end{equation*}
@@ -1975,6 +2072,7 @@ allora
 \begin{equation*}
 0 = J - \pi i + 0\ \ \ \ \implies \ \ \ \ J = \pi i\ \ \ \ \implies \ \ \ \ I = \frac{1}{2}\Im (J) = \frac{\pi}{2}
 \end{equation*}
+
 \Soluzione
 
 Dobbiamo calcolare
@@ -2017,6 +2115,7 @@ ma l'integrale di partenza è proprio la parte immaginaria di questo integrale
 \begin{equation*}
 \int^{+ \infty}_{- \infty}\frac{\sin\left(\pi x\right)}{\left(x - 3\right)\left(x^{2} - 2x + 2\right)} dx = \Im \left[ - \frac{\pi i}{5} + \frac{\pi e^{- \pi}}{5}\left(2 + i\right)\right] = \frac{\pi}{5}\left(e^{- \pi} - 1\right)
 \end{equation*}
+
 \Soluzione
 
 Dobbiamo calcolare
@@ -2125,44 +2224,53 @@ ma l'integrale di partenza è proprio la parte reale di questo integrale
 \int^{+ \infty}_{- \infty}\frac{\cos x}{\cosh x} dx = \Re \left[\int^{+ \infty}_{- \infty}\frac{e^{it}}{\cosh t} dt\right] = \frac{\pi}{\cosh\left(\frac{\pi}{2}\right)}
 \end{equation*}
 \chapter{Esercitazione 4 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Calcolare il seguente integrale:
 \begin{equation*}
 \int^{+ \infty}_{0}\frac{\cos (\alpha x)}{x^{2} + \beta^{2}} dx\ \ \ \ \alpha, \beta > 0
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il seguente integrale:
 \begin{equation*}
 \int_{\RR}\frac{e^{ix}}{x^{3} + x^{2} + x + 1} dx
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare l'integrale della funzione polidroma:
 \begin{equation*}
 \int^{\infty}_{0}\frac{\sqrt[3]{x}}{x^{2} + 4} dx
 \end{equation*}
+
 \Esercizio{}
 
 Studiare la convergenza della seguente successione di funzioni:
 \begin{equation*}
 f_{n} (x) = \frac{\sqrt{n}}{1 + (nx)^{2}}
 \end{equation*}
+
 \Esercizio{}
 
 Studiare la convergenza della seguente successione di funzioni:
 \begin{equation*}
 f_{n} (x) = n^{\alpha} \chi_{\left(0, \frac{1}{n}\right)} (x)
 \end{equation*}
+
 \Esercizio{}
 
 Studiare la convergenza della seguente successione di funzioni:
 \begin{equation*}
 f_{n} (x) = \frac{1 - e^{- x}}{x(1 - x)^{1/n}} \chi_{(0, 1)} (x)
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Ho due vie:
@@ -2187,6 +2295,7 @@ Per $R\rightarrow + \infty $
 \begin{equation*}
 \frac{\pi}{\beta} e^{- \alpha \beta} = \int_{\gamma_{R}} = \int^{R}_{- R} + \cancel{\int_{\sigma_{R}}}\xrightarrow{R\rightarrow + \infty}\int_{\RR} f(x) dx\ \ \implies \ \ \frac{1}{2}\int_{\RR}\frac{e^{i\alpha x}}{x^{2} + \beta^{2}} dx = \frac{\pi e^{- \alpha \beta}}{2\beta}
 \end{equation*}
+
 \Soluzione
 
 C'è un asintoto verticale in $x = -1$, quindi non converge.
@@ -2281,6 +2390,7 @@ Ovvero
  & = \pi i\left(\frac{e^{- 1}}{i - 1} + \frac{e^{- i}}{2}\right)
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Siamo nella seguente situazione
@@ -2368,6 +2478,7 @@ Che possiamo riscrivere
 \begin{equation*}
 I = \frac{\frac{\pi \sqrt[3]{2}}{2}\left(\frac{\sqrt{3}}{2} + \frac{1}{2} i - i\right)}{1 - \left(- \frac{1}{2} + \frac{\sqrt{3}}{2} i\right)} = \frac{\frac{\pi \sqrt[3]{2}}{2}\left(\frac{\sqrt{3}}{2} - \frac{1}{2} i\right)}{\frac{3}{2} - \frac{\sqrt{3}}{2} i} = \frac{\frac{\pi \sqrt[3]{2}}{2}\left(\frac{\sqrt{3}}{2} - \frac{1}{2} i\right)}{\sqrt{3}\left(\frac{\sqrt{3}}{2} - \frac{1}{2} i\right)} = \frac{\pi \sqrt[3]{2}}{2\sqrt{3}}
 \end{equation*}
+
 \Soluzione
 
 Vediamo il grafico
@@ -2401,6 +2512,7 @@ dx = \frac{1}{n} dt
 \implies \ \ \Vert f_{n} - F\Vert^{p}_{L^{p}}\xrightarrow{n\rightarrow \infty} 0\ \ \iff \ \ \frac{p}{2} - 1 < 0\ \ \iff \ \ p < 2
 \end{gather*}
 Non converge in $L^{\infty}$ perché in $0$ non sono limitate.
+
 \Soluzione
 
 Si può vedere che con $\alpha = 2$
@@ -2415,6 +2527,7 @@ Studiamo la convergenza in $L^{p}$:
 \begin{equation*}
 \Vert f_{n} - F\Vert^{p}_{L^{p}} = \int^{1/n}_{0} n^{\alpha p} dx = n^{\alpha p - 1}\rightarrow 0\ \ \iff \ \ \alpha p < 1\ \ \iff \ \ \alpha < \frac{1}{p}
 \end{equation*}
+
 \Soluzione
 
 Vediamo il grafico
@@ -2447,7 +2560,9 @@ Prendiamo la più grande, $n = 2$
 \end{equation*}
 Allora possiamo scambiare limite e segno dell'integrale e dedurre che c'è convergenza in $L^{1}$.
 \chapter{Esercitazione 4 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Vediamo una quarta tipologia
@@ -2588,6 +2703,7 @@ Calcolare
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{x^{\alpha}}{1 + x^{3}} dx\ \ \ \ \alpha \in \RR,
 \end{equation*}
+
 \Esercizio{}
 
 Vediamo una quinta tipologia
@@ -2711,12 +2827,14 @@ Calcolare
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{1}{\sqrt{x}\left(1 + x\right)} dx = \int^{+ \infty}_{0}\frac{x^{- 1/2}}{\left(1 + x\right)} dx
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{1}{\left(x^{2} + 4\right)\left(x + 1\right)} dx
 \end{equation*}
+
 \Esercizio{(Spazi $L^{p}$)}
 
 Si considerino le seguenti funzioni definite su $\left(0, + \infty \right)$ nel seguente modo
@@ -2730,6 +2848,7 @@ f\ \ \ \ g\ \ \ \ f - g\ \ \ \ \frac{g}{f}
 \end{equation*}
 \item Stessa domanda in $\left(0, 1\right)$
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $B = \left\{\left(x, y\right) \in \RR^{2} :x^{2} + y^{2} \leq 1\right\}$ e sia
@@ -2740,6 +2859,7 @@ f\left(x, y\right) = \frac{1}{\sqrt{x^{2} + y^{2}}}
 \item Stabilire per quali $p \geq 1$ si ha $f\in L^{p}(B)$
 \item Stabilire per quali $q$ si ha $f\in L^{q}\left(\RR^{2} \setminus B\right)$.
 \end{enumerate}
+
 \Esercizio{}
 
 Sia
@@ -2752,6 +2872,7 @@ Rispondere ai seguenti quesiti
 \item Determinare la funzione limite $f$ in $\left(0, + \infty \right)$.
 \item Calcolare $\lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f_{n}(x) dx$
 \end{enumerate}
+
 \Esercizio{}
 
 Date le $f_{n}(x) = \arctan\left(nx\right)$ definite su $\left[ 0, + \infty \right)$.
@@ -2759,7 +2880,9 @@ Date le $f_{n}(x) = \arctan\left(nx\right)$ definite su $\left[ 0, + \infty \rig
 \item Determinare il limite puntuale $f(x)$
 \item Stabilire se $f_{n}\rightarrow f$ in $L^{p}\left(0, + \infty \right)$ per $p\in \left[ 1, + \infty \right)$.
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
 
 $f_{\alpha} \sim x^{\alpha - 3} \ \ x\rightarrow + \infty $.
@@ -2865,6 +2988,7 @@ t\in [ 0, 2\pi /3]
 \end{aligned}
 \end{equation*}
 Resta solo da calcolare il residuo.
+
 \Soluzione
 
 Devo considerare la forma $A$
@@ -2890,6 +3014,7 @@ t\in [ \varepsilon, R]
 \implies & \ \ 2I = 2\pi i \cdot \Res (f, - 1) \ \ \implies \ \ I = \pi i \cdot \Res (f, - 1)
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Siamo nel caso $B$
@@ -2912,6 +3037,7 @@ t\in \left[ \varepsilon, R\right]
 \int_{\psi} & \xrightarrow{\varepsilon \rightarrow 0^{+}} 0
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Rispondiamo al punto $1$.
@@ -2939,6 +3065,7 @@ $g$ è limitata in $(0, 1) \implies g\in L^{p}(0, 1) \ \forall p \geq 1$, inclus
 $f - g\in L^{p}(0, 1) \iff 1 \leq p < 2$ dato che so sommando due funzioni, di cui una limitata su intervallo limitato che non presenta problemi e una in $L^{p}$ per $1 \leq p < 2$.
 
 $\frac{g}{f} \in L^{p}(0, 1) \ \forall p \geq 1$, incluso $ + \infty $.
+
 \Soluzione
 
 Rispondiamo al punto $1$.
@@ -2959,7 +3086,9 @@ Rispondiamo al punto $2$.
 \iint_{\RR^{2} \setminus B}| f(x, y)|^{q} dxdy = 2\pi \int^{+ \infty}_{1}\frac{1}{\rho^{q - 1}} d\rho < + \infty \ \ \iff \ \ q - 1 > 1\\
 \iff q > 2\ \left(+ \infty \ \text{incluso}\right)
 \end{gather*}
+
 \Soluzione
+
 \begin{thm}
 [della convergenza dominata] Sia $\{f_{n}\}$ una successione di funzioni misurabili su un insieme $\Omega \subset \RR^{n}$ misurabile. Supponiamo che siano verificate le seguenti due condizioni:\footnote{È importante che la $g$ non dipenda da $n$.}
 \begin{equation*}
@@ -3019,7 +3148,9 @@ Per $n \geq 2$
 
 $\overset{\text{Dom}}{\implies}\lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f_{n}(x) dx = \int^{+ \infty}_{0}\lim\limits_{n\rightarrow + \infty} f_{n}(x) dx = 0$.
 \end{enumerate}
+
 \Soluzione
+
 \begin{defn}
 \begin{equation*}
 f_{n}\xrightarrow[n\rightarrow + \infty ]{L^{p}} f\ (p\in [ 1, + \infty)) \ \ \iff \ \ \Vert f_{n} - f\Vert^{p}_{L^{p}}\xrightarrow{n\rightarrow + \infty} 0
@@ -3059,7 +3190,9 @@ Verifichiamo le ipotesi della convergenza dominata.
 $\overset{\text{Dom}}{\implies}\lim\limits_{n\rightarrow + \infty}\Vert f_{n} - f\Vert^{p}_{L^{p}} = \lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0}\left(\arctan\left(\frac{1}{nx}\right)\right)^{p} dx = \int^{+ \infty}_{0}\lim\limits_{n\rightarrow + \infty}\left(\arctan\left(\frac{1}{nx}\right)\right)^{p} dx = 0$
 \end{enumerate}
 \chapter{Esercitazione 5 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Studiare la convergenza di
@@ -3072,12 +3205,14 @@ scegliendo $\alpha $ tale per cui:
 \item $f\in L^{p} (\RR)$
 \item $f\in L^{\infty} (\RR)$
 \end{itemize}
+
 \Esercizio{}
 
 Studiare la convergenza (ovvero limite puntuale, limite in $L^{p}$, limite in $L^{\infty}$, della seguente serie di funzioni:
 \begin{equation*}
 f_{n} (x) = \pi - 2\arctan (|x|^{n})
 \end{equation*}
+
 \Esercizio{}
 
 Analizzare la seguente serie:
@@ -3089,6 +3224,7 @@ f(x) = \sum^{\infty}_{n = 1}\frac{n + 1}{n^{4} + n}\sin (n\pi x)
 \item Che periodo ha?
 \item Si può dire qualcosa anche sulla continuità?
 \end{itemize}
+
 \Esercizio{}
 
 Data una funzione $2\pi $ - periodica
@@ -3096,6 +3232,7 @@ Data una funzione $2\pi $ - periodica
 f:[ 0, 2\pi)\rightarrow \RR \ \ \ \ f(x) = x
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
+
 \Esercizio{}
 
 Data una funzione $1$ - periodica dispari
@@ -3103,7 +3240,9 @@ Data una funzione $1$ - periodica dispari
 f:[ 0, 1]\rightarrow \RR \ \ \ \ f(x) = x - x^{2}
 \end{equation*}
 Determinare la sue serie di Fourier.
+
 \ParteSoluzioni
+
 \Soluzione
 
 Sicuramente non appartiene a $L^{\infty}$ a meno che $\alpha $ non sia negativo dato che se $\alpha $ è positivo questa funzione ha un asintoto verticale.
@@ -3135,6 +3274,7 @@ Allora
 \begin{equation*}
 f(x, y)\in L^{p} (\RR^{2})\ \ \iff \ \ \frac{1}{p} - \frac{1}{2} < \alpha < \frac{1}{p}
 \end{equation*}
+
 \Soluzione
 
 Vediamo come sono fatte le $f_{n}$.
@@ -3190,7 +3330,9 @@ h(x) =
 f_{2} (x), & |x| > 1
 \end{cases}
 \end{equation*}
+
 \Soluzione
+
 \begin{itemize}
 \item Se gli $a_{n}$ e i $b_{n}$ tendono a $0$ in maniera monotona, allora la serie converge salvo in $0, 2\pi, 4\pi \dotsc $
 \item Vale
@@ -3208,6 +3350,7 @@ Nella serie compaiono il seno ed il coseno di $2\pi nx/T$, quindi $T = 2$.
 Essendo una serie di soli seni la funzione è una funzione dispari\footnote{se fosse stata una funzione di soli coseni allora la funzione sarebbe stata pari.}.
 
 Se la deriviamo, spunta fuori un $n$, quindi va a zero come $\frac{1}{n^{2}}$, quindi anche la derivata è continua, ovvero la funzione è $C^{1}$. Non possiamo dire altro.
+
 \Soluzione
 
 Si può sviluppare in serie di Fourier perché $f\in L^{2}(0, 2\pi)$.\footnote{In alcuni libri una volta costruita la serie di Fourier si scrive
@@ -3250,6 +3393,7 @@ Applicandola alla serie che abbiamo calcolato avremo che
  & \implies \ \ \sum^{+ \infty}_{n = 1}\frac{1}{n^{2}} = \frac{\frac{8}{3} \pi^{2} - 2\pi^{2}}{4} = \frac{\pi^{2}}{6}
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Dal grafico vediamo che la sua funzione è continua.
@@ -3281,7 +3425,9 @@ In definitiva avremo, con $n = 2k + 1$
 f(x) = \sum^{+ \infty}_{n = 1}\frac{4}{n^{3} \pi^{3}} (1 - (- 1)^{n}\sin (n\pi x) = \sum^{+ \infty}_{k = 0}\frac{8}{\pi^{3} (2k + 1)^{3}}\sin (\pi (2k + 1)x)
 \end{equation*}
 \chapter{Esercitazione 5 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Data la successione di funzioni $f_{n} :[ 0, + \infty)\rightarrow \RR $
@@ -3289,6 +3435,7 @@ Data la successione di funzioni $f_{n} :[ 0, + \infty)\rightarrow \RR $
 f_{n}(x) = \sqrt{n} e^{- nx}
 \end{equation*}
 determinarne il limite puntuale e nelle norme $L^{1}, L^{2}, L^{\infty}$.
+
 \Esercizio{}
 
 Si consideri la successione di funzioni
@@ -3304,6 +3451,7 @@ $f_{n} \in L^{2}((1, + \infty))$
 \lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f_{n}(x) dx\ \ \ \ \ \ \ \ \lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0}[ f_{n}(x)]^{2} dx
 \end{equation*}
 \end{enumerate}
+
 \Esercizio{}
 
 Fissato $\alpha \in [ 0, 4]$, consideriamo
@@ -3314,6 +3462,7 @@ f_{n, \alpha}(x) = \frac{n^{\alpha}}{\left(x^{2} + n^{2}\right)\left(x^{2} + 4n^
 \item Determinare il limite puntuale $F_{\alpha}(x)$.
 \item Stabilire al variare di $\alpha $ se $f_{n, \alpha}\rightarrow F_{\alpha}$ in $L^{1}(\RR)$ e in $L^{\infty}(\RR)$.
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $ - periodica che sull'intervallo $(- \pi, \pi ]$ è definita da
@@ -3331,6 +3480,7 @@ f(x) = x + | x| =
 \item Stabilire se $F$ converge in media quadratica a $f$.
 \item Studiare la convergenza uniforme di $F$ a $f$
 \end{enumerate}
+
 \Esercizio{}
 
 Si consideri la funzione
@@ -3346,7 +3496,9 @@ ripetuta periodicamente
 \end{equation*}
 \item Studiare la convergenza della serie (puntuale, in media quadratica, uniforme).
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Sia $x_{0} \in [ 0, + \infty)$ fissato
@@ -3389,6 +3541,7 @@ Le $f_{n}$ sono positive e continue su $\RR^{+}$, quindi
  & \implies \ \ f_{n}\cancel{\xrightarrow[n\rightarrow + \infty ]{L^{\infty}}} f
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Vediamo il grafico
@@ -3426,7 +3579,9 @@ Analogamente si trova una maggiorante $L^{1}$ per $f^{2}_{n}$
 \overset{\text{Dom}}{\implies}\lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f^{2}_{n}(x) dx = \int^{+ \infty}_{0}\lim\limits_{n\rightarrow + \infty} f^{2}_{n}(x) dx = \int^{+ \infty}_{0} x^{4} e^{- 2x}\overset{\text{ipp}}{=}\frac{3}{4}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
+
 \begin{enumerate}
 \item Sia $x_{0} \in \RR $ fissato
 \begin{equation*}
@@ -3539,7 +3694,9 @@ Per $\alpha \in [ 0, 4)$
 \end{aligned}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
+
 \begin{thm}
 Sia $f:\RR \rightarrow \RR $, $T$ - periodica, allora la serie di Fourier associata ad $f$ è
 \begin{equation*}
@@ -3671,7 +3828,9 @@ F(x) = \frac{\pi}{2} + 2\sum\limits^{\infty}_{n = 1}\left[\frac{(- 1)^{n} - 1}{\
 allora $F(x)$ di $f$ converge in media quadratica.
 \item Poiché $f$ \underline{\textbf{non}} è continua, allora la convergenza \underline{\textbf{non}} è uniforme su $\RR $.
 \end{enumerate}
+
 \Soluzione
+
 \begin{enumerate}
 \item $f$ è pari $\implies b_{n} = 0\ \forall n\in \NN $
 \begin{equation*}
@@ -3721,7 +3880,9 @@ Criterio di Weierstrass, prendo il termine generale in modulo
 \end{gather*}
 \end{enumerate}
 \chapter{Esercitazione 6 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Data una funzione $2\pi $ - periodica
@@ -3729,6 +3890,7 @@ Data una funzione $2\pi $ - periodica
 f:[ - \pi, \pi ]\rightarrow \RR \ \ \ \ f(x) = x^{2}
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
+
 \Esercizio{}
 
 Data una funzione $3$ - periodica
@@ -3741,7 +3903,9 @@ f(x) =
 \end{cases}
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
+
 \Esercizio{}
+
 \begin{defn}
 [Spazio delle funzioni test] $\varphi \in D(A)$ se $\varphi \in C^{\infty}(A)$, $\exists K$ compatto tale per cui $\varphi (x) = 0, \forall x\notin K$
 \end{defn}
@@ -3780,6 +3944,7 @@ Studiare la convergenza in distribuzione della seguente successione
 \begin{equation*}
 f_{n} (x) = ne^{- n|x|}
 \end{equation*}
+
 \Esercizio{}
 
 Studiare la convergenza in distribuzione della seguente successione
@@ -3791,13 +3956,16 @@ f_{n} (x) =
 0, & |x| > \frac{2}{n}
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Studiare la convergenza in distribuzione della seguente successione
 \begin{equation*}
 f_{n} (x) = nx^{n} \chi_{(0, 1)} (x)
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Osserviamo che la funzione $f(x) = x^{2}$ converge in $L^{2}$ e puntualmente su $\RR $.
@@ -3849,6 +4017,7 @@ Allora
 \end{aligned}
 \end{equation*}
 \end{itemize}
+
 \Soluzione
 
 Iniziamo osservando che la funzione
@@ -3953,6 +4122,7 @@ La serie cercata è:
 f(x) = 1 + \sum^{\infty}_{n = 1} b_{n}\sin\left(\frac{2n\pi}{3} x\right)
 \end{equation*}
 La funzione è una funzione dispari traslata di $1$ verso l'alto.
+
 \Soluzione
 
 Limite puntuale
@@ -3985,6 +4155,7 @@ Quindi
 \begin{equation*}
 \langle f_{n}, \varphi \rangle \rightarrow 2\varphi (0) = 2\langle \delta, \varphi \rangle \ \ \implies \ \ f_{n}\xrightarrow{D'(\RR)} 2\delta
 \end{equation*}
+
 \Soluzione
 
 Limite puntuale
@@ -4043,6 +4214,7 @@ Ovvero
 \begin{equation*}
 f_{n}\xrightarrow{D'(\RR)} - 2\delta \ \ \ \ g_{n}\xrightarrow{D'(\RR)} 2\delta
 \end{equation*}
+
 \Soluzione
 
 Limite puntuale
@@ -4068,7 +4240,9 @@ In conclusione
 
 Date $f_{n}(x) = nx^{n} \chi_{(0, 1)}(x)$, calcolare il limite in $D'(0, 1)$.
 \chapter{Esercitazione 6 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $ - periodica dispari definita da
@@ -4094,12 +4268,14 @@ f(x) =
 \sum\limits^{\infty}_{n = 1}\frac{n^{2}}{\left(4n^{2} - 1\right)^{2}}
 \end{equation*}
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $Q = [ - \pi, \pi)$ e $F(x)$ lo sviluppo in serie di Fourier di $f(x) = | x|, \ \forall x\in Q$. Calcolare
 \begin{equation*}
 \sum\limits^{\infty}_{n = 0}\frac{1}{(2n + 1)^{4}} \ \ \ \ \sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}}
 \end{equation*}
+
 \Esercizio{}
 
 Sulla falsa riga dell'esercizio precedente, sviluppare in serie di Fourier
@@ -4110,6 +4286,7 @@ estesa con $2\pi $ - periodicità all'asse reale. Calcolare
 \begin{equation*}
 \sum\limits^{\infty}_{n = 0}\frac{1}{(2n + 1)^{6}} \ \ \ \ \left(= \frac{\pi^{6}}{960}\right) \ \ \ \ \ \ \ \ \ \ \ \ \sum\limits^{\infty}_{n = 1}\frac{1}{n^{6}} \ \ \ \ \left(= \frac{\pi^{6}}{945}\right)
 \end{equation*}
+
 \Esercizio{}
 
 Data la successione di funzioni
@@ -4124,6 +4301,7 @@ ne^{n(x - 1)}, & x \leq 1\\
 \item Determinare il limite puntuale
 \item Determinare il limite nel senso delle distribuzioni
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $\alpha > 0$ un valore fissato, si consideri la successione di funzioni
@@ -4143,8 +4321,11 @@ dove
 \item Stabilire al variare di $\alpha $ se $f_{n, \alpha}\rightarrow f$ in $L^{p}(\RR)$.
 \item Se $\alpha = 1$, calcolare $\lim\limits_{n\rightarrow + \infty} f_{n, 1}$ in $D'(\RR)$.
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
+
 \begin{enumerate}
 \item Grafico
 
@@ -4334,6 +4515,7 @@ Ugualiamo i termini
 \frac{1}{2} = \frac{1}{4} + \frac{4}{\pi^{2}}\sum\limits^{\infty}_{n = 1}\frac{4n^{2}}{\left(4n^{2} - 1\right)^{2}} \ \ \implies \ \ \sum\limits^{\infty}_{n = 1}\frac{4n^{2}}{\left(4n^{2} - 1\right)^{2}} = \frac{\pi^{2}}{64}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
 
 Notiamo che sono serie convergenti, perché asintotiche a $\frac{1}{n^{\alpha}}$ con $\alpha > 1$.
@@ -4378,6 +4560,7 @@ allora
 \begin{equation*}
 \sum\limits^{\infty}_{n = 1}\frac{1}{n^{4}} = \frac{\sum\limits^{\infty}_{n = 0}\frac{1}{(2n + 1)^{4}}}{1 - \frac{1}{2^{4}}} = \frac{\frac{\pi^{4}}{96}}{1 - \frac{1}{2^{4}}} = \frac{\pi^{4}}{90}
 \end{equation*}
+
 \Soluzione
 
 La funzione è dispari, per cui $a_{n} = 0, \forall n$.
@@ -4417,6 +4600,7 @@ Per il secondo risultato sappiamo che la somma su tutti i naturali è come somma
 J & = \frac{\pi^{6}}{960} + \frac{1}{2^{6}} J\\
  & \implies \ \ J = \frac{\frac{\pi^{6}}{960}}{1 - \frac{1}{2^{6}}} = \frac{\pi^{6}}{945}
 \end{align*}
+
 \Soluzione
 
 Disegnamo il grafico di
@@ -4465,7 +4649,9 @@ f_{n}\xrightarrow[n\rightarrow + \infty ]{D'(\RR)} \delta_{1} \
 
 nel senso delle distribuzioni.
 \end{enumerate}
+
 \Soluzione
+
 \begin{enumerate}
 \item Studiamo il limite puntuale di
 
@@ -4532,13 +4718,16 @@ Con un ragionamento analogo a prima
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 7 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Calcolare la derivata nel senso delle distribuzioni di
 \begin{equation*}
 f(x) = \arctan\left(\frac{1}{x}\right)
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare la derivata prima e seconda nel senso delle distribuzioni in $D'(0, 5)$ di
@@ -4549,18 +4738,21 @@ x + x^{2}, & 0 < x < 2\\
 6, & 2 < x < 5
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Trovare l'equivalente in $D'(\RR)$ di
 \begin{equation*}
 u(x) = x\delta '_{0} (x)
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare il limite delle $f_{n}$ in $L^{p} (\RR)$, $D'(\RR)$ e $\Sc '(\RR)$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
 \begin{equation*}
 g(x) = H(x)e^{- x} \ \ \ \ f_{n} (x) = g(x)*\chi_{(0, n)}
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare la serie di Fourier associata alla funzione $2\pi $ - periodica dispari
@@ -4571,7 +4763,9 @@ f(x) =
 - 1, & - \pi < x < 0
 \end{cases}
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Dato che $f\in L^{1}_{\loc} (\RR)\implies f\in D'(\RR)$.
@@ -4598,6 +4792,7 @@ Quindi
 f'(x)\overset{D'}{=} \pi \delta_{0} - \frac{1}{1 + x^{2}}
 \end{equation*}
 che può essere rappresentata come la funzione $1/\left(1 + x^{2}\right)$ con un salto in $x = 0$ verso l'alto di ampiezza $\pi $.
+
 \Soluzione
 
 Dato che $f\in L^{1}_{\loc} (0, 5)\implies f\in D'(0, 5)$.
@@ -4689,7 +4884,9 @@ Ciò è coerente con come era stata definita la $g$
 \FloatBarrier
 
 Il salto verso l'alto in $x = 0$ non lo possiamo vedere perché le funzioni test sono nulle prima di zero.
+
 \Soluzione
+
 \begin{rem}
 Si può dimostrare che se $v\in D'(\RR)$, $\psi \in C^{\infty}(\RR) \implies \psi v\in D'(\RR)$ e il suo effetto su una funzione test $\varphi $ è
 \begin{equation*}
@@ -4707,7 +4904,9 @@ x\delta '_{0} = - \delta_{0}
 \textit{Esercizio per casa.}
 
 $\forall n, m\in \NN $ trovare la distribuzione di $u(x) = x^{m} \delta^{(n)}_{0}$.
+
 \Soluzione
+
 \begin{equation*}
 f_{n} (x) = g(x)*\chi_{(0, n)} = \int_{\RR} e^{- (x - t)} H(x - t)\chi_{(0, n)} (t)dt = \int^{n}_{0} e^{- x} e^{t} H(x - t)dt
 \end{equation*}
@@ -4821,7 +5020,9 @@ Allora
 \langle F - f_{n}, \psi \rangle \rightarrow 0
 \end{equation*}
 \end{itemize}
+
 \Soluzione
+
 \begin{equation*}
 f(x) \sim \sum\limits^{\infty}_{n = 1} b_{n}\sin(nx)
 \end{equation*}
@@ -4900,7 +5101,9 @@ Possiamo derivare termine a termine
 f'(x)\overset{D'(\RR)}{\sim}\sum\limits^{\infty}_{k = 0}\frac{4}{\pi}\cos((2k + 1) x)
 \end{equation*}
 \chapter{Esercitazione 7 - Potrich}
+
 \ParteEsercizi
+
 \begin{defn}
 [Distribuzione] Una distribuzione è un operatore $u$ che a ogni funzione test $\varphi $ (funzione $C^{\infty}(\RR)$ il cui supporto è un compatto $\Omega $ contenuto in $\RR $) associa un numero, reale o complesso, $\langle u, \varphi \rangle $ chiamato \textbf{dualità} tra $u$ e $\varphi $ tale che:
 \begin{equation*}
@@ -4933,6 +5136,7 @@ Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\in
 \langle u, \varphi \rangle \coloneqq \int_{\Omega} u(x) \varphi (x) dx, \ \ u\in D'(\Omega), \ \varphi \in D(\Omega)
 \end{equation*}
 \end{rem}
+
 \Esercizio{}
 
 Provare che valgono le seguenti identità in $D'(\RR)$:
@@ -4940,12 +5144,14 @@ Provare che valgono le seguenti identità in $D'(\RR)$:
 \item $x\delta (x) = 0$
 \item $x\delta '(x) = - \delta (x)$
 \end{enumerate}
+
 \Esercizio{(TDE 6/07/2015)}
 
 Mostrare che, per ogni $n\in \NN^{+}$, si ha
 \begin{equation*}
 \boxed{x^{n} \delta^{(n)} = (- 1)^{n} n!\delta \ \ \text{in} \ D'}
 \end{equation*}
+
 \Esercizio{(Teorema di derivazione di funzioni con discontinuità di tipo salto)}
 
 Sia $a\in \RR $, $f\in C^{1}((- \infty, a))$, $g\in C^{1}((a, + \infty))$ con $f'\in L^{1}((- \infty, a))$ e $g'\in L^{1}((a, + \infty))$ e definiamo
@@ -4960,6 +5166,7 @@ allora $u$ risulta definita q.o. su $\RR $ e la sua derivata distribuzionale $u'
 \begin{equation*}
 [ u(a_{+}) - u(a_{-})] \delta_{a}
 \end{equation*}
+
 \Esercizio{}
 
 Si consideri
@@ -4967,6 +5174,7 @@ Si consideri
 f_{n}(x) = \frac{n}{1 + n^{2} x^{2}}
 \end{equation*}
 provare che $f_{n}\rightarrow \pi \delta $ in $\Sc '(\RR)$ e in $D'(\RR)$.
+
 \Esercizio{}
 
 Si considerino
@@ -4974,6 +5182,7 @@ Si considerino
 f_{n}(x) = \frac{1}{\sqrt{n}} \chi_{[ 0, n]}(x) \ \ \ \ \ \ \ \ g_{n}(x) = \sin(nx) \chi_{[ 0, 7]}(x)
 \end{equation*}
 Stabilire se le successioni sono convergenti in $L^{1}(\RR), L^{2}(\RR), L^{\infty}(\RR), D'(\RR), \Sc '(\RR)$.
+
 \Esercizio{}
 
 Si consideri
@@ -5000,8 +5209,11 @@ H(x) =
 detta \textbf{Funzione di Heaviside}.
 \item Determinare il limite di $f_{n}$ in $D'(\RR)$
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
+
 \begin{enumerate}
 \item $\forall \varphi \in D(\RR)$
 \begin{equation*}
@@ -5017,6 +5229,7 @@ detta \textbf{Funzione di Heaviside}.
 \qed
 \end{gather*}
 \end{enumerate}
+
 \Soluzione
 
 Per induzione
@@ -5043,6 +5256,7 @@ dobbiamo mostrare che vale anche per $n + 1$
 \qed
 \end{gather*}
 \end{itemize}
+
 \Soluzione
 
 Per comodità $u(a_{-}) = f(a) \coloneqq f(a_{-})$ e $u(a_{+}) = g(a) \coloneqq g(a_{+})$.
@@ -5099,6 +5313,7 @@ $f(x)$ presenta un salto in $x = 0$ di ampiezza $1$.
 \begin{equation*}
 \implies \ \ f'(x) = - \frac{1}{2} e^{- | x|} + \delta (x)
 \end{equation*}
+
 \Soluzione
 
 \fg{0.45}{14-4}
@@ -5137,6 +5352,7 @@ I_{1} + I_{2} \leq \pi \varepsilon + 2\Vert \varphi \Vert_{\infty} \varepsilon
 \end{equation*}
 Per l'arbitrarietà di $\varepsilon $ segue la tesi.
 \end{rem}
+
 \Soluzione
 
 Studiamo le $f_{n}(x)$
@@ -5192,7 +5408,9 @@ Quindi
 \begin{equation*}
 \frac{1}{n}\int^{7n}_{0}| \sin(y)|^{p} dy\xrightarrow{n\rightarrow + \infty} 7\int^{2\pi}_{0}| \sin y|^{p} dy\ \ \implies \ \ g_{n}\cancel{\xrightarrow[n\rightarrow + \infty ]{L^{p}(\RR)}} 0
 \end{equation*}
+
 \Soluzione
+
 \begin{enumerate}
 \item Fissiamo $x_{0} \in \RR $.
 \begin{enumerate}
@@ -5298,27 +5516,35 @@ al limite i due integrali si cancellano per convergenza dominata, rimane
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 8 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $f(x) = e^{- |x|}$
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $f(x) = \chi_{[ - 1, 1]} (x)$
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $f(x) = e^{- x^{2}}$
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $f(x) = \frac{1}{\cosh (x)}$
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $f(x) = \frac{1}{\left(1 + x^{2}\right)^{2}}$
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di $u(x) = \frac{1}{\sqrt{|x|}}$
 
 \ParteSoluzioni
+
 \Soluzione
 
 Grafico di $f(x) = e^{- | x|}$
@@ -5373,7 +5599,9 @@ Sapendo questo, deduciamo quanto vale
 \begin{equation*}
 \Fc \left\{\frac{1}{1 + x^{2}}\right\} = \int_{\RR} e^{- i\xi x}\left(\frac{1}{1 + x^{2}}\right) dx\overset{\text{parità}}{=} \pi e^{- | \xi |}
 \end{equation*}
+
 \Soluzione
+
 \begin{equation*}
 \begin{aligned}
 \hat{f} (\xi) & = \int_{\RR} e^{- i\xi x} \chi_{[ - 1, 1]} dx = \int^{1}_{- 1} e^{- i\xi x} dx = \left[ - \frac{1}{i\xi} e^{- i\xi x}\right]^{1}_{- 1} = \\
@@ -5388,6 +5616,7 @@ f(x) = \frac{1}{2\pi}\int_{\RR} e^{i\xi x}\frac{2\sin(\xi)}{\xi} d\xi \\
 \\
 \implies \ \ g(x) = \frac{\sin x}{x} \ \ \implies \ \ \hat{g}(\xi) = \pi \chi_{[ - 1, 1]} (\xi)
 \end{gather*}
+
 \Soluzione
 
 Abbiamo due diverse
@@ -5495,6 +5724,7 @@ Allora
 \begin{equation*}
 \boxed{\hat{u}(\xi) = \sqrt{\pi} e^{- \xi^{2} /4}}
 \end{equation*}
+
 \Soluzione
 
 \fg{0.7}{15-4}
@@ -5583,6 +5813,7 @@ Dunque
 \begin{equation*}
 \Fc \left\{\frac{1}{\cosh (x)}\right\} = \frac{2\pi e^{\xi \frac{\pi}{2}}}{e^{\pi \xi} + 1} = \frac{2\pi}{e^{\xi \frac{\pi}{2}} + e^{- \xi \frac{\pi}{2}}} = \frac{\pi}{\cosh\left(\frac{\pi}{2} \xi \right)}
 \end{equation*}
+
 \Soluzione
 
 \fg{0.7}{15-5}
@@ -5660,6 +5891,7 @@ Per le $\xi < 0$ basta raddoppiare
 \begin{equation*}
 \hat{f}(\xi) = \frac{\pi}{2} e^{- | \xi |} (1 + | \xi |)
 \end{equation*}
+
 \Soluzione
 
 Vediamo il grafico di $u(x) = 1/\sqrt{|x|}$
@@ -5705,7 +5937,9 @@ Quindi, la trasformata sarà pari a
 \Fc \{u\} = \lim_{n\rightarrow \infty}\Fc \{u_{n}\} = \lim_{n\rightarrow \infty}\frac{4}{\sqrt{| \xi |}} \ \int^{\sqrt{| \xi | n}}_{0}\cos\left(t^{2}\right) dt = \frac{4}{\sqrt{| \xi |}} \ \sqrt{\frac{\pi}{8}} = \ \sqrt{\frac{2\pi}{| \xi |}}
 \end{equation*}
 \chapter{Esercitazione 8 - Potrich}
+
 \ParteEsercizi
+
 \begin{defn}
 Sia $u\in L^{1}(\RR)$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\RR \rightarrow \CC $ definita da
 \begin{equation*}
@@ -5738,36 +5972,42 @@ u(x)\cos(\xi_{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}(\xi - \xi_{0}) + \ha
 \end{equation*}
 \end{itemize}
 \end{thm}
+
 \Esercizio{Una trasformata notevole}
 
 Calcolare la trasformata di Fourier di
 \begin{equation*}
 u(x) = \frac{1}{1 + x^{2}}, \ \ x\in \RR
 \end{equation*}
+
 \Esercizio{Trasformata della Gaussiana}
 
 Calcolare la trasformata di Fourier della funzione Gaussiana
 \begin{equation*}
 u(x) = e^{- x^{2}}, \ x\in \RR
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di
 \begin{equation*}
 f(x) = \frac{\sin x}{\left(1 + x^{2}\right)\left(4 + x^{2}\right)}
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare la trasformata di Fourier di
 \begin{equation*}
 u(x) = \frac{2\cos x}{1 + x^{2}}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare l'espressione analitica di
 \begin{equation*}
 f(\tau) = \int_{\RR} e^{- i\left(\tau^{2} - 2\right) x}\frac{\cos(2x)}{1 + x^{2}} dx
 \end{equation*}
+
 \Esercizio{}
 
 Sia
@@ -5782,6 +6022,7 @@ f(x) =
 \item Calcolare la trasformata di Fourier di $f(x)$
 \item Calcolare la trasformata di Fourier di $g(x) = xf(x)$
 \end{enumerate}
+
 \Esercizio{}
 
 Sia $H$ la funzione di Heaviside
@@ -5802,7 +6043,9 @@ f(x) = \left(1 - x^{2}\right) H\left(1 - x^{2}\right)
 \int^{+ \infty}_{0}\frac{x\cos x - \sin x}{x^{3}}\cos\left(\frac{x}{2}\right) dx
 \end{equation*}
 \end{enumerate}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Per definizione
@@ -5872,7 +6115,9 @@ Il valore in $0$ si ottiene per continuità.
 \begin{equation*}
 \implies \ \ \boxed{\hat{f}(\xi) = \pi e^{- | \xi |} \ \ \forall \xi \in \RR}
 \end{equation*}
+
 \Soluzione
+
 \begin{equation*}
 \hat{u}(\xi) = \int_{\RR} e^{- i\xi x} u(x) dx = \int_{\RR} e^{- i\xi x} e^{- x^{2}} dx
 \end{equation*}
@@ -5987,6 +6232,7 @@ Concludiamo che
 \begin{equation*}
 \boxed{\hat{u}(\xi) = \sqrt{\pi} e^{- \frac{\xi^{2}}{4}}}
 \end{equation*}
+
 \Soluzione
 
 Poniamo
@@ -6073,6 +6319,7 @@ in modo da far apparire il termine per usare la proprietà
  & = \frac{1}{2i}\left\{\frac{\pi}{3} e^{- | \xi - 1|} - \frac{\pi}{6} e^{- 2| \xi - 1|} - \frac{\pi}{3} e^{- | \xi + 1|} + \frac{\pi}{6} e^{- 2| \xi + 1|}\right\}
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Conviene riscrivere $u$
@@ -6091,6 +6338,7 @@ Allora
  & = \pi e^{- | \xi - 1|} + \pi e^{- | \xi + 1|}
 \end{aligned}
 \end{equation*}
+
 \Soluzione
 
 Posto
@@ -6121,7 +6369,9 @@ E determiniamo $f(\tau)$ come
 \begin{equation*}
 f(\tau) = \hat{g}\left(\tau^{2} - 2\right) = \frac{\pi}{2}\left(e^{- \left| \tau^{2} - 4\right|} + e^{- \left| \tau^{2}\right|}\right)
 \end{equation*}
+
 \Soluzione
+
 \begin{enumerate}
 \item Calcoliamo
 \begin{equation*}
@@ -6138,6 +6388,7 @@ f(\tau) = \hat{g}\left(\tau^{2} - 2\right) = \frac{\pi}{2}\left(e^{- \left| \tau
 \hat{g}(\xi) = i\frac{d}{d\xi}\hat{f}(\xi) = i\frac{d}{d\xi}\frac{2 - 2\cos \xi}{i\xi} = \frac{2(1 - \cos \xi - \xi \sin \xi)}{\xi^{2}}
 \end{equation*}
 \end{enumerate}
+
 \Soluzione
 
 $f$ può essere riscritta
@@ -6192,6 +6443,7 @@ Troviamo quindi il l'integrale richiesto, a meno di un segno
 \int^{+ \infty}_{0}\frac{x\cos x - \sin x}{x^{3}}\cos\left(\frac{x}{2}\right) dx = -\frac{3}{4} \cdot \frac{\pi}{4} = - \frac{3\pi}{16}
 \end{equation*}
 \chapter{Esercitazione 9 - Boella}
+
 \ParteEsercizi
 
 Richiami di teoria sulla Trasformata di Laplace.
@@ -6275,6 +6527,7 @@ $\Lc\left\{t^{\alpha} H(t)\right\} = \frac{\Gamma (\alpha + 1)}{s^{\alpha + 1}}$
 \item $\Lc\{\sinh(\omega t) H(t)\} = \frac{\omega}{s^{2} - \omega^{2}}$
 \item $\Lc\{\cosh(\omega t) H(t)\} = \frac{s}{s^{2} - \omega^{2}}$
 \end{itemize}
+
 \Esercizio{}
 
 Calcolare
@@ -6306,6 +6559,7 @@ Calcolare
  & = [\arctan \sigma ]^{+ \infty}_{s} = \frac{\pi}{2} - \arctan s
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Sia
@@ -6366,6 +6620,7 @@ f(t) & = t[ H(t) - H(t - 2)] + (4 - t)[ H(t - 2) - H(t - 4)]\\
  & \implies \ \ \Lc\{f(t)\} = \frac{1}{s^{2}} - 2\frac{e^{- 2s}}{s^{2}} + \frac{e^{- 4s}}{s^{2}}
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Sia
@@ -6425,6 +6680,7 @@ g(t) & = t[ H(t) - H(t - 1)] + (2 - t)[ H(t - 1) - H(t - 2)] + (t - 2)[ H(t - 2)
  & \implies \ \ \Lc\{g(t)\} = \frac{1}{s^{2}} - 2\frac{e^{- s}}{s^{2}} + 2\frac{e^{- 2s}}{s^{2}}
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare l'antitrasformata
@@ -6446,6 +6702,7 @@ Quindi
  & = \left[ - \frac{1}{6} e^{- t} - \frac{3}{8} e^{2t} + \frac{7}{2} e^{3t}\right] H(t)
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare l'antitrasformata
@@ -6468,6 +6725,7 @@ Quindi
  & = \left[ 2e^{t} + \sin t - 2\cos t\right] H(t)
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Calcolare
@@ -6491,43 +6749,54 @@ Calcolare
  & = \sin[ 2(t - 1)] H(t - 1) - \sin[ 2(t - 3)] H(t - 3)
 \end{aligned}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni $u\in L^{1}(\RR)$ di
 \begin{equation*}
 u' - \alpha u = e^{- \alpha x} H(x) \ \ \ \ \alpha > 0
 \end{equation*}
+
 \Esercizio{}
 
 Risolvere
 \begin{equation*}
 u'' + 2xu' + 2u = 0
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni $u\in L^{1}(\RR)$ di
 \begin{equation*}
 xu'' + 2u' - xu = xe^{- | x|}
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 Soluzione nella parte esercizi.
+
 \Soluzione
 
 \underline{\textbf{Con l'Analisi 2.}}
@@ -6600,6 +6869,7 @@ Con Fourier richiediamo che stiano in $L^{1}$ e l'esponenziale positivo causa pr
 \begin{equation*}
 C + \frac{1}{2\alpha} = 0\ \ \implies \ \ u(x) = - \frac{1}{2\alpha} e^{- | x|}
 \end{equation*}
+
 \Soluzione
 
 È un'equazione lineare del II ordine omogenea, ma \textit{\underline{non a coefficienti costanti}}.
@@ -6621,6 +6891,7 @@ ma
 \Fc \left\{e^{- x^{2}}\right\} = \sqrt{\pi} e^{- \frac{\xi^{2}}{4}} \ \ \implies \ \ u(x) = De^{- x^{2}}
 \end{equation*}
 $u(x)$ dovrebbe essere la combinazione lineare di due integrali particolari, qui abbiamo trovato solo quello che sta in $L^{1}$.
+
 \Soluzione
 
 Trasformiamo
@@ -6643,7 +6914,9 @@ dove $c = 0$ perché altrimenti non è infinitesima all'infinito e non è la tra
 
 $\hat{u}$ è pari, quindi $u$ è pari.
 \chapter{Esercitazione 9 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Sia
@@ -6661,6 +6934,7 @@ calcolare $\displaystyle f*f$ e la sua trasformata di Fourier $\displaystyle \Fc
 (u*v)(x) = \int_{\RR} u(x - y) v(y) dy = \int_{\RR} u(y) v(x - y) dy
 \end{equation*}
 \end{rem}
+
 \Esercizio{}
 
 Determinare la trasformata di Fourier di
@@ -6671,7 +6945,9 @@ Ultilizzando il risultato ottenuto calcolare
 \begin{equation*}
 I = \int^{+ \infty}_{0}\frac{(x\cos x - \sin x)^{2}}{x^{6}} dx
 \end{equation*}
+
 \Esercizio{}
+
 \begin{enumerate}
 \item Calcolare la trasformata di Fourier delle funzioni:
 \begin{equation*}
@@ -6686,7 +6962,9 @@ Stabilire se $\displaystyle f_{0} \in L^{1}(\RR)$ e/o se $\displaystyle f_{0} \i
 \item Calcolare la derivata di $\displaystyle f_{0}$ nel senso delle distribuzioni.
 \item Calcolare $\Fc \{f'_{0}\}$ e $\Fc \{f_{0}\}$.
 \end{enumerate}
+
 \Esercizio{}
+
 \begin{defn}
 Sia $\displaystyle f:\RR \ \rightarrow \CC $ si dice Laplace - trasformabile se:
 \begin{equation*}
@@ -6746,6 +7024,7 @@ Detta $\displaystyle H(x)$ la funzione di Heaviside, calcolare la trasformata di
 f(t) = H(t - 1) te^{2t}
 \end{equation*}
 precisando l'ascissa di convergenza.
+
 \Esercizio{}
 
 Calcolare la trasformata di Laplace di
@@ -6755,6 +7034,7 @@ f(t) = H(t)\sum^{m}_{k = 0} a_{k} t^{k} \ \ \ \ a_{k} \in \RR
 $\displaystyle \lambda_{f} = 0$, perché se moltiplichiamo $\displaystyle f$ per $\displaystyle e^{- \lambda t}$ con $\displaystyle \lambda > 0$ le $\displaystyle f$ sono integrabili,
 
 mentre con $\displaystyle \lambda \leq 0$ non lo sono.
+
 \Esercizio{}
 
 Stabilire per quali valori di $\displaystyle a\in \RR $ la funzione
@@ -6764,6 +7044,7 @@ f_{a}(x) = H(x) e^{ax^{2} + 2x}\sin^{2}(x)
 è Laplace - trasformabile.
 
 Calcolare poi la trasformata di Laplace di $\displaystyle f_{0}(x)$.
+
 \Esercizio{}
 
 Calcolare la trasformata di Laplace di
@@ -6774,7 +7055,9 @@ studiandone in particolare le trasformate di Laplace per $\displaystyle \omega =
 \begin{equation*}
 J(s) = \frac{1}{\left(1 + s^{2}\right)^{2}} \ \ \ \ G(s) = \frac{s}{\left(1 + s^{2}\right)^{2}} \ \ \ \ K(s) = \frac{1}{s\left(s^{2} + 4\right)}
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Se $x < 0$
@@ -6799,6 +7082,7 @@ Date $\displaystyle u, v\in \Sc (\RR) \implies \ \widehat{u*v} = \hat{u} \cdot \
  & \\
  & \implies \ \ \widehat{f*f} = \hat{f} \cdot \hat{f} = \frac{1}{(2 + i\xi)^{2}}
 \end{align*}
+
 \Soluzione
 
 Nella scorsa esercitazione:
@@ -6830,7 +7114,9 @@ Usando Plancherel
 \begin{equation*}
 32 \cdot I = (2\pi)^{n}\int_{\RR}| f(x)|^{2} dx\overset{n = 1}{=} 2\pi \cdot \frac{16}{15} \ \ \implies \ \ I = \frac{\pi}{15}
 \end{equation*}
+
 \Soluzione
+
 \begin{thm}
 [Trasformata della derivata] Date $u, u'\in L^{1}(\RR)$ e $u\in C^{1}$
 \begin{equation*}
@@ -6862,6 +7148,7 @@ i\xi \cdot\Fc (f_{0}(x), \xi) & = \Fc (f_{0} '(x), \xi) = \pi - \pi e^{- | \xi |
  & \implies \ \ \Fc (f_{0}(x), \xi) = \frac{\pi - \pi e^{- | \xi |}}{i\xi} = i\pi \frac{e^{- | \xi |} - 1}{\xi}
 \end{align*}
 \end{enumerate}
+
 \Soluzione
 
 Calcoliamo
@@ -6872,6 +7159,7 @@ cerco ascissa di convergenza, con $t \geq 1$
 \begin{equation*}
 e^{- \lambda t} te^{2t} = te^{t(2 - \lambda)} \in L^{1}(\RR) \ \ \iff \ \ \lambda > 2\ \ \implies \ \ \lambda_{f} = 2
 \end{equation*}
+
 \Soluzione
 
 Usiamo le proprietà
@@ -6883,6 +7171,7 @@ Provando vari $\displaystyle k$ mi accorgo che:
 (\star) = \sum^{m}_{k = 0} a_{k}\frac{k!}{s^{k + 1}}
 \end{equation*}
 È il risultato generale della \textbf{trasformata di un polinomio!}
+
 \Soluzione
 
 Abbiamo che
@@ -6916,6 +7205,7 @@ Calcoliamo
  & = \frac{1}{2} \cdot \frac{1}{s - 2} - \frac{1}{4} \cdot \frac{1}{s - 2(1 + i)} - \frac{1}{4} \cdot \frac{1}{s - 2(1 - i)}\\
  & = \frac{1}{2}\frac{1}{s - 2} - \frac{1}{2}\frac{s - 2}{(s - 2)^{2} + 4}
 \end{align*}
+
 \Soluzione
 
 Calcoliamo trasformata di $f$
@@ -6962,13 +7252,16 @@ quindi la sua antitrasformata è
 k(t) = \frac{1}{4}(1 - \cos(2t)) H(t)
 \end{equation*}
 \chapter{Esercitazione 10 - Boella}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Determinare le soluzioni $u\in L^{1}$ di
 \begin{equation*}
 u + \frac{1}{2} u*e^{- | x|} = e^{- | x|}\cos x
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni di
@@ -6978,12 +7271,14 @@ u'' + 2u' + u = e^{- t} \chi_{(1, 2)}(t)\\
 u(0) = u'(0) = 0
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni $u\in L^{1}$ di
 \begin{equation*}
 - u'' + u = \chi_{(- 1, 1)}(x)
 \end{equation*}
+
 \Esercizio{}
 
 Determinare la soluzione $\Lc$ - trasformabile di
@@ -6993,20 +7288,25 @@ u' + 2u = 2\int^{t}_{0} u(\tau)\sin(t - \tau) d\tau + 3\cos t\\
 u(0) = 1
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni $u\in L^{1}$ di
 \begin{equation*}
 4u + 8u''*e^{- | x|} = x^{2} e^{- | x|}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni reali $u\in L^{1}$ di
 \begin{equation*}
 u'' + 2xu' + 4u = 0
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
+
 \begin{gather*}
 \Fc \left(e^{- | x|}\right) = \frac{2}{1 + \xi^{2}}\\
 \begin{aligned}
@@ -7054,7 +7354,9 @@ Per le $x\in \RR $
 \begin{equation*}
 u(x) = \frac{e^{- | x|}}{4}(3\cos x - \sin| x|)
 \end{equation*}
+
 \Soluzione
+
 \begin{gather*}
 \begin{aligned}
 \Lc\left(e^{- t} \chi_{(1, 2)}(t)\right) & = \int^{2}_{1} e^{- (s + 1) t} dt = \left[ - \frac{e^{- (s + 1) t}}{s + 1}\right]^{2}_{1}\\
@@ -7085,6 +7387,7 @@ u(t) & = \frac{1}{e}\frac{(t - 1)^{2}}{2} e^{- (t - 1)} H(t - 1) - \frac{1}{e^{2
 \frac{e^{- t}}{2}(2t - 3), & t \geq 2
 \end{cases}
 \end{align*}
+
 \Soluzione
 
 Trasformiamo e usiamo il prodotto di convoluzione
@@ -7140,7 +7443,9 @@ u(x) =
 e^{- | x|}\sinh 1, & | x| \geq 1
 \end{cases}
 \end{equation*}
+
 \Soluzione
+
 \begin{equation*}
 \Lc(u) = U(s) \ \ \ \ \Lc(u') = sU(s) - 1
 \end{equation*}
@@ -7163,6 +7468,7 @@ U(s) & = \frac{1}{s} + \frac{1}{(s + 1)^{2}}\\
 \implies \ \ u(t) & = H(t) + te^{- t} H(t)\\
  & = \left(1 + te^{- t}\right) H(t)
 \end{align*}
+
 \Soluzione
 
 Trasformiamo
@@ -7191,6 +7497,7 @@ Per $x\in \RR $
 \begin{equation*}
 u(x) = \frac{e^{- | x|}}{4}(| x| + 1)
 \end{equation*}
+
 \Soluzione
 
 Trasformiamo i vari termini
@@ -7212,19 +7519,23 @@ $\forall C$, $\hat{u}$ dispari allora $C = D \cdot i, \ D\in \RR $
 \ \hat{u}(\xi) = D \cdot i\xi e^{- \frac{\xi^{2}}{4}} \ \ \implies \ \ u(x) = D \cdot \frac{d}{dx}\left(e^{- x^{2}}\right) = K \cdot xe^{- x^{2}}
 \end{equation*}
 \chapter{Esercitazione 10 - Potrich}
+
 \ParteEsercizi
+
 \Esercizio{}
 
 Determinare le soluzioni $\displaystyle \Fc $ - trasformabili della seguente equazione differenziale
 \begin{equation*}
 xu'' + 2u' - xu = xe^{- | x|}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare le soluzioni $\displaystyle u\in S'(\RR)$ dell'equazione differenziale
 \begin{equation*}
 - u'' + u = 1 + \delta_{0} ''
 \end{equation*}
+
 \Esercizio{}
 
 Trovare la soluzione $\Lc$ - trasformabile dell'equazione
@@ -7234,6 +7545,7 @@ y'(t) - (t*y)(t) = 1\\
 y(0) = - 1
 \end{cases} \ \ \ \ \text{per} \ t > 0
 \end{equation*}
+
 \Esercizio{}
 
 Determinare la soluzione $\Lc$ - trasformabile di
@@ -7243,6 +7555,7 @@ Determinare la soluzione $\Lc$ - trasformabile di
 y(0) = 1
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Determinare la soluzione del segente problema di Cauchy
@@ -7252,6 +7565,7 @@ y'' + 2y' + y = e^{- t} \chi_{[ 1, 2]}(t)\\
 y(0) = y'(0) = 0
 \end{cases}
 \end{equation*}
+
 \Esercizio{}
 
 Risolvere il problema integro - differenziale
@@ -7261,7 +7575,9 @@ y'(t) = 1 + t + 8\int^{t}_{0}(t - \tau)^{2} y(\tau) d\tau \\
 y(0) = 1
 \end{cases}
 \end{equation*}
+
 \ParteSoluzioni
+
 \Soluzione
 
 Per le regole di derivazione
@@ -7319,6 +7635,7 @@ Sfruttiamo la parita. Per $x\in \RR $
 \begin{equation*}
 u(x) = - \frac{e^{- | x|}}{4}(| x| + 1)
 \end{equation*}
+
 \Soluzione
 
 Risolvo separatamente prima
@@ -7364,6 +7681,7 @@ l'unica soluzione in $\Sc '(\RR)$ è $u(x) = 1$, in conclusione
 \begin{equation*}
 u(x) = 1 - \delta + \frac{1}{2} e^{- | x|}
 \end{equation*}
+
 \Soluzione
 
 Usiamo le proprietà della trasformata di Laplace
@@ -7391,6 +7709,7 @@ Quindi
 \begin{equation*}
 y(t) = e^{- \frac{1}{2} t}\left[ - \cos\left(\frac{\sqrt{3}}{2} t\right) + \frac{1}{\sqrt{3}}\sin\left(\frac{\sqrt{3}}{2} t\right)\right]
 \end{equation*}
+
 \Soluzione
 
 Trasformiamo i termini di
@@ -7451,6 +7770,7 @@ Si ottiene
 \begin{equation*}
 y(t) = H(t) + tH(t) e^{- t} = H(t)\left(1 + te^{- t}\right)
 \end{equation*}
+
 \Soluzione
 
 Per risolvere
@@ -7484,6 +7804,7 @@ Quindi
 \begin{equation*}
 y(t) = \frac{1}{e} \cdot \frac{1}{2}(t - 1)^{2} H(t - 1) e^{- (t - 1)} - \frac{1}{e^{2}}\frac{1}{2}(t - 2)^{2} H(t - 2) e^{- (t - 2)}
 \end{equation*}
+
 \Soluzione
 
 Per risolvere
