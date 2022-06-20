@@ -347,7 +347,7 @@ Se $\Omega \equiv \CC $ allora $f$ è \textbf{intera}.
 \begin{equation*}
 f\left( z\right) =u\left( x,y\right) +iv\left( x,y\right) =\mathrm{Re}\left( z\right) +i\mathrm{Im}\left( z\right)
 \end{equation*}
-è olomorfa in $\Omega $ se e solo se $u,v:\Omega \rightarrow \mathbb{R}$ sono differenziabili in senso classico in $\Omega $ e valgono le \textbf{condizioni di Cauchy-Riemann}
+è olomorfa in $\Omega $ se e solo se $u,v:\Omega \rightarrow \RR $ sono differenziabili in senso classico in $\Omega $ e valgono le \textbf{condizioni di Cauchy-Riemann}
 \begin{equation}
 \begin{cases}
 u_{x}\left( x,y\right) =v_{y}\left( x,y\right)\\
@@ -392,7 +392,7 @@ f\left( z\right) & =\left( x+iy\right)^{2}\left( x^{2} +y^{2}\right) e^{i\left( 
  & =\left( x^{2} +y^{2}\right) e^{2xy}\left[\left( x^{2} -y^{2}\right)\cos\left( x^{2} -y^{2}\right) -2xy\sin\left( x^{2} -y^{2}\right)\right]\\
  & +i\left( x^{2} +y^{2}\right) e^{2xy}\left[ 2xy\cos\left( x^{2} -y^{2}\right) +\left( x^{2} -y^{2}\right)\sin\left( x^{2} -y^{2}\right)\right]
 \end{align*}
-$u,v\in C^{1}\left(\mathbb{R}^{2}\right)$.
+$u,v\in C^{1}\left(\RR ^{2}\right)$.
 
 Osserviamo che $f\left( z\right) =z^{2} \cdotp z\overline{z} \cdotp e^{i\overline{z}^{2}} =z^{3}\overline{z} e^{i\overline{z}^{2}}$
 \begin{align*}
@@ -430,7 +430,7 @@ x_{3} =-\frac{1}{2} \ \ \rightarrow \ \ y_{3} =\frac{1}{2} \ \ \rightarrow \ \ z
 \begin{defn}
 Le condizioni che verificano l'armonicità di $u$ sono
 \begin{equation}
-u\in C^{2}\left(\mathbb{R}^{2}\right) ,\ \Delta u=u_{xx} +u_{yy} =0
+u\in C^{2}\left(\RR ^{2}\right) ,\ \Delta u=u_{xx} +u_{yy} =0
 \end{equation}
 \end{defn}
 La prima è certamente vera, controlliamo che il laplaciano di $u$ sia nullo
@@ -448,7 +448,7 @@ u_{y} =-v_{x}
 \end{cases} \ \ \implies \ \ \begin{cases}
 2-2y=v_{y}\\
 -2x=-v_{x}
-\end{cases} \ \ \implies \ \ v\left( x,y\right) =x^{2} -y^{2} +2y+c,\ \ c\in \mathbb{R}
+\end{cases} \ \ \implies \ \ v\left( x,y\right) =x^{2} -y^{2} +2y+c,\ \ c\in \RR 
 \end{equation*}
 \Soluzione
 \begin{defn}
@@ -491,7 +491,7 @@ $\overline{z}$ non è olomorfa
 \lim\limits _{h\rightarrow 0}\frac{f\left( z_{0} +h\right) -f\left( z_{0}\right)}{h} & =\lim\limits _{h\rightarrow 0}\frac{\overline{z_{0} +h} -\overline{z_{0}}}{h}\\
  & =\lim\limits _{h\rightarrow 0}\frac{\cancel{\overline{z_{0}}} +\overline{h} -\cancel{\overline{z_{0}}}}{h}
 \end{align*}
-non esiste finito. Intuiamo che anche $\left| z\right| ^{2} =z\overline{z}$ avrà problemi. In particolare si dimostra che $\left| z\right| ^{2}$ è derivabile in senso complesso solo nell'origine. Il suo analogo in $\mathbb{R}^{2}$ sarebbe $f\left( x,y\right) =x^{2} +y^{2}$, che però è derivabile ovunque.
+non esiste finito. Intuiamo che anche $\left| z\right| ^{2} =z\overline{z}$ avrà problemi. In particolare si dimostra che $\left| z\right| ^{2}$ è derivabile in senso complesso solo nell'origine. Il suo analogo in $\RR ^{2}$ sarebbe $f\left( x,y\right) =x^{2} +y^{2}$, che però è derivabile ovunque.
 \end{rem}
 \textbf{\underline{2 modo}}
 
@@ -925,7 +925,7 @@ Analizziamo cosa succede all'integrale di $f\left( z\right)$ sui vari percorsi
 \begin{rem}
 Ricordiamo l'integrale di Gauss
 \begin{equation*}
-\int\nolimits _{\mathbb{R}} e^{-x^{2}} dx=\sqrt{\pi }
+\int\nolimits _{\RR } e^{-x^{2}} dx=\sqrt{\pi }
 \end{equation*}
 \end{rem}
 
@@ -1286,13 +1286,13 @@ $\mathrm{Res}\left( f,\infty \right) =-1$
 
 Calcolare il seguente integrale
 \begin{equation*}
-\int _{\mathbb{R}}\frac{1}{x^{4} +4a^{4}} dx
+\int _{\RR }\frac{1}{x^{4} +4a^{4}} dx
 \end{equation*}
 \Esercizio{}
 
 Calcolare il seguente integrale
 \begin{equation*}
-\int _{\mathbb{R}}\frac{e^{-i\lambda x}}{x^{6} +64} dx\ \ \ \ \forall \lambda \in \mathbb{R}
+\int _{\RR }\frac{e^{-i\lambda x}}{x^{6} +64} dx\ \ \ \ \forall \lambda \in \RR 
 \end{equation*}
 \Esercizio{}
 
@@ -1304,7 +1304,7 @@ Calcolare il seguente integrale
 
 Calcolare il seguente integrale, per i valori di $\alpha $ in cui converge
 \begin{equation*}
-\int _{\mathbb{R}}\frac{e^{\alpha x}}{1+e^{x}} dx\ \ \ \ \alpha \in \mathbb{R}
+\int _{\RR }\frac{e^{\alpha x}}{1+e^{x}} dx\ \ \ \ \alpha \in \RR 
 \end{equation*}
 \Esercizio{}
 
@@ -1317,7 +1317,7 @@ Calcolare il seguente integrale
 
 Per cominciare pensiamo il nostro integrale come
 \begin{equation*}
-\int _{\mathbb{R}}\frac{1}{x^{4} +4a^{4}} dx=\lim\limits _{R\rightarrow +\infty }\int ^{R}_{-R}\frac{1}{x^{4} +4a^{4}} dx
+\int _{\RR }\frac{1}{x^{4} +4a^{4}} dx=\lim\limits _{R\rightarrow +\infty }\int ^{R}_{-R}\frac{1}{x^{4} +4a^{4}} dx
 \end{equation*}
 Consideriamo un percorso $\gamma _{R}$ fatto dall'unione della curva da $-R$ a $R$ e la semicirconferenza di raggio $R$ che chiameremo $\sigma _{R}$
 
@@ -1406,7 +1406,7 @@ e quindi utilizzando il Nota Bene
 \end{equation*}
 Pertanto il nostro integrale iniziale vale
 \begin{equation*}
-\int _{\mathbb{R}}\frac{1}{x^{4} +4a^{4}} dx=\frac{\pi }{4a^{3}}
+\int _{\RR }\frac{1}{x^{4} +4a^{4}} dx=\frac{\pi }{4a^{3}}
 \end{equation*}
 \Soluzione
 \begin{thm}
@@ -1465,7 +1465,7 @@ Analizziamo il caso $\lambda  >0$. Applichiamo il Lemma di Jordan, il quale ci d
 \FloatBarrier
 
 \begin{equation*}
-\int _{\mathbb{R}}\frac{e^{-i\lambda x}}{x^{6} +64} dx=-\lim\limits _{R\rightarrow \infty }\int _{\gamma _{R}}\frac{e^{-i\lambda z}}{z^{6} +64} dz=-2\pi i\left[\sum \mathrm{Res}\left( f,z_{k}\right)\right]
+\int _{\RR }\frac{e^{-i\lambda x}}{x^{6} +64} dx=-\lim\limits _{R\rightarrow \infty }\int _{\gamma _{R}}\frac{e^{-i\lambda z}}{z^{6} +64} dz=-2\pi i\left[\sum \mathrm{Res}\left( f,z_{k}\right)\right]
 \end{equation*}
 Gli zeri al denominatore di $f$ sono nelle $6$ radici seste di $-64$ (i vertici di un esagono)
 \begin{equation*}
@@ -1488,7 +1488,7 @@ Pertanto
 
 Allora
 \begin{align*}
-\int _{\mathbb{R}}\frac{e^{-i\lambda x}}{x^{6} +64} dx & =-2\pi i\left[\frac{\left( -\sqrt{3} -i\right) e^{-i\lambda \left( -\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)} +\frac{\left(\sqrt{3} -i\right) e^{-i\lambda \left(\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)} +\frac{\left( -2i\right) e^{-i\lambda \left( -2i\right)}}{6\cdotp \left( -64\right)}\right]\\
+\int _{\RR }\frac{e^{-i\lambda x}}{x^{6} +64} dx & =-2\pi i\left[\frac{\left( -\sqrt{3} -i\right) e^{-i\lambda \left( -\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)} +\frac{\left(\sqrt{3} -i\right) e^{-i\lambda \left(\sqrt{3} -i\right)}}{6\cdotp \left( -64\right)} +\frac{\left( -2i\right) e^{-i\lambda \left( -2i\right)}}{6\cdotp \left( -64\right)}\right]\\
  & =\frac{2\pi i}{6\cdotp 64}\left[\left( -\sqrt{3} -i\right) e^{i\lambda \sqrt{3} -\lambda } +\left(\sqrt{3} -i\right) e^{-i\lambda \sqrt{3} -\lambda } +\left( -2i\right) e^{-2\lambda }\right]\\
  & =\frac{2\pi i}{6\cdotp 64}\left[ -\sqrt{3} e^{i\lambda \sqrt{3} -\lambda } -ie^{i\lambda \sqrt{3} -\lambda } +\sqrt{3} e^{-i\lambda \sqrt{3} -\lambda } -ie^{-i\lambda \sqrt{3} -\lambda } -2ie^{-2\lambda }\right]\\
  & =\frac{2\pi i}{6\cdotp 64}\left[ -\frac{\sqrt{3}}{e^{\lambda }} e^{i\lambda \sqrt{3}} -\frac{i}{e^{\lambda }} e^{i\lambda \sqrt{3}} +\frac{\sqrt{3}}{e^{\lambda }} e^{-i\lambda \sqrt{3}} -\frac{i}{e^{\lambda }} e^{-i\lambda \sqrt{3}} -2ie^{-2\lambda }\right]\\
@@ -1643,7 +1643,7 @@ quindi
 \end{align*}
 in conclusione
 \begin{equation*}
-\int _{\mathbb{R}} f\left( x\right) dx=\frac{2\pi ie^{i\alpha \pi }}{e^{i2\pi \alpha } -1} =2\pi i\frac{e^{i\alpha \pi }}{e^{2i\alpha \pi } -1} \cdotp \frac{e^{-i\alpha \pi }}{e^{-i\alpha \pi }} =2\pi i\frac{1}{e^{i\alpha \pi } -e^{-i\alpha \pi }} =\frac{\pi }{\sin\left( \alpha \pi \right)}
+\int _{\RR } f\left( x\right) dx=\frac{2\pi ie^{i\alpha \pi }}{e^{i2\pi \alpha } -1} =2\pi i\frac{e^{i\alpha \pi }}{e^{2i\alpha \pi } -1} \cdotp \frac{e^{-i\alpha \pi }}{e^{-i\alpha \pi }} =2\pi i\frac{1}{e^{i\alpha \pi } -e^{-i\alpha \pi }} =\frac{\pi }{\sin\left( \alpha \pi \right)}
 \end{equation*}
 \chapter{Esercitazione 3 - Potrich}
 \ParteEsercizi
@@ -2095,7 +2095,7 @@ Calcolare il seguente integrale:
 
 Calcolare il seguente integrale:
 \begin{equation*}
-\int _{\mathbb{R}}\frac{e^{ix}}{x^{3} +x^{2} +x+1} dx
+\int _{\RR }\frac{e^{ix}}{x^{3} +x^{2} +x+1} dx
 \end{equation*}
 \Esercizio{}
 
@@ -2132,29 +2132,29 @@ Ho due vie:
 
 Riconoscendo che la funzione integranda è pari posso scrivere che:
 \begin{equation*}
-\int ^{+\infty }_{0}\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx\overset{\text{(pari)}}{=}\frac{1}{2}\int _{\mathbb{R}}\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx\overset{\text{(*)}}{=}\frac{1}{2}\left(\int _{\mathbb{R}}\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx+i\int _{\mathbb{R}}\frac{\sin (\alpha x)}{x^{2} +\beta ^{2}} dx\right)
+\int ^{+\infty }_{0}\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx\overset{\text{(pari)}}{=}\frac{1}{2}\int _{\RR }\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx\overset{\text{(*)}}{=}\frac{1}{2}\left(\int _{\RR }\frac{\cos (\alpha x)}{x^{2} +\beta ^{2}} dx+i\int _{\RR }\frac{\sin (\alpha x)}{x^{2} +\beta ^{2}} dx\right)
 \end{equation*}
-Nel passaggio (*) abbiamo sfruttato l'annullamento dell'integrale di una funzione dispari su tutto $\mathbb{R}$. Riconosciamo ora che possiamo riscriverla come:
+Nel passaggio (*) abbiamo sfruttato l'annullamento dell'integrale di una funzione dispari su tutto $\RR $. Riconosciamo ora che possiamo riscriverla come:
 
 \begin{equation*}
-\frac{1}{2}\int _{\mathbb{R}}\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}} dx
+\frac{1}{2}\int _{\RR }\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}} dx
 \end{equation*}Prendiamo ora in esame $f(z)=\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}}$, sfruttiamo il Lemma di Jordan ($\alpha  >0$) e il Teorema dei residui, integrando sulla semicirconferenza superiore.
 \begin{equation*}
 \int _{\gamma _{R}} f( z) dz=2\pi i\cdotp \mathrm{Res}( f,z=i\beta ) =2\pi i\cdotp \left. \frac{e^{i\alpha x}}{2z}\right| _{z=i\beta } =\frac{\pi }{\beta } e^{-\alpha \beta }
 \end{equation*}
 Per $R\rightarrow +\infty $
 \begin{equation*}
-\frac{\pi }{\beta } e^{-\alpha \beta } =\int _{\gamma _{R}} =\int ^{R}_{-R} +\cancel{\int _{\sigma _{R}}}\xrightarrow{R\rightarrow +\infty }\int _{\mathbb{R}} f( x) dx\ \ \implies \ \ \frac{1}{2}\int _{\mathbb{R}}\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}} dx=\frac{\pi e^{-\alpha \beta }}{2\beta }
+\frac{\pi }{\beta } e^{-\alpha \beta } =\int _{\gamma _{R}} =\int ^{R}_{-R} +\cancel{\int _{\sigma _{R}}}\xrightarrow{R\rightarrow +\infty }\int _{\RR } f( x) dx\ \ \implies \ \ \frac{1}{2}\int _{\RR }\frac{e^{i\alpha x}}{x^{2} +\beta ^{2}} dx=\frac{\pi e^{-\alpha \beta }}{2\beta }
 \end{equation*}
 \Soluzione
 
 C'è un asintoto verticale in $x=-1$, quindi non converge.\begin{equation*}
-\int _{\mathbb{R}}\frac{e^{ix}}{x^{3} +x^{2} +x+1} dx=\int _{\mathbb{R}}\frac{e^{ix}}{(x^{2} +1)(x+1)} dx
+\int _{\RR }\frac{e^{ix}}{x^{3} +x^{2} +x+1} dx=\int _{\RR }\frac{e^{ix}}{(x^{2} +1)(x+1)} dx
 \end{equation*}
 
 Non calcoliamo lui, ma il suo \textit{Valore Principale:} ovvero dobbiamo fare i limiti tutti insieme, non separati. In caso di forme di indecisione $( \infty -\infty )$ potrebbe saltare fuori qualcosa di buono.
 \begin{equation*}
-( VP)\int _{\mathbb{R}}\frac{e^{ix}}{(x^{2} +1)(x+1)} dx=\lim _{\varepsilon \rightarrow 0^{+} \ R\rightarrow \infty }\left[\int ^{-1-\varepsilon }_{-R} f(x)dx+\int ^{R}_{-1+\varepsilon } f(x)dx\right]
+( VP)\int _{\RR }\frac{e^{ix}}{(x^{2} +1)(x+1)} dx=\lim _{\varepsilon \rightarrow 0^{+} \ R\rightarrow \infty }\left[\int ^{-1-\varepsilon }_{-R} f(x)dx+\int ^{R}_{-1+\varepsilon } f(x)dx\right]
 \end{equation*}
 Rinfrescate le idee, ora consideriamo come dominio di integrazione una semicirconferenza come raffigurata e scomponiamo l'integrale sulle 4 curve (due tratti curvilinei e due rettilinei, prima e dopo la circonferenza interna).
 
@@ -2228,13 +2228,13 @@ Applichiamo anche il teorema dei residui sull'integrale su $\gamma _{R,\varepsil
 \begin{equation*}
 \begin{aligned}
 \int _{\gamma _{R,\varepsilon }} & =\int ^{-1-\varepsilon }_{-R} +\int ^{R}_{-1-\varepsilon } +\int _{\sigma _{\varepsilon }} +\int _{\sigma _{R}}\\
-2\pi i\cdotp \mathrm{Res} (f,i) & =\int _{\mathbb{R}} f( x) dx-\pi i\cdotp \mathrm{Res}( f,-1) +0
+2\pi i\cdotp \mathrm{Res} (f,i) & =\int _{\RR } f( x) dx-\pi i\cdotp \mathrm{Res}( f,-1) +0
 \end{aligned}
 \end{equation*}
 Ovvero
 \begin{equation*}
 \begin{aligned}
-\int _{\mathbb{R}} f( x) dx & =2\pi i\cdotp \mathrm{Res} (f,i)+\pi i\cdotp \mathrm{Res}( f,-1)\\
+\int _{\RR } f( x) dx & =2\pi i\cdotp \mathrm{Res} (f,i)+\pi i\cdotp \mathrm{Res}( f,-1)\\
  & =2\pi i\cdotp \frac{e^{-1}}{2i-2} +\pi i\cdotp \frac{e^{-i}}{2}\\
  & =\pi i\left(\frac{e^{-1}}{i-1} +\frac{e^{-i}}{2}\right)
 \end{aligned}
@@ -2341,17 +2341,17 @@ f_{n} (x)=\frac{\sqrt{n}}{1+(nx)^{2}}\xrightarrow{n\rightarrow \infty } F(x)=\be
 \end{equation*}
 Controlliamo la convergenza in $L^{1}$
 \begin{equation*}
-\Vert f_{n} -F\Vert _{L^{1}} =\int _{\mathbb{R}}\frac{\sqrt{n}}{1+(nx)^{2}} dx=\left\{\begin{array}{ c }
+\Vert f_{n} -F\Vert _{L^{1}} =\int _{\RR }\frac{\sqrt{n}}{1+(nx)^{2}} dx=\left\{\begin{array}{ c }
 nx=t\\
 dx=\frac{1}{n} dt
-\end{array}\right\} =\frac{1}{\sqrt{n}}\int _{\mathbb{R}}\frac{1}{1+t^{2}} dt\xrightarrow{n\rightarrow \infty } 0
+\end{array}\right\} =\frac{1}{\sqrt{n}}\int _{\RR }\frac{1}{1+t^{2}} dt\xrightarrow{n\rightarrow \infty } 0
 \end{equation*}
 Controlliamo la convergenza in $L^{p}$:
 \begin{gather*}
-\Vert f_{n} -F\Vert ^{p}_{L^{p}} =\int _{\mathbb{R}}\frac{n^{p/2}}{(1+(nx)^{2} )^{p}} =\left\{\begin{array}{ c }
+\Vert f_{n} -F\Vert ^{p}_{L^{p}} =\int _{\RR }\frac{n^{p/2}}{(1+(nx)^{2} )^{p}} =\left\{\begin{array}{ c }
 nx=t\\
 dx=\frac{1}{n} dt
-\end{array}\right\} =n^{\frac{p}{2} -1}\int _{\mathbb{R}}\frac{1}{(1+t^{2} )^{p}} dt\\
+\end{array}\right\} =n^{\frac{p}{2} -1}\int _{\RR }\frac{1}{(1+t^{2} )^{p}} dt\\
 \\
 \implies \ \ \Vert f_{n} -F\Vert ^{p}_{L^{p}}\xrightarrow{n\rightarrow \infty } 0\ \ \iff \ \ \frac{p}{2} -1< 0\ \ \iff \ \ p< 2
 \end{gather*}
@@ -2407,7 +2407,7 @@ Allora possiamo scambiare limite e segno dell'integrale e dedurre che c'è conve
 
 Vediamo una quarta tipologia
 \begin{equation*}
-\boxed{\int ^{+\infty }_{0} x^{\alpha } R\left( x^{m}\right) dx} \ \ \ \ \alpha \in \mathbb{R} ,m\in \mathbb{N} ,m\geqslant 2
+\boxed{\int ^{+\infty }_{0} x^{\alpha } R\left( x^{m}\right) dx} \ \ \ \ \alpha \in \RR  ,m\in \mathbb{N} ,m\geqslant 2
 \end{equation*}
 Se $\alpha $ è un intero, allora si integra su curve così
 
@@ -2541,7 +2541,7 @@ Se $m=2$ allora tolgo un altro ramo.
 
 Calcolare
 \begin{equation*}
-I=\int ^{+\infty }_{0}\frac{x^{\alpha }}{1+x^{3}} dx\ \ \ \ \alpha \in \mathbb{R} ,
+I=\int ^{+\infty }_{0}\frac{x^{\alpha }}{1+x^{3}} dx\ \ \ \ \alpha \in \RR  ,
 \end{equation*}
 \Esercizio{}
 
@@ -2685,13 +2685,13 @@ f\ \ \ \ g\ \ \ \ f-g\ \ \ \ \frac{g}{f}
 \end{enumerate}
 \Esercizio{ }
 
-Sia $B=\left\{\left( x,y\right) \in \mathbb{R}^{2} :x^{2} +y^{2} \leqslant 1\right\}$ e sia
+Sia $B=\left\{\left( x,y\right) \in \RR ^{2} :x^{2} +y^{2} \leqslant 1\right\}$ e sia
 \begin{equation*}
 f\left( x,y\right) =\frac{1}{\sqrt{x^{2} +y^{2}}}
 \end{equation*}
 \begin{enumerate}
 \item Stabilire per quali $p\geqslant 1$ si ha $f\in L^{p}\left( B\right)$
-\item Stabilire per quali $q$ si ha $f\in L^{q}\left(\mathbb{R}^{2} \setminus B\right)$.
+\item Stabilire per quali $q$ si ha $f\in L^{q}\left(\RR ^{2} \setminus B\right)$.
 \end{enumerate}
 \Esercizio{}
 
@@ -2902,12 +2902,12 @@ B^{\star } =\{( \rho ,\vartheta ) :0\leqslant \rho \leqslant 1,0< \vartheta < 2\
 \end{gather*}
 Rispondiamo al punto $2$.
 \begin{gather*}
-\iint _{\mathbb{R}^{2} \setminus B}| f( x,y)| ^{q} dxdy=2\pi \int ^{+\infty }_{1}\frac{1}{\rho ^{q-1}} d\rho < +\infty \ \ \iff \ \ q-1 >1\\
+\iint _{\RR ^{2} \setminus B}| f( x,y)| ^{q} dxdy=2\pi \int ^{+\infty }_{1}\frac{1}{\rho ^{q-1}} d\rho < +\infty \ \ \iff \ \ q-1 >1\\
 \iff q >2\ \left( +\infty \ \text{incluso}\right)
 \end{gather*}
 \Soluzione
 \begin{thm}
-[della convergenza dominata] Sia $\{f_{n}\}$ una successione di funzioni misurabili su un insieme $\Omega \subset \mathbb{R}^{n}$ misurabile. Supponiamo che siano verificate le seguenti due condizioni:\footnote{È importante che la $g$ non dipenda da $n$.}
+[della convergenza dominata] Sia $\{f_{n}\}$ una successione di funzioni misurabili su un insieme $\Omega \subset \RR ^{n}$ misurabile. Supponiamo che siano verificate le seguenti due condizioni:\footnote{È importante che la $g$ non dipenda da $n$.}
 \begin{equation*}
 \begin{cases}
 f_{n}\xrightarrow{n\rightarrow +\infty } f\ \text{q.o. in} \ \Omega \\
@@ -3004,9 +3004,9 @@ f( x,y) =\frac{1}{(x^{2} +y^{2} )^{\alpha }\sqrt{1+x^{2} +y^{2}}}
 \end{equation*}
 scegliendo $\alpha $ tale per cui:
 \begin{itemize}
-\item $f\in L^{1} (\mathbb{R} )$
-\item $f\in L^{p} (\mathbb{R} )$
-\item $f\in L^{\infty } (\mathbb{R} )$
+\item $f\in L^{1} (\RR  )$
+\item $f\in L^{p} (\RR  )$
+\item $f\in L^{\infty } (\RR  )$
 \end{itemize}
 \Esercizio{}
 
@@ -3029,14 +3029,14 @@ f(x)=\sum ^{\infty }_{n=1}\frac{n+1}{n^{4} +n}\sin (n\pi x)
 
 Data una funzione $2\pi $-periodica
 \begin{equation*}
-f:[ 0,2\pi )\rightarrow \mathbb{R} \ \ \ \ f(x)=x
+f:[ 0,2\pi )\rightarrow \RR  \ \ \ \ f(x)=x
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
 \Esercizio{}
 
 Data una funzione $1$-periodica dispari
 \begin{equation*}
-f:[ 0,1]\rightarrow \mathbb{R} \ \ \ \ f(x)=x-x^{2}
+f:[ 0,1]\rightarrow \RR  \ \ \ \ f(x)=x-x^{2}
 \end{equation*}
 Determinare la sue serie di Fourier.
 \ParteSoluzioni
@@ -3054,7 +3054,7 @@ Per vedere se $f\in L^{1}$, posto che sia sempre positiva, basta integrarla su t
 \end{gather*}
 Quindi
 \begin{equation*}
-f(x,y)\in L^{1} (\mathbb{R}^{2} )\ \ \iff \ \ \frac{1}{2} < \alpha < 1
+f(x,y)\in L^{1} (\RR ^{2} )\ \ \iff \ \ \frac{1}{2} < \alpha < 1
 \end{equation*}
 Se invece consideriamo il generico $L^{p}$ dobbiamo elevare alla $p$, ma non il $\rho $ dello Jacobiano
 \begin{equation*}
@@ -3069,7 +3069,7 @@ Calcoliamo
 \end{equation*}
 Allora
 \begin{equation*}
-f(x,y)\in L^{p} (\mathbb{R}^{2} )\ \ \iff \ \ \frac{1}{p} -\frac{1}{2} < \alpha < \frac{1}{p}
+f(x,y)\in L^{p} (\RR ^{2} )\ \ \iff \ \ \frac{1}{p} -\frac{1}{2} < \alpha < \frac{1}{p}
 \end{equation*}
 \Soluzione
 
@@ -3215,7 +3215,7 @@ f(x)=\sum ^{+\infty }_{n=1}\frac{4}{n^{3} \pi ^{3}} (1-( -1)^{n}\sin (n\pi x)=\s
 \ParteEsercizi
 \Esercizio{}
 
-Data la successione di funzioni $f_{n} :[ 0,+\infty )\rightarrow \mathbb{R}$
+Data la successione di funzioni $f_{n} :[ 0,+\infty )\rightarrow \RR $
 \begin{equation*}
 f_{n}( x) =\sqrt{n} e^{-nx}
 \end{equation*}
@@ -3242,11 +3242,11 @@ f_{n,\alpha }( x) =\frac{n^{\alpha }}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n
 \end{equation*}
 \begin{enumerate}
 \item Determinare il limite puntuale $F_{\alpha }( x)$.
-\item Stabilire al variare di $\alpha $ se $f_{n,\alpha }\rightarrow F_{\alpha }$ in $L^{1}(\mathbb{R})$ e in $L^{\infty }(\mathbb{R})$.
+\item Stabilire al variare di $\alpha $ se $f_{n,\alpha }\rightarrow F_{\alpha }$ in $L^{1}(\RR )$ e in $L^{\infty }(\RR )$.
 \end{enumerate}
 \Esercizio{}
 
-Sia $f:\mathbb{R}\rightarrow \mathbb{R}$ la funzione $2\pi $-periodica che sull'intervallo $( -\pi ,\pi ]$ è definita da
+Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $-periodica che sull'intervallo $( -\pi ,\pi ]$ è definita da
 \begin{equation*}
 f( x) =x+| x| =\begin{cases}
 2x, & x\in [ 0,\pi ]\\
@@ -3255,7 +3255,7 @@ f( x) =x+| x| =\begin{cases}
 \end{equation*}
 \begin{enumerate}
 \item Disegnare il grafico di $f$ in $[ -3\pi ,3\pi ]$
-\item Stabilire per quali valori di $x\in \mathbb{R}$ la serie di Fourier $F$ di $f$ converge puntualmente, precisandone l'eventuale limite.
+\item Stabilire per quali valori di $x\in \RR $ la serie di Fourier $F$ di $f$ converge puntualmente, precisandone l'eventuale limite.
 \item Calcolare la serie di Fourier $F$ di $f$.
 \item Stabilire se $F$ converge in media quadratica a $f$.
 \item Studiare la convergenza uniforme di $F$ a $f$
@@ -3308,7 +3308,7 @@ Studiamo la norma $L^{2}$
 \end{equation*}
 Studiamo la norma $L^{\infty }$
 
-Le $f_{n}$ sono positive e continue su $\mathbb{R}^{+}$, quindi
+Le $f_{n}$ sono positive e continue su $\RR ^{+}$, quindi
 \begin{equation*}
 \begin{aligned}
 \| f_{n} -f\| _{\infty } & =\| f_{n} \| _{\infty } =\max_{x\in [ 0,+\infty )} f_{n}( x)\\
@@ -3352,20 +3352,20 @@ Analogamente si trova una maggiorante $L^{1}$ per $f^{2}_{n}$\begin{equation*}
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
-\item Sia $x_{0} \in \mathbb{R}$ fissato\begin{equation*}
+\item Sia $x_{0} \in \RR $ fissato\begin{equation*}
 f_{n,\alpha }( x_{0}) \sim \frac{n^{\alpha }}{4n^{4}} =\frac{1}{4n^{4-\alpha }}\xrightarrow{n\rightarrow +\infty }\begin{cases}
 0, & \alpha \in [ 0,4)\\
 \frac{1}{4} , & \alpha =4
 \end{cases}
 \end{equation*}
-\item $\forall n\in \mathbb{N} ,\forall \alpha \in [ 0,4] ,f_{n,\alpha } \in L^{1}(\mathbb{R})$
+\item $\forall n\in \mathbb{N} ,\forall \alpha \in [ 0,4] ,f_{n,\alpha } \in L^{1}(\RR )$
 
-Tuttavia se $\alpha =4$, $F_{4} \notin L^{1}(\mathbb{R}) \implies f_{n,4} \nrightarrow F_{4}$ in $L^{1}(\mathbb{R})$ per $n\rightarrow +\infty $.
+Tuttavia se $\alpha =4$, $F_{4} \notin L^{1}(\RR ) \implies f_{n,4} \nrightarrow F_{4}$ in $L^{1}(\RR )$ per $n\rightarrow +\infty $.
 
 Mentre se $\alpha \in [ 0,4)$\begin{equation*}
 \begin{aligned}
-\Vert f_{n,\alpha } -F_{\alpha }\Vert _{L^{1}} & =\Vert f_{n,\alpha }\Vert =\int _{\mathbb{R}}\frac{n^{\alpha }}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} dx\\
- & =n^{\alpha }\int _{\mathbb{R}}\frac{1}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} dx=n^{\alpha } \cdotp I_{n}
+\Vert f_{n,\alpha } -F_{\alpha }\Vert _{L^{1}} & =\Vert f_{n,\alpha }\Vert =\int _{\RR }\frac{n^{\alpha }}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} dx\\
+ & =n^{\alpha }\int _{\RR }\frac{1}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} dx=n^{\alpha } \cdotp I_{n}
 \end{aligned}
 \end{equation*}
 
@@ -3443,23 +3443,23 @@ Studiamo ora la norma $L^{\infty }$
 Per $\alpha \in [ 0,4)$\begin{equation*}
 \begin{aligned}
 \Vert f_{n,\alpha } -F_{\alpha }\Vert _{L^{\infty }} & =\Vert f_{n,\alpha }\Vert _{L^{\infty }} & \\
- & =\max_{x\in \mathbb{R}} f_{n,\alpha }( x) & \left( f_{n} \ \text{sono continue e positive}\right)\\
+ & =\max_{x\in \RR } f_{n,\alpha }( x) & \left( f_{n} \ \text{sono continue e positive}\right)\\
  & =f_{n,\alpha }( 0) & \text{(simmetria)}\\
  & =\frac{1}{4n^{4-\alpha }}\xrightarrow{n\rightarrow +\infty } 0 & \\
- & \implies \ \ f_{n,\alpha }\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})} F_{\alpha } & 
+ & \implies \ \ f_{n,\alpha }\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\RR )} F_{\alpha } & 
 \end{aligned}
 \end{equation*}Per $\alpha =4$\begin{equation*}
 \begin{aligned}
 \Vert f_{n,4} -F_{4}\Vert _{L^{\infty }} & =\left\Vert f_{n,4} -\frac{1}{4}\right\Vert _{L^{\infty }}\\
- & =\max_{x\in \mathbb{R}}\left[\frac{n^{4}}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} -\frac{1}{4}\right]\\
+ & =\max_{x\in \RR }\left[\frac{n^{4}}{\left( x^{2} +n^{2}\right)\left( x^{2} +4n^{2}\right)} -\frac{1}{4}\right]\\
  & =\frac{1}{4}\cancel{\xrightarrow{n\rightarrow +\infty }} 0\\
- & \implies \ \ f_{n,4}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})}} F_{4}
+ & \implies \ \ f_{n,4}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\RR )}} F_{4}
 \end{aligned}
 \end{equation*}
 \end{enumerate}
 \Soluzione
 \begin{thm}
-Sia $f:\mathbb{R}\rightarrow \mathbb{R}$, $T$-periodica, allora la serie di Fourier associata ad $f$ è\begin{equation*}
+Sia $f:\RR \rightarrow \RR $, $T$-periodica, allora la serie di Fourier associata ad $f$ è\begin{equation*}
 F( x) =\frac{a_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left[ a_{n}\cos\left(\frac{2\pi n}{T} x\right) +b_{n}\sin\left(\frac{2\pi n}{T} x\right)\right]
 \end{equation*}
 
@@ -3528,7 +3528,7 @@ a_{n} =\frac{2}{T}\int ^{\frac{T}{2}}_{-\frac{T}{2}} f( x)\cos\left(\frac{2\pi n
 \end{figure}
 \FloatBarrier
 
-\item $f$ è regolare a tratti in $[ -\pi ,\pi ] \implies $ la serie di Fourier $F( x)$ converge puntualmente $\forall x\in \mathbb{R}$.
+\item $f$ è regolare a tratti in $[ -\pi ,\pi ] \implies $ la serie di Fourier $F( x)$ converge puntualmente $\forall x\in \RR $.
 \begin{enumerate}
 \item se $x$ è un punto di continuità, $F( x)$ converge a $f( x)$
 \item se $x$ non è punto di continuità, $F( x)$ converge alla media tra il limite destro e sinistro
@@ -3579,7 +3579,7 @@ F( x) =\frac{\pi }{2} +2\sum\limits ^{\infty }_{n=1}\left[\frac{( -1)^{n} -1}{\p
 \end{equation*}
 
 allora $F( x)$ di $f$ converge in media quadratica.
-\item Poiché $f$ \underline{\textbf{non}} è continua, allora la convergenza \underline{\textbf{non}} è uniforme su $\mathbb{R}$.
+\item Poiché $f$ \underline{\textbf{non}} è continua, allora la convergenza \underline{\textbf{non}} è uniforme su $\RR $.
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
@@ -3621,7 +3621,7 @@ F\left(\frac{\pi }{2}\right) & =\frac{\sqrt{2}}{\pi }\sin\left(\frac{\pi }{\sqrt
 
 Criterio di Weierstrass, prendo il termine generale in modulo\begin{gather*}
 | a_{k}\cos( 2k\pi )| \leqslant \frac{2\sqrt{2}}{\pi \left( 2k^{2} -1\right)}\\
-\sum\limits ^{\infty }_{k=1}\frac{2\sqrt{2}}{\pi \left( 2k^{2} -1\right)} < +\infty \ \ \implies \ \ \text{convergenza è uniforme su} \ \mathbb{R}
+\sum\limits ^{\infty }_{k=1}\frac{2\sqrt{2}}{\pi \left( 2k^{2} -1\right)} < +\infty \ \ \implies \ \ \text{convergenza è uniforme su} \ \RR 
 \end{gather*}
 \end{enumerate}
 \chapter{Esercitazione 6 - Boella}
@@ -3630,7 +3630,7 @@ Criterio di Weierstrass, prendo il termine generale in modulo\begin{gather*}
 
 Data una funzione $2\pi $-periodica
 \begin{equation*}
-f:[ -\pi ,\pi ]\rightarrow \mathbb{R} \ \ \ \ f(x)=x^{2}
+f:[ -\pi ,\pi ]\rightarrow \RR  \ \ \ \ f(x)=x^{2}
 \end{equation*}
 Determinare la sue serie di Fourier. Si riesce a ricondurre la serie ad una nota?
 \Esercizio{}
@@ -3701,7 +3701,7 @@ f_{n} (x)=nx^{n} \chi _{(0,1)} (x)
 \ParteSoluzioni
 \Soluzione
 
-Osserviamo che la funzione $f(x)=x^{2}$ converge in $L^{2}$ e puntualmente su $\mathbb{R}$.
+Osserviamo che la funzione $f(x)=x^{2}$ converge in $L^{2}$ e puntualmente su $\RR $.
 
 Osserviamo che $b_{n} =0,\forall n$ perché la funzione è pari.
 
@@ -3756,7 +3756,7 @@ f(x)=\begin{cases}
 2, & 2\leq x< 3
 \end{cases}
 \end{equation*}
-converge in $L^{2}( 0,3)$. Converge inoltre puntualmente q.o. su $\mathbb{R}$ (a meno dell'insieme $x\notin \mathbb{Z}$).
+converge in $L^{2}( 0,3)$. Converge inoltre puntualmente q.o. su $\RR $ (a meno dell'insieme $x\notin \mathbb{Z}$).
 
 
 \begin{figure}[htpb]
@@ -3860,12 +3860,12 @@ f_{n} (x)=ne^{-n|x|} \ \ \ \ \lim\limits _{n\rightarrow +\infty } f_{n}( x) =\be
 
 Notiamo che non c'è convergenza in $L^{1}$:
 \begin{equation*}
-\Vert f_{n} -F\Vert _{L^{1}(\mathbb{R})} =2\int ^{\infty }_{0} ne^{-nx} dx=2\left[ -e^{-nx}\right]^{\infty }_{0} =2\nrightarrow 0
+\Vert f_{n} -F\Vert _{L^{1}(\RR )} =2\int ^{\infty }_{0} ne^{-nx} dx=2\left[ -e^{-nx}\right]^{\infty }_{0} =2\nrightarrow 0
 \end{equation*}
-Tuttavia $f_{n} \in L^{1}_{\mathrm{loc}}(\mathbb{R})$, quindi sono anche associate a una distribuzione.
+Tuttavia $f_{n} \in L^{1}_{\mathrm{loc}}(\RR )$, quindi sono anche associate a una distribuzione.
 \begin{equation*}
 \begin{aligned}
-\langle f_{n} ,\varphi \rangle  & =\int _{\mathbb{R}} ne^{-n| x| } \varphi ( x) dx=\int ^{0}_{-\infty } ne^{nx} \varphi ( x) dx+\int ^{\infty }_{0} ne^{-nx} \varphi ( x) dx\\
+\langle f_{n} ,\varphi \rangle  & =\int _{\RR } ne^{-n| x| } \varphi ( x) dx=\int ^{0}_{-\infty } ne^{nx} \varphi ( x) dx+\int ^{\infty }_{0} ne^{-nx} \varphi ( x) dx\\
  & \overset{\text{ipp}}{=}\left[ e^{nx} \varphi ( x)\right]^{0}_{-\infty } -\int ^{0}_{-\infty } e^{nx} \varphi '( x) dx+\left[ -e^{-nx}\right]^{\infty }_{0} +\int ^{\infty }_{0} e^{-nx} \varphi '( x) dx\\
  & =\varphi ( 0) -\underbrace{\int ^{0}_{-\infty } e^{nx} \varphi '( x) dx}_{\xrightarrow{\text{Dom}} 0} +\varphi ( 0) +\underbrace{\int ^{\infty }_{0} e^{-nx} \varphi '( x) dx}_{\xrightarrow{\text{Dom}} 0}\rightarrow 2\varphi ( 0)
 \end{aligned}
@@ -3876,7 +3876,7 @@ Prendiamo $g_{n}( x) =e^{-nx} \varphi '( x)$ su $( 0,+\infty )$, $g_{n}( x)\righ
 \end{equation*}
 Quindi
 \begin{equation*}
-\langle f_{n} ,\varphi \rangle \rightarrow 2\varphi ( 0) =2\langle \delta ,\varphi \rangle \ \ \implies \ \ f_{n}\xrightarrow{D'(\mathbb{R})} 2\delta 
+\langle f_{n} ,\varphi \rangle \rightarrow 2\varphi ( 0) =2\langle \delta ,\varphi \rangle \ \ \implies \ \ f_{n}\xrightarrow{D'(\RR )} 2\delta 
 \end{equation*}
 \Soluzione
 
@@ -3889,7 +3889,7 @@ Limite puntuale
 \end{equation*}
 \fg{0.7}{11-4}
 
-In $D'(\mathbb{R})$
+In $D'(\RR )$
 \begin{equation*}
 \begin{aligned}
 \langle f_{n} ,\varphi \rangle  & =\int ^{-1/n}_{-2/n} 2n\varphi ( x) dx+\int ^{1/n}_{-1/n}( -3n) \varphi ( x) dx+\int ^{2/n}_{1/n} 2n\varphi ( x) dx\\
@@ -3932,13 +3932,13 @@ viene
 \end{equation*}
 Ovvero
 \begin{equation*}
-f_{n}\xrightarrow{D'(\mathbb{R})} -2\delta \ \ \ \ g_{n}\xrightarrow{D'(\mathbb{R})} 2\delta 
+f_{n}\xrightarrow{D'(\RR )} -2\delta \ \ \ \ g_{n}\xrightarrow{D'(\RR )} 2\delta 
 \end{equation*}
 \Soluzione
 
 Limite puntuale
 \begin{equation*}
-f_{n} (x)=nx^{n} \chi _{(0,1)} (x)\ \ \ \ \lim\limits _{n\rightarrow +\infty } f_{n}( x) =0,\ \forall x\in \mathbb{R}
+f_{n} (x)=nx^{n} \chi _{(0,1)} (x)\ \ \ \ \lim\limits _{n\rightarrow +\infty } f_{n}( x) =0,\ \forall x\in \RR 
 \end{equation*}
 \fg{0.3}{11-5}
 \begin{equation*}
@@ -3953,7 +3953,7 @@ Dato che $g_{n}( x) =x^{n+1} \varphi '( x)\xrightarrow{n\rightarrow +\infty } 0,
 \end{equation*}
 In conclusione
 \begin{equation*}
-\langle f_{n} ,\varphi \rangle \rightarrow \langle \delta _{1} ,\varphi \rangle \ \ \implies \ \ f_{n}\xrightarrow{D'(\mathbb{R})} \delta _{1}
+\langle f_{n} ,\varphi \rangle \rightarrow \langle \delta _{1} ,\varphi \rangle \ \ \implies \ \ f_{n}\xrightarrow{D'(\RR )} \delta _{1}
 \end{equation*}
 \textit{Esercizio per casa.}
 
@@ -3962,7 +3962,7 @@ Date $f_{n}( x) =nx^{n} \chi _{( 0,1)}( x)$, calcolare il limite in $D'( 0,1)$.
 \ParteEsercizi
 \Esercizio{}
 
-Sia $f:\mathbb{R}\rightarrow \mathbb{R}$ la funzione $2\pi $-periodica dispari definita da
+Sia $f:\RR \rightarrow \RR $ la funzione $2\pi $-periodica dispari definita da
 \begin{equation*}
 f( x) =\begin{cases}
 \sin x, & x\in \left[ 0,\frac{\pi }{2}\right)\\
@@ -4026,8 +4026,8 @@ dove
 \end{equation*}
 \begin{enumerate}
 \item Determinare il limite puntuale $f( x)$.
-\item Stabilire al variare di $\alpha $ se $f_{n,\alpha }\rightarrow f$ in $L^{p}(\mathbb{R})$.
-\item Se $\alpha =1$, calcolare $\lim\limits _{n\rightarrow +\infty } f_{n,1}$ in $D'(\mathbb{R})$.
+\item Stabilire al variare di $\alpha $ se $f_{n,\alpha }\rightarrow f$ in $L^{p}(\RR )$.
+\item Se $\alpha =1$, calcolare $\lim\limits _{n\rightarrow +\infty } f_{n,1}$ in $D'(\RR )$.
 \end{enumerate}
 \ParteSoluzioni
 \Soluzione
@@ -4124,10 +4124,10 @@ dove
 \end{equation*}
 
 allora la serie di Fourier converge in media quadratica.
-\item $f$ è una funzione regolare a tratti in $[ -\pi ,\pi ]$, allora converge puntualmente $\forall x\in \mathbb{R}$.
+\item $f$ è una funzione regolare a tratti in $[ -\pi ,\pi ]$, allora converge puntualmente $\forall x\in \RR $.
 
 Più precisamente converge puntualmente a $f( x) ,\ \forall x\neq ( 2k+1)\frac{\pi }{2} ,\ k\in \mathbb{Z}$, mentre converge a $\frac{1}{2} ,\ \forall x=( 2k+1)\frac{\pi }{2} ,\ k\in \mathbb{Z}$.
-\item Non c'è convergenza uniforme perché $f$ non è continua su $\mathbb{R}$.
+\item Non c'è convergenza uniforme perché $f$ non è continua su $\RR $.
 \item $f$ è dispari, allora $a_{n} =0,\ \forall n\in \mathbb{N}$.
 
 \begin{equation*}
@@ -4305,15 +4305,15 @@ ne^{n( x-1)} , & x\leqslant 1\\
 \end{equation*}
 \fg{0.7}{12-4}
 \begin{enumerate}
-\item Fissiamo $x_{0} \in \mathbb{R}$
+\item Fissiamo $x_{0} \in \RR $
 \begin{enumerate}
 \item Se $x_{0} =1\implies f_{n}( 1) =n\xrightarrow{n\rightarrow +\infty } +\infty $.
 \item Se $x_{0} \neq 1\implies f_{n}( x_{0})\xrightarrow{n\rightarrow +\infty } 0$.
 \end{enumerate}
 
 Quindi converge puntualmente alla funzione limite $f( x) \equiv 0\ \forall x\neq 1$.
-\item $\forall \varphi \in D(\mathbb{R})$, cioè per ogni $\varphi $ a supporto compatto in $\mathbb{R}$,\begin{align*}
-\langle f_{n} ,\varphi \rangle  & =\int _{\mathbb{R}} f_{n}( x) \varphi ( x) dx\\
+\item $\forall \varphi \in D(\RR )$, cioè per ogni $\varphi $ a supporto compatto in $\RR $,\begin{align*}
+\langle f_{n} ,\varphi \rangle  & =\int _{\RR } f_{n}( x) \varphi ( x) dx\\
  & =\int ^{1}_{-\infty } ne^{n( x-1)} \varphi ( x) dx\\
  & \overset{\text{ipp}}{=}\left[ e^{n( x-1)} \varphi ( x)\right]^{1}_{-\infty } -\int ^{1}_{-\infty } e^{n( x-1)} \varphi '( x) dx\\
  & =\varphi ( 1) -\int ^{1}_{-\infty } e^{n( x-1)} \varphi '( x) dx
@@ -4325,7 +4325,7 @@ Obiettivo: calcolare il limite per $n\rightarrow +\infty $\begin{align*}
  & \overset{\text{Dom}}{=} \varphi ( 1) -\int ^{1}_{-\infty }\underbrace{\lim\limits _{n\rightarrow +\infty } e^{n( x-1)} \varphi '( x)}_{=0} dx=\varphi ( 1)
 \end{align*}
 
-Posso applicare il teorema della convergenza dominata perché $\varphi \in D(\mathbb{R})$. $\exists M$ tale che $| \varphi '( x)| < M,\ \forall x\in \mathbb{R}$.
+Posso applicare il teorema della convergenza dominata perché $\varphi \in D(\RR )$. $\exists M$ tale che $| \varphi '( x)| < M,\ \forall x\in \RR $.
 
 \begin{equation*}
 \left| e^{n( x-1)} \varphi '( x)\right| \leqslant Me^{x-1} \in L^{1}(( -\infty ,1))
@@ -4334,7 +4334,7 @@ Posso applicare il teorema della convergenza dominata perché $\varphi \in D(\ma
 Quindi concludiamo che
 
 \begin{equation*}
-f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\mathbb{R})} \delta _{1} \ 
+f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\RR )} \delta _{1} \ 
 \end{equation*}
 
 nel senso delle distribuzioni.
@@ -4351,7 +4351,7 @@ f_{n,\alpha }( x) =n^{\alpha }\sqrt{1-n| x| } \cdotp \chi _{\left[ -\frac{1}{n} 
 \end{cases} \ \ \implies \ \ f_{n,\alpha }( x)\xrightarrow{n\rightarrow +\infty } f( x) \equiv 0\ \text{q.o.}
 \end{gather*}
 \item Calcoliamo il limite della norma elevata alla $p$ della differenza e per quali condizioni tende a zero\begin{align*}
- & \int _{\mathbb{R}}[ f_{n,\alpha }( x) -0]^{p} d\xrightarrow{n\rightarrow +\infty } 0\\
+ & \int _{\RR }[ f_{n,\alpha }( x) -0]^{p} d\xrightarrow{n\rightarrow +\infty } 0\\
  & \iff \ \ 2\int ^{1/n}_{0} n^{\alpha p}( 1-nx)^{p/2} dx\xrightarrow{n\rightarrow +\infty } 0\\
  & \iff \ \ 2n^{\alpha p}\int ^{1/n}_{0}( 1-nx)^{p/2} dx\xrightarrow{n\rightarrow +\infty } 0\\
  & \iff \ \ 2n^{\alpha p}\left[\frac{( 1-nx)^{p/2+1}}{\frac{p}{2} +1} \cdotp \left(\frac{1}{-n}\right)\right]^{1/n}_{0}\xrightarrow{n\rightarrow +\infty } 0\\
@@ -4362,7 +4362,7 @@ f_{n,\alpha }( x) =n^{\alpha }\sqrt{1-n| x| } \cdotp \chi _{\left[ -\frac{1}{n} 
 \end{align*}
 
 Notiamo infine che le $f_{n,\alpha }$ non sono limitate, quindi\begin{equation*}
-f_{n,\alpha }\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})}} 0
+f_{n,\alpha }\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\RR )}} 0
 \end{equation*}
 \item Per $\alpha =1$
 
@@ -4370,8 +4370,8 @@ f_{n,\alpha }\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})
 f_{n,1}( x) =n\sqrt{1-n| x| } \cdotp \chi _{\left[ -\frac{1}{n} ,\frac{1}{n}\right]}( x)
 \end{equation*}
 
-Per ogni $\varphi \in D(\mathbb{R})$\begin{align*}
-\langle f_{n,1} ,\varphi \rangle  & =\int _{\mathbb{R}} f_{n,1}( x) \varphi ( x) dx=n\int ^{\frac{1}{n}}_{-\frac{1}{n}}\sqrt{1-n| x| } \cdotp \varphi ( x) dx\\
+Per ogni $\varphi \in D(\RR )$\begin{align*}
+\langle f_{n,1} ,\varphi \rangle  & =\int _{\RR } f_{n,1}( x) \varphi ( x) dx=n\int ^{\frac{1}{n}}_{-\frac{1}{n}}\sqrt{1-n| x| } \cdotp \varphi ( x) dx\\
  & =n\left\{\int ^{0}_{-\frac{1}{n}}\sqrt{1+nx} \cdotp \varphi ( x) dx+\int ^{\frac{1}{n}}_{0}\sqrt{1-nx} \cdotp \varphi ( x) dx\right\}\\
  & \begin{array}{ c c }
 \varphi ( x) & \varphi '( x)\\
@@ -4392,11 +4392,11 @@ Quindi
 A questo punto osserviamo che
 
 \begin{equation*}
-\varphi \in D(\mathbb{R}) \ \ \implies \ \ M=\max_{x\in [ -1,1]} \varphi ( x)
+\varphi \in D(\RR ) \ \ \implies \ \ M=\max_{x\in [ -1,1]} \varphi ( x)
 \end{equation*}
 
 Con un ragionamento analogo a prima\begin{equation*}
-\implies \ \ f_{n,1}\xrightarrow[n\rightarrow +\infty ]{D'(\mathbb{R})}\frac{4}{3} \delta _{0}
+\implies \ \ f_{n,1}\xrightarrow[n\rightarrow +\infty ]{D'(\RR )}\frac{4}{3} \delta _{0}
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 7 - Boella}
@@ -4418,13 +4418,13 @@ x+x^{2} , & 0< x< 2\\
 \end{equation*}
 \Esercizio{}
 
-Trovare l'equivalente in $D'(\mathbb{R} )$ di
+Trovare l'equivalente in $D'(\RR  )$ di
 \begin{equation*}
 u(x)=x\delta '_{0} (x)
 \end{equation*}
 \Esercizio{}
 
-Calcolare il limite delle $f_{n}$ in $L^{p} (\mathbb{R} )$, $D'(\mathbb{R} )$ e $\Sc  '(\mathbb{R} )$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
+Calcolare il limite delle $f_{n}$ in $L^{p} (\RR  )$, $D'(\RR  )$ e $\Sc  '(\RR  )$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
 \begin{equation*}
 g(x)=H(x)e^{-x} \ \ \ \ f_{n} (x)=g(x)*\chi _{(0,n)}
 \end{equation*}
@@ -4440,9 +4440,9 @@ f(x)=\begin{cases}
 \ParteSoluzioni
 \Soluzione
 
-Dato che $f\in L^{1}_{\mathrm{loc}} (\mathbb{R} )\implies f\in D'(\mathbb{R} )$.
+Dato che $f\in L^{1}_{\mathrm{loc}} (\RR  )\implies f\in D'(\RR  )$.
 
-Sappiamo anche che $f\in \Sc  '(\mathbb{R})$, lo spazio delle distribuzioni temperate.
+Sappiamo anche che $f\in \Sc  '(\RR )$, lo spazio delle distribuzioni temperate.
 
 \fg{0.7}{13-1}
 
@@ -4452,11 +4452,11 @@ Calcolo quindi la derivata nel senso delle distribuzioni. Ricordiamo innanzitutt
 \end{equation*}
 Calcoliamo
 \begin{align*}
-\langle f',\varphi \rangle  & =-\langle f,\varphi '\rangle =-\int _{\mathbb{R}}\arctan\left(\frac{1}{x}\right) \varphi '(x)dx=\\
+\langle f',\varphi \rangle  & =-\langle f,\varphi '\rangle =-\int _{\RR }\arctan\left(\frac{1}{x}\right) \varphi '(x)dx=\\
  & =-\int ^{0}_{-\infty }\arctan\left(\frac{1}{x}\right) \varphi '(x)dx-\int ^{+\infty }_{0}\arctan\left(\frac{1}{x}\right) \varphi '(x)dx=\\
  & \overset{\text{ipp}}{=} -\left[\arctan\left(\frac{1}{x}\right) \varphi (x)\right]^{0}_{-\infty } +\int ^{+\infty }_{0}\frac{-1}{1+x^{2}} \varphi ( x) dx\\
  & \ \ \ \ \ -\left[\arctan\left(\frac{1}{x}\right) \varphi (x)\right]^{+\infty }_{0} +\int ^{+\infty }_{0}\frac{-1}{1+x^{2}} \varphi ( x) dx\\
- & =\frac{\pi }{2} \varphi ( 0) +\frac{\pi }{2} \varphi ( 0) +\int _{\mathbb{R}}\frac{-1}{1+x^{2}} \varphi (x)dx\\
+ & =\frac{\pi }{2} \varphi ( 0) +\frac{\pi }{2} \varphi ( 0) +\int _{\RR }\frac{-1}{1+x^{2}} \varphi (x)dx\\
  & =\pi \langle \delta _{0} ,\varphi \rangle +\langle \frac{-1}{1+x^{2}} ,\varphi \rangle =\langle \pi \delta _{0} -\frac{1}{1+x^{2}} ,\varphi \rangle 
 \end{align*}
 Quindi
@@ -4483,7 +4483,7 @@ Definiamo
 g(x)=\begin{cases}
 2x+1, & 0< x< 2\\
 0, & 2< x< 5
-\end{cases} \ \ \implies \ \ \langle f',\varphi \rangle =\int _{\mathbb{R}} g( x) \varphi ( x) dx=\langle g,\varphi \rangle 
+\end{cases} \ \ \implies \ \ \langle f',\varphi \rangle =\int _{\RR } g( x) \varphi ( x) dx=\langle g,\varphi \rangle 
 \end{equation*}
 ovvero
 \begin{equation*}
@@ -4555,7 +4555,7 @@ Ciò è coerente con come era stata definita la $g$
 Il salto verso l'alto in $x=0$ non lo possiamo vedere perché le funzioni test sono nulle prima di zero.
 \Soluzione
 \begin{rem}
-Si può dimostrare che se $v\in D'(\mathbb{R})$, $\psi \in C^{\infty }(\mathbb{R}) \implies \psi v\in D'(\mathbb{R})$ e il suo effetto su una funzione test $\varphi $ è
+Si può dimostrare che se $v\in D'(\RR )$, $\psi \in C^{\infty }(\RR ) \implies \psi v\in D'(\RR )$ e il suo effetto su una funzione test $\varphi $ è
 \begin{equation*}
 \langle \psi v,\varphi \rangle :=\langle v,\psi \varphi \rangle 
 \end{equation*}
@@ -4564,7 +4564,7 @@ Quindi
 \begin{equation*}
 \langle x\delta '_{0} (x),\varphi \rangle =\langle \delta '_{0} (x),x\varphi ( x) \rangle =-\langle \delta _{0} ,x\varphi '( x) +\varphi ( x) \rangle =-\varphi ( 0) =\langle -\delta _{0} ,\varphi \rangle 
 \end{equation*}
-Cioè in $D'(\mathbb{R})$
+Cioè in $D'(\RR )$
 \begin{equation*}
 x\delta '_{0} =-\delta _{0}
 \end{equation*}
@@ -4573,7 +4573,7 @@ x\delta '_{0} =-\delta _{0}
 $\forall n,m\in \mathbb{N}$ trovare la distribuzione di $u( x) =x^{m} \delta ^{( n)}_{0}$.
 \Soluzione
 \begin{equation*}
-f_{n} (x)=g(x)*\chi _{(0,n)} =\int _{\mathbb{R}} e^{-(x-t)} H(x-t)\chi _{(0,n)} (t)dt=\int ^{n}_{0} e^{-x} e^{t} H(x-t)dt
+f_{n} (x)=g(x)*\chi _{(0,n)} =\int _{\RR } e^{-(x-t)} H(x-t)\chi _{(0,n)} (t)dt=\int ^{n}_{0} e^{-x} e^{t} H(x-t)dt
 \end{equation*}
 \fg{0.7}{13-3}
 \begin{gather*}
@@ -4593,24 +4593,24 @@ e^{-x} (e^{n} -1) & x >n
 \end{cases}
 \end{gather*}
 \begin{itemize}
-\item Convergenza in $L^{p}(\mathbb{R})$?
+\item Convergenza in $L^{p}(\RR )$?
 
 No perché l'ipotetico limite $F( x)$ non è integrabile a $+\infty $.
-\item Convergenza in $L^{\infty }(\mathbb{R})$?
+\item Convergenza in $L^{\infty }(\RR )$?
 
 Notiamo che
 
 \begin{equation*}
 \begin{aligned}
-\Vert F\Vert _{L^{\infty }(\mathbb{R})} & =\sup _{\mathbb{R}}| F( x)| =1\xrightarrow{n\rightarrow +\infty } 1\\
-\Vert f_{n}\Vert _{L^{\infty }(\mathbb{R})} & =\sup _{\mathbb{R}}| f_{n}( x)| =1-e^{-n}\xrightarrow{n\rightarrow +\infty } 1
+\Vert F\Vert _{L^{\infty }(\RR )} & =\sup _{\RR }| F( x)| =1\xrightarrow{n\rightarrow +\infty } 1\\
+\Vert f_{n}\Vert _{L^{\infty }(\RR )} & =\sup _{\RR }| f_{n}( x)| =1-e^{-n}\xrightarrow{n\rightarrow +\infty } 1
 \end{aligned}
 \end{equation*}
 
 Tuttavia non possiamo concludere da queste due affermazioni che c'è convergenza in $L^{\infty }$, quello che ci interessa è la \textit{differenza} in norma infinito.
 
 \begin{equation*}
-\Vert f_{n} -F\Vert _{L^{\infty }(\mathbb{R})} =\begin{cases}
+\Vert f_{n} -F\Vert _{L^{\infty }(\RR )} =\begin{cases}
 0, & x< n\\
 F( x) -f_{n}( x) , & x\geqslant n
 \end{cases} =\begin{cases}
@@ -4622,16 +4622,16 @@ F( x) -f_{n}( x) , & x\geqslant n
 È un esponenziale traslato di $n$
 
 \begin{equation*}
-\Vert f_{n} -F\Vert _{L^{\infty }(\mathbb{R})} =\sup _{\mathbb{R}}| f_{n}( x) -F( x)| =1\nrightarrow 0
+\Vert f_{n} -F\Vert _{L^{\infty }(\RR )} =\sup _{\RR }| f_{n}( x) -F( x)| =1\nrightarrow 0
 \end{equation*}
 
-Quindi non c'è convergenza in $L^{\infty }(\mathbb{R})$.
-\item Convergenza in $D'(\mathbb{R})$?
+Quindi non c'è convergenza in $L^{\infty }(\RR )$.
+\item Convergenza in $D'(\RR )$?
 
-Sono distribuzioni in quanto $f_{n} ,F\in L^{1}_{\mathrm{loc}}(\mathbb{R})$.
+Sono distribuzioni in quanto $f_{n} ,F\in L^{1}_{\mathrm{loc}}(\RR )$.
 
 \begin{equation*}
-\langle f_{n} ,\varphi \rangle \rightarrow \langle F,\varphi \rangle \ \ \forall \varphi \in D(\mathbb{R}) \ \ \iff \ \ \langle F-f_{n} ,\varphi \rangle \rightarrow 0
+\langle f_{n} ,\varphi \rangle \rightarrow \langle F,\varphi \rangle \ \ \forall \varphi \in D(\RR ) \ \ \iff \ \ \langle F-f_{n} ,\varphi \rangle \rightarrow 0
 \end{equation*}
 
 nel nostro caso
@@ -4645,10 +4645,10 @@ perché $\varphi $ è a supporto compatto, cioè $\forall \varphi \ \exists n_{\
 Quindi
 
 \begin{equation*}
-f_{n}\xrightarrow{D'(\mathbb{R} )} F
+f_{n}\xrightarrow{D'(\RR  )} F
 \end{equation*}
-\item Convergenza in $\Sc  '(\mathbb{R} )$?\begin{equation*}
-\langle f_{n} ,\psi \rangle \rightarrow \langle F,\psi \rangle \ \ \forall \psi \in S(\mathbb{R}) \ \ \iff \ \ \langle F-f_{n} ,\psi \rangle \rightarrow 0
+\item Convergenza in $\Sc  '(\RR  )$?\begin{equation*}
+\langle f_{n} ,\psi \rangle \rightarrow \langle F,\psi \rangle \ \ \forall \psi \in S(\RR ) \ \ \iff \ \ \langle F-f_{n} ,\psi \rangle \rightarrow 0
 \end{equation*}
 
 dove $S$ è lo spazio di Schwarz, lo spazio delle funzioni a decrescita rapida\begin{equation*}
@@ -4670,7 +4670,7 @@ Se chiamiamo $h_{n}( x)$ l'integranda
 Usiamo la convergenza dominata
 
 \begin{equation*}
-| h_{n}( x)| \leqslant | \psi ( x)| \ \ | \psi ( x)| \in L^{1}(\mathbb{R})
+| h_{n}( x)| \leqslant | \psi ( x)| \ \ | \psi ( x)| \in L^{1}(\RR )
 \end{equation*}
 
 Allora
@@ -4694,11 +4694,11 @@ La serie cercata è
 \begin{equation*}
 f( x) \sim \sum\limits ^{\infty }_{k=0}\frac{4}{( 2k+1) \pi }\sin(( 2k+1) x)
 \end{equation*}
-Questa funzione è anche una distribuzione? Sì, $f\in L^{1}_{\mathrm{loc}}(\mathbb{R})$.
+Questa funzione è anche una distribuzione? Sì, $f\in L^{1}_{\mathrm{loc}}(\RR )$.
 \begin{equation*}
 \langle u,\varphi \rangle =\langle u,\varphi ( x+T) \rangle 
 \end{equation*}
-In $D'(\mathbb{R})$, a occhio possiamo dedurre la derivata\footnote{Si noti la somiglianza col Pettine di Dirac.}
+In $D'(\RR )$, a occhio possiamo dedurre la derivata\footnote{Si noti la somiglianza col Pettine di Dirac.}
 
 
 \begin{figure}[htpb]
@@ -4754,12 +4754,12 @@ f'( x) =\sum\limits ^{+\infty }_{k=-\infty }( -1)^{k} \cdotp 2\delta _{k\pi }( x
 \end{equation*}
 Possiamo derivare termine a termine
 \begin{equation*}
-f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\cos(( 2k+1) x)
+f'( x)\overset{D'(\RR )}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\cos(( 2k+1) x)
 \end{equation*}
 \chapter{Esercitazione 7 - Potrich}
 \ParteEsercizi
 \begin{defn}
-[Distribuzione] Una distribuzione è un operatore $u$ che a ogni funzione test $\varphi $ (funzione $C^{\infty }(\mathbb{R})$ il cui supporto è un compatto $\Omega $ contenuto in $\mathbb{R}$) associa un numero, reale o complesso, $\langle u,\varphi \rangle $ chiamato \textbf{dualità} tra $u$ e $\varphi $ tale che:
+[Distribuzione] Una distribuzione è un operatore $u$ che a ogni funzione test $\varphi $ (funzione $C^{\infty }(\RR )$ il cui supporto è un compatto $\Omega $ contenuto in $\RR $) associa un numero, reale o complesso, $\langle u,\varphi \rangle $ chiamato \textbf{dualità} tra $u$ e $\varphi $ tale che:
 \begin{equation*}
 \begin{array}{ l }
 \langle u,a\varphi +b\psi \rangle =a\langle u,\varphi \rangle +b\langle u,\psi \rangle \ \ \forall a,b\in \CC  ,\ \forall \varphi ,\psi \in D( \Omega )\\
@@ -4768,21 +4768,21 @@ f'( x)\overset{D'(\mathbb{R})}{\sim }\sum\limits ^{\infty }_{k=0}\frac{4}{\pi }\
 \end{equation*}
 \end{defn}
 \begin{rem}
-[Delta di Dirac] L'esempio fondamentale di distribuzione in $D'\left(\mathbb{R}^{n}\right)$ è la Delta di Dirac, denotata $\delta $, e così definita
+[Delta di Dirac] L'esempio fondamentale di distribuzione in $D'\left(\RR ^{n}\right)$ è la Delta di Dirac, denotata $\delta $, e così definita
 \begin{equation*}
-\langle \delta ,\varphi \rangle =\varphi ( 0) \ \ \forall \varphi \in D\left(\mathbb{R}^{n}\right)
+\langle \delta ,\varphi \rangle =\varphi ( 0) \ \ \forall \varphi \in D\left(\RR ^{n}\right)
 \end{equation*}
 \end{rem}
 \begin{defn}
-Se \ $u\in D'(\mathbb{R})$, allora la derivata distribuzionale di $u$ è la distribuzione $u'\in D'(\mathbb{R})$ definita univocamente da
+Se \ $u\in D'(\RR )$, allora la derivata distribuzionale di $u$ è la distribuzione $u'\in D'(\RR )$ definita univocamente da
 \begin{equation*}
-\int _{\mathbb{R}} u'\varphi =-\int _{\mathbb{R}} u\varphi '\ \ \forall \varphi \in D(\mathbb{R})
+\int _{\RR } u'\varphi =-\int _{\RR } u\varphi '\ \ \forall \varphi \in D(\RR )
 \end{equation*}
 \end{defn}
 \begin{defn}
-Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\infty }( \Omega )$: se $\psi \in C^{\infty }( \Omega )$ e $u\in D'(\mathbb{R})$, allora $( \psi u) \in D'( \Omega )$ è la distribuzione tale che
+Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\infty }( \Omega )$: se $\psi \in C^{\infty }( \Omega )$ e $u\in D'(\RR )$, allora $( \psi u) \in D'( \Omega )$ è la distribuzione tale che
 \begin{equation*}
-\langle \psi u,\varphi \rangle =\langle u,\psi \varphi \rangle \ \ \forall \varphi \in D\left(\mathbb{R}^{n}\right)
+\langle \psi u,\varphi \rangle =\langle u,\psi \varphi \rangle \ \ \forall \varphi \in D\left(\RR ^{n}\right)
 \end{equation*}
 \end{defn}
 \begin{rem}
@@ -4792,7 +4792,7 @@ Si definisce prodotto di una distribuzione in $\Omega $ per una funzione $C^{\in
 \end{rem}
 \Esercizio{}
 
-Provare che valgono le seguenti identità in $D'(\mathbb{R})$:
+Provare che valgono le seguenti identità in $D'(\RR )$:
 \begin{enumerate}
 \item $x\delta ( x) =0$
 \item $x\delta '( x) =-\delta ( x)$
@@ -4805,14 +4805,14 @@ Mostrare che, per ogni $n\in \mathbb{N}^{+}$, si ha
 \end{equation*}
 \Esercizio{(Teorema di derivazione di funzioni con discontinuità di tipo salto)}
 
-Sia $a\in \mathbb{R}$, $f\in C^{1}(( -\infty ,a))$, $g\in C^{1}(( a,+\infty ))$ con $f'\in L^{1}(( -\infty ,a))$ e $g'\in L^{1}(( a,+\infty ))$ e definiamo
+Sia $a\in \RR $, $f\in C^{1}(( -\infty ,a))$, $g\in C^{1}(( a,+\infty ))$ con $f'\in L^{1}(( -\infty ,a))$ e $g'\in L^{1}(( a,+\infty ))$ e definiamo
 \begin{equation*}
 u( x) =\begin{cases}
 f( x) , & x< a\\
 g( x) , & x >a
 \end{cases}
 \end{equation*}
-allora $u$ risulta definita q.o. su $\mathbb{R}$ e la sua derivata distribuzionale $u'$ è la somma di una funzione localmente integrabile e che coincide con $f'$ in $( -\infty ,a)$ e con $g'$ in $( a,+\infty )$ più una parte singolare, data dalla Delta di Dirac concentrata in $x=a$ e moltiplicata per l'ampiezza del salto
+allora $u$ risulta definita q.o. su $\RR $ e la sua derivata distribuzionale $u'$ è la somma di una funzione localmente integrabile e che coincide con $f'$ in $( -\infty ,a)$ e con $g'$ in $( a,+\infty )$ più una parte singolare, data dalla Delta di Dirac concentrata in $x=a$ e moltiplicata per l'ampiezza del salto
 \begin{equation*}
 [ u( a_{+}) -u( a_{-})] \delta _{a}
 \end{equation*}
@@ -4822,14 +4822,14 @@ Si consideri
 \begin{equation*}
 f_{n}( x) =\frac{n}{1+n^{2} x^{2}}
 \end{equation*}
-provare che $f_{n}\rightarrow \pi \delta $ in $\Sc  '(\mathbb{R})$ e in $D'(\mathbb{R})$.
+provare che $f_{n}\rightarrow \pi \delta $ in $\Sc  '(\RR )$ e in $D'(\RR )$.
 \Esercizio{}
 
 Si considerino
 \begin{equation*}
 f_{n}( x) =\frac{1}{\sqrt{n}} \chi _{[ 0,n]}( x) \ \ \ \ \ \ \ \ g_{n}( x) =\sin( nx) \chi _{[ 0,7]}( x)
 \end{equation*}
-Stabilire se le successioni sono convergenti in $L^{1}(\mathbb{R}) ,L^{2}(\mathbb{R}) ,L^{\infty }(\mathbb{R}) ,D'(\mathbb{R}) ,\Sc  '(\mathbb{R})$.
+Stabilire se le successioni sono convergenti in $L^{1}(\RR ) ,L^{2}(\RR ) ,L^{\infty }(\RR ) ,D'(\RR ) ,\Sc  '(\RR )$.
 \Esercizio{}
 
 Si consideri
@@ -4840,7 +4840,7 @@ f_{n}( x) =n^{2} xe^{-n| x| }
 \item Determinare il limite puntuale
 \item Stabilire se $f_{n}$ converge in $L^{p}$, con $p\in [ 1,+\infty ]$
 \item Determinare il limite di\begin{equation*}
-g_{n}( x) =f_{n}( x) H( x) \ \ \text{in} \ D'(\mathbb{R})
+g_{n}( x) =f_{n}( x) H( x) \ \ \text{in} \ D'(\RR )
 \end{equation*}
 
 dove\begin{equation*}
@@ -4851,15 +4851,15 @@ H( x) =\begin{cases}
 \end{equation*}
 
 detta \textbf{Funzione di Heaviside}.
-\item Determinare il limite di $f_{n}$ in $D'(\mathbb{R})$
+\item Determinare il limite di $f_{n}$ in $D'(\RR )$
 \end{enumerate}
 \ParteSoluzioni
 \Soluzione
 \begin{enumerate}
-\item $\forall \varphi \in D(\mathbb{R})$\begin{equation*}
+\item $\forall \varphi \in D(\RR )$\begin{equation*}
 \langle x\delta ,\varphi \rangle =\langle \delta ,x\varphi \rangle =0\cdotp \varphi ( 0) =0\qed 
 \end{equation*}
-\item $\forall \varphi \in D(\mathbb{R})$\begin{gather*}
+\item $\forall \varphi \in D(\RR )$\begin{gather*}
 \begin{aligned}
 \langle x\delta ',\varphi \rangle  & =\langle \delta ',x\varphi \rangle =-\langle \delta ,( x\varphi ) '\rangle \\
  & =-\langle \delta ,\varphi +x\varphi '\rangle \\
@@ -4897,7 +4897,7 @@ Per comodità $u( a_{-}) =f( a) :=f( a_{-})$ e $u( a_{+}) =g( a) :=g( a_{+})$.
 
 Questi termini esistono finiti perché $f',g'$ sono integrabili.
 
-$\forall \varphi \in D(\mathbb{R})$
+$\forall \varphi \in D(\RR )$
 \begin{equation*}
 \langle u',\varphi \rangle =-\langle u,\varphi '\rangle =-\int ^{+\infty }_{-\infty } u( x) \varphi '( x) dx
 \end{equation*}
@@ -4949,27 +4949,27 @@ $f( x)$ presenta un salto in $x=0$ di ampiezza $1$.
 
 \fg{0.45}{14-4}
 
-Se dimostro in $\Sc  '(\mathbb{R})$, quella in $D'(\mathbb{R})$ segue automaticamente.
+Se dimostro in $\Sc  '(\RR )$, quella in $D'(\RR )$ segue automaticamente.
 
 Devo provare che
 \begin{equation*}
-\int _{\mathbb{R}}\frac{n\varphi ( x)}{1+n^{2} x^{2}} dx\xrightarrow{n\rightarrow +\infty } \pi \varphi ( 0) \ \ \forall \varphi \in S(\mathbb{R})
+\int _{\RR }\frac{n\varphi ( x)}{1+n^{2} x^{2}} dx\xrightarrow{n\rightarrow +\infty } \pi \varphi ( 0) \ \ \forall \varphi \in S(\RR )
 \end{equation*}
 pongo $nx=t\implies ndx=dt$
 \begin{equation*}
-\int _{\mathbb{R}}\frac{n\varphi \left(\frac{t}{n}\right)}{1+t^{2}}\frac{dt}{n} =\int _{\mathbb{R}} \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}} dt
+\int _{\RR }\frac{n\varphi \left(\frac{t}{n}\right)}{1+t^{2}}\frac{dt}{n} =\int _{\RR } \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}} dt
 \end{equation*}
 Proviamo che tale convergenza ha luogo per ogni $\varphi $ limitata in $0$ stimando la differenza
 \begin{equation*}
-\left| \int _{\mathbb{R}} \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}} dt-\pi \varphi ( 0)\right| \leqslant \underbrace{\left| \int _{| t| \leqslant T}\frac{\varphi \left(\frac{t}{n}\right) -\varphi ( 0)}{1+t^{2}} dt\right| }_{I_{1}} +\underbrace{\left| \int _{| t|  >T}\frac{\varphi \left(\frac{t}{n}\right) -\varphi ( 0)}{1+t^{2}} dt\right| }_{I_{2}}
+\left| \int _{\RR } \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}} dt-\pi \varphi ( 0)\right| \leqslant \underbrace{\left| \int _{| t| \leqslant T}\frac{\varphi \left(\frac{t}{n}\right) -\varphi ( 0)}{1+t^{2}} dt\right| }_{I_{1}} +\underbrace{\left| \int _{| t|  >T}\frac{\varphi \left(\frac{t}{n}\right) -\varphi ( 0)}{1+t^{2}} dt\right| }_{I_{2}}
 \end{equation*}
 Per mostrare la convergenza di questi due integrali posso applicare la convergenza dominata
 \begin{equation*}
-\left| \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}}\right| \leqslant \frac{\Vert \varphi \Vert _{\infty }}{1+t^{2}} \in L^{1}(\mathbb{R})
+\left| \varphi \left(\frac{t}{n}\right)\frac{1}{1+t^{2}}\right| \leqslant \frac{\Vert \varphi \Vert _{\infty }}{1+t^{2}} \in L^{1}(\RR )
 \end{equation*}
 \begin{rem}
 \begin{gather*}
-\frac{1}{1+t^{2}} \in L^{1}(\mathbb{R}) \ \ \ \ \ \ \ \ \int _{\mathbb{R}}\frac{1}{1+t^{2}} dt=[\arctan t]^{+\infty }_{-\infty } =\frac{\pi }{2} -\left( -\frac{\pi }{2}\right) =\pi \\
+\frac{1}{1+t^{2}} \in L^{1}(\RR ) \ \ \ \ \ \ \ \ \int _{\RR }\frac{1}{1+t^{2}} dt=[\arctan t]^{+\infty }_{-\infty } =\frac{\pi }{2} -\left( -\frac{\pi }{2}\right) =\pi \\
 \\
 \implies \ \ \forall \varepsilon  >0\ \ \exists T=T( \varepsilon ) :\ \int _{| t|  >T}\frac{1}{1+t^{2}} dt\leqslant \varepsilon 
 \end{gather*}
@@ -4987,34 +4987,34 @@ Per l'arbitrarietà di $\varepsilon $ segue la tesi.
 
 Studiamo le $f_{n}( x)$
 \begin{equation*}
-| f_{n}( x)| \leqslant \frac{1}{\sqrt{n}} \ \ \forall x\in \mathbb{R} \ \ \implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})} f\equiv 0
+| f_{n}( x)| \leqslant \frac{1}{\sqrt{n}} \ \ \forall x\in \RR  \ \ \implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\RR )} f\equiv 0
 \end{equation*}
 ma allora
 \begin{equation*}
-f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{1}_{\mathrm{loc}}(\mathbb{R})} f\equiv 0\ \ \begin{cases}
-\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\mathbb{R})} f\equiv 0\\
-\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{\Sc  '(\mathbb{R})} f\equiv 0
+f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{1}_{\mathrm{loc}}(\RR )} f\equiv 0\ \ \begin{cases}
+\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\RR )} f\equiv 0\\
+\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{\Sc  '(\RR )} f\equiv 0
 \end{cases}
 \end{equation*}
 Stimiamo
 \begin{equation*}
-\Vert f_{n} -0\Vert _{L^{1}} =\Vert f_{n}\Vert _{L^{1}} =\frac{n}{\sqrt{n}} =\sqrt{n}\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ f_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{1}(\mathbb{R})}} 0
+\Vert f_{n} -0\Vert _{L^{1}} =\Vert f_{n}\Vert _{L^{1}} =\frac{n}{\sqrt{n}} =\sqrt{n}\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ f_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{1}(\RR )}} 0
 \end{equation*}
 Poi
 \begin{equation*}
-\Vert f_{n} -0\Vert _{L^{2}} =\Vert f_{n}\Vert _{L^{2}} =1\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ f_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{2}(\mathbb{R})}} 0
+\Vert f_{n} -0\Vert _{L^{2}} =\Vert f_{n}\Vert _{L^{2}} =1\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ f_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{2}(\RR )}} 0
 \end{equation*}
 
 
 Studiamo le $g_{n}( x)$
 
-Dimostro che $g_{n}$ converge in $\Sc  '(\mathbb{R})$, da cui si ottiene che $g_{n}$ converge anche in $D'(\mathbb{R})$.
+Dimostro che $g_{n}$ converge in $\Sc  '(\RR )$, da cui si ottiene che $g_{n}$ converge anche in $D'(\RR )$.
 \begin{equation*}
-\int _{\mathbb{R}} g_{n}( x) \varphi ( x) dx=\overset{\text{ipp}}{=} -\frac{1}{n}[\cos( nx) \varphi ( x)]^{7}_{0} +\int ^{7}_{0}\frac{1}{n}\cos( nx) \varphi '( x) dx\xrightarrow{n\rightarrow +\infty } 0
+\int _{\RR } g_{n}( x) \varphi ( x) dx=\overset{\text{ipp}}{=} -\frac{1}{n}[\cos( nx) \varphi ( x)]^{7}_{0} +\int ^{7}_{0}\frac{1}{n}\cos( nx) \varphi '( x) dx\xrightarrow{n\rightarrow +\infty } 0
 \end{equation*}
 Analizziamo in $L^{\infty }$
 \begin{equation*}
-\Vert g_{n} -g\Vert _{\infty } =\Vert g_{n}\Vert _{\infty } =1\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\mathbb{R})}} 0
+\Vert g_{n} -g\Vert _{\infty } =\Vert g_{n}\Vert _{\infty } =1\cancel{\xrightarrow{n\rightarrow +\infty }} 0\ \ \implies \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{\infty }(\RR )}} 0
 \end{equation*}
 Analizziamo in $L^{p}$
 \begin{equation*}
@@ -5035,20 +5035,20 @@ mentre l'altro addendo è infinitesimo.
 \end{rem}
 Quindi
 \begin{equation*}
-\frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy\xrightarrow{n\rightarrow +\infty } 7\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \implies \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{p}(\mathbb{R})}} 0
+\frac{1}{n}\int ^{7n}_{0}| \sin( y)| ^{p} dy\xrightarrow{n\rightarrow +\infty } 7\int ^{2\pi }_{0}| \sin y| ^{p} dy\ \ \implies \ \ g_{n}\cancel{\xrightarrow[n\rightarrow +\infty ]{L^{p}(\RR )}} 0
 \end{equation*}
 \Soluzione
 \begin{enumerate}
-\item Fissiamo $x_{0} \in \mathbb{R}$.
+\item Fissiamo $x_{0} \in \RR $.
 \begin{enumerate}
 \item se $x_{0} =0$ allora $f_{n}( 0) \equiv 0\ \forall n\in \mathbb{N}$
 \item se $x_{0} \neq 0$ allora $\lim\limits _{n\rightarrow +\infty } f_{n}( x_{0}) =0$
-\item quindi $f_{n}$ converge puntualmente su tutto $\mathbb{R}$ a $f( x) \equiv 0$.
+\item quindi $f_{n}$ converge puntualmente su tutto $\RR $ a $f( x) \equiv 0$.
 \end{enumerate}
 
 \fg{0.7}{14-6}
 \item Se $p\in [ 1,+\infty )$\begin{equation*}
-\Vert f_{n}\Vert ^{p}_{L^{p}} =\int _{\mathbb{R}} n^{2p} x^{p} e^{-np| x| } dx=2\int ^{+\infty }_{0} n^{2p} x^{p} e^{-npx} dx=( *)
+\Vert f_{n}\Vert ^{p}_{L^{p}} =\int _{\RR } n^{2p} x^{p} e^{-np| x| } dx=2\int ^{+\infty }_{0} n^{2p} x^{p} e^{-npx} dx=( *)
 \end{equation*}
 
 poniamo $npx=t\implies npdx=dt$\begin{equation*}
@@ -5058,7 +5058,7 @@ poniamo $npx=t\implies npdx=dt$\begin{equation*}
 l'integrale non dipende da $n$, siamo nel caso $p\geqslant 1$, quindi non c'è convergenza.
 
 Se $p=\infty $\begin{equation*}
-\Vert f_{n} -f\Vert _{\infty } =\Vert f_{n}\Vert _{\infty } =\max_{\mathbb{R}}| f_{n}( x)| =\left| f_{n}\left(\frac{1}{n}\right)\right| =n^{2}\frac{1}{n} e^{-n\frac{1}{n}} =ne^{-1}\cancel{\xrightarrow{n\rightarrow +\infty }} 0
+\Vert f_{n} -f\Vert _{\infty } =\Vert f_{n}\Vert _{\infty } =\max_{\RR }| f_{n}( x)| =\left| f_{n}\left(\frac{1}{n}\right)\right| =n^{2}\frac{1}{n} e^{-n\frac{1}{n}} =ne^{-1}\cancel{\xrightarrow{n\rightarrow +\infty }} 0
 \end{equation*}
 
 quindi non c'è convergenza.
@@ -5069,8 +5069,8 @@ n^{2} xe^{-nx} , & x\geqslant 0\\
 \end{cases}
 \end{equation*}
 
-$\forall n\in \mathbb{N} ,\ g_{n} \in L^{1}_{\mathrm{loc}}(\mathbb{R})$ e $\forall \varphi \in D(\mathbb{R})$\begin{equation*}
-\langle g_{n} ,\varphi \rangle =\int _{\mathbb{R}} g_{n}( x) \varphi ( x) dx=\int ^{+\infty }_{0} n^{2}\textcolor[rgb]{0.82,0.01,0.11}{x} e^{-nx}\textcolor[rgb]{0.82,0.01,0.11}{\varphi }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} dx
+$\forall n\in \mathbb{N} ,\ g_{n} \in L^{1}_{\mathrm{loc}}(\RR )$ e $\forall \varphi \in D(\RR )$\begin{equation*}
+\langle g_{n} ,\varphi \rangle =\int _{\RR } g_{n}( x) \varphi ( x) dx=\int ^{+\infty }_{0} n^{2}\textcolor[rgb]{0.82,0.01,0.11}{x} e^{-nx}\textcolor[rgb]{0.82,0.01,0.11}{\varphi }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} dx
 \end{equation*}
 
 integriamo per parti con\begin{gather*}
@@ -5096,22 +5096,22 @@ da cui\begin{gather*}
 \end{aligned}
 \end{gather*}
 
-essendo $\varphi \in D(\mathbb{R}) \implies \exists M >0$ tale che $| 2\varphi '( x) +x\varphi ''( x)| < M,\ \forall x\in \mathbb{R}$ e\begin{equation*}
+essendo $\varphi \in D(\RR ) \implies \exists M >0$ tale che $| 2\varphi '( x) +x\varphi ''( x)| < M,\ \forall x\in \RR $ e\begin{equation*}
 \left| e^{-nx}[ 2\varphi '( x) +x\varphi ''( x)]\right| \leqslant Me^{-x} \in L^{1}([ 0,+\infty ))
 \end{equation*}
 
 quindi\begin{equation*}
-g_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\mathbb{R})} \delta _{0}
+g_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\RR )} \delta _{0}
 \end{equation*}
-\item $\forall \varphi \in D(\mathbb{R})$\begin{equation*}
+\item $\forall \varphi \in D(\RR )$\begin{equation*}
 \begin{aligned}
-\langle f_{n} ,\varphi \rangle  & =\int _{\mathbb{R}} n^{2} xe^{-n| x| } \varphi ( x) dx\\
+\langle f_{n} ,\varphi \rangle  & =\int _{\RR } n^{2} xe^{-n| x| } \varphi ( x) dx\\
  & =\int ^{0}_{-\infty } n^{2} xe^{nx} \varphi ( x) dx+\int ^{+\infty }_{0} n^{2} xe^{-nx} \varphi ( x) dx
 \end{aligned}
 \end{equation*}
 
 integrazione per parti due volte per entrambi gli integrali e teorema della convergenza dominata\begin{align*}
-\langle f_{n} ,\varphi \rangle  & =\int _{\mathbb{R}} n^{2} xe^{-n| x| } dx\\
+\langle f_{n} ,\varphi \rangle  & =\int _{\RR } n^{2} xe^{-n| x| } dx\\
  & =\int ^{0}_{-\infty } n^{2} xe^{nx} \varphi ( x) dx+\int ^{\infty }_{0} n^{2} xe^{-nx} \varphi ( x) dx
 \end{align*}
 
@@ -5156,27 +5156,27 @@ Grafico di $f( x) =e^{-| x| }$
 \begin{equation*}
 f\ \text{reale pari} \ \ \implies \ \ \hat{f} \ \text{reale pari}
 \end{equation*}
-Inoltre $f\in L^{1}(\mathbb{R})$ quindi per il Teorema di Riemann-Lebesgue
+Inoltre $f\in L^{1}(\RR )$ quindi per il Teorema di Riemann-Lebesgue
 \begin{equation*}
-f\in L^{1}(\mathbb{R}) \ \ \implies \ \ \hat{f} \in C^{0}_{0}(\mathbb{R}) \cap L^{\infty }(\mathbb{R})
+f\in L^{1}(\RR ) \ \ \implies \ \ \hat{f} \in C^{0}_{0}(\RR ) \cap L^{\infty }(\RR )
 \end{equation*}
 La trasformata di Fourier è derivabile? In $0$ c'è un punto angoloso quindi non possiamo utilizzare la proprietà della trasformata di Fourier per le derivate.
 
-Poiché all'infinito la funzione va a zero come un'esponenziale anche se la moltiplichiamo per una qualsiasi potenza di $x$ quello che otteniamo è ancora una funzione in $L^{1} (\mathbb{R} )$
+Poiché all'infinito la funzione va a zero come un'esponenziale anche se la moltiplichiamo per una qualsiasi potenza di $x$ quello che otteniamo è ancora una funzione in $L^{1} (\RR  )$
 \begin{equation*}
-x^{n} f(x)\in L^{1} (\mathbb{R} )\ \ \implies \ \ \frac{d^{n}}{d\xi ^{n}}\hat{f} \in C^{0}(\mathbb{R}) \ \ \implies \ \ \hat{f} \in C^{\infty } (\mathbb{R} )
+x^{n} f(x)\in L^{1} (\RR  )\ \ \implies \ \ \frac{d^{n}}{d\xi ^{n}}\hat{f} \in C^{0}(\RR ) \ \ \implies \ \ \hat{f} \in C^{\infty } (\RR  )
 \end{equation*}
 Inoltre
 \begin{equation*}
-f\notin C^{\infty } (\mathbb{R} )\ \ \implies \ \ f\notin \Sc (\mathbb{R}) \ \ \implies \ \ \hat{f} \notin \Sc (\mathbb{R})
+f\notin C^{\infty } (\RR  )\ \ \implies \ \ f\notin \Sc (\RR ) \ \ \implies \ \ \hat{f} \notin \Sc (\RR )
 \end{equation*}
 In compenso visto che $f$ è sicuramente una distribuzione temperata anche $\hat{f}$ lo sarà
 \begin{equation*}
-f\in \Sc  '(\mathbb{R}) \ \ \implies \ \ \hat{f} \in \Sc  '(\mathbb{R})
+f\in \Sc  '(\RR ) \ \ \implies \ \ \hat{f} \in \Sc  '(\RR )
 \end{equation*}
 Inoltre
 \begin{equation*}
-f\in L^{2}(\mathbb{R}) \cap L^{1}(\mathbb{R}) \ \ \implies \ \ \hat{f} \in L^{2}(\mathbb{R})
+f\in L^{2}(\RR ) \cap L^{1}(\RR ) \ \ \implies \ \ \hat{f} \in L^{2}(\RR )
 \end{equation*}
 Visto che c'è un valore assoluto la cosa migliore da fare è quella di spezzare l'integrale, quindi:
 \begin{equation*}
@@ -5196,24 +5196,24 @@ Sapendo questo, deduciamo quanto vale, dato $\alpha  >0$
 \end{equation*}
 Ricordiamo la formula dell'antitrasformata
 \begin{equation*}
-f( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\left(\frac{2}{1+\xi ^{2}}\right) d\xi =e^{-|x|}
+f( x) =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\left(\frac{2}{1+\xi ^{2}}\right) d\xi =e^{-|x|}
 \end{equation*}
 Sapendo questo, deduciamo quanto vale
 \begin{equation*}
-\Fc \left\{\frac{1}{1+x^{2}}\right\} =\int _{\mathbb{R}} e^{-i\xi x}\left(\frac{1}{1+x^{2}}\right) dx\overset{\text{parità}}{=} \pi e^{-| \xi | }
+\Fc \left\{\frac{1}{1+x^{2}}\right\} =\int _{\RR } e^{-i\xi x}\left(\frac{1}{1+x^{2}}\right) dx\overset{\text{parità}}{=} \pi e^{-| \xi | }
 \end{equation*}
 \Soluzione
 \begin{equation*}
 \begin{aligned}
-\hat{f} (\xi ) & =\int _{\mathbb{R}} e^{-i\xi x} \chi _{[-1,1]} dx=\int ^{1}_{-1} e^{-i\xi x} dx=\left[ -\frac{1}{i\xi } e^{-i\xi x}\right]^{1}_{-1} =\\
+\hat{f} (\xi ) & =\int _{\RR } e^{-i\xi x} \chi _{[-1,1]} dx=\int ^{1}_{-1} e^{-i\xi x} dx=\left[ -\frac{1}{i\xi } e^{-i\xi x}\right]^{1}_{-1} =\\
  & =\frac{1}{i\xi }\left( e^{i\xi } -e^{-i\xi }\right) =\frac{2}{\xi }\frac{e^{i\xi } -e^{-i\xi }}{2i} =\frac{2\sin \xi }{\xi }
 \end{aligned}
 \end{equation*}
-Questa volta $\hat{f} \notin L^{1} (\mathbb{R} )$ ma $\hat{f} \in L^{2} (\mathbb{R} )$
+Questa volta $\hat{f} \notin L^{1} (\RR  )$ ma $\hat{f} \in L^{2} (\RR  )$
 
 Ragionando come prima
 \begin{gather*}
-f(x)=\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\frac{2\sin( \xi )}{\xi } d\xi \\
+f(x)=\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\frac{2\sin( \xi )}{\xi } d\xi \\
 \\
 \implies \ \ g( x) =\frac{\sin x}{x} \ \ \implies \ \ \hat{g}( \xi ) =\pi \chi _{[-1,1]} (\xi )
 \end{gather*}
@@ -5233,7 +5233,7 @@ $f$ reale pari, allora $\hat{f}$ reale pari. Completando il quadrato\footnote{Ag
 \end{equation*}
 }
 \begin{equation*}
-\hat{f} (\xi )=\int _{\mathbb{R}} e^{-i\xi x} e^{-x^{2}} dx=e^{-\frac{\xi ^{2}}{4}}\int _{\mathbb{R}} e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
+\hat{f} (\xi )=\int _{\RR } e^{-i\xi x} e^{-x^{2}} dx=e^{-\frac{\xi ^{2}}{4}}\int _{\RR } e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
 \end{equation*}
 Noto che la funzione integranda ha la forma di una gaussiana traslata nel piano complesso, integriamo sul seguente percorso.
 
@@ -5288,11 +5288,11 @@ La funzione non ha singolarità
 \end{equation*}
 che è uguale alla somma degli integrali
 \begin{equation*}
-\int _{\gamma _{R}} e^{-z^{2}} \ dz=\int _{\gamma _{1}} +\int _{\gamma _{2}} +\int _{\gamma _{3}} +\int _{\gamma _{4}}\xrightarrow{R\rightarrow +\infty }\int _{\mathbb{R}} e^{-x^{2}} dx-\int _{\mathbb{R}} e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
+\int _{\gamma _{R}} e^{-z^{2}} \ dz=\int _{\gamma _{1}} +\int _{\gamma _{2}} +\int _{\gamma _{3}} +\int _{\gamma _{4}}\xrightarrow{R\rightarrow +\infty }\int _{\RR } e^{-x^{2}} dx-\int _{\RR } e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
 \end{equation*}
 quindi questi due integrali sono uguali al limite
 \begin{equation*}
-\int _{\mathbb{R}} e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx=\int _{\mathbb{R}} e^{-x^{2}} dx=\sqrt{\pi }
+\int _{\RR } e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx=\int _{\RR } e^{-x^{2}} dx=\sqrt{\pi }
 \end{equation*}
 Quindi
 \begin{equation*}
@@ -5318,7 +5318,7 @@ i\xi \hat{u} +2i\hat{u} '=0\ \ \implies \ \ \hat{u} '+\frac{\xi }{2}\hat{u} =0\ 
 \end{equation*}
 Determiniamo la costante
 \begin{equation*}
-C=\hat{u}( 0) =\int _{\mathbb{R}} e^{-i0x} u( x) dx=\int _{\mathbb{R}} u( x) dx=\int _{\mathbb{R}} e^{-x^{2}} dx=\sqrt{\pi }
+C=\hat{u}( 0) =\int _{\RR } e^{-i0x} u( x) dx=\int _{\RR } u( x) dx=\int _{\RR } e^{-x^{2}} dx=\sqrt{\pi }
 \end{equation*}
 Allora
 \begin{equation*}
@@ -5328,7 +5328,7 @@ Allora
 
 \fg{0.7}{15-4}
 \begin{equation*}
-\Fc \left\{\frac{1}{\cosh x}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\cosh x} dx=\int _{\mathbb{R}}\frac{2e^{-i\xi x}}{e^{x} +e^{-x}} dx\ \ \implies \ \ f( x) =\frac{2e^{-i\xi z}}{e^{z} +e^{-z}}
+\Fc \left\{\frac{1}{\cosh x}\right\} =\int _{\RR }\frac{e^{-i\xi x}}{\cosh x} dx=\int _{\RR }\frac{2e^{-i\xi x}}{e^{x} +e^{-x}} dx\ \ \implies \ \ f( x) =\frac{2e^{-i\xi z}}{e^{z} +e^{-z}}
 \end{equation*}
 Tutte le singolarità sono tutti i punti del piano complesso in cui si annulla il denominatore 
 \begin{equation*}
@@ -5416,7 +5416,7 @@ Dunque
 
 \fg{0.7}{15-5}
 \begin{equation*}
-\Fc \left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx
+\Fc \left\{\frac{1}{\left( 1+x^{2}\right)^{2}}\right\} =\int _{\RR }\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)^{2}} dx
 \end{equation*}
 $f$ pari, allora $\hat{f}$ pari.
 
@@ -5497,17 +5497,17 @@ Vediamo il grafico di $u(x)=1/\sqrt{|x|}$
 
 Notiamo che $u\notin L^{1}$ perché all'infinito va a zero troppo lentamente e neanche $u\notin L^{2}$, in tal caso sarebbe asintotica a $1/x$ per $x\rightarrow \infty $, che non è integrabile.
 
-Possiamo considerare $u$ come una distribuzione temperata, cioè $u\in \Sc ^{'}(\mathbb{R})$.
+Possiamo considerare $u$ come una distribuzione temperata, cioè $u\in \Sc ^{'}(\RR )$.
 
 Possiamo prendere una successione di funzioni $u_{n}$ che l'approssimano nel senso delle distribuzioni temperate
 \begin{equation*}
-u_{n}( x) =u( x) \chi _{( -n,n)}( x) \ \ \ \ u_{n} \in L^{1} (\mathbb{R} )
+u_{n}( x) =u( x) \chi _{( -n,n)}( x) \ \ \ \ u_{n} \in L^{1} (\RR  )
 \end{equation*}
 Considerando la dualità con una qualsiasi funzione dello spazio di Schwartz questa sarà pari a:
 \begin{gather*}
 \langle ( u-u_{n}) ,\psi \rangle =\int ^{-n}_{-\infty }\frac{1}{\sqrt{| x| }} \psi ( x) dx+\ \int ^{+\infty }_{n}\frac{1}{\sqrt{x}} \psi ( x) dx\\
 \\
-| \langle ( u-u_{n}) ,\ \psi \rangle | \leqslant \frac{1}{\sqrt{n}} \ \int _{\mathbb{R}}| \psi ( x)| dx\xrightarrow{n\rightarrow \infty } 0\ \ \implies \ \ u_{n}\xrightarrow[\Sc  ']{n\rightarrow \infty } u
+| \langle ( u-u_{n}) ,\ \psi \rangle | \leqslant \frac{1}{\sqrt{n}} \ \int _{\RR }| \psi ( x)| dx\xrightarrow{n\rightarrow \infty } 0\ \ \implies \ \ u_{n}\xrightarrow[\Sc  ']{n\rightarrow \infty } u
 \end{gather*}
 Ne consegue che possiamo scrivere:
 \begin{equation*}
@@ -5515,7 +5515,7 @@ Ne consegue che possiamo scrivere:
 \end{equation*}
 Calcoliamo le trasformate delle $u_{n}$ in senso classico
 \begin{equation*}
-\Fc \{u_{n}\} =\int _{\mathbb{R}}\frac{e^{-i\xi x}}{\sqrt{|} x|} \chi _{[-n,n]} (u)dx=\int ^{n}_{-n}\frac{\cos( \xi x) -i\sin (\xi x)}{\sqrt{| x| }} dx=2\int ^{n}_{0}\frac{\cos( \xi x)}{\sqrt{x}} dx
+\Fc \{u_{n}\} =\int _{\RR }\frac{e^{-i\xi x}}{\sqrt{|} x|} \chi _{[-n,n]} (u)dx=\int ^{n}_{-n}\frac{\cos( \xi x) -i\sin (\xi x)}{\sqrt{| x| }} dx=2\int ^{n}_{0}\frac{\cos( \xi x)}{\sqrt{x}} dx
 \end{equation*}
 Sostituzione
 \begin{equation*}
@@ -5536,9 +5536,9 @@ Quindi, la trasformata sarà pari a
 \chapter{Esercitazione 8 - Potrich}
 \ParteEsercizi
 \begin{defn}
-Sia $u\in L^{1}(\mathbb{R})$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\mathbb{R}\rightarrow \CC $ definita da
+Sia $u\in L^{1}(\RR )$. Si dice \textbf{Trasformata di Fourier} di $u$ la funzione $\hat{u} :\RR \rightarrow \CC $ definita da
 \begin{equation*}
-\hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx
+\hat{u}( \xi ) =\int _{\RR } e^{-i\xi x} u( x) dx
 \end{equation*}
 \end{defn}
 \begin{thm}
@@ -5555,7 +5555,7 @@ u( x) e^{iax} \ \ \rightarrow \ \ \hat{u}( \xi -a)\\
 u( x)\cos( \xi _{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}( \xi -\xi _{0}) +\hat{u}( \xi +\xi _{0})]
 \end{gather*}
 \item Linearità\begin{equation*}
-\Fc \{\alpha u+\beta v\} =\alpha \Fc \{u\} +\beta \Fc \{v\} \ \ \forall \alpha ,\beta \in \mathbb{R} ,\ \forall u,v\in L^{1}(\mathbb{R})
+\Fc \{\alpha u+\beta v\} =\alpha \Fc \{u\} +\beta \Fc \{v\} \ \ \forall \alpha ,\beta \in \RR  ,\ \forall u,v\in L^{1}(\RR )
 \end{equation*}
 \item Derivazione\begin{equation*}
 \widehat{u'}( \xi ) =i\xi \hat{u}( \xi )
@@ -5566,13 +5566,13 @@ u( x)\cos( \xi _{0} x) \ \ \rightarrow \ \ \frac{1}{2}[\hat{u}( \xi -\xi _{0}) +
 
 Calcolare la trasformata di Fourier di
 \begin{equation*}
-u( x) =\frac{1}{1+x^{2}} ,\ \ x\in \mathbb{R}
+u( x) =\frac{1}{1+x^{2}} ,\ \ x\in \RR 
 \end{equation*}
 \Esercizio{Trasformata della Gaussiana}
 
 Calcolare la trasformata di Fourier della funzione Gaussiana
 \begin{equation*}
-u( x) =e^{-x^{2}} ,\ x\in \mathbb{R}
+u( x) =e^{-x^{2}} ,\ x\in \RR 
 \end{equation*}
 \Esercizio{}
 
@@ -5589,7 +5589,7 @@ u( x) =\frac{2\cos x}{1+x^{2}}
 
 Determinare l'espressione analitica di
 \begin{equation*}
-f( \tau ) =\int _{\mathbb{R}} e^{-i\left( \tau ^{2} -2\right) x}\frac{\cos( 2x)}{1+x^{2}} dx
+f( \tau ) =\int _{\RR } e^{-i\left( \tau ^{2} -2\right) x}\frac{\cos( 2x)}{1+x^{2}} dx
 \end{equation*}
 \Esercizio{}
 
@@ -5626,7 +5626,7 @@ f( x) =\left( 1-x^{2}\right) H\left( 1-x^{2}\right)
 
 Per definizione
 \begin{equation*}
-\hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx
+\hat{u}( \xi ) =\int _{\RR } e^{-i\xi x} u( x) dx
 \end{equation*}
 Consideriamo la funzione analitica
 \begin{equation*}
@@ -5689,25 +5689,25 @@ $f\in L^{1} \implies \hat{f}$ è continua.
 \end{rem}
 Il valore in $0$ si ottiene per continuità.
 \begin{equation*}
-\implies \ \ \boxed{\hat{f}( \xi ) =\pi e^{-| \xi | } \ \ \forall \xi \in \mathbb{R}}
+\implies \ \ \boxed{\hat{f}( \xi ) =\pi e^{-| \xi | } \ \ \forall \xi \in \RR }
 \end{equation*}
 \Soluzione
 \begin{equation*}
-\hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx=\int _{\mathbb{R}} e^{-i\xi x} e^{-x^{2}} dx
+\hat{u}( \xi ) =\int _{\RR } e^{-i\xi x} u( x) dx=\int _{\RR } e^{-i\xi x} e^{-x^{2}} dx
 \end{equation*}
 \textbf{\underline{Metodo con l'analisi complessa}}
 \begin{equation*}
-\hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} e^{-x^{2}} dx=\int _{\mathbb{R}} e^{-\left( i\xi x+x^{2}\right)} dx
+\hat{u}( \xi ) =\int _{\RR } e^{-i\xi x} e^{-x^{2}} dx=\int _{\RR } e^{-\left( i\xi x+x^{2}\right)} dx
 \end{equation*}
 Completiamo il quadrato
 \begin{equation*}
-\int _{\mathbb{R}} e^{-\left( i\xi x+x^{2}\right)} dx=e^{-\frac{\xi ^{2}}{4}}\int _{\mathbb{R}} e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
+\int _{\RR } e^{-\left( i\xi x+x^{2}\right)} dx=e^{-\frac{\xi ^{2}}{4}}\int _{\RR } e^{-\left( x+\frac{i\xi }{2}\right)^{2}} dx
 \end{equation*}
 Sfruttiamo la seguente uguaglianza
 \begin{equation*}
 \int ^{+\infty }_{-\infty } e^{-( x+ib)^{2}} dx\overset{( *)}{=}\int ^{+\infty }_{-\infty } e^{-x^{2}} dx=\sqrt{\pi } \ \ \implies \ \ \boxed{\hat{u}( \xi ) =\sqrt{\pi } e^{-\frac{\xi ^{2}}{4}}}
 \end{equation*}
-Resta da provare $( *)$. Consideriamo la funzione analitica intera (senza singolarità) $z\mapsto e^{-z^{2}}$, prolungamento analitico di $e^{-x^{2}} ,x\in \mathbb{R}$.
+Resta da provare $( *)$. Consideriamo la funzione analitica intera (senza singolarità) $z\mapsto e^{-z^{2}}$, prolungamento analitico di $e^{-x^{2}} ,x\in \RR $.
 
 
 \begin{figure}[htpb]
@@ -5792,7 +5792,7 @@ Passando al limite per $R\rightarrow +\infty $ si ottiene $( *)$.
 
 Consideriamo l'equazione differenziale lineare omogenea del primo ordine
 \begin{equation*}
-u'( x) =-2xu( x) ,\ \ x\in \mathbb{R}
+u'( x) =-2xu( x) ,\ \ x\in \RR 
 \end{equation*}
 in quanto $e^{-x^{2}}$ è soluzione di questa equazione differenziale. Andiamo a trasformare tutti i termini di questa equazione.
 \begin{equation*}
@@ -5800,7 +5800,7 @@ i\xi \hat{u}( \xi ) =-2i\hat{u} '( \xi ) \ \ \implies \ \ \hat{u}( \xi ) =Ce^{-\
 \end{equation*}
 per cui si deve scegliere
 \begin{equation*}
-C=\hat{u}( 0) =\int _{\mathbb{R}} e^{-i\xi x} e^{-t^{2}} dt\overset{\xi =0}{=}\int _{\mathbb{R}} e^{-t^{2}} dt=\sqrt{\pi }
+C=\hat{u}( 0) =\int _{\RR } e^{-i\xi x} e^{-t^{2}} dt\overset{\xi =0}{=}\int _{\RR } e^{-t^{2}} dt=\sqrt{\pi }
 \end{equation*}
 Concludiamo che
 \begin{equation*}
@@ -5811,7 +5811,7 @@ Concludiamo che
 Poniamo
 \begin{gather*}
 u( x) =\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}\\
-\implies \ \ \hat{u}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} u( x) dx=\int ^{+\infty }_{-\infty }\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}
+\implies \ \ \hat{u}( \xi ) =\int _{\RR } e^{-i\xi x} u( x) dx=\int ^{+\infty }_{-\infty }\frac{e^{-i\xi x}}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}
 \end{gather*}
 Poniamo
 \begin{equation*}
@@ -5868,11 +5868,11 @@ $u( x)$ è pari, allora $\hat{u}( \xi )$ è pari e reale.
 
 $\implies $ i valori per $\xi  >0$ si ottengono imponendo $\hat{u}( -\xi ) =\hat{u}( \xi )$.
 
-$u\in L^{1}(\mathbb{R})$, allora la sua trasformata è continua.
+$u\in L^{1}(\RR )$, allora la sua trasformata è continua.
 
 $\implies $ il valore per $\xi =0$ si ottiene per continuità.
 \begin{equation*}
-\hat{u}( \xi ) =\frac{\pi }{3} e^{-| \xi | } -\frac{\pi }{6} e^{-2| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
+\hat{u}( \xi ) =\frac{\pi }{3} e^{-| \xi | } -\frac{\pi }{6} e^{-2| \xi | } \ \ \ \ \forall \xi \in \RR 
 \end{equation*}
 A questo punto ricordiamo la proprietà della \textit{modulazione}
 \begin{equation*}
@@ -5918,7 +5918,7 @@ g( x) =\frac{\cos( 2x)}{1+x^{2}}
 \end{equation*}
 Per definizione
 \begin{equation*}
-\hat{g}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} g( x) dx
+\hat{g}( \xi ) =\int _{\RR } e^{-i\xi x} g( x) dx
 \end{equation*}
 e dunque
 \begin{equation*}
@@ -5944,7 +5944,7 @@ f( \tau ) =\hat{g}\left( \tau ^{2} -2\right) =\frac{\pi }{2}\left( e^{-\left| \t
 \begin{enumerate}
 \item Calcoliamo\begin{equation*}
 \begin{aligned}
-\hat{f}( \xi ) & =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx\\
+\hat{f}( \xi ) & =\int _{\RR } e^{-i\xi x} f( x) dx\\
  & =\int ^{0}_{-1} -e^{-i\xi x} dx+\int ^{1}_{0} e^{-i\xi x} dx\\
  & =\left[\frac{1}{i\xi } e^{-i\xi x}\right]^{0}_{-1} +\left[ -\frac{1}{i\xi } e^{-i\xi x}\right]^{1}_{0}\\
  & =\frac{1}{i\xi }\left( 1-e^{i\xi } -e^{-i\xi } +1\right)\\
@@ -5966,7 +5966,7 @@ f( x) =\begin{cases}
 \end{equation*}
 $f$ è pari, allora $\hat{f}$ è pari e reale.
 \begin{equation*}
-\hat{f}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=\int ^{1}_{-1} e^{-i\xi x}\left( 1-x^{2}\right) dx=( *)
+\hat{f}( \xi ) =\int _{\RR } e^{-i\xi x} f( x) dx=\int ^{1}_{-1} e^{-i\xi x}\left( 1-x^{2}\right) dx=( *)
 \end{equation*}
 Usando l'analisi complessa
 \begin{equation*}
@@ -5985,16 +5985,16 @@ allora
  & =-\frac{4}{\xi ^{2}}\cos \xi +\frac{4}{\xi ^{3}}\sin \xi =4\left(\frac{\sin \xi -\xi \cos \xi }{\xi ^{3}}\right)
 \end{align*}
 \begin{thm}
-[Antitrasformata di Fourier] Siano $u,\hat{u} \in L^{1}(\mathbb{R})$
+[Antitrasformata di Fourier] Siano $u,\hat{u} \in L^{1}(\RR )$
 \begin{equation*}
-\boxed{u( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\hat{u}( \xi ) d\xi \ \ \forall x\in \mathbb{R}}
+\boxed{u( x) =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\hat{u}( \xi ) d\xi \ \ \forall x\in \RR }
 \end{equation*}
 \end{thm}
 Allora, ricordando che $\hat{f}$ è pari
 \begin{align*}
-f( x) & =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\hat{f}( \xi ) d\xi \\
- & =\frac{1}{2\pi }\int _{\mathbb{R}}[\cos( \xi x) +i\sin( \xi x)]\hat{f}( \xi ) \xi \\
- & =\frac{1}{2\pi }\int _{\mathbb{R}}\cos( \xi x) \cdotp \hat{f}( \xi ) d\xi \\
+f( x) & =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\hat{f}( \xi ) d\xi \\
+ & =\frac{1}{2\pi }\int _{\RR }[\cos( \xi x) +i\sin( \xi x)]\hat{f}( \xi ) \xi \\
+ & =\frac{1}{2\pi }\int _{\RR }\cos( \xi x) \cdotp \hat{f}( \xi ) d\xi \\
  & =\frac{1}{2\pi } \cdotp 2\int ^{\infty }_{0}\cos( \xi x) \cdotp \hat{f}( \xi ) d\xi \\
  & =\frac{1}{2\pi } \cdotp 2\int ^{\infty }_{0}\cos( \xi x) \cdotp 4\left(\frac{\sin \xi -\xi \cos \xi }{\xi ^{3}}\right) d\xi \\
  & =\frac{4}{\pi }\int ^{+\infty }_{0}\frac{\sin \xi -\xi \cos \xi }{\xi ^{3}}\cos( \xi x) d\xi 
@@ -6306,7 +6306,7 @@ Calcolare
 \end{equation*}
 \Esercizio{}
 
-Determinare le soluzioni $u\in L^{1}(\mathbb{R})$ di
+Determinare le soluzioni $u\in L^{1}(\RR )$ di
 \begin{equation*}
 u'-\alpha u=e^{-\alpha x} H( x) \ \ \ \ \alpha  >0
 \end{equation*}
@@ -6318,7 +6318,7 @@ u''+2xu'+2u=0
 \end{equation*}
 \Esercizio{}
 
-Determinare le soluzioni $u\in L^{1}(\mathbb{R})$ di
+Determinare le soluzioni $u\in L^{1}(\RR )$ di
 \begin{equation*}
 xu''+2u'-xu=xe^{-| x| }
 \end{equation*}
@@ -6466,7 +6466,7 @@ calcolare $\displaystyle f*f$ e la sua trasformata di Fourier $\displaystyle \Fc
 \begin{rem}
 [Prodotto di Convoluzione] È definito da
 \begin{equation*}
-( u*v)( x) =\int _{\mathbb{R}} u( x-y) v( y) dy=\int _{\mathbb{R}} u( y) v( x-y) dy
+( u*v)( x) =\int _{\RR } u( x-y) v( y) dy=\int _{\RR } u( y) v( x-y) dy
 \end{equation*}
 \end{rem}
 \Esercizio{}
@@ -6488,21 +6488,21 @@ f_{1}( x) =\frac{1}{1+x^{2}} \ \ \ \ f_{2}( x) =\frac{x}{\left( 1+x^{2}\right)^{
 f_{0}( x) =\arctan\left(\frac{1}{x}\right)
 \end{equation*}
 
-Stabilire se $\displaystyle f_{0} \in L^{1}(\mathbb{R})$ e/o se $\displaystyle f_{0} \in L^{2}(\mathbb{R})$.
+Stabilire se $\displaystyle f_{0} \in L^{1}(\RR )$ e/o se $\displaystyle f_{0} \in L^{2}(\RR )$.
 \item Calcolare la derivata di $\displaystyle f_{0}$ nel senso delle distribuzioni.
 \item Calcolare $\Fc \{f'_{0}\}$ e $\Fc \{f_{0}\}$.
 \end{enumerate}
 \Esercizio{}
 \begin{defn}
-Sia $\displaystyle f:\mathbb{R} \ \rightarrow \CC $ si dice Laplace-trasformabile se:
+Sia $\displaystyle f:\RR  \ \rightarrow \CC $ si dice Laplace-trasformabile se:
 \begin{equation*}
-\mathrm{supp} f\subset [ 0,+\infty ) \ \ \ \ \land \ \ \ \ \exists \lambda \in \mathbb{R} :e^{-\lambda t} f( t) \in L^{1}(\mathbb{R})
+\mathrm{supp} f\subset [ 0,+\infty ) \ \ \ \ \land \ \ \ \ \exists \lambda \in \RR  :e^{-\lambda t} f( t) \in L^{1}(\RR )
 \end{equation*}
 \end{defn}
 \begin{defn}
 Si dice Ascissa di convergenza di $\displaystyle f$:
 \begin{equation*}
-\lambda _{f} :=\inf\left\{\lambda \in \mathbb{R} :e^{-\lambda t} f( t) \in L^{1}(\mathbb{R})\right\}
+\lambda _{f} :=\inf\left\{\lambda \in \RR  :e^{-\lambda t} f( t) \in L^{1}(\RR )\right\}
 \end{equation*}
 \end{defn}
 \begin{defn}
@@ -6550,14 +6550,14 @@ precisando l'ascissa di convergenza.
 
 Calcolare la trasformata di Laplace di
 \begin{equation*}
-f( t) =H( t)\sum ^{m}_{k=0} a_{k} t^{k} \ \ \ \ a_{k} \in \mathbb{R}
+f( t) =H( t)\sum ^{m}_{k=0} a_{k} t^{k} \ \ \ \ a_{k} \in \RR 
 \end{equation*}
 $\displaystyle \lambda _{f} =0$, perché se moltiplichiamo $\displaystyle f$ per $\displaystyle e^{-\lambda t}$ con $\displaystyle \lambda  >0$ le $\displaystyle f$ sono integrabili, 
 
 mentre con $\displaystyle \lambda \leqslant 0$ non lo sono.
 \Esercizio{}
 
-Stabilire per quali valori di $\displaystyle a\in \mathbb{R}$ la funzione
+Stabilire per quali valori di $\displaystyle a\in \RR $ la funzione
 \begin{equation*}
 f_{a}( x) =H( x) e^{ax^{2} +2x}\sin^{2}( x)
 \end{equation*}
@@ -6587,14 +6587,14 @@ x-y\geqslant 0\ \ \land \ \ x\geqslant 0\ \ \ \ \iff \ \ \ \ y\leqslant x\ \ \la
 \end{equation*}
 quindi
 \begin{align*}
-( f*f)( x) & =\int _{\mathbb{R}} f( x-y) f( x) dy=\int ^{x}_{0} e^{-2( x-y)} e^{-2y} dy\\
+( f*f)( x) & =\int _{\RR } f( x-y) f( x) dy=\int ^{x}_{0} e^{-2( x-y)} e^{-2y} dy\\
  & =\int ^{x}_{0} e^{-2x} \ dy=e^{-2x}\int ^{x}_{0} dy=xe^{-2x}
 \end{align*}
 \begin{thm}
-Date $\displaystyle u,v\in \Sc (\mathbb{R}) \implies \ \widehat{u*v} =\hat{u} \cdot \hat{v}$.
+Date $\displaystyle u,v\in \Sc (\RR ) \implies \ \widehat{u*v} =\hat{u} \cdot \hat{v}$.
 \end{thm}
 \begin{align*}
-\hat{f}( \xi ) & =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=\int _{\mathbb{R}} e^{-i\xi x} H( x) e^{-2x} dx=\int ^{+\infty }_{0} e^{-i\xi x} e^{-2x} dx\\
+\hat{f}( \xi ) & =\int _{\RR } e^{-i\xi x} f( x) dx=\int _{\RR } e^{-i\xi x} H( x) e^{-2x} dx=\int ^{+\infty }_{0} e^{-i\xi x} e^{-2x} dx\\
  & =\int ^{+\infty }_{0} e^{-x( i\xi +2)} dx=\left[ -\frac{e^{-x( i\xi +2)}}{i\xi +2}\right]^{+\infty }_{0} =\frac{1}{2+i\xi }\\
  & \\
  & \implies \ \ \widehat{f*f} =\hat{f} \cdot \hat{f} =\frac{1}{( 2+i\xi )^{2}}
@@ -6605,49 +6605,49 @@ Nella scorsa esercitazione:
 
 $f$ pari, allora $\hat{f}$ pari.
 \begin{equation*}
-\hat{f}( \xi ) =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=...=4\frac{\sin( \xi ) -\xi \cos( \xi )}{\xi ^{3}}
+\hat{f}( \xi ) =\int _{\RR } e^{-i\xi x} f( x) dx=...=4\frac{\sin( \xi ) -\xi \cos( \xi )}{\xi ^{3}}
 \end{equation*}
 \begin{thm}
-[Identità di Plancherel] Se $\displaystyle u\in L^{2}\left(\mathbb{R}^{n}\right)$
+[Identità di Plancherel] Se $\displaystyle u\in L^{2}\left(\RR ^{n}\right)$
 \begin{equation*}
 \Vert \hat{u}\Vert _{L^{2}} =( 2\pi )^{n/2}\Vert u\Vert _{L^{2}}
 \end{equation*}
 oppure elevando tutto alla seconda
 \begin{equation*}
-\Vert \hat{u}\Vert ^{2}_{L^{2}} =( 2\pi )^{n}\Vert u\Vert ^{2}_{L^{2}} \ \ \implies \ \ \int _{\mathbb{R}^{n}}| \hat{u}( \xi )| ^{2} d\xi =( 2\pi )^{n}\int _{\mathbb{R}^{n}}| u( x)| ^{2} dx
+\Vert \hat{u}\Vert ^{2}_{L^{2}} =( 2\pi )^{n}\Vert u\Vert ^{2}_{L^{2}} \ \ \implies \ \ \int _{\RR ^{n}}| \hat{u}( \xi )| ^{2} d\xi =( 2\pi )^{n}\int _{\RR ^{n}}| u( x)| ^{2} dx
 \end{equation*}
 \end{thm}
 Sfrutto il fatto che $f$ e $\hat{f}$ sono pari:
 \begin{align*}
-\int _{\mathbb{R}}| f( x)| ^{2} dx & =\int ^{1}_{-1}\left( 1-x^{2}\right)^{2} dx=2\int ^{1}_{0}\left( 1-x^{2}\right)^{2} dx\\
+\int _{\RR }| f( x)| ^{2} dx & =\int ^{1}_{-1}\left( 1-x^{2}\right)^{2} dx=2\int ^{1}_{0}\left( 1-x^{2}\right)^{2} dx\\
  & =2\int ^{1}_{0}\left( 1-2x^2+x^{4}\right) dx=2\left[ x-\frac{2x^{3}}{3} +\frac{x^{5}}{5}\right]^{1}_{0} =\frac{16}{15}\\
  & \\
-\int _{\mathbb{R}}| \hat{f}( \xi )| ^{2} d\xi  & =\int ^{+\infty }_{-\infty }\left| 4\frac{(\sin \xi -\xi \ \cos \xi )}{\xi ^{3}}\right| ^{2} d\xi \\
+\int _{\RR }| \hat{f}( \xi )| ^{2} d\xi  & =\int ^{+\infty }_{-\infty }\left| 4\frac{(\sin \xi -\xi \ \cos \xi )}{\xi ^{3}}\right| ^{2} d\xi \\
  & =16\int ^{+\infty }_{-\infty }\frac{(\sin \xi -\xi \ \cos \xi )^{2}}{\xi ^{6}} d\xi \\
  & =32\int ^{+\infty }_{0}\frac{(\sin \xi -\xi \ \cos \xi )^{2}}{\xi ^{6}} d\xi =32\cdotp I
 \end{align*}
 Usando Plancherel
 \begin{equation*}
-32\cdotp I=( 2\pi )^{n}\int _{\mathbb{R}}| f( x)| ^{2} dx\overset{n=1}{=} 2\pi \cdotp \frac{16}{15} \ \ \implies \ \ I=\frac{\pi }{15}
+32\cdotp I=( 2\pi )^{n}\int _{\RR }| f( x)| ^{2} dx\overset{n=1}{=} 2\pi \cdotp \frac{16}{15} \ \ \implies \ \ I=\frac{\pi }{15}
 \end{equation*}
 \Soluzione
 \begin{thm}
-[Trasformata della derivata] Date $u,u'\in L^{1}(\mathbb{R})$ e $u\in C^{1}$
+[Trasformata della derivata] Date $u,u'\in L^{1}(\RR )$ e $u\in C^{1}$
 \begin{equation*}
 \Fc \left\{\frac{d^{n}}{dx^{n}} u( x)\right\} =( i\xi )^{n} \cdotp \Fc \{u( x)\}
 \end{equation*}
 \end{thm}
 \begin{enumerate}
 \item Nell'esercitazione scorsa abbiamo visto che:\begin{equation*}
-\hat{f}_{1}( \xi ) =\pi e^{-| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
+\hat{f}_{1}( \xi ) =\pi e^{-| \xi | } \ \ \ \ \forall \xi \in \RR 
 \end{equation*}Osserviamo che\begin{equation*}
 f_{2}( x) =-\frac{1}{2} f_{1} '( x)
 \end{equation*}Allora\begin{equation*}
-\hat{f}_{2}( \xi ) =-\frac{1}{2}\Fc ( f_{1} '( x) ,\xi ) =-\frac{1}{2} \cdotp i\xi \cdotp \pi e^{-| \xi | } \ \ \ \ \forall \xi \in \mathbb{R}
+\hat{f}_{2}( \xi ) =-\frac{1}{2}\Fc ( f_{1} '( x) ,\xi ) =-\frac{1}{2} \cdotp i\xi \cdotp \pi e^{-| \xi | } \ \ \ \ \forall \xi \in \RR 
 \end{equation*}
-\item Notiamo che $f_{0}$ è limitata, allora $f_{0} \in L^{\infty }(\mathbb{R})$, mentre per $| x| \rightarrow \infty $ è asintotica a $1/x$, che non è integrabile, quindi $f_{0} \notin L^{1}(\mathbb{R})$. Tuttavia $f_{0} \in L^{2}(\mathbb{R})$.
+\item Notiamo che $f_{0}$ è limitata, allora $f_{0} \in L^{\infty }(\RR )$, mentre per $| x| \rightarrow \infty $ è asintotica a $1/x$, che non è integrabile, quindi $f_{0} \notin L^{1}(\RR )$. Tuttavia $f_{0} \in L^{2}(\RR )$.
 \item $f_{0}$ è continua $\forall x\neq 0$, dove c'è una discontinuità di tipo salto di ampiezza $\pi $. Senza indugi e senza calcoli, deduciamo subito che\begin{equation*}
-f_{0} '( x)\overset{D(\mathbb{R})}{=} \pi \delta _{0}( x) -\frac{1}{1+x^{2}}
+f_{0} '( x)\overset{D(\RR )}{=} \pi \delta _{0}( x) -\frac{1}{1+x^{2}}
 \end{equation*}
 \item Usando le proprietà della trasformata\begin{align*}
 \Fc ( f_{0} '( x) ,\xi ) & =\Fc ( \pi \delta _{0} -f_{1}( x) ,\xi ) =\pi -\pi e^{-| \xi | }\\
@@ -6665,7 +6665,7 @@ F( s) =\int ^{+\infty }_{0} e^{-st} f( t) dt=\int ^{+\infty }_{1} e^{-st} te^{2t
 \end{equation*}
 cerco ascissa di convergenza, con $t\geqslant 1$
 \begin{equation*}
-e^{-\lambda t} te^{2t} =te^{t( 2-\lambda )} \in L^{1}(\mathbb{R}) \ \ \iff \ \ \lambda  >2\ \ \implies \ \ \lambda _{f} =2
+e^{-\lambda t} te^{2t} =te^{t( 2-\lambda )} \in L^{1}(\RR ) \ \ \iff \ \ \lambda  >2\ \ \implies \ \ \lambda _{f} =2
 \end{equation*}
 \Soluzione
 
@@ -6687,7 +6687,7 @@ e^{ax^{2} +2x}\sin^{2}( x) , & x\geqslant 0\\
 0, & x< 0
 \end{cases}
 \end{equation*}
-Hanno il supporto in $\displaystyle [ 0,+\infty ) ,\forall a\in \mathbb{R}$. Moltiplichiamo per il solito esponenziale
+Hanno il supporto in $\displaystyle [ 0,+\infty ) ,\forall a\in \RR $. Moltiplichiamo per il solito esponenziale
 \begin{equation*}
 e^{-\lambda x} f_{a}( x) =\begin{cases}
 e^{ax^{2} +( 2-\lambda ) x}\sin^{2}( x) , & x\geqslant 0\\
@@ -6814,7 +6814,7 @@ Allora
 \end{equation*}
 Antitrasformiamo
 \begin{equation*}
-u( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{ix\xi }\frac{2\left( 1+\xi ^{2}\right)}{\xi ^{4} +4} d\xi 
+u( x) =\frac{1}{2\pi }\int _{\RR } e^{ix\xi }\frac{2\left( 1+\xi ^{2}\right)}{\xi ^{4} +4} d\xi 
 \end{equation*}
 $\hat{u}$ reale pari, allora $u$ reale pari, quindi studiamo le $x >0$ per poi specchiare.
 
@@ -6843,7 +6843,7 @@ u( x) & =i\cdotp \sum _{\mathrm{Im}( z_{k})  >0}\mathrm{Res}( f,z_{k})\\
  & =\frac{e^{-x}}{4}\left\{3\frac{e^{ix} +e^{-ix}}{2} -\frac{e^{ix} -e^{-ix}}{2i}\right\}\\
  & =\frac{e^{-x}}{4}( 3\cos x-\sin x)
 \end{align*}
-Per le $x\in \mathbb{R}$
+Per le $x\in \RR $
 \begin{equation*}
 u( x) =\frac{e^{-| x| }}{4}( 3\cos x-\sin| x| )
 \end{equation*}
@@ -6890,11 +6890,11 @@ allora
 \end{align*}
 Ricordiamo che
 \begin{equation*}
-f*g=\int _{\mathbb{R}} f( t) g( x-t) dt=\int _{\mathbb{R}} f( x-t) g( t) dt
+f*g=\int _{\RR } f( t) g( x-t) dt=\int _{\RR } f( x-t) g( t) dt
 \end{equation*}
 Quindi
 \begin{equation*}
-u( x) =\frac{1}{2}\int _{\mathbb{R}} e^{-| t| } \chi _{( -1,1)}( x-t) dt
+u( x) =\frac{1}{2}\int _{\RR } e^{-| t| } \chi _{( -1,1)}( x-t) dt
 \end{equation*}
 Dobbiamo dividere i vari casi
 \begin{gather*}
@@ -6964,7 +6964,7 @@ quindi
 \end{equation*}
 $\hat{u}$ reale pari
 \begin{equation*}
-u( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{ix\xi }\frac{1}{\left( 1+\xi ^{2}\right)^{2}} d\xi 
+u( x) =\frac{1}{2\pi }\int _{\RR } e^{ix\xi }\frac{1}{\left( 1+\xi ^{2}\right)^{2}} d\xi 
 \end{equation*}
 Per $x >0$, usando il lemma di Jordan
 \begin{align*}
@@ -6974,7 +6974,7 @@ u( x) & =\frac{1}{\cancel{2\pi }} \cdotp \cancel{2\pi } i\cdotp \mathrm{Res}\lef
  & =i\cdotp \frac{1}{16} e^{-x}( -4ix-4i)\\
  & =\frac{1}{4} \ e^{-x}( x+1)
 \end{align*}
-Per $x\in \mathbb{R}$
+Per $x\in \RR $
 \begin{equation*}
 u( x) =\frac{e^{-| x| }}{4}(| x| +1)
 \end{equation*}
@@ -6994,7 +6994,7 @@ quindi la trasformata vale
 \begin{equation*}
 \hat{u}( \xi ) =Ce^{-\int \frac{2-\xi ^{2}}{-2\xi } d\xi } =C\xi e^{-\frac{\xi ^{2}}{4}}
 \end{equation*}
-$\forall C$, $\hat{u}$ dispari allora $C=D\cdotp i,\ D\in \mathbb{R}$
+$\forall C$, $\hat{u}$ dispari allora $C=D\cdotp i,\ D\in \RR $
 \begin{equation*}
 \ \hat{u}( \xi ) =D\cdotp i\xi e^{-\frac{\xi ^{2}}{4}} \ \ \implies \ \ u( x) =D\cdotp \frac{d}{dx}\left( e^{-x^{2}}\right) =K\cdotp xe^{-x^{2}}
 \end{equation*}
@@ -7008,7 +7008,7 @@ xu''+2u'-xu=xe^{-| x| }
 \end{equation*}
 \Esercizio{}
 
-Determinare le soluzioni $\displaystyle u\in S'(\mathbb{R})$ dell'equazione differenziale
+Determinare le soluzioni $\displaystyle u\in S'(\RR )$ dell'equazione differenziale
 \begin{equation*}
 -u''+u=1+\delta _{0} ''
 \end{equation*}
@@ -7089,11 +7089,11 @@ Andiamo ad antitrasformare.
 
 $\hat{u}$ è reale pari, allora $u$ è reale pari. Per $x >0$
 \begin{equation*}
-u( x) =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\hat{u}( \xi ) d\xi =\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =
+u( x) =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\hat{u}( \xi ) d\xi =\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =
 \end{equation*}
 applico il teorema dei residui e il Lemma di Jordan sulla semicirconferenza superiore
 \begin{equation*}
-=\frac{1}{2\pi }\int _{\mathbb{R}} e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \mathrm{Res}\left( -\frac{e^{izx}}{\left( 1+z^{2}\right)^{2}} ,z=i\right) =
+=\frac{1}{2\pi }\int _{\RR } e^{i\xi x}\left[ -\frac{1}{\left( 1+\xi ^{2}\right)^{2}}\right] d\xi =\frac{1}{2\pi } \cdotp 2\pi i\cdotp \mathrm{Res}\left( -\frac{e^{izx}}{\left( 1+z^{2}\right)^{2}} ,z=i\right) =
 \end{equation*}
 è un polo del secondo ordine
 \begin{equation*}
@@ -7102,7 +7102,7 @@ applico il teorema dei residui e il Lemma di Jordan sulla semicirconferenza supe
 = & -i\frac{e^{-x}\left[ ix( 2i)^{2} -2( 2i)\right]}{( 2i)^{4}} =-i\frac{e^{-x}[ -2x-2]}{2^{3} i^{3}} =\frac{e^{-x}[ -x-1]}{2^{2}} =-\frac{e^{-x}}{4}( x+1)
 \end{aligned}
 \end{equation*}
-Sfruttiamo la parita. Per $x\in \mathbb{R}$
+Sfruttiamo la parita. Per $x\in \RR $
 \begin{equation*}
 u( x) =-\frac{e^{-| x| }}{4}(| x| +1)
 \end{equation*}
@@ -7128,7 +7128,7 @@ Possiamo calcolare la trasformata della derivata della Delta con la dualità
  & =-\langle \delta '( x) ,\frac{d}{d\xi }\Fc \{\varphi ( x) ,\xi \} \rangle \\
  & =\langle \delta ( x) ,\frac{d^{2}}{d\xi ^{2}}\Fc \{\varphi ( x) ,\xi \} \rangle \\
  & =\langle \delta ( x) ,\Fc \left\{( -ix)^{2} \varphi ( x) ,\xi \right\} \rangle \\
- & \overset{\xi =0}{=}\int _{\mathbb{R}}( -ix)^{2} \varphi ( x) dx\\
+ & \overset{\xi =0}{=}\int _{\RR }( -ix)^{2} \varphi ( x) dx\\
  & =\langle ( -ix)^{2} ,\varphi ( x) \rangle 
 \end{align*}
 allora
@@ -7147,7 +7147,7 @@ Per quanto riguarda
 \begin{equation*}
 -u''+u=1
 \end{equation*}
-l'unica soluzione in $\Sc  '(\mathbb{R})$ è $u( x) =1$, in conclusione
+l'unica soluzione in $\Sc  '(\RR )$ è $u( x) =1$, in conclusione
 \begin{equation*}
 u( x) =1-\delta +\frac{1}{2} e^{-| x| }
 \end{equation*}
