@@ -1224,13 +1224,13 @@ con norma
 Consideriamo lo spazio $L^{\infty}(A)$, definiamo estremo superiore essenziale
 \begin{equation*}
 \begin{aligned}
-\mathrm{ess\ sup} f(x) & = \inf\{c\in \RR : | f(x) > c| = 0\}\\
+\esssup f(x) & = \inf\{c\in \RR : | f(x) > c| = 0\}\\
  & = \inf\left\{c\in \RR : | f(x)| < c\ \text{q.o. in} \ A\right\}
 \end{aligned}
 \end{equation*}
 \end{defn}
 \begin{rem}
-$ \Vert f \Vert_{L^{\infty}} = \mathrm{ess\ sup}| f(x)| $.
+$ \Vert f \Vert_{L^{\infty}} = \esssup| f(x)| $.
 \end{rem}
 \begin{thm}
 Sia $p\in [1, + \infty)$, $a, b\in L^{p}$, allora anche $(a + b) \in L^{p}$.
@@ -1286,7 +1286,7 @@ f(x) g(x) \in L^{1} \ \ \text{e} \ \ \int | f(x) g(x)| dx\leq \Vert f \Vert_{L^{
 \end{thm}
 \begin{proof}\leavevmode
 \begin{itemize}
-\item Se $p = 1, q = + \infty $ allora $g\in L^{\infty}$ cioè $\mathrm{ess\ sup}| g(x)| < + \infty $
+\item Se $p = 1, q = + \infty $ allora $g\in L^{\infty}$ cioè $\esssup| g(x)| < + \infty $
 \begin{align*}
 \implies & | g(x)| \leq \Vert g \Vert_{L^{\infty}} \ \ \text{q.o. in} \ x\\
 \implies & \int | f(x) g(x)| dx\leq \Vert g \Vert_{L^{\infty}}\int | f(x)| dx = \Vert g \Vert_{L^{\infty}} \Vert f \Vert_{L^{1}}
@@ -1592,7 +1592,7 @@ Sia $X$ spazio di Banach. Allora $X'$ è uno spazio di Banach lui stesso rispett
 [Supporto di una funzione]
 Supponiamo ora di avere una funzione $f: A\subset \RR^{n}\rightarrow \RR$. Si dice supporto di $f$ l'insieme
 \begin{equation*}
-\mathrm{supp} f = \overline{\{x\in A, f(x) \neq 0\}}
+\supp f = \overline{\{x\in A, f(x) \neq 0\}}
 \end{equation*}
 È la chiusura dell'insieme dei punti dove la funzione non si annulla.
 \end{defn}
@@ -1610,7 +1610,7 @@ Si dice $L^{p}_{\loc}$ l'insieme delle funzioni $f: A\rightarrow \RR$ tali che $
 Adesso dobbiamo definire un nuovo spazio di funzioni, che non è uno spazio di Banach.
 \begin{defn}
 [Spazio delle funzioni test]
-Sia $A\subset \RR^{n}$ aperto. Chiamiamo funzioni $C^{\infty}$ a supporto compatto, o funzioni test, e lo indichiamo con $\Dc(A)$ l'insieme delle funzioni $f: A\rightarrow \RR$, derivabili infinite volte $f\in C^{\infty}$ e tali che il supporto $\mathrm{supp} f$ è compatto.
+Sia $A\subset \RR^{n}$ aperto. Chiamiamo funzioni $C^{\infty}$ a supporto compatto, o funzioni test, e lo indichiamo con $\Dc(A)$ l'insieme delle funzioni $f: A\rightarrow \RR$, derivabili infinite volte $f\in C^{\infty}$ e tali che il supporto $\supp f$ è compatto.
 \end{defn}
 Una funzione in $\Dc(A)$ viene detta \textbf{funzione test}. Queste funzioni sono un insieme estremamente piccolo. Non è banale neanche fare degli esempi in $\Dc(\RR)$. Per esempio
 \begin{equation*}
@@ -1634,7 +1634,7 @@ Daremo le prossime definizioni in dimensione $1$ per alleggerire le notazioni.
 \begin{defn}
 [Convergenza in $\Dc$]Sia $A\subset \RR$ aperto e consideriamo l'insieme $\Dc(A)$, consideriamo una successione di funzioni $\{f_{n}\} \subset \Dc(A)$. Diciamo che $f_{n}\rightarrow f$ in $\Dc(A)$ se
 \begin{enumerate}
-\item $\exists K\subset A$ compatto tale che il supporto $\mathrm{supp} f_{n} \subset K$, ciascuna funzione è a supporto compatto, ma vogliamo che esista un compatto che contenga i supporti di tutte le funzioni.
+\item $\exists K\subset A$ compatto tale che il supporto $\supp f_{n} \subset K$, ciascuna funzione è a supporto compatto, ma vogliamo che esista un compatto che contenga i supporti di tutte le funzioni.
 \item $\forall k\in \NN$ la derivata di ordine $k$ della successione di funzioni converge alla derivata di ordine $k$ della funzione uniformemente $f^{(k)}_{n}\rightarrow f^{(k)}$.
 \end{enumerate}
 \end{defn}
@@ -1740,7 +1740,7 @@ Veniamo al supporto. Una distribuzione non ha una variabile, non si annulla come
 Sia $\Lambda \subset \Dc'(A)$. Consideriamo $B\subset A$ e $\varphi \in \Dc(B)$. Supponiamo che $(\Lambda, \varphi) = 0\ \ \forall \varphi $. Questo è il modo per dire che "si annulla", diciamo
 \begin{equation*}
 \boxed{
-\mathrm{supp} \Lambda =
+\supp \Lambda =
 \left(\bigcup_{\substack{B\subset A\\B\text{aperti}}} \{B: (\Lambda, \varphi) = 0, \ \forall \varphi \in \Dc(B)\}\right)^{C}
 }
 \end{equation*}
@@ -2380,7 +2380,7 @@ allora
 
 Cosa deve avere una funzione $u: \RR\rightarrow \RR$ affinché sia Laplace - trasformabile o $\Lc$ - trasformabile?
 \begin{itemize}
-\item $\mathrm{supp}(u) \subset [0, + \infty)$
+\item $\supp(u) \subset [0, + \infty)$
 
 A questo proposito ricordiamo la funzione di Heaviside, che sarà utile, in quanto non trasformeremo mai $\sin x$, piuttosto trasformeremo $H(x)\sin x$, anche se talvolta sorvoleremo su questa cosa dandola per scontata
 \begin{equation*}
@@ -2429,7 +2429,7 @@ possiamo portare il limite dentro per convergenza dominata, purché $\Re (s) > \
 \end{proof}
 \item $\boxed{\Lc(u(x - x_{0}), s) = e^{- sx_{0}}\Lc(u(x), s)}$
 
-Attenzione che essendo $\mathrm{supp}(u) \in [0, + \infty)$
+Attenzione che essendo $\supp(u) \in [0, + \infty)$
 \begin{itemize}
 \item se $\boxed{x_{0} > 0}$ il supporto è ancora quello
 \item se $x_{0} < 0$ il supporto potrebbe includere numeri negativi, quindi scartiamo questo caso
@@ -2674,7 +2674,7 @@ Con Fourier abbiamo, utile in entrambi i versi,
 Per Laplace abbiamo le seguenti richieste sulle funzioni affinché siano $\Lc$ - trasformabili
 \begin{itemize}
 \item $f, g\in L^{1}_{\loc}$
-\item $\mathrm{supp} f\subset [0, + \infty), \ \mathrm{supp} g\subset [0, + \infty)$
+\item $\supp f\subset [0, + \infty), \ \supp g\subset [0, + \infty)$
 \item $\exists \lambda_{1}, \lambda_{2} \ \implies \ e^{- \lambda_{1} x} f(x) \in L^{1}(\RR), \ e^{- \lambda_{2} x} g(x) \in L^{1}(\RR)$
 \end{itemize}
 \begin{thm}
