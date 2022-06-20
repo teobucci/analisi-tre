@@ -337,7 +337,7 @@ Siano $\Omega \subseteq \mathbb{C}$, $f:\Omega \rightarrow \mathbb{C}$ è deriva
 \end{equation*}
 \end{defn}
 \begin{defn}
-Sia $\Omega \in \mathbb{C}$ aperto. Se $f$ è derivabile in ogni punto di $\Omega $, allora $f$ è \textbf{olomorfa} in $\Omega $, $f\in \mathcal{H}\left( \Omega \right)$.
+Sia $\Omega \in \mathbb{C}$ aperto. Se $f$ è derivabile in ogni punto di $\Omega $, allora $f$ è \textbf{olomorfa} in $\Omega $, $f\in \Hc \left( \Omega \right)$.
 \end{defn}
 \begin{rem}
 Se $\Omega \equiv \mathbb{C}$ allora $f$ è \textbf{intera}.
@@ -475,7 +475,7 @@ Sia $\Omega \subseteq \mathbb{C}$ aperto, $f:\Omega \rightarrow \mathbb{C}$ cont
 
 2) $\forall \gamma $ chiusa $C^{1}$ a tratti si ha $\int _{\gamma } f\left( z\right) dz=0$
 
-3) $\exists F\in \mathcal{H}\left( \Omega \right) \cap C^{1}\left( \Omega \right)$ tale che $F'=f$ in $\Omega $
+3) $\exists F\in \Hc \left( \Omega \right) \cap C^{1}\left( \Omega \right)$ tale che $F'=f$ in $\Omega $
 \end{thm}
 \textbf{\underline{1 modo}}
 \begin{align*}
@@ -502,8 +502,8 @@ f\left( z\right) =\overline{z} +\left( z+1\right)^{7} =g\left( z\right) +h\left(
 dove
 \begin{equation*}
 \begin{aligned}
-g\left( z\right) =\overline{z} & \notin \mathcal{H}\left( \Omega \right)\\
-h\left( z\right) =\left( z+1\right)^{7} & \in \mathcal{H}\left( \Omega \right)
+g\left( z\right) =\overline{z} & \notin \Hc \left( \Omega \right)\\
+h\left( z\right) =\left( z+1\right)^{7} & \in \Hc \left( \Omega \right)
 \end{aligned}
 \end{equation*}
 La funzione $H\left( z\right) =\frac{\left( z+1\right)^{8}}{8}$ è tale che $H'\left( z\right) =h\left( z\right)$, quindi per il teorema visto l'integrale dipende solo dagli estremi
@@ -867,7 +867,7 @@ J=\int\nolimits ^{+\infty }_{0} e^{it^{2}} dt=\int\nolimits ^{+\infty }_{0}\cos 
 \end{equation*}
 Poniamo
 \begin{equation*}
-f\left( z\right) =e^{iz^{2}} \in \mathcal{H}\left(\mathbb{C}\right)
+f\left( z\right) =e^{iz^{2}} \in \Hc \left(\mathbb{C}\right)
 \end{equation*}
 Consideriamo una curva $\gamma =\gamma _{1} \cup \gamma _{2} \cup \gamma _{3}$ fatta come
 
@@ -1057,7 +1057,7 @@ f\left( z\right) & =-\frac{i}{2}\left\{\frac{1}{z-2i} \cdotp \sum\limits ^{\inft
 \end{align*}
 \Soluzione
 \begin{thm}
-Sia $f\in \mathcal{H}\left( D\left( z_{0} ,R\right) \setminus \left\{z_{0}\right\}\right)$, cioè $z_{0}$ è una \textbf{singolarità isolata} per $f$. Allora localmente
+Sia $f\in \Hc \left( D\left( z_{0} ,R\right) \setminus \left\{z_{0}\right\}\right)$, cioè $z_{0}$ è una \textbf{singolarità isolata} per $f$. Allora localmente
 \begin{equation*}
 f\left( z\right) =\sum\limits ^{+\infty }_{n=-\infty } a_{n}\left( z-z_{0}\right)^{n}
 \end{equation*}
@@ -1093,7 +1093,7 @@ Si dice residuo di $f$ in $z_{0}$
 \end{equation*}
 \end{defn}
 \begin{thm}
-Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
+Sia $f\in \Hc \left(\mathbb{C} \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
 
 \begin{itemize}
 \item \textbf{singolarità eliminabile} se e solo se\begin{equation*}
@@ -1138,13 +1138,13 @@ Siano $f(z)$ e $g(z)$ tali che $f\left( z_{0}\right) =0=g\left( z_{0}\right)$ e 
 \end{itemize}
 \end{thm}
 \begin{thm}
-Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
+Sia $f\in \Hc \left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$ allora
 \begin{equation*}
 \sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right) +\mathrm{Res}\left( f,\infty \right) =0
 \end{equation*}
 \end{thm}
 \begin{thm}
-Sia $f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
+Sia $f\in \Hc \left(\mathbb{C} \setminus \left\{z_{1} ,\dotsc ,z_{n}\right\}\right)$. Se $R >\max_{1\leqslant k\leqslant n}\left| z_{k}\right| $ allora
 \begin{equation*}
 \int\nolimits _{\partial D\left( 0,R\right)} f\left( z\right) dz=2\pi i\left[\sum\limits ^{n}_{k=1}\mathrm{Res}\left( f,z_{k}\right)\right]
 \end{equation*}
@@ -1175,7 +1175,7 @@ Nei punti $z_{0} \neq \infty $
 \end{enumerate}
 \end{rem}
 \begin{thm}
-Sia $F=\frac{f}{g}$. Se $f\in \mathcal{H}\left(\mathcal{U}\left( z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left( z_{0}\right) =0$ e $g'\left( z_{0}\right) \neq 0$), allora\begin{equation*}
+Sia $F=\frac{f}{g}$. Se $f\in \Hc \left(\mathcal{U}\left( z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left( z_{0}\right) =0$ e $g'\left( z_{0}\right) \neq 0$), allora\begin{equation*}
 \mathrm{Res}\left(\frac{f}{g} ,z_{0}\right) =\frac{f\left( z_{0}\right)}{g'\left( z_{0}\right)}
 \end{equation*}
 
@@ -1689,7 +1689,7 @@ Per risolverli basta porre $f\left( z\right) =R\left( z\right)$ oppure $f\left( 
 
 Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente Lemma. Si fa quindi tendere $\varepsilon \rightarrow 0^{+}$ e $R\rightarrow +\infty $.
 \begin{thm}
-[Lemma del cerchio piccolo] Sia $f\in \mathcal{H}\left( D\left( z_{0} ,r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }\left( t\right) =z_{0} +\varepsilon e^{it}$ con $t\in \left[ \alpha ,\beta \right]$. Allora
+[Lemma del cerchio piccolo] Sia $f\in \Hc \left( D\left( z_{0} ,r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }\left( t\right) =z_{0} +\varepsilon e^{it}$ con $t\in \left[ \alpha ,\beta \right]$. Allora
 \begin{equation*}
 \lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f\left( z\right) dz=\left( \beta -\alpha \right) i\cdotp \mathrm{Res}\left( f,z_{0}\right)
 \end{equation*}
@@ -1766,7 +1766,7 @@ Calcolare
 \ParteSoluzioni
 \Soluzione
 
-$f\in \mathcal{H}(\mathbb{C} \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semplici, mentre $0$ è un polo del II ordine. 
+$f\in \Hc (\mathbb{C} \setminus \{0,\pm i\})$ dove $\pm i$ sono poli semplici, mentre $0$ è un polo del II ordine. 
 
 
 \begin{figure}[htpb]
@@ -1907,7 +1907,7 @@ dove è stata usata la disuguaglianza triangolare
 \begin{equation*}
 I=\int ^{+\infty }_{0}\frac{\sin x}{x} dx=\frac{1}{2}\int ^{+\infty }_{-\infty }\frac{\sin x}{x} dx=\frac{1}{2}\mathrm{Im}\left( J\right) \ \ \ \ \ \ \ \ J=\int ^{+\infty }_{-\infty }\frac{e^{ix}}{x} dx
 \end{equation*}
-Posto $f\left( z\right) =\frac{e^{iz}}{z}$, $f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
+Posto $f\left( z\right) =\frac{e^{iz}}{z}$, $f\in \Hc \left(\mathbb{C} \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
 \begin{equation*}
 J=\lim _{\varepsilon \rightarrow 0^{+} ,R\rightarrow +\infty }\int _{\left[ -R,R\right] \setminus \left( -\varepsilon ,\varepsilon \right)}\frac{e^{iz}}{z} dz
 \end{equation*}
@@ -1944,7 +1944,7 @@ poniamo
 \begin{equation*}
 f\left( z\right) =\frac{e^{i\pi z}}{\left( z-3\right)\left( z^{2} -2z+2\right)}
 \end{equation*}
-$f\in \mathcal{H}\left(\mathbb{C} \setminus \left\{3,1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
+$f\in \Hc \left(\mathbb{C} \setminus \left\{3,1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
 \begin{align*}
 \int _{\gamma _{R,\varepsilon }} f\left( z\right) dz & =2\pi i\cdotp \mathrm{Res}\left( f,1+i\right) =2\pi i\cdotp \lim _{z\rightarrow 1+i} f\left( z\right)\left( z-\left( 1+i\right)\right) =\\
  & =2\pi i\cdotp \lim _{z\rightarrow 1+i}\frac{e^{\pi iz}}{\left( z-3\right)\left( z-1+i\right)} =\dotsc =\frac{\pi e^{-\pi }}{5}\left( 2+i\right)
@@ -2215,7 +2215,7 @@ Quando $\varepsilon \rightarrow 0^{+} ,R\rightarrow \infty $
 \int _{\gamma _{R,\varepsilon }} =\int ^{-1-\varepsilon }_{-R} +\int _{\sigma _{\varepsilon }} +\int ^{R}_{-1-\varepsilon } +\int _{\sigma _{R}}
 \end{equation*}
 \begin{thm}
-[Lemma del cerchio piccolo] Sia $f\in \mathcal{H}( D( z_{0} ,r) \setminus \{z_{0}\})$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }( t) =z_{0} +\varepsilon e^{it}$ con $t\in [ \alpha ,\beta ]$. Allora
+[Lemma del cerchio piccolo] Sia $f\in \Hc ( D( z_{0} ,r) \setminus \{z_{0}\})$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi _{\varepsilon }( t) =z_{0} +\varepsilon e^{it}$ con $t\in [ \alpha ,\beta ]$. Allora
 \begin{equation*}
 \lim _{\varepsilon \rightarrow 0^{+}}\int _{\varphi _{\varepsilon }} f( z) dz=( \beta -\alpha ) i\cdotp \mathrm{Res}( f,z_{0})
 \end{equation*}
@@ -5815,7 +5815,7 @@ u( x) =\frac{1}{\left( 1+x^{2}\right)\left( 4+x^{2}\right)}\\
 \end{gather*}
 Poniamo
 \begin{equation*}
-u( z) =\frac{1}{\left( 1+z^{2}\right)\left( 4+z^{2}\right)} \in \mathcal{H}(\mathbb{C} \setminus \{\pm i,\pm 2i\})
+u( z) =\frac{1}{\left( 1+z^{2}\right)\left( 4+z^{2}\right)} \in \Hc (\mathbb{C} \setminus \{\pm i,\pm 2i\})
 \end{equation*}
 Le singolarità sono poli semplici.
 
