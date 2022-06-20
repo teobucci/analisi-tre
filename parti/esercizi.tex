@@ -4424,7 +4424,7 @@ u(x)=x\delta '_{0} (x)
 \end{equation*}
 \Esercizio{}
 
-Calcolare il limite delle $f_{n}$ in $L^{p} (\mathbb{R} )$, $D'(\mathbb{R} )$ e $\mathcal{S} '(\mathbb{R} )$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
+Calcolare il limite delle $f_{n}$ in $L^{p} (\mathbb{R} )$, $D'(\mathbb{R} )$ e $\Sc  '(\mathbb{R} )$ di\footnote{Dove $H$ indica la funzione di Heaviside.}
 \begin{equation*}
 g(x)=H(x)e^{-x} \ \ \ \ f_{n} (x)=g(x)*\chi _{(0,n)}
 \end{equation*}
@@ -4442,7 +4442,7 @@ f(x)=\begin{cases}
 
 Dato che $f\in L^{1}_{\mathrm{loc}} (\mathbb{R} )\implies f\in D'(\mathbb{R} )$.
 
-Sappiamo anche che $f\in \mathcal{S} '(\mathbb{R})$, lo spazio delle distribuzioni temperate.
+Sappiamo anche che $f\in \Sc  '(\mathbb{R})$, lo spazio delle distribuzioni temperate.
 
 \fg{0.7}{13-1}
 
@@ -4647,7 +4647,7 @@ Quindi
 \begin{equation*}
 f_{n}\xrightarrow{D'(\mathbb{R} )} F
 \end{equation*}
-\item Convergenza in $\mathcal{S} '(\mathbb{R} )$?\begin{equation*}
+\item Convergenza in $\Sc  '(\mathbb{R} )$?\begin{equation*}
 \langle f_{n} ,\psi \rangle \rightarrow \langle F,\psi \rangle \ \ \forall \psi \in S(\mathbb{R}) \ \ \iff \ \ \langle F-f_{n} ,\psi \rangle \rightarrow 0
 \end{equation*}
 
@@ -4822,14 +4822,14 @@ Si consideri
 \begin{equation*}
 f_{n}( x) =\frac{n}{1+n^{2} x^{2}}
 \end{equation*}
-provare che $f_{n}\rightarrow \pi \delta $ in $\mathcal{S} '(\mathbb{R})$ e in $D'(\mathbb{R})$.
+provare che $f_{n}\rightarrow \pi \delta $ in $\Sc  '(\mathbb{R})$ e in $D'(\mathbb{R})$.
 \Esercizio{}
 
 Si considerino
 \begin{equation*}
 f_{n}( x) =\frac{1}{\sqrt{n}} \chi _{[ 0,n]}( x) \ \ \ \ \ \ \ \ g_{n}( x) =\sin( nx) \chi _{[ 0,7]}( x)
 \end{equation*}
-Stabilire se le successioni sono convergenti in $L^{1}(\mathbb{R}) ,L^{2}(\mathbb{R}) ,L^{\infty }(\mathbb{R}) ,D'(\mathbb{R}) ,\mathcal{S} '(\mathbb{R})$.
+Stabilire se le successioni sono convergenti in $L^{1}(\mathbb{R}) ,L^{2}(\mathbb{R}) ,L^{\infty }(\mathbb{R}) ,D'(\mathbb{R}) ,\Sc  '(\mathbb{R})$.
 \Esercizio{}
 
 Si consideri
@@ -4949,7 +4949,7 @@ $f( x)$ presenta un salto in $x=0$ di ampiezza $1$.
 
 \fg{0.45}{14-4}
 
-Se dimostro in $\mathcal{S} '(\mathbb{R})$, quella in $D'(\mathbb{R})$ segue automaticamente.
+Se dimostro in $\Sc  '(\mathbb{R})$, quella in $D'(\mathbb{R})$ segue automaticamente.
 
 Devo provare che
 \begin{equation*}
@@ -4993,7 +4993,7 @@ ma allora
 \begin{equation*}
 f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{1}_{\mathrm{loc}}(\mathbb{R})} f\equiv 0\ \ \begin{cases}
 \implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{D'(\mathbb{R})} f\equiv 0\\
-\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{\mathcal{S} '(\mathbb{R})} f\equiv 0
+\implies \ \ f_{n}\xrightarrow[n\rightarrow +\infty ]{\Sc  '(\mathbb{R})} f\equiv 0
 \end{cases}
 \end{equation*}
 Stimiamo
@@ -5008,7 +5008,7 @@ Poi
 
 Studiamo le $g_{n}( x)$
 
-Dimostro che $g_{n}$ converge in $\mathcal{S} '(\mathbb{R})$, da cui si ottiene che $g_{n}$ converge anche in $D'(\mathbb{R})$.
+Dimostro che $g_{n}$ converge in $\Sc  '(\mathbb{R})$, da cui si ottiene che $g_{n}$ converge anche in $D'(\mathbb{R})$.
 \begin{equation*}
 \int _{\mathbb{R}} g_{n}( x) \varphi ( x) dx=\overset{\text{ipp}}{=} -\frac{1}{n}[\cos( nx) \varphi ( x)]^{7}_{0} +\int ^{7}_{0}\frac{1}{n}\cos( nx) \varphi '( x) dx\xrightarrow{n\rightarrow +\infty } 0
 \end{equation*}
@@ -5168,11 +5168,11 @@ x^{n} f(x)\in L^{1} (\mathbb{R} )\ \ \implies \ \ \frac{d^{n}}{d\xi ^{n}}\hat{f}
 \end{equation*}
 Inoltre
 \begin{equation*}
-f\notin C^{\infty } (\mathbb{R} )\ \ \implies \ \ f\notin \mathcal{S}(\mathbb{R}) \ \ \implies \ \ \hat{f} \notin \mathcal{S}(\mathbb{R})
+f\notin C^{\infty } (\mathbb{R} )\ \ \implies \ \ f\notin \Sc (\mathbb{R}) \ \ \implies \ \ \hat{f} \notin \Sc (\mathbb{R})
 \end{equation*}
 In compenso visto che $f$ è sicuramente una distribuzione temperata anche $\hat{f}$ lo sarà
 \begin{equation*}
-f\in \mathcal{S} '(\mathbb{R}) \ \ \implies \ \ \hat{f} \in \mathcal{S} '(\mathbb{R})
+f\in \Sc  '(\mathbb{R}) \ \ \implies \ \ \hat{f} \in \Sc  '(\mathbb{R})
 \end{equation*}
 Inoltre
 \begin{equation*}
@@ -5497,7 +5497,7 @@ Vediamo il grafico di $u(x)=1/\sqrt{|x|}$
 
 Notiamo che $u\notin L^{1}$ perché all'infinito va a zero troppo lentamente e neanche $u\notin L^{2}$, in tal caso sarebbe asintotica a $1/x$ per $x\rightarrow \infty $, che non è integrabile.
 
-Possiamo considerare $u$ come una distribuzione temperata, cioè $u\in \mathcal{S}^{'}(\mathbb{R})$.
+Possiamo considerare $u$ come una distribuzione temperata, cioè $u\in \Sc ^{'}(\mathbb{R})$.
 
 Possiamo prendere una successione di funzioni $u_{n}$ che l'approssimano nel senso delle distribuzioni temperate
 \begin{equation*}
@@ -5507,7 +5507,7 @@ Considerando la dualità con una qualsiasi funzione dello spazio di Schwartz que
 \begin{gather*}
 \langle ( u-u_{n}) ,\psi \rangle =\int ^{-n}_{-\infty }\frac{1}{\sqrt{| x| }} \psi ( x) dx+\ \int ^{+\infty }_{n}\frac{1}{\sqrt{x}} \psi ( x) dx\\
 \\
-| \langle ( u-u_{n}) ,\ \psi \rangle | \leqslant \frac{1}{\sqrt{n}} \ \int _{\mathbb{R}}| \psi ( x)| dx\xrightarrow{n\rightarrow \infty } 0\ \ \implies \ \ u_{n}\xrightarrow[\mathcal{S} ']{n\rightarrow \infty } u
+| \langle ( u-u_{n}) ,\ \psi \rangle | \leqslant \frac{1}{\sqrt{n}} \ \int _{\mathbb{R}}| \psi ( x)| dx\xrightarrow{n\rightarrow \infty } 0\ \ \implies \ \ u_{n}\xrightarrow[\Sc  ']{n\rightarrow \infty } u
 \end{gather*}
 Ne consegue che possiamo scrivere:
 \begin{equation*}
@@ -6591,7 +6591,7 @@ quindi
  & =\int ^{x}_{0} e^{-2x} \ dy=e^{-2x}\int ^{x}_{0} dy=xe^{-2x}
 \end{align*}
 \begin{thm}
-Date $\displaystyle u,v\in \mathcal{S}(\mathbb{R}) \implies \ \widehat{u*v} =\hat{u} \cdot \hat{v}$.
+Date $\displaystyle u,v\in \Sc (\mathbb{R}) \implies \ \widehat{u*v} =\hat{u} \cdot \hat{v}$.
 \end{thm}
 \begin{align*}
 \hat{f}( \xi ) & =\int _{\mathbb{R}} e^{-i\xi x} f( x) dx=\int _{\mathbb{R}} e^{-i\xi x} H( x) e^{-2x} dx=\int ^{+\infty }_{0} e^{-i\xi x} e^{-2x} dx\\
@@ -7147,7 +7147,7 @@ Per quanto riguarda
 \begin{equation*}
 -u''+u=1
 \end{equation*}
-l'unica soluzione in $\mathcal{S} '(\mathbb{R})$ è $u( x) =1$, in conclusione
+l'unica soluzione in $\Sc  '(\mathbb{R})$ è $u( x) =1$, in conclusione
 \begin{equation*}
 u( x) =1-\delta +\frac{1}{2} e^{-| x| }
 \end{equation*}
