@@ -1734,7 +1734,7 @@ Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente L
 \FloatBarrier
 Calcolare
 \begin{equation*}
-I_{\alpha ,k} =\int ^{+\infty }_{-\infty }\frac{x^{k}}{\alpha ^{2} +x^{2k}} dx\ \ \ \ \alpha  >0,k\in \mathbb{N}
+I_{\alpha ,k} =\int ^{+\infty }_{-\infty }\frac{x^{k}}{\alpha ^{2} +x^{2k}} dx\ \ \ \ \alpha  >0,k\in \NN 
 \end{equation*}
 \Esercizio{}
 
@@ -1864,9 +1864,9 @@ ricordando che è un polo semplice
 \end{equation*}
 \Soluzione
 \begin{equation*}
-I_{\alpha ,k} =\int ^{+\infty }_{-\infty }\frac{x^{k}}{\alpha ^{2} +x^{2k}} dx\ \ \ \ \alpha  >0,k\in \mathbb{N}
+I_{\alpha ,k} =\int ^{+\infty }_{-\infty }\frac{x^{k}}{\alpha ^{2} +x^{2k}} dx\ \ \ \ \alpha  >0,k\in \NN 
 \end{equation*}
-Per $x\rightarrow \pm \infty $ si ha $f\left( x\right) \sim \frac{1}{x^{k}}$, che è integrabile in un intorno di $\pm \infty $ se e solo se $k >1$. Quindi $I_{\alpha ,k}$ esiste per $k\in \mathbb{N} ,k\geqslant 2$.
+Per $x\rightarrow \pm \infty $ si ha $f\left( x\right) \sim \frac{1}{x^{k}}$, che è integrabile in un intorno di $\pm \infty $ se e solo se $k >1$. Quindi $I_{\alpha ,k}$ esiste per $k\in \NN  ,k\geqslant 2$.
 
 Se $k$ è dispari allora $f$ è dispari e $I_{\alpha ,k} =0$
 
@@ -2407,7 +2407,7 @@ Allora possiamo scambiare limite e segno dell'integrale e dedurre che c'è conve
 
 Vediamo una quarta tipologia
 \begin{equation*}
-\boxed{\int ^{+\infty }_{0} x^{\alpha } R\left( x^{m}\right) dx} \ \ \ \ \alpha \in \RR  ,m\in \mathbb{N} ,m\geqslant 2
+\boxed{\int ^{+\infty }_{0} x^{\alpha } R\left( x^{m}\right) dx} \ \ \ \ \alpha \in \RR  ,m\in \NN  ,m\geqslant 2
 \end{equation*}
 Se $\alpha $ è un intero, allora si integra su curve così
 
@@ -2697,11 +2697,11 @@ f\left( x,y\right) =\frac{1}{\sqrt{x^{2} +y^{2}}}
 
 Sia
 \begin{equation*}
-f_{n}\left( x\right) =\frac{n^{2}\sin\left(\frac{x^{2}}{n^{2}}\right)}{\left( x^{2} +n^{2}\right)^{3/2}\log^{3/2}\left( x^{2} +n^{2}\right)} \ \ n\in \mathbb{N}
+f_{n}\left( x\right) =\frac{n^{2}\sin\left(\frac{x^{2}}{n^{2}}\right)}{\left( x^{2} +n^{2}\right)^{3/2}\log^{3/2}\left( x^{2} +n^{2}\right)} \ \ n\in \NN 
 \end{equation*}
 Rispondere ai seguenti quesiti
 \begin{enumerate}
-\item Per quali $n\in \mathbb{N}$ si ha $f_{n} \in L^{1}\left( 0,+\infty \right)$.
+\item Per quali $n\in \NN $ si ha $f_{n} \in L^{1}\left( 0,+\infty \right)$.
 \item Determinare la funzione limite $f$ in $\left( 0,+\infty \right)$.
 \item Calcolare $\lim\limits _{n\rightarrow +\infty }\int ^{+\infty }_{0} f_{n}\left( x\right) dx$
 \end{enumerate}
@@ -2911,7 +2911,7 @@ Rispondiamo al punto $2$.
 \begin{equation*}
 \begin{cases}
 f_{n}\xrightarrow{n\rightarrow +\infty } f\ \text{q.o. in} \ \Omega \\
-\exists g\in L^{1}( \Omega ) :| f_{n}| \leqslant g( x) \ \text{per q.o.} \ x\in \Omega ,\ \forall n\in \mathbb{N}
+\exists g\in L^{1}( \Omega ) :| f_{n}| \leqslant g( x) \ \text{per q.o.} \ x\in \Omega ,\ \forall n\in \NN 
 \end{cases}
 \end{equation*}
 Allora
@@ -2972,7 +2972,7 @@ f_{n}\xrightarrow[n\rightarrow +\infty ]{L^{p}} f\ ( p\in [ 1,+\infty )) \ \ \if
 \item se $x_{0} \neq 0\ \ \implies \ \ \lim\limits _{n\rightarrow +\infty } f_{n}( x) =\frac{\pi }{2}$
 \end{enumerate}
 
-$\implies \ \ \{f_{n}\}_{n\in \mathbb{N}}$ converge puntualmente a $f( x) =\begin{cases}
+$\implies \ \ \{f_{n}\}_{n\in \NN }$ converge puntualmente a $f( x) =\begin{cases}
 0, & x=0\\
 \pi /2, & x\neq 0
 \end{cases}$
@@ -3227,7 +3227,7 @@ Si consideri la successione di funzioni
 f_{n} (x)=\frac{2n^{2}\left( 1-\cos\frac{x}{n}\right)}{\left( 1+\frac{x}{n}\right)^{n}} ,\ \ x\in (0,+\infty )
 \end{equation*}
 \begin{enumerate}
-\item Stabilire per quale $n\in \mathbb{N}$ si ha $f_{n} \in L^{1}(( 1,+\infty ))$ e per quale $n\in \mathbb{N}$ si ha 
+\item Stabilire per quale $n\in \NN $ si ha $f_{n} \in L^{1}(( 1,+\infty ))$ e per quale $n\in \NN $ si ha 
 
 $f_{n} \in L^{2}(( 1,+\infty ))$
 \item Calcolare\begin{equation*}
@@ -3282,7 +3282,7 @@ Sia $x_{0} \in [ 0,+\infty )$ fissato
 \item Se $x_{0} =0,\ f_{n}( 0) =\sqrt{n}\xrightarrow{n\rightarrow +\infty } +\infty $
 \item Se $x_{0}  >0,\ f_{n}( x_{0}) =\sqrt{n} e^{-nx_{0}}\xrightarrow{n\rightarrow +\infty } 0$
 \end{itemize}
-allora $\{f_{n}\}_{n\in \mathbb{N}}$ converge puntualmente alla funzione limite
+allora $\{f_{n}\}_{n\in \NN }$ converge puntualmente alla funzione limite
 \begin{equation*}
 f( x) =\begin{cases}
 +\infty , & x=0\\
@@ -3322,7 +3322,7 @@ Vediamo il grafico
 
 \fg{0.7}{10-2}
 \begin{enumerate}
-\item Per $x\rightarrow 0^{+} ,\ f_{n}( x) \sim \frac{2n^{2} \cdotp \frac{x^{2}}{2n^{2}}}{1} =x^{2}$ è integrabile in $U\left( 0^{+}\right) \ \forall n\in \mathbb{N}$
+\item Per $x\rightarrow 0^{+} ,\ f_{n}( x) \sim \frac{2n^{2} \cdotp \frac{x^{2}}{2n^{2}}}{1} =x^{2}$ è integrabile in $U\left( 0^{+}\right) \ \forall n\in \NN $
 
 Per $x\rightarrow +\infty ,\ | f_{n}( x)| \leqslant \frac{4n^{2}}{\left(\frac{x}{n}\right)^{n}}$ è integrabile in $U( +\infty )$ per $n >1$
 
@@ -3358,7 +3358,7 @@ f_{n,\alpha }( x_{0}) \sim \frac{n^{\alpha }}{4n^{4}} =\frac{1}{4n^{4-\alpha }}\
 \frac{1}{4} , & \alpha =4
 \end{cases}
 \end{equation*}
-\item $\forall n\in \mathbb{N} ,\forall \alpha \in [ 0,4] ,f_{n,\alpha } \in L^{1}(\RR )$
+\item $\forall n\in \NN  ,\forall \alpha \in [ 0,4] ,f_{n,\alpha } \in L^{1}(\RR )$
 
 Tuttavia se $\alpha =4$, $F_{4} \notin L^{1}(\RR ) \implies f_{n,4} \nrightarrow F_{4}$ in $L^{1}(\RR )$ per $n\rightarrow +\infty $.
 
@@ -3583,8 +3583,8 @@ allora $F( x)$ di $f$ converge in media quadratica.
 \end{enumerate}
 \Soluzione
 \begin{enumerate}
-\item $f$ è pari $\implies b_{n} =0\ \forall n\in \mathbb{N}$\begin{equation*}
-a_{k} =\frac{2}{\pi }\int ^{\frac{\pi }{2}}_{-\frac{\pi }{2}}\cos\left(\sqrt{2} x\right)\cos( 2kx) dx\ \ \forall k\in \mathbb{N}
+\item $f$ è pari $\implies b_{n} =0\ \forall n\in \NN $\begin{equation*}
+a_{k} =\frac{2}{\pi }\int ^{\frac{\pi }{2}}_{-\frac{\pi }{2}}\cos\left(\sqrt{2} x\right)\cos( 2kx) dx\ \ \forall k\in \NN 
 \end{equation*}
 
 modo $A$: calcolo per parti e ottengo un integrale ciclico.
@@ -4128,7 +4128,7 @@ allora la serie di Fourier converge in media quadratica.
 
 Più precisamente converge puntualmente a $f( x) ,\ \forall x\neq ( 2k+1)\frac{\pi }{2} ,\ k\in \ZZ $, mentre converge a $\frac{1}{2} ,\ \forall x=( 2k+1)\frac{\pi }{2} ,\ k\in \ZZ $.
 \item Non c'è convergenza uniforme perché $f$ non è continua su $\RR $.
-\item $f$ è dispari, allora $a_{n} =0,\ \forall n\in \mathbb{N}$.
+\item $f$ è dispari, allora $a_{n} =0,\ \forall n\in \NN $.
 
 \begin{equation*}
 \begin{aligned}
@@ -4161,7 +4161,7 @@ b_{1} & =\frac{2}{\pi }\int ^{\pi }_{0} f( x)\sin( x) dx=\frac{2}{\pi }\int ^{\f
 \end{aligned}
 \end{equation*}
 
-Allora $( n=2k,\ k\in \mathbb{N})$:
+Allora $( n=2k,\ k\in \NN )$:
 
 \begin{equation*}
 F( x) =\frac{1}{2}\sin x+\frac{2}{\pi }\sum ^{+\infty }_{k=1}( -1)^{k}\frac{2k}{1-4k^{2}}\sin( 2kx)
@@ -4187,7 +4187,7 @@ Notiamo che la serie si annulla ogni volta che $k$ è pari, essendo il seno di $
 \frac{1}{\pi }\int ^{\pi }_{-\pi }| f( x)| ^{2} dx=\frac{a^{2}_{0}}{2} +\sum\limits ^{\infty }_{n=1}\left( a^{2}_{n} +b^{2}_{n}\right)
 \end{equation*}
 
-Nel nostro caso $f$ è dispari, $a_{n} =0,\ \forall n\in \mathbb{N}$, e si ha
+Nel nostro caso $f$ è dispari, $a_{n} =0,\ \forall n\in \NN $, e si ha
 
 \begin{equation*}
 \underbrace{\frac{1}{\pi }\int ^{\pi }_{-\pi }| f( x)| ^{2} dx}_{A} =\underbrace{\sum\limits ^{\infty }_{n=1} b^{2}_{n}}_{B}
@@ -4570,7 +4570,7 @@ x\delta '_{0} =-\delta _{0}
 \end{equation*}
 \textit{Esercizio per casa.}
 
-$\forall n,m\in \mathbb{N}$ trovare la distribuzione di $u( x) =x^{m} \delta ^{( n)}_{0}$.
+$\forall n,m\in \NN $ trovare la distribuzione di $u( x) =x^{m} \delta ^{( n)}_{0}$.
 \Soluzione
 \begin{equation*}
 f_{n} (x)=g(x)*\chi _{(0,n)} =\int _{\RR } e^{-(x-t)} H(x-t)\chi _{(0,n)} (t)dt=\int ^{n}_{0} e^{-x} e^{t} H(x-t)dt
@@ -4799,7 +4799,7 @@ Provare che valgono le seguenti identità in $D'(\RR )$:
 \end{enumerate}
 \Esercizio{(TDE 6/07/2015)}
 
-Mostrare che, per ogni $n\in \mathbb{N}^{+}$, si ha
+Mostrare che, per ogni $n\in \NN ^{+}$, si ha
 \begin{equation*}
 \boxed{x^{n} \delta ^{( n)} =( -1)^{n} n!\delta \ \ \text{in} \ D'}
 \end{equation*}
@@ -5041,7 +5041,7 @@ Quindi
 \begin{enumerate}
 \item Fissiamo $x_{0} \in \RR $.
 \begin{enumerate}
-\item se $x_{0} =0$ allora $f_{n}( 0) \equiv 0\ \forall n\in \mathbb{N}$
+\item se $x_{0} =0$ allora $f_{n}( 0) \equiv 0\ \forall n\in \NN $
 \item se $x_{0} \neq 0$ allora $\lim\limits _{n\rightarrow +\infty } f_{n}( x_{0}) =0$
 \item quindi $f_{n}$ converge puntualmente su tutto $\RR $ a $f( x) \equiv 0$.
 \end{enumerate}
@@ -5069,7 +5069,7 @@ n^{2} xe^{-nx} , & x\geqslant 0\\
 \end{cases}
 \end{equation*}
 
-$\forall n\in \mathbb{N} ,\ g_{n} \in L^{1}_{\mathrm{loc}}(\RR )$ e $\forall \varphi \in D(\RR )$\begin{equation*}
+$\forall n\in \NN  ,\ g_{n} \in L^{1}_{\mathrm{loc}}(\RR )$ e $\forall \varphi \in D(\RR )$\begin{equation*}
 \langle g_{n} ,\varphi \rangle =\int _{\RR } g_{n}( x) \varphi ( x) dx=\int ^{+\infty }_{0} n^{2}\textcolor[rgb]{0.82,0.01,0.11}{x} e^{-nx}\textcolor[rgb]{0.82,0.01,0.11}{\varphi }\textcolor[rgb]{0.82,0.01,0.11}{(}\textcolor[rgb]{0.82,0.01,0.11}{x}\textcolor[rgb]{0.82,0.01,0.11}{)} dx
 \end{equation*}
 
