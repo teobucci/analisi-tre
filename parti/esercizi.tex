@@ -292,7 +292,7 @@ Pertanto
 
 Determinare in quali punti del piano complesso la funzione
 \begin{equation*}
-f\left(z\right) = z^{2}\left| z\right|^{2} e^{i\overline{z}^{2}}
+f(z) = z^{2}\left| z\right|^{2} e^{i\overline{z}^{2}}
 \end{equation*}
 è derivabile in senso complesso.
 \Esercizio{}
@@ -304,7 +304,7 @@ u\left(x, y\right) = 2x - 2xy
 è armonica e trovare la sua armonica coniugata.
 \Esercizio{}
 
-Sia $\gamma \left(t\right) = t + it^{2}, t\in \left[ - 1, 0\right]$. Calcolare
+Sia $\gamma (t) = t + it^{2}, t\in \left[ - 1, 0\right]$. Calcolare
 \begin{equation*}
 \int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz
 \end{equation*}
@@ -345,7 +345,7 @@ Se $\Omega \equiv \CC $ allora $f$ è \textbf{intera}.
 \begin{thm}
 [di Cauchy - Riemann] Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ definita come
 \begin{equation*}
-f\left(z\right) = u\left(x, y\right) + iv\left(x, y\right) = \Re \left(z\right) + i\Im \left(z\right)
+f(z) = u\left(x, y\right) + iv\left(x, y\right) = \Re (z) + i\Im (z)
 \end{equation*}
 è olomorfa in $\Omega $ se e solo se $u, v:\Omega \rightarrow \RR $ sono differenziabili in senso classico in $\Omega $ e valgono le \textbf{condizioni di Cauchy - Riemann}
 \begin{equation}
@@ -363,8 +363,8 @@ Un altro modo per scrivere le (1) è
 Infatti
 \begin{equation*}
 \begin{array}{l}
-x = \Re \left(z\right) = \frac{z + \overline{z}}{2}\\
-y = \Im \left(z\right) = - i\frac{z - \overline{z}}{2}
+x = \Re (z) = \frac{z + \overline{z}}{2}\\
+y = \Im (z) = - i\frac{z - \overline{z}}{2}
 \end{array}
 \end{equation*}
 allora
@@ -385,7 +385,7 @@ f_{y} = if' = iu_{x} - v_{x} = iv_{y} + u_{y}
 \end{rem}
 Poniamo $z = x + iy$
 \begin{align*}
-f\left(z\right) & = \left(x + iy\right)^{2}\left(x^{2} + y^{2}\right) e^{i\left(x - iy\right)^{2}}\\
+f(z) & = \left(x + iy\right)^{2}\left(x^{2} + y^{2}\right) e^{i\left(x - iy\right)^{2}}\\
  & = \left(x + iy\right)^{2}\left(x^{2} + y^{2}\right) e^{i\left(x^{2} - y^{2} - 2ixy\right)}\\
  & = \left(x^{2} - y^{2} + 2ixy\right)\left(x^{2} + y^{2}\right) e^{2xy + i\left(x^{2} - y^{2}\right)}\\
  & = \left(x^{2} - y^{2} + 2ixy\right)\left(x^{2} + y^{2}\right) e^{2xy}\left[\cos\left(x^{2} - y^{2}\right) + i\sin\left(x^{2} - y^{2}\right)\right]\\
@@ -394,7 +394,7 @@ f\left(z\right) & = \left(x + iy\right)^{2}\left(x^{2} + y^{2}\right) e^{i\left(
 \end{align*}
 $u, v\in C^{1}\left(\RR^{2}\right)$.
 
-Osserviamo che $f\left(z\right) = z^{2} \cdot z\overline{z} \cdot e^{i\overline{z}^{2}} = z^{3}\overline{z} e^{i\overline{z}^{2}}$
+Osserviamo che $f(z) = z^{2} \cdot z\overline{z} \cdot e^{i\overline{z}^{2}} = z^{3}\overline{z} e^{i\overline{z}^{2}}$
 \begin{align*}
 \frac{\partial f}{\partial \overline{z}} & = z^{3} e^{i\overline{z}^{2}} + z^{3}\overline{z} 2i\overline{z} e^{i\overline{z}^{2}}\\
  & = z^{3} e^{i\overline{z}^{2}}\left(1 + 2i\overline{z}^{2}\right) = 0
@@ -457,32 +457,32 @@ u_{y} = - v_{x}
 \begin{defn}
 Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua in $\Omega $, $\gamma :\left[ a, b\right]\rightarrow \Omega $ una curva $C^{1}$ a tratti, allora
 \begin{equation*}
-\int\nolimits_{\gamma} f\left(z\right) dz = \int\nolimits^{b}_{a} f\left(\gamma \left(t\right)\right) \gamma '\left(t\right) dt
+\int\nolimits_{\gamma} f(z) dz = \int\nolimits^{b}_{a} f\left(\gamma (t)\right) \gamma '(t) dt
 \end{equation*}
 dove
 \begin{gather*}
-\gamma \left(t\right) = x\left(t\right) + iy\left(t\right)\\
-\gamma '\left(t\right) = x'\left(t\right) + iy'\left(t\right)
+\gamma (t) = x(t) + iy(t)\\
+\gamma '(t) = x'(t) + iy'(t)
 \end{gather*}
 \end{defn}
 \begin{rem}
 L'integrale curvilineo dipende dall'orientazione di $\gamma $
 \begin{equation*}
-\int\nolimits_{- \gamma} f\left(z\right) dz = -\int\nolimits_{\gamma} f\left(z\right) dz
+\int\nolimits_{- \gamma} f(z) dz = -\int\nolimits_{\gamma} f(z) dz
 \end{equation*}
 \end{rem}
 \begin{thm}
 Sia $\Omega \subseteq \CC $ aperto, $f:\Omega \rightarrow \CC $ continua. TFAE (the followings are equivalent):
 
-1) $\int_{\gamma} f\left(z\right) dz$ dipende solo dagli estremi di $\gamma $
+1) $\int_{\gamma} f(z) dz$ dipende solo dagli estremi di $\gamma $
 
-2) $\forall \gamma $ chiusa $C^{1}$ a tratti si ha $\int_{\gamma} f\left(z\right) dz = 0$
+2) $\forall \gamma $ chiusa $C^{1}$ a tratti si ha $\int_{\gamma} f(z) dz = 0$
 
 3) $\exists F\in \Hc \left(\Omega \right) \cap C^{1}\left(\Omega \right)$ tale che $F' = f$ in $\Omega $
 \end{thm}
 \textbf{\underline{1 modo}}
 \begin{align*}
-\int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz & = \int\nolimits^{0}_{- 1}\underbrace{\left[\left(t - it^{2}\right) + \left(t + it^{2} + 1\right)^{7}\right]}_{f\left(\gamma \left(t\right)\right)}\underbrace{\left(1 + 2it\right)}_{\gamma '\left(t\right)} dt\\
+\int\nolimits_{\gamma}\left[\overline{z} + \left(z + 1\right)^{7}\right] dz & = \int\nolimits^{0}_{- 1}\underbrace{\left[\left(t - it^{2}\right) + \left(t + it^{2} + 1\right)^{7}\right]}_{f\left(\gamma (t)\right)}\underbrace{\left(1 + 2it\right)}_{\gamma '(t)} dt\\
  & = \int\nolimits^{0}_{- 1}\left[\left(t + 2it^{2} - it^{2} + 2t^{3}\right) + \left(t + it^{2} + 1\right)^{7}\left(1 + 2it\right)\right] dt\\
  & = \int\nolimits^{0}_{- 1}\left[\left(t + it^{2} + 2t^{3}\right) + \left(t + it^{2} + 1\right)^{7}\left(1 + 2it\right)\right] dt\\
  & = \left[\frac{t^{2}}{2} + i\frac{t^{3}}{3} + \frac{t^{4}}{2} + \frac{\left(t + it^{2} + 1\right)^{8}}{8}\right]^{0}_{- 1}\\
@@ -498,26 +498,26 @@ non esiste finito. Intuiamo che anche $\left| z\right|^{2} = z\overline{z}$ avr�
 \end{rem}
 \textbf{\underline{2 modo}}
 
-Consideriamo le due parti di $f\left(z\right)$
+Consideriamo le due parti di $f(z)$
 \begin{equation*}
-f\left(z\right) = \overline{z} + \left(z + 1\right)^{7} = g\left(z\right) + h\left(z\right)
+f(z) = \overline{z} + \left(z + 1\right)^{7} = g(z) + h(z)
 \end{equation*}
 dove
 \begin{equation*}
 \begin{aligned}
-g\left(z\right) = \overline{z} & \notin \Hc \left(\Omega \right)\\
-h\left(z\right) = \left(z + 1\right)^{7} & \in \Hc \left(\Omega \right)
+g(z) = \overline{z} & \notin \Hc \left(\Omega \right)\\
+h(z) = \left(z + 1\right)^{7} & \in \Hc \left(\Omega \right)
 \end{aligned}
 \end{equation*}
-La funzione $H\left(z\right) = \frac{\left(z + 1\right)^{8}}{8}$ è tale che $H'\left(z\right) = h\left(z\right)$, quindi per il teorema visto l'integrale dipende solo dagli estremi
+La funzione $H(z) = \frac{\left(z + 1\right)^{8}}{8}$ è tale che $H'(z) = h(z)$, quindi per il teorema visto l'integrale dipende solo dagli estremi
 \begin{equation*}
-\int\nolimits_{\gamma} f\left(z\right) dz = \int\nolimits_{\gamma}\overline{z} dz + \underbrace{H\left(\gamma \left(0\right)\right) - H\left(\gamma \left(1\right)\right)}_{\int\nolimits_{\gamma}\left(z + 1\right)^{7} dz} = \dotsc 
+\int\nolimits_{\gamma} f(z) dz = \int\nolimits_{\gamma}\overline{z} dz + \underbrace{H\left(\gamma (0)\right) - H\left(\gamma (1)\right)}_{\int\nolimits_{\gamma}\left(z + 1\right)^{7} dz} = \dotsc 
 \end{equation*}
 \Soluzione
 
 Scriviamo una possibile parametrizzazione della curva
 \begin{equation*}
-\gamma \left(t\right) = 1 + e^{it}, \ \ t\in \left[ 0, 2\pi \right]
+\gamma (t) = 1 + e^{it}, \ \ t\in \left[ 0, 2\pi \right]
 \end{equation*}
 e calcoliamo
 \begin{align*}
@@ -527,7 +527,7 @@ e calcoliamo
  & = i\int\nolimits^{2\pi}_{0}\left(e^{it} + 2 + e^{- it}\right) dt\\
  & = \left[ e^{it} + 2it - e^{it}\right]^{2\pi}_{0} = 4\pi i
 \end{align*}
-\textit{Domanda:} $f\left(z\right) = \left(\overline{z}\right)^{2}$ ammette primitiva in un qualsiasi dominio $D$ contenente $\gamma $? No, se per assurdo la ammettesse, allora ogni integrale lungo qualsiasi curva chiusa sarebbe nullo.
+\textit{Domanda:} $f(z) = \left(\overline{z}\right)^{2}$ ammette primitiva in un qualsiasi dominio $D$ contenente $\gamma $? No, se per assurdo la ammettesse, allora ogni integrale lungo qualsiasi curva chiusa sarebbe nullo.
 \Soluzione
 
 Ragioniamo come segue
@@ -572,31 +572,31 @@ La serie converge assolutamente $\forall z\in \CC  :\left| z\right| < 1$ e non c
 
 Scrivere la serie di potenze di
 \begin{equation*}
-f\left(z\right) = \frac{1}{1 - z} - \frac{1}{2 - z}
+f(z) = \frac{1}{1 - z} - \frac{1}{2 - z}
 \end{equation*}
 \Esercizio{}
 
 Scrivere la serie di potenze di
 \begin{equation*}
-f\left(z\right) = z^{3}\sin\frac{1}{z}
+f(z) = z^{3}\sin\frac{1}{z}
 \end{equation*}
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
-f\left(z\right) = \frac{z^{2}}{\sin z}
+f(z) = \frac{z^{2}}{\sin z}
 \end{equation*}
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
-f\left(z\right) = \frac{z^{2}}{\cos^{2}\left(\frac{1}{z}\right)}
+f(z) = \frac{z^{2}}{\cos^{2}\left(\frac{1}{z}\right)}
 \end{equation*}
 \Esercizio{}
 
 Classificare le singolarità di
 \begin{equation*}
-f\left(z\right) = \frac{e^{1/z}}{1 + z^{2}}
+f(z) = \frac{e^{1/z}}{1 + z^{2}}
 \end{equation*}
 \Esercizio{(Integrale di Fresnel)}
 
@@ -609,14 +609,14 @@ Calcolare
 
 Osserviamo che ha singolarità in $1$ e $2$, che sono due poli di ordine $1$.
 \begin{align*}
-f\left(z\right) & = \frac{1}{1 - z} - \frac{1}{2 - z}\\
+f(z) & = \frac{1}{1 - z} - \frac{1}{2 - z}\\
  & = \frac{1}{1 - z} - \frac{1}{2}\frac{1}{1 - \frac{z}{2}}\\
  & = \sum\limits^{\infty}_{n = 0} z^{n} - \frac{1}{2}\sum\limits^{\infty}_{n = 0}\frac{1}{2^{n}} z^{n}\\
  & = \sum\limits^{\infty}_{n = 0}\left(1 - \frac{1}{2^{n + 1}}\right) z^{n}
 \end{align*}
 Manipoliamola in modo diverso
 \begin{align*}
-f\left(z\right) & = - \frac{1}{z} \cdot \frac{1}{1 - \frac{1}{z}} - \frac{1}{2}\frac{1}{1 - \frac{z}{2}}\\
+f(z) & = - \frac{1}{z} \cdot \frac{1}{1 - \frac{1}{z}} - \frac{1}{2}\frac{1}{1 - \frac{z}{2}}\\
  & = - \frac{1}{z}\sum\limits^{\infty}_{n = 0} z^{- n} - \frac{1}{2}\sum\limits^{\infty}_{n = 0}\frac{z^{n}}{2^{n}}\\
  & = - \sum\limits^{- 1}_{n = -\infty} z^{n} - \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{2^{n + 1}}
 \end{align*}
@@ -626,7 +626,7 @@ Le due serie convergono per
 \end{equation*}
 \Soluzione
 \begin{align*}
-f\left(z\right) & = z^{3}\sin\frac{1}{z}\\
+f(z) & = z^{3}\sin\frac{1}{z}\\
  & = z^{3}\sum\limits^{\infty}_{n = 0}\frac{\left(- 1\right)^{n}}{\left(2n + 1\right) !}\left(\frac{1}{z}\right)^{2n + 1}\\
  & = \sum\limits^{\infty}_{n = 0}\frac{\left(- 1\right)^{n}}{\left(2n + 1\right) !} z^{2 - 2n}\\
  & = z^{2} - \frac{1}{3!} + \frac{1}{5!z^{2}}
@@ -653,7 +653,7 @@ I punti di singolarità sono dati da
 \begin{equation*}
 \frac{1}{z_{k}} = \frac{\pi}{2} + k\pi \ \ \ \ k\in \ZZ  \ \ \ \ \implies \ \ \ \ z_{k} = \frac{1}{\pi \left(\frac{1}{2} + k\right)}
 \end{equation*}
-Sono poli del II ordine perché il coseno qui si annulla con ordine $2$. In $z = 0$ è una singolarità non isolata dato che gli $z_{k}$ si addensano intorno a $0$. Il punto $z_{\infty}$ è un polo di ordine II perché per $z\rightarrow z_{\infty}, f\left(z\right) \sim z^{2}$.
+Sono poli del II ordine perché il coseno qui si annulla con ordine $2$. In $z = 0$ è una singolarità non isolata dato che gli $z_{k}$ si addensano intorno a $0$. Il punto $z_{\infty}$ è un polo di ordine II perché per $z\rightarrow z_{\infty}, f(z) \sim z^{2}$.
 \Soluzione
 
 Il denominatore si annulla in $z = \pm i$, con un polo di ordine $1$. Ricordando
@@ -662,7 +662,7 @@ e^{1/z} = \sum\limits^{\infty}_{n = 0}\frac{1}{n!}\left(\frac{1}{z}\right)^{n} =
 \end{equation*}
 deduciamo che nell'origine si ha una singolarità essenziale. Si ha poi
 \begin{align*}
-f\left(z\right) & = \sum\limits^{\infty}_{n = 0}\frac{1}{n!} z^{- n}\sum\limits^{\infty}_{m = 0}\left(- 1\right)^{m} z^{2m} = \sum\limits^{\infty}_{n, m = 0}\frac{\left(- 1\right)^{m}}{n!} z^{2m - n}
+f(z) & = \sum\limits^{\infty}_{n = 0}\frac{1}{n!} z^{- n}\sum\limits^{\infty}_{m = 0}\left(- 1\right)^{m} z^{2m} = \sum\limits^{\infty}_{n, m = 0}\frac{\left(- 1\right)^{m}}{n!} z^{2m - n}
 \end{align*}
 che converge per $\left| z\right| < 1$. Il residuo vale
 \begin{equation*}
@@ -670,7 +670,7 @@ a_{- 1} = \sum\limits^{\infty}_{m = 0, n = 2m + 1}\frac{\left(- 1\right)^{m}}{n!
 \end{equation*}
 \Soluzione
 
-Consideriamo $f\left(z\right) = e^{iz^{2}}$ e $\gamma = \gamma_{1} + \gamma_{2} + \gamma_{3}$
+Consideriamo $f(z) = e^{iz^{2}}$ e $\gamma = \gamma_{1} + \gamma_{2} + \gamma_{3}$
 
 
 \begin{figure}[htpb]
@@ -706,9 +706,9 @@ Consideriamo $f\left(z\right) = e^{iz^{2}}$ e $\gamma = \gamma_{1} + \gamma_{2} 
 \end{figure}
 \FloatBarrier
 
-La funzione $f\left(z\right)$ è olomorfa, allora
+La funzione $f(z)$ è olomorfa, allora
 \begin{equation*}
-{\displaystyle \int\nolimits_{\gamma} f\left(z\right) dz = 0 = \int\nolimits_{\gamma_{1}} f\left(z\right) dz + \int\nolimits_{\gamma_{2}} f\left(z\right) dz + \int\nolimits_{\gamma_{3}} f}\left(z\right) dz
+{\displaystyle \int\nolimits_{\gamma} f(z) dz = 0 = \int\nolimits_{\gamma_{1}} f(z) dz + \int\nolimits_{\gamma_{2}} f(z) dz + \int\nolimits_{\gamma_{3}} f}(z) dz
 \end{equation*}
 \begin{itemize}
 \item La curva $\gamma_{3}$ ha parametrizzazione $z = re^{i\vartheta}$ con $r$ variabile e $\vartheta $ fissato. Il valore di $\vartheta $ si determina imponendo di potersi ricondurre all'integrale di Gauss, ovvero
@@ -793,13 +793,13 @@ Calcolare
 
 Determinare l'anello di convergenza della seguente serie di Laurent
 \begin{equation*}
-f\left(z\right) = \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}}
+f(z) = \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}}
 \end{equation*}
 \Esercizio{}
 
 Determinare lo sviluppo di Laurent di
 \begin{equation*}
-f\left(z\right) = \frac{1}{2iz - z^{2}}
+f(z) = \frac{1}{2iz - z^{2}}
 \end{equation*}
 in
 \begin{equation*}
@@ -809,31 +809,31 @@ A = \left\{z\in \CC  :0 < \left| z\right| < 2\right\} \ \ \ \ \ \ \ \ B = \left\
 
 Determinare le singolarità e i residui.
 \begin{equation*}
-F\left(z\right) = \frac{1}{z - z^{3}} = \frac{1}{z\left(1 - z^{2}\right)} = \frac{1}{z\left(1 + z\right)\left(1 - z\right)}
+F(z) = \frac{1}{z - z^{3}} = \frac{1}{z\left(1 - z^{2}\right)} = \frac{1}{z\left(1 + z\right)\left(1 - z\right)}
 \end{equation*}
 \Esercizio{}
 
 Determinare le singolarità e i residui.
 \begin{equation*}
-f\left(z\right) = \frac{z^{5}}{\left(1 + iz\right)^{2}}
+f(z) = \frac{z^{5}}{\left(1 + iz\right)^{2}}
 \end{equation*}
 \Esercizio{}
 
 Determinare le singolarità e i residui.
 \begin{equation*}
-f\left(z\right) = \frac{e^{\frac{1}{z - 1}}}{z^{2}\left(z^{2} + 4\right)}
+f(z) = \frac{e^{\frac{1}{z - 1}}}{z^{2}\left(z^{2} + 4\right)}
 \end{equation*}
 \Esercizio{}
 
 Sia
 \begin{equation*}
-f\left(z\right) = \frac{e^{\frac{1}{z - 1}}}{z - 2}
+f(z) = \frac{e^{\frac{1}{z - 1}}}{z - 2}
 \end{equation*}
 \begin{enumerate}
 \item Classificare le singolarità di $f$
 \item Determinare la serie di Laurent centrata in $z = 1$, precisandone l'insieme di convergenza
 \item Calcolare i residui di $f$
-\item Calcolare $\int_{\gamma} f\left(z\right) dz$ dove $\gamma :\left| z\right| = 4$ percorsa in senso antiorario
+\item Calcolare $\int_{\gamma} f(z) dz$ dove $\gamma :\left| z\right| = 4$ percorsa in senso antiorario
 \end{enumerate}
 \ParteSoluzioni
 \Soluzione
@@ -850,8 +850,8 @@ dt = \frac{1}{2\sqrt{x}} dx
 Tale integrale converge in un intorno destro di $0$ in senso improprio. Studiamo ora la convergenza in un intorno di $ + \infty $. Considerando le seguenti funzioni
 \begin{equation*}
 \begin{array}{r l}
-f\left(x\right) = \frac{1}{\sqrt{x}} & \rightarrow f'\left(x\right) = - \frac{1}{2x^{3/2}}\\
-g\left(x\right) = \sin x & \rightarrow g'\left(x\right) = \cos x
+f(x) = \frac{1}{\sqrt{x}} & \rightarrow f'(x) = - \frac{1}{2x^{3/2}}\\
+g(x) = \sin x & \rightarrow g'(x) = \cos x
 \end{array}
 \end{equation*}
 possiamo integrare per parti
@@ -882,7 +882,7 @@ J = \int\nolimits^{+ \infty}_{0} e^{it^{2}} dt = \int\nolimits^{+ \infty}_{0}\co
 \end{equation*}
 Poniamo
 \begin{equation*}
-f\left(z\right) = e^{iz^{2}} \in \Hc \left(\CC \right)
+f(z) = e^{iz^{2}} \in \Hc \left(\CC \right)
 \end{equation*}
 Consideriamo una curva $\gamma = \gamma_{1} \cup \gamma_{2} \cup \gamma_{3}$ fatta come
 
@@ -922,20 +922,20 @@ Consideriamo una curva $\gamma = \gamma_{1} \cup \gamma_{2} \cup \gamma_{3}$ fat
 
 le cui parti sono parametrizzate come segue
 \begin{itemize}
-\item $\gamma_{1}\left(t\right) = t$ con $t\in \left[ 0, R\right]$
-\item $\gamma_{2}\left(t\right) = Re^{it}$ con $t\in \left[ 0, \frac{\pi}{4}\right]$
-\item $ - \gamma_{3}\left(t\right) = te^{i\frac{\pi}{4}}$ con $t\in \left[ 0, R\right]$
+\item $\gamma_{1}(t) = t$ con $t\in \left[ 0, R\right]$
+\item $\gamma_{2}(t) = Re^{it}$ con $t\in \left[ 0, \frac{\pi}{4}\right]$
+\item $ - \gamma_{3}(t) = te^{i\frac{\pi}{4}}$ con $t\in \left[ 0, R\right]$
 \end{itemize}
 
-Analizziamo cosa succede all'integrale di $f\left(z\right)$ sui vari percorsi
+Analizziamo cosa succede all'integrale di $f(z)$ sui vari percorsi
 \begin{itemize}
 \item su $\gamma_{1}$
 \begin{equation*}
-\int\nolimits_{\gamma_{1}} f\left(z\right) dz = \int\nolimits^{R}_{0} e^{it^{2}} dt\xrightarrow{R\rightarrow + \infty}\int\nolimits^{+ \infty}_{0} e^{it^{2}} dt = J
+\int\nolimits_{\gamma_{1}} f(z) dz = \int\nolimits^{R}_{0} e^{it^{2}} dt\xrightarrow{R\rightarrow + \infty}\int\nolimits^{+ \infty}_{0} e^{it^{2}} dt = J
 \end{equation*}
 \item su $\gamma_{3}$
 \begin{align*}
-\int\nolimits_{\gamma_{3}} f\left(z\right) dz & = - \int\nolimits^{R}_{0} f\left(\gamma \left(t\right)\right) \gamma '\left(t\right) dt = -\int\nolimits^{R}_{0} e^{it^{2} e^{i\frac{\pi}{2}}} e^{i\frac{\pi}{4}} dt\\
+\int\nolimits_{\gamma_{3}} f(z) dz & = - \int\nolimits^{R}_{0} f\left(\gamma (t)\right) \gamma '(t) dt = -\int\nolimits^{R}_{0} e^{it^{2} e^{i\frac{\pi}{2}}} e^{i\frac{\pi}{4}} dt\\
  & = - \int\nolimits^{R}_{0} e^{it^{2} i} e^{i\frac{\pi}{4}} dt = -e^{i\frac{\pi}{4}}\int\nolimits^{R}_{0} e^{- t^{2}} dt\xrightarrow{R\rightarrow + \infty} - e^{i\frac{\pi}{4}}\int\nolimits^{+ \infty}_{0} e^{- t^{2}} dt
 \end{align*}
 
@@ -948,11 +948,11 @@ Ricordiamo l'integrale di Gauss
 
 Otteniamo che
 \begin{equation*}
-\int\nolimits_{\gamma_{3}} f\left(z\right) dz\xrightarrow{R\rightarrow + \infty} - e^{i\frac{\pi}{4}}\frac{\sqrt{\pi}}{2}
+\int\nolimits_{\gamma_{3}} f(z) dz\xrightarrow{R\rightarrow + \infty} - e^{i\frac{\pi}{4}}\frac{\sqrt{\pi}}{2}
 \end{equation*}
-\item su $\gamma_{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| = e^{\Re \left(z\right)}$
+\item su $\gamma_{2}$ dobbiamo cercare una maggiorazione in modo da far vedere che tende a $0$. Ricordiamo anche che $\left| e^{z}\right| = e^{\Re (z)}$
 \begin{align*}
-0 & \leq \left| \int\nolimits_{\gamma_{2}} f\left(z\right) dz\right| = \left| \int\nolimits^{\pi /4}_{0} f\left(\gamma \left(t\right)\right) \gamma '\left(t\right) dt\right| = \left| \int\nolimits^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
+0 & \leq \left| \int\nolimits_{\gamma_{2}} f(z) dz\right| = \left| \int\nolimits^{\pi /4}_{0} f\left(\gamma (t)\right) \gamma '(t) dt\right| = \left| \int\nolimits^{\pi /4}_{0} e^{iR^{2} e^{2it}} Rie^{it} dt\right| \\
  & \leq R\int\nolimits^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits^{\pi /4}_{0}\left| e^{iR^{2} e^{2it}}\right| dt = R\int\nolimits^{\pi /4}_{0} e^{\Re \left[ iR^{2}\left(\cos\left(2t\right) + i\sin\left(2t\right)\right)\right]} dt\\
  & = R\int\nolimits^{\pi /4}_{0} e^{- R^{2}\sin\left(2t\right)} dt = \left\{
  \begin{array}{c}
@@ -1009,7 +1009,7 @@ otteniamo
 
 Per il teorema dell'integrale nullo di Cauchy
 \begin{equation*}
-0 = \oint\nolimits_{\gamma} f\left(z\right) dz = \int\nolimits_{\gamma_{1}} f\left(z\right) dz + \int\nolimits_{\gamma_{2}} f\left(z\right) dz + \int\nolimits_{\gamma_{3}} f\left(z\right) dz
+0 = \oint\nolimits_{\gamma} f(z) dz = \int\nolimits_{\gamma_{1}} f(z) dz + \int\nolimits_{\gamma_{2}} f(z) dz + \int\nolimits_{\gamma_{3}} f(z) dz
 \end{equation*}
 sostituiamo i vari elementi, sempre per $R\rightarrow + \infty $
 \begin{equation*}
@@ -1021,12 +1021,12 @@ J = \int\nolimits^{+ \infty}_{0} e^{it^{2}} dt = e^{i\frac{\pi}{4}}\frac{\sqrt{\
 \end{equation*}
 ma quindi
 \begin{align*}
-\int\nolimits^{+ \infty}_{0}\cos t^{2} dt & = \Re \left(J\right) = \frac{\sqrt{2\pi}}{4}\\
-\int\nolimits^{+ \infty}_{0}\sin t^{2} dt & = \Im \left(J\right) = \frac{\sqrt{2\pi}}{4}
+\int\nolimits^{+ \infty}_{0}\cos t^{2} dt & = \Re (J) = \frac{\sqrt{2\pi}}{4}\\
+\int\nolimits^{+ \infty}_{0}\sin t^{2} dt & = \Im (J) = \frac{\sqrt{2\pi}}{4}
 \end{align*}
 \Soluzione
 \begin{align*}
-f\left(z\right) = & \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}} = \sum_{n < 0}\frac{z^{2n}}{9^{\left| n\right|}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}\\
+f(z) = & \sum\limits^{\infty}_{n = -\infty}\frac{z^{2n}}{9^{\left| n\right|}} = \sum_{n < 0}\frac{z^{2n}}{9^{\left| n\right|}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}\\
  & = \sum_{n > 0}\frac{z^{- 2n}}{9^{n}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}\\
  & = \sum_{n > 0}\frac{1}{9^{n} z^{2n}} + \sum_{n \geq 0}\frac{z^{2n}}{9^{n}}
 \end{align*}
@@ -1047,20 +1047,20 @@ Allora l'anello di convergenza è $A = \left\{z\in \CC  :\frac{1}{3} < \left| z\
 
 Possiamo vedere la $f$ come
 \begin{equation*}
-f\left(z\right) = \frac{1}{2iz - z^{2}} = \frac{1}{z\left(2i - z\right)} = \frac{1}{z} \cdot \frac{1}{2i} \cdot \frac{1}{1 - \frac{z}{2i}}
+f(z) = \frac{1}{2iz - z^{2}} = \frac{1}{z\left(2i - z\right)} = \frac{1}{z} \cdot \frac{1}{2i} \cdot \frac{1}{1 - \frac{z}{2i}}
 \end{equation*}
 In $A$
 \begin{align*}
-f\left(z\right) & = \frac{1}{z} \cdot \frac{1}{2i} \cdot \frac{1}{1 - \frac{z}{2i}} = \frac{1}{z} \cdot \frac{1}{2i} \cdot \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{\left(2i\right)^{n}}\\
+f(z) & = \frac{1}{z} \cdot \frac{1}{2i} \cdot \frac{1}{1 - \frac{z}{2i}} = \frac{1}{z} \cdot \frac{1}{2i} \cdot \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{\left(2i\right)^{n}}\\
  & = \sum\limits^{\infty}_{n = 0}\frac{z^{n - 1}}{\left(2i\right)^{n + 1}} = \sum\limits^{\infty}_{n = -1}\frac{z^{n}}{\left(2i\right)^{n + 2}}
 \end{align*}
 In $B$
 \begin{align*}
-f\left(z\right) & = \frac{1}{z\left(2i - z\right)} = \frac{A}{z} + \frac{B}{2i - z} = \frac{A2i - Az + Bz}{z\left(2i - z\right)} = \frac{A2i + z\left(B - A\right)}{z\left(2i - z\right)}
+f(z) & = \frac{1}{z\left(2i - z\right)} = \frac{A}{z} + \frac{B}{2i - z} = \frac{A2i - Az + Bz}{z\left(2i - z\right)} = \frac{A2i + z\left(B - A\right)}{z\left(2i - z\right)}
 \end{align*}
 allora $A = B = -\frac{i}{2}$
 \begin{align*}
-f\left(z\right) & = - \frac{i}{2}\left\{\frac{1}{z} + \frac{1}{2i - z}\right\}\\
+f(z) & = - \frac{i}{2}\left\{\frac{1}{z} + \frac{1}{2i - z}\right\}\\
  & = - \frac{i}{2}\left\{\frac{1}{\left(z - 2i\right) + 2i} + \frac{1}{2i - z}\right\}\\
  & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \frac{1}{1 + \frac{2i}{z - 2i}} + \frac{1}{2i - z}\right\}\\
  & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \frac{1}{1 - \frac{- 2i}{z - 2i}} - \frac{1}{z - 2i}\right\}
@@ -1071,7 +1071,7 @@ Essendo in $B$
 \end{equation*}
 possiamo scrivere la serie geometrica
 \begin{align*}
-f\left(z\right) & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \sum\limits^{\infty}_{n = 0}\left(\frac{- 2i}{z - 2i}\right)^{n} - \frac{1}{z - 2i}\right\}\\
+f(z) & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \sum\limits^{\infty}_{n = 0}\left(\frac{- 2i}{z - 2i}\right)^{n} - \frac{1}{z - 2i}\right\}\\
  & = - \frac{i}{2}\left\{\frac{1}{z - 2i}\left[\sum\limits^{\infty}_{n = 0}\left(\frac{- 2i}{z - 2i}\right)^{n} - 1\right]\right\}\\
  & = - \frac{i}{2}\left\{\frac{1}{z - 2i}\sum\limits^{\infty}_{n = 1}\left(\frac{- 2i}{z - 2i}\right)^{n}\right\}\\
  & = - \frac{i}{2}\left\{\sum\limits^{\infty}_{n = 1}\frac{\left(- 2i\right)^{n}}{\left(z - 2i\right)^{n + 1}}\right\}
@@ -1080,7 +1080,7 @@ f\left(z\right) & = - \frac{i}{2}\left\{\frac{1}{z - 2i} \cdot \sum\limits^{\inf
 \begin{thm}
 Sia $f\in \Hc \left(D\left(z_{0}, R\right) \setminus \left\{z_{0}\right\}\right)$, cioè $z_{0}$ è una \textbf{singolarità isolata} per $f$. Allora localmente
 \begin{equation*}
-f\left(z\right) = \sum\limits^{+ \infty}_{n = -\infty} a_{n}\left(z - z_{0}\right)^{n}
+f(z) = \sum\limits^{+ \infty}_{n = -\infty} a_{n}\left(z - z_{0}\right)^{n}
 \end{equation*}
 \end{thm}
 \begin{thm}
@@ -1090,19 +1090,19 @@ Sia $M = \left\{n\in \ZZ  :n < 0, a_{n} \neq 0\right\}$ l'insieme degli indici d
 \item \textbf{singolarità eliminabile} se
 
 \begin{equation*}
-\exists \lim\limits_{z\rightarrow z_{0}} f\left(z\right) \in \CC  \ \ \iff \ \ M = \emptyset \ \ \iff \ \ f\ \text{è limitata su} \ \Uc \left(z_{0}\right)
+\exists \lim\limits_{z\rightarrow z_{0}} f(z) \in \CC  \ \ \iff \ \ M = \emptyset \ \ \iff \ \ f\ \text{è limitata su} \ \Uc \left(z_{0}\right)
 \end{equation*}
 \item \textbf{polo} se
 
 \begin{equation*}
-\exists \lim\limits_{z\rightarrow z_{0}} f\left(z\right) = \infty \ \ \iff \ \ 0 < \left| M\right| < + \infty 
+\exists \lim\limits_{z\rightarrow z_{0}} f(z) = \infty \ \ \iff \ \ 0 < \left| M\right| < + \infty 
 \end{equation*}
 
 dove $ - \min M = k$ è l'\textbf{ordine} del polo.
 \item \textbf{singolarità essenziale} se
 
 \begin{gather*}
-\nexists \lim\limits_{z\rightarrow z_{0}} f\left(z\right) \ \ \iff \ \ \left| M\right| = \infty \\
+\nexists \lim\limits_{z\rightarrow z_{0}} f(z) \ \ \iff \ \ \left| M\right| = \infty \\
 \iff \ \ \forall \varepsilon \in \left(0, R\right) \ \text{l'insieme immagine} \ f\left(\left\{0 < \left| z - z_{0}\right| < \varepsilon \right\}\right) \ \text{è denso in} \ \CC 
 \end{gather*}
 \end{itemize}
@@ -1119,15 +1119,15 @@ Sia $f\in \Hc \left(\CC  \setminus \overline{D\left(z_{0}, R\right)}\right)$ ed 
 \begin{itemize}
 \item \textbf{singolarità eliminabile} se e solo se
 \begin{equation*}
-\exists \lim\limits_{z\rightarrow \infty} f\left(z\right) \in \CC  \ \ \iff \ \ M = \emptyset 
+\exists \lim\limits_{z\rightarrow \infty} f(z) \in \CC  \ \ \iff \ \ M = \emptyset 
 \end{equation*}
 \item \textbf{polo} se e solo se
 \begin{equation*}
-\exists \lim\limits_{z\rightarrow \infty} f\left(z\right) = \infty \ \ \iff \ \ 0 < \left| M\right| < \infty 
+\exists \lim\limits_{z\rightarrow \infty} f(z) = \infty \ \ \iff \ \ 0 < \left| M\right| < \infty 
 \end{equation*}
 \item \textbf{singolarità essenziale} se e solo se
 \begin{equation*}
-\nexists \lim\limits_{z\rightarrow + \infty} f\left(z\right) \ \ \iff \ \ \left| M\right| = \infty 
+\nexists \lim\limits_{z\rightarrow + \infty} f(z) \ \ \iff \ \ \left| M\right| = \infty 
 \end{equation*}
 \end{itemize}
 \end{thm}
@@ -1140,16 +1140,16 @@ Si dice residuo di $f$ in $\infty $
 \begin{thm}
 [di De l'Hôpital] Siano $f$ e $g$ funzioni analitiche in $B_{R}\left(z_{0}\right)$ tali che $f\left(z_{0}\right) = g\left(z_{0}\right) = 0$ e $g'\left(z_{0}\right) \neq 0$ (quindi solo la forma $\frac{0}{0}$ al finito). Allora
 \begin{equation*}
-\lim\limits_{z\rightarrow z_{0}}\frac{f\left(z\right)}{g\left(z\right)} = \frac{f'\left(z_{0}\right)}{g'\left(z_{0}\right)}
+\lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g(z)} = \frac{f'\left(z_{0}\right)}{g'\left(z_{0}\right)}
 \end{equation*}
 \end{thm}
 \begin{thm}
 Le seguenti affermazioni sono equivalenti
 \begin{itemize}
 \item $f$ ha in $z_{0}$ un polo di ordine $m$
-\item $g\left(z\right) = \left(z - z_{0}\right)^{m} f\left(z\right)$ ha in $z_{0}$ una singolarità eliminabile e $\lim\limits_{z\rightarrow z_{0}} g\left(z\right) \neq 0$
-\item $f\left(z\right) \approx \left| z - z_{0}\right|^{m}$ per $z\rightarrow z_{0}$
-\item $\frac{1}{f\left(z\right)}$ ha in $z_{0}$ uno zero di ordine $m$
+\item $g(z) = \left(z - z_{0}\right)^{m} f(z)$ ha in $z_{0}$ una singolarità eliminabile e $\lim\limits_{z\rightarrow z_{0}} g(z) \neq 0$
+\item $f(z) \approx \left| z - z_{0}\right|^{m}$ per $z\rightarrow z_{0}$
+\item $\frac{1}{f(z)}$ ha in $z_{0}$ uno zero di ordine $m$
 \end{itemize}
 \end{thm}
 \begin{thm}
@@ -1170,7 +1170,7 @@ Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1}, \dotsc, z_{n}\right\}\right)$ a
 \begin{thm}
 Sia $f\in \Hc \left(\CC  \setminus \left\{z_{1}, \dotsc, z_{n}\right\}\right)$. Se $R > \max_{1 \leq k \leq n}\left| z_{k}\right| $ allora
 \begin{equation*}
-\int\nolimits_{\partial D\left(0, R\right)} f\left(z\right) dz = 2\pi i\left[\sum\limits^{n}_{k = 1}\Res \left(f, z_{k}\right)\right]
+\int\nolimits_{\partial D\left(0, R\right)} f(z) dz = 2\pi i\left[\sum\limits^{n}_{k = 1}\Res \left(f, z_{k}\right)\right]
 \end{equation*}
 \end{thm}
 \begin{rem}
@@ -1191,11 +1191,11 @@ Nei punti $z_{0} \neq \infty $
 \begin{enumerate}
 \item semplice (di ordine $p = 1$)
 \begin{equation*}
-\Res \left(f, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}} f\left(z\right)\left(z - z_{0}\right)
+\Res \left(f, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}} f(z)\left(z - z_{0}\right)
 \end{equation*}
 \item di ordine $p \geq 2$
 \begin{equation*}
-\Res \left(f, z_{0}\right) = \frac{1}{\left(p - 1\right) !}\lim\limits_{z\rightarrow z_{0}}\left\{\frac{d^{p - 1}}{dz^{p - 1}}\left[ f\left(z\right)\left(z - z_{0}\right)^{p}\right]\right\}
+\Res \left(f, z_{0}\right) = \frac{1}{\left(p - 1\right) !}\lim\limits_{z\rightarrow z_{0}}\left\{\frac{d^{p - 1}}{dz^{p - 1}}\left[ f(z)\left(z - z_{0}\right)^{p}\right]\right\}
 \end{equation*}
 \end{enumerate}
 \item se è una singolarità essenziale bisogna per forza fare lo sviluppo di Laurent (che è valido in tutti i casi in realtà, ma è decisamente più laborioso la maggior parte delle volte)
@@ -1213,20 +1213,20 @@ Le singolarità isolate sono $0, 1, - 1, \infty $.
 
 $z = 0, z = 1, z = -1$ annullano il denominatore con molteplicità $1$ e non annullano il numeratore, quindi sono degli $1$ - poli. Per il teorema appena enunciato:
 \begin{align*}
-\Res \left(F, \phantom{-}0\right) & = \left\{g\left(z\right) =  z, \ f\left(z\right) = \frac{1}{1 - z^{2}}\right\} = \frac{1}{1} = 1\\
-\Res \left(F, \phantom{-}1\right) & = \left\{g\left(z\right) = 1 - z, \ f\left(z\right) = \frac{1}{z\left(1 + z\right)}\right\} = \frac{\frac{1}{2}}{- 1} = - \frac{1}{2}\\
-\Res \left(F, - 1\right) 			 & = \left\{g\left(z\right) = 1 + z, \ f\left(z\right) = \frac{1}{z\left(1 - z\right)}\right\} = - \frac{1}{2}
+\Res \left(F, \phantom{-}0\right) & = \left\{g(z) =  z, \ f(z) = \frac{1}{1 - z^{2}}\right\} = \frac{1}{1} = 1\\
+\Res \left(F, \phantom{-}1\right) & = \left\{g(z) = 1 - z, \ f(z) = \frac{1}{z\left(1 + z\right)}\right\} = \frac{\frac{1}{2}}{- 1} = - \frac{1}{2}\\
+\Res \left(F, - 1\right) 			 & = \left\{g(z) = 1 + z, \ f(z) = \frac{1}{z\left(1 - z\right)}\right\} = - \frac{1}{2}
 \end{align*}
 Mentre
 \begin{equation*}
-F\left(z\right) = \frac{1}{z\left(1 + z\right)\left(1 - z\right)} \sim \frac{1}{z^{3}} \ \ \ \ z\rightarrow + \infty 
+F(z) = \frac{1}{z\left(1 + z\right)\left(1 - z\right)} \sim \frac{1}{z^{3}} \ \ \ \ z\rightarrow + \infty 
 \end{equation*}
 quindi $\infty $ è una singolarità eliminabile.
 \begin{equation*}
 \Res \left(F, \infty \right) = - \sum\limits^{3}_{k = 1}\Res \left(F, z_{k}\right) = - \left(1 - \frac{1}{2} - \frac{1}{2}\right) = 0
 \end{equation*}
 \begin{rem}
-Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\Res \left(f, \infty \right) = 0$. Infatti $f\left(z\right) = \frac{1}{z}\rightarrow 0$ per $z\rightarrow + \infty $ quindi $\infty $ è singolarità eliminabile, ma $\Res \left(f, \infty \right) = - a_{- 1} = - 1\neq 0$.
+Se $\infty $ è singolarità eliminabile, ciò non implica per forza $\Res \left(f, \infty \right) = 0$. Infatti $f(z) = \frac{1}{z}\rightarrow 0$ per $z\rightarrow + \infty $ quindi $\infty $ è singolarità eliminabile, ma $\Res \left(f, \infty \right) = - a_{- 1} = - 1\neq 0$.
 \end{rem}
 \begin{rem}
 Nel nostro caso è vero perchè vale il seguente teorema.
@@ -1234,7 +1234,7 @@ Nel nostro caso è vero perchè vale il seguente teorema.
 \begin{thm}
 Se $f$ ha uno zero di ordine almeno $2$ in $\infty $ allora $\Res \left(f, \infty \right) = 0$, perché
 \begin{equation*}
-f\left(z\right) = \sum\limits^{- 2}_{n = -\infty} a_{n} z^{n} \ \ \implies \ \ \Res \left(f, \infty \right) = - a_{- 1} = 0
+f(z) = \sum\limits^{- 2}_{n = -\infty} a_{n} z^{n} \ \ \implies \ \ \Res \left(f, \infty \right) = - a_{- 1} = 0
 \end{equation*}
 \end{thm}
 \Soluzione
@@ -1243,9 +1243,9 @@ Le singolarità isolate di $f$ sono $i, \infty $.
 
 $z = i$ annulla il denominatore con molteplicità $2$ e non annulla il numeratore, quindi è un polo. Usando la formula dei poli
 \begin{equation*}
-\Res \left(f, i\right) = \frac{d}{dz} f\left(z\right)\left(z - i\right)^{2} = \left. - 5z^{4}\right|_{z = i} = - 5
+\Res \left(f, i\right) = \frac{d}{dz} f(z)\left(z - i\right)^{2} = \left. - 5z^{4}\right|_{z = i} = - 5
 \end{equation*}
-$f\left(z\right) \sim - z^{3}$ per $z\rightarrow + \infty $ quindi $\infty $ è un $3$ - polo.
+$f(z) \sim - z^{3}$ per $z\rightarrow + \infty $ quindi $\infty $ è un $3$ - polo.
 \begin{equation*}
 \Res \left(f, \infty \right) = - \Res \left(f, i\right) = 5
 \end{equation*}
@@ -1255,16 +1255,16 @@ Le singolarità isolate di $f$ sono $1, 0, \pm 2i, \infty $.
 
 $z = \pm 2i$ sono zeri di molteplicità $1$ per il denominatore di $f$ e non annullano il denominatore, quindi sono $1$ - poli. Usando la formula dei poli
 \begin{gather*}
-\Res \left(f, 2i\right) = \lim\limits_{z\rightarrow 2i}\left(z - 2i\right) f\left(z\right) = \dotsc = \frac{e^{- \frac{1 + 2i}{5}}}{16} i\\
-\Res \left(f, - 2i\right) = \lim\limits_{z\rightarrow - 2i}\left(z + 2i\right) f\left(z\right) = \dotsc = - \frac{e^{\frac{2i - 1}{5}}}{16} i
+\Res \left(f, 2i\right) = \lim\limits_{z\rightarrow 2i}\left(z - 2i\right) f(z) = \dotsc = \frac{e^{- \frac{1 + 2i}{5}}}{16} i\\
+\Res \left(f, - 2i\right) = \lim\limits_{z\rightarrow - 2i}\left(z + 2i\right) f(z) = \dotsc = - \frac{e^{\frac{2i - 1}{5}}}{16} i
 \end{gather*}
 $z = 0$ è uno zero di molteplicità $2$ per il denominatore di $f$ e non annulla il denominatore, quindi è un $2$ - polo. Usando la formula dei poli
 \begin{equation*}
-\Res \left(f, 0\right) = \lim\limits_{z\rightarrow 0}\frac{d}{dz} z^{2} f\left(z\right) = \dotsc = - \frac{1}{4e}
+\Res \left(f, 0\right) = \lim\limits_{z\rightarrow 0}\frac{d}{dz} z^{2} f(z) = \dotsc = - \frac{1}{4e}
 \end{equation*}
-$z = 1$ è una singolarità essenziale perché $\nexists \lim\limits_{z\rightarrow 1} f\left(z\right)$.
+$z = 1$ è una singolarità essenziale perché $\nexists \lim\limits_{z\rightarrow 1} f(z)$.
 
-Abbiamo che $f\left(z\right) \sim \frac{e}{z^{4}}$ per $z\rightarrow + \infty $, allora per il teorema $\Res \left(f, \infty \right) = 0$.
+Abbiamo che $f(z) \sim \frac{e}{z^{4}}$ per $z\rightarrow + \infty $, allora per il teorema $\Res \left(f, \infty \right) = 0$.
 
 Infine
 \begin{equation*}
@@ -1274,11 +1274,11 @@ Infine
 \begin{enumerate}
 \item Le singolarità di $f$ sono $1, 2, \infty $.
 
-$z = 1$ è singolarità essenziale perché $\nexists \lim\limits_{z\rightarrow 1} f\left(z\right)$
+$z = 1$ è singolarità essenziale perché $\nexists \lim\limits_{z\rightarrow 1} f(z)$
 
 $z = 2$ è $1$ - polo perché annulla il denominatore con molteplicità $1$ e non annulla il numeratore.
 
-$z = \infty $ è singolarità eliminabile perché $\exists \lim\limits_{z\rightarrow \infty} f\left(z\right) \in \CC $.
+$z = \infty $ è singolarità eliminabile perché $\exists \lim\limits_{z\rightarrow \infty} f(z) \in \CC $.
 \item Ricordiamo che
 
 \begin{rem}
@@ -1301,7 +1301,7 @@ Per scrivere la serie di Laurent sfruttiamo il prodotto alla Cauchy.
 \end{equation*}
 \end{rem}Quindi
 \begin{equation*}
-f\left(z\right) = - \sum\limits^{\infty}_{k = 0}\sum\limits^{k}_{h = 0}\frac{\left(z - 1\right)^{k - 2h}}{h!}
+f(z) = - \sum\limits^{\infty}_{k = 0}\sum\limits^{k}_{h = 0}\frac{\left(z - 1\right)^{k - 2h}}{h!}
 \end{equation*}
 \item $\Res \left(f, 2\right) = e$ per la formula dei poli
 
@@ -1310,7 +1310,7 @@ $\Res \left(f, 1\right) = a_{- 1}$ lo trovo ponendo $k - 2h = -1$, quindi $a_{- 
 $\Res \left(f, \infty \right) = - 1$
 \item Applico il teorema dei residui
 \begin{equation*}
-\int\nolimits_{\gamma} f\left(z\right) dz = 2\pi i\left[\Res \left(f, 1\right) + \Res \left(f, 2\right)\right] = 2\pi i
+\int\nolimits_{\gamma} f(z) dz = 2\pi i\left[\Res \left(f, 1\right) + \Res \left(f, 2\right)\right] = 2\pi i
 \end{equation*}
 \end{enumerate}
 \chapter{Esercitazione 3 - Boella}
@@ -1399,11 +1399,11 @@ z^{4} + 4a^{4} = 0\ \ \iff \ \ z = \pm a\pm ia
 \end{equation*}
 Calcoliamo ora l'integrale
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = \int^{R}_{- R} f\left(x\right) dx + \int_{\sigma_{R}} f\left(z\right) dz
+\int_{\gamma_{R}} f(z) dz = \int^{R}_{- R} f(x) dx + \int_{\sigma_{R}} f(z) dz
 \end{equation*}
 che vale, per il teorema dei residui
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i\left[\Res \left(f, - a + ia\right) + \Res \left(f, a + ia\right)\right]
+\int_{\gamma_{R}} f(z) dz = 2\pi i\left[\Res \left(f, - a + ia\right) + \Res \left(f, a + ia\right)\right]
 \end{equation*}
 Calcoliamo ora questi residui
 \begin{gather*}
@@ -1412,16 +1412,16 @@ Calcoliamo ora questi residui
 \end{gather*}
 Allora
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i\left[\frac{a + ia}{- 16a^{4}} + \frac{- a + ia}{- 16a^{4}}\right] = \frac{\pi}{4a^{3}}
+\int_{\gamma_{R}} f(z) dz = 2\pi i\left[\frac{a + ia}{- 16a^{4}} + \frac{- a + ia}{- 16a^{4}}\right] = \frac{\pi}{4a^{3}}
 \end{equation*}
 Ci resta da far vedere che
 \begin{equation*}
-\int_{\sigma_{R}} f\left(z\right) dz\rightarrow 0
+\int_{\sigma_{R}} f(z) dz\rightarrow 0
 \end{equation*}
 Non possiamo usare il Lemma di Jordan, perché al numeratore non c'è un esponenziale immaginario. Dobbiamo sporcarci le mani. In generale sarà un numero complesso, quindi conviene prenderne il modulo e maggiorarlo.
 \begin{rem}
 \begin{equation*}
-\left| \int_{\gamma} f\left(z\right) dz\right| \leq M \cdot \text{lunghezza}\left(\gamma \right)
+\left| \int_{\gamma} f(z) dz\right| \leq M \cdot \text{lunghezza}\left(\gamma \right)
 \end{equation*}
 dove $M$ è il massimo valore che $f$ può assumere lungo $\gamma $.
 \end{rem}
@@ -1435,7 +1435,7 @@ nel nostro caso
 \end{equation*}
 e quindi utilizzando il Nota Bene
 \begin{equation*}
-\left| \int_{\sigma_{R}} f\left(z\right) dz\right| \leq \frac{1}{R^{4} - \left| 4a^{4}\right|} \cdot \pi R\xrightarrow{R\rightarrow \infty} 0
+\left| \int_{\sigma_{R}} f(z) dz\right| \leq \frac{1}{R^{4} - \left| 4a^{4}\right|} \cdot \pi R\xrightarrow{R\rightarrow \infty} 0
 \end{equation*}
 Pertanto il nostro integrale iniziale vale
 \begin{equation*}
@@ -1445,7 +1445,7 @@ Pertanto il nostro integrale iniziale vale
 \begin{thm}
 Lemmi di Jordan. Considerando
 \begin{equation*}
-g\left(z\right) e^{i\alpha z}
+g(z) e^{i\alpha z}
 \end{equation*}
 \begin{itemize}
 \item $\alpha  > 0$ l'integrale sulla semicirconferenza di sopra tende a zero
@@ -1594,7 +1594,7 @@ converge per $\alpha  > 0$. Quindi complessivamente converge per $0 < \alpha < 1
 
 Calcoliamo
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz\ \ \ \ f\left(z\right) = \frac{e^{\alpha z}}{1 + e^{z}}
+\int_{\gamma_{R}} f(z) dz\ \ \ \ f(z) = \frac{e^{\alpha z}}{1 + e^{z}}
 \end{equation*}
 Non possiamo usare il lemma di Jordan e ci ricordiamo che $e^{z}$ è periodica
 \begin{equation*}
@@ -1656,27 +1656,27 @@ infinite lungo l'asse immaginaria. Non ha senso prendere una semicirconferenza p
 \FloatBarrier
 
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i\left[\Res \left(f, \pi i\right)\right] = 2\pi i\left[\frac{e^{\alpha z}}{e^{z}}\right]_{z = \pi i} = - 2\pi ie^{i\alpha \pi}
+\int_{\gamma_{R}} f(z) dz = 2\pi i\left[\Res \left(f, \pi i\right)\right] = 2\pi i\left[\frac{e^{\alpha z}}{e^{z}}\right]_{z = \pi i} = - 2\pi ie^{i\alpha \pi}
 \end{equation*}
 Vediamo quanto valgono i vari integrali. Quello su $\gamma_{2}$ (e analogamente su $\gamma_{4}$)
 \begin{align*}
-\left| \int_{\gamma_{2}} f\left(z\right) dz\right|  & = \left\{\gamma_{2} :x = R, y\in \left[ 0, 2\pi \right], dz = idy\right\} = \\
+\left| \int_{\gamma_{2}} f(z) dz\right|  & = \left\{\gamma_{2} :x = R, y\in \left[ 0, 2\pi \right], dz = idy\right\} = \\
  & = \left| \int^{2\pi}_{0}\frac{e^{\alpha R + i\alpha y}}{1 + e^{R + iy}} idy\right| \leq \int^{2\pi}_{0}\frac{e^{\alpha R}}{e^{R} - 1} dy = 2\pi \frac{e^{\alpha R}}{e^{R} - 1}\xrightarrow{R\rightarrow + \infty} 0
 \end{align*}
 Quello su $\gamma_{3}$
 \begin{align*}
-\int_{\gamma_{3}} f\left(z\right) dz & = \left\{z = x + 2\pi i\right\} = \\
- & = - \int^{R}_{- R}\frac{e^{\alpha x} e^{i2\pi \alpha}}{1 + e^{x + 2\pi i}} dx = -e^{i2\pi \alpha}\int^{R}_{- R} f\left(x\right) dx
+\int_{\gamma_{3}} f(z) dz & = \left\{z = x + 2\pi i\right\} = \\
+ & = - \int^{R}_{- R}\frac{e^{\alpha x} e^{i2\pi \alpha}}{1 + e^{x + 2\pi i}} dx = -e^{i2\pi \alpha}\int^{R}_{- R} f(x) dx
 \end{align*}
 quindi
 \begin{align*}
-\int_{\gamma_{R}} f\left(z\right) dz & \rightarrow - 2\pi ie^{i\alpha \pi}\\
-\int^{R}_{- R} f\left(x\right) dx - e^{i2\pi \alpha}\int^{R}_{- R} f\left(x\right) dx + \underbrace{\int_{\gamma_{2}} f\left(z\right) dz + \int_{\gamma_{4}} f\left(z\right) dz}_{\rightarrow 0} & \rightarrow - 2\pi ie^{i\alpha \pi}\\
-\left(1 - e^{i2\pi \alpha}\right)\int^{R}_{- R} f\left(x\right) dx & \rightarrow - 2\pi ie^{i\alpha \pi}
+\int_{\gamma_{R}} f(z) dz & \rightarrow - 2\pi ie^{i\alpha \pi}\\
+\int^{R}_{- R} f(x) dx - e^{i2\pi \alpha}\int^{R}_{- R} f(x) dx + \underbrace{\int_{\gamma_{2}} f(z) dz + \int_{\gamma_{4}} f(z) dz}_{\rightarrow 0} & \rightarrow - 2\pi ie^{i\alpha \pi}\\
+\left(1 - e^{i2\pi \alpha}\right)\int^{R}_{- R} f(x) dx & \rightarrow - 2\pi ie^{i\alpha \pi}
 \end{align*}
 in conclusione
 \begin{equation*}
-\int_{\RR} f\left(x\right) dx = \frac{2\pi ie^{i\alpha \pi}}{e^{i2\pi \alpha} - 1} = 2\pi i\frac{e^{i\alpha \pi}}{e^{2i\alpha \pi} - 1} \cdot \frac{e^{- i\alpha \pi}}{e^{- i\alpha \pi}} = 2\pi i\frac{1}{e^{i\alpha \pi} - e^{- i\alpha \pi}} = \frac{\pi}{\sin\left(\alpha \pi \right)}
+\int_{\RR} f(x) dx = \frac{2\pi ie^{i\alpha \pi}}{e^{i2\pi \alpha} - 1} = 2\pi i\frac{e^{i\alpha \pi}}{e^{2i\alpha \pi} - 1} \cdot \frac{e^{- i\alpha \pi}}{e^{- i\alpha \pi}} = 2\pi i\frac{1}{e^{i\alpha \pi} - e^{- i\alpha \pi}} = \frac{\pi}{\sin\left(\alpha \pi \right)}
 \end{equation*}
 \chapter{Esercitazione 3 - Potrich}
 \ParteEsercizi
@@ -1713,20 +1713,20 @@ Calcolare
 
 Vediamo una seconda tipologia di integrali
 \begin{equation*}
-\boxed{\int^{+ \infty}_{- \infty} R\left(x\right) dx} \ \ \ \text{oppure} \ \ \ \ \boxed{\int^{+ \infty}_{- \infty} R\left(x\right)\left\{
+\boxed{\int^{+ \infty}_{- \infty} R(x) dx} \ \ \ \text{oppure} \ \ \ \ \boxed{\int^{+ \infty}_{- \infty} R(x)\left\{
 \begin{array}{c}
 e^{ix}\\
 \cos x\\
 \sin x
 \end{array}\right\} dx}
 \end{equation*}
-Per risolverli basta porre $f\left(z\right) = R\left(z\right)$ oppure $f\left(z\right) = R\left(z\right) e^{iz}$ e si integra sui semicerchi, infine si fa tendere $R\rightarrow + \infty $.
+Per risolverli basta porre $f(z) = R(z)$ oppure $f(z) = R(z) e^{iz}$ e si integra sui semicerchi, infine si fa tendere $R\rightarrow + \infty $.
 
 Se ci fossero poli sull'asse reale devo fare dei morsi e applicare il seguente Lemma. Si fa quindi tendere $\varepsilon \rightarrow 0^{+}$ e $R\rightarrow + \infty $.
 \begin{thm}
-[Lemma del cerchio piccolo] Sia $f\in \Hc \left(D\left(z_{0}, r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi_{\varepsilon}\left(t\right) = z_{0} + \varepsilon e^{it}$ con $t\in \left[ \alpha, \beta \right]$. Allora
+[Lemma del cerchio piccolo] Sia $f\in \Hc \left(D\left(z_{0}, r\right) \setminus \left\{z_{0}\right\}\right)$, sia $z_{0}$ un polo semplice per $f$, sia $\varphi_{\varepsilon}(t) = z_{0} + \varepsilon e^{it}$ con $t\in \left[ \alpha, \beta \right]$. Allora
 \begin{equation*}
-\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f\left(z\right) dz = \left(\beta - \alpha \right) i \cdot \Res \left(f, z_{0}\right)
+\lim_{\varepsilon \rightarrow 0^{+}}\int_{\varphi_{\varepsilon}} f(z) dz = \left(\beta - \alpha \right) i \cdot \Res \left(f, z_{0}\right)
 \end{equation*}
 \end{thm}
 \begin{figure}[htpb]
@@ -1852,8 +1852,8 @@ $f\in \Hc (\CC  \setminus \{0, \pm i\})$ dove $\pm i$ sono poli semplici, mentre
 Calcoliamo i residui
 \begin{gather*}
 \Res \left(f, 0\right) = \lim_{z\rightarrow 0}\frac{d}{dz}\left(\left(z - 0\right)^{2}\frac{\left(z + 1\right) e^{\pi z}}{z^{2}\left(z^{2} + 1\right)}\right) = \lim_{z\rightarrow 0}\frac{d}{dz}\frac{\left(z + 1\right) e^{\pi z}}{z^{2} + 1} = \dotsc = 1 + \pi \\
-\Res \left(f, i\right) = \lim_{z\rightarrow i}\left(z - i\right) f\left(z\right) = \lim_{z\rightarrow i}\frac{\left(z + 1\right) e^{\pi z}}{z^{2}\left(z + i\right)} = \dotsc = \frac{1 + i}{2i}\\
-\Res \left(f, - i\right) = \lim_{z\rightarrow - i}\left(z + i\right) f\left(z\right) = \dotsc = - \frac{1 - i}{2i}
+\Res \left(f, i\right) = \lim_{z\rightarrow i}\left(z - i\right) f(z) = \lim_{z\rightarrow i}\frac{\left(z + 1\right) e^{\pi z}}{z^{2}\left(z + i\right)} = \dotsc = \frac{1 + i}{2i}\\
+\Res \left(f, - i\right) = \lim_{z\rightarrow - i}\left(z + i\right) f(z) = \dotsc = - \frac{1 - i}{2i}
 \end{gather*}
 Le distanze dei punti singolari di $f$ dal centro della curva $\gamma_{R}$ sono
 \begin{gather*}
@@ -1901,19 +1901,19 @@ di cui solo $z_{2}$ sta dentro il cerchio unitario
 \end{equation*}
 ricordando che è un polo semplice
 \begin{equation*}
-4\pi i \cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right) = 4\pi i\lim\limits_{z\rightarrow i\left(- 3 + 2\sqrt{2}\right)}\left[ z - i\left(- 3 + 2\sqrt{2}\right)\right] f\left(z\right) = \dotsc = \frac{\pi}{\sqrt{2}}
+4\pi i \cdot \Res \left(f, i\left(- 3 + 2\sqrt{2}\right)\right) = 4\pi i\lim\limits_{z\rightarrow i\left(- 3 + 2\sqrt{2}\right)}\left[ z - i\left(- 3 + 2\sqrt{2}\right)\right] f(z) = \dotsc = \frac{\pi}{\sqrt{2}}
 \end{equation*}
 \Soluzione
 \begin{equation*}
 I_{\alpha, k} = \int^{+ \infty}_{- \infty}\frac{x^{k}}{\alpha^{2} + x^{2k}} dx\ \ \ \ \alpha  > 0, k\in \NN 
 \end{equation*}
-Per $x\rightarrow \pm \infty $ si ha $f\left(x\right) \sim \frac{1}{x^{k}}$, che è integrabile in un intorno di $\pm \infty $ se e solo se $k > 1$. Quindi $I_{\alpha, k}$ esiste per $k\in \NN, k \geq 2$.
+Per $x\rightarrow \pm \infty $ si ha $f(x) \sim \frac{1}{x^{k}}$, che è integrabile in un intorno di $\pm \infty $ se e solo se $k > 1$. Quindi $I_{\alpha, k}$ esiste per $k\in \NN, k \geq 2$.
 
 Se $k$ è dispari allora $f$ è dispari e $I_{\alpha, k} = 0$
 
 Se $k$ è pari, con $k \geq 2$, poniamo
 \begin{equation*}
-f\left(z\right) = \frac{z^{k}}{\alpha^{2} + z^{2k}}
+f(z) = \frac{z^{k}}{\alpha^{2} + z^{2k}}
 \end{equation*}
 Le singolarità si trovano ponendo
 \begin{equation*}
@@ -1921,19 +1921,19 @@ z^{2k} = - \alpha^{2} = \alpha^{2} e^{\pi i} \ \ \implies \ \ z_{j} = \alpha^{\f
 \end{equation*}
 allora per il teorema dei residui
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = \int_{\sigma} f\left(z\right) dz + \int_{\varphi} f\left(z\right) dz = 2\pi i \cdot \sum\limits^{k - 1}_{j = 0}\Res \left(f, z_{j}\right)
+\int_{\gamma_{R}} f(z) dz = \int_{\sigma} f(z) dz + \int_{\varphi} f(z) dz = 2\pi i \cdot \sum\limits^{k - 1}_{j = 0}\Res \left(f, z_{j}\right)
 \end{equation*}
 Nello specifico il pezzo su $\sigma $ tende proprio al nostro integrale
 \begin{equation*}
-\int_{\sigma} f\left(z\right) dz = \left\{z = t, t\in \left[ - R, R\right]\right\} = \int^{R}_{- R} f\left(t\right) dt\xrightarrow{R\rightarrow + \infty} I_{\alpha, k}
+\int_{\sigma} f(z) dz = \left\{z = t, t\in \left[ - R, R\right]\right\} = \int^{R}_{- R} f(t) dt\xrightarrow{R\rightarrow + \infty} I_{\alpha, k}
 \end{equation*}
 Verifichiamo che
 \begin{equation*}
-\int_{\varphi} f\left(z\right) dz\rightarrow 0
+\int_{\varphi} f(z) dz\rightarrow 0
 \end{equation*}
 Infatti
 \begin{align*}
-\left| \int_{\varphi} f\left(z\right) dz\right|  & = \left\{z = Re^{it}, t\in \left[ 0, \pi \right]\right\} = \left| \int^{\pi}_{0}\frac{R^{k} e^{ikt}}{\alpha^{2} + R^{2k} e^{i2kt}} Rie^{it} dt\right| \\
+\left| \int_{\varphi} f(z) dz\right|  & = \left\{z = Re^{it}, t\in \left[ 0, \pi \right]\right\} = \left| \int^{\pi}_{0}\frac{R^{k} e^{ikt}}{\alpha^{2} + R^{2k} e^{i2kt}} Rie^{it} dt\right| \\
  & \leq \int^{\pi}_{0}\frac{\left| R^{k} e^{ikt}\right|}{\left| \alpha^{2} + R^{2k} e^{i2kt}\right|}\left| Rie^{it}\right| dt \leq \int^{\pi}_{0}\frac{R^{k + 1}}{R^{2k} - \alpha^{2}} dt\xrightarrow{R\rightarrow + \infty} 0
 \end{align*}
 dove è stata usata la disuguaglianza triangolare
@@ -1946,34 +1946,34 @@ dove è stata usata la disuguaglianza triangolare
 
 \Soluzione
 \begin{equation*}
-I = \int^{+ \infty}_{0}\frac{\sin x}{x} dx = \frac{1}{2}\int^{+ \infty}_{- \infty}\frac{\sin x}{x} dx = \frac{1}{2}\Im \left(J\right) \ \ \ \ \ \ \ \ J = \int^{+ \infty}_{- \infty}\frac{e^{ix}}{x} dx
+I = \int^{+ \infty}_{0}\frac{\sin x}{x} dx = \frac{1}{2}\int^{+ \infty}_{- \infty}\frac{\sin x}{x} dx = \frac{1}{2}\Im (J) \ \ \ \ \ \ \ \ J = \int^{+ \infty}_{- \infty}\frac{e^{ix}}{x} dx
 \end{equation*}
-Posto $f\left(z\right) = \frac{e^{iz}}{z}$, $f\in \Hc \left(\CC  \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
+Posto $f(z) = \frac{e^{iz}}{z}$, $f\in \Hc \left(\CC  \setminus \left\{0\right\}\right)$. In questo caso devo fare un \textit{morso} in corrispondenza dello $0$.
 \begin{equation*}
 J = \lim_{\varepsilon \rightarrow 0^{+}, R\rightarrow + \infty}\int_{\left[ - R, R\right] \setminus \left(- \varepsilon, \varepsilon \right)}\frac{e^{iz}}{z} dz
 \end{equation*}
 Per il teorema dell'integrale nullo di Cauchy
 \begin{equation*}
-0 = \int_{\gamma_{R, \varepsilon}} f\left(z\right) dz = \int_{\sigma_{1} \cup \sigma_{2}} f\left(z\right) dz + \int_{\psi} f\left(z\right) dz + \int_{\varphi} f\left(z\right) dz
+0 = \int_{\gamma_{R, \varepsilon}} f(z) dz = \int_{\sigma_{1} \cup \sigma_{2}} f(z) dz + \int_{\psi} f(z) dz + \int_{\varphi} f(z) dz
 \end{equation*}
 Analizziamo i vari pezzi
 \begin{equation*}
-\int_{\sigma_{1} \cup \sigma_{2}} f\left(z\right) dz = \left\{z = t, t\in \left[ - R, - \varepsilon \right) \cup \left(\varepsilon, R\right]\right\} = \int_{\left[ - R, R\right] \setminus \left(- \varepsilon, \varepsilon \right)}\frac{e^{it}}{t} dt\xrightarrow[\varepsilon \rightarrow 0^{+}]{R\rightarrow + \infty} J
+\int_{\sigma_{1} \cup \sigma_{2}} f(z) dz = \left\{z = t, t\in \left[ - R, - \varepsilon \right) \cup \left(\varepsilon, R\right]\right\} = \int_{\left[ - R, R\right] \setminus \left(- \varepsilon, \varepsilon \right)}\frac{e^{it}}{t} dt\xrightarrow[\varepsilon \rightarrow 0^{+}]{R\rightarrow + \infty} J
 \end{equation*}
 il morso:
 \begin{equation*}
-\int_{\psi} f\left(z\right) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left(\beta - \alpha \right) \cdot \Res \left(f, 0\right) = \left(0 - \pi \right) i \cdot \Res \left(f, 0\right) = - \pi i\frac{e^{0}}{1} = - \pi i
+\int_{\psi} f(z) dz\xrightarrow{\varepsilon \rightarrow 0^{+}}\left(\beta - \alpha \right) \cdot \Res \left(f, 0\right) = \left(0 - \pi \right) i \cdot \Res \left(f, 0\right) = - \pi i\frac{e^{0}}{1} = - \pi i
 \end{equation*}
 mentre il semicerchio grande:
 \begin{align*}
-\left| \int_{\varphi} f\left(z\right) dz\right|  & = \left\{z = Re^{it}, dz = Rie^{it} dt\right\} = \left| \int^{\pi}_{0}\frac{e^{iRe^{it}}}{\cancel{Re^{it}}} i\cancel{Re^{it}} dt\right| \\
- & \leq \int^{\pi}_{0}\left| e^{iRe^{it}}\right| dt = \left\{\left| e^{z}\right| = e^{\Re \left(z\right)}\right\}\\
+\left| \int_{\varphi} f(z) dz\right|  & = \left\{z = Re^{it}, dz = Rie^{it} dt\right\} = \left| \int^{\pi}_{0}\frac{e^{iRe^{it}}}{\cancel{Re^{it}}} i\cancel{Re^{it}} dt\right| \\
+ & \leq \int^{\pi}_{0}\left| e^{iRe^{it}}\right| dt = \left\{\left| e^{z}\right| = e^{\Re (z)}\right\}\\
  & = \int^{\pi}_{0} e^{- R\sin t} dt = 2\int^{\frac{\pi}{2}}_{0} e^{- R\sin t} dt \leq 2\int^{\frac{\pi}{2}}_{0} e^{- \frac{2Rt}{\pi}} dt\\
  & = \frac{\pi}{R}\left(1 - e^{- R}\right) \leq \frac{\pi}{R}\xrightarrow{R\rightarrow + \infty} 0
 \end{align*}
 allora
 \begin{equation*}
-0 = J - \pi i + 0\ \ \ \ \implies \ \ \ \ J = \pi i\ \ \ \ \implies \ \ \ \ I = \frac{1}{2}\Im \left(J\right) = \frac{\pi}{2}
+0 = J - \pi i + 0\ \ \ \ \implies \ \ \ \ J = \pi i\ \ \ \ \implies \ \ \ \ I = \frac{1}{2}\Im (J) = \frac{\pi}{2}
 \end{equation*}
 \Soluzione
 
@@ -1983,29 +1983,29 @@ Dobbiamo calcolare
 \end{equation*}
 poniamo
 \begin{equation*}
-f\left(z\right) = \frac{e^{i\pi z}}{\left(z - 3\right)\left(z^{2} - 2z + 2\right)}
+f(z) = \frac{e^{i\pi z}}{\left(z - 3\right)\left(z^{2} - 2z + 2\right)}
 \end{equation*}
 $f\in \Hc \left(\CC  \setminus \left\{3, 1\pm i\right\}\right)$, uno di essi si trova proprio sulla retta reale, pertanto lì faremo un morso.
 \begin{align*}
-\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz & = 2\pi i \cdot \Res \left(f, 1 + i\right) = 2\pi i \cdot \lim_{z\rightarrow 1 + i} f\left(z\right)\left(z - \left(1 + i\right)\right) = \\
+\int_{\gamma_{R, \varepsilon}} f(z) dz & = 2\pi i \cdot \Res \left(f, 1 + i\right) = 2\pi i \cdot \lim_{z\rightarrow 1 + i} f(z)\left(z - \left(1 + i\right)\right) = \\
  & = 2\pi i \cdot \lim_{z\rightarrow 1 + i}\frac{e^{\pi iz}}{\left(z - 3\right)\left(z - 1 + i\right)} = \dotsc = \frac{\pi e^{- \pi}}{5}\left(2 + i\right)
 \end{align*}
 ma questo integrale possiamo vederlo come la somma di tre pezzi
 \begin{equation*}
-\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz = \int_{\left(- R, 3 - \varepsilon \right) \cup \left(3 + \varepsilon, R\right)} f\left(z\right) dz + \int_{\psi} f\left(z\right) dz + \int_{\varphi} f\left(z\right) dz
+\int_{\gamma_{R, \varepsilon}} f(z) dz = \int_{\left(- R, 3 - \varepsilon \right) \cup \left(3 + \varepsilon, R\right)} f(z) dz + \int_{\psi} f(z) dz + \int_{\varphi} f(z) dz
 \end{equation*}
 di cui il primo tende proprio all'integrale che vogliamo calcolare
 \begin{equation*}
-\int_{\left(- R, 3 - \varepsilon \right) \cup \left(3 + \varepsilon, R\right)} f\left(z\right) dz\xrightarrow[\varepsilon \rightarrow 0^{+}]{R\rightarrow + \infty}\int^{+ \infty}_{- \infty}\frac{e^{i\pi z}}{\left(x - 3\right)\left(x^{2} - 2x + 2\right)} dx
+\int_{\left(- R, 3 - \varepsilon \right) \cup \left(3 + \varepsilon, R\right)} f(z) dz\xrightarrow[\varepsilon \rightarrow 0^{+}]{R\rightarrow + \infty}\int^{+ \infty}_{- \infty}\frac{e^{i\pi z}}{\left(x - 3\right)\left(x^{2} - 2x + 2\right)} dx
 \end{equation*}
 occupiamoci del pezzo sul morso sfruttando il Lemma del cerchio piccolo
 \begin{align*}
-\lim_{\varepsilon \rightarrow 0^{+}}\int_{\psi} f\left(z\right) dz & = - \pi i \cdot \Res \left(f, 3\right)\\
- & = - \pi i \cdot \lim_{z\rightarrow 3} f\left(z\right)\left(z - 3\right) = - \pi i \cdot \lim_{z\rightarrow 3}\frac{e^{i\pi z}}{z^{2} - 2z + 2} = \dotsc = \frac{\pi i}{5}
+\lim_{\varepsilon \rightarrow 0^{+}}\int_{\psi} f(z) dz & = - \pi i \cdot \Res \left(f, 3\right)\\
+ & = - \pi i \cdot \lim_{z\rightarrow 3} f(z)\left(z - 3\right) = - \pi i \cdot \lim_{z\rightarrow 3}\frac{e^{i\pi z}}{z^{2} - 2z + 2} = \dotsc = \frac{\pi i}{5}
 \end{align*}
 ed infine del semicerchio grande
 \begin{align*}
-\left| \int_{\varphi} f\left(z\right) dz\right|  & = \left\{z = Re^{it}, dz = Rie^{it} dt\right\}\\
+\left| \int_{\varphi} f(z) dz\right|  & = \left\{z = Re^{it}, dz = Rie^{it} dt\right\}\\
  & = \left| \int^{\pi}_{0}\frac{e^{\pi iRe^{it}}}{\left(Re^{it} - 3\right)\left(R^{2} e^{i2t} - 2Re^{it} + 2\right)} Rie^{it} dt\right| \\
  & \leq \int^{\pi}_{0}\frac{R}{\left(R - 3\right)\left(R^{2} - 2R - 2\right)} dt = \frac{R\pi}{\left(R - 3\right)\left(R^{2} - 2R - 2\right)}\xrightarrow{R\rightarrow + \infty} 0
 \end{align*}
@@ -2025,7 +2025,7 @@ Dobbiamo calcolare
 \end{equation*}
 consideriamo
 \begin{equation*}
-f\left(z\right) = \frac{e^{iz}}{\cosh z}
+f(z) = \frac{e^{iz}}{\cosh z}
 \end{equation*}
 il cui denominatore si annulla in
 \begin{gather*}
@@ -2034,7 +2034,7 @@ il cui denominatore si annulla in
 \end{gather*}
 Integriamo sul rettangolo che contiene il residuo in $\pi i/2$
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = 2\pi i \cdot \Res \left(f, \frac{\pi i}{2}\right) = 2\pi i \cdot \left. \frac{e^{iz}}{\sinh}\right|_{z = \frac{\pi i}{2}} = \dotsc = \frac{2\pi}{e^{\frac{\pi}{2}}}
+\int_{\gamma_{R}} f(z) dz = 2\pi i \cdot \Res \left(f, \frac{\pi i}{2}\right) = 2\pi i \cdot \left. \frac{e^{iz}}{\sinh}\right|_{z = \frac{\pi i}{2}} = \dotsc = \frac{2\pi}{e^{\frac{\pi}{2}}}
 \end{equation*}
 il circuito lo possiamo vedere come $4$ lati di un rettangolo, numerati in senso antiorario partendo da quello in basso
 
@@ -2092,25 +2092,25 @@ il circuito lo possiamo vedere come $4$ lati di un rettangolo, numerati in senso
 \FloatBarrier
 
 \begin{equation*}
-\int_{\gamma_{R}} f\left(z\right) dz = \int_{l_{1}} f\left(z\right) dz + \int_{l_{2}} f\left(z\right) dz + \int_{l_{3}} f\left(z\right) dz + \int_{l_{4}} f\left(z\right) dz
+\int_{\gamma_{R}} f(z) dz = \int_{l_{1}} f(z) dz + \int_{l_{2}} f(z) dz + \int_{l_{3}} f(z) dz + \int_{l_{4}} f(z) dz
 \end{equation*}
 il lato inferiore tende proprio al nostro integrale
 \begin{equation*}
-\int_{l_{1}} f\left(z\right) dz = \left\{z = t\right\} = \int^{R}_{- R}\frac{e^{it}}{\cosh t} dt\xrightarrow{R\rightarrow + \infty}\int^{+ \infty}_{- \infty}\frac{e^{it}}{\cosh t} dt
+\int_{l_{1}} f(z) dz = \left\{z = t\right\} = \int^{R}_{- R}\frac{e^{it}}{\cosh t} dt\xrightarrow{R\rightarrow + \infty}\int^{+ \infty}_{- \infty}\frac{e^{it}}{\cosh t} dt
 \end{equation*}
 mentre il lato superiore tende al nostro integrale moltiplicato per una costante
 \begin{align*}
-\int_{l_{3}} f\left(z\right) dz & = \left\{z = t + \pi i\right\} = - \int^{R}_{- R}\frac{e^{i\left(t + \pi i\right)}}{\cosh\left(t + \pi i\right)} dt\\
+\int_{l_{3}} f(z) dz & = \left\{z = t + \pi i\right\} = - \int^{R}_{- R}\frac{e^{i\left(t + \pi i\right)}}{\cosh\left(t + \pi i\right)} dt\\
  & = - \int^{R}_{- R}\frac{e^{it} e^{- \pi}}{\frac{e^{t + \pi i} + e^{t + \pi i}}{2}} dt = e^{- \pi}\int^{R}_{- R}\frac{e^{it}}{\cosh t} dt\xrightarrow{R\rightarrow + \infty} e^{- \pi}\int^{+ \infty}_{- \infty}\frac{e^{it}}{\cosh t} dt
 \end{align*}
 si può dimostrare che i lati verticali tendono a zero
 \begin{align*}
-\left| \int_{l_{2}} f\left(z\right) dz\right|  & \leq \left\{z = R + it, t\in \left[ 0, \pi \right], dz = idt\right\} \leq \left| \int^{\pi}_{0}\frac{e^{iR} e^{- t}}{\cosh\left(R + it\right)} idt\right| \\
+\left| \int_{l_{2}} f(z) dz\right|  & \leq \left\{z = R + it, t\in \left[ 0, \pi \right], dz = idt\right\} \leq \left| \int^{\pi}_{0}\frac{e^{iR} e^{- t}}{\cosh\left(R + it\right)} idt\right| \\
  & \leq \int^{\pi}_{0}\frac{2e^{- t}}{e^{R} + e^{- R}} dt = \frac{2}{e^{R} + e^{- R}}\int^{\pi}_{0} e^{- t} dt\xrightarrow{R\rightarrow + \infty} 0
 \end{align*}
 analogamente
 \begin{equation*}
-\int_{l_{4}} f\left(z\right) dz\xrightarrow{R\rightarrow + \infty} 0
+\int_{l_{4}} f(z) dz\xrightarrow{R\rightarrow + \infty} 0
 \end{equation*}
 quindi in conclusione
 \begin{equation*}
@@ -2698,9 +2698,9 @@ Dobbiamo usare la determinazione del logaritmo che esclude l'asse reale positivo
 Si considera rispettivamente
 \begin{equation*}
 \begin{array}{c l}
-A & f\left(z\right) = e^{\alpha \cdot \Log_{\left(2\pi \right)} z} R\left(z\right)\\
-B & f\left(z\right) = \Log_{\left(2\pi \right)} z \cdot R\left(z\right)\\
-C & f\left(z\right) = \left(\Log_{\left(2\pi \right)} z\right)^{2} R\left(z\right)
+A & f(z) = e^{\alpha \cdot \Log_{\left(2\pi \right)} z} R(z)\\
+B & f(z) = \Log_{\left(2\pi \right)} z \cdot R(z)\\
+C & f(z) = \left(\Log_{\left(2\pi \right)} z\right)^{2} R(z)
 \end{array}
 \end{equation*}
 
@@ -2721,7 +2721,7 @@ I = \int^{+ \infty}_{0}\frac{1}{\left(x^{2} + 4\right)\left(x + 1\right)} dx
 
 Si considerino le seguenti funzioni definite su $\left(0, + \infty \right)$ nel seguente modo
 \begin{equation*}
-f\left(x\right) = \frac{1}{\sqrt{x}} \ \ \ \ g\left(x\right) = \frac{1}{\sqrt{x + 1}}
+f(x) = \frac{1}{\sqrt{x}} \ \ \ \ g(x) = \frac{1}{\sqrt{x + 1}}
 \end{equation*}
 \begin{enumerate}
 \item Stabilire per quali $p\in \left[ 1, + \infty \right]$ le seguenti funzioni stanno in $L^{p}\left(1, + \infty \right)$:
@@ -2737,26 +2737,26 @@ Sia $B = \left\{\left(x, y\right) \in \RR^{2} :x^{2} + y^{2} \leq 1\right\}$ e s
 f\left(x, y\right) = \frac{1}{\sqrt{x^{2} + y^{2}}}
 \end{equation*}
 \begin{enumerate}
-\item Stabilire per quali $p \geq 1$ si ha $f\in L^{p}\left(B\right)$
+\item Stabilire per quali $p \geq 1$ si ha $f\in L^{p}(B)$
 \item Stabilire per quali $q$ si ha $f\in L^{q}\left(\RR^{2} \setminus B\right)$.
 \end{enumerate}
 \Esercizio{}
 
 Sia
 \begin{equation*}
-f_{n}\left(x\right) = \frac{n^{2}\sin\left(\frac{x^{2}}{n^{2}}\right)}{\left(x^{2} + n^{2}\right)^{3/2}\log^{3/2}\left(x^{2} + n^{2}\right)} \ \ n\in \NN 
+f_{n}(x) = \frac{n^{2}\sin\left(\frac{x^{2}}{n^{2}}\right)}{\left(x^{2} + n^{2}\right)^{3/2}\log^{3/2}\left(x^{2} + n^{2}\right)} \ \ n\in \NN 
 \end{equation*}
 Rispondere ai seguenti quesiti
 \begin{enumerate}
 \item Per quali $n\in \NN $ si ha $f_{n} \in L^{1}\left(0, + \infty \right)$.
 \item Determinare la funzione limite $f$ in $\left(0, + \infty \right)$.
-\item Calcolare $\lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f_{n}\left(x\right) dx$
+\item Calcolare $\lim\limits_{n\rightarrow + \infty}\int^{+ \infty}_{0} f_{n}(x) dx$
 \end{enumerate}
 \Esercizio{}
 
-Date le $f_{n}\left(x\right) = \arctan\left(nx\right)$ definite su $\left[ 0, + \infty \right)$. 
+Date le $f_{n}(x) = \arctan\left(nx\right)$ definite su $\left[ 0, + \infty \right)$. 
 \begin{enumerate}
-\item Determinare il limite puntuale $f\left(x\right)$
+\item Determinare il limite puntuale $f(x)$
 \item Stabilire se $f_{n}\rightarrow f$ in $L^{p}\left(0, + \infty \right)$ per $p\in \left[ 1, + \infty \right)$.
 \end{enumerate}
 \ParteSoluzioni
@@ -2774,7 +2774,7 @@ $\implies \exists I$ se e solo se $ - 1 < \alpha < 2$.
 
 
 
-Sia $f\left(z\right) = \frac{e^{\alpha \log z}}{1 + z^{3}}$.
+Sia $f(z) = \frac{e^{\alpha \log z}}{1 + z^{3}}$.
 
 Considero un angolo $ = \frac{2\pi}{m} = \frac{2\pi}{3}$
 
@@ -2826,7 +2826,7 @@ Chiamo l'intera curva $\gamma_{R, \varepsilon} = \sigma_{1} \cup \varphi \cup \s
 
 Per il teorema dei residui
 \begin{equation*}
-\int_{\gamma_{R, \varepsilon}} f\left(z\right) dz = 2\pi i \cdot \Res \left(f, e^{i\pi /3}\right)
+\int_{\gamma_{R, \varepsilon}} f(z) dz = 2\pi i \cdot \Res \left(f, e^{i\pi /3}\right)
 \end{equation*}
 $e^{i\pi /3}$ è l'unico punto interno alla curva in cui si annulla il denominatore.
 \begin{equation*}
@@ -2894,8 +2894,8 @@ t\in [ \varepsilon, R]
 
 Siamo nel caso $B$
 \begin{gather*}
-f\left(z\right) = \Log_{\left(2\pi \right)} z \cdot R\left(z\right) = f\left(z\right) = \frac{\Log_{\left(2\pi \right)} z}{\left(z^{2} + 4\right)\left(z + 1\right)}\\
-\int_{\gamma_{\varepsilon, R}} f\left(z\right) dz = 2\pi i \cdot \sum \Res \left(f, z_{i}\right)
+f(z) = \Log_{\left(2\pi \right)} z \cdot R(z) = f(z) = \frac{\Log_{\left(2\pi \right)} z}{\left(z^{2} + 4\right)\left(z + 1\right)}\\
+\int_{\gamma_{\varepsilon, R}} f(z) dz = 2\pi i \cdot \sum \Res \left(f, z_{i}\right)
 \end{gather*}
 Il denominatore si annulla per $z = -1, \pm 2i$.
 \begin{equation*}
@@ -2918,16 +2918,16 @@ Rispondiamo al punto $1$.
 \begin{equation*}
 \ 
 \begin{aligned}
-\left| f\left(x\right)\right|^{p} & = \frac{1}{x^{p/2}} \ \ \implies \ \ f\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ \frac{p}{2}  > 1\ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
+\left| f(x)\right|^{p} & = \frac{1}{x^{p/2}} \ \ \implies \ \ f\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ \frac{p}{2}  > 1\ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
  & \\
-\left| g\left(x\right)\right|^{p} & = \frac{1}{\left(x + 1\right)^{p/2}}\overset{x\rightarrow + \infty}{\sim}\frac{1}{x^{p/2}} \ \ \implies \ \ g\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
+\left| g(x)\right|^{p} & = \frac{1}{\left(x + 1\right)^{p/2}}\overset{x\rightarrow + \infty}{\sim}\frac{1}{x^{p/2}} \ \ \implies \ \ g\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ p > 2\ \left(+ \infty \ \text{incluso}\right)\\
  & \\
 \left| f - g\right|^{p} & = \left| \frac{1}{\sqrt{x}} - \frac{1}{\sqrt{x + 1}}\right|^{p} = \left| \frac{\sqrt{x + 1} - \sqrt{x}}{\sqrt{x}\sqrt{x + 1}}\right|^{p}\\
  & = \left| \frac{\sqrt{x + 1} - \sqrt{x}}{\sqrt{x^{2} + x}} \cdot \frac{\sqrt{x + 1} + \sqrt{x}}{\sqrt{x + 1} + \sqrt{x}}\right|^{p} = \left| \frac{x + 1 - x}{\sqrt{x^{2} + x}\left(\sqrt{x + 1} + \sqrt{x}\right)}\right|^{p}\\
  & = \left| \frac{x + 1 - x}{\sqrt{x^{2} + x}\left(\sqrt{x + 1} + \sqrt{x}\right)}\right|^{p}\overset{x\rightarrow + \infty}{\sim}\left| \frac{1}{x\left(2\sqrt{x}\right)}\right|^{p} = \frac{1}{2^{p} x^{3p/2}}\\
  & \implies \ \ f - g\in L^{p}\left(1, + \infty \right) \ \ \iff \ \ \frac{3}{2} p > 1\ \ \iff \ \ p > \frac{2}{3} \ \text{cioè il primo intero:} \ p \geq 1\\
  & \\
-\frac{g\left(x\right)}{f\left(x\right)} & \overset{x\rightarrow + \infty}{\sim} 1\ \ \implies \ \ \frac{g}{f} \in L^{p}\left(1, + \infty \right) \ \ \iff \ \ p = +\infty 
+\frac{g(x)}{f(x)} & \overset{x\rightarrow + \infty}{\sim} 1\ \ \implies \ \ \frac{g}{f} \in L^{p}\left(1, + \infty \right) \ \ \iff \ \ p = +\infty 
 \end{aligned}
 \end{equation*}
 Rispondiamo al punto $2$.
