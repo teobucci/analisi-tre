@@ -35,12 +35,10 @@ ovvero
 \partial_{v} f(z) = v \cdot f'(z)
 \end{equation*}
 Possiamo considerare per esempio due direzioni
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 v = (1, 0) = 1 & \ \ \implies \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
 v = (0, 1) = i & \ \ \implies \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
-\end{aligned}
-\end{equation*}
+\end{align*}
 mettendo insieme i pezzi
 \begin{equation*}
 u_{y} + iv_{y} = i(u_{x} + iv_{x})
@@ -1222,12 +1220,10 @@ con norma
 \begin{defn}
 [Estremo superiore essenziale]
 Consideriamo lo spazio $L^{\infty}(A)$, definiamo estremo superiore essenziale
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \esssup f(x) & = \inf\{c\in \RR : | f(x) > c| = 0\}\\
  & = \inf\left\{c\in \RR : | f(x)| < c\ \text{q.o. in} \ A\right\}
-\end{aligned}
-\end{equation*}
+\end{align*}
 \end{defn}
 \begin{rem}
 $ \Vert f \Vert_{L^{\infty}} = \esssup| f(x)| $.
@@ -2069,25 +2065,21 @@ abbiamo un operatore trasformata di Fourier che è, ovviamente, lineare, e, graz
 Notazione: indichiamo con $\Fc(f(x), z) = \hat{f}(z)$ la trasformata di $f(x)$ scritta in funzione di $z$.
 \begin{itemize}
 \item Traslazione di $y\in \RR$.
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Fc(f(x - y), z) & = \int e^{- ixz} f(x - y) dx & x' = x - y\\
  & = \int e^{- ix'z - iyz} f(x') dx' & \\
  & = e^{- iyz}\int e^{- ixz} f(x) dx & \\
  & = e^{- iyz}\hat{f}(z) & \\
  & = e^{- iyz}\Fc(f(x), z) &
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item Il contrario
 
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Fc\left(e^{iyx} f(x), z\right) & = \int e^{- ixz} e^{iyx} f(x) dx\\
  & = \int e^{- ix(z - y)} f(x) dx\\
  & = \hat{f}(z - y)\\
  & = \Fc(f(x), z - y)
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item $\Fc\left(\overline{f(x)}, z\right) = \overline{\hat{f}(- z)}$
 \item $f$ pari $\implies $ $\hat{f}$ pari
 \item $f$ dispari $\implies $ $\hat{f}$ dispari
@@ -2108,15 +2100,13 @@ Chiedere che anche $xf(x)$ stia in $L^{1}$ significa che la $f$ deve in qualche 
 \begin{proof}
 
 Calcoliamo il limite del rapporto incrementale
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \lim\limits_{h\rightarrow 0}\frac{\hat{f}(z + h) - \hat{f}(z)}{h} & = \lim\limits_{h\rightarrow 0}\frac{1}{h}\left(\int e^{- ix(z + h)} f(x) dx - \int e^{- ixz} f(x) dx\right)\\
  & = \lim\limits_{h\rightarrow 0}\int e^{- ixz}\frac{e^{- ixh} - 1}{h} f(x) dx\\
  & = \int e^{- ixz}(- ix) f(x) dx\\
  & = - i\Fc(xf(x), z)\\
  & = - i\hat{g}(z)
-\end{aligned}
-\end{equation*}
+\end{align*}
 dove possiamo passare al limite sotto il segno di integrale perché in generale
 \begin{equation*}
 \left| e^{i\lambda} - 1\right| \leq | \lambda | \ \ \lambda \in \RR \ \ \ \ \ \ \ \ \lambda = - xh\ \ \implies \ \ \text{l'integrale converge per conv. dom.}
@@ -2172,13 +2162,11 @@ Discende direttamente dal teorema di Fubini.
 \begin{itemize}
 \item È simmetrica
 
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 (u*v)(x) & = \int_{\RR} u(x - t) v(t) dt & t' = x - t\\
  & = \int_{\RR} u(t') v(x - t') dt' & \\
  & = (v*u)(x) &
-\end{aligned}
-\end{equation*}
+\end{align*}
 \item È associativa
 \begin{align*}
 (u*v) *w & = u*(v*w)
@@ -2273,23 +2261,19 @@ Sia $u\in L^{1}(\RR) \cap L^{2}(\RR)$, allora
 
 Dato che $u\in \Sc(\RR)$, allora $u\in L^{2}$. Ci serve partira da $u\in \Sc(\RR)$ per poter usare correttamente il risultato di inversione, in accordo a quanto appena detto sull'estensione a $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$.
 
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Vert u \Vert^{2}_{L^{2}} & = \int | u(x)|^{2} dx = \int \overline{u(x)} u(x) dx & \text{essendo} \ u\in L^{2}(\RR)\\
 u(x) & = \frac{1}{2\pi}\int e^{ixz}\hat{u}(z) dz & \text{essendo} \ u\in \Sc(\RR)
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Sostituiamo
 
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Vert u \Vert^{2}_{L^{2}} & = \frac{1}{2\pi}\int \overline{u(x)}\int e^{ixz}\hat{u}(z) dzdx & \\
  & = \frac{1}{2\pi}\int \hat{u}(z)\int \overline{e^{- ixz} u(x)} dxdz & \text{(Fubini)}\\
  & = \frac{1}{2\pi}\int \hat{u}(z)\overline{\hat{u}(z)} dz & \\
  & = \frac{1}{2\pi} \Vert \hat{u} \Vert^{2}_{L^{2}} \ \ \implies \ \ \Vert \hat{u} \Vert_{L^{2}} = \sqrt{2\pi} \Vert u \Vert_{L^{2}} &
-\end{aligned}
-\end{equation*}
+\end{align*}
 
 Stando $u\in L^{2}$, ciò che sta a destra dell'uguale è un numero finito, quindi anche ciò che è a sinistra, quindi $\hat{u}$ appartiene ad $L^{2}$.
 \item \textit{Estensione a}$u\in L^{2}(\RR)$
@@ -2436,14 +2420,12 @@ Attenzione che essendo $\supp(u) \in [0, + \infty)$
 \end{itemize}
 
 \begin{proof}
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Lc(u(x - x_{0}), s) & = \int^{+ \infty}_{0} e^{- sx} u(x - x_{0}) dx & x' = x - x_{0}\\
  & = \int^{+ \infty}_{- x_{0}} e^{- s(x' + x_{0})} u(x') dx' & \\
  & = \int^{+ \infty}_{0} e^{- s(x' + x_{0})} u(x') dx' & \\
  & = e^{- sx_{0}}\Lc(u(x), s) &
-\end{aligned}
-\end{equation*}
+\end{align*}
 \end{proof}
 \item $\boxed{\Lc\left(e^{s_{0} x} u(x), s\right) = \Lc(u(x), s - s_{0})}$ $\boxed{\Re (s - s_{0}) > \lambda (u)}$
 
@@ -2455,13 +2437,11 @@ Attenzione che essendo $\supp(u) \in [0, + \infty)$
 \item $\boxed{\Lc(u(cx), s) = \frac{1}{c}\Lc\left(u(x), \frac{s}{c}\right)}$ $\boxed{c\in \RR, c > 0}$
 
 \begin{proof}
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Lc(u(cx), s) & = \int^{+ \infty}_{0} e^{- sx} u(cx) dx & x' = cx\ \ \implies \ \ dx' = cdx\\
  & = \int^{+ \infty}_{0} e^{- s\frac{x'}{c}} u(x')\frac{1}{c} dx' & \\
  & = \frac{1}{c}\Lc\left(u(x), \frac{s}{c}\right) &
-\end{aligned}
-\end{equation*}
+\end{align*}
 \end{proof}
 \end{itemize}
 
@@ -2550,13 +2530,11 @@ Se $v\in L^{1}$, allora $\lambda (u) \leq 0$ e
 \end{equation*}
 \end{thm}
 \textit{Dimostrazione della prima parte.}
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Lc(u'(x), s) & = \int^{+ \infty}_{0} e^{- sx} u'(x) dx & \text{(per parti)}\\
  & = \left[e^{- sx} u(x)\right]^{+ \infty}_{0} - (- s)\int^{+ \infty}_{0} e^{- sx} u(x) dx & \\
  & = \lim_{x\rightarrow + \infty} e^{- sx} u(x) - u(0) + s\Lc(u(x), s) &
-\end{aligned}
-\end{equation*}
+\end{align*}
 Notiamo che
 \begin{equation*}
 e^{- \lambda x} u(x) \in L^{1} \ \ \nRightarrow \ \ e^{- \lambda x} u(x)\rightarrow 0\ \text{per} \ x\rightarrow + \infty
@@ -2682,21 +2660,14 @@ La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile 
 \end{thm}
 \begin{proof}
 \begin{equation*}
-\begin{aligned}
-(f*g)(x) & = \int_{\RR} f(x - t) g(t) dt = \int^{x}_{0} f(x - t) g(t) dt\\
- & \\
- & f(x - t) = 0\ \text{se} \ x - t < 0\ \implies \ t > x\\
- & g(t) = 0\ \text{se} \ t < 0
-\end{aligned}
+(f*g)(x) = \int_{\RR} f(x - t) g(t) dt = \int^{x}_{0} f(x - t) g(t) dt
 \end{equation*}
-allora esiste l'integrale.
-\begin{equation*}
-\begin{aligned}
+$f(x - t) = 0$ se $x - t < 0$, quindi se $t > x$. Mentre $g(t) = 0$ se $t < 0$. Allora esiste l'integrale.
+\begin{align*}
 e^{- \lambda x}(f*g)(x) & = e^{- \lambda x}\int^{x}_{0} f(x - t) g(t) dt\\
  & = \int^{x}_{0} e^{- \lambda (x - t)} f(x - t) e^{- \lambda t} g(t) dt\\
  & = \left(e^{- \lambda x} f(x)\right) *\left(e^{- \lambda x} g(x)\right) \ \ \ \ \lambda \geq \max(\lambda (f), \lambda (g)) \ \implies \ \in L^{1}
-\end{aligned}
-\end{equation*}
+\end{align*}
 Soddisfa i requisiti, calcoliamone l'espressione
 \begin{align*}
 \Lc((f*g), s) & = \int_{\RR} e^{- sx}\left(\int_{\RR} f(x - t) g(t) dt\right) dx\\
@@ -2729,15 +2700,13 @@ Indico con
 \hat{u}(t, z) = \int_{\RR} e^{izx} u(t, x) dx
 \end{equation*}
 trattando $t$ come un parametro
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \frac{\partial}{\partial t}\hat{u}(t, z) & = \frac{\partial}{\partial t}\int_{\RR} e^{izx} u(t, x) dx\overset{!!!}{=}\int_{\RR} e^{izx}\frac{\partial}{\partial t} u(t, x) dx = \Fc(u_{t}(t, x), z)\\
  & \\
 \Fc(u_{xx}(t, x), z) & = \int_{\RR} e^{- ixz} u_{xx}(t, x) dx\ \ \forall t \geq 0\\
  & \overset{\text{ipp}}{=}\int_{\RR}(iz)^{2} e^{- ixz} u(t, x) dx\\
  & = - z^{2}\Fc(u(t, x), z)
-\end{aligned}
-\end{equation*}
+\end{align*}
 Allora il problema diventa
 \begin{equation*}
 \begin{cases}
@@ -2754,12 +2723,10 @@ antitrasformiamo
 u(t, x) = \Fc^{- 1}\left(\hat{g}(z) e^{- z^{2} t}, x\right)
 \end{equation*}
 torna utile il prodotto di convoluzione
-\begin{equation*}
-\begin{aligned}
-u(t, x) & = g(x) *\Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}}\int_{\RR} e^{- \frac{(x - y)^{2}}{2t}} g(y) dy\\
- & \Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}} e^{- \frac{x^{2}}{2t}}
-\end{aligned}
-\end{equation*}
+\begin{gather*}
+u(t, x) = g(x) *\Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}}\int_{\RR} e^{- \frac{(x - y)^{2}}{2t}} g(y) dy\\
+\Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}} e^{- \frac{x^{2}}{2t}}
+\end{gather*}
 ma non è definita in $t = 0$, tuttavia possiamo considerare il limite nel senso delle distribuzioni (non dimostrato, molto extra)
 \begin{equation*}
 \lim_{t\rightarrow 0^{+}} u(t, x) = g(x) \ \ \ \ u(t, x) : [0, + \infty) \times \RR \ \ \ \ g: \RR\rightarrow \RR
@@ -2777,15 +2744,13 @@ y(0) = \textcolor[rgb]{0.29, 0.56, 0.89}{y}\textcolor[rgb]{0.29, 0.56, 0.89}{_{0
 \end{cases}
 \end{equation*}
 Trasformiamo
-\begin{equation*}
-\begin{aligned}
+\begin{align*}
 \Lc(y'(t), s) & = s\Lc(y(t), s) - y(0)\\
 \Lc(y''(t), s) & = s\Lc(y'(t), s) - y'(0)\\
  & = s[s\Lc(y(t), s) - y(0)] - y'(0)\\
  & = s^{2}\Lc(y(t), s) - sy(0) - y'(0)\\
 \Lc\left(y^{(n)}(t), s\right) & = s^{n}\Lc(y(t), s) - s^{n - 1}\textcolor[rgb]{0.29, 0.56, 0.89}{y}\textcolor[rgb]{0.29, 0.56, 0.89}{(}\textcolor[rgb]{0.29, 0.56, 0.89}{0}\textcolor[rgb]{0.29, 0.56, 0.89}{)} - s^{n - 1} y'(0) - \cdots - \textcolor[rgb]{0.82, 0.01, 0.11}{y}\textcolor[rgb]{0.82, 0.01, 0.11}{^{(n - 1)}}\textcolor[rgb]{0.82, 0.01, 0.11}{(}\textcolor[rgb]{0.82, 0.01, 0.11}{0}\textcolor[rgb]{0.82, 0.01, 0.11}{)}
-\end{aligned}
-\end{equation*}
+\end{align*}
 Esempio del secondo ordine
 \begin{equation*}
 \begin{cases}
@@ -2795,14 +2760,14 @@ y'(0) = y_{1}
 \end{cases}
 \end{equation*}
 Trasformiamo
-\begin{gather*}
-\begin{aligned}
+\begin{align*}
 a_{2}\left(s^{2}\Lc(y(t), s) - sy_{0} - y_{1}\right) + a_{1}(s\Lc(y(t), s) - y_{0}) + a_{0}\Lc(y(t), s) & = \Lc(f(t), s)\\
 \left(a_{2} s^{2} + a_{1} s + a_{0}\right)\Lc(y(t), s)\underbrace{- a_{2}(sy_{0} + y_{1}) - a_{1} y_{0}}_{\text{polinomio in} \ s} & = \Lc(f(t), s)
-\end{aligned}\\
-\\
-\implies \ \ \Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
-\end{gather*}
+\end{align*}
+quindi
+\begin{equation*}
+	\Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
+\end{equation*}
 ci permette di introdurre in maniera naturale anche i dati iniziali.
 \begin{gather*}
 y(t) = f(t) *\Lc^{- 1}\left(\frac{1}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right) + \Lc^{- 1}\left(\frac{a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right)\\
