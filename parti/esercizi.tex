@@ -539,11 +539,11 @@ Risolviamo per $z$
 \begin{align*}
 iz_{k} & =\log\left[\left( 3\pm 2\sqrt{2}\right) i\right]\\
  & =\ln\left| \left( 3\pm 2\sqrt{2}\right) i\right| +i\arg\left[\left( 3\pm 2\sqrt{2}\right) i\right]\\
- & =\ln\left| 3\pm 2\sqrt{2}\right| +i\left(\frac{\pi }{2} +2k\pi \right) ,\ \ \ \ k\in \mathbb{Z}
+ & =\ln\left| 3\pm 2\sqrt{2}\right| +i\left(\frac{\pi }{2} +2k\pi \right) ,\ \ \ \ k\in \ZZ 
 \end{align*}
 Allora
 \begin{equation*}
-z_{k} =-i\ln\left| 3\pm 2\sqrt{2}\right| +\left(\frac{\pi }{2} +2k\pi \right) ,\ \ \ \ k\in \mathbb{Z}
+z_{k} =-i\ln\left| 3\pm 2\sqrt{2}\right| +\left(\frac{\pi }{2} +2k\pi \right) ,\ \ \ \ k\in \ZZ 
 \end{equation*}
 Che può essere facilmente rappresentato nel piano di Gauss come un insieme di punti.
 \Soluzione
@@ -633,12 +633,12 @@ Ha singolarità in $z=0$ di tipo essenziale (ci sono infinite potenze negative n
 
 I punti singolari sono
 \begin{equation*}
-z=k\pi ,\ \ k\in \mathbb{Z}
+z=k\pi ,\ \ k\in \ZZ 
 \end{equation*}
 In particolare
 \begin{itemize}
 \item $z=0$ è una singolarità eliminabile, perché annulla sia il denominatore che il numeratore, quindi ha residuo nullo.\footnote{L'implicazione \textit{singolarità eliminabile} allora \textit{residuo nullo} vale solo per i \textbf{punti finiti}, non per il punto all'infinito.}
-\item $z=k\pi $ sono poli del I ordine, $k\in \mathbb{Z} ,k\neq 0$, il cui residuo vale\begin{equation*}
+\item $z=k\pi $ sono poli del I ordine, $k\in \ZZ  ,k\neq 0$, il cui residuo vale\begin{equation*}
 \mathrm{Res}\left( f,k\pi \right) =\frac{g\left( k\pi \right)}{h'\left( k\pi \right)} =\frac{\left( k\pi \right)^{2}}{\left(\sin k\pi \right) '} =\frac{\left( k\pi \right)^{2}}{\cos k\pi } =\frac{\left( k\pi \right)^{2}}{\left( -1\right)^{k}}
 \end{equation*}
 \item $z_{\infty }$ è una singolarità non isolata perché non esiste un raggio che contiene tutti i punti singolari. Andando all'infinito avremo infiniti punti singolari.
@@ -647,7 +647,7 @@ In particolare
 
 I punti di singolarità sono dati da
 \begin{equation*}
-\frac{1}{z_{k}} =\frac{\pi }{2} +k\pi \ \ \ \ k\in \mathbb{Z} \ \ \ \ \implies \ \ \ \ z_{k} =\frac{1}{\pi \left(\frac{1}{2} +k\right)}
+\frac{1}{z_{k}} =\frac{\pi }{2} +k\pi \ \ \ \ k\in \ZZ  \ \ \ \ \implies \ \ \ \ z_{k} =\frac{1}{\pi \left(\frac{1}{2} +k\right)}
 \end{equation*}
 Sono poli del II ordine perché il coseno qui si annulla con ordine $2$. In $z=0$ è una singolarità non isolata dato che gli $z_{k}$ si addensano intorno a $0$. Il punto $z_{\infty }$ è un polo di ordine II perché per $z\rightarrow z_{\infty } ,f\left( z\right) \sim z^{2}$.
 \Soluzione
@@ -1063,7 +1063,7 @@ f\left( z\right) =\sum\limits ^{+\infty }_{n=-\infty } a_{n}\left( z-z_{0}\right
 \end{equation*}
 \end{thm}
 \begin{thm}
-Sia $M=\left\{n\in \mathbb{Z} :n< 0,a_{n} \neq 0\right\}$ l'insieme degli indici della parte singolare dello sviluppo di Laurent. $z_{0}$ è
+Sia $M=\left\{n\in \ZZ  :n< 0,a_{n} \neq 0\right\}$ l'insieme degli indici della parte singolare dello sviluppo di Laurent. $z_{0}$ è
 
 \begin{itemize}
 \item \textbf{singolarità eliminabile} se
@@ -1093,7 +1093,7 @@ Si dice residuo di $f$ in $z_{0}$
 \end{equation*}
 \end{defn}
 \begin{thm}
-Sia $f\in \Hc \left(\CC  \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \mathbb{Z} :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
+Sia $f\in \Hc \left(\CC  \setminus \overline{D\left( z_{0} ,R\right)}\right)$ ed $M=\left\{n\in \ZZ  :n >0,a_{n} \neq 0\right\}$. Il punto $\infty $ è
 
 \begin{itemize}
 \item \textbf{singolarità eliminabile} se e solo se\begin{equation*}
@@ -1989,7 +1989,7 @@ f\left( z\right) =\frac{e^{iz}}{\cosh z}
 il cui denominatore si annulla in
 \begin{gather*}
 \cosh z=0=\frac{e^{z} +e^{-z}}{2} \ \ \iff \ \ e^{2z} =-1\ \ \iff \ \ 2z=\log\left| -1\right| +i\arg\left( -1\right)\\
-\iff \ \ 2z=0+i\left( \pi +2k\pi \right) ,k\in \mathbb{Z} \ \ \iff \ \ z=\frac{\pi i}{2} +k\pi 
+\iff \ \ 2z=0+i\left( \pi +2k\pi \right) ,k\in \ZZ  \ \ \iff \ \ z=\frac{\pi i}{2} +k\pi 
 \end{gather*}
 Integriamo sul rettangolo che contiene il residuo in $\pi i/2$
 \begin{equation*}
@@ -3534,13 +3534,13 @@ a_{n} =\frac{2}{T}\int ^{\frac{T}{2}}_{-\frac{T}{2}} f( x)\cos\left(\frac{2\pi n
 \item se $x$ non è punto di continuità, $F( x)$ converge alla media tra il limite destro e sinistro
 \end{enumerate}
 
-nel nostro caso $f$ è continua in ogni punto $x\neq ( 2k+1) \pi ,k\in \mathbb{Z}$ e presenta delle discontinuità di I specie (tipo salto) nei punti $x=( 2k+1) \pi ,k\in \mathbb{Z}$.
+nel nostro caso $f$ è continua in ogni punto $x\neq ( 2k+1) \pi ,k\in \ZZ $ e presenta delle discontinuità di I specie (tipo salto) nei punti $x=( 2k+1) \pi ,k\in \ZZ $.
 \begin{enumerate}
 \item $F( x)$ converge puntualmente a\begin{equation*}
-f( x) \ \ \ \ \forall x\neq ( 2k+1) \pi ,k\in \mathbb{Z}
+f( x) \ \ \ \ \forall x\neq ( 2k+1) \pi ,k\in \ZZ 
 \end{equation*}
 \item $F( x)$ converge puntualmente a\begin{equation*}
-\frac{f\left( x^{+}\right) +f\left( x^{-}\right)}{2} =\frac{0+2\pi }{2} =\pi \ \ \ \ \forall x=( 2k+1) \pi ,k\in \mathbb{Z}
+\frac{f\left( x^{+}\right) +f\left( x^{-}\right)}{2} =\frac{0+2\pi }{2} =\pi \ \ \ \ \forall x=( 2k+1) \pi ,k\in \ZZ 
 \end{equation*}
 \end{enumerate}
 \item Calcoliamo i coefficienti\begin{align*}
@@ -3756,7 +3756,7 @@ f(x)=\begin{cases}
 2, & 2\leq x< 3
 \end{cases}
 \end{equation*}
-converge in $L^{2}( 0,3)$. Converge inoltre puntualmente q.o. su $\RR $ (a meno dell'insieme $x\notin \mathbb{Z}$).
+converge in $L^{2}( 0,3)$. Converge inoltre puntualmente q.o. su $\RR $ (a meno dell'insieme $x\notin \ZZ $).
 
 
 \begin{figure}[htpb]
@@ -3838,7 +3838,7 @@ b_{n} & =\frac{2}{3}\int ^{3}_{0} f(x)\sin\left(\frac{2n\pi }{3}\right) dx=\frac
 1, & n=2,5,8,\dotsc \\
 0, & \text{altrimenti}
 \end{cases} =\begin{cases}
-0, & n=3k,k\in \mathbb{Z}\\
+0, & n=3k,k\in \ZZ \\
 -\frac{1}{n\pi } , & \text{altrimenti}
 \end{cases}
 \end{align*}
@@ -4126,7 +4126,7 @@ dove
 allora la serie di Fourier converge in media quadratica.
 \item $f$ è una funzione regolare a tratti in $[ -\pi ,\pi ]$, allora converge puntualmente $\forall x\in \RR $.
 
-Più precisamente converge puntualmente a $f( x) ,\ \forall x\neq ( 2k+1)\frac{\pi }{2} ,\ k\in \mathbb{Z}$, mentre converge a $\frac{1}{2} ,\ \forall x=( 2k+1)\frac{\pi }{2} ,\ k\in \mathbb{Z}$.
+Più precisamente converge puntualmente a $f( x) ,\ \forall x\neq ( 2k+1)\frac{\pi }{2} ,\ k\in \ZZ $, mentre converge a $\frac{1}{2} ,\ \forall x=( 2k+1)\frac{\pi }{2} ,\ k\in \ZZ $.
 \item Non c'è convergenza uniforme perché $f$ non è continua su $\RR $.
 \item $f$ è dispari, allora $a_{n} =0,\ \forall n\in \mathbb{N}$.
 
@@ -5332,7 +5332,7 @@ Allora
 \end{equation*}
 Tutte le singolarità sono tutti i punti del piano complesso in cui si annulla il denominatore 
 \begin{equation*}
-e^{z} +e^{-z} =e^{-z} (e^{2z} +1)=0\ \ \iff \ \ 2z=i\pi +2k\pi \ \ \iff \ \ z=i\frac{\pi }{2} +k\pi ,\ \ k\in \mathbb{Z}
+e^{z} +e^{-z} =e^{-z} (e^{2z} +1)=0\ \ \iff \ \ 2z=i\pi +2k\pi \ \ \iff \ \ z=i\frac{\pi }{2} +k\pi ,\ \ k\in \ZZ 
 \end{equation*}
 Disegno il grafico con il solito rettangolo della gamma che contenga solo un residuo.
 
