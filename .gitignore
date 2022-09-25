@@ -253,7 +253,7 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
-.DS_Store
-analisi3_preview.pdf
+*.DS_Store
+
 errata/errata_main.pdf
 main.pdf
