@@ -2,65 +2,114 @@
 
 \chapter{Analisi complessa}
 
-Studieremo funzioni complesse $f : \CC\rightarrow \CC$, lavorando con numeri complessi
+Studieremo funzioni complesse $f : A\subset\CC\rightarrow \CC$ con $A$ aperto, lavorando con numeri complessi di forma
 \begin{equation*}
-z = x + iy = (x, y)
+z = x + iy = (x, y) = \rho e^{i\theta} = \rho (\cos\theta + i\sin\theta)
 \end{equation*}
-La differenza tra i numeri complessi e $\RR^{2}$ è che i numeri complessi costituiscono un \textbf{campo}, ovvero rispetta certe proprietà e dove sono definiti determinati concetti. $\RR^{2}$ è uno spazio vettoriale, non un campo. Questa struttura fa una differenza molto grossa in termini di differenziabilità.
+dove $\rho=|z|$ e $\theta=\text{arg}(z)$.
+
+Osserviamo che il campo dei numeri complessi $\CC$ può essere messo in relazione
+biunivoca con $\RR^2$: pensiamo a un vettore di due componenti dove la prima componente rappresenta la parte
+reale $x$ mentre la seconda la parte immaginaria $y$ del numero complesso $z$. Dunque possiamo anche intendere $z$ come un vettore di $\RR^2$ e quindi $f:\CC\to\CC$ non sarà altro che la ben più familiare $f:\RR^2\to\RR^2$.
+
+Inoltre, essendo il codominio di $f$ proprio $\CC$, anche $f(z)\in\CC$ e risulta quindi comodo scomporre $f$ in parte reale e immaginaria:
+$$
+f(x,y)=u(x,y)+i\,v(x,y)\qquad u,v:\RR^2\to\RR \qquad u=Re(f),\ v=Im(f)
+$$
+Si faccia attenzione al fatto che non tutte le coppie di funzioni $u,v$ possono rappresentare una funzione
+complessa, occorre che rispettino le condizioni di Cauchy-Riemann che vedremo tra poco.
+
+In virtù del parallelismo tra $\CC$ e $\RR^2$ possiamo importare direttamente dai corsi di Analisi 1 e 2 una notevole quantità di definizioni topologiche (insiemi aperti, semplicementi connessi, curve, curve chiuse, sostegno di una curva, ...) tuttavia è bene ricordare che $\CC$ è un campo non ordinato, mentre $\RR^2$ uno spazio vettoriale. Questa discrepanza ha un notevole risvolto in ambito di differenziabilità.
+
 \begin{defn}
-$f$ è differenziabile in senso complesso se $f(z + h)$ si può scrivere come
-\begin{equation*}
-f(z + h) = f(z) + f'(z) h + o(|h|)
-\end{equation*}
-per $h\rightarrow 0$, ricordando che $f'(z) \in \CC$ e $h\in \CC$.
+$f:A\to\CC$ ammette limite, cioè $\lim_{z\to z_0}f(z)=l$, se $\forall \varepsilon>0$ $\exists\delta>0$ tale che 
+$$|f(z)-l|<\varepsilon \qquad \forall z\neq z_0\,:\,|z-z_0|<\delta$$ 
 \end{defn}
-Quando diciamo che un numero complesso $h\rightarrow 0$ intendiamo che, detto $h = h_{R} + ih_{I}$, si ha $h^{2}_{R} + h^{2}_{I}\rightarrow 0$, entrambe le parti tendono a $0$. Otteniamo poi che
+
+Tale definizione di limite ci permette di introdurre il concetto di continuità, ovvero diremo che $f$ è continua in $z_0$ se $l=f(z_0)$.
+
+\begin{defn}
+$f:A\to\CC$ è differenziabile in senso complesso in $z_0\in A$ se $f(z_0 + h)$ si può scrivere come
 \begin{equation*}
-\lim_{h\rightarrow 0}\frac{f(z + h) - f(z)}{h} = f'(z)
+f(z_0 + h) = f(z_0) + \alpha h + o(|h|)
 \end{equation*}
-Il numero a denominatore è un numero complesso, quindi chiamiamo l'argomento del limite \textit{rapporto incrementale}, ma non è un rapporto perché \textbf{i numeri complessi non sono ordinati}. Dal punto di vista formale, i calcoli sono identici, proprio perché $\CC$ è un campo.
+per $h\in\CC,\ h\rightarrow 0$ e $\alpha\in\CC$.
+\end{defn}
+
+\begin{defn}
+$f:A\to\CC$ è derivabile in senso complesso in $z_0\in A$ se esiste finito il limite del rapporto incrementale, ovvero
+\begin{equation*}
+\lim_{h\in\CC,\,h\rightarrow 0}\frac{f(z_0 + h) - f(z_0)}{h}=:f'(z_0)
+\end{equation*}
+\end{defn}
+
+\begin{rem}
+In virtù di queste due definizioni, possiamo concludere che in $\CC$ i concetti di derivabilità e differenziabilità coincidono ($\alpha\equiv f'(z_0)$).
+\end{rem}
+
+Precisiamo che viene ancora chiamato \textit{rapporto incrementale}, ma in realtà nei complessi l'aggettivo incrementale non significa nulla prorpio perchè, come già detto prima, $\CC$ non è ordinato.
 
 \section{Equazioni di Cauchy - Riemann}
 
-Possiamo separare la parte immaginaria e reale anche nella funzione:
-\begin{equation*}
-f(z) = u(x, y) + iv(x, y)
-\end{equation*}
 Il teorema sulla derivata direzionale si può estendere ai numeri complessi
 \begin{equation*}
-\lim_{h\rightarrow 0}\frac{f(x + hv) - f(x)}{h} = v \cdot \nabla f(x) \ \ \ \ | v| = 1, v\in \CC, h\in \RR
+\lim_{t\rightarrow 0}\frac{f(z + td) - f(z)}{t} = d \cdot  f'(z) \qquad d\in\CC, d\neq0, |d| = 1, t\in \RR
 \end{equation*}
 ovvero
 \begin{equation*}
-\partial_{v} f(z) = v \cdot f'(z)
+\partial_{d}[f(z)] = d \cdot f'(z)
 \end{equation*}
-Possiamo considerare per esempio due direzioni
+Possiamo considerare per esempio le due direzioni
 \begin{align*}
-v = (1, 0) = 1 & \ \ \implies \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
-v = (0, 1) = i & \ \ \implies \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
+d = (1, 0) = 1 & \ \ \implies \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
+d = (0, 1) = i & \ \ \implies \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
 \end{align*}
-mettendo insieme i pezzi
+da cui poi
 \begin{equation*}
 u_{y} + iv_{y} = i(u_{x} + iv_{x})
 \end{equation*}
-Uguagliando le rispettive parti reali e immaginarie otteniamo le \textbf{Equazioni di Cauchy - Riemann (CR)}
+Uguagliando le rispettive $Re$ e $Im$ otteniamo le Equazioni di Cauchy-Riemann (CR)
 \begin{equation*}
-\boxed{u_{x} = v_{y}} \ \ \ \ \boxed{u_{y} = - v_{x}}
+\boxed{u_{x} = v_{y}} \quad \boxed{u_{y} = - v_{x}} \quad\text{oppure}\quad \boxed{\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}} \quad \boxed{\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}} \quad\text{oppure}\quad \boxed{\frac{\partial f}{\partial \overline{z}}=0}
 \end{equation*}
+
+\section{Funzioni olomorfe}
+
 \begin{defn}
 [Funzione Olomorfa]
-Sia $f: A\subset \CC\rightarrow \CC$ con $A$ \textbf{aperto}. Se $f\ $è derivabile in $A$ allora $f$ si dice \textbf{olomorfa} in $A$.
+$f:A\rightarrow\CC$ è detta olomorfa in $A$, e si scrive $f\in H(A)$, se $f$ è derivabile $\forall z \in A$.
 \end{defn}
-È un concetto molto più forte della semplice derivabilità, anche se la definizione la fa sembrare la stessa cosa. Se una funzione è olomorfa, allora è differenziabile infinite volte (molto buono). Inoltre, se una funzione è olomorfa, allora può essere scritta come serie di potenze.
+È un concetto molto più forte della semplice derivabilità, anche se dalla definizione non lo si intuisce. Se una funzione è olomorfa, allora è differenziabile infinite volte; inoltre una funzione olomorfa può essere scritta come serie di potenze (basta con gli spoiler).
 
-Vale il seguente risultato
+\begin{thm}
+[CN per l'olomorfia]
+$f\in H(A)\ \Rightarrow$ valgono le (CR).
+\end{thm}
+
+\begin{thm}
+[CNS per l'olomorfia]
 \begin{equation*}
 \boxed{f\in H(A) \ \ \iff \ \
 \begin{cases}
-u, v\ \text{differenziabili in} \ A\\
+u, v\ \text{differenziabili in} \ A (\text{cioè }f\in\Cc^1)\\
 \text{valgono le (CR)}
 \end{cases}}
 \end{equation*}
+\end{thm}
+
+\begin{exa}
+Dire se le seguenti funzioni sono o meno olomorfe:
+\begin{itemize}
+    \item $f(z)=\overline{z}$ è definita $\forall z_0\in\CC$ tuttavia non è olomorfa in alcun punto in quanto il rapporto incrementale non ammette limite per $h\to 0$
+    \begin{equation*}
+    \frac{f(z_0+h)-f(z_0)}{h}=\frac{\overline{z_0+h}-\overline{z_0}}{h}=\frac{\overline{z_0}+\overline{h}-\overline{z_0}}{h}=\frac{\overline{h}}{h}
+    \end{equation*}
+    \item $f(z)=|z|^2=z\overline{z}$ è olomorfa solamente in $z=0$
+\end{itemize}
+\end{exa}
+
+\section{Funzioni armoniche}
+
 Consideriamo ora $u, v\in C^{2}$ e deriviamole. Usando il teorema di Schwarz
 \begin{equation*}
 \begin{cases}
@@ -68,734 +117,1371 @@ Consideriamo ora $u, v\in C^{2}$ e deriviamole. Usando il teorema di Schwarz
 \partial_{xx} u = \partial_{xy} v
 \end{cases} \implies \ \ \partial_{yy} u + \partial_{xx} u = \Delta u = 0
 \end{equation*}
-Analogamente per $v$
-\begin{equation*}
-\Delta v = 0
-\end{equation*}
-Sono funzioni \textbf{armoniche}.\footnote{Ovvero il loro laplaciano è nullo.}
-
-Data $u$ (o $v$) è possibile risalire a $v$ (o $u$) a meno di una costante, quindi una funzione olomorfa è completamente caratterizzata da $u$ o $v$.
+Analogamente per $v$ si ha $\Delta v = 0$. Abbiamo dunque trovato un'alternativa alle (CR):
+$$
+\text{(CR)} \ \ \iff \ \ \Delta u = 0 = \Delta v
+$$
+Funzioni di questo tipo, ovvero a laplaciano nullo, sono dette funzioni armoniche.
 
 \section{Serie di potenze}
 
 Consideriamo una serie di potenze complessa
 \begin{equation*}
-f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n} \ \ \ \ \{a_{n}\} \subset \CC, z\in \CC
+f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n} \ \ \ \ \{a_{n}\}_{n\in\NN} \subset \CC, z\in \CC
 \end{equation*}
-In primis osserviamo che si può tralasciare $z_{0}$, in quanto si può semplicemente fare una traslazione. Consideriamo quindi una certa serie di potenze centrata in $0$ al variare di $z_{0}$
+In primis osserviamo che si può tralasciare $z_{0}$, in quanto si può semplicemente fare una traslazione. Consideriamo quindi una certa serie di potenze centrata in $0$ al variare di $z$
+\begin{equation}
+\label{serie_generica}
+f(z) = \sum\limits^{\infty}_{n = 0} a_{n} z^{n}
+\end{equation}
+
+\begin{thm}
+Se \eqref{serie_generica} converge in $z \neq 0$ allora converge assolutamente in $w\in\CC\ :\ |w|<|z|$.
+\end{thm}
+
+\fg{0.3}{bonfa_1}
+
+\begin{proof}
+Se la serie converge, allora il termine generale tende a zero
 \begin{equation*}
-f(z) = \sum\limits^{\infty}_{n = 0} a_{n} z^{n}_{0}
-\end{equation*}
-Ci sono delle interessanti proprietà di convergenza
-\begin{enumerate}
-\item Se converge in $z_{0} \neq 0$ allora converge all'interno del disco $\{| z| < | z_{0}| \}$, totalmente
-\item Se diverge in $z_{0} \neq 0$ allora diverge all'esterno del disco $\{| z| > | z_{0}| \}$
-\end{enumerate}
-
-Mettendo insieme le due deduciamo che esiste un raggio $R$ di convergenza dentro al quale converge, fuori diverge e sul bordo \textit{nulla si può dire}.\footnote{Può anche convergere in certi punti del bordo e divergere in altri, sempre del bordo.}
-
-\textit{Dimostrazione di}$(1)$\textit{.}
-
-Se converge, allora il termine generale tende a zero
-\begin{equation*}
-a_{n} z^{n}_{0}\rightarrow 0
+a_{n} z^{n}\rightarrow 0
 \end{equation*}
 quindi è limitato
 \begin{equation*}
-\exists M : \ \ \left| a_{n} z^{n}_{0}\right| \leq M\ \ \forall n
+\exists M\ :\ \left| a_{n} z^{n}\right| \leq M\ \ \forall n
 \end{equation*}
-Riscriviamo la serie in $z$ e mostriamo che converge totalmente (quindi anche semplicemente) all'interno
+A questo punto verifichiamo la convergenza assoluta della serie in $w$:
 \begin{equation*}
-\sum\limits^{\infty}_{n = 0}\left| a_{n} z^{n}\right| = \sum\limits^{\infty}_{n = 0}\left| a_{n} z^{n}\right| \cdot \frac{\left| z^{n}_{0}\right|}{\left| z^{n}_{0}\right|} = \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}_{0}\right|}_{ \leq M} \cdot \frac{\left| z^{n}\right|}{\left| z^{n}_{0}\right|} \leq M\sum\limits^{\infty}_{n = 0}\left(\frac{| z|}{| z_{0}|}\right)^{n}
+\sum\limits^{\infty}_{n = 0}\left| a_{n} w^{n}\right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} w^{n} \cdot \frac{z^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} z^{n} \cdot \frac{w^n}{z^n} \right| \overset{\underset{\text{dis. triang.}}{}}{\leq} \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}\right|}_{\leq M}\cdot \left|\frac{w^n}{z^n}\right| \leq M\sum\limits^{\infty}_{n = 0}\left|\frac{w}{z}\right|^n
 \end{equation*}
-ma questa è una serie geometrica di ragione $\frac{| z|}{| z_{0}|} < 1$ per ipotesi, quindi converge, allora la serie converge totalmente.
+ma questa è una serie geometrica di ragione $\dfrac{| w|}{| z|} < 1$ per ipotesi quindi converge, e allora la serie converge assolutamente. 
+\end{proof}
 
-\subsection{Esempi di serie}
+È altrettanto banale verificare che se la serie non converge in $z$ allora la serie non può convergere in nessun $w\ :\ |w|>|z|$. 
+
+Se ne deduce che esiste un raggio $R$ di convergenza dentro al quale la serie converge, fuori diverge e sul bordo \textit{nulla si può dire} (può anche convergere in certi punti del bordo e divergere in altri).
+
+Vediamo qualche esempio:
 
 \begin{itemize}
 \item La serie
 \begin{equation*}
 \sum\limits^{\infty}_{n = 0} z^{n}
 \end{equation*}
+converge se e solo se $|z| < 1$ cioè dentro il disco di raggio $R=1$.
 
-converge per $| z| < 1$, ma diverge sul bordo $| z| = 1$
 \item La serie
 \begin{equation*}
 \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{n}
 \end{equation*}
+converge senz'altro dentro il disco di raggio unitario; possiamo però dire che sul bordo di tale disco accadono due cose: se $z=-1$ converge, se $z=1$ diverge
 
-diverge se $z = 1$, ma converge se $z = - 1$
 \item La serie
 \begin{equation*}
 \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{n^{2}}
 \end{equation*}
-
-diverge con $| z| > 1$, ma converge se $| z| \leq 1$
+converge sia all'interno che su tutto il bordo del disco di raggio $R=1$, cioè per $| z| \leq 1$
 \end{itemize}
-\begin{defn}
-[Funzione Analitica]
-Una funzione è \textbf{analitica} se si può scrivere localmente in serie di potenze. Se il raggio della serie è infinito allora si dice anche \textbf{intera}.
-\end{defn}
+
 \begin{rem}
-Osserviamo che si possono estendere al campo complesso tutte le consuete serie di McLaurin
-\begin{equation*}
-\sin z = \sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n + 1}}{(2n + 1) !} \ \ \ \ \cos z = \sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n}}{(2n) !} \ \ \ \ e^{z} = \sum\limits^{\infty}_{n = 0}\frac{z^{n}}{n!}
-\end{equation*}
+Grazie a questi esempi abbiamo capito che all'interno del disco di raggio $R$ vi è \textbf{convergenza (puntuale) assoluta}, fuori \textbf{divergenza} mentre sul bordo bisogna verificare la \textbf{convergenza puntuale} caso per caso.
 \end{rem}
-\begin{rem}
-Ricordiamo anche la forma esponenziale di un numero complesso e la formula di Eulero
-\begin{equation*}
-e^{i\vartheta} = \cos \vartheta + i\sin \vartheta
-\end{equation*}
-\end{rem}
-\begin{rem}
-Consideriamo ora due serie, rispettivamente reale e complessa
-\begin{equation*}
-\frac{1}{1 + x^{2}} = \sum\limits^{\infty}_{n = 0}\left(- x^{2}\right)^{n} \ \ \ \ R = 1
-\end{equation*}
-il cui raggio di convergenza $R$ vale $1$
-\begin{equation*}
-\frac{1}{1 + z^{2}} = \sum\limits^{\infty}_{n = 0}\left(- z^{2}\right)^{n}
-\end{equation*}
-Notiamo qui che il denominatore si annulla per $z = \pm i$, quindi il disco di convergenza deve per forza avere raggio $1$, abbiamo quindi un'ulteriore giustificazione al perché la sua restrizione ai numeri reale non può convergere oltre $1$. Vedremo a breve che $\pm 1$ si chiameranno poli.
-\end{rem}
-\begin{thm}
-Se una funzione è differenziabile, non è detto che esista automaticamente un'estensione olomorfa,\footnote{Per esempio $f(x) = | x| x$.} ma se esiste è unica.
+
+A questo punto è naturale chiedersi come calcolare $R\in[0,+\infty]$:
+\begin{align*}
+\frac{1}{R}&=\lim_{n\to+\infty}\left|\frac{a_{n+1}}{a_n}\right| \qquad\text{criterio del rapporto} \\
+\frac{1}{R}&=\lim_{n\to+\infty}\sqrt[n]{|a_n|}\qquad\text{ criterio dela radice} \\
+\frac{1}{R}&=\limsup_{n\to+\infty}\sqrt[n]{|a_n|}\qquad\text{formula di Cauchy-Hadamard}
+\end{align*}
+
+Ora vogliamo estendere quanto detto per la convergenza puntuale a quella uniforme. Per prima cosa ricordiamo da AN2 il seguente teorema
+\begin{thm}[Criterio di Weierstrass per la convergenza uniforme]$\\$
+Sia $\sum_n f_n(x)$ una serie di funzioni definite su $E\subseteq\RR$ tale che $|f_n(x)|\leq C_n$ $\forall x \in E$, $\forall n\geq 0$. Se la serie numerica $\sum_n C_n$ converge allora la serie di funzioni $\sum_n f_n(x)$ converge uniformemente su $E$.
 \end{thm}
+Allora estendendo ciò ai complessi abbiamo
+\begin{thm}
+Si consideri la serie di potenze $\sum a_kz^k$ che converge puntualmente nel disco $D=\{z\in\CC\ :\ |z|< R\}$. Allora per ogni $r<R$ la serie converge uniformemente nel disco $d=\{z\in\CC\ :\ |z|\leq r\}$.
+\end{thm}
+\begin{rem}
+Dunque la regione di convergenza uniforme è un \textbf{disco chiuso} contenuto nel \textbf{disco aperto} di convergenza puntuale assoluta.
+\end{rem}
+
+\begin{proof}
+L'idea è quella di usare Weierstrass, dunque calcoliamo $\sup_{z\in d} |a_kz^k|=C_k$ e se in qualche modo riusciamo a verificare che $\sum_k C_k<\infty$ allora la tesi è verificata.
+
+Banalmente $\sup_{z\in d} |z^k|=r^k$ e quindi il nostro $C_k$ è
+$$
+\sup_{z\in d} |a_kz^k|=C_k=|a_k|r^k
+$$
+Dobbiamo ora dimostrare che $\sum_k |a_k|r^k $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $R'<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_kz^k|\leq M$, quindi
+$$
+\sum_k |a_k|r^k=\sum_k |a_k|r^k\,\frac{|z^k|}{|z^k|}\leq M\sum_{k} \left(\frac{r}{|z|}\right)^k<\infty
+$$
+\end{proof}
+\begin{rem}
+Ecco perché sul bordo di $D$ non possiamo dire nulla sulla convergenza puntuale, perché con Weierstrass bisogna fare il $\sup$, che se non chiudiamo il disco può non esistere.
+\end{rem}
+Conseguenze di questo teorema (proprietà di regolarità):
+\begin{enumerate}
+    \item [$\triangleright$] La somma della serie è continua nel disco chiuso di raggio $r$.
+    \item [$\triangleright$] Anzi la somma della serie è continua anche nel disco aperto di raggio $R$ perché la continuità è una proprietà locale (studiando l'intorno di un punto vicino al bordo punto possiamo estendere la continuità anche sul bordo). 
+\end{enumerate}
+
+Ora parliamo di serie derivate:
+\begin{enumerate}
+    \item [$\triangleright$] La serie derivata è ancora una serie di potenze, infatti la derivata di $\sum_k a_kz^k$ si fa termine per termine e quindi
+    $$
+    \left(\sum_k a_kz^k\right)'=\sum_k ka_kz^{k-1}
+    $$
+    \item [$\triangleright$] La serie derivata ha lo stesso $R$ della serie di partenza, infatti per il criterio di Cauchy-Hadamrd
+    $$
+    \frac{1}{R'}=\limsup_{k}\sqrt[k]{|ka_k|}=\limsup_{k}\sqrt[k]{|a_k|}=\frac{1}{R}
+    $$
+    \item [$\triangleright$] Se ne deduce che anche la serie derivata converge assolutamente all'interno di $R$ ed è ivi derivabile, quindi una serie di potenze è derivabile infinte volte (iterando questo ragionamento).
+\end{enumerate}
+
+\section{Estensione di funzioni da \texorpdfstring{$\RR$}{C} a \texorpdfstring{$\CC$}{C}}
+
+Ci chiediamo se data $g:(a,b)\to\RR$ funzione reale almeno di classe $\Cc^1$ esista un prolungamento olomorfo di $g$, ovvero se esista $f:A\to\CC$, con $A$ intorno aperto di $(a,b)$ e $f\in H(A)$, tale che $f(x)=g(x)$ per ogni $x\in(a,b)$.
+
+\begin{thm}[Unicità delle estensioni olomorfe]$\\$
+Se un estensione olomorfa esiste, allora è unica.
+\end{thm}
+
+Questa è una prima conferma del fatto che le funzioni olomorfe hanno una struttura ben particolare.
+
+\begin{thm}[Estensione olomorfa per polinomi]$\\$
+Se $f$ è un polinomio (somma di potenze), allora esiste sempre un'estensione olomorfa. Infatti 
+$$g(x)=\sum_{k=0}^Na_kx^k \quad\text{ha estensione olomorfa}\quad f(z)=\sum_{k=0}^Na_kz^k$$
+In tal caso il raggio di convergenza (puntuale) assoluta si conserva.
+\end{thm}
+
+Per linearità la proposizione si dimostra vera anche per le serie di potenze, a patto di essere all'interno del disco di convergenza:
+$$g(x)=\sum_{k=0}^\infty a_kx^k \quad\text{ha estensione olomorfa}\quad f(z)=\sum_{k=0}^\infty a_kz^k \qquad \forall z\ :\ |z|<R $$
+
+Ciò ``sblocca'' l'estensione olomorfa a moltissime funzioni che si possono esprime attraverso gli sviluppi di Taylor come serie di potenze:
+\begin{align*}
+e^z&=\sum_{n=0}^{+\infty}\frac{z^n}{n!} \qquad &R=+\infty \\
+\sin z &= \sum_{n=0}^{+\infty}\frac{(-1)^n}{(2n+1)!}\,z^{2n+1} \qquad &R=+\infty \\
+\cos z &= \sum_{n=0}^{+\infty}\frac{(-1)^n}{(2n)!}\,z^{2n} \qquad &R=+\infty \\
+\arctan z &= \sum_{n=0}^{+\infty}\frac{(-1)^n}{2n+1}\,z^{2n+1} \qquad &|z|<1 \\
+\sinh z &= \sum_{n=0}^{+\infty}\frac{1}{(2n+1)!}\,z^{2n+1} \qquad &R=+\infty \\
+\cosh z &= \sum_{n=0}^{+\infty}\frac{1}{(2n)!}\,z^{2n} \qquad &R=+\infty \\
+\frac{1}{1-z}&=\sum_{n=0}^{+\infty}z^n  \qquad &|z|<1
+\end{align*}
+
+Tralasciamo per il momento le estensioni di $\log(1+z)$ e $(1+z)^\alpha$.
+
+Alla luce di queste estensioni possiamo giustificare la formula di Eulero: moltiplicando la serie di $\sin z$ per $i$ e sommandola alla serie di $\cos z$ si ottiene proprio la serie di $e^{iz}$. Osserviamo che la formula è estesa ad ogni $z$ complesso e non solo ad angoli $\theta\in[0,2\pi)$; d'altro canto
+$$
+e^{i\theta}=\cos\theta+i\sin\theta=\cos(\theta+2k\pi)+i\sin(\theta+2k\pi)=e^{i(\theta+2k\pi)}=e^{i\theta}\,e^{2k\pi i}
+$$
+da cui deduciamo che la funzione esponenziale complessa e $2\pi i$-periodica. Questo dovrebbe farci capire per quale motivo l'estensione del logaritmo potrebbe risultare problematica.
+
+Prima di indagare in maniera più approfondita su ciò, è bene concludere con un'importante osservazione
+\begin{lemma}
+$\CC$ è il luogo naturale per parlare di serie di potenze.
+\end{lemma}
+Perché? Consideriamo la funzione 
+$$f(x)=\frac{1}{1+x^2}, \qquad f:\RR\to\RR,\ f\in\Cc^\infty$$
+Applicado gli sviluppi di Taylor abbiamo
+$$\frac{1}{1+x^2}=\frac{1}{1-(-x^2)}=\sum_{n=0}^\infty(-x^2)^n=\sum_{n=0}^\infty(-1)^n(x^2)^n$$
+valida solo per $-1<x<1$. Tuttavia $f(x)$ è definita su tutto $\RR$ quindi perché non posso scrivere $f(x)$ come serie di potenza anche per $x>1$?? A questa domanda rispondiamo in maniera banale guardando l'estensione olomorfa $f(z)$: essa ha $R=1$ e in particolare per $z=i$ la serie diverge. Quindi alcuni \textit{ostacoli} degli sviluppi di Taylor, non banali nei reali, diventano ovvi nel campo complesso.
+
 
 \section{Logaritmo complesso}
 
-Notiamo che in $\CC$ si può risolvere $\sin z = 2$ con le formule di Eulero. Una peculiarità da notare è il modo in cui il logaritmo viene gestito, come conseguenza importante del fatto che
-\begin{equation*}
-e^{z} = e^{z + 2\pi i \cdot k}, \ \ k\in \ZZ
-\end{equation*}
-Consideriamo quindi
+Consideriamo
 \begin{equation*}
 e^{z} = w, \ \ w\neq 0, w\in \CC
 \end{equation*}
-allora
+Ricordando la periodicità dell'esponenziale abbiamo
 \begin{equation*}
-e^{z} = w\ \ \implies \ \ e^{z + 2\pi i \cdot k} = | w| e^{i\arg w} \ \ \implies \ \ \log e^{z + 2\pi i \cdot k} = \log| w| e^{i\arg w}
+e^{z} = w = |w| e^{i\arg w}= |w| e^{i(\arg w+2k\pi)}
 \end{equation*}
-da cui uguagliando le due parti otteniamo la formulazione del logaritmo complesso
+Invertendo la relazione possiamo trovare
 \begin{equation*}
-\boxed{z = \log_{\CC} w = \ln| w| + i\arg w + 2\pi i \cdot k, \ \ k\in \ZZ}
+z=\log e^z=\log |w| e^{i(\arg w+2k\pi)}=\log|w|+i\arg w+2\pi k i
 \end{equation*}
-dove $\log_{\CC}$ indica il logaritmo complesso, mentre $\ln$ è il consueto logaritmo.
+Come nel caso reale, non tutte le equazioni del tipo $e^z=w$ sono risolvibili: per esempio, $e^z=0$ non ha soluzioni; prendendo invece $e^z=-1$ una soluzione possibile è $z=i\pi$, da cui si ottengono tutte le altre soluzioni aggiungendo o togliendo un multiplo di $2\pi i$.
 
-Non è una vera e propria funzione, perché ad ogni elemento del dominio $\CC \setminus \{0\}$ non associa uno e un solo valore, ma ne associa infiniti: è detta \textbf{funzione polidroma}.
-
-\subsection{Superfici di Riemann}
-
-Consideriamo ora un certo $w\in \CC$ di modulo $1$, quindi $\ln| w| = 0$. Partiamo da $\vartheta \sim - \pi $ e prendiamo $k = 0$
+Per il logaritmo complesso ri rende dunque necessaria una definizione più inclusiva:
+\begin{defn}
+Si definisce logaritmo complesso di $z\in\CC\setminus\{0\}$ la funzione
 \begin{equation*}
-z = \log_{\CC} w = i\vartheta = - i\pi
+\Log z:=\log|z|+i\arg z+2k\pi i,\qquad  k\in \ZZ
 \end{equation*}
-se aumentiamo $\vartheta $ fino ad arrivare a $\vartheta \sim \pi $ abbiamo
-\begin{equation*}
-z = \log_{\CC} w = i\vartheta = i\pi
-\end{equation*}
-I due valori si dovrebbero raccordare con continuità essendo due argomenti corrispondenti allo stesso angolo nel piano di Gauss, ma distano di $2\pi $. Questo salto si visualizza nelle cosiddette \textbf{Superfici di Riemann}\footnote{Il colore rappresenta l'argomento.\\Fonte dell'immagine: \url{https://commons.wikimedia.org/wiki/File:Riemann\_surface\_log.svg}}
+dove $\Log$ indica il logaritmo complesso, mentre $\log$ è il consueto logaritmo reale.
+\end{defn}
+Non è una vera e propria funzione, perché ad ogni elemento del dominio non associa uno e un solo valore, ma ne associa infiniti (distanti $2\pi i$).
 
-\fg{0.6}{superfici-di-Riemann}
+Pensandoci, anche la funzione radice quadrata complessa associa due valori ad ogni elemento del dominio:
+$$
+\sqrt{z}=\pm\sqrt{\rho}\,e^{i\,\theta/2}
+$$
+solo che nei reali si è scelto di assegnare al ramo positivo una posizione privilegiata. Purtroppo nel campo complesso questo non ha nessun senso: infatti girando attorno all'origine due volte lungo $\partial B_1(0)$ e seguendo con continuità un valore della radice quadrata di $z$ ci si ritrova dopo il primo giro in corrispondenza dell'altro valore (quello opposto) e dopo il secondo giro si ritorna al primo valore.
+
+Le funzioni di questo tipo sono dette \textbf{funzioni polidrome}, contrapposte alle \textbf{funzioni monodrome}, quelle che rispettano rigorosamente la definizone di \textit{funzione}. 
+
+Per raggirare il problema si ridefinisce il codominio della funzione come $2^\CC$ (l'insieme delle parti di $\CC$) e si fa restituire alla funzione degli insiemi (univocamente definiti) piuttosto che dei numeri complessi. 
+
+Un altro possibile approccio risolutivo, ideato da Riemann, è quello di limitare il dominio della funzione polidroma in maniera che non si possa girare attorno ai punti critici, detti di diramazione (nel caso di logaritmo e radice è l'origine). In questo modo è possibile assegnare dei valori privilegiati. Possiamo immaginare di associare ad ogni $k$ un diverso piano $\CC$; completato un giro antiorario (o orario) attorno al punto di diramazione si sale (o scende) alla realizzazione successiva. Questi piani sono detti appunti di Riemann e si possono immaginare come dei piani paralleli interrotti da un \textit{buco} e collegati con quelli adiacenti attraverso dei \textit{ponti}.
+
+\fg{0.3}{superfici-di-Riemann}
 
 \section{Curve in \texorpdfstring{$\CC$}{C}}
 
-Valgono le consuete definizioni date in Analisi $2$ per una curva $r: [a, b]\rightarrow \CC$
-\begin{itemize}
-\item \textbf{chiusa} se $r(a) = r(b)$
-\item \textbf{semplice} se $r$ è iniettiva
-\item \textbf{regolare} se $r\in C^{1}([a, b])$
-\item il \textbf{sostegno} è $r([a, b])$
-\end{itemize}
+Una curva nel piano complesso è $\gamma: [a, b]\subseteq\RR\rightarrow \CC$ continua, proprio come nel piano reale. Infatti continuano a valere in $\CC$ un sacco di definizioni enunciate in AN2 (si veda il prontuario a fine libro).
 
-L'integrale su una curva è dato da
+Quello che cambia in $\CC$ è il concetto di integrale di linea complesso:
+\begin{defn}
+Data una curva $\gamma: [a, b]\subseteq\RR\rightarrow \CC$ regolare, cioè $\Cc^1\left([a,b]\right)$ e una funzione $f:A\to\CC$ almeno continua, si definisce integrale di linea complesso di $f$ lungo la curva $\gamma$ la quantità
 \begin{equation*}
-\int_{\gamma} f(z) dz = \int^{b}_{a} f(\gamma (t)) \gamma'(t) dt
+\int_{\gamma} f(z) \dz = \int^{b}_{a} f(\gamma (t))\, \gamma'(t) \dt
 \end{equation*}
-valgono le proprietà di linearità, cambio verso, e le consuete maggiorazioni.
+\end{defn}
+
+\begin{rem}
+L'integrale di linea complesso si trova a cavallo tra integrale curvilineo di prima specie e quello di seconda. Infatti ha la faccia di un integrale di prima specie (modulo a parte), tuttavia scomponendo $f$ in parte reale e immaginaria si ottiene un integrale di seconda specie
+\begin{gather*}
+f(x)=u(x,y)+iv(x,y) \\
+\gamma(t)=x(t)+iy(t) \\ 
+\int_\gamma f(z)\dz=\int_a^b \left(ux'-vy'\right)\dt+i\int_a^b\left(uy'+vx'\right) \dt = \int_\gamma\left(u\dx-v\dy\right)\dt +i\int_\gamma\left(u\dy+v\dx\right)\dt
+\end{gather*}
+perchè appunto $u\dx-v\dy$ e $u\dy+v\dx$ sono due forme differenziali (oppure sono campi irrotazionali).
+
+Viene naturale osservare che, in virtù delle (CR), le sopracitate forme differenziali sono chiuse (ovviamente bisogna supporre $u,v\in\Cc^1$, che per quanto ne sappiamo ora non significa $f\in H$). 
+\end{rem}
+
+Per l'integrale di linea valgono le proprietà di linearità, cambio verso, e le consuete maggiorazioni:
+$$
+\int f+g=\int f + \int g \qquad \int kf = k\int f \qquad \left(\int_{-\gamma}=-\int_\gamma\right) \qquad \left(\left| \int f \right|\leq \int |f|\right)
+$$
 
 \section{Teorema dell'Integrale Nullo di Cauchy}
 
-\begin{thm}
-[dell'Integrale Nullo di Cauchy] Sia $A\subset \CC$ semplicemente connesso e $f\in H(A)$, allora
+Ricordiamo da AN2 il
+\begin{lemma}[di Poincarè]$\\$
+Una forma differenziale $\Cc^1$ e chiusa in un aperto semplicemente connesso è esatta (oppure è un campo conservativo).
+\end{lemma}
+
+Analogamente nei complessi vale il
+\begin{thm}[dell'Integrale Nullo di Cauchy]$\\$
+Siano $A\subset \CC$ un aperto semplicemente connesso, $f:A\to\CC$ olomorfa in $A$ e $\gamma:[a,b]\to A$ una curva chiusa. Allora
 \begin{equation*}
-\int_{\gamma} f(z) dz = 0, \ \ \forall \gamma \ \text{chiusa}, \gamma \subset A
+\int_{\gamma} f(z) \dz = 0
 \end{equation*}
 \end{thm}
 \begin{proof}
-Semplificata al caso in cui $f\in C^{1}$.
+La dimostrazione vera e propria è molto lunga e tecnica, perciò noi ci limiteremo a verificare l'asserto nel caso in cui $u,v\in C^{1}$:
 \begin{equation*}
-\int_{\gamma} f(z) dz = \int_{\gamma}(u + iv)(dx + idy) = \int_{\gamma}(udx - vdy) + i\int_{\gamma}(udy + vdx) = 0
+\int_{\gamma} f(z) \dz = \int_\gamma\left(u\dx-v\dy\right)\dt +i\int_\gamma\left(u\dy+v\dx\right)\dt = 0
 \end{equation*}
-in quanto per le condizioni di (CR) quelle sono due forme differenziali esatte.
+in quanto le forme differenziali sono esatte.
 \end{proof}
 
-\subsection{Estensione alla frontiera}
-
-La tesi vale anche se chiediamo che $f$ sia continua fino al bordo e non che $A$ sia semplicemente connesso.
+Il teorema dell'integrale nullo di Cauchy ha un'importantissima conseguenza: sia $f\in H(A)$ dove $A$ è un insieme qualsiasi, che per comodità rappresentativa immaginiamo con un \textit{buco}; allora prese due curve chiuse che girano attorno al \textit{buco} si ha
 \begin{equation*}
-f\in H(A) \cap C^{0}(\overline{A}) \ \ \implies \ \ \int_{\gamma} f(z) dz = 0, \ \ \gamma = \partial A
+\int_{\gamma_1}f(z)\dz=\int_{\gamma_2}f(z)\dz
 \end{equation*}
+cioè $\gamma_1$ si può deformare con continuità in $\gamma_2$ e viceversa (in \textit{matematichese} curve di questo tipo sono dette $A$-omotope, ovvero esiste una funzione $H$ continua tale che $H(t,0)=\gamma_1(t)$ e $H(t,1)=\gamma_2(t)$).
 
-\subsection{Estensione a regioni a contorno multiplo}
+\fg{0.3}{bonfa_2}
 
-Se ci sono \textit{buchi} nell'insieme $A$ si può semplicemente girarci intorno e tenere conto di tali contributi, mentre i contributi delle linee rette si cancellano
-\begin{equation*}
-f\in H\left(A\setminus \bigcup\nolimits_{i} A_{i}\right) \cap C^{0}\left(\overline{A\setminus \bigcup\nolimits_{i} A_{i}}\right) \ \ \implies \ \ \int_{\partial A} f(z) dz + \sum\nolimits_{i}\int_{\partial A_{i}} f(z) dz = 0
-\end{equation*}
+\begin{proof}
+Basta togliere un segmento che collega il \textit{buco} all'esterno ad $A$, in modo tale che $A$ sia semplicemente connesso, e poi applicare il teorema dell'integrale nullo alla curva $\gamma_3$ che percorre una volta una curva in un senso e una volta l'altra curca in senso opposto
+\fg{0.3}{bonfa_3}
+\end{proof}
+
+Il teorema dell'integrale nullo si può estendere anche alla frontiera dell'aperto $A$, a patto che qui la funzione sia continua:
+\begin{thm}
+Siano $r$ curva semplice e chiusa (aka circuito), $A$ la regione aperta interna a $r$ (aka semplicemente connesso) e $f\in H(A)\cap\Cc^0(\overline{A})$. Allora $\int_r f(z)\dz=0$.
+\end{thm}
+\begin{proof}
+Si basa sul deformare la funzione finché non si è raggiunta la frontiera $\partial A$, cioè la curva $r$.
+\end{proof}
 
 \section{Formula Integrale di Cauchy}
 
 \begin{thm}
-Se $f\in H(A) \cap C^{0}(\overline{A})$ e $A$ semplicemente connesso, allora $\forall z\in A$
+Sia $\gamma$ una curva semplice e chiusa, $A$ la sua regione interna e $f\in H(A) \cap \Cc^{0}(\overline{A})$. Allora $\forall z\in A$
 \begin{equation*}
-\boxed{f(z) = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w - z} dw, \ \ \gamma = \partial A}
+f(z) = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w - z} \dw
 \end{equation*}
 \end{thm}
-\begin{proof}
 
-Poniamo $w = z + re^{i\vartheta}, r > 0, \vartheta \in [0, 2\pi]$, da cui $dw = rie^{i\vartheta} d\vartheta $, calcoliamo l'espressione
+\begin{proof}
+Fissiamo $z\in A$. La funzione $\dfrac{f(w)}{w - z}$ non è olomorfa in $A$, ma in $B=A\setminus\{w\}$. Tale $B$ non è più semplicemente connesso (ha un \textit{buco}) e dunque l'idea è quella di utilizzare la conseguenza del teorema dell'integrale nullo.
+
+A tal proposito deformiamo $\gamma$ in una circonferenza $r$ centrata in $z$ di raggio $\rho$ opportuno (che non ci faccia uscire da $A$)
+$$
+r=z+\rho e^{it} \quad t\in[0,2\pi]
+$$
+in modo tale da poter riscrivere
 \begin{equation*}
-\int_{\gamma}\frac{f(w)}{w - z} dw = \int^{2\pi}_{0}\frac{f\left(z + re^{i\vartheta}\right)}{\cancel{re^{i\vartheta}}}\cancel{re^{i\vartheta}} id\vartheta = i\int^{2\pi}_{0}[f(z) + o(r)] d\vartheta
+\int_{\gamma}\frac{f(w)}{w - z} \dw=\int_{r}\frac{f(w)}{w - z} \dw
 \end{equation*}
-ma per continuità possiamo far tendere $r\rightarrow 0$
-\begin{gather*}
-\int_{\gamma}\frac{f(w)}{w - z} dw\xrightarrow{r\rightarrow 0} if(z)\int^{2\pi}_{0} d\vartheta = 2\pi i \cdot f(z)
-\end{gather*}
+Ora questo lo sappiamo calcolare, è un banale integrale di linea
+\begin{equation*}
+\int_{r}\frac{f(w)}{w - z} \dw = \int^{2\pi}_{0}\frac{f\left(z + \rho e^{it}\right)}{\cancel{\rho e^{it}}}\,\cancel{\rho e^{it}}i \dt = i\int^{2\pi}_{0} f\left(z + \rho e^{it}\right) \dt
+\end{equation*}
+Per la continuità di $f$ in $z$, e poichè $\left|e^{it}\right|=1$, otteniamo $f\left(z + \rho e^{it}\right)=f(z)+o(1)$ per $\rho\to 0$. Allora
+\begin{equation*}
+\int_{\gamma}\frac{f(w)}{w - z} \dw=\int_{r}\frac{f(w)}{w - z} \dw=i\int_{0}^{2\pi} \underbrace{f(z)}_{\text{cost}}\dt+i\int_0^{2\pi} \underbrace{o(1)}_{\to 0}\dt \xrightarrow[]{\rho\to 0} 2\pi i f(z)
+\end{equation*}
 \end{proof}
+
+Questo è un teorema molto forte, in quanto conoscendo $f$ sul bordo, possiamo caratterizzare $f$ in ogni punto all'interno di $A$. Anzi, ci si può spingere ancora oltre: se due funzioni $f$ e $g$ olomorfe in $A$ e continue su $\partial A$ sono tali per cui $f(z)=g(z)$ per ogni $z\in\partial A$ allora sono uguali anche per ogni $z\in A$ (seconda conferma del fatto che le funzioni olomorfe hanno una struttura molto rigida).
 
 \section{Esistenza di primitive}
 
-Non è sufficiente la continuità.
+Nei reali $f\in\Cc^0\ \Rightarrow\ \exists F$ primitiva tale che $F'(x)=f(x)$; invece nei complessi la conitnuità non è più condizione sufficiente per l'esistenza di una primitiva.
 \begin{thm}
-Sia $f\in C^{0}(A)$, $A$ aperto. Allora
-\begin{equation*}
-f\ \text{ammette primitiva} \ \ \iff \ \ udx - vdy \quad \text{e} \quad udy + vdx \quad \text{sono esatte}
-\end{equation*}
+Sia $f:A\to\CC$ continua, $A$ aperto semplicemente connesso. Allora le seguenti affermazioni sono equivalenti:
+\begin{enumerate}
+    \item $\exists F:A\to\CC$ tale che $F'(z)=f(z)$ $\forall z\in A$
+    \item $f\in H(A)$
+    \item $u\dx-v\dy$ e $u\dy+v\dx$ sono forme differenziali esatte
+\end{enumerate}
 \end{thm}
-\begin{proof}\leavevmode
-\begin{itemize}
-\item $(\implies)$ consideriamo $\gamma $ chiusa
-\begin{equation*}
-\int_{\gamma} f(z) dz = \int_{\gamma} F'(z) dz = \int^{b}_{a} F'(\gamma (t)) \gamma'(t) dt = F(\gamma (b)) - F(\gamma (a)) = 0
-\end{equation*}
-\item $(\impliedby)$ Consideriamo una certa $F$ definita da
-\begin{equation*}
-F(z) = \int^{z}_{z_{0}} f(w) dw
-\end{equation*}
 
-da cui
-\begin{equation*}
-F(z + h) - F(z) = \int^{z + h}_{z_{0}} f(w) dw - \int^{z}_{z_{0}} f(w) dw = \int^{z + h}_{z} f(w) dw = (\star)
-\end{equation*}
+Dunque l'olomorfia è CNS per la derivabilità di una funzione complessa (terza conferma del fatto che le funzioni olomorfe sono \textit{cazzute}\footnote{Scusate il francesismo, ma non ho trovato (o voluto cercare) altri sinonimi.}).
 
-parametrizziamo il segmento $w = z + th, t\in [0, 1]$ da cui anche $dw = hdt$
-\begin{equation*}
-(\star) = \int^{1}_{0} f(z + th) hdt
-\end{equation*}
-
-possiamo passare al limite
-\begin{gather*}
-\lim\limits_{h\rightarrow 0}\frac{F(z + h) - F(z)}{h} = \lim\limits_{h\rightarrow 0}\int^{1}_{0} f(z + th) dt = \int^{1}_{0} f(z) dt = f(z)\int^{1}_{0} dt = f(z)
-\end{gather*}
-
-\end{itemize}
-\end{proof}
+\newpage
 
 \section{Serie di potenze}
 
-\begin{thm}
-[di Weierstrass]
-Sia $f\in H(A)$, $A$ aperto. Allora $f$ è analitica, ovvero si può scrivere localmente in serie di potenze
+Concludiamo la trattazione delle funzioni olomorfe con il \textit{Teorema di Weierstrass} (e relative conseguenze), grazie al quale avremo un'ultima conferma della rigidità delle funzioni olomorfe: se una funzione è derivabile in un aperto una volta allora è ivi derivabile infinite volte.
+
+\begin{defn}
+Una funzione è analitica in un aperto $A$ se ammette in ogni $z_0\in A$ un'espansione in serie di potenze.
+\end{defn}
+
+\begin{thm}[di Weierstrass]$\\$
+Sia $f\in H(A)$, $A$ aperto. Allora $f$ è analitica, ovvero è rappresentabile nell'intorno di ogni punto $z_0\in A$ mediante la serie di potenze
 \begin{equation*}
-f(z) = \sum^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}, \ \ \ \ a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw
+f(z) = \sum^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}
 \end{equation*}
+dove 
+\begin{equation*}
+a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} \dw \qquad \forall n\in \NN
+\end{equation*}
+e $\gamma$ è una qualsiasi circonferenza di centro $z_0$ e interna ad $A$.
 \end{thm}
 
 \begin{proof}
-
 Per la formula di Cauchy
 \begin{equation*}
-f(z) = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w - z} dw
+f(z) = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w - z} \dw
 \end{equation*}
-Osserviamo che
+per ogni $z$ dentro il disco centrato in $z_0$ e con $w$ variabile di integrazione appartenente a $\gamma.$
+\fg{0.4}{bonfa_4}
+Osserviamo la figura risulta banale che
 \begin{equation*}
-\frac{1}{w - z} = \frac{1}{w - z_{0} + z_{0} - z} = \frac{1}{w - z_{0}}\frac{1}{1 - \frac{z - z_{0}}{w - z_{0}}} = \frac{1}{w - z_{0}}\sum^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n}}
+\left| \frac{z - z_{0}}{w - z_{0}}\right| < 1
 \end{equation*}
-fintanto che ci mettiamo in una regione in cui
-\begin{equation*}
-\left| \frac{z - z_{0}}{w - z_{0}}\right| < 1\ \ \iff \ \ | z - z_{0}| < | w - z_{0}|
-\end{equation*}
-
-\begin{figure}[htpb]
-\centering
-\tikzset{every picture/.style = {line width = 0.75pt}} %set default line width to 0.75pt
-
-\begin{tikzpicture}[x = 0.75pt, y = 0.75pt, yscale = - 1, xscale = 1]
-%uncomment if require: \path (0, 136); %set diagram left start at 0, and has height of 136
-
-%Shape: Ellipse [id: dp7479505317469046]
-\draw (159, 71.02) .. controls (159, 40.1) and (222.8, 15.03) .. (301.5, 15.03) .. controls (380.2, 15.03) and (444, 40.1) .. (444, 71.02) .. controls (444, 101.93) and (380.2, 127) .. (301.5, 127) .. controls (222.8, 127) and (159, 101.93) .. (159, 71.02) - - cycle;
-%Shape: Circle [id: dp8263143669411064]
-\draw (211, 70.5) .. controls (211, 50.89) and (226.89, 35) .. (246.5, 35) .. controls (266.11, 35) and (282, 50.89) .. (282, 70.5) .. controls (282, 90.11) and (266.11, 106) .. (246.5, 106) .. controls (226.89, 106) and (211, 90.11) .. (211, 70.5) - - cycle;
-%Shape: Circle [id: dp22698676265510276]
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (244.5, 70.5) .. controls (244.5, 69.4) and (245.4, 68.5) .. (246.5, 68.5) .. controls (247.6, 68.5) and (248.5, 69.4) .. (248.5, 70.5) .. controls (248.5, 71.6) and (247.6, 72.5) .. (246.5, 72.5) .. controls (245.4, 72.5) and (244.5, 71.6) .. (244.5, 70.5) - - cycle;
-%Shape: Circle [id: dp17321185166040398]
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (233.3, 89.7) .. controls (233.3, 88.6) and (234.2, 87.7) .. (235.3, 87.7) .. controls (236.4, 87.7) and (237.3, 88.6) .. (237.3, 89.7) .. controls (237.3, 90.8) and (236.4, 91.7) .. (235.3, 91.7) .. controls (234.2, 91.7) and (233.3, 90.8) .. (233.3, 89.7) - - cycle;
-%Shape: Circle [id: dp9508082191122853]
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (209, 70.5) .. controls (209, 69.4) and (209.9, 68.5) .. (211, 68.5) .. controls (212.1, 68.5) and (213, 69.4) .. (213, 70.5) .. controls (213, 71.6) and (212.1, 72.5) .. (211, 72.5) .. controls (209.9, 72.5) and (209, 71.6) .. (209, 70.5) - - cycle;
-
-% Text Node
-\draw (190.4, 59.6) node [anchor = north west][inner sep = 0.75pt] {$w$};
-% Text Node
-\draw (240.8, 80.8) node [anchor = north west][inner sep = 0.75pt] {$z$};
-% Text Node
-\draw (246.8, 50.4) node [anchor = north west][inner sep = 0.75pt] {$z_{0}$};
-% Text Node
-\draw (388, 5.2) node [anchor = north west][inner sep = 0.75pt] {$A$};
-% Text Node
-\draw (286, 64) node [anchor = north west][inner sep = 0.75pt] {$\gamma $};
-
-\end{tikzpicture}
-\end{figure}
-\FloatBarrier
-
-Sostituiamo nella formula di Cauchy
-\begin{align*}
-f(z) & = \frac{1}{2\pi i}\int_{\gamma} f(w)\sum^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}} dw\\
- & = \sum^{\infty}_{n = 0}(z - z_{0})^{n}\underbrace{\frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw}_{a_{n}} = \sum^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}
-\end{align*}
-Si noti che la regione considerata, come si vede in figura, è quindi una palla centrata in $z_{0}$.
-
-Si ottiene anche la \textbf{formula per derivate}
-\begin{gather*}
-f^{(n)}(z_{0}) = \frac{n!}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw
-\end{gather*}
+Possiamo usare tale formula per riscrivere la frazione $\dfrac{1}{w-z}$ che compare nella formula di Cauchy come somma di una serie geometrica:
+$$
+\frac{1}{w-z}=\frac{1}{w-z_0+z_0-z}=\frac{1}{w-z_0}\ \frac{1}{1-\frac{z-z_0}{w-z_0}}=\frac{1}{w-z_0}\sum_{n=0}^{\infty}\left(\frac{z-z_0}{w-z_0}\right)^n=\sum_{n=0}^{\infty}\frac{(z-z_0)^n}{(w-z_0)^{n+1}}
+$$
+Sostituendo nell'espressione di $f$ otteniamo
+$$
+f(z)=\frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w-z}\dw=\frac{1}{2\pi i}\int_{\gamma}\left(f(w)\cdot \sum_{n=0}^{\infty}\frac{(z-z_0)^n}{(w-z_0)^{n+1}} \right)  \dw
+$$
+Ci ricordiamo che 
+\begin{enumerate}
+    \item una serie di potenze converge uniformemente strettamente all'interno del disco di convergenza
+    \item su un intervallo limitato si può scambiare integrale e serie se la serie vi converge uniformemente
+\end{enumerate}
+Allora
+$$
+f(z)=\frac{1}{2\pi i}\int_{\gamma}\left(f(w)\cdot \sum_{n=0}^{\infty}\frac{(z-z_0)^n}{(w-z_0)^{n+1}} \right)  \dw=\frac{1}{2\pi i}\cdot \sum_{n=0}^\infty (z-z_0)^n \cdot \int_\gamma \frac{f(w)}{(w-z_0)^{n+1}}\dw
+$$
+Abbiamo dunque espresso una funzione olomorfa come serie di potenze, e in particolare abbiamo ottenuto
+$$
+f(z)=\sum_{n=0}^\infty a_n(z-z_0)^n \qquad a_n=\frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w-z_0)^{n+1}}\dw
+$$
 \end{proof}
+
+Conseguenze di tale teorema:
+\begin{enumerate}
+    \item [$\triangleright$] Presa una $f$ analitica, dato che si può esprimere localmente come serie di potenze per definizione, e che una serie di potenze è derivabile infinite volte, possiamo dire che $f$ analitica $\Rightarrow$ $f$ olomorfa.
+
+    Invece grazie al teorema di Weierstrass abbiamo che $f$ olomorfa $\Rightarrow$ $f$ analitica.
+
+    Mettendo insieme i due risultati abbiamo
+    $$
+    \boxed{f\text{ analitica }\Leftrightarrow\ f\text{ olomorfa}}
+    $$
+
+    \item [$\triangleright$] Sia $A$ un circuito e sia $f$ una funzione $f\in H(A)\cap\Cc^0(\overline{A})$. Allora
+    \begin{equation*}
+    f^{(n)}(z_{0}) = \frac{n!}{2\pi i}\int_{\partial A}\frac{f(w)}{(w - z_{0})^{n + 1}} \dw \qquad \forall z_0\in A,\ \forall n\in \NN
+    \end{equation*}
+    Tale formula è nota come \textbf{formula delle derivate}, ed è a tutti gli effetti una generalizzazione della fomrula integrale di Cauchy (caso $n=0$).
+\end{enumerate}
+
+Concludiamo il paragrafo con il
+\begin{thm}[del massimo modulo]
+Sia $A\subset\CC$ un aperto connesso e sia $f\in H(A)$. Se la funzione $z\mapsto |f(z)|$ assume in un punto di $A$ il suo valore massimo, allora $f$ è costante in $A$.
+\end{thm}
+
+\begin{coro}
+Sia $A\subset\CC$ un aperto connesso e sia $f\in H(A)\cap\Cc^0(\overline{A})$. Se $f(z)\neq 0$ per ogni $z\in A$ allora la funzione $z\mapsto |f(z)|$ assume il suo valore minimo su $\partial A$.
+\end{coro}
+
+\newpage
 
 \section{Serie di Laurent}
 
-Vi sono dei punti particolari in certe funzioni dove non c'è convergenza della serie, ad esempio in $f(z) = \frac{1}{1 - z}$ il punto $1$ è critico, e la serie geometrica associata non converge in tale punto (e di conseguenza nel disco). Queste "ostruzioni" sono di vario tipo e vengono opportunamente classificate.
+Finora si è parlato di funzioni olomorfe, ora dobbiamo capire cosa succede nel caso di funzioni non olomorfe.
 
-Per risolvere il problema si introduce la Serie di Laurent, una nuova espansione su una corona circolare $A$ (quindi \textit{non} semplicemente connessa) centrata nel punto stesso che compromette l'espansione in serie di Taylor. Il teorema inoltre non richiede che la funzione $f$ sia olomorfa su tutto il dominio ma esclusivamente sulla corona circolare $A$.
-\begin{thm}
-[Serie di Laurent]
-Sia $f\in H(A)$, $A = \{z\in \CC : r < | z - z_{0}| < R\}$, $\gamma $ una curva regolare semplice chiusa in $A$ che concateni $z_{0}$. Allora
+Abbiamo già incontrato delle funzioni che presentano dei punti \textit{critici}, per esempio il punto $z^*=1$ per la serie geometrica $f(z)=\frac{1}{1-z}$: essa ammette espansione in serie di Taylor centrata in $z_0=0$
 \begin{equation*}
-\boxed{\forall z\in A, \ \ f(z) = \sum\limits^{\infty}_{n = - \infty} a_{n}(z - z_{0})^{n} \ \ \ \ a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw}
+\sum_{n=0}^\infty z^n \qquad \text{ purché }|z|<1
+\end{equation*}
+Però la funzione $f$ è definita su tutto $\CC\setminus\{1\}$ e anzi è ivi olomorfa, quindi perché devo per forza centrare l'espansione in serie di potenze nell'origine? \\
+Si dimostra che $f$ ammette espansione in serie di Taylor centrata in $z_0$
+\begin{equation*}
+\sum_{n=0}^\infty \frac{(z-z_0)^n}{(1-z_0)^{n+1}} \qquad \text{ purché }\left| \frac{z-z_0}{1-z_0} \right|<1\text{ cioè }|z-z_0|<|1-z_0|
+\end{equation*} 
+Possiamo quindi espandere la funzione $f$ in serie di Taylor in ogni direzione meno quella che include il punto critico $z^*=1$.
+
+Per capire meglio osserviamo la seguente figura:
+
+\fg{0.8}{bonfa_6}
+
+Punti $z^*$ che non permettono di scrivere un'espansione in serie di Taylor centrata in $z_0$ e il cui disco di convergenza li contenga, sono detti \textit{punti singolari}. Più precisamente:
+\begin{defn}[Punto singolare]
+Sia $f:A\to\CC$, $f\in H(A)$. Il punto $z^*\in\partial A$ è detto singolare per $f$ se non esiste una serie di potenze convergente anche in $z^*$.
+\end{defn}
+
+Come vedremo, queste singolarità sono di vario tipo e verranno opportunamente classificate.
+
+\newpage
+
+Per risolvere il problema si introduce la \textit{serie di Laurent}, una \underline{serie di potenze bilatera} su una corona circolare $A$ (quindi \textit{non} semplicemente connessa) centrata nel punto stesso che compromette l'espansione in serie di Taylor.
+\begin{thm}[Serie di Laurent]$\\$
+Sia $A\subset\CC$ una corona circolare aperta, cioè costituita dai punti esterni a una circonferenza $\gamma_1$ e interni a una circonferenza $\gamma_2$, entrambe di centro $z_0$. Sia $f:A\to\CC$, $f\in H(A)$. Sia infine $\gamma$ una qualsiasi curva interna ad $A$ che concateni una volta $z_0$. Allora
+\begin{equation*}
+f(z) = \sum\limits^{\infty}_{n = - \infty} a_{n}(z - z_{0})^{n} \quad a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} \dw \qquad \qquad \forall z\in A
 \end{equation*}
 \end{thm}
-Si noti che la curva è \textit{qualsiasi} purché concatenata con $z_{0}$; ciò deriva dal fatto che la funzione è olomorfa nel dominio dove si esegue l'integrazione, e pertanto l'integrale non varia per deformazione continua.
 
-Il teorema di Laurent è pertanto una generalizzazione del teorema di Weierstrass, in cui si include anche una somma sui \textbf{termini negativi}. Sono proprio le potenze negative, infatti, a dare informazioni sul comportamento delle singolarità.
+Osserviamo alcune cose:
+\begin{enumerate}
+    \item [(i)] La curva è \textit{qualsiasi} purché concateni $z_{0}$; ciò deriva dal fatto che la funzione è olomorfa nel dominio dove si esegue l'integrazione, e pertanto l'integrale non varia per deformazione continua.
+    \item [(ii)] Sotto le ipotesi di tale teorema si riesce ad espandere $f$ come serie di potenze centrata non solo in un punto dove $f$ non è olomorfa, ma perfino in un punto dove $f$ non è nemmeno definita!
+\end{enumerate}
 
-\begin{proof}
+Ma questo come ci aiuta?\\
+Sia $f\in H(A\setminus\{z_0\})$, cioè $z_0$ è un punto singolare per $f$. Grazie al teorema di Laurent è possibile prendere una corona circolare di raggio interno piccolo a piacere e raggio esterno grande purché la corona rimanga all'interno di $A$, e scrivere $f$ come serie di Laurent centrata in $z_0$:
 
-Tutto si basa sul \textit{fare un giro attorno al punto}
+\fg{0.8}{bonfa_7}
 
-\begin{figure}[htpb]
-\centering
-\tikzset{every picture/.style = {line width = 0.75pt}} %set default line width to 0.75pt
+\newpage
 
-\begin{tikzpicture}[x = 0.75pt, y = 0.75pt, yscale = - 1, xscale = 1]
-%uncomment if require: \path (0, 184); %set diagram left start at 0, and has height of 184
+\subsection{Classificazione delle singolarità al finito}
 
-%Shape: Arc [id: dp509954749685253]
-\draw [draw opacity = 0] (181.56, 83.63) .. controls (186.19, 44.97) and (219.09, 15) .. (259, 15) .. controls (302.08, 15) and (337, 49.92) .. (337, 93) .. controls (337, 136.08) and (302.08, 171) .. (259, 171) .. controls (219.52, 171) and (186.89, 141.66) .. (181.71, 103.6) - - (259, 93) - - cycle; \draw (181.56, 83.63) .. controls (186.19, 44.97) and (219.09, 15) .. (259, 15) .. controls (302.08, 15) and (337, 49.92) .. (337, 93) .. controls (337, 136.08) and (302.08, 171) .. (259, 171) .. controls (219.52, 171) and (186.89, 141.66) .. (181.71, 103.6);
-%Shape: Arc [id: dp39536995790567286]
-\draw [draw opacity = 0] (237.74, 83.57) .. controls (241.36, 75.43) and (249.52, 69.75) .. (259, 69.75) .. controls (271.84, 69.75) and (282.25, 80.16) .. (282.25, 93) .. controls (282.25, 105.84) and (271.84, 116.25) .. (259, 116.25) .. controls (249.77, 116.25) and (241.79, 110.87) .. (238.04, 103.07) - - (259, 93) - - cycle; \draw (237.74, 83.57) .. controls (241.36, 75.43) and (249.52, 69.75) .. (259, 69.75) .. controls (271.84, 69.75) and (282.25, 80.16) .. (282.25, 93) .. controls (282.25, 105.84) and (271.84, 116.25) .. (259, 116.25) .. controls (249.77, 116.25) and (241.79, 110.87) .. (238.04, 103.07);
-%Straight Lines [id: da39785143879926865]
-\draw (181.71, 103.6) - - (239, 103.6);
-\draw [shift = {(210.36, 103.6)}, rotate = 0] [fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.08] [draw opacity = 0] (12, - 3) - - (0, 0) - - (12, 3) - - cycle;
-%Straight Lines [id: da7721203931176552]
-\draw (237.74, 83.63) - - (181.56, 83.63);
-\draw [shift = {(209.65, 83.63)}, rotate = 180] [fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.08] [draw opacity = 0] (12, - 3) - - (0, 0) - - (12, 3) - - cycle;
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (254.5, 166) - - (264.5, 171) - - (254.5, 176) - - (259.5, 171) - - cycle;
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (262, 20) - - (252, 15) - - (262, 10) - - (257, 15) - - cycle;
-%Shape: Circle [id: dp12847517277803466]
-\draw [draw opacity = 0][fill = {rgb, 255: red, 0; green, 0; blue, 0}, fill opacity = 1] (257, 93) .. controls (257, 91.9) and (257.9, 91) .. (259, 91) .. controls (260.1, 91) and (261, 91.9) .. (261, 93) .. controls (261, 94.1) and (260.1, 95) .. (259, 95) .. controls (257.9, 95) and (257, 94.1) .. (257, 93) - - cycle;
-
-% Text Node
-\draw (253, 71.9) node [anchor = north west][inner sep = 0.75pt] {$z_{0}$};
-% Text Node
-\draw (266.5, 114.9) node [anchor = north west][inner sep = 0.75pt] {$r$};
-% Text Node
-\draw (304, 157.9) node [anchor = north west][inner sep = 0.75pt] {$R$};
-% Text Node
-\draw (323.5, 25.4) node [anchor = north west][inner sep = 0.75pt] {$\gamma_{1}$};
-% Text Node
-\draw (281, 62.9) node [anchor = north west][inner sep = 0.75pt] {$\gamma_{2}$};
-% Text Node
-\draw (372, 81.4) node [anchor = north west][inner sep = 0.75pt] {$\gamma = \gamma_{1} \cup \gamma_{2}$};
-
-\end{tikzpicture}
-
-\end{figure}
-\FloatBarrier
-
-L'insieme \textit{pacman} è effettivamente semplicemente connesso, e lì la funzione è olomorfa, allora
-\begin{equation*}
-\int_{\gamma} f(z) dz = 0 = \int_{\gamma_{1}} f(z) dz - \int_{\gamma_{2}} f(z) dz
-\end{equation*}
-i termini paralleli si cancellano. Consideriamo un $z$ nella corona $A$
-\begin{equation*}
-f(z) = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{w - z} dw = \underbrace{\frac{1}{2\pi i}\int_{\gamma_{1}}\frac{f(w)}{w - z} dw}_{A}\underbrace{- \frac{1}{2\pi i}\int_{\gamma_{2}}\frac{f(w)}{w - z} dw}_{B}
-\end{equation*}
-Analizziamo i termini.
-
-Termine $A$
-\begin{gather*}
-\frac{1}{w - z} = \frac{1}{w - z_{0} - (z - z_{0})} = \frac{1}{w - z_{0}}\frac{1}{1 - \frac{z - z_{0}}{w - z_{0}}} = \sum\limits^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}}\\
-\implies \ \ A = \frac{1}{2\pi i}\int_{\gamma_{1}} f(w)\sum\limits^{\infty}_{n = 0}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}} dw = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}
-\end{gather*}
-Termine $B$, quello \textit{sospetto} che non c'era nel caso di Weierstrass
-\begin{align*}
-\frac{- 1}{w - z} & = \frac{- 1}{w - z_{0} - (z - z_{0})} = \frac{1}{z - z_{0}}\frac{1}{1 - \frac{w - z_{0}}{z - z_{0}}} = \sum\limits^{\infty}_{n = 0}\frac{(w - z_{0})^{n}}{(z - z_{0})^{n + 1}}\\
- & = \sum\limits^{\infty}_{n = 1}\frac{(w - z_{0})^{n - 1}}{(z - z_{0})^{n}} = \sum\limits^{- \infty}_{n = - 1}\frac{(z - z_{0})^{n}}{(w - z_{0})^{n + 1}}
-\end{align*}
-Sostituendo tale quantità in $B$ si ottiene la tesi.
-\end{proof}
-\textit{Esempio.}
-\begin{equation*}
-f(z) = \frac{\sin z}{z} = \frac{1}{\cancel{z}}\sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n\cancel{+ 1}}}{(2n + 1) !} = \sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n}}{(2n + 1) !}
-\end{equation*}
-Abbiamo potuto eliminare la singolarità!
-
-\subsection{Classificazione delle singolarità}
-
-\begin{defn}
-[Punto singolare]
-Un punto $z_{0}$ si dice \textbf{singolare} (o critico) per una funzione $f(z)$ se non può essere incluso in nessun disco di convergenza della serie di potenze.
+\begin{defn}[Punto singolare isolato]$\\$
+Se $f\in H(d(z_0,r)\setminus\{z_0\})$ allora si dice che $z_{0}$ è un punto singolare isolato per $f$, e localmente si può scrivere tramite la serie di Laurent l'espansione $f(z)=\sum_{n=-\infty}^{+\infty}a_n(z-z_0)^n$.
 \end{defn}
-Classifichiamo i punti singolari in base ai coefficienti $a_{n} \neq 0, n < 0$
-\begin{itemize}
-\item se non ce n'è \textit{nessuno:} \textbf{singolarità eliminabile} (esiste un prolungamento continuo)
-\item se sono \textit{finiti:} \textbf{polo}
-\begin{itemize}
-\item definiamo inoltre l'\textbf{ordine} di un polo come l'indice $n > 0$ dei coefficienti $a_{- n} \neq 0$ tale che $a_{m} = 0, \forall m < - n$. Ovvero stiamo prendendo il più piccolo coefficiente non nullo.
-\end{itemize}
-\item se sono \textit{infiniti:} \textbf{singolarità essenziale}
-\end{itemize}
 
-\textit{Esempio.}
+Una singolarità isolata può essere di tre tipi:
+\begin{enumerate}
+    \item [$\triangleright$] singolarità eliminabile se $\lim_{z\to z_0}f(z)$ esiste finito.
+    \item [$\triangleright$] polo se $\lim_{z\to z_0}f(z)=\infty$.
+    \item [$\triangleright$] singolarità essenziale se $\not\exists\lim_{z\to z_0}f(z)$.
+\end{enumerate}
+
+\textit{Esempio}. Consideriamo le seguenti funzioni:\leavevmode
 \begin{equation*}
-z_{0} = 1, \ \ f(z) = \frac{1}{z - 1} = \sum\limits^{\infty}_{n = - \infty} a_{n}(z - 1)^{n} \ \ \ \ a_{n} =
-\begin{cases}
-0, & n\neq - 1\\
-1, & n = - 1
+f(z)=\frac{\sin z}{z} \qquad g(z)=\frac{1}{1-z} \qquad h(z)=\begin{cases}
+e^{1/z} \\ \sin\frac{1}{z} \\ \cos\frac{1}{z}
 \end{cases}
 \end{equation*}
-in questo caso $z_{0}$ è un polo.
+Possiamo dire che:
+\begin{itemize}
+    \item $f$ ha una singolarità eliminabile in $z=0$ poiché
+    \begin{equation*}
+    f(z) = \frac{\sin z}{z} = \frac{1}{\cancel{z}}\sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n+\cancel{1}}}{(2n + 1) !} = \sum\limits^{\infty}_{n = 0}\frac{(- 1)^{n} z^{2n}}{(2n + 1) !}
+    \end{equation*}
+    e dunque sebbene $f$ sia definita su $\CC\setminus\{0\}$, è olomorfa su tutto $\CC$.
+    \item $g$ ha un polo in $z=1$.
+    \item $h$ ha una singolarità essenziale in $z=0$.
+\end{itemize}
 
-\textit{Esempio.}
+Alla luce del teorema di Laurent, possiamo scomporre l'espansione di $f$ in
 \begin{equation*}
-z_{0} = 0, \ \ f(z) = \sin\left(\frac{1}{z}\right) = \sum\limits^{\infty}_{n = 0}\frac{\left(\frac{1}{z}\right)^{2n + 1}(- 1)^{n}}{(2n + 1) !} = \sum\limits^{- \infty}_{n = 0}\frac{z^{2n - 1}(- 1)^{n}}{(1 - 2n) !}
+f(z)=\sum_{n \in \mathbb{Z}} a_n\left(z-z_0\right)^n=\sum_{n=0}^{+\infty} a_n\left(z-z_0\right)^n+\sum_{n=-\infty}^{-1} a_n\left(z-z_0\right)^n
 \end{equation*}
-in questo caso $z_{0}$ è una singolarità essenziale.
-\begin{defn}
-[Punto singolare isolato]
-Un punto singolare $z_{0}$ per $f(z)$ si dice \textbf{isolato} esiste un intorno che non contiene punti critici per $f$.
-\end{defn}
-In $\CC$ non ha senso parlare di $\pm \infty $, essendoci infinite direzioni, tuttavia è utile considerare tutti i punti infinitamente distanti \textit{come un unico punto all'infinito}, più nello specifico vale la seguente definizione.
-\begin{defn}
-[Punto singolare all'infinito] Il punto all'infinito $z_{\infty}$ è singolare per $f(z)$ se $z_{0} = 0$ è singolare per $f\left(\frac{1}{z}\right)$.
-\end{defn}
-\textit{Esempio.}
+dove la serie di potenze con indici negativi è proprio la parte che descrive il comportamento \textit{singolare} della funzione.
 
-La funzione $f(z) = e^{z}$ ha singolarità isolata all'infinito, mentre $g(z) = \frac{1}{\sin z}$ ha punto all'infinito non isolato.
-
-\begin{thm}
-[Caratterizzazione dei poli]
-Sia $z_{0} \neq \infty $ un punto singolare isolato per $f$. Allora le seguenti affermazioni sono equivalenti:
+Allora introduciamo
+\begin{defn}
+$M=\left\{n\in\ZZ\ :\ a_n\neq 0,\ n<0 \right\}$ è detto insieme degli indici della parte singolare dello sviluppo di Laurent.
+\end{defn}
+in modo tale da poter caratterizzare le singolarità di una funzione attraverso:
 \begin{enumerate}
-\item $f$ ha un polo di ordine $n$ in $z_{0}$;
-\item $g(z) = (z - z_{0})^{n} f(z)$ ha una singolarità eliminabile in $z_{0}$ e inoltre $\lim_{z\rightarrow z_{0}} g(z)\neq 0$;
-\item è rispettata la seguente relazione tra ordini di grandezza:
+    \item [$\triangleright$] singolarità eliminabile se e solo se $M=\varnothing$, cioè gli $a_n$ con $n$ negativo sono tutti nulli.
+    \item [$\triangleright$] polo se e solo se $0<|M|<+\infty$, cioè è nullo solo un numero finito di $a_n$ con $n$ negativo; in particolare il polo è di ordine $m$, essendo $m$ il più grande intero positivo per il quale $a_{-m}\neq 0$.
+    \item [$\triangleright$] singolarità essenziale se $|M|=+\infty$, cioè esistono infiniti $a_n$.
+\end{enumerate}
 
+Per quanto riguarda l'ordine dei poli, nella pratica è tutto più semplice: 
 \begin{equation*}
-|f(z)|\asymp \frac{1}{| z - z_{0}|^{n}}
+f(z)=\frac{e^{\frac{1}{z-1}}}{z^2(z^2+4)}\ :\ 0\text{ è un 2-polo, }\pm 2i\text{ sono entrambi 1-poli}
 \end{equation*}
-\item $\varphi (z) = \frac{1}{f(z)}$ ha in $z_{0}$ uno zero di ordine $n$.
-\end{enumerate}
-\end{thm}
 
-\begin{thm}
-[Caratterizzazione delle singolarità] Valgono le seguenti affermazioni, con $z_{0}$ punto singolare isolato per $f$ :
-\begin{enumerate}
-\item $\lim_{z\rightarrow z_{0}} f(z) = \infty \iff z_{0}$ è un polo.
-\item $\lim_{z\rightarrow z_{0}} f(z)$ esiste finito $\iff z_{0}$ è una singolarità eliminabile.
-\item $\lim_{z\rightarrow z_{0}} f(z)$ non esiste $\iff z_{0}$ è una singolarità essenziale.
-\end{enumerate}
-\end{thm}
+Concludiamo con due teoremi (non fatti da Arioli):
 \begin{thm}
 [Caratterizzazione delle singolarità essenziali] Sia $z_{0}$ una singolarità essenziale isolata per $f(z)$. Allora la funzione $\frac{1}{f(z)}$ ha in $z_{0}$ una singolarità essenziale oppure un punto di accumulazione di poli.
 \end{thm}
-In generale si può sempre studiare la serie di Laurent centrata nel punto, ma ciò può risultare complicato e lungo da fare, specialmente se le singolarità sono molte.
+
+\textit{Esempi.}\leavevmode
+\begin{align*}
+\sin\frac{1}{z}\text{ ha s. essenz. in }z=0 \  &\longrightarrow\ \frac{1}{\sin\frac{1}{z}}\text{ è pt. di accumulo di s. in }z=0 \\
+e^{\frac{1}{z}}\text{ ha s. essenz. in }z=0 \  &\longrightarrow\  \frac{1}{e^{1/z}}\text{ ha s. essenz. in }z=0
+\end{align*}
+
+\begin{thm}[di Picard]
+Sia $f$ una funzione olomorfa che ha singolarità essenziale in $z_0$. Allora in qualsiasi intorno di $z_0$ ($z_0$ escluso) la funzione assume tutti, al più uno, i valori complessi inifite volte.
+\end{thm}
+
+Riusciamo così ad intuire le infinite problematiche legate alle singolarità essenziali.
+
+\subsection{Classificazione delle singolarità all'infinito}
+
+In $\CC$ non ha senso parlare di $\pm \infty $, essendoci infinite direzioni, tuttavia è utile considerare tutti i punti infinitamente distanti \textit{come un unico punto all'infinito}; più nello specifico vale la seguente definizione.
+\begin{defn}
+[Punto singolare all'infinito] Il punto all'infinito $z_{\infty}$ è singolare per $f(z)$ se $z_{0} = 0$ è singolare per $f\left(\frac{1}{z}\right)$.
+\end{defn}
+
+\begin{defn}
+[Punto singolare isolato all'infinito] Il punto all'infinito $z_{\infty}$ è isolato per $f(z)$ se è singolare e tutti i punti singolari al finito per $f$ ricadono all'interno di un disco di raggio $R$, cioè $f\in H(\{|z|>R\})$.
+\end{defn}
+
+Dunque per $f$ si ha che $\infty$ è:
+\begin{enumerate}
+    \item [$\triangleright$] singolarità eliminabile se $\lim_{z\to \infty}f(z)$ esiste finito.
+    \item [$\triangleright$] polo se $\lim_{z\to \infty}f(z)=\infty$.
+    \item [$\triangleright$] singolarità essenziale se $\not\exists\lim_{z\to \infty}f(z)$.
+\end{enumerate}
+
+Segnaliamo che se $f(z)\sim\dfrac{1}{z^{\alpha}}$ allora il punto $z=\infty$ è singolarità eliminabile, e in particolare è uno zero di ordine $\alpha$.
+
+Analogamente al caso finito, definito $M=\left\{n\in\ZZ\ :\ a_n\neq 0,\ n>0 \right\}$ si ha che
+\begin{enumerate}
+    \item [$\triangleright$] singolarità eliminabile se e solo se $M=\varnothing$.
+    \item [$\triangleright$] polo se e solo se $0<|M|<+\infty$; in particolare il polo è di ordine $m$, essendo $m$ il più grande intero positivo per il quale $a_{m}\neq 0$.
+    \item [$\triangleright$] singolarità essenziale se e solo se $|M|=\infty$.
+\end{enumerate}
+
+Per quanto riguarda l'ordine dei poli, nella pratica è tutto più semplice: 
+\begin{equation*}
+f(z)=\frac{z^5}{(1+iz)^2}\ :\ \infty\text{ è un 3-polo}
+\end{equation*}
+
+Vi è inoltre un terzo modo per studiare la singolarità all'infinito: $\infty$ è punto di singolarità eliminabile, polo, singolarità essenziale per $f(z)$ se 0 è punto di singolarità eliminabile, polo, singolarità essenziale per $g(z)=f(1/z)$.
+
+\textit{Esempio.}\\
+La funzione $f(z) = e^{z}$ ha singolarità isolata essenziale all'infinito, mentre $g(z) = \frac{1}{\sin z}$ ha punto all'infinito non isolato.
+
+\newpage
+
+\begin{rem}
+Al variare dell'aperto $A$ considerato, può variare la serie di Laurent associata ad una funzione $f$: in altre parole, bisognerà volta per volta precisare in quale corona si andrà ad operare. A titolo di esempio, prendiamo la funzione $f(z)=\dfrac{1}{z(1-z)}$; risulta
+\begin{align*}
+\text{nella corona }0<|z|<1\text{ centrata in }z_0=0 \qquad f(z)&=\sum_{n=-1}^{+\infty} z^n \\
+\text{nella corona }0<|z-1|<1\text{ centrata in }z_0=1 \qquad f(z)&=\sum_{n=-1}^{+\infty}(-1)^n(z-1)^n \\
+\text{nella corona }1<|z|\text{ centrata in }z_0=\infty \qquad f(z)&=-\sum_{n=-\infty}^{-2}z^n
+\end{align*}
+Dunque in 0 e 1 ci sono dei poli, all'infinito una singolarità eliminabile.
+\end{rem}
+
 
 \section{Teorema dei residui}
 
-Il coefficiente $a_{- 1}$ della serie di Laurent centrata in $z_{0}$ è molto importante e prende il nome di \textbf{residuo integrale}
+Riprendiamo l'espansione in serie di Laurent 
 \begin{equation*}
-a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} dw\ \ \implies \ \ \Res (f, z_{0}) = a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) dw
+f(z) = \sum\limits^{\infty}_{n = - \infty} a_{n}(z - z_{0})^{n} \quad a_{n} = \frac{1}{2\pi i}\int_{\gamma}\frac{f(w)}{(w - z_{0})^{n + 1}} \dw
 \end{equation*}
-Il seguente teorema semplifica tantissimi calcoli di integrali, anche reali.
-\begin{thm}
-[dei Residui]
-Sia $A\subset \CC$ aperto, $f\in H(A\setminus \{z_{1}, \dotsc, z_{n}\} \cap C^{0}(\overline{A} \setminus \{z_{1}, \dotsc, z_{n}\})$. Allora
+Osserviamo che per $n=-1$ il denominatore $(w - z_{0})^{n + 1}$ si annulla, e rimane
 \begin{equation*}
-\boxed{\int_{\gamma} f(z) dz = 2\pi i \cdot \sum\limits^{n}_{j = 1}\Res (f, z_{j})}
+a_{- 1} = \frac{1}{2\pi i}\int_{\gamma} f(w) \dw
 \end{equation*}
-\end{thm}
+Allora
 \begin{defn}
-Se consideriamo una $\gamma $ chiusa che contiene tutte le singolarità di $f(z)$ al finito, e $f\in H(| z| > R)$, se consideriamo lo sviluppo di $f$ in un intorno dell'infinito, allora definiamo il \textbf{residuo all'infinito}
-\begin{equation*}
-\Res (f, \infty) : = - a_{- 1} = \frac{1}{2\pi i}\int_{- \gamma} f(w) dw
-\end{equation*}
+Si dice residuo di $f$ in $z_0$ la quantità $\Res(f,z_0):=a_{-1}$.
 \end{defn}
-\begin{thm}
-Se abbiamo un numero finito di singolarità, la somma di tutte, sia al finito che all'infinito, vale zero.
+In questo modo possiamo caratterizzare l'integrale curvilineo di $f$:
 \begin{equation*}
-\sum\limits^{n}_{j = 1}\Res (f, z_{j}) + \Res (f, \infty) = 0
+\boxed{\int_{\gamma} f(w) \dw=2\pi i\cdot \Res(f,z_0)}
+\end{equation*}
+
+Ma per cosa sta l'aggettivo ``residuo''?\\
+Per il teorema dell'integrale nullo di Cauchy, su un insieme semplicemente connesso si ha $\int_{\gamma} f(w) \dw=0$; invece su un insieme non semplicemente connesso l'integrale non è nullo, proprio perché la funzione lascia un \textit{residuo}.
+
+\begin{thm}[dei Residui]$\\$
+Sia $A$ semplicemente connesso. Sia $f\in H(A\setminus \{z_{1}, \dotsc, z_{n}\})$, dunque $z_1,\dotsc,z_n$ sono punti singolari e $f$ è olomorfa su un insieme non più semplicemente connesso. Allora
+\begin{equation*}
+\int_{\gamma} f(z) \dz = 2\pi i \cdot \sum\limits^{n}_{k = 1}\Res (f, z_{k})
 \end{equation*}
 \end{thm}
 
-\subsection{Come calcolare i residui}
+\begin{proof} 
+Vediamo una dimostrazione abbastanza approssimativa e per $k=2$; la situazione è questa:
 
-Se $z_{0} \neq \infty $
-\begin{itemize}
-\item se è eliminabile allora $\Res (f, z_{0}) = 0$
-\item se è polo di ordine $n$ allora $\Res (f, z_{0}) = \frac{1}{(n - 1)!}\lim\limits_{z\rightarrow z_{0}}\frac{d^{n - 1}}{dz^{n - 1}}(z - z_0)^n f(z)$
-\item se è polo di ordine $1$ allora $\Res \left(\frac{f}{g}, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g'(z)}$
-\item vale L'Hopital $\lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g(z)} = \lim\limits_{z\rightarrow z_{0}}\frac{f'(z)}{g'(z)}$
-\end{itemize}
+\fg{0.5}{bonfa_8}
 
-Se $z_{0} = \infty $
-\begin{itemize}
+vogliamo calcolare $\int_{\gamma}f(z)\dz$, ma per ora sappiamo dalla definizione di residuo che
+$$\int_{\Gamma_1}f(z)\dz=2\pi i\cdot \Res(f,z_1) \qquad \int_{\Gamma_2}f(z)\dz=2\pi i\cdot \Res(f,z_2)$$
+Per sbloccare la situazione usiamo la conseguenza del teorema dell'integrale nullo di Cauchy deformando con continuità $\gamma$ in $\gamma'$ \textit{girando attorno} alle singolarità:
+
+\fg{0.6}{bonfa_9}
+
+Da una parte 
+$$\int_{\gamma'}f(z)\dz=0$$
+perché $\gamma'$ ora racchiude un insieme \textit{senza buchi}; dall'altra, per l'additività dell'integrale 
+$$
+\int_{\gamma'}f(z)\dz=\int_\gamma f(z)\dz+\int_{\Gamma_1}f(z)\dz+\int_{\Gamma_2}f(z)\dz
+$$
+Mettendo a sistema le due cose otteniamo
+\begin{equation*}
+\int_\gamma f(z)\dz=-\int_{\Gamma_1}f(z)\dz-\int_{\Gamma_2}f(z)\dz=-2\pi i\left(\Res(f,z_1)+\Res(f,z_2)\right)
+\end{equation*}
+che è quanto volevasi dimostrare.
+\end{proof}
+
+\textit{Esempio.}\\
+La funzione geometrica $f(z)=\frac{1}{1-z}$ ha $z^*=1$ come punto singolare. Si calcola facilmente $\Res(f,z^*)$, in quanto la funzione è già scritta in serie di Laurent: $f(z)=-(z-1)^{-1}$ e quindi $\Res(f,z^*)=a_{-1}=-1$.
+
+\begin{defn}
+Si dice residuo di $f$ in $\infty$ la quantità $\Res(f,\infty):=-a_{-1}$.
+\end{defn}
+
+\begin{thm}
+Sia $f\in H(\CC\setminus\{z_1,\dotsc,z_n\})$. Allora
+\begin{equation*}
+\sum\limits^{n}_{k = 1}\Res (f, z_{k}) + \Res (f, \infty) = 0
+\end{equation*}
+\end{thm}
+
+\begin{proof}
+Prendiamo la circonferenza $r:[0,2\pi]\to\CC$ parametrizzata da $r(t)=Re^{it}$ che contiene tutti i punti $z_1,\dotsc,z_n$. 
+
+Da una parte, per definizione, abbiamo
+\begin{align*}
+\int_r f(z)\dz&:=\int_0^{2\pi} f(Re^{it})\cdot Rie^{it}\dt =\\
+&=\int_0^{2\pi} \sum_{n\in\ZZ} a_n R^ne^{int}Rie^{it}\dt =\\
+&=i\sum_{n\in\ZZ}a_nR^{n+1}\underbrace{\int_0^{2\pi}e^{i(n+1)t}\dt}_{\neq 0\Leftrightarrow n=-1} =\\
+&=2\pi i \cdot a_{-1} =\\
+&=-2\pi i\cdot \Res(f,\infty)
+\end{align*}
+Dall'altra, per il teorema dei residui, abbiamo
+\begin{equation*}
+\int_r f(z)\dz=2\pi i\cdot \sum_k\Res(f,z_k)
+\end{equation*}
+Mettendo a sistema i due risultati si ottiene la tesi
+$$
+\sum\limits^{n}_{k = 1}\Res (f, z_{k}) = - \Res (f, \infty)
+$$
+\end{proof}
+
+\section{Calcolo dei residui}
+
+Nei punti $z_{0} \neq \infty $
+\begin{enumerate}
+\item se è una singolarità eliminabile:
+\begin{equation*}
+\Res \left(f, z_{0}\right) = 0
+\end{equation*}
+\item se è un polo
+\begin{enumerate}
+\item semplice (di ordine $p = 1$)
+\begin{equation*}
+\Res \left(f, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}} f(z)\left(z - z_{0}\right)
+\end{equation*}
+\item di ordine $p \geq 2$
+\begin{equation*}
+\Res \left(f, z_{0}\right) = \frac{1}{\left(p - 1\right) !}\lim\limits_{z\rightarrow z_{0}}\left\{\frac{d^{p - 1}}{dz^{p - 1}}\left[ f(z)\left(z - z_{0}\right)^{p}\right]\right\}
+\end{equation*}
+\end{enumerate}
+\item se è una singolarità essenziale bisogna per forza fare lo sviluppo di Laurent (che è valido in tutti i casi in realtà, ma è decisamente più laborioso la maggior parte delle volte)
+\end{enumerate}
+
+In alternativa, con una funzione del tipo $F = \frac{f}{g}$, se $f\in \Hc \left(\Uc \left(z_{0}\right)\right)$ e $g$ ha in $z_{0}$ uno zero semplice ($g\left(z_{0}\right) = 0$ e $g'\left(z_{0}\right) \neq 0$), allora
+\begin{equation*}
+\Res \left(\frac{f}{g}, z_{0}\right) = \frac{f\left(z_{0}\right)}{g'\left(z_{0}\right)}
+\end{equation*}
+Ricordiamo che se $f$ non si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ un polo del I ordine. Se $f$ si annulla in $z_{0}$ allora $F$ ha in $z_{0}$ una singolarità eliminabile.
+
+Invece per $z_{0} = \infty $:
+\begin{enumerate}
 \item $\Res (f, \infty) = \Res \left(- \frac{1}{z^{2}} f\left(\frac{1}{z}\right), 0\right)$
 \item se è zero di ordine $1$ allora $\Res (f, \infty) = - \lim\limits_{z\rightarrow \infty} zf(z)$
 \item se è zero di ordine $ \geq 2$ allora $\Res (f, \infty) = 0$
-\end{itemize}
+\end{enumerate}
+
 
 \section{Lemmi di Jordan}
 
+In questo paragrafo vediamo alcuni lemmi che consentono il calcolo di integrali di linea mediante opportuni passaggi al limite: le loro principali applicazioni sono nel calcolo delle trasformate di Fourier e delle antitrasformate di Laplace.
+
 Consideriamo un generico arco di circonferenza:
 \begin{equation*}
-C_{R}(\vartheta_{1}, \vartheta_{2}) = \left\{z\in \CC : z = Re^{i\vartheta}, \vartheta \in [\vartheta_{1}, \vartheta_{2}]\right\}
+C_{R}(t_{1}, t_{2}) = \left\{z\in \CC : z = Re^{it}, t \in [t_{1}, t_{2}]\right\}
 \end{equation*}
-\begin{thm}
-Sia $f(z)$ continua su $C_{R}$. Allora:
+
+\begin{lemma}
+Sia $f(z)$ continua su $C_{R}$. Allora
 \begin{equation*}
-\left| \int_{C_{R}} f(z)dz\right| \leq R(\vartheta_{2} - \vartheta_{1})\max_{|z\in C_{R}}| f(z)|
+\left| \int_{C_{R}} f(z)\dz\right| \leq R(t_{2} - t_{1})\cdot \max_{t\in [t_1,t_2]}\left|f(Re^{it})  \right|
 \end{equation*}
-dove $R(\vartheta_{2} - \vartheta_{1})$ non è altro che la lunghezza dell'arco.
-\end{thm}
-\begin{thm}
-[Lemma di Jordan al cerchio grande]
-Sia $K > 0$ e sia $f(z)$ continua per $|z| > K$. Se $\exists \alpha > 1, c > 0$ tali che $|f(z)| \leq \frac{c}{|z|^{\alpha}}, \ \forall z: |z| > K, $ allora:
+dove $R(t_{2} - t_{1})$ non è altro che la lunghezza dell'arco considerato.
+\end{lemma}
+
+\begin{coro}[per il cerchio grande]
+Se $\exists b>1$ tale che $|f(z)| \leq \dfrac{k}{|z|^{b}}$ per ogni $z$ tale che $|z|\geq R_0$ allora
 \begin{equation*}
-\lim_{R\rightarrow \infty}\int_{C_{R}(\vartheta_{1}, \vartheta_{2})} f(z)dz = 0\ \ \forall \vartheta_{1}, \vartheta_{2}
+\lim_{R\rightarrow +\infty}\ \int_{C_{R}} f(z)\dz = 0
 \end{equation*}
-\end{thm}
-\begin{proof}
+\end{coro}
+
+\begin{coro}[per il cerchio piccolo]
+Sia $f\in H(d(z_0,r)\setminus\{z_0\})$ con $z_0$ 1-polo per $f$; sia $C_{\varepsilon}(t)=z_0+\varepsilon e^{it}$ con $t\in[t_1,t_2]$. Allora
 \begin{equation*}
-\left| \int f(z) dz\right| \leq R(\vartheta_{2} - \vartheta_{1})\frac{c}{|z|^{\alpha}} = R(\vartheta_{2} - \vartheta_{1})\frac{c}{R^{\alpha}}\xrightarrow[\alpha > 1]{R\rightarrow \infty} 0
+\lim_{\varepsilon\rightarrow 0^+}\ \int_{C_{\varepsilon}} f(z)\dz = (t_2-t_1)\,i\cdot\Res(f,z_0) 
+\end{equation*}
+\end{coro}
+
+Per concludere vediamo un risultato generale più mirato al calcolo di serie di Fourier.
+
+\begin{lemma}[di Jordan]
+Sia $f:A\to\CC$ continua su $C_R(0,\pi)$ e sia $\omega>0$. Allora
+\begin{equation*}
+\left| \int_{C_R} e^{i\omega z}f(z)\dz \right| \leq K\cdot \max_{t\in[0,\pi]}\left|f(Re^{it})\right|
+\end{equation*}
+e $K$ non dipende da $R$.
+\end{lemma}
+
+\fg{0.4}{bonfa_10}
+
+\begin{proof}\leavevmode
+\begin{equation*}
+\begin{aligned}
+\left|\int_{C_R} e^{i \omega t} f(z) \dz\right| &\stackrel{D E F}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
+&\leqslant \underbrace{\max _{t \in[0, \pi]}\left|f\left(R e^{i t}\right)\right|}_M\cdot\left|\int_0^\pi Re^{i \omega(\cos t+i \sin t) R} \dt\right|\\
+&=M\left|\int_0^\pi R\ \cancel{e^{\text {Riw } \cos t}}\ e^{-R \omega \sin t} \dt\right|\\
+&=2 M\left|\int_0^{\pi / 2} R e^{-\omega R \sin t} \dt\right|\\
+&\leqslant 2 M\left|\int_0^{\pi / 2} R e^{-\omega R t} \dt\right| \qquad \left(\sin x\leq x\text{ se } x\in[0,\pi/2]\right)\\
+&=2 M \cancel{R}\left|\left[\frac{1}{-\omega \cancel{R}}\ e^{-\omega R t}\right]_0^{\pi / 2}\right|\\
+&\leqslant \frac{2 M}{\omega}\left|e^{-\omega R \pi / 2}-1\right|\\
+&\leqslant \frac{2 M}{\omega}\\
+&=K M \text { con } k=\frac{2}{\omega}
+\end{aligned}
 \end{equation*}
 \end{proof}
-\begin{thm}
-[Lemma di Jordan al cerchio piccolo]
-Con analoghe ipotesi ma con $\alpha < 1$
-\begin{equation*}
-\lim_{R\rightarrow 0}\int_{C_{R}(\vartheta_{1}, \vartheta_{2})} f(z)dz = 0\ \ \forall \vartheta_{1}, \vartheta_{2}
-\end{equation*}
-\end{thm}
-Tuttavia $f$ può andare a zero anche più lentamente per ottenere dei risultati interessanti
-\begin{thm}
-[Lemmi di Jordan]
-Sia $f(z)$ continua per $|z| > K.$ Siano inoltre $\vartheta_{1}, \vartheta_{2} \in [0, 2\pi]$ e $a > 0, $tali che:
-\begin{equation*}
-\lim_{R\rightarrow \infty}\sup_{z\in C_{R}}| f(z)| = 0
-\end{equation*}
-Allora:
-\begin{enumerate}
-\item se $\vartheta_{1} = 0$ e $\vartheta_{2} = \pi $
 
-\begin{equation*}
-\lim_{R\rightarrow \infty}\int_{C_{R} (0, \pi)} e^{iaz} f(z)dz = 0
-\end{equation*}
-\item se $\vartheta_{1} = \pi $ e $\vartheta_{2} = 2\pi $,
+Come corollari di ciò ci sono i casi in cui si ha
+\begin{itemize}
+    \item $\int_{C_R} e^{i\omega z}f(z)\dz$ ma $\omega<0$: si prende
+    \fg{0.4}{bonfa_11}
 
-\begin{equation*}
-\lim_{R\rightarrow \infty}\int_{C_{R} (\pi, 2\pi)} e^{- iaz} f(z)dz = 0
-\end{equation*}
-\item se $\vartheta_{1} = - \frac{\pi}{2}$ e $\vartheta_{2} = \frac{\pi}{2}$,
+    \item $\int_{C_R} e^{\omega z}f(z)\dz$ con $\omega>0$ o $\omega<0$: si prendono rispettivamente
+    \begin{figure}[h!]
+    \begin{center}
+      \includegraphics[width=4cm]{images/bonfa_12}
+      \includegraphics[width=4cm]{images/bonfa_13}
+    \end{center}
+    \end{figure}
+\end{itemize}
 
-\begin{equation*}
-\lim_{R\rightarrow \infty}\int_{C_{R}\left(- \frac{\pi}{2}, \frac{\pi}{2}\right)} e^{- az} f(z)dz = 0
-\end{equation*}
-\item se $\vartheta_{1} = \frac{\pi}{2}$ e $\vartheta_{2} = \frac{3}{2} \pi $,
-
-\begin{equation*}
-\lim_{R\rightarrow \infty}\int_{C_{R}\left(\frac{\pi}{2}, \frac{3}{2} \pi \right)} e^{az} f(z)dz = 0
-\end{equation*}
-\end{enumerate}
-\end{thm}
-\begin{proof}[Dimostrazione di $(1)$.]
-
-Sia $z = Re^{i\vartheta}$, $\vartheta \in [0, \pi]$, sostituiamo
-\begin{equation*}
-\int_{C_{R} (0, \pi)} e^{iaz} f(z)dz = \int^{\pi}_{0} e^{iaRe^{i\vartheta}} f\left(Re^{i\vartheta}\right) iRe^{i\vartheta} d\vartheta
-\end{equation*}
-Poniamo $M = \sup_{z\in C_{R}}| f(z)| $, per ipotesi $\lim_{R\rightarrow \infty} M = 0$. Notiamo che
-\begin{equation*}
-e^{iaRe^{i\vartheta}} = e^{iaR[\cos \vartheta + i\sin \vartheta]} = \underbrace{e^{iaR\cos \vartheta}}_{\substack{\text{modulo}\\\text{unitario}}} e^{- aR\sin \vartheta}
-\end{equation*}
-Maggioriamo
-\begin{equation*}
-\left| \int_{C_{R} (0, \pi)} e^{iaz} f(z)dz\right| \leq M\int^{\pi}_{0}\left| e^{iaRe^{i\vartheta}} iRe^{i\vartheta}\right| d\vartheta = 2MR\int^{\pi /2}_{0} e^{- aR\sin \vartheta} d\vartheta = (\star)
-\end{equation*}
-a questo punto possiamo minorare il seno con la retta che passa per $0$ e $(\pi /2, 1)$
-\begin{equation*}
-\sin \vartheta \geq \frac{2\vartheta}{\pi}
-\end{equation*}
-Di conseguenza
-\begin{equation*}
-(\star) \leq 2MR\int^{\pi /2}_{0} e^{- aR\frac{2\vartheta}{\pi}} d\vartheta = \cancel{2} M\cancel{R}\left[\left(- \frac{\pi}{\cancel{2} a\cancel{R}}\right) e^{- aR\frac{2\vartheta}{\pi}}\right]^{\pi /2}_{0} = - \frac{\pi M}{a}\underbrace{\left[e^{- aR} - 1\right]}_{\in [ - 1, 0]} \leq \frac{\pi M}{a}
-\end{equation*}
-Per ipotesi $M\rightarrow 0$ e $a > 0$, da cui la tesi.
-\end{proof}
 
 \chapter{Spazi di Banach e Spazi di Hilbert}
 
+Addentriamoci nell'\textit{Analisi funzionale} parlando di \textbf{spazi funzionali}.
+
+\section{Spazi vettoriali e norme}
+
+Iniziamo con un elenco delle nozioni basilari dell'algebra lineare.
+
+\begin{defn}[Spazio vettoriale]
+Sia $\KK$ il camo dei reali o dei complessi. Gli elementi di $\KK$ verranno detti scalari. Uno spazio vettoriale (o lineare) sul campo $\KK$ è un insieme non vuoto $X$ tale che:
+\begin{enumerate}
+    \item [(i)] per ogni coppia di elementi $x,y\in X$ esista un terzo elemento di $X$ che indicheremo con $x+y$
+    \item [(ii)] per ogni $x\in X$ e $\lambda \in \KK$ esista un elemento di $X$ che indicheremo con $\lambda x$
+\end{enumerate}
+Tali operazioni di sommma e prodotto devono soddisfare le seguenti proprietà:
+\begin{enumerate}
+    \item [$\diamond$] per ogni $x,y,z\in X$ si ha $(x+y)+z=x+(y+z)$
+    \item [$\diamond$] per ogni $x\in X$ esiste l'elemento nullo $0\in X$ tale che $0+x=x+0=x$
+    \item [$\diamond$] per ogni $x\in X$ esiste l'elemento opposto $-x\in X$ tale che $x+(-x)=(-x+x)=0$
+    \item [$\diamond$] per ogni $x,y\in X$ si ha $x+y=y+x$
+    \item [$\diamond$] per ogni $x,y\in X$ e per ogni $\lambda\in\KK$ si ha $\lambda(x+y)=\lambda x+\lambda y$
+    \item [$\diamond$] per ogni $x\in X$ e per ogni $\lambda,\mu\in\KK$ si ha $(\lambda+\mu)x=\lambda x +\mu x$
+    \item [$\diamond$] per ogni $x\in X$ e per ogni $\lambda,\mu\in\KK$ si ha $(\lambda \mu)x=\lambda(\mu x)$
+    \item [$\diamond$] per ogni $x\in X$ si ha $1x=x$
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[Sottospazio vettoriale]
+Sia $X$ uno spazio vettoriale. Un sottoinsieme non vuoto $Y$ di $X$ si dice sottospazio vettoriale di $X$ se:
+\begin{enumerate}
+    \item [(i)] per ogni $x,y\in Y$ si ha $x+y\in Y$
+    \item [(ii)] per ogni $x\in Y$ e per ogni $\lambda\in\KK$ si ha $\lambda x\in Y$
+\end{enumerate}
+\end{defn}
+In altre parole $Y$ è a sua volta uno spazio vettoriale con le operazioni di somma e prodotto indotte da $X$ stesso.
+
+\begin{defn}[Combinazione lineare]
+Sia $X$ uno spazio vettoriale. Dati $n$ vettori $x_1,\dots,x_n\in X$ si chiama combinazione lineare di $x_1,\dots,x_n$ a coefficienti $\lambda_1,\dots,\lambda_n\in\KK$ la seguente somma
+\begin{equation*}
+\sum_{k=1}^n \lambda_kx_k
+\end{equation*}
+\end{defn}
+
+\begin{defn}
+Sia $X$ uno spazio vettoriale. I vettori $x_1,\dots,x_n\in X$ si dicono linearmente indipendenti se dati $\lambda_1,\dots,\lambda_n\in\KK$ tali che
+\begin{equation*}
+\sum_{k=1}^n \lambda_kx_k=0
+\end{equation*}
+si ha necessariamente che $\lambda_1=\cdots=\lambda_n=0$.
+\end{defn}
+
+\begin{defn}
+Sia $X$ uno spazio vettoriale. Dati $n$ vettori $x_1,\dots,x_n\in X$ si dice che essi generano $X$ se per ogni $x\in X$ esistono $\lambda_1,\dots,\lambda_n\in\KK$ tali che
+\begin{equation*}
+x=\sum_{k=1}^n \lambda_kx_k
+\end{equation*}
+In tal caso si scrive $X=\text{span}\{x_1,\dots,x_n\}$. 
+
+Se inoltre i vettori $x_1,\dots,x_n$ sono linearmente indipendenti allora si dice che l'insieme $\{x_1,\dots,x_n\}$ forma una base di $X$.
+\end{defn}
+
+\begin{defn}[Dimensione]
+Sia $X$ uno spazio vettoriale che ammette una base di $n$ vettori. Allora si dice che $X$ ha dimensione $n$, e si pone $\dim X=n$. Se $X$ non ammette alcuna base formata da un numero finito di vettori, allora $\dim X=\infty$.
+\end{defn}
+
+\begin{thm}
+La dimensione di uno spazio vettoriale non dipende dalla base scelta.
+\end{thm}
+
+\textit{Esempio.}
+
+Consideriamo lo spazio $\KK$ delle $n$-uple ordinate di numeri reali o complessi. Definendo la somma di vettori come
+$$
+(x_1,\ddots,x_n)+(y_1,\dots,y_n):=(x_1+y_1,\dots,x_n+y_n)
+$$
+e il prodotto tra scalare e vettore come
+$$
+\lambda(x_1,\dots,x_n):=(\lambda x_1,\dots, \lambda x_n)
+$$
+si ottiene lo spazio vettoriale $\KK^n$ su $\KK$ e risulta $\dim \KK^n=n$. Si osservi che lo spazio vettoriale $\CC^n$ su $\CC$ può anche essere considerato come spazio vettoriale sul campo $\RR$, ma in questo caso $\dim \CC^n=2n$. 
+
 \begin{defn}
 [Norma]
-Sia $X$ uno spazio vettoriale. Si dice \textbf{norma} un'applicazione $ \Vert \cdot \Vert : X\rightarrow [0, + \infty)$ che verifica, $\forall \lambda \in \RR$, $\forall x, y\in X$
+Sia $X$ uno spazio vettoriale (qualsiasi, ovvero sia reale che complesso, sia di dimensione finita che infinita). Si dice norma un'applicazione $ \Vert \cdot \Vert : X\rightarrow [0, + \infty)$ che verifica
 \begin{itemize}
-\item $ \Vert x \Vert = 0\iff x = 0$
-\item $ \Vert \lambda x \Vert = | \lambda | \Vert x \Vert $
-\item $ \Vert x + y \Vert \leq \Vert x \Vert + \Vert y \Vert $
+\item $ \Vert x \Vert = 0\iff x = 0$ (annullamento)
+\item $ \Vert \lambda x \Vert = | \lambda |\, \Vert x \Vert $ (omogeneità)
+\item $ \Vert x + y \Vert \leq \Vert x \Vert + \Vert y \Vert $ (disuguaglianza triangolare)
 \end{itemize}
+$\forall \lambda \in \RR$, $\forall x, y\in X$
 \end{defn}
 
-\textit{Esempio.}
-
-Dato $1 \leq p < + \infty $, l'applicazione $ \Vert \cdot \Vert : \RR^{n}\rightarrow [0, + \infty)$ definita da
+\textit{Esempio.}\\
+Dato lo spazio vettoriale $\RR^n$ (dim finita) l'applicazione $ \Vert \cdot \Vert : \RR^{n}\rightarrow [0, + \infty)$, $1 \leq p < + \infty $, definita da
 \begin{equation*}
-\Vert x \Vert_{p} = \left(| x_{1}|^{p} + \dotsc + | x_{n}|^{p}\right)^{1/p}
+\Vert x \Vert_{p} = \left(\sum_{k=1}^n|x_k|^p\right)^{1/p}
 \end{equation*}
-è la norma $p$.
-
-\textit{Esempio.}
-
-L'applicazione $ \Vert \cdot \Vert : \RR^{n}\rightarrow [0, + \infty)$ definita da
+è la norma $p$. Si noti che per $n=1$ coincide con il valore assoluto, per $p=2$ si ottiene la norma euclidea
 \begin{equation*}
-\Vert x \Vert_{\infty} = \max\{| x_{1}|, \dotsc, | x_{n}| \}
+\Vert x \Vert_{2} = \sqrt{\sum_{k=1}^n x_k^2}
 \end{equation*}
-è la norma infinito.
+mentre per $p=\infty$ la norma infinito
+\begin{equation*}
+\Vert x \Vert_{\infty} = \max_k |x_k|
+\end{equation*}
+
+\textit{Esempio.}\\
+Dato lo spazio vettoriale delle funzioni $\Cc^0\left([a,b]\right)$ (dim infinita), $a,b\in\RR$, si definisce norma $p$, $1 \leq p < + \infty $, la funzione
+\begin{equation*}
+\Vert f \Vert_{p}=\int_a^b |f(x)|^p \dx
+\end{equation*}
+In particolare per $p=\infty$ si ottiene la norma infinito o uniforme
+\begin{equation*}
+\Vert f \Vert_{\infty}=\max_{x\in[a,b]}|f(x)|
+\end{equation*}
+
 \begin{defn}
 [Spazio normato]
-Uno spazio vettoriale dotato di norma si dice \textbf{spazio normato}.
+Uno spazio vettoriale dotato di norma si dice spazio normato.
 \end{defn}
+
 \begin{defn}
 [Metrica]
-La funzione $d: X\times X\rightarrow [0, + \infty)$ definita da $(u, v) = \Vert u - v \Vert $ è detta \textbf{metrica} indotta dalla norma, mentre la quantità $ \Vert u - v \Vert $ è detta \textbf{distanza}.
+La funzione 
+\begin{align*}
+d: X\times X&\rightarrow [0, + \infty) \\
+(x,y)&\mapsto d(x,y)=\Vert x-y\Vert
+\end{align*}
+è detta metrica, o distanza, indotta dalla norma.
 \end{defn}
+Dunque la norma misura un singolo elemente, la metrica misura la distanza fra due elementi dello spazio.
+
+\begin{rem}
+La distanza rispetta le seguenti proprietà:
+\begin{enumerate}
+    \item [(i)] $d(x,y)=0\ \Leftrightarrow\ x=y$
+    \item [(ii)] $d(x,y)=d(y,x)$
+    \item [(iii)] $d(x,z)\leq d(x,y)+d(y,z)$
+\end{enumerate}
+pertanto possiamo intuire che essa può essere introdotta su qualsiasi insieme, non necessariamente su uno spazio vettoriale (al contrario della norma, che ha senso solo su uno spazio vettoriale); inoltre possiamo introdurre una distanza su uno spazio vettoriale che non induce alcuna norma.
+
+Capiamo quindi che il concetto di metrica è molto più generale del concetto di norma, ma per quanto verrà fatto in questo corso i due oggetti coincideranno.
+\end{rem}
+
 \begin{defn}
 [Spazio metrico]
-Uno spazio vettoriale dotato di metrica si dice \textbf{spazio metrico}, quindi uno spazio normato è anche metrico.
+Uno spazio normato dotato di metrica si dice spazio metrico.
 \end{defn}
+
+\begin{thm}
+Uno spazio normato è uno spazio metrico.
+\end{thm}
+
+È pertanto possibile introdurre sugli spazi normati tutte nozioni di carattere topologico quali ad esempio i concetti di insieme aperto e chiuso, contiinuità di funzioni, convergenza di successioni, etc. Riportiamo qui sotto la definizione di coonvergenza di una successione.
+
+\begin{defn}[Successione convergente]
+Sia $X$ uno spazio vettoriale normato. Una successione $\{x_n\}\subset X$ si dice convergente a $x\in X$ se $d(x_n,x)=\Vert x_n-x\Vert\to 0$ per $n\to\infty$.
+\end{defn}
+
+\newpage
+
+\section{Spazi di Banach}
+
+La nozione di completezza di uno spazio è legata al comportamento di particolari successioni che definiamo come segue:
+
 \begin{defn}
 [Successione di Cauchy]
-Sia $V$ uno spazio normato. Una successione $x_{n}$ è di Cauchy se $\forall \varepsilon > 0$, $\exists N$ tale che $\forall n, m \geq N$ si ha $ \Vert x_{n} - x_{m} \Vert < \varepsilon $. Ogni successione convergente è di Cauchy.
+Sia $X$ uno spazio normato. Una successione $\{x_{n}\}\subset X$ è di Cauchy se
+\begin{equation*}
+\forall \varepsilon > 0\ \ \exists N\in\NN\ \ \text{ t.c. }\ \ \Vert x_{n} - x_{m} \Vert < \varepsilon\ \ \forall n,m>N
+\end{equation*}
 \end{defn}
+In altre parole le successioni di Cauchy ``non divergono nè oscillano''. Infatti le successioni convergenti sono successioni di Cauchy. Tuttavia, il viceversa non vale, ovvero possono esistere successioni di Cauchy che non convergono, ma che nè divergono nè oscillano. Pertanto ha senso la seguente definizione:
 \begin{defn}
 [Spazio completo]
-Uno spazio metrico si dice \textbf{completo} se ogni successione di Cauchy è convergente.
+Uno spazio normato si dice completo se ogni successione di Cauchy è convergente.
 \end{defn}
+
 \begin{defn}
 [Spazio di Banach]
-Uno spazio normato si dice di Banach se è completo.
+Uno spazio normato si dice di Banach se è completo rispetto alla metrica indotta dalla norma.
 \end{defn}
-\begin{defn}
-[Prodotto scalare]
-Il prodotto scalare è un'applicazione $( \cdot, \cdot) : X\times X\rightarrow \CC$ tale che
-\begin{itemize}
-\item $(x, x) = 0\iff x = 0$
-\item $(x, x) \geq 0, \forall x\in X$
-\item $(x, y) = \overline{(y, x)}$
-\item Vale la \textit{sesquilinearità}
-\begin{itemize}
-\item $(c_{1} x_{1} + c_{2} x_{2}, y) = c_{1}(x_{1}, y) + c_{2}(x_{2}, y)$
-\item $\overline{(y, c_{1} x_{1} + c_{2} x_{2})} = c_{1}\overline{(y, x_{1})} + c_{2}\overline{(y, x_{2})}$
-\item $(y, c_{1} x_{1} + c_{2} x_{2}) = \overline{c_{1}}(y, x_{1}) + \overline{c_{2}}(y, x_{2})$
-\end{itemize}
-\end{itemize}
-\end{defn}
-\begin{defn}
-[Spazio di Hilbert]
-Uno spazio vettoriale \textit{dotato di prodotto scalare} (che induce quindi una norma $ \Vert x \Vert = \sqrt{(x, x)}$ e una distanza) \textit{e completo} rispetto a quella norma si dice \textbf{spazio di Hilbert}.
-\end{defn}
-\begin{defn}
-Definiamo lo spazio delle successioni convergenti
+
+\begin{rem}
+Uno spazio di Banach può avere dimensione sia finita che infinita, anzi in questo capitolo è proprio quest'ultimo caso che ci interessa: vogliamo estendere i concetti di algebra visti nei precedenti corsi al caso di spazi vettoriali $\infty$-dimensionali. 
+
+Infatti sappiamo che uno spazio vettoriale a dimensione finita è banalmente completo, ovvero di Banach.
+\end{rem}
+
+\textit{Esempio.}\\
+L'insieme dei numeri razionali $\QQ$ non è completo.
+
+Per dimostrare tale affermazione basta dimostrare che una successione di Cauchy contenuta in $\QQ$ non converge in $\QQ$: tale successione di numeri razionali è $a_n=\left(1+\frac{1}{n}\right)^n$, che converge a $e\notin \QQ$.
+
+\textit{Esempio.}\\
+Riprendiamo lo spazio $X$ delle funzioni continue su $[a,b]$, con $a=0$ e $b=2$ per comodità, e le due norme 
+\begin{align*}
+&\Vert f \Vert_\infty =\max_{x\in[0,2]} |f(x)| &\text{norma infinita} \\
+&\Vert f \Vert_1 =\int_0^2 |f(x)| \dx &\text{norma infinita}
+\end{align*}
+Allora $\left(X,\Vert f \Vert_\infty\right)$ è uno spazio di Banach, mentre $\left(X,\Vert f \Vert_1\right)$ non è completo (in realtà non è completo per ogni altro $1\leq p<\infty)$.
+
+Per dimostrare ciò, consideriamo la seguente successione
+\fg{0.5}{bonfa_5}
+che, per inciso, per la norma infinito non è di Cauchy, ma lo è per la norma 1. 
+
+\newpage
+
+Per la convergenza abbiamo
+\begin{align*}
+\Vert f_n-f_m \Vert&=\int_0^2|f_n-f_m|\dx = \\
+&=\int_0^1 |f_n-f_m|\dx \qquad \{\text{perché da 1 a 2 coincidono} \}\ = \\
+&=\int_{1-1/m}^1|f_n-f_m|\dx \qquad \{\text{perché gli indici sono elevati} \}\ = \\
+&\leq \frac{1}{m}
+\end{align*}
+Dunque $f_n$ funzione continua in $[a,b]$ converge alla funzione
 \begin{equation*}
-l^{2} = \left\{\{a_{n}\} \subset \CC : \sum\limits^{\infty}_{n = 0}| a_{n}|^{2} < + \infty \right\}
+f(x)=\begin{cases}
+0 & x<1 \\
+1 & x\geq 1
+\end{cases}
+\end{equation*}
+che non è continua, e quindi non converge in $X$.
+
+Torniamo a noi, introducendo il seguente concetto
+\begin{defn}[Norme equivalenti]
+Sia $X$ uno spazio vettoriale. Due norme $\Vert\cdot\Vert_1$ e $\Vert\cdot\Vert_2$ si dicono equivalenti se
+\begin{equation*}
+\exists \alpha,\beta>0\ \ \text{t.c.}\ \ \alpha\Vert x\Vert_1\leq \Vert x\Vert_2 \leq \beta\Vert x\Vert_1\ \ \forall x\in X
 \end{equation*}
 \end{defn}
+
+Pertanto ciascuna norma può maggiorare l'altra, e anzi si ``controllano'' a vicenda: $\Vert\cdot\Vert_1\to 0\Leftrightarrow\Vert\cdot\Vert_2\to 0$.
+
+Piccola chicca: negli spazi di dimensione finita tutte le norme sono equivalenti.
+
+\section{Operatori lineari}
+
+In questo paragrafo studiamo gli operatori lineari tra due spazi di Banach.
+
 \begin{defn}
-[Spazio convesso]
-Dato uno spazio di Hilbert $H$, $K\subset H$, $K$ è \textbf{convesso} se $\forall x, y\in K, \forall \lambda \in [0, 1]$ allora $\lambda x + (1 - \lambda) y\in K$.
+Un operatore lineare tra due spazi di Banach $X_1$ e $X_2$ (sul campo $\KK$)è una funzione $L:X_1\to X_2$ tale che:
+\begin{enumerate}
+    \item [$\diamond$] $L(x+y)=Lx+Ly$ per ogni $x,y\in X_1$
+    \item [$\diamond$] $L(\lambda x)=\lambda L(x)$ per ogni $x\in X_1$, per ogni $\lambda\in\KK$
+\end{enumerate}
 \end{defn}
+
+Da qui in poi indicheremo con $Lx\in X_2$ l'immagine di $x\in X_1$, anzichè $L(x)$. 
+
+\begin{defn}[Operatore continuo]
+Siano $X_1$ e $X_2$ due spazi di Banach. L'operatore lineare $L:X_1\to X_2$ è detto continuo se per ogni successione $\{x_n \}\subset X_1$ tale che $x_n\to x$ si ha $Lx_n\to Lx$.
+\end{defn}
+
+\begin{defn}[Operatore limitato]
+Siano $X_1$ e $X_2$ due spazi di Banach. L'operatore lineare $L:X_1\to X_2$ è detto limitato se esiste una costante $C>0$ tale che
+\begin{equation*}
+\Vert Lx\Vert_2\leq C\Vert x \Vert_1 \qquad \forall x \in X_1
+\end{equation*}
+\end{defn}
+
+Da qui in poi daremo per scontato che $x\in X_1$ e $Lx\in X_2$, perciò ometteremo il pedice delle norme.
+
+\begin{rem}
+La relazione che garantisce la limitatezza di un operatore lineare stabilisce che una sfera di raggio $R$ in $X_1$ viene espansa in una sfera di raggio $CR$ in $X_2$ (se $C<1$ viene contratta).
+\end{rem}
+
 \begin{thm}
-[di proiezione]
-Sia $H$ di Hilbert e $C\subset H$ convesso e chiuso. Sia $\overline{x} \notin C$, allora $\exists P\in C$ tale che
+Siano $X_1$ e $X_2$ due spazi di Banach. L'operatore lineare $L:X_1\to X_2$ è limitato se e solo se è continuo.
+\end{thm}
+
+\begin{proof}\leavevmode
+\begin{enumerate}
+    \item [($\Rightarrow$)] $L$ è limitato, dunque $\Vert Lx\Vert\leq C\Vert x \Vert$. Per dimostrare che questo implica la continuità dobbiamo verificare che 
+    \begin{equation*}
+    x_n \to x \Rightarrow Lx_n\to Lx
+    \end{equation*}
+    Questo equivale a dire che
+    \begin{equation*}
+    \Vert x_n - x \Vert \to 0 \Rightarrow \Vert Lx_n- Lx\Vert \to 0
+    \end{equation*}
+    Ora possiamo sfruttare la definizione di operatore limitato
+    \begin{equation*}
+    \Vert Lx_n- Lx\Vert=\Vert L(x_n-x)\Vert \leq C \underbrace{\Vert x_n - x \Vert}_{\to 0}\to 0
+    \end{equation*}
+
+    \item [($\Leftarrow$)] $L$ è continuo, quindi in particolare è continuo anche in $x=0$, cioè
+    \begin{equation*}
+    \forall \varepsilon>0\ \ \exists \delta>0\ \ \text{t.c.}\ \ \Vert Lx\Vert<\varepsilon\ \ \forall x\ :\ \Vert x\Vert <\delta
+    \end{equation*}
+    Ciò è vero $\forall \varepsilon>0$. Prendiamo allora $\varepsilon=1$ e riscriviamo la definizione di continuità
+    \begin{equation*}
+    \exists \delta>0\ \ \text{t.c.}\ \ \Vert Lx\Vert\leq 1\ \ \forall x\ :\ \Vert x\Vert \leq \delta
+    \end{equation*}
+    Si noti che prendere gli uguali ha il suo senso, ma se vuoi essere pignolo basta che si fissi $\varepsilon=1^+$.
+
+    A questo punto prendiamo $y\in X_1$ non nullo e riscriviamolo in
+    \begin{equation*}
+    y=\frac{\delta}{\delta}\,\frac{\Vert y \Vert}{\Vert y \Vert}\, y=\frac{\delta\, y}{\Vert y \Vert}\,\frac{\Vert y \Vert}{\delta}
+    \end{equation*}
+    in modo tale da poter osservare che il vettore 
+    \begin{equation*}
+    \frac{\delta\, y}{\Vert y \Vert}\ \text{ ha norma uguale a }\delta
+    \end{equation*}
+    Ci siamo:
+    \begin{equation*}
+    \Vert Ly\Vert =\left\| L \left(\frac{\delta\, y}{\Vert y \Vert}\,\frac{\Vert y \Vert}{\delta}\right)\right\|=\frac{\Vert y \Vert}{\delta}\ \underbrace{\left\| L\frac{\delta\, y}{\Vert y \Vert}\right\|}_{\leq 1\text{ per la cont}}\leq \frac{\Vert y \Vert}{\delta}
+    \end{equation*}
+    e quindi abbiamo dimostrato la limitatezza dell'operatore $\left(C=\dfrac{1}{\delta}\right)$.
+\end{enumerate}
+\end{proof}
+
+Chicca per il caso finito: ogni operatore lineare è limitato e quindi continuo.
+
+\textit{Esempio.}\\
+Si consideri lo spazio delle successioni reali
 \begin{equation*}
-\Vert \overline{x} - P \Vert \leq \Vert \overline{x} - x \Vert \ \ \forall x\in C
+\ell^1=\left\{ \{c_n\}\subset \RR \ :\ \sum_{n=0}^{\infty}|c_n|<\infty\right\}
 \end{equation*}
-e
+Si dimostra banalmente (per gli spazi $\ell^p$ non lo è per niente) che è uno spazio vettoriale, cioè $x,y\in\ell^1\Rightarrow x+y\in\ell^1$. \\
+Introducendo la norma
 \begin{equation*}
-(\overline{x} - P, x - p) \leq 0\ \ \forall x\in C
+\Vert x \Vert =\sum_{n=0}^\infty |x_n| \qquad \forall x=\{x_n\}\in\ell^1
+\end{equation*}
+si ha che $\ell^1$ è uno spazio di Banach. La cosa scomoda è che definendo l'operatore lineare $L:\ell^1\to\ell^1$ tale che $\{x_n\}\mapsto L\{x_n\}=\{nx_n\}$ ci si può accorgere che esso non è limitato. Infatti
+\begin{equation*}
+x=\{0,\dots,0,\underbrace{1}_{\text{pos }k},0,\dots,0\}\ \Rightarrow\ Lx=\{0,\dots,0\,k,0,\dots,0\}
+\end{equation*}
+che non permette di trovare la costante $C$ della definizione di operatore limitato.
+
+\section{Spazi duali}
+
+Vogliamo ora introdurre il concetto di norma di un operatore lineare limitato.
+
+\begin{defn}
+$\mathcal{L}(X_1,X_2)$ è l'insieme degli operatori lineari limitati $L:X_1\to X_2$.
+\end{defn}
+
+$\mathcal{L}$ è uno spazio vettoriale (andrebbe dimostrato) che solitamente viene normato con la norma
+\begin{equation*}
+\Vert L \Vert_\Lc := \sup_{x\in X_1,\,x\neq 0} \frac{\Vert Lx \Vert_{X_2}}{\Vert x\Vert_{X_1}}
+\end{equation*}
+Usando tale norma si può dimostrare che $\Lc$ è uno spazio di Banach (si è aggiunta la completezza).
+
+Osserviamo due cose che vengono gratis dalla norma appena introdotta:
+\begin{enumerate}
+    \item [$\triangleright$] Per la limitatezza dell'operatore
+    \begin{equation*}
+    \Vert L\Vert\leq \sup \frac{C\cancel{\Vert x \Vert}}{\cancel{\Vert x\Vert}}= C \quad \Rightarrow \quad \boxed{\Vert L\Vert\leq C}
+    \end{equation*}
+    cioè in pratica si è definita la norma di un operatore limitato come il più piccolo $C$ che soddisfi la definizione di limitatezza
+    \item [$\triangleright$] Per la definizione della norma di $L$
+    \begin{equation*}
+    \Vert L \Vert= \sup \frac{\Vert Lx \Vert}{\Vert x\Vert} \quad \Rightarrow \quad \boxed{\Vert Lx \Vert \leq \Vert L \Vert\,\Vert x\Vert}
+    \end{equation*}
+    che è una \textit{grezza} disuguaglianza di Schwarz (vedi qui sotto).
+\end{enumerate}
+
+\begin{defn}[Funzionale]
+Sia $X$ uno spazio di Banach. Un operatore lineare e limitato $L:X\to\RR$ è detto funzionale.
+\end{defn}
+
+In tal caso, l'immagine di $x\in X$ non sarà più $L(x)$ o $Lx$ ma $\langle L,x \rangle$.
+
+\begin{defn}[Spazio duale]
+L'insieme dei funzionali lineari e continui su uno spazio di Banach $X$ prende il nome di spazio duale di $X$, e viene indicato con il simbolo $X'$.
+\end{defn}
+Si può dimostrare, con un opportuna norma, che $X'$ è uno spazio di Banach.
+
+\section{Spazi di Hilbert}
+
+Partiamo dalle seguenti definizioni
+
+\begin{defn}
+[Prodotto scalare reale]
+Sia $X$ uno spazio vettoriale. Si chiama prodotto scalare su $X$ una funzione $(\cdot,\cdot):X\times X\to\RR$ tale che per ogni $x,y,z\in X$ e per ogni $\lambda,\mu\in\RR$ si abbia
+\begin{enumerate}
+    \item [$\diamond$] $(x,x)\geq 0$ (positività)
+    \item [$\diamond$] $(x,x)=0\ \Leftrightarrow\ x=0$ (annullamento)
+    \item [$\diamond$] $(x,y)=(y,x)$ (simmetria)
+    \item [$\diamond$] $(\mu x+\lambda y,z)=\mu(x,z)+\lambda(y,z)$ (linearità rispetto al primo argomento)
+\end{enumerate}
+\end{defn}
+Sfruttando la proprietà di simmetria si può subito dire che la mappa $(\cdot,\cdot)$ è lineare anche rispetto al secondo argomento: si dice allora che il prodotto scalare è una \underline{forma bilineare simmetrica}.
+
+\begin{defn}
+[Prodotto scalare complesso]
+Sia $X$ uno spazio vettoriale. Si chiama prodotto scalare su $X$ una funzione $(\cdot,\cdot):X\times X\to\CC$ tale che per ogni $x,y,z\in X$ e per ogni $\lambda,\mu\in\CC$ si abbia
+\begin{enumerate}
+    \item [$\diamond$] $(x,x)\geq 0$ (positività)
+    \item [$\diamond$] $(x,x)=0\ \Leftrightarrow\ x=0$ (annullamento)
+    \item [$\diamond$] $(x,y)=\overline{(y,x)}$ (simmetria)
+    \item [$\diamond$] $(\mu x+\lambda y,z)=\mu(x,z)+\lambda(y,z)$ (linearità rispetto al primo argomento)
+\end{enumerate}
+\end{defn}
+In tal caso si perde la linearità rispetto al secondo argomento.
+
+Introduciamo ora la
+\begin{defn}[Norma indotta dal prodotto scalare]
+Sia $X$ uno spazio vettoriale e $(\cdot,\cdot)$ un prodotto scalare su $X$. Chiameremo norma indotta dal prodotto scalare la funzione definita da
+\begin{equation*}
+\Vert x\Vert =\sqrt{(x,x)} \qquad \forall x \in X
+\end{equation*}
+\end{defn}
+Si può dimostrare che tale funzione è effetivamente una norma: le prime due proprietà sono banali, invece per la disuguaglianza triangolare
+\begin{align*}
+\Vert x+y \Vert ^2&=\Vert x \Vert^2+(x,y)+(y,x)+\Vert y \Vert^2= \\
+&\overset{\underset{\text{SZ}}{}}{\leq} \Vert x \Vert^2+2\Vert x\Vert\,\Vert y\Vert +\Vert y \Vert^2= \\
+&=\left(\Vert x\Vert+\Vert y\Vert\right)^2 \qquad \qquad \forall x,y\in X
+\end{align*}
+
+Il prodotto scalare e la norma sono quantità legate dal
+\begin{thm}[di Schwarz]
+Sia $X$ uno spazio vettoriale e $(\cdot,\cdot)$ un prodotto scalare su $X$. Allora per ogni $x,y\in X$ si ha
+\begin{equation*}
+\boxed{|(x,y)|\leq \Vert x\Vert \cdot \Vert y \Vert}\qquad (\text{SZ})
+\end{equation*}
+Il segno di uguaglianza vale se e solo se $x,y$ sono linearmente dipendenti.
+\end{thm}
+
+\begin{proof}
+Prendiamo per comodità uno spazio vettoriale $X$ reale; siano dunque $t\in\RR$ e $x,y\in X$. Consideriamo il prodotto scalare
+$$
+(x-ty,x-ty)
+$$
+Per la proprietà di positività del prodotto scalare
+$$
+(x-ty,x-ty)\geq0
+$$
+Invece per la linearità rispetto al primo argomento e la simmetria
+$$
+(x-ty,x-ty)=\underbrace{\Vert x\Vert^2-2t(x,y)+t^2\Vert y\Vert^2}_{\text{polinomio di II grado in }t}
+$$
+Sappiamo che un polinomio del genere è $\geq 0$ se e solo se il suo discriminante è $\leq 0$, dunque si ottiene
+$$
+\frac{\Delta}{4}=(x,y)^2-\Vert x\Vert^2 \cdot \Vert y \Vert^2\leq 0
+$$
+Applicando la radice si ottiene proprio la disuguaglianza di Schwarz.
+\end{proof}
+
+Inoltre vale anche la
+\begin{thm}[Identità del parallelogramma]
+Sia $X$ uno spazio vettoriale e $(\cdot,\cdot)$ un prodotto scalare su $X$. Allora per ogni $x,y\in X$ si ha
+\begin{equation*}
+\left\|\frac{x+y}{2}\right\|^2+\left\|\frac{x-y}{2}\right\|^2=\frac{\Vert x\Vert^2 + \Vert y \Vert^2}{2}
 \end{equation*}
 \end{thm}
 
-\begin{figure}[htpb]
-\centering
-\tikzset{every picture/.style = {line width = 0.75pt}} %set default line width to 0.75pt
+Siamo pronti per parlare di spazi di Hilbert.
 
-\begin{tikzpicture}[x = 0.75pt, y = 0.75pt, yscale = - 1, xscale = 1]
-%uncomment if require: \path (0, 106); %set diagram left start at 0, and has height of 106
+\begin{defn}
+[Spazio di Hilbert]
+Uno spazio vettoriale dotato di prodotto scalare, che sia completo rispetto alla norma indotta dal prodotto scalare, è detto spazio di Hilbert.
+\end{defn}
+Quindi uno spazio di Hilbert non è altro che uno spazio vettoriale per il quale un prodotto scalare genera una norma che lo fa diventare uno spazio di Banach.
 
-%Shape: Ellipse [id: dp5649356596549697]
-\draw (267, 60.66) .. controls (267, 40.58) and (300.58, 24.31) .. (342, 24.31) .. controls (383.42, 24.31) and (417, 40.58) .. (417, 60.66) .. controls (417, 80.73) and (383.42, 97) .. (342, 97) .. controls (300.58, 97) and (267, 80.73) .. (267, 60.66) - - cycle;
-%Straight Lines [id: da02100518467366297]
-\draw (283, 37.31) - - (189, 37.31);
-\draw [shift = {(189, 37.31)}, rotate = 180] [color = {rgb, 255: red, 0; green, 0; blue, 0} ][fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.75] (0, 0) circle [x radius = 3.35, y radius = 3.35];
-\draw [shift = {(283, 37.31)}, rotate = 180] [color = {rgb, 255: red, 0; green, 0; blue, 0} ][fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.75] (0, 0) circle [x radius = 3.35, y radius = 3.35];
-%Straight Lines [id: da7214240046750127]
-\draw (363, 80.31) - - (283, 37.31);
-\draw [shift = {(283, 37.31)}, rotate = 208.26] [color = {rgb, 255: red, 0; green, 0; blue, 0} ][fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.75] (0, 0) circle [x radius = 3.35, y radius = 3.35];
-\draw [shift = {(363, 80.31)}, rotate = 208.26] [color = {rgb, 255: red, 0; green, 0; blue, 0} ][fill = {rgb, 255: red, 0; green, 0; blue, 0} ][line width = 0.75] (0, 0) circle [x radius = 3.35, y radius = 3.35];
-%Shape: Arc [id: dp82817523637768]
-\draw [draw opacity = 0] (309.33, 51.7) .. controls (304.23, 61.01) and (294.35, 67.31) .. (283, 67.31) .. controls (266.58, 67.31) and (253.25, 54.13) .. (253, 37.77) - - (283, 37.31) - - cycle; \draw (309.33, 51.7) .. controls (304.23, 61.01) and (294.35, 67.31) .. (283, 67.31) .. controls (266.58, 67.31) and (253.25, 54.13) .. (253, 37.77);
-
-% Text Node
-\draw (173, 14.4) node [anchor = north west][inner sep = 0.75pt] {$\overline{x}$};
-% Text Node
-\draw (276, 10.4) node [anchor = north west][inner sep = 0.75pt] {$P$};
-% Text Node
-\draw (365, 55.4) node [anchor = north west][inner sep = 0.75pt] {$x$};
-% Text Node
-\draw (196, 67.4) node [anchor = north west][inner sep = 0.75pt] {$ > \pi /2$};
-
-\end{tikzpicture}
-\end{figure}
-\FloatBarrier
-
-Chiameremo $P_{C}\overline{x}$ la proiezione di $\overline{x}$ su $C$.
-
-Consideriamo $M\subset H$ sottospazio chiuso (essenziale per includere anche il caso in cui $H$ ha dimensione infinita). Sia $\overline{x} \in M$, consideriamo il caso bidimensionale con $M$ che ha dimensione $1$, si può chiaramente scomporre
+\textit{Esempio.} 
+$\RR^n$ è uno spazio di Hilbert rispetto al prodotto scalare
 \begin{equation*}
-\textcolor[rgb]{0.29, 0.56, 0.89}{\overline{x}} = \overline{x} - P_{M}\overline{x} + P_{M}\overline{x} = \textcolor[rgb]{0.49, 0.83, 0.13}{Q}\textcolor[rgb]{0.49, 0.83, 0.13}{_{M}}\textcolor[rgb]{0.49, 0.83, 0.13}{\overline{x}} + \textcolor[rgb]{0.82, 0.01, 0.11}{P}\textcolor[rgb]{0.82, 0.01, 0.11}{_{M}}\textcolor[rgb]{0.82, 0.01, 0.11}{\overline{x}}
+(x,y)=\sum_k x_k\, y_k
 \end{equation*}
+
+\textit{Esempio.} 
+$\CC^n$ è uno spazio di Hilbert rispetto al prodotto scalare
+\begin{equation*}
+(x,y)=\sum_k x_k\, \overline{y_k}
+\end{equation*}
+
+Questi erano due esempi di spazi di Hilbert a dimensione finita. Ora parliamo, in maniera decisamente più approfondita, di uno spazio di Hilbert a dimensione infinita.
+
+\begin{defn}[Spazio delle successioni a quadrato sommabili]
+Si definisce
+\begin{equation*}
+\ell^{2} = \left\{\{a_{n}\} \subset \RR\ :\ \sum\limits^{\infty}_{n = 1} a_{n}^{2} < + \infty \right\}
+\end{equation*}
+lo spazio delle successioni a quadrato sommabili.
+\end{defn}
+Come dicevamo prima, $\ell^2$ è uno spazio vettoriale (però stavolta dimostrare che $x,y\in\ell^2\Rightarrow x+y\in\ell^2$ non è per niente banale).
+
+Su tale spazio si introducono la norma
+\begin{equation*}
+\Vert x\Vert^2=\sum_{k=1}^\infty x_k^2
+\end{equation*}
+e il  prodotto scalare
+\begin{equation*}
+(x,y)=\sum_{k=1}^\infty x_k\,y_k
+\end{equation*}
+
+Da qui capiamo chiaramente che lo spazio $\ell^2$ è la più naturale estensione dello spazio $\RR^n$. Infatti
+\begin{align*}
+\dim\RR^n=n \quad &\longrightarrow \quad \dim\ell^2=\infty \\
+\text{vettori} \quad &\longrightarrow \quad \text{successioni} \\
+\Vert x\Vert^2_{\RR^n}=\sum_{k=1}^n x_k^2 \quad &\longrightarrow \quad \Vert x\Vert^2_{\ell^2}=\sum_{k=1}^\infty x_k^2 \\
+(x,y)_{\RR^n}=\sum_{k=1}^n x_k\, y_k \quad &\longrightarrow \quad (x,y)_{\ell^2}=\sum_{k=1}^\infty x_k\, y_k
+\end{align*}
+Detto terra terra: $\RR^\infty\simeq\ell^2$.
+
+\begin{thm}
+$\ell^2$ è uno spazio di Hilbert.
+\end{thm}
+
+\newpage
+
+
+\section{Proiezioni ortoginali in uno spazio di Hilbert}
+
+\begin{defn}[Vettori ortogonali]
+Sia $X$ spazio vettoriale. Due vettori $x,y\in X$ si dicono ortogonali se e solo se $(x,y)=0$.
+\end{defn}
+
+\begin{defn}
+[Insieme convesso]
+Sia $X$ spazio vettoriale. $C\subset X$ si dice convesso se $\forall x, y\in C$ e $\forall \lambda \in [0, 1]$ la combinazione convessa $\lambda x + (1 - \lambda) y\in C$.
+\end{defn}
+
+Dal punto di vista geometrico: $C$ è convesso se ``non ha rientranze'', ovvero il segmento congiungente $x$ e $y$ è sempre interno a $C$, qualsiasi punti $x,y$ si prendano:
+
+\fg{0.4}{bonfa_14}
+
+Parliamo ora di proiezioni (ortogonali). Dal punto di vista geometrico, la proiezione di un punto $x$ è
+
+\fg{0.3}{bonfa_15}
+
+cioè è una certa mappa $P:X\to X$ tale che $P^2=P$, ovvero se la proiezione di $x$ è $Px$, la proiezione di $Px$ è ancora $Px$.
+
+Vale il
+
+\begin{thm}
+[Proiezione su un convesso chiuso]
+Sia $H$ uno spazio di Hilbert e $C\subset H$ un convesso chiuso non vuoto. Allora per ogni $x\in H$ esiste un'unica $y\in C$ tale che
+\begin{equation*}
+\Vert x - y \Vert =\inf_{z\in C} \Vert x-z \Vert
+\end{equation*}
+cioè che minimizza la distanza di $x$ da $C$; proprio per questo $y$ prende il nome di proiezione di $x$ su $C$ e viene indicata con $P_Cx$. 
+
+Inoltre, se $H$ è uno spazio reale, si ha
+\begin{equation*}
+(x-y,z-y)\leq 0\qquad \forall z \in C
+\end{equation*}
+cioè l'angolo $x\widehat{y}z$ è superiore all'angolo retto (al massimo uguale se $z=y$).
+\end{thm}
+
+Dal punto di vista geometrico
+
+\fg{0.4}{bonfa_16}
+
+\begin{defn}
+[Spazio ortogonale]
+Sia $H$ di Hilbert e $M\subset H$ un suo sottospazio vettoriale. Chiamiamo $M^{\perp}$ spazio ortogonale a $M$ il sottospazio vettoriale
+\begin{equation*}
+M^{\perp} = \{x\in H\ :\ (x, y) = 0\ \ \forall y\in M\}
+\end{equation*}
+\end{defn}
+
+Dal punto di vista geometrico
+
+\fg{0.4}{bonfa_17}
+
+Enunciamo ora il secondo teorema di proiezione:
+
+\begin{thm}
+[Proiezione su un sottospazio chiuso]
+Sia $H$ uno spazio di Hilbert e sia $M\subset H$ un suo sottospazio vettoriale chiuso. Valgono i seguenti risultati:
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+    \item per ogni $ x\in H$ esiste una proiezione $Px\in M$ tale che 
+    $$
+    \Vert x - Px \Vert =\inf_{z\in M} \Vert x-z \Vert
+    $$
+    \item detto $Qx=x-Px$ si ha che $Qx$ è la proiezione di $x$ su $M^{\perp}$ 
+    \item vale Pitagora (generalizzato)
+    $$
+    \Vert x \Vert^{2} = \Vert Px \Vert^{2} + \Vert Qx \Vert^{2}
+    $$
+    \item le applicazioni $P: H\rightarrow M$ e $Q: H\rightarrow M^{\perp}$ sono lineari
+\end{enumerate}
+\end{thm}
+
+Grazie a questo possiamo dire che esiste sempre un'unica decomposizione di $x$ in 
+\begin{equation*}
+\textcolor[rgb]{0.29, 0.56, 0.89}{x} = \textcolor[rgb]{0.82, 0.01, 0.11}{Px}+\textcolor[rgb]{0.49, 0.83, 0.13}{Qx}\qquad \text{con }Px\in M\text{ e }Qx\in M^\perp
+\end{equation*}
+Dal punto di vista geometrico ciò è ancora più chiaro:
 
 \begin{figure}[htpb]
 \centering
@@ -823,506 +1509,853 @@ Consideriamo $M\subset H$ sottospazio chiuso (essenziale per includere anche il 
 % Text Node
 \draw (256, 151.9) node [anchor = north west][inner sep = 0.75pt] {$M^{\perp}$};
 % Text Node
-\draw (271.5, 55.4) node [anchor = north west][inner sep = 0.75pt] {$\overline{x}$};
+\draw (271.5, 55.4) node [anchor = north west][inner sep = 0.75pt] {$x$};
 % Text Node
-\draw (335, 44.9) node [anchor = north west][inner sep = 0.75pt] {$Q_{M}\overline{x}$};
+\draw (335, 44.9) node [anchor = north west][inner sep = 0.75pt] {$Qx$};
 % Text Node
-\draw (323.5, 103.9) node [anchor = north west][inner sep = 0.75pt] {$P_{M}\overline{x}$};
-
+\draw (323.5, 103.9) node [anchor = north west][inner sep = 0.75pt] {$Px$};
 \end{tikzpicture}
 \end{figure}
 \FloatBarrier
 
-\begin{defn}
-[Spazio ortogonale]
-Sia $H$ di Hilbert, sia $M\subset H$ un sottospazio chiuso. Chiamiamo spazio ortogonale a $M$ lo spazio
-\begin{equation*}
-M^{\perp} = \{x\in H: (x, y) = 0, \forall y\in M\}
-\end{equation*}
-\end{defn}
-Uno spazio di Hilbert è la più naturale estensione di uno spazio euclideo a dimensione infinita.
-\begin{thm}
-[di proiezione]
-Sia $H$ di Hilbert, sia $M\subset H$ un sottospazio \textbf{chiuso proprio}. Allora
-\begin{enumerate}
-\item $\forall x\in H, \exists !$ decomposizione in $\RR^{n}$ generica
-\begin{equation*}
-x = P_{x} + Q_{x}
-\end{equation*}
-tale che $P_{x} \in M$, $Q_{x} \in M^{\perp}$.
-\item detti $P = P_{M}$ e $Q = P_{M^{\perp}}$ le proiezioni di un certo punto rispettivamente su $M$ e $M^{\perp}$, allora
-\begin{gather*}
-\Vert P_{x} - x \Vert \leq \Vert y - x \Vert \ \ \forall y\in M\\
-\Vert Q_{x} - x \Vert \leq \Vert y - x \Vert \ \ \forall y\in M^{\perp}
-\end{gather*}
-\item le applicazioni $P: H\rightarrow M$ e $Q: H\rightarrow M^{\perp}$ sono lineari
-\item vale Pitagora generalizzato
-\begin{equation*}
-\Vert x \Vert^{2} = \Vert P \Vert^{2} + \Vert Q \Vert^{2}
-\end{equation*}
-\end{enumerate}
-\end{thm}
+\newpage
 
-Il teorema ha come corollario del quarto punto che proiettando due punti non li possiamo allontanare più di quanto non lo erano
-\begin{equation*}
-\Vert P_{x} - P_{y} \Vert \leq \Vert x - y \Vert \ \ \forall x, y
-\end{equation*}
-\begin{rem}
-I casi banali sono
-\begin{gather*}
-x\in M\implies P = x, Q = 0\\
-x\in M^{\perp} \implies P = 0, Q = x
-\end{gather*}
-\end{rem}
-\begin{thm}
-[Disuguaglianza di Schwarz]
-\begin{equation*}
-| (x, y)| \leq \Vert x \Vert \Vert y \Vert \ \ \forall x, y\in H
-\end{equation*}
-\end{thm}
-\begin{thm}
-[Identità del parallelogramma] La somma dei quadrati sulle diagonali è uguale alla somma dei quadrati su tutti i lati
-\begin{equation*}
-\Vert x + y \Vert^{2} + \Vert x - y \Vert^{2} = 2\left(\Vert x \Vert^{2} + \Vert y \Vert^{2}\right)
-\end{equation*}
-\end{thm}
+
+\section{Basi hilbertiane e serie di Fourier generalizzata}
+
 \begin{defn}
-[Spazio separabile]
-Uno spazio normato $X$ si dice separabile se $\exists Y\subset X$, $Y$ numerabile e tale che $\overline{Y} = X$.
+Sia $H$ uno spazio di Hilbert, $\dim H=+\infty$. Sia $\{e_n\}_{n=1,2,\dots}\subset H$ una successione di vettori di $H$. Si dice che $\{e_n\}$ genera $H$ se $\forall x\in H$ e $\forall\Ec>0$ esiste una successione $\{\lambda_n\}_{n=1,\dots,N}$ tale che
+$$
+\left\|x-\sum_{n=1}^N\lambda_ne_n \right\|<\Ec
+$$
 \end{defn}
-In uno spazio separabile si ha che $\forall x\in X, \exists \{y_{n}\} \subset Y$ tale che $y_{n}\rightarrow x$, cioè nel senso della norma $ \Vert y_{n} - x \Vert \rightarrow 0$. Si dice che $Y$ è denso in $X$, ovvero possiamo sempre trovare una successione approssimante.
+Ciò significa che è possibile generare uno spazio di dimensione \underline{infinita} con una combinazione lineare \underline{finita} di $\{e_n\}$, attraverso una \textit{tanto buona quanto si vuole} approssimazione.
+
+\begin{rem}
+Definendo le somme parziali della serie con $S_N=\sum_{n=1}^N\lambda_ne_n$ si può tradurre la relazione soprastante in 
+$$
+\lim_{N\to+\infty}S_N=x
+$$
+dove però è andato perduto il senso di convergenza in norma.
+\end{rem}
+
 \begin{defn}
 [Base hilbertiana]
-Sia $H$ di Hilbert a dimensione infinita. Un insieme di vettori $\{e_{k}\} \subset H$ tali che $(e_{j}, e_{k}) = \delta_{jk}$ si dice \textbf{base hilbertiana} se $\forall x\in H, \exists \{\lambda_{n}\} \subset \CC$ tale che $x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n}$.
+Sia $H$ uno spazio di Hilbert, $\dim H=+\infty$. Una successione di vettori $\{e_n\}_{n=1,2,\dots}\subset H$ si dice base hilbertiana, o sistema ortonormale completo, se $\{e_n\}$ genera $H$ ed è ortonormale, ovvero
+$$
+(e_n,e_m)=\delta_{nm}=
+\begin{cases}
+0 &m\neq n \\ 1 &m=n
+\end{cases} \qquad \qquad \Vert e_n \Vert =1\ \ \forall n
+$$
 \end{defn}
-\begin{rem}
-Non essendo finita, non è una base nel senso dell'algebra lineare, ma è la cosa più vicina in dimensione infinita.
-\end{rem}
-\begin{rem}
-È l'equivalente di una base ortonormale.
-\end{rem}
-\begin{rem}
-Se $n = \mathrm{dim}(V) < \infty $, $\{e_{1}, \dotsc, e_{n}\}$, $(e_{j}, e_{k}) = \delta_{jk}$, allora $\forall v\in V\implies v = \sum^{n}_{k = 1} \lambda_{k} e_{k}$.
-\end{rem}
-\begin{rem}
-Dire
-\begin{equation*}
-x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n} \ \ \text{è equivalente a dire} \ \ \lim\limits_{n\rightarrow + \infty}\left \Vert x - \sum^{n}_{k = 1} \lambda_{k} e_{k}\right \Vert = 0
-\end{equation*}
-usando la norma indotta dal prodotto scalare.
-\end{rem}
+
+Osserviamo due cose:
+\begin{enumerate}
+    \item Non essendo finita, una base hilbertiana non è una base nel senso dell'algebra lineare, ma è la cosa che più le si avvicina in dimensione infinita.
+    \item La condizione $\Vert e_n \Vert =1$ è già implicita in $(e_n,e_m)=\delta_{nm}$.
+\end{enumerate}
+
+Se avessimo un generico spazio vettoriale $X$ finito potremmo scrivere
+$$
+x=\sum_{n=1}^Nc_ne_n
+$$
+e se la base fosse otronormale potremmo addirittura calcolare i coefficienti della combinazione lineare tramite il prodotto scalare
+$$
+(x,e_n)=\left(\sum_{n=1}^Nc_ne_n,e_n\right)=\sum_{n=1}^Nc_n(e_n,e_n)=c_n
+$$
+Con una base hilbertiana vale un qualcosa di \textit{mooolto} simile:
 \begin{thm}
-Ogni spazio di Hilbert separabile ammette base Hilbertiana.
+\label{teoHNOsepa}
+Sia $H$ uno spazio di Hilbert, $\dim H=+\infty$. Sia $\{e_n\}_{n=1,2,\dots}\subset H$ una base hilbertiana. Allora un qualsiasi $x\in H$ si scrive come \textbf{serie di Fourier generalizzata}
+\begin{equation*}
+\boxed{x = \sum^{+\infty}_{n = 1}(x, e_{n}) e_{n}}
+\end{equation*}
+I coefficienti $(x,e_n)=:\lambda_n$ della combinazione sono detti \textbf{coefficienti di Fourier} di $x$ rispetto $\{e_n\}$, e come nel caso finito sono dati da un prodotto scalare.
 \end{thm}
-\begin{rem}
-Il concetto di separabilità è un concetto abbastanza debole con poche richieste, soddisfatte nella stragrande maggioranza dei casi.
-\end{rem}
-\begin{thm}
-Sia $H$ separabile e sia $\{e_{n}\}$ una base hilbertiana. Allora $\forall x\in H$, $x$ si scrive come \textbf{serie di Fourier generalizzata}
-\begin{equation*}
-x = \sum^{\infty}_{n = 1}(x, e_{n}) e_{n}
-\end{equation*}
-dove pertanto definiamo i \textbf{coefficienti di Fourier}
-\begin{equation*}
-\lambda_{n} = (x, e_{n})
-\end{equation*}
-inoltre vale l'\textbf{identità di Parseval}
-\begin{equation*}
-\Vert x \Vert^{2} = \sum\limits^{\infty}_{n = 1}| (x, e_{n})|^{2}
-\end{equation*}
-\end{thm}
-\begin{proof}[Semi - dimostrazione.]
 
-Ammettendo base hilbertiana, esistono $\lambda_{n}$ tali che
-\begin{equation*}
-x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n}
-\end{equation*}
-moltiplichiamo \textit{a destra} scalarmente per un generico $e_{k}$
-\begin{equation*}
-(x, e_{k}) = \left(\sum^{\infty}_{n = 1} \lambda_{n} e_{n}, e_{k}\right) = \sum^{\infty}_{n = 1} \lambda_{n}(e_{n}, e_{k})\overset{\delta_{nk}}{=} \lambda_{k}
-\end{equation*}
-\begin{rem}
-È una semidimostrazione in quanto la linearità non vale per la serie che va a $\infty $, bisognerebbe passare al limite ma ci accontentiamo.
-\end{rem}
-Mostriamo ora Parseval
-\begin{align*}
-\Vert x \Vert^{2} & = (x, x) = \left(\sum^{\infty}_{n = 1}(x, e_{n}) e_{n}, \sum^{\infty}_{k = 1}(x, e_{k}) e_{k}\right)\\
- & = \sum\limits^{\infty}_{n, k = 1}(x, e_{n})\overline{(x, e_{k})}(e_{n}, e_{k}) = \sum\limits^{\infty}_{n = 1}| (x, e_{n})|^{2}
-\end{align*}
-\end{proof}
-\begin{thm}
-Sia $H$ di Hilbert separabile. Allora $H$ è isomorfo a $l^{2}$. In particolare $\exists L: H\rightarrow l^{2}$, lineare, biiettiva ed isometria.
-\end{thm}
-\begin{rem}
-Quindi tutti gli spazi di Hilbert sono isomorfi tra di loro.
-\end{rem}
-\begin{proof}
+Riprendendo il discorso di inizio pagina, abbiamo che la serie di Fourier generalizzata converge se e solo se
+$$
+\forall\Ec>0 \quad \exists N\in \NN \quad \text{t.c.}\quad \left\|x-\sum_{n=1}^N(x,e_n)e_n\right\|\leq \Ec
+$$
 
-Essendo separabile esiste una BH\footnote{Base Hilbertiana.} $\{e_{n}\}$.
-\begin{equation*}
-\forall x\in H\ \ \exists \lambda_{n} = (x, e_{n}) \ \ x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n}
-\end{equation*}
-La successione dei coefficienti è contenuta in $l^{2}$
-\begin{equation*}
-\lambda = \{\lambda_{n}\} \subset l^{2}
-\end{equation*}
-grazie all'identità di Parseval
-\begin{equation*}
-\Vert x \Vert^{2} = \sum\limits^{\infty}_{n = 1}| \lambda_{n}|^{2}
-\end{equation*}
-Questa successione è anche unica, quindi la mappa è ben definita.
-\begin{itemize}
-\item \textit{Linearità.}
-\begin{equation*}
-\lambda_{n} = (\alpha x + \beta y, e_{n}) = \alpha (x, e_{n}) + \beta (y, e_{n}) = \alpha \mu_{n} + \beta \nu_{n}
-\end{equation*}
-\item \textit{Isometria.}
+\newpage
 
-Per Parseval
-\begin{equation*}
-\Vert x \Vert^{2}_{H} = \sum^{\infty}_{n = 1}| \lambda_{n}|^{2} = \Vert \lambda \Vert^{2}_{l^{2}}
-\end{equation*}
-\item \textit{Iniettività.}
+\section{Serie di Fourier elementare}
 
-Isometria significa che $ \Vert L(x) \Vert = \Vert x \Vert $, grazie a questo possiamo dire che\footnote{Un'applicazione \textit{lineare} tra spazi di dimensione infinita \textit{può non essere continua}, ma se è isometria lo è di sicuro.}
-\begin{equation*}
-L(x) = L(y) \ \ \implies \ \ \Vert L(x) - L(y) \Vert = 0\ \ \implies \ \ \Vert x - y \Vert = 0\ \ \implies \ \ x = y
-\end{equation*}
-\item \textit{Suriettività.}
+In questo paragrafo si parlerà di funzioni misurabili secondo Lebesgue, cosa che verrà ampiamente approfondita nel prossimo capitolo.
 
-Data $\lambda \subset l^{2} \mapsto x\in H, \lambda = L(x)$ dobbiamo costruire $x$ avendo $\lambda $, lo facciamo chiedendoci se converge
+\begin{defn}
+Lo spazio delle funzioni a quadrato integrabile è
+$$L^2\left([a,b]\right):=\left\{f:[a,b]\to\RR\text{ Lebesgue misurabili t.c. }\displaystyle\int_a^bf^2(x)\dx<+\infty \right\}$$
+ed è uno spazio vettoriale.
+\end{defn}
+Su $L^2$ introduciamo la funzione prodotto scalare
 \begin{equation*}
-x = \sum^{\infty}_{n = 1} \lambda_{n} e_{n}
+(f,g)=\int_a^bf(x)g(x)\dx
+\end{equation*}
+e la funzione norma
+\begin{equation*}
+\Vert f \Vert ^2=\int_a^bf^2(x)\dx=(f,f)
+\end{equation*}
+in modo tale che $L^2$ sia uno spazio di Hilbert.
+
+Consideriamo ora come spazio di lavoro $L^{2}([ - \pi, \pi])$ e la base
+\begin{equation*}
+\Bc = \left\{\frac{1}{\sqrt{2\pi}}, \frac{\cos x}{\sqrt{\pi}}, \frac{\sin x}{\sqrt{\pi}}, \frac{\cos2x}{\sqrt{\pi}}, \frac{\sin2x}{\sqrt{\pi}}, \dotsc, \frac{\cos kx}{\sqrt{\pi}}, \frac{\sin kx}{\sqrt{\pi}}, \dotsc  \right\}
 \end{equation*}
 
-Usiamo la \textbf{completezza} dello spazio
+Si può dimostrare che $\Bc$ è una base hilbertiana secondo il prodotto scalare definito qui sopra.
+
+Allora vale il teorema della serie di Fourier generalizzata, cioè
+possiamo costruire ogni funzione $f$ dello spazio di Hilbert $L^2\left([-\pi,\pi]\right)$ tramite la base $\Bc$ come 
 \begin{equation*}
-\lambda \subset l^{2} \ \ \implies \ \ \sum\limits^{\infty}_{n = 1}| \lambda_{n}|^{2} < + \infty \ \ \implies \ \ \mu_{k} = \sum\limits^{k}_{n = 1}| \lambda_{n}|^{2} \ \ \text{è di Cauchy}
+\boxed{f(x)=\frac{a_0}{\sqrt{2\pi}}+\sum_{k=1}^{+\infty}\left(a_k\,\frac{\cos kx}{\sqrt{\pi}}+b_k\,\frac{\sin kx}{\sqrt{\pi}}\right)}
+\end{equation*}
+Questa è la cosiddetta \textbf{serie di Fourier} (elementare) di coefficienti
+\begin{equation*}
+a_{k} =\left(f,\frac{\cos kx}{\sqrt{\pi}}\right) = \frac{1}{\sqrt{\pi}}\int^{\pi}_{- \pi} f(x)\cos(kx) \dx\qquad
+b_{k} = \left(f,\frac{\sin kx}{\sqrt{\pi}}\right) = \frac{1}{\sqrt{\pi}}\int^{\pi}_{- \pi} f(x)\sin(kx) \dx
 \end{equation*}
 
-da cui possiamo considerare
+Come per la serie di Fourier generalizzata, anche quella elementare converge se e solo se
+$$
+\forall\Ec>0 \quad \exists N\in \NN \quad \text{t.c.}\quad \left\|f(x)-\left[\frac{a_0}{\sqrt{2\pi}}+\sum_{k=1}^{+\infty}\left(a_k\,\frac{\cos kx}{\sqrt{\pi}}+b_k\,\frac{\sin kx}{\sqrt{\pi}}\right)\right]\right\|\leq \Ec
+$$
+
+Per concludere, è bene notare che con una piccola modifica alla base
 \begin{equation*}
-x_{k} = \sum^{k}_{n = 1} \lambda_{n} e_{n}
+\Bc = \left\{\frac{1}{\sqrt{2}}, \cos x, \sin x, \cos 2x, \sin 2x, \dotsc,\cos kx,\sin kx,\dotsc \right\}
 \end{equation*}
-
-e dimostrare che
-
+e al prodotto scalare
+\begin{equation*}
+(f,g):=\frac{1}{\pi}\int_{-\pi}^\pi f(x)g(x)\dx \qquad \Vert f\Vert^2=\frac{1}{\pi}\int_{-\pi}^\pi f^2(x)\dx
+\end{equation*}
+si ottiene
 \begin{gather*}
-\Vert x_{k} - x_{l} \Vert = \left \Vert \sum\limits^{k}_{n = l + 1} \lambda_{n} e_{n}\right \Vert = \sum\limits^{k}_{n = l + 1}| \lambda_{n}|^{2} = \mu_{k} - \mu_{l}\\
-\implies \ \ x_{k} = \sum^{k}_{n = 1} \lambda_{n} e_{n} \ \ \text{è di Cauchy} \ \ \implies \ \ \text{converge per completezza.}
+\boxed{f(x)=\frac{a_0}{2}+\sum_{k=1}^{+\infty}\left(a_k\cos kx+b_k\sin kx\right)} \\
+a_{k} = (f, \cos kx) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\cos(kx) \dx\qquad
+b_{k} = (f, \sin kx) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\sin(kx) \dx
 \end{gather*}
 
-\end{itemize}
+\newpage
+
+\section{Spazi separabili}
+
+In questa sezione cercheremo di capire se, dato uno spazio di Hilbert generico, esiste una base hilbertiana. Per fare ciò riprendiamo le nozioni di numerabilità e di densità:
+
+\begin{defn}[Insieme numerabile]
+Si dice che l'insieme $A$ è numerabile se può essere messo in corrispondenza biunivoca con $\NN$.
+\end{defn}
+In pratica significa che possiamo \textit{mettere in fila} i suoi elementi:$A=\{a_1,a_2,a_3,\dots\}$.
+\begin{defn}[Spazio denso]
+Sia $X$ uno spazio normato e siano $A\subseteq B\subseteq X$. Si dice che $A$ è denso in $B$ se $\overline{A}=B$.
+\end{defn}
+In pratica significa che possiamo sempre costruire una successione in $V$ che approssima, nel senso della norma, lo spazio $H$.
+\begin{exa}
+$\RR$ non è numerabile. $\QQ$ è denso in $\RR$.
+\end{exa}
+
+Siamo pronti:
+
+\begin{defn}[Spazio separabile]
+Uno spazio $H$ di Hilbert si dice separabile se ammette un sottoinsieme denso e numerabile, ovvero se $\exists\,V\subset H$ numerabile tale che $\overline{V}=H$.
+\end{defn}
+
+\begin{thm}
+Uno spazio $H$ di Hilbert, $\dim H=+\infty$, ammette una base hilbertiana se e solo se $H$ è separabile.
+\end{thm}
+
+\begin{proof}\leavevmode
+\begin{enumerate}
+    \item [($\Rightarrow$)] Sia $\{e_n\}$ la base hilbertiana di $H$. Allora la somma parziale $S_N$ è numerabile e approssima nel senso della norma $x\in H$, per cui $H$ è separabile.
+    \item [($\Leftarrow$)] Sia $V\subset H$ denso e numerabile. Allora è possibile costruire una base hilbertiana di $H$ usando l'\textbf{algoritmo di ortogonalizzazione di Gram-Schmidt}:
+    \begin{align*}
+    V&=\left\{x_1,x_2,x_3,\dots \right\} \\
+    e_1&=\frac{x_1}{\Vert x_1 \Vert} \\
+    e_2&=\frac{x_2-(x_2,e_1)e_1}{\Vert x_2-(x_2,e_1)e_1 \Vert} \\
+    e_3&=\frac{x_3-(x_3,e_1)e_1-(x_3,e_2)e_2}{\Vert x_3-(x_3,e_1)e_1-(x_3,e_2)e_2 \Vert} \\
+    &\ \vdots
+    \end{align*}
+    Infatti i vettori $e_n$ sono ortogonali tra loro e hanno norma unitaria per costruzione; inoltre, essendo $V$ denso, generano $H$.
+\end{enumerate}
 \end{proof}
+
+\newpage
+
+\section{Serie di Fourier generalizzate su spazi separabili}
+
+Ora riprendiamo a parlare di serie di Fourier generalizzate.
+
+Grazie alla nozione di spazio di Hilbert separabile possiamo re-interpretare il teorema (\ref{teoHNOsepa}): è possibile sostituire all'ipotesi di esistenza della base hilbertiana $\{e_n\}$ la separabilità dello spazio di Hilbert considerato.
+
+In ogni caso, una volta che sappiamo che esiste $\{e_n\}$ (che sia diretta conseguenza della separabilità oppure un'ipotesi) ha senso la seguente
+$$
+\Vert x\Vert^2=\sum_{n=1}^{+\infty} (x,e_n)^2 \qquad\qquad  \textbf{identità di Parseval}
+$$
+dove si ricorda che $(x,e_n):=\lambda_n$ sono i coefficienti di Fourier di $x$ rispetto la base $\{e_n\}$. Tale identità è banalmente verificabile:
+\begin{align*}
+\Vert x \Vert^2&=(x,x)=\left(\sum_{n=1}^{+\infty}(x,e_n)e_n,\sum_{k=1}^{+\infty}(x,e_k)e_k\right)=\\
+&=\sum_{n=1}^{+\infty}\sum_{k=1}^{+\infty} (x,e_n)(x,e_k)\underbrace{(e_n,e_k)}_{\delta_{nk}}=\sum_{n=1}^{+\infty} (x,e_n)^2
+\end{align*}
+
+L'identità di Parseval permette di dire che la successione $\{\lambda_n\}$ dei coefficienti di Fourier è una successione a quadrato sommabile, ovvero $\{\lambda_n\}\subset \ell^2$ (se si parla di serie di Fourier elementare si ha $\{a_n\},\ \{b_n\}\in\ell^2$).
+
+In realtà Parseval suggerisce qualcosa in più: è possibile definire un'applicazione $L:H\to\ell^2$ che associa ad ogni $x\in H$ la successione $\lambda=\{\lambda_n\}=\{(x,e_n)\}\subset\ell^2$ dei suoi coefficienti di Fourier rispetto alla base $\{e_n\}$; tale applicazione è ovviamente \underline{lineare}
+$$
+(ax+by,e_n)=a(x,e_n)+b(y,e_n)
+$$
+\underline{isometrica} (stessa metrica su dominio e codominio)
+$$
+\Vert Lx \Vert_{\ell^2}=\Vert \lambda \Vert_{\ell^2}=\left(\sum_{n=1}^{+\infty}\lambda_n^2\right)^{1/2} =\Vert x \Vert_H
+$$
+e di conseguenza anche \underline{iniettiva} e \underline{continua}. 
+
+Tutto questo, in \textit{matematichese}, si traduce in
+\begin{thm}
+Sia $H$ uno spazio di Hilbert separabile di dimensione infinita. Allora $H$ è isomorfo e isometrico allo spazio $\ell^2$, cioè esiste un \textbf{isomorfismo isometrico}
+\begin{align*}
+L:H&\to\ell^2 \\
+x&\mapsto Lx=\{(x,e_n)\}
+\end{align*}
+\end{thm} 
+
+\begin{proof}
+Per dimostrare l'asserto dobbiamo dimostrare che $H$ e $\ell^2$ sono isometrici, cioè sono dotati della stessa metrica, e isomorfi, cioè $L$ è una mappa lineare continua e biunivoca.
+
+Ma che i due spazi sono isometrici
+\begin{equation*}
+\Vert Lx \Vert_{\ell^2}=\Vert x \Vert_H \qquad \forall x\in H
+\end{equation*}
+e che $L$ è lineare continua e iniettiva l'avevamo già dedotto dall'identità di Parseval.
+
+Dunque l'unica cosa che veramente viene aggiunta da questo teorema è la \underline{suriettività} di $L$: per dimostrare quest'ultima bisogna prendere $a=(a_1,a_2,\dots)\in\ell^2$ e verificare che $Lx=a$. 
+
+Consideriamo allora la somma parziale
+$$
+x_n:=\sum_{k=1}^na_ke_k
+$$
+Sappiamo due cose: che $\sum_{k=1}^\infty a_k^2$ converge (per definizione di $\ell^2$) e che gli $e_k$ sono ortonormali (per definizione di base hilbertiana). Da ciò si deduce che per ogni $\Ec>0$ esiste $N\in \NN$ tale che per ogni $n>m>N$
+$$
+\Vert x_n-x_m\Vert_H^2=\left\|\sum_{k=m+1}^n a_ke_k\right\|^2=\sum_{k=m+1}^n a_k^2<\Ec
+$$
+Pertanto la successione $\{x_n\}$ è di Cauchy in $H$ ed essendo quest'ultimo completo esiste $x\in H$ tale che $x_n\to x$. Si verifica immediatamente che i coefficienti di Fourier di $x$ coincidono con gli $a_k$ e quindi $Lx=a$: $L$ è suriettiva.
+\end{proof}
+
+\begin{rem}
+Tale teorema è l'estensione infinito-dimensionale al teorema che mette in corrispondenza un insieme qualsiasi di dimensione $n$ a $\RR^n$.
+\end{rem}
+
+
+\section{Convergenza, continuità e derivabilità della serie di Fourier elementare}
+
+Studiamo in maniera più approfondita lo spazio di Hilbert separabile $L^2([-\pi,\pi])$ con il prodotto scalare definito da
+\begin{equation*}
+(f,g)_{L^2}:=\frac{1}{\pi} \int_{-\pi}^\pi fg\qquad \forall f,g\in L^2([-\pi,\pi])
+\end{equation*}
+e con la norma indotta
+\begin{equation*}
+\Vert f\Vert_{L^2}^2=\frac{1}{\pi} \int_{-\pi}^\pi f^2\qquad \forall f\in L^2([-\pi,\pi])
+\end{equation*}
+Consideriamo poi l'insieme (numerabile) di funzioni
+\begin{equation*}
+\Bc = \left\{\frac{1}{\sqrt{2}}, \cos x, \sin x, \cos 2x, \sin 2x, \dotsc,\cos kx,\sin kx,\dotsc \right\}
+\end{equation*}
+Si può dimostrare che tale base è hilbertiana in $L^2([-\pi,\pi])$ rispetto al prodotto scalare sopra definito, perciò data una qualunque funzione $f\in L^2([-\pi,\pi])$ è sempre possibile determinare due successioni reali $\{a_n\}$ e $\{b_n\}$ tali che
+\begin{equation*}
+\boxed{f(x)=\frac{a_0}{2}+\sum_{k=1}^{+\infty}\left(a_k\cos kx+b_k\sin kx\right)}
+\end{equation*}
+dove
+\begin{align*}
+a_{k} &= (f, \cos kx) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\cos(kx) \dx\\
+b_{k} &= (f, \sin kx) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\sin(kx) \dx
+\end{align*}
+Analogamente a quanto avevamo già detto, la serie di Fourier elementare converge in $L^2$ se e solo se 
+$$
+\forall\Ec>0 \quad \exists N\in \NN \quad \text{t.c.}\quad \left\|f(x)-\left[\frac{a_0}{2}+\sum_{k=1}^{+\infty}\left(a_k\cos kx+b_k\sin kx\right)\right]\right\|\leq \Ec
+$$
+il che equivale a dire che $\{S_N\}$ \textbf{converge in media quadratica} a $f$
+\begin{equation*}
+\lim\limits_{N\rightarrow + \infty}\left[\int^{\pi}_{- \pi}\left[f(x) - S_{N}(x)\right]^{2} \dx\right] = 0 \qquad \text{con}\qquad S_{N}(x) = \frac{a_{0}}{2} + \sum\limits^{N}_{n = 1}\left(a_n\cos nx+b_n\sin nx\right)
+\end{equation*}
+Inoltre, l'identità di Parseval diventa 
+$$
+\Vert f \Vert_{L^2}^2=\pi\left\{\frac{a_0^2}{2}+\sum_{k=1}^{+\infty}\left(a_k^2+b_k^2\right)\right\}
+$$
+che sembra un po' l'estensione infinito-dimensionale del teorema di Pitagora.
+
+\begin{rem}
+Quanto sopra descritto è possibile solamente nel caso in cui la funzione $f\in L^2$ sia periodica di periodo $2\pi$, anche si può chiaramente generalizzare il risultato a periodi generici $T$
+\begin{equation*}
+f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}\left[a_{n}\cos\left(\frac{2n\pi}{T} x\right) + b_{n}\sin\left(\frac{2n\pi}{T} x\right)\right] \qquad \forall f\in L^{2}\left(\left[ - \frac{T}{2}, \frac{T}{2}\right]\right)
+\end{equation*}
+con prodotto scalare
+\begin{equation*}
+(f, g) = \frac{2}{T}\int^{T/2}_{- T/2} f(x) g(x) \dx
+\end{equation*}
+e quindi
+\begin{align*}
+a_{n} &= \frac{2}{T}\int^{T/2}_{- T/2} f(x)\cos\left(\frac{2n\pi}{T} x\right) \dx \\
+b_{n} &= \frac{2}{T}\int^{T/2}_{- T/2} f(x)\sin\left(\frac{2n\pi}{T} x\right) \dx
+\end{align*}
+Osserviamo però che il calcolo dei coefficenti $a_,b_n$ è possibile nella sola ipotesi in cui $f$ sia solamente integrabile, ovvero $f\in L^1$; tuttavia in questo spazio vengono a mancare sia l'identità di Parseval che particolari proprietà di convergenza (calma, ora le vediamo), che sono invece presenti nello spazio più piccolo $L^2$.
+\end{rem}
+
+\subsection{Sulla continuità}
+
+Vediamo ora altri tipi di convergenza delle serie di Fourier.
+
+\begin{thm}[Criterio di Dirichlet]
+Se $a_n,b_n\downarrow0$, cioè le successioni decrescono monotamente a 0 e sono positive, allora la serie di Fourier $f(x)$ converge puntualmente in $[-\pi,\pi]$.
+\end{thm}
+
+\begin{thm}[Criterio di Weierstrass]
+Se $\displaystyle\sum_{k=1}^{+\infty}\left(|a_k|+|b_k|\right)<+\infty$ allora la serie di Fourier $f(x)$ converge uniformemente in $[-\pi,\pi]$.
+\end{thm}
+\begin{proof}
+Posto 
+$$
+c_k=\sup_{x\in[-\pi,\pi]} |a_k\cos kx+b_k\sin kx|
+$$
+si ha
+$$
+\sum_{k=1}^{+\infty} c_k \leq \sum_{k=1}^{+\infty} |a_k+b_k| \leq \sum_{k=1}^{+\infty}\left(|a_k|+|b_k|\right)<+\infty 
+$$
+e quindi la serie di Fourier converge uniformemente.
+\end{proof}
+
+\begin{thm}[Continuità]
+Se la serie di Fourier $f(x)$ converge uniformemente in $[-\pi,\pi]$ allora $f\in\Cc^0\left([-\pi,\pi]\right)$ e in particolare $f(-\pi)=f(\pi)$; inoltre, per la periodicità della funzione, si ha continuità in tutto $\RR$.
+\end{thm}
+
+Vi sono tuttavia diversi risultati che garantiscono direttamente la convergenza puntuale senza coinvolgere la convergenza uniforme o il criterio di Dirichlet. Vediamone uno in particolare.
+
+\begin{defn}[Funzione regolare a tratti]
+Una funzione $f: [-\pi, \pi]\rightarrow \RR$ si dice regolare a tratti se $f$ è limitata in $[-\pi, \pi]$ e l'intervallo si può scomporre in un numero finito di sottointervalli su ciascuno dei quali $f$ è continua e derivabile; inoltre agli estremi di ogni sottointervallo, esistono finiti i limiti sia di $f$ che di $f'$.
+\end{defn}
+
+Tale classe di funzioni è molto ampia, perché ci possono essere dei punti angolosi e persino delle discontinuità di tipo salto; sono però escluse funzioni con asintoti verticali o punti a tangenza verticale.
+
+\begin{thm}
+[Convergenza puntuale per funzioni regolari a tratti]
+Sia $f: [ - \pi, \pi]\rightarrow \RR$ regolare a tratti. Allora la serie di Fourier associata a $f$ converge in ogni punto $x_0\in [ - \pi, \pi]$ alla media dei limiti destro e sinistro:
+$$
+f(x_0)=\frac{a_0}{2}+\sum_{n=1}^{+\infty}\left(a_n\cos nx_0+b_n\sin nx_0\right)=\frac{f(x_0^+)+f(x_0^-)}{2}
+$$
+In particolare, se $f$ è continua in $x_0$, allora la serie di Fourier converge a $f(x_0)$.
+\end{thm}
+
+\subsection{Sulla derivazione}
+
+Osserviamo che derivando la serie di Fourier si ottiene
+\begin{equation*}
+f'(x) = \sum\limits^{\infty}_{n = 1}a_nn(-\sin nx)+b_nn\cos nx
+\end{equation*}
+che converge uniformemente, e quindi $f\in\Cc^1(\RR)$, se
+\begin{equation*}
+\sum\limits^{\infty}_{n = 1} n(| a_{n}| + | b_{n}|) < \infty
+\end{equation*} 
+Iterando il ragionamento otteniamo il seguente
+\begin{thm}[Derivabilità]
+$f\in\Cc^k(\RR)$ se
+\begin{equation*}
+\sum\limits^{\infty}_{n = 1} n^{k}(| a_{n}| + | b_{n}|) < \infty
+\end{equation*}
+\end{thm}
+
+Ad ogni derivazione la serie diventa ``meno infinitesima'' a causa della moltiplicazione per $n$; questo significa che ad una maggiore velocità di decadimento dei coefficienti corrisponde una maggiore regolarità della serie.
+
+\begin{exa}
+La serie trigonometrica
+$$
+\sum_{n=1}^{+\infty}\left(\frac{\cos nx}{n^2}+\frac{\sin nx}{n^2}\right)
+$$
+converge uniformemente. Derivando tale serie otteniamo
+$$
+\sum_{n=1}^{+\infty}\left(\frac{\cos nx}{n}-\frac{\sin nx}{n}\right)
+$$
+e ci accorgiamo che la situazione è ``peggiorata''.
+\end{exa}
+Possiamo concludere che, a differenza delle serie di potenze, le serie di Fourier possono perdere la convergenza dopo una derivazione; questo però non è del tutto a loro sfavore: infatti non ha senso usare una serie di potenze per approssimare una funzione che non è $\Cc^{\infty}$, ma ha perfettamente senso farlo con una serie di Fourier.
+
+Concludiamo con 
+\begin{thm}
+Se i coefficienti della serie di Fourier decrescono esponenzialmente, ovvero 
+$$
+|a_k|+|b_k|\leq c_1e^{-c_2k} \qquad \qquad c_1,c_2>0
+$$
+allora $f\in\Cc^\infty$.
+\end{thm}
+
+\subsection{Forma esponenziale delle serie di Fourier}
+
+La ben nota formula di Eulero per l'esponenziale di un immaginario puro, $e^{i\theta}=\cos\theta+i\sin\theta$, suggerisce di scrivere una serie di Fourier utilizzando gli esponenziali.
+
+Ricaviamo
+\begin{equation*}
+\cos(nx) = \frac{e^{inx} + e^{- inx}}{2}\qquad \qquad \sin(nx) = \frac{e^{inx} - e^{- inx}}{2i}
+\end{equation*}
+e dunque ponendo
+\begin{equation*}
+c_n=\frac{a_n-ib_n}{2}\qquad \qquad c_{-n}=\frac{a_n+ib_n}{2}=\overline{c_n}
+\end{equation*}
+si ottiene la \textbf{forma esponenziale} della serie di Fourier
+\begin{equation*}
+\boxed{f(x) = \sum\limits_{n\in\ZZ} c_{n} e^{inx}}
+\end{equation*}
+dove l'uguaglianza è da intendersi come convergenza in $L^2$ delle somme parziali rispetto alla norma indotta dal prodotto scalare
+$$
+(f, g) = \frac{1}{2\pi}\int^{\pi}_{- \pi} f(x)\,\overline{g(x)} \dx
+$$
+Come per la serie di seni e coseni, i coefficienti di Fourier si calcolano con il prodotto scalare
+\begin{align*}
+c_{n} &=\frac{a_n-ib_n}{2}=\frac{1}{2\pi}\int^{\pi}_{- \pi} f(x)\, e^{- inx} \dx \\
+c_{-n} &=\frac{a_n+ib_n}{2} =\frac{1}{2\pi}\int^{\pi}_{- \pi} f(x)\, e^{ inx} \dx
+\end{align*}
+dove si è presa la base ortonormale (si può dimostrare che è anche hilbertiana)
+$$
+\left\{\frac{e^{inx}}{\sqrt{2\pi}}  \right\}_{n\in\ZZ}
+$$
+Inoltre, si ha $a_n=c_n+c_{-n}$ e $b_n=i(c_n-c_{-n})$ e l'identità di Parseval assomiglia sempre di più al teorema di Pitagora:
+$$
+\frac{1}{2\pi}\int^{\pi}_{- \pi} f^2(x) \dx =\sum_{n\in\ZZ} c_n^2
+$$
+\begin{rem}
+Esistono tante altre basi ortonormali (hilbertiane) che permettono di riscrivere a piacere la serie di Fourier elementare: la base di Legendre, Chebychev, Bessel, ecc. Ecco che capiamo perché si è voluto generalizzare il concetto di serie di Fourier elementare con il concetto di serie di Fourier generalizzata!
+\end{rem}
+
+
+\chapter{Integrale di Lebesgue e spazi \texorpdfstring{$L^p$}{C}}
+
+La teoria dell'integrazione di Lebesgue è un importante strumento nelle applicazioni ed è quindi necessario averne una buona conoscenza. In questo capitolo richiameremo le definizioni di base e i principali risultati.\\
+Se confrontata con la più intuitiva teoria dell'integrazione secondo Riemann, la teoria dell'integrazione secondo Lebesgue introduce una più ampia classe di funzioni integrabili; tale ampliamento del concetto di integrabilità fa sì che lo spazio $L^1$ delle funzioni integrabili secondo Lebesgue acquisisca la struttura di spazio di Banach, che può essere estesa in genere a tutti gli spazi $L^p$.
+
+\section{Integrale di Riemann (accenni)}
+
+Ricordiamo dal corso di AN1 che, dette 
+\begin{align*}
+S(\Pc)&=\text{somma superiore}\\
+s(\Pc)&=\text{somma inferiore}
+\end{align*}
+e
+\begin{align*}
+S&=\inf_{\Pc}S(\Pc) \\
+s&=\sup_{\Pc}s(\Pc)
+\end{align*}
+la funzione $f:[a,b]\to\RR$ è Riemann-integrabile se e solo se $s=S$, e in particolare l'integrale definito di Riemann di $f$ in $x$ è
+\begin{equation*}
+s=S=:\int_{a}^{b}f(x)\dx
+\end{equation*}
+Come possiamo vedere, la definizione di integrale di Riemann è molto semplice e intuitiva. In pratica, si tratta di approssimare una funzione limitata con due funzioni ``a gradini'' che forniscono due approssimazioni, una per eccesso e una per difetto; se riusciamo ad avere due stime che differiscono per quantità arbitrariamente piccole diremo che la funzione è integrabile secondo Riemann.
+
+A causa della sua semplicità, il rischio che si corre è quello di non riuscire a integrare funzioni ``strane''. Si consideri per esempio la funzione di Dirichlet $f$ definita nell'intervallo $[0,1]$ da
+\begin{equation*}
+f(x):=\begin{cases}
+1 &x\in[0,1]\cap\QQ \\
+0 &x\in[0,1]\setminus\QQ
+\end{cases}
+\end{equation*}
+Per qualunque suddivisione di $[0,1]$ risulta $S=1$ e $s=0$ quindi $f$ non è integrabile secondo Riemann.
+
+Non ci occupiamo qui di elencare le proprietà dell'integrale di Riemann, e passiamo direttamente a definire l'integrale di Lebesgue.
 
 \section{Integrale di Lebesgue}
 
-Consideriamo un \textbf{plurirettangolo}
+\subsection{Misura di Lebesgue}
+Chiamiamo \textbf{plurirettangolo} (o plurintervallo) l'unione $P$ di un numero finito di intervalli $[a_i,b_i]$
 \begin{equation*}
 P\subset \RR^{n}, \ \ P = [a_{1}, b_{1}] \times \dotsc \times [a_{n}, b_{n}]
 \end{equation*}
-la sua \textbf{misura} è data da
+La \textbf{misura} del plurirettangolo viene definita come
 \begin{equation*}
-| P| = (b_{1} - a_{1}) \dotsc (b_{n} - a_{n})
+|P| = (b_{1} - a_{1}) \dotsc (b_{n} - a_{n})
 \end{equation*}
-Consideriamo dei generici insiemi
+
+\begin{defn}
+Sia $A$ un aperto limitato non vuoto di $\RR^n$; la misura di $A$ è l'estremo superiore delle misure dei plurirettangoli contenuti in $A$:
+\begin{equation*}
+|A| := \sup \left\{|P|, P\in \text{plurirettangoli}, P\subset A\right\}
+\end{equation*}
+\end{defn}
+
+\begin{defn}
+Sia $C$ un chiuso limitato non vuoto di $\RR^n$; la misura di $C$ è l'estremo inferiore delle misure dei plurirettangoli contenuti in $C$:
+\begin{equation*}
+| C| := \inf\left\{| P|, P\in \text{plurirettangoli}, P\supset C\right\}
+\end{equation*}
+\end{defn}
+
+Possiamo ora considerare un generico insieme di $\RR^n$:
+\begin{defn}
+Sia $E$ un insieme limitato di $\RR^n$. Si definiscono
 \begin{itemize}
-\item $A$ aperto
-\begin{equation*}
-| A| = \sup \left\{| P|, P\in \text{pluri - intervalli}, P\subset A\right\}
-\end{equation*}
-\item $C$ chiuso
-\begin{equation*}
-| C| = \inf\left\{| P|, P\in \text{pluri - intervalli}, P\supset C\right\}
-\end{equation*}
+\item \textbf{misura esterna} di $E$, $| E|^{*} := \inf\left\{| A|, A\ \text{aperto}, A\supseteq E\right\}$
+\item \textbf{misura interna} di $E$, $| E|_{*} := \sup \left\{| C|, C\ \text{chiuso}, C\subseteq E\right\}$
 \end{itemize}
+\end{defn}
+
 \begin{rem}
-Gli insiemi aperti non sono chiusi per intersezioni numerabili.
+Se $E$ è aperto o chiuso si ha ovviamente $| E|^{*}=|E|=| E|_{*}$. Inoltre per ogni insieme $E$ limitato risulta $| E|^{*}\geq | E|_{*}$.
 \end{rem}
+
+\begin{defn}
+\label{Leb_limitato}
+Un insieme $E$ si dice misurabile secondo Lebesgue se $| E|^{*} = | E|_{*}$.
+\end{defn}
+Questo concetto di misurabilità è stato introdotto soltanto per insiemi limitati; tuttavia, nelle applicazioni può essere utile estendere la nozione di misurabilità a insiemi illimitati. A tale scopo, dopo aver osservato che l'intersezione di due insiemi (limitati) misurabili è misurabile, diamo la seguente
+\begin{defn}
+\label{Leb_illimitato}
+Un insieme $E\subseteq\RR^n$ (anche illimitato) è \textbf{misurabile secondo Lebesgue} se per ogni $r>0$ l'insieme $E\cap B_{r}$ è misurabile secondo la definizione (\ref{Leb_limitato}), con $B_r:=\{x\in\RR^n\ :\ |x|<r \}$. In tal caso si definisce
+$$
+| E| : = \lim\limits_{r\rightarrow + \infty}| E\cap B_{r}| \in[0,+\infty]
+$$
+\end{defn}
 \begin{rem}
-Gli insiemi chiusi non sono chiusi per unioni numerabili.
+Scegliendo $r>0$ abbastanza grande (in modo che $E\cap B_{r}=E$) si deduce che gli insiemi misurabili secondo la definzione (\ref{Leb_limitato}) sono misurabili anche secondo la definizone (\ref{Leb_illimitato}). Abbiamo quindi esteso corretamente il concetto di misurabilità secondo Lebesgue.
 \end{rem}
-Dato un insieme limitato qualunque, si dice
+Da ora in poi con misurabilità secondo Lebesgue si intenderà la nozione intodotta dalla definizone (\ref{Leb_illimitato}).
+
+\newpage
+
+\begin{thm}
+Sia $\{E_i\}$ una successione di insiemi misurabili di $\RR^n$. Allora l'insieme 
+$$
+E:=\bigcup_{i=1}^\infty E_i
+$$ 
+è misurabile e vale la seguente disuguaglianza (subadditività numerabile della misura)
+$$
+|E|\leq \sum_{i=1}^\infty |E_i|
+$$
+In particolare, se $E_i\cap E_j=\varnothing$ per ogni $i\neq j$ allora vale l'uguale nella formula (additività numerabile della misura). Inoltre, se supponiamo che la successione $\{E_i\}$ sia non decrescente rispetto all'inclusione, cioè $E_1\subseteq E_2\subseteq\dots$, allora
+$$
+|E|=\lim_{i\to\infty}|E_i|
+$$ 
+\end{thm}
+\begin{rem}
+Usando tale teorema si può dimostare un asserto analogo anche per $\displaystyle\bigcap_{i=1}^\infty E_i$.
+\end{rem}
+Per comprendere l'importanza di tale teorema si osservi che un insieme formato da un'infinità numerabile di punti ha misura nulla!
+
+All'atto pratico, quasi tutti gli insiemi sono misurabili; quelli non misurabili sono casi piuttosto ``patologici'' (un celebre esempio è quello dovuto a \textit{Vitali}).
+
+\subsection{Funzioni misurabili}
+
+\begin{defn}
+Una funzione $f: A\subset \RR^{n}\rightarrow \RR$ è \textbf{misurabile} se per ogni $c\in\RR$ l'insieme
+\begin{equation*}
+\{x\in A\ :\ f(x) < c\}
+\end{equation*}
+è misurabile secondo Lebesgue.
+\end{defn}
+
+\begin{defn}
+Sia $A\subseteq\RR^n$ misurabile e siano $f,g:A\to\RR$ misurabili. Si dice che $f$ è uguale a $g$ \textbf{quasi ovunque} in $A$ se
+$$
+|\{x\in A\ :\ f(x)\neq g(x)\}|=0
+$$
+Si dice inoltre che una certa proprietà vale quasi ovunque in $x$ se l'insieme degli $x\in A$ per i quali tale proprietà non vale è un insieme di misura nulla.
+\end{defn}
+
+Accenniamo solamente al fatto che da qui possiamo andare a definire le somme inferiori $s$ e superiori $S$ ``alla Lebesgue'' di $f$. Ma quello che ci interessa davvero è il concetto di integrale.
+
+\newpage
+
+\subsection{Integrale di Lebesgue}
+
+Procediamo per passi successivi:
+\begin{enumerate}
+    \item [(i)] Funzioni misurabili e limitate su insiemi di misura finita.
+
+    \begin{defn}
+    Sia $A\subset\RR^n$ di misura finita e $f:A\to\RR$ misurabile e limitata. Allora
+    $$
+    \sup s = \inf S =:\int_A f(x) \dx
+    $$
+    viene detto integrale di Lebesgue di $f$ su $A$.
+    \end{defn}
+
+    \item [(ii)] Funzioni misurabili nonnegative (non necessariamente limitate) su insiemi di misura finita.
+
+    Sia $A\subseteq\RR^n$ di misura finita e $f:A\to\RR$ misurabile e nonnegativa. Per ogni $\lambda>0$ definiamo
+    $$
+    f_\lambda(x):=\begin{cases}
+    f(x) &f(x)\leq\lambda \\
+    \lambda &f(x)>\lambda
+    \end{cases}
+    $$
+    Notiamo che esiste $\int_A f_\lambda(x)\dx$ e che è una funzione crescente di $\lambda$; esiste quindi il limite per $\lambda\to\infty$. Se tale limite è infinito diremo che $f$ non è integrabile su $A$ e scriveremo
+    $$
+    \int_A f(x)\dx=+\infty
+    $$
+    Se invece tale limite è finito diremo che $f$ è integrabile su $A$ e porremo
+    $$
+    \int_A f(x)\dx=\lim_{\lambda\to\infty}\int_A f_\lambda(x) \dx
+    $$
+    \item [(iii)] Funzioni misurabili nonnegative (non necessariamente limitate) su insiemi misurabili (non necessariamente di misura finita).
+
+    Se per ogni $r>0$ la funzione $f$ è integrabile sull'insieme $A_r=A\cap B_r$ possiamo dire che la funzione $r\mapsto\int_{A_r}f(x)\dx$ è crescente e quindi ammette limite per $r\to\infty$. Se tale limite è infinito diremo che $f$ non è integrabile su $A$ e scriveremo
+    $$
+    \int_A f(x)\dx=+\infty
+    $$
+    Se invece tale limite è finito diremo che $f$ è integrabile su $A$ e porremo
+    $$
+    \int_A f(x)\dx=\lim_{r\to\infty}\int_{A_r} f(x) \dx
+    $$
+
+    \item [(iv)] Funzioni misurabili di segno qualunque su insiemi misurabili qualunque.
+
+    \begin{defn}
+    Sia $A\subseteq \RR^n$ un insieme misurabile secondo Lebesgue. Si dice che una funzione misurabile $f:A\to\RR$ è integrabile secondo Lebesgue se le funzioni (nonnegative) $f^+:=\max\{f,0\}$ e $f^-:=\min\{f,0\}$ sono integrabili secondo Lebesgue, e si pone
+    $$
+    \int_A f(x)\dx:=\int_A f^+(x)\dx+\int_A f^-(x)\dx
+    $$
+    La classe delle funzioni Lebesgue-integrabili su $A$ sarà indicata con $L^1(A)$.
+    \end{defn}
+
+    Vale il seguente criterio di integrabilità:
+    $$
+    f\text{ è integrabile su }A\ \Leftrightarrow\ f^+,f^-\text{ sono integrabili su }A\ \Leftrightarrow\ |f|\text{ è integrabile su }A
+    $$
+    
+\end{enumerate}
+
+Per esempio, la funzione di Dirichlet non è integrabile su $[0,1]$ secondo Riemann, ma il suo integrale di Lebesgue esiste e vale $0$.
+
+\newpage
+
+\subsection{Proprietà dell'integrale di Lebesgue}
+
+Ciò che rende la teoria dell'integrazione di Lebesgue fruttosa è il fatto che l'insieme $L^1$ sia ricco di proprietà.
+
+\begin{thm}
+Sia $A\subseteq\RR^n$ un insieme misurabile secondo Lebesgue. Allora valgono le seguenti proprietà: 
 \begin{itemize}
-\item \textbf{misura esterna} di $E$, $| E|^{*} = \inf\left\{| A|, A\ \text{aperto}, A\supset E\right\}$
-\item \textbf{misura interna} di $E$, $| E|_{*} = \sup \left\{| C|, C\ \text{chiuso}, C\subset E\right\}$
+    \item \textit{Omogeneità.} Se $f\in L^1(A)$ e $c\in\RR$ allora $cf\in L^1(A)$ e 
+    $$
+    \int_A cf = c\int_A f
+    $$
+
+    \item \textit{Additività rispetto alla funzione integranda.} Se $f,g\in L^1(A)$ anche $f+g\in L^1(A)$ e 
+    $$
+    \int_A f+g=\int_A f+\int_A g
+    $$
+
+    \item \textit{Monotonia.}
+    \begin{itemize}
+        \item Se $f,g\in L^1(A)$ e $f\leq g$ allora $\int_A f\leq \int_A g$.
+        \item Per ogni $f\in L^1(A)$ vale $\left|\int_A f \right|\leq \int_A |f|$.
+        \item Se $|f|\leq g$ e $g\in L^1(A)$ allora anche $f\in L^1(A)$.
+    \end{itemize}
+
+    \item \textit{Additività numerabile rispetto al dominio di integrazione.} Se $f\in L^1(A)$ e $A$ è unione numerabile di insiemi $A_k$ disgiunti a due a due, allora 
+    $$
+    \int_A f =\sum_{k=1}^{\infty}\int_{A_k} f
+    $$
+
+    \item \textit{Insiemi di misura nulla.} Sia $f\in L^1(A)$
+    \begin{itemize}
+        \item Se $|A|=0$ allora $\int_A f=0$.
+        \item Se $g=f$ q.o. in $A$, anche $g\in L^1(A)$ e $\int_A f=\int_A g$.
+        \item Se $f\geq 0$ e $\int_A f=0$ allora $f=0$ q.o. in $A$.    
+    \end{itemize}
 \end{itemize}
-\begin{defn}
-Un insieme $E$ si dice \textbf{misurabile secondo Lebesgue} se $| E|^{*} = | E|_{*}$.
-\end{defn}
-Si ha quasi sempre questa condizione, tranne in casi patologici.
+\end{thm}
 
-\textbf{Proprietà.}
+\begin{thm}[Fubini]$\\$
+Sia $A\subseteq\RR^{n+m}$ un insieme misurabile tale che $A=A_1\times A_2$ con $A_1\in\RR^n$ e $A_2\in\RR^m$. Sia $f\in L^{1}(A)$ e prendiamo $x\in A_1$ e $y\in A_2$. Allora
+\begin{equation*}
+\int_A f(x,y) \dxy = \int_{A_1}\left[\int_{A_2} f(x, y) \dy\right] \dx
+\end{equation*}
+\end{thm}
 
-Siano $E_{1}, \dotsc, E_{n}$ un'infinità numerabile di insiemi misurabili.
-\begin{itemize}
-\item allora $\bigcup^{\infty}_{n = 1} E_{n}$ è misurabile $\left| \bigcup^{\infty}_{n = 1} E_{n}\right| \leq \sum\nolimits^{\infty}_{n = 1}| E_{n}| $, l'uguaglianza solo se sono disgiunti
-\item allora $\bigcap^{\infty}_{n = 1} E_{n}$ è misurabile.
-\end{itemize}
-\begin{defn}
-Un insieme \textbf{illimitato} è misurabile se $E\cap B_{r}$ è misurabile. Si definisce $| E| : = \lim\limits_{r\rightarrow + \infty}| E\cap B_{r}| $.
-\end{defn}
-\begin{defn}
-Una funzione si dice\textbf{a scala} se la sua immagine è finita.
-\end{defn}
-\begin{defn}
-Una funzione $f: A\subset \RR^{n}\rightarrow \RR$ è \textbf{misurabile secondo Lebesgue} se l'insieme
+\begin{thm}[Convergenza Monotona]$\\$
+Sia $f_{n} : A\rightarrow [0, + \infty)$ una successione di funzioni misurabili tale che $f_n(x)\to f(x)$ q.o. in $x$ (convergenza puntuale) e $f_{n+1}(x) \geq f_{n}(x)$ q.o. in $x$ e $\forall n$ (monotona crescente). Allora
 \begin{equation*}
-\{x\in A: f(x) < c\}
+\lim\limits_{n\rightarrow \infty}\int_{A} f_{n}(x) \dx = \int_{A}\lim\limits_{n\rightarrow +\infty} f_{n}(x) \dx = \int_{A} f(x) \dx
 \end{equation*}
-è misurabile $\forall c\in \RR$.
-\end{defn}
+\end{thm}
+
+\begin{thm}[Convergenza Dominata]$\\$
+Sia $f_{n} : A\rightarrow \CC$ una successione di funzioni misurabili tale che $f_n(x)\to f(x)$ q.o. in $x$ (convergenza puntuale). Se $\exists g\in L^{1}(A)$ tale che $|f_{n}(x)|\leq g(x)$ q.o. in $x$ e $\forall n$ (esistenza di una dominante), allora $f\in L^1(A)$ e
+\begin{equation*}
+\lim\limits_{n\rightarrow  \infty}\int_{A} f_{n}(x) \dx = \int_{A}\lim\limits_{n\rightarrow  \infty} f_{n}(x) \dx = \int_{A} f(x) \dx
+\end{equation*}
+\end{thm}
+
+
+\section{Spazi \texorpdfstring{$L^p$}{C}}
+
 \begin{defn}
-Si dice integrale di Lebesgue di $f: A\subset \RR^{n}\rightarrow [0, + \infty)$ e $A$ misurabile
+Sia $A\subset \RR^{n}$ misurabile. Sia $1 \leq p < \infty $. Poniamo
 \begin{equation*}
-\int_{A} f(x) dx = \sup \int_{A} g(x) dx
+L^{p}(A) = \left\{f: A\rightarrow \RR\text{ Lebesgue-misurabili t.c. }\int_{A}| f(x)|^{p} \dx < \infty \right\}
 \end{equation*}
-dove $g(x)$ è una funzione a scala tale che $g(x) \leq f(x)$ e inoltre vale
-\begin{equation*}
-\int_{A} g(x) dx = \sum\limits^{N}_{i = 1} g_{i}| A_{i}|, \ \ g(x) = g_{i} \ \forall x\in A_{i}
-\end{equation*}
+e inoltre definiamo la norma $p$
+$$
+\Vert f \Vert_p:= \left(\int_{A}|f(x)|^{p} \dx\right)^{1/p}
+$$
+per ogni $f\in L^p(A)$.
 \end{defn}
 
-\begin{figure}[htpb]
+Il caso $p=\infty$ merita una trattazione a parte.
+
+\begin{defn}
+Sia $A\subseteq\RR^n$ un insieme misurabile. Per ogni funzione $f:A\to\RR$ misurabile definiamo l'\textbf{estremo superiore essenziale} di $f$ su $A$ come
+$$
+\esssup_{x\in A} f(x):=\inf\left\{ \alpha\in\RR\ :\ \left|f^{-1}(\alpha,+\infty) \right|=+\infty \right\}
+$$
+dove con $\left|f^{-1}(\alpha,+\infty) \right|$ si intende la misura della controimmagine di $f(\alpha,+\infty)$.
+\end{defn}
+In pratica si è rivisitato il concetto di estremo superiore in modo tale che non vengano considerati punti a misura nulla. Per intenderci:
+\fg{0.4}{bonfa_18}
+
+\begin{defn}
+Sia
+\begin{equation*}
+L^{\infty}(A) = \left\{f: A\rightarrow \RR\text{ Lebesgue-misurabili t.c. }\esssup_{x\in A} |f(x)|<+ \infty \right\}
+\end{equation*}
+con norma infinito
+\begin{equation*}
+\Vert f \Vert_{\infty} := \esssup_{x\in A} |f(x)|
+\end{equation*}
+per ogni $f\in L^\infty(A)$.
+\end{defn}
+
+Osserviamo che $\forall p\in[1,+\infty]$ si ha che:
+\begin{enumerate}
+    \item [$\triangleright$] $L^p$ è uno spazio lineare.
+
+    \item [$\triangleright$] La norma $p$ è a tutti gli effetti una norma ben definita su $L^p$.
+
+    \item [$\triangleright$] $L^p$ dotato di norma $p$ è uno spazio vettoriale completo (di Banach).
+
+    \item [$\triangleright$] In particolare, lo spazio $L^2$ non solo è di Banach, ma è anche di Hilbert rispetto al prodotto scalare
+    $$
+    (f,g)_{L^2}:=\int_A f(x) g(x)\dx
+    $$
+
+    \item [$\triangleright$] $L^p$ è uno spazio separabile tranne per $p=+\infty$.
+\end{enumerate}
+
+\begin{defn}
+Siano $x,y\in\RR$ e $t\in[0,1]$. Diremo che
+$$
+tx+(1-t)y
+$$
+è una combinazione lineare convessa.
+
+Inoltre, diremo che $f$ è convessa se
+$$
+f(tx+(1-t)y)\leq t f(x)+(1-t)f(y)
+$$
+mentre diremo che è concava se
+$$
+f(tx+(1-t)y)\geq t f(x)+(1-t)f(y)
+$$
+\end{defn}
+
+\begin{thm}
+La funzione logaritmo è concava.
+\end{thm}
+
+\begin{rem}
+Dal punto di vista geometrico, una funzione è concava se comunque si scelgano le ascisse $x,y$ il segmento congiungente i punti $(x,f(x)),(y,f(y))$ sottosta al grafico della funzione.
+
+\end{rem}
+
+\begin{figure}[!htbp]
 \centering
-\tikzset{every picture/.style = {line width = 0.75pt}} %set default line width to 0.75pt
-
-\begin{tikzpicture}[x = 0.75pt, y = 0.75pt, yscale = - 1, xscale = 1]
-%uncomment if require: \path (0, 171); %set diagram left start at 0, and has height of 171
-
-%Shape: Axis 2D [id: dp6527686546165439]
-\draw (138, 140.65) - - (460, 140.65)(170.2, 5) - - (170.2, 155.72) (453, 135.65) - - (460, 140.65) - - (453, 145.65) (165.2, 12) - - (170.2, 5) - - (175.2, 12);
-%Curve Lines [id: da4027262347286087]
-\draw [color = {rgb, 255: red, 208; green, 2; blue, 27}, draw opacity = 1][line width = 2.25] (210, 55) .. controls (299.8, - 13.4) and (275.8, 107) .. (377, 55.72);
-%Straight Lines [id: da24315154470517308]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (210, 55) - - (235, 55);
-%Straight Lines [id: da22825901363329582]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (235, 40) - - (274.6, 40);
-%Straight Lines [id: da5730415093182173]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (274.6, 60) - - (301, 60);
-%Straight Lines [id: da5297578793317113]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (301, 70) - - (327.4, 70);
-%Straight Lines [id: da9350109074443522]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (327.4, 70) - - (353.8, 70);
-%Straight Lines [id: da5780729033254488]
-\draw [color = {rgb, 255: red, 126; green, 211; blue, 33}, draw opacity = 1][line width = 2.25] (353.8, 66) - - (377.4, 66);
-%Straight Lines [id: da7836728935339827]
-\draw (210, 140.6) - - (210, 55);
-%Straight Lines [id: da4255882760356502]
-\draw (235, 140.6) - - (235, 40);
-%Straight Lines [id: da9443315667203329]
-\draw (275, 140.6) - - (275, 39.8);
-%Straight Lines [id: da4615497493154914]
-\draw (301, 140.6) - - (301, 60);
-%Straight Lines [id: da2871328359876997]
-\draw (354, 140.6) - - (354, 66);
-%Straight Lines [id: da718006435968708]
-\draw (377, 140.6) - - (377, 55.72);
-%Straight Lines [id: da4407818981447249]
-\draw [color = {rgb, 255: red, 74; green, 144; blue, 226}, draw opacity = 1][line width = 2.25] (235, 140.6) - - (274.6, 140.6);
-
-% Text Node
-\draw (384, 34.4) node [anchor = north west][inner sep = 0.75pt] [color = {rgb, 255: red, 208; green, 2; blue, 27}, opacity = 1] {$f(x)$};
-% Text Node
-\draw (384, 59.2) node [anchor = north west][inner sep = 0.75pt] [color = {rgb, 255: red, 126; green, 211; blue, 33}, opacity = 1] {$g(x)$};
-% Text Node
-\draw (242.6, 144) node [anchor = north west][inner sep = 0.75pt] [color = {rgb, 255: red, 74; green, 144; blue, 226}, opacity = 1] {$A_{i}$};
-
-\end{tikzpicture}
+\includegraphics[width=0.3\linewidth]{bonfa_19} $\quad$
+\includegraphics[width=0.3\linewidth]{bonfa_20}
+\caption{Funzione modulo (convessa) a sinistra e logaritmo (concava) a destra}
 \end{figure}
 \FloatBarrier
 
+
+\begin{defn}
+Due numeri $p, q \geq 1$ sono \textbf{esponenti coniugati} se $\dfrac{1}{p} + \dfrac{1}{q} = 1$.\\
+Tale concetto si estende anche al caso $p=1$ e $q=+\infty$ e viceversa.
+\end{defn}
+
 \begin{rem}
-È una definizione più pulita di quella di Riemann. Il dominio e la funzione possono essere illimitati (e naturalmente l'integrale può valere $\infty $).
+Prendendo due esponenti coniugati la concavità della funzione logaritmo può essere espressa come
+$$
+\log\left(\frac{x}{p}+\frac{y}{q}\right)\geq \frac{\log x}{p}+\frac{\log y}{q}
+$$
 \end{rem}
-Per definirlo per funzioni anche negative procediamo come segue.
 
-Sia $f: A\subset \RR^{n}\rightarrow \CC$
+\begin{thm}[Disuguaglianza di Young]$\\$
+Siano $p, q$ esponenti coniugati. Allora $\forall a, b > 0$ vale
 \begin{equation*}
-f(x) = R^{+}(x) - R^{-}(x) + I^{+}(x) - I^{-}(x)
-\end{equation*}
-\begin{itemize}
-\item $R^{+}(x) = \max(\Re (f(x)), 0), \forall x$
-\item $R^{-}(x) = \max(- \Re (f(x)), 0), \forall x$
-\item $I^{+}(x) = \max(\Im (f(x)), 0), \forall x$
-\item $I^{-}(x) = \max(- \Im (f(x)), 0), \forall x$
-\end{itemize}
-
-Allora definiamo
-\begin{equation*}
-\int_{A} f(x) dx = \int_{A} R^{+}(x) dx - \int_{A} R^{-}(x) dx + i\left[\int_{A} I^{+}(x) dx - \int_{A} I^{-}(x) dx\right]
-\end{equation*}
-\begin{defn}
-Una funzione $f: A\subset \RR^{n}\rightarrow \CC$ si dice \textbf{Lebesgue - integrabile}
-\begin{equation*}
-\boxed{f\in L^{1} \ \ \iff \ \ \int_{A}| f(x)| dx < + \infty}
-\end{equation*}
-\end{defn}
-Per esempio la funzione
-\begin{equation*}
-f(x) =
-\begin{cases}
-1, & x\in \QQ\\
-0, & x\notin \QQ
-\end{cases}
-\end{equation*}
-non è integrabile secondo Riemann, ma il suo integrale di Lebesgue esiste e vale $0$.
-\begin{rem}
-Se $f(x) = g(x), \forall x\in A$ tranne al più un insieme di misura nulla, allora
-\begin{equation*}
-\int_{A} f(x) dx = \int_{A} g(x) dx\ \ \text{quasi ovunque}
-\end{equation*}
-\end{rem}
-\begin{thm}
-[della Convergenza Monotona]
-Siano $f_{n} : A\rightarrow [0, + \infty)$. Sia $\lim\limits_{n\rightarrow + \infty} f_{n} = f(x)$ quasi ovunque, $f_{n}(x) \leq f_{n + 1}(x), \forall x$ quasi ovunque e $\forall n$. Allora
-\begin{equation*}
-\boxed{\lim\limits_{n\rightarrow + \infty}\int_{A} f_{n}(x) dx = \int_{A}\lim\limits_{n\rightarrow + \infty} f_{n}(x) dx = \int_{A} f(x) dx}
-\end{equation*}
-\end{thm}
-\begin{thm}
-[della Convergenza Dominata]
-Siano $f_{n} : A\rightarrow \CC$. Sia $\lim\limits_{n\rightarrow + \infty} f_{n} = f(x)$ quasi ovunque, $\exists g\in L^{1}(A)$ tale che $| f_{n}(x)| \leq g(x)$ quasi ovunque e $\forall n$. Allora
-\begin{equation*}
-\boxed{\lim\limits_{n\rightarrow + \infty}\int_{A} f_{n}(x) dx = \int_{A}\lim\limits_{n\rightarrow + \infty} f_{n}(x) dx = \int_{A} f(x) dx}
-\end{equation*}
-\end{thm}
-\begin{thm}
-[di Fubini]
-Sia $f: \RR^{n + m}\rightarrow \CC, f\in L^{1}\left(\RR^{n + m}\right)$. Sia $f = f(x, y)$ con $x\in \RR^{n}$ e $y\in \RR^{m}$. Allora
-\begin{equation*}
-\boxed{\int_{\RR^{n + m}} f(x, y) dxdy = \int_{\RR^{n}}\left[\int_{\RR^{m}} f(x, y) dy\right] dx}
+ab\leq\frac{a^{p}}{p} + \frac{b^{q}}{q}
 \end{equation*}
 \end{thm}
 
-\section{Spazi $L^{p}$}
-
-\begin{defn}
-[Spazio $L^{p}$] Sia $A\subset \RR^{n}$ misurabile. Sia $1 \leq p < \infty $. Definiamo lo spazio
-\begin{equation*}
-L^{p}(A) = \left\{f: A\rightarrow \CC \ \text{misurabili, tali che} \ \int_{A}| f(x)|^{p} dx < \infty \right\}
-\end{equation*}
-con norma
-\begin{equation*}
-\Vert f \Vert_{L^{p}(A)} = \left(\int_{A}| f(x)|^{p} dx\right)^{1/p}
-\end{equation*}
-\end{defn}
-\begin{defn}
-Se $p = \infty $ si definisce
-\begin{equation*}
-L^{\infty}(A) = \left\{f: A\rightarrow \CC \ \text{misurabili, tali che} \ \exists c \geq 0: | f(x)| \leq c\ \text{q.o. in} \ A\right\}
-\end{equation*}
-con norma
-\begin{equation*}
-\Vert f \Vert_{L^{\infty}(A)} = \inf\left\{c \geq 0: | f(x)| \leq c\ \text{q.o. in} \ A\right\}
-\end{equation*}
-\end{defn}
-\begin{defn}
-[Estremo superiore essenziale]
-Consideriamo lo spazio $L^{\infty}(A)$, definiamo estremo superiore essenziale
-\begin{align*}
-\esssup f(x) & = \inf\{c\in \RR : | f(x) > c| = 0\}\\
- & = \inf\left\{c\in \RR : | f(x)| < c\ \text{q.o. in} \ A\right\}
-\end{align*}
-\end{defn}
-\begin{rem}
-$ \Vert f \Vert_{L^{\infty}} = \esssup| f(x)| $.
-\end{rem}
-\begin{thm}
-Sia $p\in [1, + \infty)$, $a, b\in L^{p}$, allora anche $(a + b) \in L^{p}$.
-\end{thm}
 \begin{proof}
-
-Sia $f(x) = | x|^{p}, x \geq 0, p > 1$ è una funzione convessa, ovvero
-\begin{equation*}
-f(\lambda x + (1 - \lambda) y) \leq \lambda f(x) + (1 - \lambda) f(y)
-\end{equation*}
-poniamo $\lambda = \frac{1}{2}$ e aggiungiamo il modulo
-\begin{equation*}
-\left| \frac{1}{2} x + \frac{1}{2} y\right|^{p} \leq \frac{1}{2}| x|^{p} + \frac{1}{2}| y|^{p}
-\end{equation*}
-integriamo
-\begin{equation*}
-\int \left| \frac{1}{2} x + \frac{1}{2} y\right|^{p} dx \leq \frac{1}{2}\int | x|^{p} dx + \frac{1}{2}\int | y|^{p} dx
-\end{equation*}
-questo prova la tesi, se al posto di $x$ e $y$ immaginiamo che ci siano funzioni in $L^{p}$.
+La dimostrazione si basa sulle proprietà del logaritmo:
+$$
+\log(ab)=\log(a)+\log(b)=\frac{\log a^p}{p}+\frac{\log b^q}{q}\leq \log\left(\frac{a^p}{p}+\frac{b^q}{q}\right)
+$$
+Dato che il logaritmo è una funzione crescente posso semplificarlo e ottenere così la tesi.
 \end{proof}
-\begin{defn}
-[Esponenti coniugati]
-Due numeri $p, q \geq 1$ si dicono coniugati se
+
+\begin{thm}[Disuguaglianza di Holder]$\\$
+Sia $A\subseteq\RR^n$ misurabile e siano $p,q\in[0,+\infty]$ coniugati. Se $f\in L^p(A)$ e $g\in L^q(A)$ allora $fg\in L^1(A)$ e
 \begin{equation*}
-\frac{1}{p} + \frac{1}{q} = 1
-\end{equation*}
-Poniamo inoltre
-\begin{equation*}
-\frac{1}{\infty} = 0\ \ \ \ \frac{1}{0} = \infty
-\end{equation*}
-quindi se $p = 1\implies q = + \infty $, osserviamo anche che se $p\in (1, + \infty) \implies q\in (1, + \infty)$.
-\end{defn}
-\begin{thm}
-[Disuguaglianza di Young]
-Siano $p, q$ coniugati entrambi maggiori di $1$. Allora $\forall a, b \geq 0$
-\begin{equation*}
-\frac{a^{p}}{p} + \frac{b^{q}}{q} \geq ab
+\int_A | f(x) g(x)| \dx=\Vert fg \Vert_1 \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{equation*}
 \end{thm}
-\begin{proof}
 
-La funzione logaritmo è concava, poniamo $\lambda = \frac{1}{p}$ e di conseguenza $1 - \lambda = \frac{1}{q}$
+\begin{proof}
+Dimostriamo prima l'asserto nel caso $p=1$ e $q=\infty$ (la dimostrazione con $q=1$ e $p=\infty$ è del tutto analoga).
+
+Abbiamo $f\in L^1$ e $g\in L^{\infty}$. Per definizone di norma infinito abbiamo 
+$$
+|g(x)| \leq \Vert g \Vert_{\infty} \qquad\qquad\text{q.o. in }x
+$$
+e dunque
+$$
+\int_A |f(x) g(x)| \dx \leq \Vert g \Vert_{\infty}\cdot \int_A |f(x)| \dx = \Vert g \Vert_{\infty}\cdot \Vert f \Vert_{1}
+$$
+
+Possiamo passare a dimostrare l'asserto per due generici $1<p,q<\infty$. 
+
+Per semplicità consideriamo dapprima due funzioni $\widetilde{f}\in L^p$ e $\widetilde{g}\in L^q$ tali che $\Vert \widetilde{f}\Vert_p=1$ e $\Vert \widetilde{g}\Vert_q=1$. In questo modo per la disuguaglianza di Young si ha
+\begin{align*}
+\int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx&\leq \int_A \left(\frac{|\widetilde{f}(x)|^p}{p}+\frac{|\widetilde{g}(x)|^q}{q} \right)\dx \\
+&=\left(\frac{\Vert \widetilde{f}\Vert_p^p}{p}+\frac{\Vert \widetilde{g}\Vert_q^q}{q}\right) \\
+&=\frac{1}{p}+\frac{1}{q} \\
+&=1\left(=\Vert \widetilde{f}\Vert_p\cdot \Vert \widetilde{g}\Vert_q\right)
+\end{align*} 
+
+Ma allora il caso generale (con norme non necessariamente unitarie) è banale da verificare:
 \begin{gather*}
-\log\left(\frac{a^{p}}{p} + \frac{b^{q}}{q}\right) \geq \frac{\log a^{p}}{p} + \frac{\log b^{q}}{q} = \log(ab)
+f(x)=\frac{\Vert f \Vert_{p}}{\Vert f \Vert_{p}} \cdot f(x)=\frac{f(x)}{\Vert f \Vert_{p}} \cdot \Vert f \Vert_{p} = \widetilde{f}(x)\cdot \Vert f \Vert_{p} \\
+g(x)=\frac{\Vert g \Vert_{q}}{\Vert g \Vert_{q}} \cdot g(x)=\frac{g(x)}{\Vert g \Vert_{q}} \cdot \Vert g \Vert_{q} = \widetilde{g}(x)\cdot \Vert g \Vert_{q} \\
+\Longrightarrow \int_A | f(x) g(x)| \dx =\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{gather*}
 \end{proof}
-\begin{thm}
-[Disuguaglianza di Holder]
-Siano $p, q$ coniugati e siano $f\in L^{p}, g\in L^{q}$. Allora
-\begin{equation*}
-f(x) g(x) \in L^{1} \ \ \text{e} \ \ \int | f(x) g(x)| dx \leq \Vert f \Vert_{L^{p}} \Vert g \Vert_{L^{q}}
-\end{equation*}
-\end{thm}
-\begin{proof}\leavevmode
+
+Conseguenze della disuguaglianza di Holder:
 \begin{itemize}
-\item Se $p = 1, q = + \infty $ allora $g\in L^{\infty}$ cioè $\esssup| g(x)| < + \infty $
-\begin{align*}
-\implies & | g(x)| \leq \Vert g \Vert_{L^{\infty}} \ \ \text{q.o. in} \ x\\
-\implies & \int | f(x) g(x)| dx \leq \Vert g \Vert_{L^{\infty}}\int | f(x)| dx = \Vert g \Vert_{L^{\infty}} \Vert f \Vert_{L^{1}}
-\end{align*}
-\item Se $p, q > 1$ allora
-\begin{equation*}
-| f(x) g(x)| = \left| \lambda^{\frac{p - 1}{p}} f(x)\right| \left| \lambda^{\frac{1 - p}{p}} g(x)\right|
-\end{equation*}
+    \item Se $A\subset\RR^n$ è un insieme di misura finita e $1\leq p<q\leq+\infty$ allora vale l'inclusione $L^q(A)\subset L^p(A)$ e inoltre
+    $$
+    \Vert f \Vert_p\leq |A|^{\frac{1}{p}-\frac{1}{q}}\Vert f\Vert_q \qquad \qquad \forall f\in L^q(A) 
+    $$
+    \begin{rem}
+    L'ipotesi di misura finita è indispensabile: infatti se ad esempio $f\equiv 1$ abbiamo $f\in L^\infty(\RR)$ ma $f\notin L^p(\RR)$ per ogni $1\leq p<\infty$.
+    \end{rem}
 
-Notiamo che
-\begin{equation*}
-\frac{1}{p} + \frac{1}{q} = 1\ \ \implies \ \ \frac{1}{q} = 1 - \frac{1}{p} = \frac{p - 1}{p}
-\end{equation*}
+    \item Se $A\subset\RR^n$ è un insieme di misura finita allora per ogni funzione misurabile $f$ si ha
+    $$
+    \lim_{p\to\infty}\Vert f\Vert_p=\Vert f\Vert_{\infty}
+    $$
 
-voglio utilizzare la disuguaglianza di Young
-\begin{align*}
-\left| \lambda^{\frac{p - 1}{p}} f(x)\right| \left| \lambda^{\frac{1 - p}{p}} g(x)\right| & \leq \frac{\lambda^{\frac{p - 1}{p} \cdot p}| f(x)|^{p}}{p} + \frac{\lambda^{- \frac{1}{q} \cdot q}| g(x)|^{q}}{q}\\
- & = \frac{\lambda^{p - 1}| f(x)|^{p}}{p} + \frac{| g(x)|^{q}}{\lambda q}
-\end{align*}
-
-leggiamo tutta la maggiorazione
-\begin{equation}
-\int | f(x) g(x)| dx \leq \frac{\lambda^{p - 1}}{p}\underbrace{\int | f(x)|^{p} dx}_{\Vert f \Vert^{p}_{L^{p}}} + \frac{1}{\lambda q}\underbrace{\int | g(x)|^{q} dx}_{\Vert g \Vert^{q}_{L^{q}}} \ \ \implies \ \ fg\in L^{1} \tag{*}
-\end{equation}
-
-Per dimostrare il risultato della disuguaglianza cerchiamo il minimo in funzione di $\lambda > 0$ derivando
-\begin{align*}
-\frac{p - 1}{p} \lambda^{p - 2} \Vert f \Vert^{p}_{L^{p}} - \frac{1}{\lambda^{2} q} \Vert g \Vert^{q}_{L^{q}} & = 0\\
-\implies \ \ \frac{p - 1}{p} \lambda^{p} \Vert f \Vert^{p}_{L^{p}} & = \frac{1}{q} \Vert g \Vert^{q}_{L^{q}}\\
-\lambda^{p} & = \cancel{\frac{1}{q}} \Vert g \Vert^{q}_{L^{q}} \cdot \cancel{\frac{p}{p - 1}} \cdot \frac{1}{\Vert f \Vert^{p}_{L^{p}}}\\
-\lambda & = \left[\frac{\Vert g \Vert^{q}_{L^{q}}}{\Vert f \Vert^{p}_{L^{p}}}\right]^{1/p}
-\end{align*}
-
-sostituendolo nella $(\star)$ otteniamo la tesi.
-
+    \item Permette di dimostrare che $L^2$ è uno spazio di Hilbert (pensandoci, l'unico espnente coniugato con se stesso è proprio $p=2$).
 \end{itemize}
-\end{proof}
-\begin{thm}
-[Disuguaglianza di Minkowski]
-Sia $p \geq 1, f\in L^{p}, g\in L^{p}$. Allora
+
+\begin{thm}[Disuguaglianza di Minkowski]$\\$
+Siano $p \geq 1, f\in L^{p}, g\in L^{p}$. Allora
 \begin{equation*}
 (f + g) \in L^{p} \ \ \text{e} \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
 \end{equation*}
@@ -1355,172 +2388,8 @@ allora
 \implies \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
 \end{gather*}
 \end{proof}
-\begin{thm}
-Per ogni $A\subset \RR^{n}$ misurabile, per ogni $p\in [1, + \infty)$, lo spazio $L^{p}(A)$ è di Banach, ed è separabile tranne nel caso $p = \infty $.
-\end{thm}
-\begin{thm}
-Lo spazio $L^{2}(A)$ è uno spazio di Hilbert rispetto al prodotto scalare
-\begin{equation*}
-(f, g)_{2} = \int_{A} f(x)\overline{g(x)} dx
-\end{equation*}
-\end{thm}
-\begin{rem}
-L'unico esponente coniugato con se stesso è $2$. Lo spazio $L^{2}$ è il giusto \textit{equilibrio}.
-\end{rem}
 
-\section{Serie di Fourier}
-
-Consideriamo come spazio di lavoro $L^{2}([ - \pi, \pi])$.
-\begin{thm}
-Consideriamo
-\begin{equation*}
-B = \left\{\frac{1}{\sqrt{2}}, \cos x, \sin x, \cos(2x), \sin(2x), \dotsc \right\}
-\end{equation*}
-Consideriamo $f, g\in L^{2}([ - \pi, \pi])$ e definiamo il prodotto scalare
-\begin{equation*}
-\boxed{(f, g) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x) g(x) dx} \ \ \text{cioè} \ \ \Vert f \Vert^{2}_{L^{2}} = \frac{1}{\pi}\int^{\pi}_{- \pi} f^{2}(x) dx
-\end{equation*}
-allora $B$ è una base di Hilbert.
-\end{thm}
-Si vede facilmente che i suoi vettori sono normali
-\begin{gather*}
-\left \Vert \frac{1}{\sqrt{2}}\right \Vert = \frac{1}{\pi}\int^{\pi}_{- \pi}\left(\frac{1}{\sqrt{2}}\right)^{2} dx = 1\\
-\Vert \sin(kx) \Vert = \frac{1}{\pi}\int^{\pi}_{- \pi}(\sin(kx))^{2} dx = 1
-\end{gather*}
-e ortogonali a due a due
-\begin{equation*}
-\frac{1}{\pi}\int^{\pi}_{- \pi}\frac{1}{\sqrt{2}}\sin(kx) dx = 0\ \ \ \ \frac{1}{\pi}\int^{\pi}_{- \pi}\cos(kx)\cos(jx) dx = 0, \ \forall j\neq k
-\end{equation*}
-Vale inoltre, dalla teoria degli spazi di Hilbert, la seguente relazione, che ci permette di costruire ogni elemento dello spazio di Hilbert tramite la base
-\begin{equation*}
-\forall f\in L^{2}([ - \pi, \pi]), \ \ f(x)\textcolor[rgb]{0.82, 0.01, 0.11}{=}\frac{a_{0}}{\sqrt{2}} + \sum\limits^{\infty}_{n = 1}[a_{n}\cos(nx) + b_{n}\sin(nx)]
-\end{equation*}
-Cerchiamo l'espressione per calcolare i coefficienti, e soprattutto cerchiamo di capire in che senso vale tale uguaglianza in rosso.
-
-Sappiamo che i coefficienti si calcolano come prodotto scalare della cosa da costruire (la funzione in $L^{2}$ nel nostro caso) per il rispettivo elemento della base
-\begin{gather*}
-a_{n} = (f, e_{n}) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\cos(nx) dx\\
-b_{n} = (f, e_{n}) = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x)\sin(nx) dx\\
-a_{0} = \frac{1}{\pi}\int^{\pi}_{- \pi} f(x) \cdot \textcolor[rgb]{0.29, 0.56, 0.89}{\frac{1}{\sqrt{2}}} dx
-\end{gather*}
-Possiamo "togliere" dalla formula il termine blu e accorparlo nella formula completa, in modo da non avere radici, otteniamo la formula per le serie di Fourier\footnote{L'importanza della serie di Fourier è cruciale nelle equazioni differenziali. Infatti, nell'equazione del calore, che deriva direttamente dal postulato di Fourier, la soluzione si trova facilmente se è composta da soli seni. In questo modo si può costruire facilmente la soluzione usando una serie di Fourier, che sarà ancora soluzione per il principio di sovrapposizione delle equazioni differenziali. Fourier, quando sviluppò questa teoria, stava proprio cercando di risolvere questo problema, e grazie ciò, ottenne la sua \textit{immortalità}.}
-\begin{equation*}
-\boxed{\forall f\in L^{2}([ - \pi, \pi]), \ \ f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}[a_{n}\cos(nx) + b_{n}\sin(nx)]}
-\end{equation*}
-\begin{rem}
-[Convergenza $L^{2}$] L'uguaglianza vale in senso $L^{2}$, ovvero che se indichiamo con $S_{N}(x)$ le somme parziali
-\begin{equation*}
-S_{N}(x) = \frac{a_{0}}{2} + \sum\limits^{N}_{n = 1}[a_{n}\cos(nx) + b_{n}\sin(nx)]
-\end{equation*}
-vale il limite\footnote{come di consueto, dire che qualcosa si avvicina a un'altra cosa, è equivalente a dire che \textit{una certa norma} della differenza tra le due tende a zero.}
-\begin{equation*}
-\lim\limits_{N\rightarrow + \infty}\int^{\pi}_{- \pi}[f(x) - S_{N}(x)]^{2} dx = 0
-\end{equation*}
-\end{rem}
-\begin{rem}
-La funzione che scegliamo di approssimare deve essere periodica di periodo $2\pi $, si può chiaramente generalizzare il risultato a periodi generici $T$
-\begin{equation*}
-\forall f\in L^{2}\left(\left[ - \frac{T}{2}, \frac{T}{2}\right]\right), \ \ f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}\left[a_{n}\cos\left(\frac{2n\pi}{T} x\right) + b_{n}\sin\left(\frac{2n\pi}{T} x\right)\right]
-\end{equation*}
-con prodotto scalare
-\begin{equation*}
-(f, g) = \frac{1}{\frac{T}{2}}\int^{T/2}_{- T/2} f(x) g(x) dx
-\end{equation*}
-quindi per esempio
-\begin{equation*}
-a_{n} = \frac{2}{T}\int^{T/2}_{- T/2} f(x)\cos\left(\frac{2n\pi}{T} x\right) dx
-\end{equation*}
-\end{rem}
-\begin{rem}
-[Convergenza uniforme]
-Dal momento che
-\begin{equation*}
-| a_{n}\cos(nx) + b_{n}\sin(nx)| \leq | a_{n}| + | b_{n}|
-\end{equation*}
-Per il test di Weierstrass vale la seguente relazione che ci permette di stabilire se la serie converge uniformemente
-\begin{equation*}
-\sum\limits^{\infty}_{n = 1}(| a_{n}| + | b_{n}|) < \infty \ \ \implies \ \ f(x) \ \text{converge uniformemente}
-\end{equation*}
-\end{rem}
-\textit{Esempio.}
-
-Sia $f(x) = | x| $ nell'intervallo $[ - \pi, \pi]$ estesa con periodicità a tutto $\RR$, calcoliamo lo sviluppo di Fourier.
-\begin{align*}
-a_{n} & = \frac{1}{\pi}\int^{\pi}_{- \pi}| x| \cos(nx) dx = \frac{2}{\pi}\int^{\pi}_{0} x\cos(nx) dx\\
- & = \frac{2}{\pi}\left\{\cancel{x \cdot \left. \frac{\sin(nx)}{n}\right|^{\pi}_{0}} - \int^{\pi}_{0}\frac{\sin(nx)}{n} dx\right\}\\
- & = \frac{2}{\pi}\left\{\left. \frac{\cos(nx)}{n^{2}}\right|^{\pi}_{0}\right\} = \frac{2}{\pi n^{2}}\left[(- 1)^{n} - 1\right]\\
- & \\
-b_{n} & = \frac{1}{\pi}\int^{\pi}_{- \pi}| x| \sin(nx) dx = 0\\
- & \\
-a_{0} & = \frac{2}{\pi}\int^{\pi}_{0} xdx = \pi
-\end{align*}
-allora si scrive in serie di Fourier
-\begin{equation*}
-| x| = \frac{\pi}{2} + \sum\limits^{\infty}_{n = 1}\frac{2}{\pi n^{2}}\left[(- 1)^{n} - 1\right]\cos(nx)
-\end{equation*}
-\begin{defn}
-Una funzione $f: [ - \pi, \pi]\rightarrow \RR$ si dice \textbf{regolare a tratti} se è derivabile e ha un numero finito di punti di discontinuità $\{x_{n}\}_{n = 1\dotsc N}$ e in tali punti esistono finiti i limiti
-\begin{equation*}
-\lim\limits_{x\rightarrow x^{+}_{n}} f(x) \ \ \ \ \ \ \lim\limits_{x\rightarrow x^{-}_{n}} f(x)
-\end{equation*}
-Escludiamo quindi asintoti, punti di cuspide, ma i limiti possono eventualmente essere diversi.
-\end{defn}
-\begin{thm}
-[Convergenza puntuale]
-Una funzione $f: [ - \pi, \pi]\rightarrow \RR$ regolare a tratti. Allora la serie di Fourier converge $\forall x\in [ - \pi, \pi]$ tale che $f(x)$ è continua. Nei punti in cui non è continua invece converge al valore medio tra i due limiti.
-\end{thm}
-\begin{thm}
-[Derivazione]
-Per la derivazione possiamo dire che
-\begin{equation*}
-f'(x) = \sum\limits^{\infty}_{n = 1}[ - na_{n}\sin(nx) + nb_{n}\cos(nx)]
-\end{equation*}
-osserviamo che
-\begin{equation*}
-\sup_{x\in [ - \pi, \pi]}[ - na_{n}\sin(nx) + nb_{n}\cos(nx)] \leq n(| a_{n}| + | b_{n}|)
-\end{equation*}
-per cui per il test di Weierstrass se
-\begin{equation*}
-\sum\limits^{\infty}_{n = 1} n(| a_{n}| + | b_{n}|) < \infty \ \ \implies \ \ f'(x) \ \text{converge uniformemente}
-\end{equation*}
-e naturalmente anche $f(x)$. La condizione \textit{sufficiente} affinché la serie di Fourier sia derivabile $k$ volte è che
-\begin{equation*}
-\sum\limits^{\infty}_{n = 1} n^{k}(| a_{n}| + | b_{n}|) < \infty
-\end{equation*}
-\end{thm}
-\begin{rem}
-Lo usiamo normalmente solo come controllo per sapere se abbiamo calcolato bene la serie di Fourier, di solito sappiamo già se $f$ è derivabile o meno.
-\end{rem}
-Esiste una base alternativa, che troviamo se scriviamo le relazioni complesse
-\begin{equation*}
-\cos(nx) = \frac{e^{inx} + e^{- inx}}{2} \ \ \ \ \ \ \ \ \sin(nx) = \frac{e^{inx} - e^{- inx}}{2i}
-\end{equation*}
-allora la serie di Fourier si scrive nella sua \textbf{forma esponenziale}
-\begin{equation*}
-f(x) = \frac{a_{0}}{2} + \sum\limits^{\infty}_{n = 1}\left[a_{n}\frac{e^{inx} + e^{- inx}}{2} + b_{n}\frac{e^{inx} - e^{- inx}}{2i}\right] \ \ \implies \ \ \boxed{f(x) = \sum\limits^{\infty}_{n = - \infty} c_{n} e^{inx}}
-\end{equation*}
-\begin{rem}
-In generale questi coefficienti sono complessi $c_{n} = \overline{c_{- n}}$.
-\end{rem}
-\begin{rem}
-La base $\left\{e^{inx}\right\}_{n\in \ZZ}$ è una base ortonormale
-\begin{equation*}
-\int^{\pi}_{- \pi} e^{inx} e^{imx} dx = \int^{\pi}_{- \pi} e^{i(n - m) x} dx =
-\begin{cases}
-2\pi, & n = m\\
-\left. \frac{e^{i(n - m) x}}{i(n - m)}\right|^{\pi}_{- \pi} = 0, & n\neq m
-\end{cases}
-\end{equation*}
-normalizziamo, quindi il prodotto scalare sarà
-\begin{equation*}
-(f, g) = \frac{1}{2\pi}\int^{\pi}_{- \pi} f(x)\overline{g(x)} dx
-\end{equation*}
-e i coefficienti saranno
-\begin{equation*}
-c_{n} = \frac{1}{2\pi}\int^{\pi}_{- \pi} f(x) e^{- inx} dx
-\end{equation*}
-Il $ - $ è dovuto al fatto che $g$ è coniugato nel prodotto scalare.
-\end{rem}
+%zzzzzzzzzzzzzzzzzzzzzzz
 
 \chapter{Distribuzioni}
 
@@ -2541,41 +3410,7 @@ e^{- \lambda x} u(x) \in L^{1} \ \ \notimplies \ \ e^{- \lambda x} u(x)\rightarr
 \end{equation*}
 per esempio questa funzione non tende a $0$ pur essendo integrabile
 
-\begin{figure}[htpb]
-\centering
 
-\tikzset{every picture/.style = {line width = 0.75pt}} %set default line width to 0.75pt
-
-\begin{tikzpicture}[x = 0.75pt, y = 0.75pt, yscale = - 1, xscale = 1]
-%uncomment if require: \path (0, 159); %set diagram left start at 0, and has height of 159
-
-%Shape: Axis 2D [id: dp9522434839194833]
-\draw (171, 111) - - (441, 111)(171, 11) - - (171, 111) - - cycle (434, 106) - - (441, 111) - - (434, 116) (166, 18) - - (171, 11) - - (176, 18);
-%Shape: Rectangle [id: dp6209341938001463]
-\draw (191, 41) - - (251, 41) - - (251, 111) - - (191, 111) - - cycle;
-%Shape: Rectangle [id: dp5551932751144555]
-\draw (281, 41) - - (311, 41) - - (311, 111) - - (281, 111) - - cycle;
-%Shape: Rectangle [id: dp45095610787740714]
-\draw (341, 41) - - (351, 41) - - (351, 111) - - (341, 111) - - cycle;
-%Shape: Rectangle [id: dp9386110377703627]
-\draw (381, 41) - - (386, 41) - - (386, 111) - - (381, 111) - - cycle;
-
-% Text Node
-\draw (152, 33.4) node [anchor = north west][inner sep = 0.75pt] {$1$};
-% Text Node
-\draw (291, 122.4) node [anchor = north west][inner sep = 0.75pt] [font = \scriptsize] {$\frac{1}{4}$};
-% Text Node
-\draw (216, 122.4) node [anchor = north west][inner sep = 0.75pt] {$1$};
-% Text Node
-\draw (157, 112.4) node [anchor = north west][inner sep = 0.75pt] {$0$};
-% Text Node
-\draw (340, 122.4) node [anchor = north west][inner sep = 0.75pt] [font = \scriptsize] {$\frac{1}{9}$};
-% Text Node
-\draw (376, 122.4) node [anchor = north west][inner sep = 0.75pt] [font = \scriptsize] {$\frac{1}{16}$};
-
-\end{tikzpicture}
-\end{figure}
-\FloatBarrier
 
 \begin{equation*}
 \int^{+ \infty}_{0} f(x) dx = \sum^{\infty}_{n = 1}\frac{1}{n^{2}} < + \infty \ \ \ \ \text{ma} \ f(x) \nrightarrow 0

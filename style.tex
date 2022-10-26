@@ -71,6 +71,7 @@
   \end{figure}%
   \FloatBarrier%
 }
+\usepackage[labelformat=empty]{caption}
 
 %---------------------------
 % PARAGRAPHS AND LINES
@@ -258,6 +259,8 @@
 \newcommand{\fXY}{f_{(X,Y)}}
 \newcommand{\fXYxy}{\fXY(x,y)}
 
+%\newcommand{\Log}{\text{Log}}
+
 % spaziature https://tex.stackexchange.com/questions/438612/space-between-exists-and-forall
 % questo aggiunge un piccolo spazio dopo \forall
 \let\oldforall\forall
@@ -397,7 +400,7 @@ innerbottommargin=5pt]{blackBox}
 \newenvironment{exa}{\begin{blackBox}\begin{exampleT}}{\end{exampleT}\end{blackBox}}
 
 \renewcommand\qedsymbol{$\blacksquare$}
-%\renewenvironment{proof}{\begin{blackBox}\begin{proofT}}{\[\qed\]\end{proofT}\end{blackBox}}
+\renewenvironment{proof}{\begin{blackBox}\begin{proofT}}{\[\qed\]\end{proofT}\end{blackBox}}
 
 %---------------------------
 % CONTENTS
