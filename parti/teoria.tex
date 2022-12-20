@@ -549,7 +549,7 @@ Possiamo quindi espandere la funzione $f$ in serie di Taylor in ogni direzione m
 
 Per capire meglio osserviamo la seguente figura:
 
-\fg{0.8}{bonfa_6}
+\fg{0.7}{bonfa_6}
 
 Punti $z^*$ che non permettono di scrivere un'espansione in serie di Taylor centrata in $z_0$ e il cui disco di convergenza li contenga, sono detti \textit{punti singolari}. Più precisamente:
 \begin{defn}[Punto singolare]
@@ -577,7 +577,7 @@ Osserviamo alcune cose:
 Ma questo come ci aiuta?\\
 Sia $f\in H(A\setminus\{z_0\})$, cioè $z_0$ è un punto singolare per $f$. Grazie al teorema di Laurent è possibile prendere una corona circolare di raggio interno piccolo a piacere e raggio esterno grande purché la corona rimanga all'interno di $A$, e scrivere $f$ come serie di Laurent centrata in $z_0$:
 
-\fg{0.8}{bonfa_7}
+\fg{0.7}{bonfa_7}
 
 \newpage
 
@@ -759,6 +759,8 @@ La funzione geometrica $f(z)=\frac{1}{1-z}$ ha $z^*=1$ come punto singolare. Si 
 \begin{defn}
 Si dice residuo di $f$ in $\infty$ la quantità $\Res(f,\infty):=-a_{-1}$.
 \end{defn}
+
+\newpage
 
 \begin{thm}
 Sia $f\in H(\CC\setminus\{z_1,\dotsc,z_n\})$. Allora
@@ -1139,7 +1141,7 @@ Piccola chicca: negli spazi di dimensione finita tutte le norme sono equivalenti
 In questo paragrafo studiamo gli operatori lineari tra due spazi di Banach.
 
 \begin{defn}
-Un operatore lineare tra due spazi di Banach $X_1$ e $X_2$ (sul campo $\KK$)è una funzione $L:X_1\to X_2$ tale che:
+Un operatore lineare tra due spazi di Banach $X_1$ e $X_2$ (sul campo $\KK$) è una funzione $L:X_1\to X_2$ tale che:
 \begin{enumerate}
     \item [$\diamond$] $L(x+y)=Lx+Ly$ per ogni $x,y\in X_1$
     \item [$\diamond$] $L(\lambda x)=\lambda L(x)$ per ogni $x\in X_1$, per ogni $\lambda\in\KK$
@@ -1265,7 +1267,7 @@ In tal caso, l'immagine di $x\in X$ non sarà più $L(x)$ o $Lx$ ma $\langle L,x
 \begin{defn}[Spazio duale]
 L'insieme dei funzionali lineari e continui su uno spazio di Banach $X$ prende il nome di spazio duale di $X$, e viene indicato con il simbolo $X'$.
 \end{defn}
-Si può dimostrare, con un opportuna norma, che $X'$ è uno spazio di Banach.
+Nelle definizioni di funzionale e duale $X$ basta che sia uno spazio vettoriale.
 
 \section{Spazi di Hilbert}
 
@@ -2202,7 +2204,7 @@ Il caso $p=\infty$ merita una trattazione a parte.
 \begin{defn}
 Sia $A\subseteq\RR^n$ un insieme misurabile. Per ogni funzione $f:A\to\RR$ misurabile definiamo l'\textbf{estremo superiore essenziale} di $f$ su $A$ come
 $$
-\esssup_{x\in A} f(x):=\inf\left\{ \alpha\in\RR\ :\ \left|f^{-1}(\alpha,+\infty) \right|=+\infty \right\}
+\esssup_{x\in A} f(x):=\inf\left\{ \alpha\in\RR\ :\ \left|f^{-1}(\alpha,+\infty) \right|=0 \right\}
 $$
 dove con $\left|f^{-1}(\alpha,+\infty) \right|$ si intende la misura della controimmagine di $f(\alpha,+\infty)$.
 \end{defn}
@@ -2351,7 +2353,7 @@ Conseguenze della disuguaglianza di Holder:
     \lim_{p\to\infty}\Vert f\Vert_p=\Vert f\Vert_{\infty}
     $$
 
-    \item Permette di dimostrare che $L^2$ è uno spazio di Hilbert (pensandoci, l'unico espnente coniugato con se stesso è proprio $p=2$).
+    \item Permette di dimostrare che $L^2$ è uno spazio di Hilbert (pensandoci, l'unico esponente coniugato con se stesso è proprio $p=2$).
 \end{itemize}
 
 \begin{thm}[Disuguaglianza di Minkowski]$\\$
@@ -2389,269 +2391,345 @@ allora
 \end{gather*}
 \end{proof}
 
-%zzzzzzzzzzzzzzzzzzzzzzz
 
 \chapter{Distribuzioni}
 
-\section{Spazi di Banach e spazi duali}
+Le distribuzioni non sono altro che una generalizzazione, davvero molto più ampia e flessibile, del concetto di funzioni. C'è sempre un prezzo da pagare, che in questo caso è una maggiore complessità nella definizione. Dunque, prima di arrivare alla definizione di distribuzione dobbiamo fare alcuni passaggi preliminari.
 
-Per arrivare a definirle e vedere a cosa servono dobbiamo fare alcuni passaggi preliminari. Definiamo il concetto di spazio duale. Parliamo di spazio duale non necessariamente, ma specialmente nel contesto degli spazi di Banach.
+\section{Spazio delle funzioni \texorpdfstring{$\Cc^\infty$}{C}}
 
-Supponiamo di avere due spazi di Banach $X, Y$ in modo assolutamente generale, poi ci concentreremo su uno specifico.
-\begin{defn}
-[Linearità] Possiamo considerare tutte le funzioni lineari da $X$ in $Y$
-\begin{equation*}
-L: X\rightarrow Y\ \ \ \ L(\alpha x_{1} + \beta x_{2}) = \alpha L(x_{1}) + \beta L(x_{2})
-\end{equation*}
-\end{defn}
-Teniamo presente che quando parliamo di spazi di Banach spesso intendiamo spazi a dimensione infinita, in questo caso certe idee che abbiamo molto naturali e intuitive delle funzioni lineari non valgono necessariemente. In particolare la continuità \textbf{non} è necessariamente garantita in caso di funzioni lineari. In uno spazio di Banach possiamo avere funzioni lineari continue e funzioni lineari non continue.
-\begin{defn}
-[Continuità] Una funzione è continua se
-\begin{equation*}
-x_{n}\rightarrow x\ \ \implies \ \ L(x_{n})\rightarrow L(x)
-\end{equation*}
-\end{defn}
-Ricordiamo un'altra definizione non scontata negli spazi a dimensione infinita
-\begin{defn}
-[Limitatezza]
-Una funzione lineare è limitata se
-\begin{equation*}
-\exists c\ \ \Vert L(x) \Vert \leq c \Vert x \Vert \ \ \forall x\in X
-\end{equation*}
-\end{defn}
-Vale un teorema che collega queste due definizioni.
-\begin{thm}
-Siano $X, Y$ due spazi di Banach qualsiasi. Una funzione lineare $L: X\rightarrow Y$ è limitata se e solo se è continua.
-\end{thm}
-Quello che ci interessa è un tipo particolare di funzioni tra spazi di Banach. Il secondo spazio sarà $\RR$, che è esso stesso uno spazio di Banach, è uno spazio lineare dotato di norma (il valore assoluto) e continuo rispetto a questa norma.
-\begin{equation*}
-L: X\rightarrow \RR \ \ \ \ X\ \text{di Banach}
-\end{equation*}
-\begin{defn}
-Dato uno spazio $X$ di Banach, si dice \textbf{spazio duale} l'insieme di tutte le \underline{funzioni lineari continue} da $X$ in $\RR$. Queste funzioni si chiamano anche \textbf{funzionali}.
-\end{defn}
-Supponiamo per esempio che $X$ sia $\RR^{n}$, possiamo considerare tutte le funzioni lineari (e quindi continue, essendo $\RR^{n}$ a dimensione finita)
-\begin{equation*}
-L: \RR^{n}\rightarrow \RR
-\end{equation*}
-Come possiamo descriverle tutte? Le identifichiamo con il prodotto scalare con un altro vettore. Dato $y\in \RR^{n}$ possiamo definire $L(x) : = (y, x)$. Per esempio il duale di $\RR^{n}$ è $\RR^{n}$ stesso.
+Parliamo di funzioni $f\in\Cc^\infty(A)$, con $A\subset\RR$ aperto (si può generalizzare al caso $\RR^n$ in maniera del tutto analoga).
 
-La categoria più importante di spazi di Banach che abbiamo visto fin'ora è $L^{p}$, cos'è il suo duale? Abbiamo un modo molto semplice.
-\begin{thm}
-Se $1 < p < + \infty $, allora il duale di $L^{p}$ è $L^{q}$ dove $q$ è l'esponente coniugato di $p$: $\frac{1}{p} + \frac{1}{q} = 1$.
-\end{thm}
-Sia $f\in L^{p}$ e $L(f) \in \RR$, possiamo dimostrare che $\forall L$ funzionale lineare su $L^{p}$ esiste una funzione $h\in L^{q}$ tale che $L(f) = \int hf$. Non stiamo specificando in quale dominio stiamo definendo questi spazi. Grazie alla disuguaglianza di Holder otteniamo questo risultato. Non indaghiamo ulteriormente.
-
-Torniamo alla definizione di duale. Una possibile notazione dello spazio duale di $X$ è $X'$. Questo spazio duale è lui stesso uno spazio di Banach. È ovviamente uno spazio vettoriale, ma dobbiamo far vedere che c'è una \textit{norma}. Un elemento del duale è un funzionale $L: X\rightarrow \RR$, questo vuol dire che dato un elemento $x\in X$ allora $L(x) \in \RR$
+\begin{defn}[Supporto di una funzione]$\\$
+Sia $A\subset\RR$ aperto e sia $f\in\Cc^\infty(A)$. Chiamiamo supporto di $f$ e lo indichiamo con
 \begin{equation*}
-\Vert L \Vert = \sup_{\Vert x \Vert = 1}| L(x)|
+\supp f = \overline{\{x\in A\ :\ f(x) \neq 0\}}
 \end{equation*}
-È vero che questo è effettivamente un numero reale? Abbiamo detto che il duale è fatto da funzionali lineari continui, ovvero limitati, quindi sicuramente questo estremo superiore è limitato. La definizione di poco fa di funzione limitata era che $\exists c$ tale che $| L(x)| \leq c \Vert x \Vert $, quindi sicuramente questo estremo superiore è minore di $c$. Si tratta di far vedere che è effettivamente una norma, abbiamo allora questo teorema.
-\begin{thm}
-Sia $X$ spazio di Banach. Allora $X'$ è uno spazio di Banach lui stesso rispetto alla norma
-\begin{equation*}
-\Vert L \Vert = \sup_{\Vert x \Vert = 1}| L(x)|
-\end{equation*}
-\end{thm}
-\begin{defn}
-[Supporto di una funzione]
-Supponiamo ora di avere una funzione $f: A\subset \RR^{n}\rightarrow \RR$. Si dice supporto di $f$ l'insieme
-\begin{equation*}
-\supp f = \overline{\{x\in A, f(x) \neq 0\}}
-\end{equation*}
-È la chiusura dell'insieme dei punti dove la funzione non si annulla.
+la chiusura dell'insieme dei punti dove la funzione non si annulla.
 \end{defn}
-Diamo la definizione di un nuovo spazio vettoriale, se abbiamo $A\subset \RR^{n}$ sappiamo cos'è $L^{p}(A)$.
+
 \begin{defn}
-Si dice $L^{p}_{\loc}$ l'insieme delle funzioni $f: A\rightarrow \RR$ tali che $\forall K\subset A$ compatto
+Definiamo
 \begin{equation*}
-\exists \ \ \int_{K}| f|^{p} dx\ \ \text{finito} .
+\Dc(A)=\left\{f\in\Cc^\infty\ :\ \supp f \text{ è compatto in }A\right\}
 \end{equation*}
 \end{defn}
-È molto più grande dello spazio $L^{p}$.
+In sostanza, $\Dc(A)$ contiene quelle funzioni regolari su $A$ che si annullano prima di raggiungere il bordo $\partial A$ o prima di raggiungere l'infinito (se $A$ è illimitato): deve quindi valere che $\supp f\subset A$.
 
-\section{Funzioni test e distribuzioni}
+\begin{exa}
+Fare esempi di funzioni $f\in\Dc$ non è per niente banale, e già questo è indice del fatto che lo spazio $\Dc$ sia uno spazio estremamente ``piccolo'', ovvero contenente poche funzioni.
 
-Adesso dobbiamo definire un nuovo spazio di funzioni, che non è uno spazio di Banach.
-\begin{defn}
-[Spazio delle funzioni test]
-Sia $A\subset \RR^{n}$ aperto. Chiamiamo funzioni $C^{\infty}$ a supporto compatto, o funzioni test, e lo indichiamo con $\Dc(A)$ l'insieme delle funzioni $f: A\rightarrow \RR$, derivabili infinite volte $f\in C^{\infty}$ e tali che il supporto $\supp f$ è compatto.
-\end{defn}
-Una funzione in $\Dc(A)$ viene detta \textbf{funzione test}. Queste funzioni sono un insieme estremamente piccolo. Non è banale neanche fare degli esempi in $\Dc(\RR)$. Per esempio
 \begin{equation*}
-f(x) =
-\begin{cases}
-e^{\frac{1}{x^{2} - 1}} & | x| < 1\\
-0 & | x| \geq 1
+f(x)=\begin{cases}
+e^{\frac{1}{x^2-1}} &|x|<1 \\
+0 &\text{altrove}
 \end{cases}
+\qquad \in \Dc\left((-2,2)\right)
 \end{equation*}
-Somiglia a una gaussiana, ma fuori da $[ - 1, 1]$ si annulla.
 
-\fg{0.7}{esempioFunzioneD}
+\fg{0.5}{esempioFunzioneD}
+
+Tale funzione assomiglia ad una gaussiana, ma fuori $[-1,1]$ si annulla.
 
 Non è banale che sia $C^{\infty}$ nei punti $ - 1, 1$, ma si può dimostrare.
 
-Nessuna funzione elementare appartiene a questo insieme.
+Vediamo un altro esempio:
 
-Questo insieme non è uno spazio di Banach, se definiamo una norma, non può essere uno spazio di Banach rispetto a quella norma. Nonostante ciò vogliamo definire un concetto di convergenza.
-
-Daremo le prossime definizioni in dimensione $1$ per alleggerire le notazioni.
-\begin{defn}
-[Convergenza in $\Dc$]Sia $A\subset \RR$ aperto e consideriamo l'insieme $\Dc(A)$, consideriamo una successione di funzioni $\{f_{n}\} \subset \Dc(A)$. Diciamo che $f_{n}\rightarrow f$ in $\Dc(A)$ se
-\begin{enumerate}
-\item $\exists K\subset A$ compatto tale che il supporto $\supp f_{n} \subset K$, ciascuna funzione è a supporto compatto, ma vogliamo che esista un compatto che contenga i supporti di tutte le funzioni.
-\item $\forall k\in \NN$ la derivata di ordine $k$ della successione di funzioni converge alla derivata di ordine $k$ della funzione uniformemente $f^{(k)}_{n}\rightarrow f^{(k)}$.
-\end{enumerate}
-\end{defn}
-Si può dimostrare che non possiamo definire questa convergenza in norma o distanza, motivo per cui l'abbiamo definita noi così. Ora possiamo finalmente arrivare alla definizione di distribuzione.
-\begin{defn}
-[Distribuzione]
-Sia $A\subset \RR$ aperto. Chiamiamo \textbf{distribuzione} in $A$ un funzionale (lineare e continuo) su $\Dc(A)$. Quindi lo spazio delle distribuzione è il suo duale $\Dc'(A)$.
-\end{defn}
-Stiamo cercando di generalizzare il concetto di funzione.
-\begin{thm}
-A ogni funzione $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione in $\Dc'(A)$.
-
-Indichiamo con $(u, f)$ il prodotto di dualità, cioè la distribuzione (funzionale lineare e continuo) associata ad $u$ che agisce sulla funzione test $f$
 \begin{equation*}
-\boxed{(u, f) = \int_{A} ufdx} \ \ \ \ u\in L^{1}_{\loc}(A) \ \ f\in \Dc(A)
+f(x)=1\notin\Dc(0,1)\text{ perché }\supp f=[0,1]\not\subset A=(0,1)
+\end{equation*}
+
+Intuiamo che nessuna funzione elementare può appartenere a $\Dc$.
+
+\end{exa}
+
+Abbiamo quindi capito che solo poche funzioni appartengono allo spazio $\Dc$ proprio perché vengono richieste delle condizioni molto forti; questo però garantisce ottime proprietà. Una tra queste è:
+
+\begin{thm}
+\label{teo_denso}
+Sia $A\subset \RR^n$ aperto. e sia $p\in[1,\infty)$ ($p=\infty$ escluso!). Allora $\forall p$ lo spazio $\Dc(A)\subset L^p(A)$ ed è ivi denso, e cioè
+\begin{equation*}
+\forall f\in L^p(A),\ \forall \Ec>0\ \ \exists\varphi_\Ec\in\Dc(A)\ \text{tc}\ \Vert f-\varphi_\Ec\Vert_p<\Ec
 \end{equation*}
 \end{thm}
+Tale teorema afferma che è sempre possibile approssimare (nel senso della norma di $L^p$) una funzione $\phi\in L^p$ con una funzione $f\in\Dc$.
+
+
+\section{Spazio delle funzioni localmente \texorpdfstring{$L^p$}{C}}
+
+\begin{defn}
+Sia $A\subset\RR^n$ aperto e sia $1\leq p\leq\infty$. Si indica con $L^{p}_{\loc}(A)$ lo spazio
+\begin{equation*}
+L^{p}_{\loc}(A)=\left\{f\in L^p(K)\ \ \forall K\text{ compatto}\subset A\right\}
+\end{equation*}
+(il pedice ``loc'' sta per locale)
+\end{defn}
+Tale spazio contiene tutte le funzioni $L^p(A)$ e inoltre anche quelle funzioni non $p$-integrabili in $A$ ma in un $K$ (chiuso) e limitato contenuto in $A$. Dunque le $f\in L^{p}_{\loc}(A)$ sono quelle che hanno un \textit{buon comportamento} all'interno di $A$, ma per le quali non si hanno informazioni vicino a $\partial A$.
+
+\begin{exa}
+\begin{equation*}
+f(x)=x^{1/3}\in L^1_{\loc}(\RR)\text{ ma }\notin L^1(\RR)
+\end{equation*}
+\begin{equation*}
+f(x)=\frac{1}{x}\in L^1_{\loc}(0,\infty)\text{ ma }\notin L^1(0,\infty)
+\end{equation*}
+\end{exa}
+
+Pur non essendo possibile definire sullo spazio $L^p_{\loc}$ una norma naturale è tuttavia possibile introdurre una nozione di convergenza, con l'accortezza che, essendo $L^p_{\loc}$ più ``grande'' di $L^p$, la convergenza in $L^p_{\loc}$ sarà più ``debole'' rispetto a quella in $L^p$.
+
+\begin{defn}
+Sia $\{f_n\}$ una successione in $L^p_{\loc}$(A), con $p\geq 1$. Si dice che $f_n\xrightarrow[]{L^p_{\loc}(A)}f$ se $f_n\xrightarrow[]{L^p(K)}f$ per ogni $K$ compatto $\subset A$, cioè se
+\begin{equation*}
+\int_K |f_n-f|^p\,\dx\to 0\qquad \forall K\subset A
+\end{equation*}
+\end{defn}
+
+\begin{thm}
+\label{per_dim_delta}
+Sia $A\subset\RR^n$ aperto e sia $f\in L^1_{\loc}(A)$ tale che
+\begin{equation*}
+\int_A f\varphi=0\qquad \forall \varphi\in\Dc(A)
+\end{equation*}
+Allora $f=0$ q.o. in $A$.
+\end{thm}
+
+
+\section{Distribuzioni}
+
+Sullo spazio $\Dc(A)$ introduciamo la seguente nozione di convergenza:
+\begin{defn}
+Siano $A\subset\RR$ aperto, $\{f_n\}\subset\Dc(A)$ e $f\in\Dc(A)$. Si dice che 
+\begin{equation}
+\label{conv_1_distrib}
+f_n\xrightarrow[]{\Dc(A)}f
+\end{equation} 
+se valgono le seguenti condizioni:
+\begin{enumerate}
+    \item [(i)] esiste $K\subset A$ compatto tale che $\supp f_n\subset K$ per ogni $n\in\NN$
+    \item [(ii)] $f_n^{(\alpha)}\xrightarrow[]{}f^{(\alpha)}$ uniformemente in $A$ per ogni indice $\alpha$.
+\end{enumerate}
+\end{defn}
+Questa convergenza è molto ``forte'', in linea col fatto che $\Dc$ è uno spazio molto ``piccolo''.
+
+A questo punto possiamo definire lo spazio delle distribuzioni.
+
+\begin{defn}[Distribuzione]$\\$
+Una distribuzione su $A$ aperto in $\RR$ è un funzionale lineare e continuo su $\Dc(A)$. Quindi lo spazio delle distribuzioni, che viene indicato con $\Dc'(A)$, è il duale di $\Dc(A)$.
+\end{defn}
+
+\begin{rem}
+È bene sottolineare che il codominio di una distribuzione, in quanto funzionale, è $\RR\,$!!
+\end{rem}
+
+Come detto a inizio capitolo, tale definizione risulta molto complessa poiché molto astratta. Cerchiamo di capire come tutto questo possa stare in piedi, soprattutto come generalizzazione del concetto di funzione.
+
+Sia $\Lambda:\Dc(A)\to\RR$ una distribuzione $\in\Dc'(A)$. Allora:
+\begin{itemize}
+    \item $\Lambda$ è lineare, cioè
+    \begin{equation*}
+    \Lambda(a_1\varphi_1+a_2\varphi_2)=a_1\Lambda(\varphi_1)+a_2\Lambda(\varphi_2)\qquad \forall \varphi_{1,2}\in\Dc(A),\ \forall a_{1,2}\in\RR
+    \end{equation*}
+    \item $\Lambda$ è continuo (nel senso di \eqref{conv_1_distrib}), cioè
+    \begin{equation}
+    \label{conv_2_distrib}
+    \Lambda(\varphi_n)\xrightarrow[]{}\Lambda(\varphi)\qquad \forall \{\varphi_n\}\subset\Dc(A)\text{ tc }\varphi_n\xrightarrow[]{\Dc(A)}\varphi
+    \end{equation}
+    \textbf{N.B.} Il numero reale $\Lambda(\varphi)$ verrà indicato con $(\Lambda,\varphi)$ per motivi che saranno ben chiari più avanti.
+    \item Per ogni $u\in L^1_{\loc}$ associamo la distribuzione $\Lambda_u$ definita da
+    \begin{equation*}
+    \boxed{(\Lambda_u,\varphi):=\int_A u\varphi \qquad \forall \varphi\in\Dc(A)}
+    \end{equation*}
+    \begin{proof}
+    Dobbiamo verificare che la definizione sia ben posta, ovvero che $(\Lambda_u,\varphi)$ sia effettivamente un funzionale lineare e continuo.
+    \begin{itemize}
+        \item [$\triangleright$] $\varphi\in\Dc(A)$ cioè $\varphi\in\Cc^\infty$ e $\supp\varphi$ è compatto. Detto $K\subset A$ un compatto che contiene $\supp\varphi$, tra le tante cose si ha che $\varphi$ si annulla al di fuori di $K$ e che $\varphi$ ammette massimo finito in $K$. Allora, ricordando che per ipotesi $u\in L^1_{\loc}$ (quindi è integrabile su qualsiasi $K\subset A$ secondo Lebesgue), si ha
+        \begin{equation*}
+        \int_A |u\varphi|=\int_K |u\varphi| \leq \max|\varphi|\cdot\int_K |u|<+\infty\ \Rightarrow\ \int_A |u\varphi|\text{ è int. secondo Lebesgue}
+        \end{equation*}
+        e dunque la definizione è quanto meno corretta: $\Lambda_u$ è un funzionale che, applicato a $\varphi$, restituisce un numero reale.
+        \item [$\triangleright$] $\Lambda_u$ è lineare poiché
+        \begin{equation*}
+        (\Lambda_u,a_1\varphi_1+a_2\varphi_2)=\int_A u (a_1\varphi_1+a_2\varphi_2)=a_1(\Lambda_u,\varphi_1)+a_2(\Lambda_u,\varphi_2)
+        \end{equation*}
+        \item [$\triangleright$] Dobbiamo ora dimostrare la continuità del funzionale, ovvero, come fatto in \eqref{conv_2_distrib}, che
+        \begin{equation*}
+        \{\varphi_n\}\text{ tc }\varphi_n\xrightarrow[]{\Dc(A)}\varphi\ \Rightarrow\ (\Lambda_u,\varphi_n)\xrightarrow[]{}(\Lambda_u,\varphi)
+        \end{equation*}
+        Questo può essere inteso come $(\Lambda_u,\varphi_n-\varphi)\xrightarrow[]{}0$ nel vero senso di limite per numeri reali, e dunque la cosa più comoda è dimostrare che $\int_A u(\varphi_n-\varphi)\xrightarrow[]{}0$ andandone a maggiorare il modulo. \\
+        Prima di fare ciò ricordiamo le ipotesi di lavoro: $\varphi$ e $\varphi_n$ stanno in $\Dc(A)$ dunque esiste un compatto $K\subset A$ che contiene $\supp\varphi$ e $\supp\varphi_n$ per ogni $n$; $\varphi_n^{(\alpha)}\to\varphi^{(\alpha)}$ uniformemente $\forall n,\alpha$ e quindi in particolare per $\alpha=0$ si ha che $\max|\varphi_n-\varphi|\to 0$; infine, $u\in L^1_{\loc}$ quindi è integrabile in $K$ secondo Lebesgue. \\
+        Allora:
+        \begin{equation*}
+        \int_A |u(\varphi_n-\varphi)|=\int_K |u(\varphi_n-\varphi)|\leq \int_K |u|\cdot |\varphi_n-\varphi|\leq \max|\varphi_n-\varphi|\cdot \int_K |u| \to 0
+        \end{equation*}
+    \end{itemize}
+    \end{proof}
+    \item La mappa $u\mapsto\Lambda_u$ è iniettiva (ma non suriettiva), cioè prese $u,v\in L^1_{\loc}$ con $u\neq v$ si ha che anche $\Lambda_u\neq\Lambda_v$. Infatti
+    \begin{equation*}
+    (u-v,\varphi)=\int_A (u-v)\varphi=0\ \ \ \forall\varphi\in\Dc(A)\quad \Leftrightarrow\quad u=v\ \text{ q.o.}
+    \end{equation*}
+\end{itemize}
+
+Grazie a questi quattro punti abbiamo capito che ad ogni funzione $u\in L^1_{\loc}(A)$ si può associare un funzionale $\Lambda_u\in\Dc'(A)$ lineare e continuo secondo la definizione di $(\Lambda_u,\varphi)$, con $\varphi\in \Dc(A)$. Abbiamo quindi instaurato la corrispondenza 
+\begin{equation*}
+u\in L^1_{\loc}\mapsto \Lambda_u\in\Dc'
+\end{equation*}
+Sappiamo già che lo spazio $L^1_{\loc}$ è molto ``grande'', nel senso che contiene tante funzioni; vogliamo quindi capire se lo spazio delle distribuzioni è ancora più ``grande'', cioè
+\begin{equation*}
+L^1_{\loc}(A)\overset{\underset{\mathrm{??}}{}}{\subset}\Dc'(A)
+\end{equation*}
+Per dire questo basta trovare una distribuzione che non appartiene a $L^1_{\loc}$.
+
+\begin{rem}
+Da qui in poi, ogni qual volta si vorrà snellire la notazione si identificherà la dualità $(\Lambda_u,\varphi)$ semplicemente con $(u,\varphi)$. Scriveremo dunque ``intendendo $u$ come distribuzione'', sottointendendo il fatto che a ogni $u\in L^1_{\loc}$ sia possibile associare la distribuzione $\Lambda_u$.
+\end{rem}
+
+\subsection{La delta di Dirac}
+
+Dato $y\in A\subset\RR$ aperto, si consideri il funzionale $\delta_y\in\Dc'(A)$ definito da
+\begin{equation*}
+\delta_y:\Dc(A)\to\RR\quad\qquad (\delta_y,\varphi):=\varphi(y)\in\RR
+\end{equation*}
+La delta di Dirac serve quindi per estrarre il valore di una funzione in un punto, ed è in realtà il punto di partenza per lo sviluppo della teoria delle distribuzioni.
+
+Verifichiamo che tale funzionale sia davvero una distribuzione, cioè che sia lineare e continuo:
+\begin{align*}
+(\delta_y,a_1\varphi_1+a_2\varphi_2)&\overset{\underset{\mathrm{def}}{}}{=}a_1\varphi_1(y)+a_2\varphi_2(y)=a_1(\delta_y,\varphi_1)+a_2(\delta_y,\varphi_2) \\
+(\delta_y,\varphi_n-\varphi)&\overset{\underset{\mathrm{def}}{}}{=}\varphi_n(y)-\varphi(y)\to0\qquad \qquad \text{con }\varphi_n\xrightarrow[]{\Dc}\varphi
+\end{align*}
+
+Bene, vogliamo ora dimostrare che non esiste $u\in L^1_{\loc}(A)$ tale che
+\begin{equation*}
+(\delta_y,\varphi)=\int_A u\varphi\qquad \forall\varphi\in\Dc(A)
+\end{equation*}
+
 \begin{proof}
-
-Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limitato).
-\begin{itemize}
-\item \textit{ben definito.} Il supporto di $f$ è un certo insieme $K\subset A$ compatto, quindi si annulla al di fuori di $K$, allora
+Suppiamo per assurdo che questa $u\in L^1_{\loc}(A)$ esista. Allora, per ogni $\varphi\in\Dc(A)$ tale che $y\notin\supp\varphi$ (e cioè $\varphi(y)=0$) si ha
 \begin{equation*}
-\int_{A} ufdx = \int_{K} ufdx
-\end{equation*}ma $f$ è anche limitata (essendo continua a supporto compatto) e $u\in L^{1}_{\loc}$:
-\begin{equation*}
-\left| \int_{K} ufdx\right| \leq \sup | f| \left| \int_{K} udx\right| < + \infty
+\int_A u\varphi=(\delta_y,\varphi)=\varphi(y)=0
 \end{equation*}
-\item \textit{lineare}, infatti
+Grazie al teorema (\ref{per_dim_delta}) applicato all'insieme aperto $A\setminus\{y\}$ si conclude che $u=0$ q.o. in $A$. Ma questo porta a dire che
 \begin{equation*}
-(u, c_{1} f_{1} + c_{2} f_{2}) = \int_{A} u(c_{1} f_{1} + c_{2} f_{2}) dx
-\end{equation*}per la linearità dell'integrale
-\begin{equation*}
-\int_{A} u(c_{1} f_{1} + c_{2} f_{2}) dx = c_{1}\int_{A} uf_{1} dx + c_{2}\int_{A} uf_{2} dx = c_{1}(u, f_{1}) + c_{2}(u, f_{2})
+\varphi(y)=(\delta_y,\varphi)=\int_Au\varphi=0\qquad \forall \varphi\in\Dc(A)
 \end{equation*}
-\item \textit{continuo, o limitato} (sono equivalenti). Per ipotesi $f_{n}\rightarrow f$ in $\Dc(A)$ e $u\in L^{1}_{\loc}$. Allora la convergenza in $\Dc(A)$ garantisce che il supporto di tutte le $f_{n}$ sia contenuto in un compatto $K\subset A$, e inoltre $f_{n}\rightarrow f$ (e le derivate) uniformemente, cioè $ \Vert f_{n} - f \Vert_{\infty}\rightarrow 0$. Per definizione di $L^{1}_{\loc}$ la funzione $u$ ristretta al compatto $K$ è $L^{1}(K)$. Possiamo allora usare la disuguaglianza di Holder con $p = 1, q = \infty $ per far vedere che
-\begin{equation*}
-\left| \int_{K} u(f_{n} - f) dx\right| \leq \Vert u \Vert_{L^{1}(K)} \Vert f_{n} - f \Vert_{\infty}\rightarrow 0
-\end{equation*}allora abbiamo fatto vedere che
-\begin{equation*}
-\int_{A} u(f_{n} - f) dx\rightarrow 0\ \ \ \ \iff \ \ \ \ \int_{A} uf_{n} dx\rightarrow \int_{A} ufdx
-\end{equation*}quindi qualsiasi funzione $L^{1}_{\loc}$ è una distribuzione su quell'insieme.
-\end{itemize}
+che è ovviamente assurdo perché le funzioni di $\Dc(A)$ non sono necessariamente nulle in $y$.
 \end{proof}
 
-Si noti che lo spazio $L^{1}_{\loc}$ è molto più grande di $L^{1}$, ad esempio banalmente qualunque polinomio non identicamente nullo non è integrabile su tutto $\RR$, ma è integrabile su qualunque compatto.
+Possiamo quindi affermare con certezza che $\Dc'$ è un'ampia estensione di $L^1_{\loc}$. Questo potevamo anche dedurlo a livello intuitivo dal concetto di dualità: più uno spazio è ``piccolo'' più il suo duale è ``grande''. Infatti, lo spazio $\Dc$ è più ``piccolo'' di $L^1_{\loc}$ e dunque il suo duale, $\Dc'$, sarà conseguentemente più ``grande'' di $L^1_{\loc}$.
 
-Tutte le distribuzioni si possono vedere come associate a una funzione $L^{1}_{\loc}$? No, vediamo un controesempio con la \textbf{delta di Dirac}, che definiamo come distribuzione su $\RR$. Ad ogni funzione $f\in \Dc(\RR)$ e $y\in \RR$ vogliamo associare una distribuzione $\delta_{y} \in \Dc'(\RR)$
-\begin{equation*}
-\boxed{(\delta_{y}, f) = f(y) \in \RR}
-\end{equation*}
-\begin{proof}\leavevmode
-\begin{itemize}
-\item ha valori in $\RR$, $\delta_{y} : \Dc(\RR)\rightarrow \RR$
-\item è lineare $(\delta_{y}, c_{1} f_{1} + c_{2} f_{2}) = (c_{1} f_{1} + c_{2} f_{2})(y) = c_{1} f_{1}(y) + c_{2} f_{2}(y)$ che è proprio uguale a $c_{1}(\delta_{y}, f_{1}) + c_{2}(\delta_{y}, f_{2})$
-\item è continua. Sia $f_{n}\rightarrow f$, cioè il supporto di tutte le $f_{n}$ è contenuto in $K$ compatto e $f_{n}\rightarrow f$ uniformemente, e quindi anche puntualmente:
-\begin{itemize}
-\item se $y\notin K$ allora $(\delta_{y}, f_{n}) = 0$ e $(\delta_{y}, f) = 0$
-\item se $y\in K$ allora $(\delta_{y}, f_{n}) = f_{n}(y)\rightarrow f(y) = (\delta_{y}, f)$
-\end{itemize}
+\subsection{Convergenza di una distribuzione}
 
-\end{itemize}
-\end{proof}
-Spesso si scrive
-\begin{equation*}
-(\delta_{y}, f) = \int_{\RR} \delta_{y}(x) f(x) dx = f(y)
-\end{equation*}
-La delta di Dirac nasce per estrarre in modo semplice il valore di una funzione in un punto, e da qui si è poi sviluppata la teoria delle distribuzioni. Ad ogni funzione $L^{1}_{\loc}$ si può quindi associare una distribuzione, ma non viceversa, le distribuzioni sono di più.
+Anche sullo spazio $\Dc'(A)$ è possibile introdurre una convergenza.
 
-Un altro modo di interpretare la delta di Dirac è il limite di una gaussiana
+\begin{defn}[Convergenza nel senso delle distribuzioni]$\\$
+Siano $A\subset\RR$ aperto, $\{\Lambda_n\}\subset\Dc'(A)$ e $\Lambda\in\Dc'(A)$. Si dice che
+\begin{equation}
+\label{conv_3_distrib}
+\Lambda_n\xrightarrow[]{\Dc'(A)}\Lambda
+\end{equation}
+se
 \begin{equation*}
-f(x) = \frac{1}{\sqrt{2\pi}} e^{- \frac{1}{2} x^{2}} \ \ \ \ \Vert f \Vert_{L^{1}} = 1
+(\Lambda_n,\varphi)\to(\Lambda,\varphi)\qquad \forall\varphi\in\Dc(A)
 \end{equation*}
-definiamo
-\begin{equation*}
-f_{n}(x) = nf(nx)
-\end{equation*}
-\fg{0.7}{deltaGaussianaLimite}
+(limite nel senso dei numeri reali!)
+\end{defn}
+Tale definizione è in perfetta simmetria con la definizione di continuità \eqref{conv_2_distrib}:
+\begin{align*}
+\varphi_n\xrightarrow[]{\Dc(A)}\varphi\quad&:\quad (\Lambda,\varphi_n)\to(\Lambda,\varphi)\\
+\Lambda_n\xrightarrow[]{\Dc'(A)}\Lambda\quad&:\quad(\Lambda_n,\varphi)\to(\Lambda,\varphi)
+\end{align*}
+Tali definizioni sono una il duale dell'altra, e capiamo quindi perché si preferisce la notazione $(\Lambda,\varphi)$ a $\Lambda(\varphi)$.
 
-dove
+\textit{Esempio.} Si consideri la successione $\{u_n\}\in L^1(\RR)$ definita da
 \begin{equation*}
-\Vert f_{n} \Vert_{L^{1}} = \int_{\RR}| f_{n}(x)| dx = \int_{\RR} nf(nx) dx
+u_n(x)=\begin{cases}
+n&x\in[0,1/n] \\
+0&\text{altrove}
+\end{cases}
 \end{equation*}
-chiamo $y = nx$ allora $dy = ndx$
+Notiamo subito che 
 \begin{equation*}
-\int_{\RR} nf(nx) dx = \int_{\RR} f(y) dy = 1
+\Vert u_n\Vert_{L^1}=\int_\RR u_n(x)\dx=1
 \end{equation*}
-Notiamo che
+Ma a cosa converge $u_n$ nel senso delle distribuzioni?
 \begin{equation*}
-f_{n}(x) = \frac{n}{\sqrt{2\pi}} e^{- \frac{1}{2}(nx)^{2}}\xrightarrow{n\rightarrow \infty} 0\ \ \forall x\neq 0
+(u_n\varphi)=\int_\RR u_n(x)\varphi(x)\dx=\int_0^{1/n} n\varphi(x)\dx
 \end{equation*}
-Essendo $L^{1}$, quindi anche $L^{1}_{\loc}$, le possiamo vedere come distribuzioni. Possiamo dimostrare che $\forall \varphi \in \Dc(A)$, $(f_{n}, \varphi)\rightarrow (\delta_{0}, \varphi)$.
+Applicando il Teorema della media integrale
+\begin{equation*}
+\frac{1}{b-a}\int_a^b f(x)\dx=f(x^*) \qquad \text{con }x^*\in[a,b]
+\end{equation*}
+possiamo dire che
+\begin{equation*}
+\int_0^{1/n} n\varphi(x)\dx=\frac{1}{1/n-0}\int_0^{1/n}\varphi(x)\dx=\varphi(x_n)\qquad \text{con }x_n\in\left[0,\frac{1}{n}\right]
+\end{equation*}
+E quindi
+\begin{equation*}
+(u_n,\varphi)=\varphi(x_n)\xrightarrow[]{n\to+\infty}\varphi(0)\quad\Rightarrow\quad u_n\xrightarrow[]{\Dc'(\RR)}\delta_0
+\end{equation*}
+Tale esempio mostra come si può interpretare matematicamente la delta di Dirac: è il limite (nel senso delle distribuzioni) di una successione di funzioni di $L^1$ che ``tende a concentrare la massa'' nel centro della delta. Grazie a tale osservazione è banale fornire un altro esempio, quello della \underline{gaussiana}:
+\begin{equation*}
+u_n=e^{-\frac{x^2}{2\sigma_n}}\xrightarrow[]{\sigma_n\to0}\delta_0
+\end{equation*} 
 
-Più uno spazio è piccolo e più il suo duale è grande, e viceversa. Lo spazio $\Dc(A)$ è molto piccolo, quindi il duale (lo spazio delle distribuzioni) sarà molto grande, ma pur essendo molto grande, avrà delle proprietà molto forti (derivabilità infinita). \textit{Stiamo cercando capre e cavoli}.
+
+\subsection{Supporto di una distribuzione}
+
+È possibile estendere la nozione di supporto, precedentemente introdotto per le funzioni, anche alle distribuzioni.
 
 \begin{defn}
-[Convergenza di una distribuzione]
-Cosa vuol dire avere una successione di distribuzioni $\{\Lambda_{n}\}$ che converge a $\Lambda $ \underline{nel senso delle distribuzioni}? Come prima, se $\forall \varphi \in \Dc(A) \implies (\Lambda_{n}, \varphi)\rightarrow (\Lambda, \varphi)$. La definizione è simmetrica rispetto all'altra.
-\end{defn}
-Veniamo al supporto. Una distribuzione non ha una variabile, non si annulla come una funzione, non è una funzione.
-\begin{defn}
-[Supporto di una distribuzione]
-Sia $\Lambda \subset \Dc'(A)$. Consideriamo $B\subset A$ e $\varphi \in \Dc(B)$. Supponiamo che $(\Lambda, \varphi) = 0\ \ \forall \varphi $. Questo è il modo per dire che "si annulla", diciamo
+Sia $A\subset\RR$ aperto e sia $\Lambda\in\Dc'(A)$. Se $\omega$ è un sottoinsieme aperto di $A$ diremo che la distribuzione $\Lambda$ si annulla in $\omega$ se $(\Lambda,\varphi)=0$ per ogni $\varphi\in\Dc(\omega)$.\\
+A questo punto ha senso introdurre $\Omega$ definito come l'unione di tutti gli aperti $\omega\subset A$ sui quali $\Lambda$ si annulla:
 \begin{equation*}
-\boxed{
-\supp \Lambda =
-\left(\bigcup_{\substack{B\subset A\\B\text{aperti}}} \{B: (\Lambda, \varphi) = 0, \ \forall \varphi \in \Dc(B)\}\right)^{C}
-}
+\Omega:=\bigcup_{\Lambda\text{ nulla}}\omega\qquad\text{ (l'unione di aperti è ancora un'aperto!)}
+\end{equation*}
+Allora si definisce supporto di $\Lambda$ il complementare di $\Omega$:
+\begin{equation*}
+\boxed{\supp\Lambda:=\Omega^c}
 \end{equation*}
 \end{defn}
-
-NB. Quando diciamo che a $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione, diciame che esiste una $\Lambda_{u}$ distribuzione definita come $(\Lambda_{u}, \varphi) = \int_{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
-\begin{defn}
-[Derivata di una distribuzione]
-Sia $\Lambda \in \Dc'(A)$ una distribuzione. Definiamo la sua distribuzione derivata $\Lambda'\in \Dc'(A)$. Per ogni $\varphi \in \Dc(A)$ dobbiamo definire quanto vale $(\Lambda', \varphi)$
-\begin{equation*}
-\boxed{(\Lambda', \varphi) = - (\Lambda, \varphi')}
-\end{equation*}
-\end{defn}
-Questo somiglia molto all'integrazione per parti (in realtà è molto più che una somiglianza). Controlliamo che sia una distribuzione
+Facciamo qualche osservazione:
 \begin{itemize}
-\item definita $\Lambda': \Dc(A)\rightarrow \RR$, sì per come è costruita, $\varphi'$ è comunque definito essendo $C^{\infty}$ a supporto compatto
-\item lineare:
-\begin{equation*}
-(\Lambda', a_{1} \varphi_{1} + a_{2} \varphi_{2}) = a_{1}(\Lambda', \varphi_{1}) + a_{2}(\Lambda', \varphi_{2})
-\end{equation*}
-\item continuo:
-\begin{equation*}
-\varphi_{k}\rightarrow \varphi \ \ \text{in} \ \Dc(A) \ \ \implies \ \ (\Lambda', \varphi_{k})\rightarrow (\Lambda', \varphi)
-\end{equation*}
-
-infatti, dato che $\varphi'_{k}\rightarrow \varphi'$
-\begin{gather*}
-(\Lambda', \varphi_{k}) = - (\Lambda, \varphi'_{k})\rightarrow - (\Lambda, \varphi') = (\Lambda', \varphi)
-\end{gather*}
+    \item Tale definizione è perfettamente compatibile con la precedente definizione di supporto, nel senso che se $u\in\Cc^0(A)\cap L^1_{\loc}(A)$ allora l'insieme
+    \begin{equation*}
+    \supp u=\overline{\{x\in A\ :\ u(x)\neq0\}}
+    \end{equation*}
+    coincide con il supporto della distribuzione associata a $u$.
+    \item Tale definizione permette di dare un significato al supporto di una funzione $L^p$. Ricordiamo che gli elementi di $L^p$ non sono funzioni ma classi di equivalenza di funzioni (funzioni uguali q.o.) e quindi l'unica definizione di supporto che ha davvero senso è quella nel senso delle distribuzioni.
+    \item  Le delta di Dirac sono distribuzioni a supporto compatto: $\supp\delta_y=\{y\}$.
+    \item Anche le funzioni $L^1(\RR^n)$ a supporto compatto sono distribuzioni a supporto compatto.
 \end{itemize}
 
-Andiamo ora a capire che ha le stesse proprietà di una derivata. Consideriamo una funzione derivabile $u\in C^{1}(A) \subset L^{1}_{\loc}(A)$, ma allora è associata ad una distribuzione, che continueremo a chiamare $u$
+\subsection{Derivata in senso distribuzionale}
+
+Prima di vedere la definizione di derivata cerchiamo di capire il percorso che ha portato ad essa.
+
+Sia $A\subset \RR$ aperto e sia $f\in\Cc^1(A)$. Intendendo $f$ come distribuzione, $\forall\varphi\in\Dc(A)$
 \begin{equation*}
-(u, \varphi) = \int_{A} u(x) \varphi (x) dx
+(f',\varphi):=\int_Af'(x)\varphi(x)\dx\overset{\underset{\mathrm{pp}}{}}{=}\left[f(x)\varphi(x)\right]_{\partial A}-\int_A f(x)\varphi'(x)\dx\overset{\underset{\varphi\in\Dc}{}}{=}-\int_Af(x)\varphi'(x)\dx=:-(f,\varphi')
 \end{equation*}
-Sappiamo che esiste $u'\in C^{0}(A) \subset L^{1}_{\loc}$, associata a sua a volta ad una distribuzione
-\begin{gather*}
-\underbrace{(u', \varphi) = - (u, \varphi')}_{\text{definizione di prima}}\\
-(u', \varphi) = \int_{A} u'(x) \varphi (x) dx = \cancel{u(b) \varphi (b)} - \cancel{u(a) \varphi (a)} - \int^{b}_{a} u(x) \varphi'(x) dx\ \ \ \ A = [a, b]
-\end{gather*}
-i termini si cancellano perché $\varphi $ è a supporto compatto, che è contenuto in $A$, quindi $\varphi $ si annulla agli estremi $\varphi (a) = 0 = \varphi (b)$.
 
-\textit{Esempio.}
+Se si potesse estendere tale proprietà, dedotta dal Teorema di integrazione per parti e dalla definizione di funzioni $\Cc^\infty$ a supporto compatto, alle distribuzioni potremmo benissimo dare la seguente:
 
-Consideriamo la funzione
-\fg{0.6}{rampa}
+\newpage
+
+\begin{defn}[Derivata di una distribuzione]$\\$
+Sia $\Lambda \in \Dc'(A)$ una distribuzione. Definiamo la sua derivata $\Lambda'\in \Dc'(A)$ la distribuzione data da
+\begin{equation*}
+\boxed{(\Lambda', \varphi) = - (\Lambda, \varphi')}\qquad\forall\varphi\in\Dc(A)
+\end{equation*}
+\end{defn}
+Ora controlliamo che effettivamente tale estensione sia coerente:
+\begin{itemize}
+\item $\Lambda': \Dc(A)\rightarrow \RR$, ben definita!
+\item $(\Lambda', a_{1} \varphi_{1} + a_{2} \varphi_{2}) = a_{1}(\Lambda', \varphi_{1}) + a_{2}(\Lambda', \varphi_{2})$, lineare!
+\item $(\Lambda', \varphi_{n})\rightarrow (\Lambda', \varphi)\ \ \forall \varphi_{n}\xrightarrow[]{\Dc(A)} \varphi$, continua!
+\end{itemize}
+
+\begin{rem}
+Se $u\in L^1_{\loc}$ è derivabile in senso tradizionale allora la sua derivata coincide con quella tradizionale. Viceversa, $u$ potrebbe anche non essere derivabile in senso tradizionale, ma potremo sempre scrivere $u'$ intendendo la derivata in senso distribuzionale, poiché questa esiste sempre (tra poco lo scoprirai).
+\end{rem}
+
+\textit{Esempio importante.} Consideriamo la funzione
 \begin{equation*}
 u(x) =
 \begin{cases}
@@ -2659,16 +2737,16 @@ x & x \geq 0\\
 0 & x < 0
 \end{cases}
 \end{equation*}
-Non è derivabile nell'origine, ma è $L^{1}_{\loc}$, quindi derivabile nel senso delle distribuzioni. Sia $\varphi \in \Dc(\RR)$
+\fg{0.5}{rampa}
+Tale funzione è continua su $\RR$ e perciò $L^1_{\loc}(\RR)$, ma presenta un punto angoloso nell'origine dunque non è derivabile in senso tradizionale. Intendendo $u$ come distribuzione, $\forall\varphi \in \Dc(\RR)$ si ha
 \begin{equation*}
-(u', \varphi) = - (u, \varphi') = - \int_{\RR} u(x) \varphi'(x) dx = - \int^{M}_{0} x\varphi'(x) dx
+(u', \varphi) = - (u, \varphi') = - \int_{\RR} u(x) \varphi'(x) \dx=- \int_0^{+\infty} u(x) \varphi'(x) \dx = - \int^{M}_{0} x\varphi'(x) \dx
 \end{equation*}
-$M$ perché $\varphi $ è a supporto compatto, quindi ci sarà un $M$; applico l'integrazione per parti
-\begin{align*}
-- \int^{M}_{0} x\varphi'(x) dx & = - \cancel{[x\varphi (x)]^{M}_{0}} + \int^{M}_{0} \varphi (x) dx = \int^{M}_{0} \varphi (x) dx\\
- & = \int^{+ \infty}_{0} \varphi (x) dx = \int_{\RR} H(x) \varphi (x) dx = (H, \varphi)
-\end{align*}
-dove $H(x)$ è la \textbf{funzione di Heaviside}, che abbiamo interpretato come distribuzione
+dove $M$ è il primo valore tale che $\varphi(M)=0$. Integrando ancora per parti si ha
+\begin{equation*}
+- \int^{M}_{0} x\varphi'(x) \dx =-M\cdot\cancel{\varphi(M)}+\cancel{0}\cdot\varphi(0)+\int^{M}_{0} \varphi (x) \dx = \int^{M}_{0} \varphi (x) \dx=: \int_\RR H(x) \varphi (x) \dx = (H, \varphi)
+\end{equation*}
+dove $H(x)$ è la \textbf{funzione di Heaviside}
 \begin{equation*}
 H(x) =
 \begin{cases}
@@ -2676,50 +2754,62 @@ H(x) =
 0 & x < 0
 \end{cases}
 \end{equation*}
-NB. Tutto quello che vediamo riguardante gli spazi $L^{p}$ riguarda gli integrali, quindi che valga $0$ o $1$ quando $x = 0$ è del tutto irrilevante.
+intesa come distribuzione.
 
-Allora la derivata di $u$, cioè $u'$, nel senso delle distribuzioni, è $H$.
+Allora $\boxed{\text{la derivata } u'\text{ di } u\text{ in senso distribuzionale è }H}$.
 
 Sembra che non abbiamo fatto granché se non togliere di mezzo un punto angoloso: spingiamoci oltre e deriviamo la funzione di Heaviside, che non è nemmeno continua.
 \begin{align*}
 (H', \varphi) & = - (H, \varphi') \ \ \forall \varphi \in \Dc(\RR)\\
- & = - \int_{\RR} H(x) \varphi'(x) dx = - \int^{+ \infty}_{0} \varphi'(x) dx\\
+ & = - \int_{\RR} H(x) \varphi'(x) \dx = - \int^{+ \infty}_{0} \varphi'(x) \dx\\
  & = \varphi (0) - \lim_{x\rightarrow + \infty} \varphi (x) = \varphi (0) = (\delta_{0}, \varphi)
 \end{align*}
-La derivata di $H$ nel senso delle distribuzioni è la distribuzione delta di Dirac (centrata nel punto di discontinuità). Può sembrare strano derivare la delta, ma si può fare.
-\begin{equation*}
-(\delta'_{a}, \varphi) = - (\delta_{a}, \varphi') = - \varphi'(a)
-\end{equation*}
-estendiamo a un ordine $n$
-\begin{equation*}
-\left(\delta^{(n)}_{a}, \varphi \right) = (- 1)^{n} \varphi^{(n)}(a)
-\end{equation*}
+Allora $\boxed{\text{la derivata } H'\text{ di } H\text{ in senso distribuzionale è }\delta_0}$.
+
 
 \section{Funzioni a decrescita rapida e distribuzioni temperate}
 
 Lo spazio delle $\varphi $ è lo spazio delle funzioni test, delle funzioni $C^{\infty}$ a supporto compatto, uno spazio molto stringente. Cerchiamo di allentarlo un po' introducendo un nuovo spazio chiamato \textbf{spazio delle funzioni a decrescita rapida} (o \textbf{spazio di Schwartz}.\footnote{Si noti che si tratta di un matematico differente da quello del teorema sulle derivate seconde, Karl Hermann Amandus Schwarz (1843 - 1921). Qui si parla di Laurent Schwartz (1915 - 2002), medaglia Fields nel 1950.})
-\begin{defn}
-[Spazio delle funzioni a decrescita rapida]
-Diciamo che $f\in \Sc(\RR)$ se $\boxed{f\in C^{\infty}}$ e $\boxed{x^{k} f^{(n)}(x)}$ è \underline{limitata} $\forall k, n\in \NN$.
+\begin{defn}[Spazio delle funzioni a decrescita rapida]$\\$
+Diciamo che $f\in \Sc(\RR)$ se 
+\begin{equation*}
+f\in C^{\infty}\qquad \lim_{x\to\pm\infty}x^nf^{(k)}(x)=0\ \ \forall k, n\in \NN
+\end{equation*}
 \end{defn}
-Le definiamo su tutto $\RR$. Non chiediamo che si annullino fuori da un compatto, ma che si annullino più rapidamente di qualsiasi polinomio insieme a tutte le derivate per $x\rightarrow \pm \infty $. Una gaussiana per esempio tende a $0$ più velocemente di qualsiasi polinomio con le sue derivate, ma non si annulla mai. Questo spazio $\Sc(\RR)$ è tale che
+Esaminando la definizione possiamo capire due cose:
+\begin{itemize}
+    \item non hanno senso spazi di Schwarz in sottoinsiemi di $\RR$
+    \item la seconda condizione, vedi $k=0$, non richiede che $f$ si annulli fuori da un compatto, ma che si annulli più rapidamente di qualsiasi potenza di $x$ (per esempio come la gaussiana $e^{-x^2}$)
+\end{itemize}
+Dunque questo spazio è ``un pelo'' più grande di $\Dc$:
 \begin{equation*}
 \Dc(\RR) \subset \Sc(\RR)
 \end{equation*}
+
 Come si definisce la convergenza in questo insieme?
 \begin{defn}
-[Convergenza in $\Sc$]Sia una successione $\{f_{n}\} \subset \Sc(\RR)$. Diciamo che $f_{n}\rightarrow f$ in $\Sc(\RR)$ se $x^{k} f^{(m)}_{n}(x)\xrightarrow{n\rightarrow + \infty} x^{k} f^{(m)}(x)$ uniformemente $\forall k, m\in \NN$.
+[Convergenza in $\Sc$]Siano $\{f_{n}\} \subset \Sc(\RR)$ e $f\in\Sc(\RR)$. Diciamo che
+\begin{equation}
+\label{conv_4_distrib}
+f_n\xrightarrow[]{\Sc(\RR)}f
+\end{equation}
+se $x^{j} f^{(k)}_{n}(x)\xrightarrow{n\rightarrow + \infty} x^{j} f^{(k)}(x)$ uniformemente in $\RR$  $\forall j, k\in \NN$.
 \end{defn}
-Anche questo non è uno spazio di Banach e non c'è norma, motivo per cui \textit{definiamo} così la successione.
+Osserviamo due cose:
+\begin{enumerate}
+    \item Anche questo non è uno spazio di Banach e non c'è norma.
+    \item Se la successione $\{f_n\}$ sta in $\Dc(\RR)$ e converge nel senso di \eqref{conv_1_distrib} allora sta anche in $\Sc(\RR)$ e converge nel senso di \eqref{conv_4_distrib}.
+\end{enumerate}
+
 \begin{defn}
 [Distribuzione temperata]
-Un funzionale lineare $\Lambda : \Sc(\RR)\rightarrow \RR$ continuo si dice distribuzione temperata.
+Un funzionale $\Lambda : \Sc(\RR)\rightarrow \RR$ lineare e continuo si dice distribuzione temperata, e si scrive $\Lambda\in\Sc'(\RR)$.
 \end{defn}
-Una distribuzione temperata è anche una distribuzione normale, in altre parole, lo spazio delle distribuzioni temperate $\Sc'(\RR)$ è contenuto in $\Dc'(\RR)$
+Una distribuzione temperata è anche una distribuzione normale; in altre parole, lo spazio delle distribuzioni temperate $\Sc'(\RR)$ è contenuto in $\Dc'(\RR)$
 \begin{equation*}
 \Sc'(\RR) \subset \Dc'(\RR)
 \end{equation*}
-In generale se abbiamo due spazi qualsiasi $A\subset B$, i loro duali sono legati da $B'\subset A'$.
+Infatti, se abbiamo due spazi qualsiasi $A\subset B$, i loro duali sono legati da $B'\subset A'$.
 \begin{figure}[htpb]
 \centering
 
@@ -2753,21 +2843,29 @@ In generale se abbiamo due spazi qualsiasi $A\subset B$, i loro duali sono legat
 \end{tikzpicture}
 \end{figure}
 \FloatBarrier
-Questa riduzione dello spazio, è una riduzione stretta, cioè perdiamo alcuni elementi, vediamo un esempio.
-\begin{equation*}
-u = e^{x^{2}} \in L^{1}_{\loc} \ \ \implies \ \ \text{c'è una distribuzione associata}
-\end{equation*}
-tuttavia se consideriamo come funzione test una funzione di $\Sc(\RR)$ $\varphi = e^{- x^{2}}$
-\begin{equation*}
-(u, \varphi) = \int_{\RR} u\varphi dx = \int_{\RR} dx = + \infty \ \ \implies \ \ \text{non è temperata}
-\end{equation*}
-\begin{defn}
-[Convergenza di distribuzioni temperate]
-Sia $u_{n}$ una successione in $\{u_{n}\} \subset \Sc'(\RR)$. Diciamo che $u_{n}\rightarrow u\in \Sc'(\RR)$ se per ogni funzione test a decrescita rapida $\varphi \in \Sc(\RR)$, si ha $(u_{n}, \varphi)\rightarrow (u, \varphi)$.
-\end{defn}
-La definizione di derivata è la stessa.
 
-Ora chiediamoci, se consideriamo una funzione $u\in L^{1}_{\loc}$, possiamo dire che vi è associata una distribuzione temperata? Abbiamo questo risultato.
+\begin{exa}
+$u(x)=e^x$ è una distribuzione,  ma non è temperata. Invece $\delta_y$ è una distribuzione anche temperata.
+\end{exa}
+
+E i concetti di convergenza e derivabilità in $\Sc'$?
+
+\begin{defn}[Convergenza di distribuzioni temperate]$\\$
+Siano $\{u_{n}\} \subset \Sc'(\RR)$ e $u\in\Sc'(\RR)$. Diciamo che 
+\begin{equation}
+u_n\xrightharpoondown[]{\Sc'(\RR)}u
+\end{equation}
+se per ogni funzione test a decrescita rapida $\varphi \in \Sc(\RR)$, si ha $(u_{n}, \varphi)\rightarrow (u, \varphi)$.
+\end{defn}
+
+\begin{defn}[Derivata di distribuzioni temperate]$\\$
+Come prima:
+\begin{equation*}
+(\Lambda',\varphi):=-(\Lambda,\varphi')\qquad \varphi,\varphi'\in\Sc(\RR)
+\end{equation*}
+\end{defn}
+
+Per concludere: presa una funzione $u\in L^{1}_{\loc}$ è possibile associarle una distribuzione temperata? Valgono questi due risultati.
 \begin{thm}
 Se $\exists n\in \NN$ tale che $(1 + | x|)^{- n} u(x) \in L^{1}(\RR)$ allora esiste una distribuzione temperata associata $u\in \Sc'(\RR)$.
 \end{thm}
@@ -2775,459 +2873,1006 @@ Se $\exists n\in \NN$ tale che $(1 + | x|)^{- n} u(x) \in L^{1}(\RR)$ allora esi
 Se $u\in L^{p}(\RR)$ per un qualsiasi $p\in [1, + \infty]$ allora esiste una distribuzione temperata associata $u\in \Sc'(\RR)$.
 \end{thm}
 
-\chapter{Trasformate integrali}
+
+\chapter{La trasformata di Fourier}
+
+La trasformata di Fourier è uno strumento essenziale in molti campi dell'ingegneria, della fisica, della matematica e, più in generale, della ricerca scientifica. Ne tratteremo gli aspetti più teorici e ne descriveremo alcune applicazioni alle equazioni differenziali ordinarie e alle derivate parziali. Tale \textit{trasformata integrale} riveste un ruolo cruciale anche nella teoria degli spazi di Sobolev.
+
 
 \section{Introduzione}
 
-È la versione \textit{continua} della serie di Fourier. Vedremo tutto sulla retta reale, ma si può applicare anche in $\RR^{n}$. Consideriamo $\Dc(\RR) \subset L^{p}(\RR) \ \ \forall p\in [1, + \infty]$, questa inclusione è densa $\forall p < + \infty $ (escluso).
+
 \begin{defn}
-[Inclusione densa]
-Dire che l'inclusione è densa significa dire che $\forall p < + \infty, \forall f\in L^{p}(\RR)$ esiste $\varphi_{n} \in \Dc(\RR)$ tale che $\varphi_{n}\rightarrow f$ in senso $L^{p}$, cioè $ \Vert \varphi_{n} - f \Vert_{L^{p}}\rightarrow 0$.
-\end{defn}
-Posso \textit{approssimare} ogni funzione in $L^{p}$ con $p < + \infty $ (funzioni anche molto irregolari e discontinue) con funzioni di $\Dc(\RR)$ (funzioni molto regolari e con cui è più semplice fare i conti), nel senso della norma ovviamente.
-
-Introduciamo lo spazio
+Poniamo
 \begin{equation*}
-\boxed{C^{0}_{0}(\RR) = \left\{f\in C^{0}(\RR), \lim_{x\rightarrow \pm \infty} f(x) = 0\right\}} \subset L^{\infty}(\RR)
+\Cc^{0}_{0}(\RR) = \left\{f:\RR\to\CC\text{ tali che }f\in \Cc^{0}(\RR)\text{ e } \lim_{|x|\rightarrow \infty} f(x) = 0\right\}
 \end{equation*}
-Le funzioni in $C^{0}_{0}(\RR)$ sono automaticamente limitate, quindi contenute nello spazio $L^{\infty}(\RR)$ delle funzioni \textit{essenzialmente} limitate. Questa inclusione \textbf{non} è densa.
+\end{defn}
 
-Sia $f\in L^{1}(\RR)$ definiamo la funzione traslata
+Le funzioni in $C^{0}_{0}(\RR)$ sono automaticamente limitate, quindi contenute nello spazio $L^{\infty}(\RR)$ delle funzioni \textit{essenzialmente} limitate:
+\begin{equation*}
+\Cc_0^0(\RR)\subset L^\infty(\RR)
+\end{equation*}
+
+\begin{defn}[Funzione traslata]$\\$
+Sia $f\in L^{1}(\RR)$. Per ogni $y\in\RR$ definiamo la funzione traslata
 \begin{equation*}
 f_{y}(x) = f(x - y)
 \end{equation*}
+Ovviamente $f_y\in L^1(\RR)$.
+\end{defn}
+
 \begin{thm}
-Sia $f\in L^{1}(\RR)$, allora
+\label{per_la_dim_riemann_L}
+Sia $f\in L^{1}(\RR)$ e sia $f_y\in L^1(\RR)$ la sua traslata. Allora
 \begin{equation*}
-\lim\limits_{y\rightarrow 0} \Vert f_{y} - f \Vert_{L^{1}} = 0
+\lim\limits_{y\rightarrow 0} \Vert f - f_y \Vert_{L^{1}} = 0
 \end{equation*}
 \end{thm}
+
+
 \begin{proof}
-
-È basata sulla densità a cui abbiamo accennato. Sia $\varepsilon > 0$, $\exists \varphi \in \Dc(\RR)$ tale che $ \Vert f - \varphi \Vert < \varepsilon $. Se trasliamo una funzione, essa non cambia di norma $\implies \ \Vert f_{y} - \varphi_{y} \Vert < \varepsilon $. Chiamiamo $K$ un certo insieme che contiene sia il supporto di $\varphi $ che della sua traslata $\varphi_{y}$, per un certo $y$ sufficientemente piccolo. Allora\footnote{Teorema di Heine - Cantor. Una funzione continua su un compatto è uniformemente continua.} la funzione $\varphi $ è uniformemente continua, cioè
-\begin{gather*}
-\forall \varepsilon > 0\ \ \exists \delta \ \ | \varphi (x) - \varphi (y)| < \varepsilon \ \ \text{purché} \ | x - y| < \delta \\
-\Updownarrow \\
-\forall \varepsilon > 0\ \ \exists \delta \ \ | \varphi (x - y) - \varphi (x)| < \varepsilon \ \ \text{purché} \ | y| < \delta
-\end{gather*}
-il delta che otteniamo \textit{non} dipende dal punto.
-
-Dall'uniforme continuità deduciamo
+Poiché $\Dc(\RR)$ è denso in $L^1(\RR)$ (si veda teorema \ref{teo_denso})
 \begin{equation*}
-\Vert \varphi_{y} - \varphi \Vert = \int_{K}| \varphi (x - y) - \varphi (x)| dx < \varepsilon | K|
+\forall\Ec>0\ \ \exists\varphi\in\Dc(\RR)\text{ tc } \Vert f-\varphi\Vert<\Ec
 \end{equation*}
-Veniamo ora a
+Ovviamente tale risultato vale anche per la traslata
+\begin{equation*}
+\forall\Ec>0\ \ \exists\varphi_y\in\Dc(\RR)\text{ tc } \Vert f_y-\varphi_y\Vert<\Ec
+\end{equation*}
+Posto dunque $[a,b]$, con $a\in\RR$ e $b\in\RR$, un generico insieme tale che $\supp\varphi\subset[a,b]$ e $\supp\varphi_y\subset[a,b]$, per l'uniforme continuità di $\varphi$
+\begin{equation*}
+\forall\Ec>0\ \ \exists\delta>0\text{ tc }|\varphi(x)-\varphi(y)|<\Ec\ \ \forall x,y\text{ tc }|x-y|<\delta
+\end{equation*}
+che può essere riscritta in
+\begin{equation*}
+\forall\Ec>0\ \ \exists\delta>0\text{ tc }|\varphi(x)-\varphi(x-y)|<\Ec\ \ \forall y\text{ tc }|y|<\delta
+\end{equation*}
+Possiamo dunque calcolare $\forall y\text{ tc }|y|<\delta$
+\begin{equation*}
+\Vert\varphi-\varphi_y\Vert_{L^1}=\int_\RR |\varphi(x)-\varphi_y(x)|\dx=\int_a^b |\varphi(x)-\varphi_y(x)|\dx\leq \Ec(b-a)
+\end{equation*}
+Ricapitolando, e sottointendendo la norma di $L^1$, abbiamo finora dimostrato che
+\begin{equation*}
+\forall\Ec>0\ \ \exists\delta>0\text{ tc }\Vert\varphi-\varphi_y\Vert<\Ec(b-a)\ \ \forall y\text{ tc }|y|<\delta
+\end{equation*}
+
+Possiamo ora ritornare a $f$:
 \begin{align*}
-\Vert f_{y} - f \Vert & = \Vert (f_{y} - \varphi_{y}) + (\varphi_{y} - \varphi) + (\varphi - f) \Vert \\
- & \leq \Vert f_{y} - \varphi_{y} \Vert + \Vert \varphi_{y} - \varphi \Vert + \Vert \varphi - f \Vert \\
- & < \varepsilon + \varepsilon | K| + \varepsilon \\
- & = \varepsilon (2 + | K|)
+\Vert f - f_y \Vert & = \Vert (f - \varphi) + (\varphi - \varphi_y) + (\varphi_y - f_y) \Vert \\
+  &\overset{\underset{\mathrm{tr.}}{}}{\leq} \Vert f - \varphi \Vert + \Vert \varphi - \varphi_y \Vert + \Vert \varphi_y - f_y \Vert \\
+ & < \Ec +\Ec(b-a) + \Ec \\
+ & =\Ec(b-a+2)
 \end{align*}
-dove $(2 + | K|)$ è costante e $\varepsilon $ è arbitrario, cioè $ \Vert f_{y} - f \Vert $ è tanto piccola quanto vogliamo.
+cioè $ \Vert f - f_y \Vert \to 0$ come volevasi dimostrare.
 \end{proof}
 
-Prima di procedere riassumiamo brevemente le inclusioni fra gli spazi che abbiamo visto
 
-\begin{center}
+\section{Definizione}
 
-\begin{tabular}{lc}
-$\Dc(\RR) \subset L^{p}(\RR)$ & densa $\forall p < + \infty $ \\
-$\Dc(\RR) \subset L^{p}(\RR)$ & densa $\forall p < + \infty $ \\
-$\Dc(\RR) \subset \Sc(\RR)$ & standard \\
-$\Sc'(\RR) \subset \Dc'(\RR)$ & standard \\
-$C^{0}_{0}(\RR) \subset L^{\infty}(\RR)$ & standard \\
-
-\end{tabular}
-\end{center}
-
-\section{Trasformata di Fourier}
-
-I numeri complessi entrano necessariamente nella trasformata di Fourier, quindi considereremo sempre funzioni $f: \RR\rightarrow \CC$.
-
-Consideriamo $f\in L^{1}(\RR)$, definiamo \textbf{trasformata di Fourier} della funzione $f$
+\begin{defn}[Trasformata di Fourier]$\\$
+Sia $f:\RR\to\CC$ tale che $f\in L^1(\RR)$. Chiamiamo trasformata di Fourier di $f$ la funzione
 \begin{equation*}
-\boxed{\hat{f}(z) = \int_{\RR} e^{- izx} f(x) dx} \ \ \ \ f\in L^{1}(\RR)
+\hat{f}:\RR\to\CC\qquad\qquad\qquad \hat{f}(z)=\int_\RR e^{-izx}f(x)\dx\qquad x,z\in\RR
 \end{equation*}
-Ci ricordiamo che i coefficienti di Fourier erano
+\end{defn}
+
+\begin{rem}
+In alcune trattazioni la definizione di $\hat{f}$ è leggermente diversa: nell'integrale ci può essere $e^{\pm ixz}$ oppure $e^{\pm 2\pi izx}$. La teoria rimane invariata anche se vengono modificate alcune costanti.
+\end{rem}
+
+La definizione è ben posta? Certo, infatti 
 \begin{equation*}
-c_{n} = \frac{1}{\pi}\int^{\pi}_{- \pi} e^{- inx} f(x) dx
+f\in L^1(\RR) \ \Rightarrow\ \int_\RR |f(x)|\dx<+\infty\ \Rightarrow\ \int_\RR \left| e^{- izx} f(x)\right|\dx<+\infty\ \text{ xk }\left| e^{- izx}\right|=1
 \end{equation*}
-È corretta la definizione?
+L'unica cosa che resta da capire è in quale spazio viene trasformato (linearmente) $L^1(\RR)$ da $\hat{f}$. Per rispondere a questa domanda enunciamo il
+
+\begin{thm}[di Riemann-Lebesgue]$\\$ 
+Sia $f\in L^{1}(\RR)$. Allora
 \begin{equation*}
-| f(x)| = \left| e^{- ixz} f(x)\right|
-\end{equation*}
-ma $f$, e quindi anche $| f| $, è integrabile secondo Lebesgue, quindi anche il secondo membro è integrabile e convergente. Ha senso dare questa definizione! Vediamo di capire le proprietà, riassunte nel teorema fondamentale.
-\begin{thm}
-[di Riemann - Lebesgue] Sia $f\in L^{1}(\RR)$, allora
-\begin{equation*}
-\boxed{\hat{f} \in C^{0}_{0}(\RR)} \ \ \ \ \boxed{\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}}
+\boxed{\hat{f} \in C^{0}_{0}(\RR)}\qquad\text{ e }\qquad\boxed{\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}}
 \end{equation*}
 \end{thm}
-La trasformata ha proprietà molto diverse e molto più regolari della $f$, che è banalmente integrabile, sta in uno spazio compeltamente diverso.
+
+Abbiamo dunque scoperto in che spazio ``vive'' la trasformata di Fourier.
+
+\newpage
 
 \begin{proof}
+La dimostrazione si articola in tre punti:
+\begin{enumerate}
+    \item [$\triangleright$] Continuità: è vero che $z_n\to z\ \Rightarrow\ \hat{f}(z_n)\to\hat{f}(z)$ ??
 
-\textit{Continuità.}
+    Usando il Teorema della convergenza dominata $(\circledast)$ abbiamo banalmente
+    \begin{equation*}
+    \lim\limits_{n\rightarrow + \infty}\hat{f}(z_n)=\lim\limits_{n\rightarrow + \infty}\int_{\RR} e^{- iz_{n} x} f(x) \dx \overset{\underset{\circledast}{}}{=} \int_{\RR}\lim\limits_{n\rightarrow + \infty} e^{- iz_{n} x} f(x) \dx = \int_{\RR} e^{- izx} f(x) \dx = \hat{f}(z)
+    \end{equation*}
+    Dobbiamo però verificare se effettivamente le ipotesi di tale teorema sono soddisfatte:
+    \begin{equation*}
+    \left| e^{- iz_{n} x} f(x)\right|\leq |f(x)|
+    \end{equation*}
+    Si, sono soddisfatte in quanto $f\in L^1$ (e quindi anche $|f|\in L^1$) e $|f|$ domina l'integranda.
 
-Sia $z_{n}\rightarrow z\in \RR$
-\begin{equation*}
-\lim\limits_{n\rightarrow + \infty}\hat{f}(z_{n}) = \lim\limits_{n\rightarrow + \infty}\int_{\RR} e^{- iz_{n} x} f(x) dx
-\end{equation*}
-Notiamo che abbiamo la convergenza puntuale, quasi $\forall x$. Se usassimo l'integrale di Riemann non avremmo questo risultato, con Lebesgue, sì, usando la convergenza dominata.
-\begin{equation*}
-g_{n}\rightarrow g\ \text{q.o.}, \ \exists h\in L^{1}, \ | g_{n}| \leq h\ \forall n\ \ \implies \ \ \lim\limits_{n\rightarrow + \infty}\int g_{n} = \int \lim\limits_{n\rightarrow + \infty} g_{n}
-\end{equation*}
-qui possiamo maggiorare
-\begin{equation*}
-\underbrace{\left| e^{- iz_{n} x} f(x)\right|}_{| g_{n}|} \leq \underbrace{| f(x)|}_{h} \in L^{1}
-\end{equation*}
-quindi
-\begin{equation*}
-\lim\limits_{n\rightarrow + \infty}\int_{\RR} e^{- iz_{n} x} f(x) dx = \int_{\RR}\lim\limits_{n\rightarrow + \infty} e^{- iz_{n} x} f(x) dx = \int_{\RR} e^{- izx} f(x) dx = \hat{f}(z)
-\end{equation*}
-\textit{Disuguaglianza delle norme.}
 
-Chiaramente poi possiamo scrivere
-\begin{equation*}
-\Vert \hat{f} \Vert_{\infty} = | \hat{f}(z)| = \left| \int_{\RR} e^{- ixz} f(x) dx\right| \leq \int_{\RR}\left| e^{- ixz} f(x)\right| dx \leq \int_{\RR}| f(x)| dx = \Vert f \Vert_{L^{1}}
-\end{equation*}
-\textit{Ultima parte.}
+    \item [$\triangleright$] Disuguaglianza delle norme: è vero che $\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}$ ??
 
-Ci resta da far vedere che
-\begin{equation*}
-\lim\limits_{z\rightarrow \pm \infty}\hat{f}(z) = 0
-\end{equation*}
-Ricordiamo che $ - 1 = e^{i\pi}$, scriviamo
-\begin{equation*}
-\hat{f}(z) = - e^{i\pi}\int_{\RR} e^{- ixz} f(x) dx = - \int_{\RR} e^{- i(xz - \pi)} f(x) dx = - \int_{\RR} e^{- iz\left(x - \frac{\pi}{z}\right)} f(x) dx
-\end{equation*}
-cambiamo la variabile e ricordiamo che l'integrale è in $dx$
-\begin{equation*}
-x' = x - \frac{\pi}{z}
-\end{equation*}
-allora
-\begin{equation*}
-- \int_{\RR} e^{- iz\left(x - \frac{\pi}{z}\right)} f(x) dx = - \int_{\RR} e^{- izx'} f\left(x' + \frac{\pi}{z}\right) dx' = - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) dx
-\end{equation*}
-Scriviamo ora il doppio di $\hat{f}$
-\begin{align*}
-2\hat{f}(z) & = \int_{\RR} e^{- ixz} f(x) dx - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) dx\\
- & = \int_{\RR}\left[e^{- ixz} f(x) - e^{- izx} f\left(x + \frac{\pi}{z}\right)\right] dx\\
- & = \int_{\RR} e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right] dx
-\end{align*}
-passiamo al modulo
-\begin{align*}
-2| \hat{f}(z)| & \leq \int_{\RR}\left| e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right]\right| dx\\
- & = \int_{\RR}\left| f(x) - f\left(x + \frac{\pi}{z}\right)\right| dx\\
- & = \Vert f - f_{- \pi /z} \Vert_{L^{1}}
-\end{align*}
-Quando $z\rightarrow \pm \infty $ la traslazione $ - \pi /z\rightarrow 0$ e quindi, per quanto detto prima sulla traslazione di funzioni $L^{1}$ abbiamo $2| \hat{f}(z)| \rightarrow 0$.
+    Usando la proprietà $\displaystyle\left|\int f\right|\leq \int|f|$ possiamo scrivere
+    \begin{equation*}
+    \left\Vert \hat{f} \right\Vert_{\infty} = \left| \hat{f}(z)\right| = \left| \int_{\RR} e^{- ixz} f(x) \dx\right| \leq \int_{\RR}\left| e^{- ixz} f(x)\right| \dx \leq \int_{\RR}| f(x)| \dx = \Vert f \Vert_{L^{1}}
+    \end{equation*}
 
+    \item [$\triangleright$] Ultimo punto per l'appartenenza a $\Cc_0^0$: è vero che $\lim\limits_{\to \pm \infty}\hat{f}(z) = 0$ ??
+
+    Ricordiamo che $-1=e^{i\pi}$ e quindi $1=-e^{i\pi}$. Allora
+    \begin{equation*}
+    \hat{f}(z) = - e^{i\pi}\int_{\RR} e^{- ixz} f(x) \dx = - \int_{\RR} e^{- i(xz - \pi)} f(x) \dx = - \int_{\RR} e^{- iz\left(x - \frac{\pi}{z}\right)} f(x) \dx
+    \end{equation*}
+    Con il cambio di variabile
+    \begin{equation*}
+    x' = x - \frac{\pi}{z} \qquad\qquad \dx'=\dx
+    \end{equation*}
+    otteniamo
+    \begin{equation*}
+    \hat{f}(z) = - \int_{\RR} e^{- izx'} f\left(x' + \frac{\pi}{z}\right) \dx' = - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \dx
+    \end{equation*}
+    dove nell'ultimo passaggio si è ritornati nella variabile $x$ per comodità.
+
+    Scriviamo ora il doppio di $\hat{f}$, prendendo una parte come appena calcolata e l'altra come da definizione:
+    \begin{align*}
+    2\hat{f}(z) & = \int_{\RR} e^{- ixz} f(x) \dx - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \dx=\\
+     & = \int_{\RR}\left[e^{- ixz} f(x) - e^{- izx} f\left(x + \frac{\pi}{z}\right)\right] \dx=\\
+     & = \int_{\RR} e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right] \dx
+    \end{align*}
+    Passiamo al modulo
+    \begin{align*}
+    2\left| \hat{f}(z)\right| & = \int_{\RR}\left| e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right]\right| \dx\\
+     & \leq \int_{\RR}\left| f(x) - f\left(x + \frac{\pi}{z}\right)\right| \dx\\
+     & = \Vert f - f_{- \pi /z} \Vert_{L^{1}}
+    \end{align*}
+    Quando $z\rightarrow \pm \infty $ la traslazione $ - \pi /z\rightarrow 0$ per il teorema \ref{per_la_dim_riemann_L} e quindi $\left| \hat{f}(z)\right| \rightarrow 0$ come volevasi dimostrare.
+\end{enumerate}
 \end{proof}
 
-Questo vuol dire che se chiamiamo
+\textbf{Notazione.} Il teorema di Riemann-Lebesgue suggerisce di introdurre il funzionale
 \begin{equation*}
-\Fc : L^{1}(\RR)\rightarrow C^{0}_{0}(\RR)
+\Fc : L^{1}(\RR)\rightarrow \Cc^{0}_{0}(\RR)
 \end{equation*}
-abbiamo un operatore trasformata di Fourier che è, ovviamente, lineare, e, grazie alla disuguaglianza $ \Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}$ anche limitata (e quindi equivalentemente anche continua, per quanto precedentemente). Cominciamo a verificare alcune proprietà.
-
-Notazione: indichiamo con $\Fc(f(x), z) = \hat{f}(z)$ la trasformata di $f(x)$ scritta in funzione di $z$.
-\begin{itemize}
-\item Traslazione di $y\in \RR$.
-\begin{align*}
-\Fc(f(x - y), z) & = \int e^{- ixz} f(x - y) dx & x' = x - y\\
- & = \int e^{- ix'z - iyz} f(x') dx' & \\
- & = e^{- iyz}\int e^{- ixz} f(x) dx & \\
- & = e^{- iyz}\hat{f}(z) & \\
- & = e^{- iyz}\Fc(f(x), z) &
-\end{align*}
-\item Il contrario
-
-\begin{align*}
-\Fc\left(e^{iyx} f(x), z\right) & = \int e^{- ixz} e^{iyx} f(x) dx\\
- & = \int e^{- ix(z - y)} f(x) dx\\
- & = \hat{f}(z - y)\\
- & = \Fc(f(x), z - y)
-\end{align*}
-\item $\Fc\left(\overline{f(x)}, z\right) = \overline{\hat{f}(- z)}$
-\item $f$ pari $\implies $ $\hat{f}$ pari
-\item $f$ dispari $\implies $ $\hat{f}$ dispari
-\item $f$ pari e reale $\implies $ $\hat{f}$ pari e reale
-\item $f$ dispari e reale $\implies $ $\hat{f}$ dispari e immaginaria
-\end{itemize}
-
-Cerchiamo di capire se una trasformata di Fourier è derivabile, quindi anche $C^{1}$.
-\begin{thm}
-[Derivata della trasformata]
-Sia $f\in L^{1}$, $g(x) = xf(x)$, $g\in L^{1}$. Allora $\hat{f} \in C^{1}$ e
+lineare e continuo in modo tale da riscrivere la definizione di trasformata di Fourier in
 \begin{equation*}
-\hat{f}'(z) = - i\hat{g}(z) \ \ \text{cioè} \ \ \boxed{\frac{d^{n}}{dz^{n}}\Fc(f(x), z) = \Fc\left((- ix)^{n} \cdot f(x), z\right)}
+\boxed{\hat{f}(z)=\Fc(f(x),z)=\int_\RR e^{-izx}f(x)\dx}
+\end{equation*}
+
+
+\section{Proprietà}
+
+Possono essere utili le seguenti proprietà.
+
+\begin{thm}
+Siano $f,g\in L^1(\RR)$, $\alpha,\beta\in\CC$, e $y\in\RR$. Allora
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+    \item linearita
+    $$\Fc(\alpha f+\beta g,z)=\alpha\Fc(f,z)+\beta\Fc(g,z)$$
+    \item shifting
+    $$\Fc(f(x - y), z)=e^{- iyz}\ \Fc(f(x), z)$$
+    \item modulazione
+    $$\Fc\left(e^{-iyx} f(x), z\right)=\Fc(f(x), z + y)\qquad\text{ oppure }\qquad \Fc\left(e^{iyx} f(x), z\right)=\Fc(f(x), z - y)$$
+    \item modulazione
+    $$\Fc\left(\cos(z_0x)\,f(x),z\right)=\frac{1}{2}\left[\Fc(f(x),z-z_0)+\Fc(f(x),z+z_0)\right]$$
+    \item scaling
+    $$\Fc(f(xy),z)=\frac{1}{|y|}\Fc\left(f(x),\frac{z}{y}\right)$$
+    \item coniugazione 
+    $$\Fc\left(\overline{f(x)}, z\right) = \overline{\hat{f}(- z)}$$
+    \item $f$ pari $\implies $ $\hat{f}$ pari
+    \item $f$ dispari $\implies $ $\hat{f}$ dispari
+    \item $f$ pari e reale $\implies $ $\hat{f}$ pari e reale
+    \item $f$ dispari e reale $\implies $ $\hat{f}$ dispari e immaginaria pura
+\end{enumerate}
+\end{thm}
+
+\begin{proof}$\\$
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Abbiamo
+\begin{align*}
+\Fc(f(x - y), z) & = \int_\RR e^{- ixz} f(x - y) \dx= \\
+ & = \left\{\text{cambo di var: }x' = x - y\right\}= \\
+ & = \int_\RR e^{- i(x'+y)z} f(x') \dx'= \\
+ & = e^{- iyz}\int_\RR e^{- ixz} f(x) \dx= \\
+ & = e^{- iyz}\ \Fc(f(x), z)
+\end{align*}
+dove il termine $e^{- iyz}$ prende il nome di cambio di fase.
+\item Abbiamo
+\begin{equation*}
+\Fc\left(e^{-iyx} f(x), z\right)= \int e^{- ixz} e^{-iyx} f(x) \dx= \int e^{- ix(z + y)} f(x) \dx=\Fc(f(x), z + y)
+\end{equation*}
+e analogamente
+\begin{equation*}
+\Fc\left(e^{iyx} f(x), z\right) = \int e^{- ixz} e^{iyx} f(x) \dx= \int e^{- ix(z - y)} f(x) \dx = \Fc(f(x), z - y)
+\end{equation*}
+\end{enumerate}
+\end{proof}
+
+Giusto per sbloccarvi dei ricordi dal corso di \textit{Probabilità} citiamo le seguenti proprietà valide per la trasformata di Fourier in $L^1\left(\RR^n\right)$:
+\begin{thm}
+Siano $f\in L^1\left(\RR^n\right)$, $y\in\RR^n$ e $A$ matrice reale $n\times n$ invertibile. Allora
+\renewcommand{\theenumi}{\roman{enumi}}
+\begin{enumerate}
+    \item $\Fc(f(\mathbf{x}-\mathbf{y}), \mathbf{z})=e^{- i\mathbf{z}\cdot \mathbf{y}}\ \Fc(f(\mathbf{x}), \mathbf{z})$
+    \item $\Fc\left(e^{i\mathbf{y}\cdot \mathbf{x}} f(\mathbf{x}), \mathbf{z}\right)=\Fc(f(\mathbf{x}), \mathbf{z}-\mathbf{y})$
+    \item $\Fc\left(f\left(A\mathbf{x}\right),\mathbf{z}\right)=\dfrac{1}{\left|\det A\right|}\ \Fc\left(f(\mathbf{x}),A^{-T}\mathbf{z}\right)$
+    \item $\Fc\left(\overline{f(\mathbf{x})}, \mathbf{z}\right) = \overline{\hat{f}(-\mathbf{z})}$
+    \item $f$ pari $\implies $ $\hat{f}$ pari
+    \item $f$ dispari $\implies $ $\hat{f}$ dispari
+    \item $f$ pari e reale $\implies $ $\hat{f}$ pari e reale
+    \item $f$ dispari e reale $\implies $ $\hat{f}$ dispari e reale
+\end{enumerate}
+\end{thm}
+
+
+\section{Derivata}
+
+
+Vogliamo capire se una trasformata di Fourier è derivabile.
+\begin{thm}[Derivata della trasformata]$\\$
+Sia $f\in L^{1}$ e sia $g\in L^{1}$ definita da $g(x) = -ixf(x)$. Allora $\hat{f} \in \Cc^{1}$ e
+\begin{equation*}
+\left(\hat{f}(z)\right)' = \hat{g}(z)\qquad\text{ e analogamente }\qquad \frac{\de}{\dz}\,\Fc(f(x),z)=\Fc(-ixf(x),z)
 \end{equation*}
 \end{thm}
-Chiedere che anche $xf(x)$ stia in $L^{1}$ significa che la $f$ deve in qualche senso tendere a $0$ abbastanza rapidamente, vogliamo che l'integrale su $\RR$ converga.
+
+\begin{rem}
+Volendo si può anche prendere $g(x)=xf(x)$ e concludere che
+\begin{equation*}
+\left(\hat{f}(z)\right)' = -i\,\hat{g}(z)
+\end{equation*}
+oppure invertendo
+\begin{equation*}
+\hat{g}(z)=i\left(\hat{f}(z)\right)'
+\end{equation*}
+\end{rem}
 
 \begin{proof}
-
 Calcoliamo il limite del rapporto incrementale
 \begin{align*}
-\lim\limits_{h\rightarrow 0}\frac{\hat{f}(z + h) - \hat{f}(z)}{h} & = \lim\limits_{h\rightarrow 0}\frac{1}{h}\left(\int e^{- ix(z + h)} f(x) dx - \int e^{- ixz} f(x) dx\right)\\
- & = \lim\limits_{h\rightarrow 0}\int e^{- ixz}\frac{e^{- ixh} - 1}{h} f(x) dx\\
- & = \int e^{- ixz}(- ix) f(x) dx\\
- & = - i\Fc(xf(x), z)\\
- & = - i\hat{g}(z)
+\lim\limits_{h\rightarrow 0}\frac{\hat{f}(z + h) - \hat{f}(z)}{h} & = \lim\limits_{h\rightarrow 0}\frac{1}{h}\left(\int_\RR e^{- ix(z + h)} f(x) \dx - \int_\RR e^{- ixz} f(x) \dx\right)=\\
+ & = \lim\limits_{h\rightarrow 0}\int_\RR e^{- ixz}\,\frac{e^{- ixh} - 1}{h}\,f(x) \dx=\\
+  & \overset{\underset{(\alpha)}{}}{=}\int_\RR e^{- ixz}\,\underbrace{\lim\limits_{h\rightarrow 0}\frac{e^{- ixh} - 1}{h}}_{=-ix}\,f(x) \dx=\\
+ & \overset{\underset{(\beta)}{}}{=} \int_\RR e^{-ixz}(-ixf(x)) \dx=\hat{g}(z)
 \end{align*}
-dove possiamo passare al limite sotto il segno di integrale perché in generale
+dove in $(\alpha)$ possiamo passare al limite sotto il segno di integrale perché in generale
 \begin{equation*}
-\left| e^{i\lambda} - 1\right| \leq | \lambda | \ \ \lambda \in \RR \ \ \ \ \ \ \ \ \lambda = - xh\ \ \implies \ \ \text{l'integrale converge per conv. dom.}
+\left| e^{i\lambda} - 1\right| \leq | \lambda |\qquad\text{con }\lambda \in \RR
 \end{equation*}
+dove per noi $\lambda=-xh$. Rimarchiamo inoltre che in $(\beta)$ l'integrale è ben definito perché per ipotesi $g\in L^1$.
 \end{proof}
-\begin{thm}
-[Trasformata della derivata]
-Sia $f\in L^{1} \cap C^{1}$, $f'\in L^{1}$.
+
+\begin{thm}[Trasformata della derivata]$\\$
+Sia $f\in L^{1} \cap \Cc^{1}$ tale che $f(x)=o(1)$ per $x\to\pm\infty$ e sia $f'\in L^{1}$. Allora
 \begin{equation*}
-\boxed{\Fc\left(\frac{d^{n}}{dx^{n}} f(x), z\right) = (iz)^{n} \cdot \Fc(f(x), z)}
+\widehat{\left(f'\right)}(z) = iz\,\hat{f}(z)\qquad\text{ e analogamente }\qquad \Fc\left(\frac{\de}{\dx}\,f(x),z\right)=\Fc\left(f'(x),z\right)=iz\,\Fc(f(x),z)
 \end{equation*}
 \end{thm}
-Tutto questo è vero purché le cose scritte abbiano senso, da cui le ipotesi.
 
-\section{Trasformazione inversa}
+\begin{proof}
+Abbiamo
+\begin{align*}
+\widehat{\left(f'\right)}(z)&=\int_\RR e^{-izx}f'(x)\dx=\lim_{R\to+\infty}\int_{-R}^Re^{-izx}f'(x)\dx=\\
+&\overset{\underset{\mathrm{pp}}{}}{=}\lim_{R\to+\infty}\left( \left[e^{-izx}f(x)\right]_{-R}^R-\int_{-R}^R(-iz)e^{-izx}f(x)\dx\right)=\\
+&\overset{\underset{(\gamma)}{}}{=}iz\int_{-\infty}^{+\infty}e^{-izx}f(x)\dx=iz\,\hat{f}(z)
+\end{align*}
+dove in $(\gamma)$ ci si è accorti che il primo pezzo di integrale ha senso ed è nullo proprio per l'ipotesi $\lim_{x\to\pm\infty}f(x)=0$.
+\end{proof}
 
-\begin{thm}
-Sia $f\in L^{1}$ e tale che $\hat{f} \in L^{1}$. Allora $f\in C^{0}_{0}$ e
+
+\section{Antitrasformata di Fourier}
+
+La trasformata di Fourier è iniettiva, dunque esiste una trasformazione inversa $\Fc^{-1}$ calcolabile nel seguente modo:
+
+\begin{thm}[Trasformazione inversa]$\\$
+Sia $f\in L^{1}$ tale che $\hat{f} \in L^{1}$. Allora $f\in \Cc^{0}_{0}$ e
 \begin{equation*}
-\boxed{f(x) = \frac{1}{2\pi}\int e^{ixz}\hat{f}(z) dz}
+f(x) = \frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z) \dz
 \end{equation*}
 \end{thm}
-Perché le richieste sugli spazi di appartenenza? Supponiamo che questa sia l'antitrasformata, ha senso? È corretta? C'è in generale questo problema
+
+Che $f\in \Cc^{0}_{0}$ è banale, infatti per ipotesi $\hat{f}\in L^1$ e quindi per il teorema di Riemann-Lebesgue la sua trasformata, che in questo caso è l'antitrasformata, sta in $\Cc^{0}_{0}$.
+
+C'è però una questione di simmetria che non torna: dato che $\Fc:L^1\to\Cc_0^0$ ci aspettiamo che $\Fc^{-1}:\Cc_0^0\to L^1$, invece guardando il teorema appena enunciato abbiamo $\Fc^{-1}:L^1\to\Cc_0^0$. 
+
+Per risolvere tale asimmetria dobbiamo prendere uno spazio un po' strano: $L^{1} \cap C^{0}_{0}$. In tale spazio vale infatti (non dimostriamo)
 \begin{equation*}
-\begin{array}{c c c}
-f & \rightarrow & \hat{f}\\
-\in L^{1} & & \in C^{0}_{0}
-\end{array} \ \ \ \ \ \ \ \ \ \ \ \
-\begin{array}{c c c}
-\hat{f} & \rightarrow & f\\
-\in L^{1} & & \in C^{0}_{0}
-\end{array}
+\Fc,\Fc^{-1} : L^{1} \cap C^{0}_{0}\rightarrow L^{1} \cap C^{0}_{0}
 \end{equation*}
-La trasformata di Fourier non è simmetrica, lavora su spazi diversi. Se vogliamo che sia simmetrica nel senso che mandi uno spazio nello stesso spazio e ci permetta di tornare indietro possiamo farlo prendendo uno spazio un po' strano: $L^{1} \cap C^{0}_{0}$, vale infatti (non dimostriamo)
-\begin{equation*}
-\Fc : L^{1} \cap C^{0}_{0}\rightarrow L^{1} \cap C^{0}_{0}
-\end{equation*}
-\textbf{Problema!} Lo spazio $L^{1} \cap C^{0}_{0}$ non è uno spazio di Banach, non è completo né rispetto alla norma $L^{1}$ né rispetto alla norma $L^{\infty}$. Cercheremo ora di estendere la definizione allo spazio $L^{2}$, che oltre a essere di Banach è anche di Hilbert
-\begin{equation*}
-\Fc : L^{2}\rightarrow L^{2}
-\end{equation*}
+\textbf{Problema!} Lo spazio $L^{1} \cap C^{0}_{0}$ non è uno spazio di Banach, non è completo né rispetto alla norma $L^{1}$ né rispetto alla norma $L^{\infty}$. Cercheremo ora di estendere la definizione allo spazio $L^{2}$, che oltre a essere di Banach è anche di Hilbert.
+
+\newpage
 
 \section{Convoluzione}
 
-\begin{thm}
-Siano $u, v\in L^{1}(\RR)$. Allora la funzione
+\begin{thm}[Convoluzione]
+Siano $f,g\in L^1(\RR)$. Allora la funzione
 \begin{equation*}
-\boxed{(u*v)(x) = \int_{\RR} u(x - t) v(t) dt}
+\label{convoluzione}
+(f*g)(x)=\int_\RR f(x-t)\,g(t)\dt\qquad \circledast
 \end{equation*}
-è definita per \underline{quasi ogni} $x\in \RR$, $(u*v) \in L^{1}$ e inoltre, stando in $L^{1}$, avrà una norma $ \Vert u*v \Vert_{L^{1}} \leq \Vert u \Vert_{L^{1}} \Vert v \Vert_{L^{1}}$.
-\end{thm}
-Discende direttamente dal teorema di Fubini.
-\begin{itemize}
-\item È simmetrica
-
+è una funzione 
 \begin{align*}
-(u*v)(x) & = \int_{\RR} u(x - t) v(t) dt & t' = x - t\\
- & = \int_{\RR} u(t') v(x - t') dt' & \\
- & = (v*u)(x) &
+*:L^1\times L^1&\to L^1 \\
+(f,g)&\mapsto (f*g)(x)=\int_\RR f(x-t)g(t)\dt
 \end{align*}
-\item È associativa
-\begin{align*}
-(u*v) *w & = u*(v*w)
-\end{align*}
-\item Supponiamo di avere
-
-\begin{gather*}
-u(x) =
-\begin{cases}
-n & x\in \left[0, \frac{1}{n}\right]\\
-0 & \text{altrove}
-\end{cases} \ \ \ \ \Vert u \Vert = 1\\
-(u*v)(x) = \int_{\RR} u(x - t) v(t) dt = n\int^{x}_{x - \frac{1}{n}} v(t) dt
-\end{gather*}
-
-è la media della funzione $v$ calcolata in un intorno di $x$. L'effetto della convoluzione è in qualche modo di smussare il valore della funzione $v$, in ogni punto sostutiamo la media in un suo intorno.
-\end{itemize}
-
-Qual è il legame con la trasformata di Fourier? Siano $u, v\in L^{1}$, calcoliamo la trasformata di $u*v$, dato che sta in $L^{1}$
-\begin{align*}
-\Fc(u*v, z) & = \int e^{- ixz}\left[\int u(x - t) v(t) dt\right] dx\\
- & = \int e^{- iz(x - t)} e^{- izt} u(x - t) v(t) dtdx\\
- & = \int e^{- izt} v(t)\left[\int e^{- iz(x - t)} u(x - t) dx\right] dt
-\end{align*}
-con un cambio di variabile $x' = x - t$
-\begin{align*}
-\int e^{- izt} v(t)\left[\int e^{- iz(x - t)} u(x - t) dx\right] dt & = \int e^{- izt} v(t)\left[\int e^{- izx'} u(x') dx'\right] dt\\
- & = \hat{u}(z)\hat{v}(z)
-\end{align*}
-Vale anche il contrario
+definita per quasi ogni $x\in\RR$ e inoltre, siccome $(f*g)\in L^1$, vale la seguente disuguaglianza
 \begin{equation*}
-\Fc^{- 1}(\hat{u} *\hat{v}, x) = u(x) v(x)
-\end{equation*}
-
-\section{Estensione della trasformata di Fourier}
-
-Introduzione
-\begin{itemize}
-\item Ci serviremo della proprietà che $\Dc(\RR) \subset \Sc(\RR) \subset L^{p}(\RR)$ è un'inclusione densa per ogni $p < + \infty $
-\item Lavoriamo in $\boxed{\Sc(\RR)}$ per estendere la trasformata perché la trasformata di una funzione in $\Sc(\RR)$ è ancora una funzione in $\Sc(\RR)$, mentre la trasformata di una funzione in $\Dc(\RR)$ è ancora $C^{\infty}$, ma non più necessariamente a supporto compatto.
-\end{itemize}
-
-\subsection{Allo spazio di funzioni a descrescenza rapida}
-
-\begin{thm}
-La trasformata agisce su
-\begin{equation*}
-\Fc : \Sc(\RR)\rightarrow \Sc(\RR)
+\Vert f*g \Vert_{L^{1}} \leq \Vert f \Vert_{L^{1}}\ \Vert g \Vert_{L^{1}}
 \end{equation*}
 \end{thm}
+
+Pertanto, date due funzioni $f,g\in L^1$, la $(\circledast)$ funge da definizione di una terza funzione, propriamente chiamata prodotto di convoluzione tra $f$ e $g$.
+
+\begin{rem}
+Tale teorema discende direttamente dal teorema di Fubini.
+\end{rem}
+
+\begin{rem}
+Pur avendo una definizione molto asimmetrica, in realtà il prodotto di convoluzione gode della proprietà commutativa:
+\begin{equation*}
+(f*g)(x)=\int_\RR f(x-t)\,g(t)\dt=\left\{s=x-t\right\}=\int_\RR f(s)\,g(x-s)\ds=(g*f)(x)
+\end{equation*}
+Tale simmetria si nota ancor di più nel prossimo risultato.
+\end{rem}
+
+\begin{thm}
+Siano $f,g\in L^1(\RR)$. Allora
+\begin{equation*}
+\Fc\left((f*g)(x),z\right)=\Fc\left(f(x),z\right)\cdot\Fc\left(g(x),z\right)
+\end{equation*}
+che in forma più compatta è
+\begin{equation*}
+\hat{(f*g)}(z)=\hat{f}(z)\cdot\hat{g}(z)
+\end{equation*}
+\end{thm}
+
 \begin{proof}
-
-Lo spazio di partenza ha senso essendo densamente incluso in $L^{p}(\RR), p = 1$.
-
-Sia $u\in S(\RR)$, consideriamo $v(x) = x^{N} u(x) \in \Sc(\RR) \subset L^{1}(\RR)$.
-\begin{itemize}
-\item Trasformata della derivata di $v$ $M$ volte
-\begin{equation*}
-\Fc\left(v^{(M)}, z\right) = (iz)^{M}\hat{v} \in L^{\infty}(\RR)
-\end{equation*}
-
-dato che $v$ sta in $L^{1}$, $\hat{v}$ sta in $C^{0}_{0}$, quindi la quantità $(iz)^{M}\hat{v}$ è limitata
-\item Derivata della trasformata di $u$ $N$ volte
-\begin{equation*}
-\hat{u}^{(N)} = (- i)^{N}\hat{v}
-\end{equation*}
-
-moltiplichiamola per $z^{M}$, il termine che otteniamo a destra abbiamo appena fatto vedere che, a meno di coefficienti $i$ opportunamente elevati, è limitato
-\begin{equation*}
-z^{M}\hat{u}^{(N)} = z^{M}(- i)^{N}\hat{v} \ \ \boxed{\in L^{\infty}(\RR)} \ \ \forall N, M \geq 0
-\end{equation*}ma questa è proprio la definizione di funzione a descrescenza rapida, quindi $\hat{u} \in \Sc(\RR)$ e abbiamo dimostrato la tesi.
-\end{itemize}
+Abbiamo
+\begin{align*}
+\hat{(f*g)}(z)&=\int_\RR e^{-izx}\left[\int_\RR f(x-t)\,g(t)\dt\right]\dx=\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR^2}e^{-iz(x-t)}e^{-izt}f(x-t)\,g(t)\dt\dx =\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-iz(x-t)} f(x-t)\dx\right]\dt=\\
+&=\left\{\text{cambio di var: }s=x-t\right\}=\\
+&=\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-izs} f(s)\ds\right]\dt=\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\int_\RR e^{-izt}g(t)\dt\cdot \int_\RR e^{-izs} f(s)\ds =\\
+&= \hat{f}(z)\cdot\hat{g}(z)
+\end{align*}
 \end{proof}
 
-\subsection{Allo spazio $L^{2}$}
+%zzzzzzzzzzzzzzzzzz
+
+\section{Estensione della trasformata di Fourier ... }
+
+
+Vogliamo estendere la definizione di trasformata di Fourier agli spazi $\Sc$, $L^2$ e $\Sc'$.
+
+\textbf{NB.} Prima di procedere oltre consigliamo di andare a ripassare le proprietà di questi spazi e soprattutto di leggere l'appendice
+\ref{myprod}.
+
+
+\subsection{... allo spazio delle funzioni a decrescita rapida}
+
+\begin{thm}
+La trasformata di Fourier è un'applicazione lineare $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$
+\end{thm}
+
+Prima di partire con la dimostrazione facciamo due premesse:
+\begin{enumerate}
+    \item[(i)] Dal teorema della derivata della trasformata:
+    \begin{equation*}
+    f\in L^1,\ xf\in L^1\ \Rightarrow\ \hat{f}\in\Cc^1
+    \end{equation*}
+    Generalizzando si ha
+    \begin{equation*}
+    f\in L^1,\ x^kf\in L^1\ \forall k=0:n\ \Rightarrow\ \hat{f}\in\Cc^{\,n}
+    \end{equation*}
+
+    \item[(ii)] Dal teorema della trasformata della derivata:
+    \begin{equation*}
+    f\in L^1\cap \Cc^1,\ \lim_{x\to\pm\infty} f(x)=0,\ f'\in L^1\ \Rightarrow\ \hat{(f')}(z)=iz\hat{f}(z)
+    \end{equation*}
+    Generalizzando si ha
+    \begin{equation*}
+    f\in L^1\cap \Cc^k,\ \lim_{x\to\pm\infty} f(x)=0,\ f'\in L^1\ \Rightarrow\ \hat{\left(f^{(k)}\right)}(z)=(iz)^k\hat{f}(z)
+    \end{equation*}
+\end{enumerate}
+
+Ricordiamo inoltre che
+\begin{equation*}
+f\in\Sc\qquad\text{se}\qquad \begin{cases}
+f\in\Cc^\infty \\
+x^kf^{(n)}(x)\text{ è limitata }\forall n,k
+\end{cases}
+\end{equation*}
+Siamo pronti:
+
+\begin{proof}
+Sia $f\in\Sc(\RR)$. Dobbiamo far vedere che $\hat{f}\in\Sc(\RR)$.
+\begin{enumerate}
+    \item [$\triangleright$] Osserviamo che, per definizione di $\Sc$, si ha
+    \begin{align*}
+    f\in L^1(\RR)\qquad&\text{poiché }\Sc(\RR)\subset L^p(\RR) \\
+    x^kf\in L^1(\RR)\qquad&\text{poiché }x^kf^{(n)}\text{ è limitata }\forall n,k
+    \end{align*}
+    Dunque le ipotesi del teorema enunciato in (i) sono verificate, e allora segue che $\hat{f}\in\Cc^{\,n}$ per ogni $n$, cioè $\hat{f}\in\Cc^\infty$ (non è mica un limite!).
+    \item [$\triangleright$] Sempre per definizione di $\Sc$ si ha
+    \begin{align*}
+    f\in L^1\cap \Cc^k\ \forall k\qquad&\text{poiché }f\in L^1       \text{ e }f\in \Cc^\infty \\
+    f'\in L^1\text{ e }f(x)\xrightarrow[]{x\to\pm\infty}0\qquad&\text{poiché }x^kf^{(n)}\text{ è limitata }\forall n,k
+    \end{align*}
+    Sono soddisfatte le ipotesi del teorema visto in (ii) e dunque
+    \begin{equation*}
+    \hat{\left(f^{(k)}\right)}(z)=(iz)^k\hat{f}(z)\qquad \forall k
+    \end{equation*}
+    Dato che $f\in L^1$, si ha $\hat{f}(z)\in\Cc_0^0$ e quindi la quantità $z^k\hat{f}(z)$ è limitata.
+\end{enumerate}
+Possiamo dunque concludere che $\hat{f}(z)\in\Sc(\RR)$.
+\end{proof}
+
+
+\subsection{... allo spazio delle funzioni a quadrato integrabile}
 
 Vogliamo mostrare che
 \begin{equation*}
 \Fc : L^{2}(\RR)\rightarrow L^{2}(\RR)
 \end{equation*}
-Non possiamo definirla in $L^{2}$ come $\int e^{- ixz} u(x) dx$ perché se $u\in L^{2}$ non abbiamo nessuna garanzia che la funzione sia integrabile. Partiamo definendo la trasformata in $L^{1}(\RR) \cap L^{2}(\RR)$.
-\begin{thm}
-[di Plancherel]
-Sia $u\in L^{1}(\RR) \cap L^{2}(\RR)$, allora
+Non possiamo definirla in $L^{2}$ come $\int e^{- ixz} f(x) \dx$ perché $f\in L^{2}$ non implica necessariamente che la funzione sia integrabile. Allora partiamo definendo la trasformata in $L^{1}(\RR) \cap L^{2}(\RR)$.
+\begin{thm}[Identità di Plancherel]$\\$
+Sia $f\in\Sc\left(\RR^n\right)$ $\left(\Rightarrow f\in L^{1}\left(\RR^n\right) \cap L^{2}\left(\RR^n\right)\right)$. Allora $\hat{f}\in L^2\left(\RR^n\right)$ e
 \begin{equation*}
-\boxed{\Vert \hat{u} \Vert_{L^{2}} = \sqrt{2\pi} \Vert u \Vert_{L^{2}}} \ \ \text{quindi} \ \ \boxed{\hat{u} \in L^{2}(\RR)}
+\left\|\hat{f}\right\|_2 = (2\pi)^{n/2} \,\Vert f \Vert_2
+\end{equation*}
+In particolare per $n=1$ vale
+\begin{equation*}
+\Vert f \Vert_2^2=\frac{1}{2\pi}\ \left\|\hat{f}\right\|_2^2
 \end{equation*}
 \end{thm}
-\begin{proof}\leavevmode
-\begin{itemize}
-\item \textit{Dimostrazione nel caso di}$u\in \Sc(\RR)$
 
-Dato che $u\in \Sc(\RR)$, allora $u\in L^{2}$. Ci serve partira da $u\in \Sc(\RR)$ per poter usare correttamente il risultato di inversione, in accordo a quanto appena detto sull'estensione a $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$.
+\begin{rem}
+La costante che compare nell'uguaglianza dipende da come si è definita $\hat{f}$; ecco dunque che acquistano senso le altre notazioni elencate.
+\end{rem}
 
+\begin{proof} 
+Nota bene: non abbiamo ancora dimostrato che $\Fc: L^2\to L^2$, dunque l'ipotesi del teorema è $f\in\Sc(\RR)$, e non $f\in L^1\cap L^2$, in modo tale da poter utilizzare quanto appena detto sull'estensione a $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$. In seguito, quando scopriremo che $\Fc: L^2\to L^2$ potremo riscrivere il teorema usando come ipotesi solamente $f\in L^1\cap L^2$.
+
+Sia $f:\RR\to\CC$, $f\in\Sc(\RR)$. Allora $f\in L^1\cap L^2$ e perciò possiamo calcolare
+\begin{equation*}
+\Vert f \Vert_2^2=\int_\RR |f(x)|^{2} \dx = \int_\RR f(x)\,\overline{f(x)}\dx
+\end{equation*}
+Essendo $f\in\Sc$ (è qui che ci semplifichiamo la vita!) possiamo anche dire che
+\begin{equation*}
+f(x)=\frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z) \dz
+\end{equation*}
+Mettendo insieme queste due cose otteniamo
 \begin{align*}
-\Vert u \Vert^{2}_{L^{2}} & = \int | u(x)|^{2} dx = \int \overline{u(x)} u(x) dx & \text{essendo} \ u\in L^{2}(\RR)\\
-u(x) & = \frac{1}{2\pi}\int e^{ixz}\hat{u}(z) dz & \text{essendo} \ u\in \Sc(\RR)
+\Vert f \Vert_2^2&=\int_\RR f(x)\,\overline{f(x)}\dx=\int_\RR \left(\frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z) \dz\right)\overline{f(x)}\dx =\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_{\RR^2}e^{ixz}\hat{f}(z)\,\overline{f(x)}\dx\dz\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_\RR \hat{f}(z) \left(\int_\RR \overline{e^{-ixz}f(x)} \dx\right)\dz=\\
+&=\frac{1}{2\pi}\int_\RR \hat{f}(z)\,\hat{f}(z)\dz=\frac{1}{2\pi}\ \left\|\hat{f}\right\|_2^2
 \end{align*}
-
-Sostituiamo
-
-\begin{align*}
-\Vert u \Vert^{2}_{L^{2}} & = \frac{1}{2\pi}\int \overline{u(x)}\int e^{ixz}\hat{u}(z) dzdx & \\
- & = \frac{1}{2\pi}\int \hat{u}(z)\int \overline{e^{- ixz} u(x)} dxdz & \text{(Fubini)}\\
- & = \frac{1}{2\pi}\int \hat{u}(z)\overline{\hat{u}(z)} dz & \\
- & = \frac{1}{2\pi} \Vert \hat{u} \Vert^{2}_{L^{2}} \ \ \implies \ \ \Vert \hat{u} \Vert_{L^{2}} = \sqrt{2\pi} \Vert u \Vert_{L^{2}} &
-\end{align*}
-
-Stando $u\in L^{2}$, ciò che sta a destra dell'uguale è un numero finito, quindi anche ciò che è a sinistra, quindi $\hat{u}$ appartiene ad $L^{2}$.
-\item \textit{Estensione a}$u\in L^{2}(\RR)$
-
-Per \textbf{densità} dell'inclusione $\Sc(\RR) \subset L^{2}(\RR)$,
-\begin{itemize}
-\item posso costruire una successione approssimante
-\begin{equation*}
-L^{2}(\RR) \supset \Sc(\RR) \ni u_{n}\xrightarrow{L^{2}} u\in L^{2}(\RR)
-\end{equation*}
-\item posso fare le trasformate $\widehat{u_{n}}$ dato che $u_{n} \in \Sc(\RR)$
-\item per l'uguaglianza delle norme appena trovata, valida appunto per $u_{n} \in \Sc(\RR)$
-\begin{equation*}
-\Vert u_{n} - u_{m} \Vert_{L^{2}} = \Vert \hat{u}_{n} - \hat{u}_{m} \Vert_{L^{2}}\frac{1}{\sqrt{2\pi}}
-\end{equation*}
-
-Grazie alla completezza dello spazio $L^{2}$, se $u_{n}$ converge, è di Cauchy, allora lo è anche la sua trasformata, allora anche lei converge. Definisco $\hat{u}$ il limite della successione $\widehat{u_{n}}\xrightarrow{L^{2}}\hat{u}$, abbiamo trovato la trasformata $\Fc : L^{2}\rightarrow L^{2}$.
-\end{itemize}
-\item Con questo ragionamento potremmo anche dedurre che
-
-\begin{equation*}
-(u, v) = \frac{1}{2\pi}(\hat{u}, \hat{v}) \ \ \ \ \text{(si mantiene l'ortogonalità)}
-\end{equation*}
-\end{itemize}
+che conclude la dimostrazione.
 \end{proof}
 
-\section{Trasformata di Fourier di una distribuzione temperata}
+Facciamo qualche osservazione:
+\begin{enumerate}
+    \item Ricordando che $\Vert f\Vert_2^2=(f,f)$ si può anche dire di aver dimostrato che
+    \begin{equation*}
+    (f,g)=\frac{1}{2\pi}\,\left(\hat{f},\hat{g}\right)
+    \end{equation*}
 
-Ci manca solo la trasformata di Fourier di una distribuzione temperata, consideriamo quindi $S'(\RR)$. Vogliamo mostrare che
-\begin{equation*}
-\Fc : S'(\RR)\rightarrow S'(\RR)
-\end{equation*}
-Ricordiamo che
-\begin{equation*}
-(u', \varphi) = - (u, \varphi')
-\end{equation*}
-Supponiamo che $u$ sia una distribuzione temperata $u\in \Sc'(\RR)$, vorremmo che $\hat{u} \in \Sc'(\RR)$. Definiamo senza nessuno sforzo
-\begin{equation*}
-\boxed{(\hat{u}, \varphi) = (u, \hat{\varphi})} \ \ \ \ \varphi \in \Sc(\RR)
-\end{equation*}
-dato che se $\varphi \in \Sc(\RR)$ allora $\hat{\varphi} \in \Sc(\RR)$.
-\begin{thm}
-La trasformata di Fourier $\Fc : \Sc'(\RR)\rightarrow \Sc'(\RR)$ è un'applicazione
+    \item L'identità di Parseval per serie di Fourier è l'analogo dell'identità di Plancherel per trasformate di Fourier.
+\end{enumerate}
 
-lineare biunivoca e continua.
-\end{thm}
-\begin{proof}\leavevmode
+\newpage
+
+Siamo arrivati al momento \textit{clou}: sfruttiamo che l'inclusione $\Sc\subset L^2$ è densa per poter arrivare a definire una $\hat{f}\in L^2$.
+
 \begin{itemize}
-\item È effettivamente un funzionale \textbf{lineare} dalla definizione
-\item \textbf{Continuo} grazie alla (non dimostrata) continuità della trasformata di Fourier delle funzioni in $\Sc(\RR)$.
-\begin{equation*}
-(\hat{u}, \varphi_{n}) = \left(u, \widehat{\varphi_{n}}\right)\rightarrow (u, \hat{\varphi}) = (\hat{u}, \varphi)
-\end{equation*}
-\item \textbf{Suriettiva.}
-\begin{equation*}
-\begin{array}{c c c}
-\Fc : \Sc'(\RR) & \rightarrow & \Sc'(\RR)\\
-u & & \hat{u} = v
-\end{array}
-\end{equation*}
+    \item Sia $f\in L^2$. Allora, poiché l'inclusione $\Sc\subset L^2$ è densa, esiste una successione $\{\varphi_n\}\subset\Sc$ tale che $\left\|\varphi_n-f\right\|_2 \to0$.
 
-Data una distribuzione temperata $v\in \Sc'(\RR)$ tale che $v = \hat{u}$ dobbiamo trovare $u\in \Sc'(\RR)$. Diciamo che $u = \Fc^{- 1}(v)$, e infatti
-\begin{equation*}
-(\hat{u}, \varphi) = (u, \hat{\varphi}) = \left(\Fc^{- 1}(v), \hat{\varphi}\right) = \left(v, \Fc^{- 1}(\hat{\varphi})\right) = (v, \varphi) \ \ \forall \varphi
-\end{equation*}
-\item \textbf{Iniettiva}.
+    \item Dato che $\varphi_n\in\Sc$ e $\Fc:\Sc\to\Sc$ posso calcolare le trasformate $\hat{\varphi_n}$ e definire il limite di tale successione come $\hat{f}$. Ma prima di dire ciò devo verificare che effettivamente $\hat{\varphi_n}$ converge a una certa funzione $g\in L^2$.
 
-Dobbiamo far vedere che se abbiamo $u_{1}, u_{2} \in \Sc'(\RR)$ e $\hat{u}_{1} = \hat{u}_{2}$ allora $u_{1} = u_{2}$. Prendiamo una nuova funzione test $\psi $ tale che $\hat{\psi} = \varphi $.
-\begin{equation*}
-(u_{1}, \varphi) = (u_{1}, \hat{\psi}) = (\hat{u}_{1}, \psi) = (\hat{u}_{2}, \psi) = (u_{2}, \hat{\psi}) = (u_{2}, \varphi)
-\end{equation*}
+    \item Per l'uguaglianza di Plancherel
+    \begin{equation*}
+    \left\| \hat{\varphi_{n_1}}-\hat{\varphi_{n_2}}\right\|=\sqrt{2\pi}\,\left\|\varphi_{n_1}-\varphi_{n_2}\right\|
+    \end{equation*}
+    ed essendo $\{\varphi_n\}$ una successione convergente in $L^2$ si deduce che $\{\hat{\varphi_n}\}$ è una successione di Cauchy in $L^2$. Grazie alla completezza di $L^2$ esiste $g\in L^2$ tale che $\hat{\varphi_n}$ converge (nel senso di $L^2$) a $g$.
+
+    \item Ci siamo, definendo
+    \begin{equation*}
+    \hat{\varphi_n}\xrightarrow[]{L^2}g=:\hat{f}
+    \end{equation*}
+    abbiamo mostrato che $\Fc:L^2\to L^2$.
+
+    \begin{rem}
+    Sempe utilizando l'uguaglianza di Plancherel è possibile dimostrare che $g$ non dipende dall'approssimante $\varphi_n$ scelta (infatti sarebbe assurdo avere due approssimanti diverse di $f$ che danno luogo a due diverse $\hat{f}$).
+    \end{rem}
 \end{itemize}
-\end{proof}
-\textit{Esempio.}
 
-Calcoliamo la trasformata di Fourier di una costante, cioè una funzione $L^{1}_{\loc}$ a cui quindi è associata una distribuzione temperata\footnote{Si noti che in testi differenti si potrebbe trovare un risultato diverso in base a come si è definita la trasformata di Fourier. Non tutti, infatti, sono d'accordo sull'uso della costante $2\pi $ tra la trasformazione diretta e quella inversa.}
+Ora che abbiamo definito la trasformata possiamo anche definire l'antitrasformata (analogamente a prima)
 \begin{equation*}
-\Fc^{- 1}\{\delta_{0}(\xi)\} = \frac{1}{2\pi}\int_{\RR} e^{i\xi x} \delta_{0}(\xi) d\xi = \frac{1}{2\pi} \langle \delta_{0}(\xi), e^{i\xi x} \rangle = \frac{1}{2\pi}
-\end{equation*}
-allora
-\begin{equation*}
-\Fc\left\{\frac{1}{2\pi}\right\} = \delta_{0}(\xi) \ \ \implies \ \ \boxed{\Fc\{1\} = 2\pi \delta_{0}(\xi)}
+\Fc^{-1}:L^2\to L^2\qquad \qquad f(x)=\frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z)\dz
 \end{equation*}
 
-\section{Trasformata di Laplace}
+Osserviamo che, in base alla definizione appena data, l'operatore $\Fc^{-1}$ associa ad ogni $f\in L^2$ la quantità
+\begin{equation*}
+\Fc^{-1}(f(z),x)=\frac{1}{2\pi}\int_\RR e^{izx}f(z)\dz
+\end{equation*}
+Da ciò si vede chiaramente che
+\begin{equation*}
+\Fc(f(x),z)=(2\pi)\Fc^{-1}(f(x),-z)
+\end{equation*}
+Allora trasformando due volte una funzione di $L^2$ si ottiene
+\begin{equation*}
+\Fc^2(f(x),z)=(2\pi)f(-z)
+\end{equation*}
+mentre iterando ancora
+\begin{equation*}
+\Fc^4(f(x),z)=(2\pi)^2f(z)
+\end{equation*}
+Quindi l'applicazione $\Fc: L^2\to L^2$ è biunivoca, e in particolare è un isomorfismo tra spazi di Hilbert (preserva norme e prodotti scalari (grazie a Plancherel)): $L^2$ è lo spazio naturale per parlare di trasformate di Fourier.
+
+L'ultima cosa che dobbiamo capire è come costruire a livello pratico la trasformata in $L^2$ (perché fare il limite di una successione $\{\varphi_n\}\subset\Sc(\RR)$ potrebbe non essere così comodo!). A tal proposito si prende una successione $f_n\xrightarrow[]{L^2}f$ definita come
+\begin{equation*}
+f_n(x)=
+\begin{cases}
+f(x)&|x|<n\\
+0&\text{altrove}
+\end{cases}
+\end{equation*}
+In questo modo si definisce facilmente
+\begin{equation*}
+\hat{f}(x)=\lim_{n\to+\infty} \hat{f_n}(x)=\lim_{n\to+\infty} \int_\RR e^{-izx}f_n(x)\dx=\lim_{n\to+\infty} \int_{-n}^n e^{-izx}f(x)\dx
+\end{equation*}
+dove si è usato che $f_n,f\in L^2\Rightarrow f_n,f\in L^1$.
+
+
+\subsection{... allo spazio delle distribuzioni temperate}
+
+Consideriamo lo spazio delle distribuzioni temperate $\Sc'(\RR)$. Vogliamo dunque definire 
+\begin{equation*}
+\Fc:\Sc'(\RR)\to\Sc'(\RR)
+\end{equation*}
+
+Senza troppa fantasia
+\begin{defn}
+Sia $u\in\Sc'(\RR)$. Allora la trasformata di Fourier di $u$ è il funzionale dato da
+\begin{equation*}
+\hat{u}(\varphi):=u\left(\hat{\varphi}\right)\qquad \forall \varphi\in\Sc(\RR)
+\end{equation*}
+che con la più familiare notazione da prodotto scalare è
+\begin{equation*}
+\left(\hat{u},\varphi\right):=\left(u,\hat{\varphi}\right)
+\end{equation*}
+Tale funzionale risulta essere ancora una distribuzione temperata, e quindi $\Fc:\Sc'\to\Sc'$.
+\end{defn}
+
+\begin{rem}
+Tale definzione ricorda molto la definizione di derivata di una distribuzione temperata.
+\end{rem}
+
+\begin{exa}[Delta di Dirac]$\\$
+Sappiamo già che la delta di Dirac è una distribuzione temperata. Per ogni funzione $\varphi\in\Sc(\RR)$ si ha per definzione
+\begin{equation*}
+\left(\delta_0,\varphi\right)=\varphi(0)
+\end{equation*}
+Allora la trasformata di Fourier della delta è tale che
+\begin{align*}
+\left(\hat{\delta_0},\varphi\right)&=\left(\delta_0,\hat{\varphi}\right)= &\left\{\text{def trasformata in }\Sc'\right\} \\
+&=\hat{\varphi}(0)=    &\left\{\text{def delta}\right\} \\
+&=\int_{\RR}e^{-ix0}\varphi(x)\dx=    &\left\{\text{def trasformata in }\Sc\right\} \\
+&=\left(1,\varphi\right)    &\left\{\text{def distribuzione}\right\}
+\end{align*}
+Dunque possiamo affermare che in $\Sc'$ si ha che $\boxed{\hat{\delta_0}=1}$, dove con 1 si intende la distribuzione $u(x)=1$. Perciò $\Fc$ trasforma una funzione concentrata in un punto in una funzione sempre costante.
+
+Possiamo anche fare il viceversa
+\begin{equation*}
+\left(\hat{1},\varphi\right)=\left(1,\hat{\varphi}\right)=\int_\RR\hat{\varphi}(z)\dz=2\pi\,\varphi(0)=2\pi\left(\delta_0,\varphi\right)
+\end{equation*}
+pertanto in $\Sc'$ si ha che $\boxed{\hat{1}=2\pi\,\delta_0}$.
+
+Se invece la delta fosse centrata in $y\in\RR$
+\begin{equation*}
+\boxed{\hat{\delta_y}=e^{-izy}}
+\end{equation*}
+\end{exa}
+
+\newpage
+
+\section{Applicazioni alle EDO}
+Iniziamo a considerare equazioni differenziali ordinarie lineari a coefficienti costanti del tipo
+\begin{equation*}
+a_ny^{(n)}+a_{n-1}y^{(n-1)}+\cdots+a_1y'+a_0y=f(x)\qquad \boxed{\sum_{k=0}^n a_ky^{(k)}}
+\end{equation*}
+con $a_k\in\RR$ e $f\in\Cc^0(\RR)$. È noto che tali equazioni possono essere risolte con tecniche elementari ma vediamo come sia possibile ottenerne \textit{una} soluzione utilizzando la trasformata di Fourier. 
+
+Si è volutamente accentuato l'articolo \textit{una} per le seguenti osservazioni:
+\begin{itemize}
+    \item Non è la sede giusta per essere rigorosi, perciò non faremo ipotesi sulle funzioni. Daremo per scontato che esse siano opportune, ovvero sufficientemente regolari e integrabili, nonché trasformabili.
+    \item In generale assumeremo $g\in L^1$, che implica $y\in L^1$. Lavoreremo cioè in uno spazio che è molto più ampio di quello delle funzioni $\Cc^{1,2,\dots,\infty}$ e perciò arriveremo a una $y$ non in senso classico, ma ad una \underline{soluzione debole}. In pratica, vuol dire cercare a priori una soluzione con minore regolarità, e poi magari andare a dimostrare che essa è $\Cc^{1,2,\dots,\infty}$.
+\end{itemize}
+Racchiudiamo ciò nell'iconica frase ``cerchiamo soluzioni in senso distribuzionale''. Ora capiamo perché lavoriamo in uno spazio pù grande: perché ha proprietà più forti, per esempio una distribuzione è sempre derivabile (in senso distribuzionale). Inoltre ricorda: se partiamo già con funzioni $\Cc^{1,2,\dots,\infty}$ la derivata in senso distribuzionale coincide con quella in senso classico, quindi abbiamo ampliato il concetto di soluzione di un EDO con successo! 
+
+Applichiamo la trasformata di Fourier ad ambo i membri dell'equazione differenziale:
+\begin{gather*}
+\hat{\sum_{k=0}^n a_ky^{(k)}(x)}=\hat{f}(z) \\
+\sum_{k=0}^na_k(iz)^k\hat{y}(z)=\hat{f}(z) \\
+\hat{y}(z)\cdot \sum_{k=0}^na_k(iz)^k=\hat{f}(z) \\
+\boxed{\hat{y}(z)=\frac{\hat{f}(z)}{\sum_{k=0}^na_k(iz)^k}}
+\end{gather*}
+dove si è usato che $\hat{y^{(k)}}=(iz)^k\hat{y}$ (NB: è per questo che i dati devono essere opportuni, cioè devono soddisfare le ipotesi di questo teorema). Una volta ricavata $\hat{y}$ non resta che calcolare la soluzione $y$ tramite
+\begin{equation*}
+y(x)=\Fc^{-1}\left(\hat{y}(z),x\right)=\Fc^{-1}\left(\frac{\hat{f}(z)}{\sum_{k=0}^na_k(iz)^k},x\right)=\Fc^{-1}\left(\frac{1}{\sum_{k=0}^na_k(iz)^k},x\right)*f(x)
+\end{equation*}
+Quindi
+\begin{equation*}
+\boxed{y(x)=\Fc^{-1}\left(\frac{1}{\sum_{k=0}^na_k(iz)^k},x\right)*f(x)=\left(K*f\right)(x)}
+\end{equation*}
+avendo definito
+\begin{equation*}
+K(x):=\Fc^{-1}\left(\frac{1}{\sum_{k=0}^na_k(iz)^k},x\right)
+\end{equation*}
+Dunque il succo (e la comodità) è che
+\begin{equation*}
+\text{EDO}\xrightarrow[]{\Fc}\text{EQ algebrica}\xrightarrow[]{\text{conti}}\hat{y}(z)\xrightarrow[]{\Fc^{-1}}  y(x)
+\end{equation*}
+
+La vita ce lo ricorda ogni giorno: per avere bisogna dare. In questo caso abbiamo rinunciato alla certezza di soluzioni, per esempio partendo da dati $L^1$, che stanno sicuramente in $L^1$. Questo non deve sorprendere in quanto è possibile che l'equazione originaria non abbia soluzioni classiche in $L^1$. In secondo luogo, sappiamo che funzioni anche semplici del tipo $e^x$ (potenze dispari) non sono distribuzioni e perciò soluzioni che dipendono da tali oggetti non verranno trovate (quelle che dipendono da $e^{-x^2}$ (potenze pari) invece si). Diciamo dunque che le condizioni di spazi opportuni le verifichiamo a posteriori. Con il seguente esempio vogliamo capire, si spera, meglio, il precedente discorso:
+\begin{exa}
+Si consideri l'equazione
+\begin{equation*}
+y''+y=e^{-|x|}
+\end{equation*}
+Applicando il procedimento precedente, cioè trasformando usando
+\begin{equation*}
+\Fc\left(y^{(k)}(x),z\right)=(iz)^k\hat{y}(z)\qquad\Rightarrow\qquad\boxed{\Fc\left(y''(x),z\right)=-z^2\hat{y}(z)}
+\end{equation*}
+si ha
+\begin{equation*}
+(1-z^2)\hat{y}(z)=\frac{2}{1+z^2}
+\end{equation*}
+e quindi
+\begin{equation*}
+\hat{y}(z)=\frac{2}{(1+z^2)(1-z^2)}\notin L^1\ \Rightarrow\ y\notin L^1
+\end{equation*}
+Se invece avessimo cercato le soluzioni in senso classico, per esmepio tramite il metodo di variazione delle costanti arbitrarie, avremmo trovato una soluzione generale del tipo
+\begin{align*}
+y(x)&=A\cos(x)+B\sin(x)+\int_0^x\sin(x-t)e^{-|t|}\dt =\\
+&=A\cos(x)+B\sin(x)+\frac{1}{2}\left(\sin|x|-\cos(x)+e^{-|x|}\right)
+\end{align*}
+con $A,B\in\RR$ arbitrari, e $y\notin L^1$ qualunque siano $A,B$.
+\end{exa}
+
+Vediamo un altro esempio significativo.
+
+\begin{exa}
+Si consideri l'equazione differenziale del second'ordine lineare a coefficienti costanti
+\begin{equation*}
+-y''+y=f(x)
+\end{equation*}
+con il termine noto $f$ assegnato e appartenente ad un opportuno spazio.
+
+Trasformando si ha
+\begin{gather*}
+(1+z^2)\hat{y}(z)=\hat{f}(z)\\
+\hat{y}(z)=\frac{\hat{f}(z)}{1+z^2} \\
+y(x)=\Fc^{-1}\left(\frac{1}{1+z^2},x\right)*f(x) \\
+y(x)=(K*f)(x)=\frac{e^{-|x|}}{2}*f(x)=\int_\RR \frac{e^{-|x-t|}}{2}\ f(t)\dt
+\end{gather*}
+Osserviamo che dal punto di vista classico si avrebbe
+\begin{equation*}
+y(x)=(K*f)(x)+Ae^x+Be^{-x}
+\end{equation*}
+con $A,B\in\RR$ arbitrari. Tuttavia, l'unica soluzione che appartiene a $L^1$ è proprio quella con $A=B=0$ quindi alla fine cercare le soluzioni in senso distribuzionale non è poi così inutile.
+\end{exa}
+Di nuovo, qual è il succo? Il procedimento
+\begin{equation*}
+\text{EDO}\xrightarrow[]{\Fc}\text{EQ algebrica}\xrightarrow[]{\text{conti}}\hat{y}(z)\xrightarrow[]{\Fc^{-1}}  y(x)
+\end{equation*}
+fornisce una regola che permette di assegnare a ogni termine noto $f$ la soluzione in senso distribuzionale $y$; questo è molto potente (infatti guardando il primo e l'ultimo passaggio potremmo dire che non serve neanche trasformare), tanto da meritarsi un nome: \textit{funzione}/\textit{operatore} di Green
+\begin{equation*}
+G(x):=\frac{e^{-|x|}}{2}\qquad\text{t.c.}\qquad f\mapsto y\ \text{ tramite }\ y(x)=\int_\RR G(x-t)f(t)\dt
+\end{equation*}
+Riscrivendo l'EDO tramite operatori differenziali
+\begin{equation*}
+\left(-\frac{\de^2}{\de x^2}+1\right)y=f
+\end{equation*}
+la funzione di Green permette, in un opportuno senso, di invertire la relazione tra $y$ e $f$, cioè di trovare direttamente $y$.
+
+Ovviamente tutto ciò si può generalizzare:
+\begin{exa}
+Si consideri l'equazione del second'ordine
+\begin{equation*}
+y''-a^2y=f(x)
+\end{equation*}
+con $a>0$ e $f$ opportunamente assegnata.
+
+Saltando qualche passaggio (analogo all'esercizio precedente) si ha
+\begin{gather*}
+y(x)=\Fc^{-1}\left(-\frac{1}{a^2+z^2},x\right)*f(x) \\
+y(x)=(K*f)(x)=\int_\RR -\frac{e^{-a|x-t|}}{2a}\ f(t)\dt
+\end{gather*}
+e quindi l'operatore di Green è
+\begin{equation*}
+G(x)=-\frac{e^{-a|x|}}{2a}
+\end{equation*}
+(c'è un $\pm$ che balla a seconda di come di come sono messi i segni dell'EDO)
+
+Invece in senso classico
+\begin{equation*}
+y(x)=(K*f)(x)+Ae^{ax}+Be^{-ax}
+\end{equation*}
+\end{exa}
+
+Con il prossimo esempio cerchiamo di accentuare una corrispondenza tra la risoluzione delle EDO in senso classico (soluzione omogenee + soluzione particolare) e in senso distribuzionale:
+\begin{exa}
+Si consideri la seguente equazione differenziale
+\begin{equation*}
+-y''+y=\delta_0
+\end{equation*}
+Ricordandoci che $\hat{\delta_0}=1$ si ha
+\begin{equation*}
+(1+z^2)\hat{y}(z)=1\qquad\Rightarrow\qquad \hat{y}(z)=\frac{1}{1+z^2}\qquad\Rightarrow\qquad  y(x)=\Fc^{-1}\left(\frac{1}{1+z^2},x\right)=\frac{e^{-|x|}}{2}
+\end{equation*}
+Osservando che in generale per una certa $f$ trasformabile vale la seguente uguaglianza
+\begin{equation*}
+f(x)=(f*\delta_0)(x)
+\end{equation*}
+\begin{rem}
+Tale uguaglianza si deduce da
+\begin{equation*}
+f(x)=\int_\RR f(x-t)\delta_0\dt=\{\text{la delta estrare il valore }t=0\}=(f*\delta_0)(x)
+\end{equation*}
+o anche da
+\begin{equation*}
+\hat{f}=\hat{f}\cdot 1=\hat{f}\cdot\delta_0
+\end{equation*}
+\end{rem}
+e dunque la soluzione ``omogenea'' è
+\begin{equation*}
+-y''+y=\delta_0\qquad\Rightarrow\qquad y(x)=\frac{e^{-|x|}}{2}
+\end{equation*}
+mentre quella per un dato noto $f(x)$
+\begin{equation*}
+-h''+h=f\qquad\Rightarrow\qquad h(x)=\frac{e^{-|x|}}{2}*\delta_0
+\end{equation*}
+\end{exa}
+
+Vediamo due ultimi esempi.
+
+\begin{exa}
+Si consideri l'equazione differenziale del second'ordine omogenea a coefficienti \underline{non} costanti
+\begin{equation*}
+f''+xf'+f=0
+\end{equation*}
+Ponendo $g=f'$ può venirci in mente di applicare, sotto opportune ipotesi, il teorema della derivata della trasformata:
+\begin{equation*}
+\Fc\left(xg(x),z\right)=i\,\frac{\de}{\de z}\Fc\left(g(x),z\right)
+\end{equation*}
+Senza apparente motivo utilizziamo anche il toerema della trasformata della derivata
+\begin{equation*}
+\Fc\left(xf'(x),z\right)=i\,\frac{\de}{\de z}\Fc\left(f'(x),z\right)=i\,\frac{\de}{\de z}\left(iz\Fc(f(x),z)\right)=-\frac{\de}{\de z}z\hat{f}(z)
+\end{equation*}
+Questo si rivla molto comodo quando si va a trasformare tutta l'EDO
+\begin{gather*}
+-z^2\hat{f}(z)-\frac{\de}{\de z}z\hat{f}(z)+\hat{f}(z)=0\\
+\frac{\de}{\de z}z\hat{f}(z)=(1-z^2)\hat{f}(z) \\
+\hat{f}(z)+z\frac{\de}{\de z}\hat{f}(z)=\hat{f}(z)-z^2\hat{f}(z)\\
+\frac{\de}{\de z}\hat{f}(z)=-z\hat{f}(z)\\
+\Downarrow \\
+\hat{f}(z)=e^{-z^2/2}\\
+\Downarrow \\
+f(x)=\frac{1}{2\pi}\,e^{-x^2/2}
+\end{gather*}
+Dunque applicando $\Fc$ a un'equazione differenziale del second'ordine a coefficienti variabili si è abbassato di uno l'ordine.
+\begin{rem}
+Questo era il modo più semplice per arrivare alla soluzione. In senso classico avremmo dovuto dannare un bel po'; infatti si può osservare che l'equazione sembra appartenere alla famiglia di equazioni di Eulero del second'ordine
+\begin{equation*}
+x^2y''+a_1xy'+a_2y=0
+\end{equation*}
+che si risolvono in modo non banale.
+\end{rem}
+\end{exa}
+
+
+\begin{exa}
+Si consideri
+\begin{equation*}
+3f''+4f=(6x^2-1)e^{-x^2}
+\end{equation*}
+Dato che
+\begin{equation*}
+\Fc\left(e^{-x^2},z\right)=\sqrt{\pi}\,e^{-z^2/4 }\quad\Rightarrow\quad\Fc\left(6x^2e^{-x^2},z\right)=6(i)^2\frac{\de^2}{\de z^2}\Fc\left(e^{-x^2},z\right)=-6\sqrt{\pi}\frac{\de^2}{\de z^2}e^{-z^2/4}
+\end{equation*}
+trasformando l'equazione differenziale si ottiene
+\begin{equation*}
+(4-3z^2)\hat{f}(z)=\frac{\sqrt{\pi}(4-3z^2)}{2}\,e^{-z^2/4}
+\end{equation*}
+e dunque 
+\begin{equation*}
+f(x)=\frac{e^{-x^2}}{2}
+\end{equation*}
+\begin{rem}
+Questo non era il metodo più semplice per arrivare alla soluzione. Infatti guardando la soluzione di partenza potevamo già dire che la soluzione era un qualcosa del tipo $k\cdot e^{-x^2}$ con $k$ costante.
+\end{rem}
+
+\end{exa}
+
+
+\section{Applicazioni alle EDP: Equazione del calore}
+
+Consideriamo l'equazione del calore in dimensione uno
+\begin{equation*}
+u_{t} - u_{xx} = 0\qquad x\in\RR,\ t>0
+\end{equation*}
+la cui soluzione $u(t,x)$ descrive l'evoluzione dell'energia termica di un sistema.
+
+Si capisce benissimo cosa si intende per equazione alle derivate parziali:
+\begin{equation*}
+u_t=\frac{\partial u(t,x)}{\partial t}=\partial_t u\qquad u_{xx}=\frac{\partial^2 u(t,x)}{\partial x^2}=\partial^2_{x} u
+\end{equation*}
+
+\begin{rem}
+Si può generalizzare in svariati modi: introdurre il coefficiente di conducibilità/diffusione $d$ davanti a $u_{xx}$, risolvere l'equazione non omogenea, estendere tutto ciò al caso $n$-dimensionale, dove per esempio $u_{xx}$ diventa il laplaciano $\Delta u$, ecc.
+\end{rem}
+
+Consideriamo il Problema di Cauchy (PdC)
+\begin{equation*}
+\begin{cases}
+u_{t} - u_{xx} = 0&x\in\RR,\ t>0\\
+u(0,x)=g(x)
+\end{cases}
+\end{equation*}
+Tale problema si può risolvere andando ad applicare l'operatore $\Fc$ rispetto alla variabile $x$, trattando perciò $t$ come un parametro:
+\begin{equation*}
+\hat{u}(t, z) = \int_{\RR} e^{-izx} u(t, x) \dx
+\end{equation*}
+Dunque il PdC trasformato è
+\begin{equation*}
+\begin{cases}
+\hat{u}_{t}(t,z) + z^2\hat{u}(t,z) = 0\\
+\hat{u}(0,z)=\hat{g}(z)
+\end{cases}
+\end{equation*}
+Si è pertanto ottenta un'EDO del prim'ordine in $t$, la cui soluzione, tenendo conto del dato iniziale, è
+\begin{equation*}
+\hat{u}(t, z) = \hat{g}(z) e^{- z^{2} t}
+\end{equation*}
+Ora antitrasformiamo
+\begin{equation*}
+u(t, x) = \Fc^{- 1}\left(e^{- z^{2} t}, x\right)*g(x)
+\end{equation*}
+Ricordando che $t$ è un parametro, possiamo dire che la funzione $e^{- z^{2} t}$ è una gaussiana proprio perché abbiamo fatto l'ipotesi $t>0$. Allora ne sappiamo benissimo calcolare l'antitrasformata:
+\begin{equation*}
+\Fc^{- 1}\left(e^{- z^{2} t}, x\right)=\frac{1}{\sqrt{2\pi t}}\,e^{-\frac{x^2}{4t}}
+\end{equation*}
+Perciò la soluzione cercata è
+\begin{equation*}
+u(t,x)=\frac{1}{\sqrt{2\pi t}}\int_\RR e^{-\frac{(x-y)^2}{4t}}g(y)\dy
+\end{equation*}
+Si osservi che
+\begin{itemize}
+    \item le varie costanti che compaiono dipendono dalla definizione di trasformata di Fourier usata, quindi se non ti torna il confronto con qualche altro testo non ti preoccupare;
+    \item la soluzione sembrerebbe in disaccordo con il dato iniziale, tant'è che essa non è neanche definita per $t=0$; in realtà facendo il limite $t\to0^+$ ci accorgiamo che la gaussiana ``si sta schiacciando'' nel punto $y$, cioè
+    \begin{equation*}
+    e^{-\frac{(x-y)^2}{4t}}\xrightarrow[t\to0^+]{}\delta_y\quad\text{ in senso distribuzionale}
+    \end{equation*}
+     e quindi anche il dato iniziale andrebbe inteso come limite distribuzionale e non uguaglianza;
+     \item a proposito dell'ipotesi $t>0$: a livello matematico sì, è dovuto all'utilizzo dell'operatore $\Fc$, ma a livello fisico è una condizione intrinseca del problema che riflette il secondo principio della termodinamica, perciò utilizzando un altro modello matematico tale ipotesi sarebbe comunque saltata fuori.
+\end{itemize}
+
+\section{Applicazioni alle EDP: Equazione della corda vibrante}    
+
+Consideriamo il seguente PdC
+\begin{equation*}
+\begin{cases}
+u_{tt}-c^2u_{xx}=0 &x\in\RR,\ t>0 \\
+u(0,x)=g(x)\\
+u_t(0,x)=0
+\end{cases}
+\end{equation*}
+L'equazione $u_{tt}-c^2u_{xx}=0$ descrive l'evoluzione di una corda vibrante di lunghezza infinita. Agendo come nell'equazione del calore, ovvero trasformandola in $x$, si ottiene l'equazione dell'oscillatore armonico
+\begin{equation*}
+\partial^2_t\hat{u}(t,z)+c^2z^2\hat{u}(t,z)=0
+\end{equation*}
+che ha per integrale generale
+\begin{equation*}
+\hat{u}(t,z)=A_1\cos(czt)+A_2\sin(czt)
+\end{equation*}
+Si perviene così al PdC del second'ordine in $t$
+\begin{equation*}
+\begin{cases}
+\partial^2_t\hat{u}(t,z)+c^2z^2\hat{u}(t,z)=0 \\
+\hat{u}(0,z)=\hat{g}(z)\\
+\partial_t\hat{u}(0,z)=0
+\end{cases}
+\end{equation*}
+da cui si deduce
+\begin{equation*}
+A_1=\hat{g}(z)\qquad A_2=0
+\end{equation*}
+Pertanto la soluzione è
+\begin{equation*}
+\hat{u}(t,z)=\hat{g}(z)\cos(czt)
+\end{equation*}
+Ora, al posto di usare la solita convoluzione, osserviamo che
+\begin{equation*}
+\hat{u}(t,z)=\hat{g}(z)\,\frac{e^{iczt}+e^{-iczt}}{2}
+\end{equation*}
+che per la proprietà di modulazione della trasformata di Fourier diventa
+\begin{equation*}
+u(t,x)=\frac{1}{2}\,\left[g(x+ct)+g(x-ct)\right]
+\end{equation*}
+tipica delle onde che si propagano ``in avanti'' con velocità $c$ e ``all'indietro'' con velocità $-c$.
+
+\begin{rem}
+Anche qui si possono fare una marea di generalizzazione, per esempio con la condizione $u_t(0,x)=h(x)$ si ottiene l'equazione di D'Alembert.
+\end{rem}
+
+
+\section{Trasformata vs Serie di Fourier}
+
+Sono definite da
+\begin{equation*}
+\hat{f}(z) = \int_{\RR} e^{- ixz} f(x) dx\ \ \ \ \ \ \ \ f(x) = \sum_{n\in \ZZ} e^{inx} c_{n}
+\end{equation*}
+Agiscono sugli spazi
+\begin{equation*}
+\Fc : L^{2}(A)\rightarrow L^{2}(A) \ \ \ \ \ \ \ \ L^{2}[ - \pi, \pi]\rightarrow l^{2}
+\end{equation*}
+Valgono due identità importanti
+\begin{equation*}
+\Vert f \Vert_{L^{2}} = \frac{1}{\sqrt{2\pi}} \Vert \hat{f} \Vert_{L^{2}} \ \ \text{(Plancherel)} \ \ \ \ \ \ \ \ \Vert f \Vert_{L^{2}} = \sqrt{\pi} \Vert c \Vert_{l^{2}} \ \ \text{(Parseval)}
+\end{equation*}
+dove
+\begin{equation*}
+\{c_{n}\} \in l^{2}, \ \text{ovvero} \ \ \sum\nolimits_{n\in \ZZ}| c_{n}|^{2} < + \infty
+\end{equation*}
+Infine se per la serie prendiamo come dominio $L^{2}([ - L, L])$ e facciamo tendere $L\rightarrow \infty $, la serie
+\begin{equation*}
+f(x) = \sum_{n\in \ZZ} e^{i\frac{2\pi}{L} nx} c_{n}
+\end{equation*}
+viene fatta su una griglia sempre più fine e inizia ad assomigliare all'integrale!
+
+
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \vspace*{\fill}
+    \vspace{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\scshape\thepage}
+\fancyhead[LO]{\scshape\footnotesize\nouppercase{\rightmark}} 
+\fancyhead[RE]{\scshape\footnotesize\nouppercase{\leftmark}} 
+ 
+
+\appendix 
+
+
+\chapter{Approfondimento}
+\label{myprod}
+
+\input{parti/approfondimento_distribuzioni.tex}
+
+
+\chapter{Trasformata di Laplace} 
+
+\section{Definizione e prime proprietà}
 
 È parente stretta della trasformata di Fourier, solo che Fourier si riferisce a tutto $\RR^{n}$, Laplace su funzioni definite su una semiretta. Questa differenza si riflette sul loro impiego per le equazioni differenziali.
 
@@ -3252,7 +3897,7 @@ Chiamiamo $\lambda (u)$ l'estremo inferiore di questi $\lambda $
 [Trasformata di Laplace]
 Definiamo
 \begin{equation*}
-\boxed{\Lc(u(x), s) = \int^{+ \infty}_{0} e^{- sx} u(x) dx} \ \ \ \ s\in \CC
+\boxed{\Lc(u(x), s) = \int^{+ \infty}_{0} e^{- sx} u(x) \dx} \ \ \ \ s\in \CC
 \end{equation*}
 dove
 \begin{equation*}
@@ -3272,12 +3917,12 @@ Attenzione, dobbiamo intersecare i due domini
 
 \begin{proof}
 \begin{equation*}
-\lim\limits_{\Re (s)\rightarrow + \infty}\Lc(u(x), s) = \lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx
+\lim\limits_{\Re (s)\rightarrow + \infty}\Lc(u(x), s) = \lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) \dx
 \end{equation*}
 
 possiamo portare il limite dentro per convergenza dominata, purché $\Re (s) > \lambda (u)$ possiamo trovare una funzione che la domini
 \begin{equation*}
-\lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = \int^{+ \infty}_{0}\lim\limits_{\Re (s)\rightarrow + \infty} e^{- s_{R} x} e^{- is_{I} x} u(x) dx = 0
+\lim\limits_{\Re (s)\rightarrow + \infty}\int^{+ \infty}_{0} e^{- s_{R} x} e^{- is_{I} x} u(x) \dx = \int^{+ \infty}_{0}\lim\limits_{\Re (s)\rightarrow + \infty} e^{- s_{R} x} e^{- is_{I} x} u(x) \dx = 0
 \end{equation*}
 \end{proof}
 \item $\boxed{\Lc(u(x - x_{0}), s) = e^{- sx_{0}}\Lc(u(x), s)}$
@@ -3290,9 +3935,9 @@ Attenzione che essendo $\supp(u) \in [0, + \infty)$
 
 \begin{proof}
 \begin{align*}
-\Lc(u(x - x_{0}), s) & = \int^{+ \infty}_{0} e^{- sx} u(x - x_{0}) dx & x' = x - x_{0}\\
- & = \int^{+ \infty}_{- x_{0}} e^{- s(x' + x_{0})} u(x') dx' & \\
- & = \int^{+ \infty}_{0} e^{- s(x' + x_{0})} u(x') dx' & \\
+\Lc(u(x - x_{0}), s) & = \int^{+ \infty}_{0} e^{- sx} u(x - x_{0}) \dx & x' = x - x_{0}\\
+ & = \int^{+ \infty}_{- x_{0}} e^{- s(x' + x_{0})} u(x') \dx' & \\
+ & = \int^{+ \infty}_{0} e^{- s(x' + x_{0})} u(x') \dx' & \\
  & = e^{- sx_{0}}\Lc(u(x), s) &
 \end{align*}
 \end{proof}
@@ -3300,26 +3945,26 @@ Attenzione che essendo $\supp(u) \in [0, + \infty)$
 
 \begin{proof}
 \begin{equation*}
-\Lc\left(e^{s_{0} x} u(x), s\right) = \int^{+ \infty}_{0} e^{- x(s - s_{0})} u(x) dx = \Lc(u(x), s - s_{0})
+\Lc\left(e^{s_{0} x} u(x), s\right) = \int^{+ \infty}_{0} e^{- x(s - s_{0})} u(x) \dx = \Lc(u(x), s - s_{0})
 \end{equation*}
 \end{proof}
 \item $\boxed{\Lc(u(cx), s) = \frac{1}{c}\Lc\left(u(x), \frac{s}{c}\right)}$ $\boxed{c\in \RR, c > 0}$
 
 \begin{proof}
 \begin{align*}
-\Lc(u(cx), s) & = \int^{+ \infty}_{0} e^{- sx} u(cx) dx & x' = cx\ \ \implies \ \ dx' = cdx\\
- & = \int^{+ \infty}_{0} e^{- s\frac{x'}{c}} u(x')\frac{1}{c} dx' & \\
+\Lc(u(cx), s) & = \int^{+ \infty}_{0} e^{- sx} u(cx) \dx & x' = cx\ \ \implies \ \ \dx' = c\dx\\
+ & = \int^{+ \infty}_{0} e^{- s\frac{x'}{c}} u(x')\frac{1}{c} \dx' & \\
  & = \frac{1}{c}\Lc\left(u(x), \frac{s}{c}\right) &
 \end{align*}
 \end{proof}
 \end{itemize}
 
-\subsection{Trasformate di funzioni notevoli}
+\section{Trasformata di funzioni notevoli}
 
 \begin{itemize}
 \item Heaviside
 \begin{align*}
-\Lc(H(x), s) & = \int^{+ \infty}_{0} e^{- sx} H(x) dx = \int^{+ \infty}_{0} e^{- sx} dx\\
+\Lc(H(x), s) & = \int^{+ \infty}_{0} e^{- sx} H(x) \dx = \int^{+ \infty}_{0} e^{- sx} \dx\\
  & = \left[ - \frac{e^{- sx}}{s}\right]^{+ \infty}_{0} = \frac{1}{s} - \lim_{r\rightarrow + \infty}\frac{e^{- sr}}{s}\\
  & = \frac{1}{s} \ \ \ \ \text{purché} \ \Re (s) > 0
 \end{align*}
@@ -3341,7 +3986,7 @@ Perché ci serve?
 \end{align*}
 \item Delta di Dirac \textit{trattandola come funzione}.
 \begin{align*}
-\Lc(\delta_{0}, s) & = \int^{+ \infty}_{0} e^{- sx} \delta_{0}(x) dx = 1
+\Lc(\delta_{0}, s) & = \int^{+ \infty}_{0} e^{- sx} \delta_{0}(x) \dx = 1
 \end{align*}
 
 per capirlo meglio possiamo vedere la Delta come
@@ -3351,9 +3996,11 @@ per capirlo meglio possiamo vedere la Delta come
 \frac{1}{\varepsilon}, & x\in [0, \varepsilon]\\
 0, & \text{altrimenti}
 \end{cases}\\
-\Lc(u_{\varepsilon}(x), s) = \frac{1}{\varepsilon}\int^{\varepsilon}_{0} e^{- sx} dx = e^{- sx_{\varepsilon}}\rightarrow 1\ \ x_{\varepsilon} \in (0, \varepsilon)
+\Lc(u_{\varepsilon}(x), s) = \frac{1}{\varepsilon}\int^{\varepsilon}_{0} e^{- sx} \dx = e^{- sx_{\varepsilon}}\rightarrow 1\ \ x_{\varepsilon} \in (0, \varepsilon)
 \end{gather*}
 \end{itemize}
+
+\section{Derivata}
 \begin{thm}
 [Derivata della trasformata]
 Sia $u$ una funzione $\Lc$ - trasformabile.
@@ -3363,12 +4010,13 @@ Sia $u$ una funzione $\Lc$ - trasformabile.
 \end{thm}
 \begin{proof}
 \begin{align*}
-\lim\limits_{h\rightarrow 0}\frac{\Lc(u(x), s + h) - \Lc(u(x), s)}{h} & = \lim\limits_{h\rightarrow 0}\int^{+ \infty}_{0} e^{- sx}\frac{e^{- hx} - 1}{h} u(x) dx\\
- & = \int^{+ \infty}_{0}\lim\limits_{h\rightarrow 0} e^{- sx}\textcolor[rgb]{0.82, 0.01, 0.11}{\frac{e^{- hx} - 1}{- hx}}(- x) u(x) dx\\
- & = \int^{+ \infty}_{0} e^{- sx}(- x) u(x) dx\\
+\lim\limits_{h\rightarrow 0}\frac{\Lc(u(x), s + h) - \Lc(u(x), s)}{h} & = \lim\limits_{h\rightarrow 0}\int^{+ \infty}_{0} e^{- sx}\frac{e^{- hx} - 1}{h} u(x) \dx\\
+ & = \int^{+ \infty}_{0}\lim\limits_{h\rightarrow 0} e^{- sx}\textcolor[rgb]{0.82, 0.01, 0.11}{\frac{e^{- hx} - 1}{- hx}}(- x) u(x) \dx\\
+ & = \int^{+ \infty}_{0} e^{- sx}(- x) u(x) \dx\\
  & = - \Lc(xu(x), s)
 \end{align*}
 Possiamo passare al limite sotto il segno di integrale? Sì perché la quantità rossa è limitata, il resto è $L^{1}$.
+\end{proof}
 
 È derivabile in un aperto in senso complesso, quindi la funzione trasformata di Laplace è olomorfa, quindi è anche $C^{\infty}$.
 \begin{thm}
@@ -3398,10 +4046,11 @@ Se $v\in L^{1}$, allora $\lambda (u) \leq 0$ e
 \lim\limits_{s\rightarrow 0, \ \Re (s) > 0} s\Lc(u(x), s) = \lim_{x\rightarrow + \infty} u(x)
 \end{equation*}
 \end{thm}
-\textit{Dimostrazione della prima parte.}
+
+\begin{proof}\textit{Solo prima parte.}\leavevmode
 \begin{align*}
-\Lc(u'(x), s) & = \int^{+ \infty}_{0} e^{- sx} u'(x) dx & \text{(per parti)}\\
- & = \left[e^{- sx} u(x)\right]^{+ \infty}_{0} - (- s)\int^{+ \infty}_{0} e^{- sx} u(x) dx & \\
+\Lc(u'(x), s) & = \int^{+ \infty}_{0} e^{- sx} u'(x) \dx & \text{(per parti)}\\
+ & = \left[e^{- sx} u(x)\right]^{+ \infty}_{0} - (- s)\int^{+ \infty}_{0} e^{- sx} u(x) \dx & \\
  & = \lim_{x\rightarrow + \infty} e^{- sx} u(x) - u(0) + s\Lc(u(x), s) &
 \end{align*}
 Notiamo che
@@ -3413,15 +4062,15 @@ per esempio questa funzione non tende a $0$ pur essendo integrabile
 
 
 \begin{equation*}
-\int^{+ \infty}_{0} f(x) dx = \sum^{\infty}_{n = 1}\frac{1}{n^{2}} < + \infty \ \ \ \ \text{ma} \ f(x) \nrightarrow 0
+\int^{+ \infty}_{0} f(x) \dx = \sum^{\infty}_{n = 1}\frac{1}{n^{2}} < + \infty \ \ \ \ \text{ma} \ f(x) \nrightarrow 0
 \end{equation*}
 Analizziamo bene però la nostra funzione, derivandola
 \begin{equation*}
-\frac{d}{dx}\left(e^{- \lambda x} u(x)\right) = \underbrace{- \lambda e^{- \lambda x} u(x)}_{\in L^{1}} + \underbrace{e^{- \lambda x} u'(x)}_{\in L^{1}} \in L^{1}
+\frac{\de}{\dx}\left(e^{- \lambda x} u(x)\right) = \underbrace{- \lambda e^{- \lambda x} u(x)}_{\in L^{1}} + \underbrace{e^{- \lambda x} u'(x)}_{\in L^{1}} \in L^{1}
 \end{equation*}
 le due parti sono integrabili per ipotesi, grazie al fatto che anche $u'$ deve essere $\Lc$ - trasformabile. Per il teoreoma del calcolo
 \begin{equation*}
-e^{- \lambda x} u(x) = u(0) + \int^{x}_{0}\frac{d}{dt}\left(e^{- \lambda t} u(t)\right) dt
+e^{- \lambda x} u(x) = u(0) + \int^{x}_{0}\frac{\de}{\dt}\left(e^{- \lambda t} u(t)\right) \dt
 \end{equation*}
 il limite a destra esiste finito, allora esiste finito il limite di $e^{- \lambda x} u(x)$, ma se ammette limite deve necessariamente essere
 \begin{gather*}
@@ -3429,21 +4078,21 @@ il limite a destra esiste finito, allora esiste finito il limite di $e^{- \lambd
 \end{gather*}
 \end{proof}
 
-\subsection{Trasformazione inversa}
+\section{Antitrasformata di Laplace}
 
 Se abbiamo $f(s) = \Lc(u(x), s)$ come troviamo $u(x) = \Lc^{- 1}(f(s), s)$?
 
 Scriviamo $s = a + ib$.
 \begin{equation*}
-f(a + ib) = \int^{+ \infty}_{0} e^{- ax} e^{- ibx} u(x) dx = \int_{\RR} e^{- ax} e^{- ibx} u(x) dx = \Fc\left(e^{- ax} u(x), b\right)
+f(a + ib) = \int^{+ \infty}_{0} e^{- ax} e^{- ibx} u(x) \dx = \int_{\RR} e^{- ax} e^{- ibx} u(x) \dx = \Fc\left(e^{- ax} u(x), b\right)
 \end{equation*}
 Ma allora possiamo fare l'antitrasformata di Fourier!
 \begin{equation*}
-e^{- ax} u(x) = \frac{1}{2\pi}\int_{\RR} f(a + ib) e^{ibx} db
+e^{- ax} u(x) = \frac{1}{2\pi}\int_{\RR} f(a + ib) e^{ibx} \db
 \end{equation*}
 allora
 \begin{equation*}
-\boxed{u(x) = \frac{1}{2\pi}\int_{\RR} e^{(a + ib) x} f(a + ib) db} \ \ \ \ \forall a > \lambda (u)
+\boxed{u(x) = \frac{1}{2\pi}\int_{\RR} e^{(a + ib) x} f(a + ib) \db} \ \ \ \ \forall a > \lambda (u)
 \end{equation*}
 Questa è già una formula valida, ma possiamo chiamare, per $x$ fissato
 \begin{equation*}
@@ -3471,14 +4120,14 @@ Questa è già una formula valida, ma possiamo chiamare, per $x$ fissato
 
 E possiamo allora scrivere l'antitrasformata come
 \begin{equation*}
-\boxed{u(x) = \frac{1}{2\pi}\int_{\Gamma_{x}} e^{zx} f(z) dz}
+\boxed{u(x) = \frac{1}{2\pi}\int_{\Gamma_{x}} e^{zx} f(z) \dz}
 \end{equation*}
 
-\section{Relazione con la convoluzione}
+\section{Convoluzione}
 
 Ricordiamo la convoluzione di due funzioni $f, g\in L^{1}$
 \begin{equation*}
-(f*g)(x) = \int_{\RR} f(x - t) g(t) dt
+(f*g)(x) = \int_{\RR} f(x - t) g(t) \dt
 \end{equation*}
 Con Fourier abbiamo, utile in entrambi i versi,
 \begin{equation*}
@@ -3495,79 +4144,28 @@ La convoluzione di due funzioni trasformabili secondo Laplace, è trasformabile 
 \end{thm}
 \begin{proof}
 \begin{equation*}
-(f*g)(x) = \int_{\RR} f(x - t) g(t) dt = \int^{x}_{0} f(x - t) g(t) dt
+(f*g)(x) = \int_{\RR} f(x - t) g(t) \dt = \int^{x}_{0} f(x - t) g(t) \dt
 \end{equation*}
 $f(x - t) = 0$ se $x - t < 0$, quindi se $t > x$. Mentre $g(t) = 0$ se $t < 0$. Allora esiste l'integrale.
 \begin{align*}
-e^{- \lambda x}(f*g)(x) & = e^{- \lambda x}\int^{x}_{0} f(x - t) g(t) dt\\
- & = \int^{x}_{0} e^{- \lambda (x - t)} f(x - t) e^{- \lambda t} g(t) dt\\
+e^{- \lambda x}(f*g)(x) & = e^{- \lambda x}\int^{x}_{0} f(x - t) g(t) \dt\\
+ & = \int^{x}_{0} e^{- \lambda (x - t)} f(x - t) e^{- \lambda t} g(t) \dt\\
  & = \left(e^{- \lambda x} f(x)\right) *\left(e^{- \lambda x} g(x)\right) \ \ \ \ \lambda \geq \max(\lambda (f), \lambda (g)) \ \implies \ \in L^{1}
 \end{align*}
 Soddisfa i requisiti, calcoliamone l'espressione
 \begin{align*}
-\Lc((f*g), s) & = \int_{\RR} e^{- sx}\left(\int_{\RR} f(x - t) g(t) dt\right) dx\\
- & = \iint_{\RR^{2}} e^{- s(x - t)} e^{- st} f(x - t) g(t) dtdx\\
- & = \int_{\RR} e^{- s(x - t)} f(x - t)\int_{\RR} e^{- st} g(t) dtdx = (\star)
+\Lc((f*g), s) & = \int_{\RR} e^{- sx}\left(\int_{\RR} f(x - t) g(t) \dt\right) \dx\\
+ & = \iint_{\RR^{2}} e^{- s(x - t)} e^{- st} f(x - t) g(t) \dt\dx\\
+ & = \int_{\RR} e^{- s(x - t)} f(x - t)\int_{\RR} e^{- st} g(t) \dt\dx = (\star)
 \end{align*}
 cambiamo la variabile $x' = x - t$
 \begin{gather*}
-(\star) = \left[\int_{\RR} e^{- sx'} f(x') dx'\right]\left[\int_{\RR} e^{- st} g(t) dt\right] = \Lc(f) \cdot \Lc(g)
+(\star) = \left[\int_{\RR} e^{- sx'} f(x') \dx'\right]\left[\int_{\RR} e^{- st} g(t) \dt\right] = \Lc(f) \cdot \Lc(g)
 \end{gather*}
 \end{proof}
 
-\chapter{Conclusioni}
 
-\section{EDP e Fourier}
-
-Consideriamo l'equazione del calore
-\begin{equation*}
-u_{t} - u_{xx} = 0\ \ \ \ u(t, x) \ \ \ \ u_{t} = \partial_{t} u\ \ \ \ u_{xx} = \partial_{x} \partial_{x} u\ \ \ \ x\in \RR, t \geq 0
-\end{equation*}
-Supponiamo di sapere il dato iniziale
-\begin{equation*}
-\begin{cases}
-u_{t} - u_{xx} = 0\\
-u(0, x) = g(x)
-\end{cases}
-\end{equation*}
-Indico con
-\begin{equation*}
-\hat{u}(t, z) = \int_{\RR} e^{izx} u(t, x) dx
-\end{equation*}
-trattando $t$ come un parametro
-\begin{align*}
-\frac{\partial}{\partial t}\hat{u}(t, z) & = \frac{\partial}{\partial t}\int_{\RR} e^{izx} u(t, x) dx\overset{!!!}{=}\int_{\RR} e^{izx}\frac{\partial}{\partial t} u(t, x) dx = \Fc(u_{t}(t, x), z)\\
- & \\
-\Fc(u_{xx}(t, x), z) & = \int_{\RR} e^{- ixz} u_{xx}(t, x) dx\ \ \forall t \geq 0\\
- & \overset{\text{ipp}}{=}\int_{\RR}(iz)^{2} e^{- ixz} u(t, x) dx\\
- & = - z^{2}\Fc(u(t, x), z)
-\end{align*}
-Allora il problema diventa
-\begin{equation*}
-\begin{cases}
-\partial_{t}\hat{u}(t, z) + z^{2}\hat{u}(t, z) = 0\\
-\hat{u}(0, z) = \hat{g}(z)
-\end{cases}
-\end{equation*}
-per ogni $z$, è un'equazione differenziale ordinaria
-\begin{equation*}
-\hat{u}(t, z) = \hat{g}(z) e^{- z^{2} t}
-\end{equation*}
-antitrasformiamo
-\begin{equation*}
-u(t, x) = \Fc^{- 1}\left(\hat{g}(z) e^{- z^{2} t}, x\right)
-\end{equation*}
-torna utile il prodotto di convoluzione
-\begin{gather*}
-u(t, x) = g(x) *\Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}}\int_{\RR} e^{- \frac{(x - y)^{2}}{2t}} g(y) dy\\
-\Fc^{- 1}\left(e^{- z^{2} t}, x\right) = \frac{1}{\sqrt{4\pi t}} e^{- \frac{x^{2}}{2t}}
-\end{gather*}
-ma non è definita in $t = 0$, tuttavia possiamo considerare il limite nel senso delle distribuzioni (non dimostrato, molto extra)
-\begin{equation*}
-\lim_{t\rightarrow 0^{+}} u(t, x) = g(x) \ \ \ \ u(t, x) : [0, + \infty) \times \RR \ \ \ \ g: \RR\rightarrow \RR
-\end{equation*}
-
-\section{EDP e Laplace}
+\section{Trasformata di Laplace ed equazioni differenziali}
 
 Con Laplace risolviamo cose del tipo
 \begin{equation*}
@@ -3586,7 +4184,7 @@ Trasformiamo
  & = s^{2}\Lc(y(t), s) - sy(0) - y'(0)\\
 \Lc\left(y^{(n)}(t), s\right) & = s^{n}\Lc(y(t), s) - s^{n - 1}\textcolor[rgb]{0.29, 0.56, 0.89}{y}\textcolor[rgb]{0.29, 0.56, 0.89}{(}\textcolor[rgb]{0.29, 0.56, 0.89}{0}\textcolor[rgb]{0.29, 0.56, 0.89}{)} - s^{n - 1} y'(0) - \cdots - \textcolor[rgb]{0.82, 0.01, 0.11}{y}\textcolor[rgb]{0.82, 0.01, 0.11}{^{(n - 1)}}\textcolor[rgb]{0.82, 0.01, 0.11}{(}\textcolor[rgb]{0.82, 0.01, 0.11}{0}\textcolor[rgb]{0.82, 0.01, 0.11}{)}
 \end{align*}
-Esempio del secondo ordine
+Per capire meglio vediamo un esmepio del secondo ordine:
 \begin{equation*}
 \begin{cases}
 a_{2} y''(y) + a_{1} y'(t) + a_{0} y(t) = f(t)\\
@@ -3594,43 +4192,20 @@ y(0) = y_{0}\\
 y'(0) = y_{1}
 \end{cases}
 \end{equation*}
-Trasformiamo
-\begin{align*}
-a_{2}\left(s^{2}\Lc(y(t), s) - sy_{0} - y_{1}\right) + a_{1}(s\Lc(y(t), s) - y_{0}) + a_{0}\Lc(y(t), s) & = \Lc(f(t), s)\\
-\left(a_{2} s^{2} + a_{1} s + a_{0}\right)\Lc(y(t), s)\underbrace{- a_{2}(sy_{0} + y_{1}) - a_{1} y_{0}}_{\text{polinomio in} \ s} & = \Lc(f(t), s)
-\end{align*}
-quindi
-\begin{equation*}
-	\Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
-\end{equation*}
-ci permette di introdurre in maniera naturale anche i dati iniziali.
+Ora trasformiamo
 \begin{gather*}
-y(t) = f(t) *\Lc^{- 1}\left(\frac{1}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right) + \Lc^{- 1}\left(\frac{a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right)\\
-\\
-\frac{1}{s - s_{0}} + \frac{1}{s - s_{1}} + \cdots \ \ \ \ \Lc\left(e^{\alpha t} H(t), s\right) = \frac{1}{s - \alpha}
+a_{2}\left(s^{2}\Lc(y(t), s) - sy_{0} - y_{1}\right) + a_{1}(s\Lc(y(t), s) - y_{0}) + a_{0}\Lc(y(t), s) = \Lc(f(t), s)\\
+\left(a_{2} s^{2} + a_{1} s + a_{0}\right)\Lc(y(t), s)\underbrace{- a_{2}(sy_{0} + y_{1}) - a_{1} y_{0}}_{\text{polinomio in} \ s}  = \Lc(f(t), s)
 \end{gather*}
-
-\section{Trasformata vs Serie di Fourier}
-
-Sono definite da
+Otteniamo quindi
 \begin{equation*}
-\hat{f}(z) = \int_{\RR} e^{- ixz} f(x) dx\ \ \ \ \ \ \ \ f(x) = \sum_{n\in \ZZ} e^{inx} c_{n}
+\Lc(y(t), s) = \frac{\Lc(f(t), s) + a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}
 \end{equation*}
-Agiscono sugli spazi
+che ci permette di introdurre in maniera naturale anche i dati iniziali:
 \begin{equation*}
-\Fc : L^{2}(A)\rightarrow L^{2}(A) \ \ \ \ \ \ \ \ L^{2}[ - \pi, \pi]\rightarrow l^{2}
+y(t) = f(t) *\Lc^{- 1}\left(\frac{1}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right) + \Lc^{- 1}\left(\frac{a_{2}(sy_{0} + y_{1}) + a_{1} y_{0}}{a_{2} s^{2} + a_{1} s + a_{0}}, t\right)
 \end{equation*}
-Valgono due identità importanti
+e allora
 \begin{equation*}
-\Vert f \Vert_{L^{2}} = \frac{1}{\sqrt{2\pi}} \Vert \hat{f} \Vert_{L^{2}} \ \ \text{(Plancherel)} \ \ \ \ \ \ \ \ \Vert f \Vert_{L^{2}} = \sqrt{\pi} \Vert c \Vert_{l^{2}} \ \ \text{(Parseval)}
+\frac{1}{s - s_{0}} + \frac{1}{s - s_{1}} + \cdots \ \ \ \ \Lc\left(e^{\alpha t} H(t), s\right) = \frac{1}{s - \alpha}\ .
 \end{equation*}
-dove
-\begin{equation*}
-\{c_{n}\} \in l^{2}, \ \text{ovvero} \ \ \sum\nolimits_{n\in \ZZ}| c_{n}|^{2} < + \infty
-\end{equation*}
-Infine se per la serie prendiamo come dominio $L^{2}([ - L, L])$ e facciamo tendere $L\rightarrow \infty $, la serie
-\begin{equation*}
-f(x) = \sum_{n\in \ZZ} e^{i\frac{2\pi}{L} nx} c_{n}
-\end{equation*}
-viene fatta su una griglia sempre più fine e inizia ad assomigliare all'integrale!
-

@@ -1,0 +1,185 @@
+%!TEX root = ../main.tex
+
+\nointerlineskip
+\begin{flushright}
+\textit{Piccola premessa: sono un semplice studente di Ingegnieria Matematica, e questa raccolta di appunti è pensata per studenti della stessa facoltà. Perciò spero interessi anche a voi solo il succo di quanto seguirà, ma se mai tutto ciò dovesse giungere alla porta di un purista sarò pronto ad essere insultato per le boiate scritte. Ah, ovviamente se qualcuno volesse contribuire a quest'appendice, o magari ne avesse bisogno per dormire tranquillo, sarò ben felice di sovrascrivere le mie righe. Senza affetto, Teo Bonfa.}
+\end{flushright}
+
+\section{Distanza, norma, prodotto scalare}
+
+Riprendiamo le nozioni di metrica e norma.
+
+\begin{defn}
+Una \textbf{distanza} su di un insieme $X$ è un'applicazione $d:X\times X\to\RR$ che soddisfa le seguenti proprietà:
+\begin{enumerate}
+    \item $d(x,y)\geq 0$ per ogni $x,y\in X$ e vale $d(x,y)=0\ \Leftrightarrow\ x=y$.
+    \item $d(x,y)=d(y,x)$ per ogni $x,y\in X$.
+    \item $d(x,y)\leq d(x,z)+d(z,y)$ per ogni $x,y,z\in X$.
+\end{enumerate}
+\end{defn}
+Come si può vedere il concetto di distanza si può introdurre su un qualsiasi insieme $X$.
+
+\begin{defn}
+Uno \textbf{spazio metrico} è una coppia $\left(X,d\right)$, dove $X$ è un insieme e $d$ è una distanza su $X$.
+\end{defn}
+
+Invece per il concetto di norma serve che $X$ sia uno spazio vettoriale.
+
+\begin{defn}
+Una \textbf{norma} su di uno spazio vettoriale $X$ è un'applicazione $\Vert\cdot\Vert:X\to\RR$ che soddisfa le seguenti proprietà:
+\begin{enumerate}
+    \item $\Vert x \Vert\geq 0$ per ogni $x\in X$ e vale $\Vert x \Vert=0\ \Leftrightarrow\ x=0$.
+    \item $\Vert \lambda x \Vert=|\lambda|\,\Vert x \Vert$ per ogni $x\in X$ e per ogni $\lambda\in\RR$.
+    \item $\Vert x+y \Vert\leq \Vert x \Vert+\Vert y \Vert$ per ogni $x,y\in X$.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+Uno \textbf{spazio normato} è una coppia $\left(X,\Vert\cdot\Vert\right)$, dove $X$ è un insieme e $\Vert\cdot\Vert$ è una norma su $X$.
+\end{defn}
+
+\begin{defn}
+Sia $X$ uno spazio vettoriale. Un'applicazione
+\begin{align*}
+d:X\times X&\to\RR\\
+(x,y)&\mapsto d(x,y)=\Vert x-y\Vert
+\end{align*}
+è detta \textbf{distanza indotta dalla norma}.
+\end{defn}
+
+Possiamo ancora raffinare la gerarchia, ovvero introdurre il prodotto scalare.
+
+\begin{defn}
+Un \textbf{prodotto scalare} su di uno spazio vettoriale $X$ è un'applicazione $(\cdot,\cdot):X\times X\to\RR$ che soddisfa le seguenti proprietà:
+\begin{enumerate}
+    \item $(x,x)\geq0$ per ogni $x\in X$ e vale $(x,x)=0\ \Leftrightarrow\ x=0$.
+    \item $(x,y)=(y,x)$ per ogni $x,y\in X$.
+    \item $(\mu x+\lambda y,z)=\mu(x,z)+\lambda(y,z)$ per ogni $x,y,z\in X$ e per ogni $\mu,\lambda\in\RR$.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+Sia $X$ uno spazio vettoriale. Un'applicazione
+\begin{align*}
+\Vert\cdot\Vert:X&\to\RR\\
+x&\mapsto \Vert x\Vert=\sqrt{(x,x)}
+\end{align*}
+è detta \textbf{norma indotta dal prodotto scalare}.
+\end{defn}
+
+
+\section{Topologia}
+
+Diamo la definizione di topologia.
+
+\begin{defn}
+Sia $X$ un insieme. Una \textbf{topologia} su $X$ è una famiglia       $\Tau$ di sottoinsiemi di $X$, detti \textbf{aperti}, che soddisfa le seguenti condizioni:
+\begin{enumerate}
+    \item $\varnothing$ e $X$ sono aperti.
+    \item Unione arbitraria di aperti è un sottoinsieme aperto.
+    \item intersezione di due aperti è un sottoinsieme aperto.
+\end{enumerate}
+Uno spazio dotato di una topologia viene detto \textbf{spazio topologico}. Gli elementi di uno spazio topologico vengono detti \textbf{punti}.
+\end{defn}
+
+Ciò serve in generale per parlare di insiemi aperti chiusi, frontiere, intorni, punti di accumulazione, ecc. A noi serve per capire meglio la nozione di densità che daremo in seguito, e per capire meglio il rapporto tra prodotto scalare, norma e distanza.
+
+\begin{defn}
+Sia $\left(X,d\right)$ uno spazio metrico. Allora la topologia delle palle aperte $B(x,r)$ è una \textbf{topologia indotta dalla distanza}. 
+\end{defn}
+
+Capiamo quindi la relazione tra i concetti di distanza, norma e prodotto scalare per uno spazio vettoriale:
+\begin{equation*}
+\text{prodotto scalare} \xrightarrow[]{\text{induce}}  \text{norma}  \xrightarrow[]{\text{induce}} \text{distanza} \xrightarrow[]{\text{induce}}  \text{topologia}
+\end{equation*}
+
+Perciò quando si ha uno spazio vettoriale $X$ e si vogliono definire delle proprietà quali continuità, convergenza, ecc. si può dare una definizione che sfrutta il prodotto scalare (se è possibile definirlo su $X$) e le altre, cioè quelle che sfruttano norma, distanza, topologia, vengono a cascata. Se invece su $X$ non si può introdurre un prodotto scalare, ma magari una norma sì, allora si da la definizione utilizzando la norma e quelle con distanza e topologia vengono a cascata. Se invece su $X$ non c'è norma ... avete capito il giochetto.
+
+Ricordiamo per su spazi di Banach è naturale parlare di norme, cos' com'è naturale parlare di prodotti scalari su spazi di Hilbert.
+
+
+\newpage
+
+\section{Inclusioni dense per spazi \texorpdfstring{$\Dc,\ \Sc,\ L^p$}{C}}
+
+Introduciamo il concetto puramente topologico di densità.
+
+\begin{defn}
+Siano $A,B$ due sottoinsiemi di uno spazio topologico $X$ tali che $A\subset B\subset X$. Si dice che $A$ è \textbf{denso} in $B$ se $\overline{A}=B$.
+\end{defn}
+
+Vogliamo ora studiare la relazione di inclusione tra i seguenti spazi vettoriali.
+
+\begin{align*}
+\Dc(\RR)&:=\left\{f\in\Cc^\infty\text{ t.c. }\supp f \text{ è compatto in }\RR\right\} \\
+\Sc(\RR)&:=\left\{f\in\Cc^{\infty}\text{ t.c. }x^kf^{(n)}\text{ è limitata }\forall n,k\in\NN\right\} \\
+L^{p}(\RR)&:=\left\{f\text{ Lebesgue-misurabili t.c. }\int_{\RR}|f(x)|^{p} \dx < \infty \right\}
+\end{align*}
+
+Sappiamo già che $\Dc\subset\Sc\subset L^p$
+\fg{0.5}{bonfa_density}
+e che 
+\begin{gather*}
+L^p\text{ spazio di Banach }\forall p \\
+L^2\text{ spazio di Hilbert} \\
+\Dc,\Sc\text{ non sono spazi di Banach, solo spazi vettoriali}
+\end{gather*}
+Dando per buoni i concetti di convergenza in questi tre spazi, possiamo subito osservare che
+\begin{equation}
+\label{dens_uno}
+\{f_n\}\subset\Dc,\ f\in\Dc,\ f_n\xrightarrow[]{\Dc}f\quad\Longrightarrow\quad \{f_n\}\subset\Sc,\ f\in\Sc,\ f_n\xrightarrow[]{\Sc}f
+\end{equation}
+e
+\begin{equation}
+\label{dens_due}
+\{f_n\}\subset\Sc,\ f\in\Sc,\ f_n\xrightarrow[]{\Sc}f\quad\Longrightarrow\quad \{f_n\}\subset L^p,\ f\in L^p,\ f_n\xrightarrow[]{L^p}f
+\end{equation}
+Possiamo ora estendere (non ci basta la definzione topologica) il concetto di densità.
+
+\subsection{\texorpdfstring{$\Dc$}{C} è denso in \texorpdfstring{$L^p$}{C} rispetto la norma \texorpdfstring{$\Vert\cdot\Vert_p$}{C}}
+
+Ciò vuol dire che
+\begin{equation*}
+\forall u\in L^p\quad\exists\{u_n\}\subset\Dc\quad\text{t.c.}\quad \Vert u-u_n\Vert_p \xrightarrow[n\to+\infty]{} 0
+\end{equation*}
+Ovviamente, dato che $L^p$ è di Banach, si utilizza nella definizione di densità la norma, ma, per quanto abbiamo osservato prima, questa induce altre definizioni a cascata. Infatti la definizione può essere riscritta con un qualche tipo di convergenza che sfrutta la metrica (con $L^p$ la frase non ha molto senso perché la definizione di convergenza sfrutta la norma, ma per gli spazi $\Dc,\Sc$ è molto valida):
+\begin{equation*}
+\forall u\in L^p\quad\exists\{u_n\}\subset\Dc\quad\text{t.c.}\quad u_n\xrightarrow[n\to+\infty]{L^p}u
+\end{equation*}
+Il senso è che è sempre possibile approssimare, nel senso della norma di $L^p$, una certa $u\in L^p$ con una certa $u_n\in\Dc$.
+
+\subsection{\texorpdfstring{$\Sc$}{C} è denso in \texorpdfstring{$L^p$}{C} rispetto la norma \texorpdfstring{$\Vert\cdot\Vert_p$}{C}}
+
+Ciò è diretta conseguenza di \eqref{dens_uno}, e vuol dire che
+\begin{equation*}
+\forall u\in L^p\quad\exists\{u_n\}\subset\Sc\quad\text{t.c.}\quad \Vert u-u_n\Vert_p \xrightarrow[n\to+\infty]{} 0
+\end{equation*}
+e
+\begin{equation*}
+\forall u\in L^p\quad\exists\{u_n\}\subset\Sc\quad\text{t.c.}\quad u_n\xrightarrow[n\to+\infty]{L^p}u
+\end{equation*}
+Il senso è che è sempre possibile approssimare, nel senso della norma di $L^p$, una certa $u\in L^p$ con una certa $u_n\in\Sc$.
+
+
+\subsection{\texorpdfstring{$\Dc$}{C} è denso in \texorpdfstring{$\Sc$}{C} rispetto la norma \texorpdfstring{$\Vert\cdot\Vert_p$}{C}}
+
+Ciò è diretta conseguenza di \eqref{dens_due}, e vuol dire che
+\begin{equation*}
+\forall u\in \Sc\quad\exists\{u_n\}\subset\Dc\quad\text{t.c.}\quad \Vert u-u_n\Vert_p \xrightarrow[n\to+\infty]{} 0
+\end{equation*}
+e
+\begin{equation*}
+\forall u\in \Sc\quad\exists\{u_n\}\subset\Dc\quad\text{t.c.}\quad u_n\xrightarrow[n\to+\infty]{L^p}u
+\end{equation*}
+Il senso è che è sempre possibile approssimare, nel senso della norma di $L^p$, una certa $u\in \Sc$ con una certa $u_n\in\Dc$.
+
+Ma questo è banale e poco interessante, il divertimento viene ora.
+
+
+\subsection{\texorpdfstring{$\Dc$}{C} è denso in \texorpdfstring{$\Sc$}{C} rispetto la convergenza in \texorpdfstring{$\Sc$}{C}}
+
+Qui si perde la definizione di densità che sfrutta la norma poiché $\Sc$ non è di Banach, ma è ancora possibile parlare di densità utilizzando la convergenza 
+\begin{equation*}
+\forall u\in \Sc\quad\exists\{u_n\}\subset\Dc\quad\text{t.c.}\quad u_n\xrightarrow[n\to+\infty]{\Sc}u
+\end{equation*}
+Il senso è che è sempre possibile approssimare, nel senso della convergenza di $\Sc$, una certa $u\in \Sc$ con una certa $u_n\in\Dc$.
