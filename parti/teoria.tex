@@ -33,7 +33,7 @@ $f:A\to\CC$ è differenziabile in senso complesso in $z_0\in A$ se $f(z_0 + h)$ 
 \begin{equation*}
 f(z_0 + h) = f(z_0) + \alpha h + o(|h|)
 \end{equation*}
-per $h\in\CC,\ h\rightarrow 0$ e $\alpha\in\CC$.
+per $h\in\CC,\ |h|\rightarrow 0$ e $\alpha\in\CC$.
 \end{defn}
 
 \begin{defn}
@@ -49,29 +49,95 @@ In virtù di queste due definizioni, possiamo concludere che in $\CC$ i concetti
 
 Precisiamo che viene ancora chiamato \textit{rapporto incrementale}, ma in realtà nei complessi l'aggettivo incrementale non significa nulla proprio perchè, come già detto prima, $\CC$ non è ordinato.
 
-\section{Equazioni di Cauchy - Riemann}
+\section{Equazioni di Cauchy-Riemann}
 
-Il teorema sulla derivata direzionale si può estendere ai numeri complessi
+\begin{thm}[Condizioni di Cauchy-Riemann]
+Sia $f:A\to\CC$ con $A\subset\CC$ aperto. Esprimiamo $f$ in termini delle sue parti reale e immaginaria: $f=u+iv$, con $u,v:\RR^2\to\RR$. \\
+Allora, $f$ è derivabile/differenziabile (in senso complesso) in $z_0=x_0+iy_0\in A$ se e solo se $u,v$ sono differenziabili (in senso classico/reale) in $(x_0,y_0)$ e valgono le equazioni di Cauchy-Riemann (CR)
 \begin{equation*}
-\lim_{t\rightarrow 0}\frac{f(z + td) - f(z)}{t} = d \cdot  f'(z) \qquad d\in\CC, d\neq0, |d| = 1, t\in \RR
+\boxed{\frac{\partial u}{\partial x}\,(x_0,y_0)=\frac{\partial v}{\partial y}\,(x_0,y_0)} \qquad\qquad \boxed{\frac{\partial u}{\partial y}\,(x_0,y_0)=-\frac{\partial v}{\partial x}\,(x_0,y_0)}
 \end{equation*}
-ovvero
+\end{thm}
+
+Prima di procedere con la dimostrazione, facciamo qualche osservazione:
+\begin{enumerate}
+    \item [$\triangleright$] Da AN2 ci ricordiamo il teorema sulle derivate direzionali, che recita:
+    \begin{equation*}
+    g:\RR^n\to\RR\text{ differenziabile in }x\quad\Rightarrow\quad \exists\ \frac{\partial g}{\partial d}\,(x)\ \forall d\text{ tc }\Vert d\Vert=1\ \text{ e }\ \frac{\partial g}{\partial d}\,(x)=d\cdot \nabla g(x)
+    \end{equation*}
+    nota anche come \underline{formula del gradiente}. A livello intuitivo, la nostra $f$ complessa, essendo differenziabile, avrà le due componenti $u,v$ differenziabili visto che devono esistere i gradienti; sempre a livello intuitivo, avendo $f$ due componenti è ovvio che le quattro componenti dei due gradienti di $u,v$ debbano essere legate. 
+
+    \item Per facilitare il confronto con altri testi si noti che le seguenti scritture sono equivalenti
+    \begin{equation*}
+    \frac{\partial u}{\partial x}\,(x_0,y_0)\qquad\frac{\partial u}{\partial x}\,(z_0)
+    \end{equation*}
+
+    \item Una condizione alternativa alle (CR) è
+    \begin{equation*}
+    \frac{\partial f}{\partial\overline{z}}(z_0)=0
+    \end{equation*}
+
+\end{enumerate}
+
+Presentiamo due dimostrazioni, la prima è più un procedimento per ricavare le (CR), la seconda è la dimostrazione integrale del teorema.
+
+\begin{proof}
+Sia per ipotesi $f$ differenziabile in $z_0$. Allora anche le sue componenti $u,v$ sono differenziabili e vale l'estensione al campo complesso della formula del gradiente
 \begin{equation*}
-\partial_{d}[f(z)] = d \cdot f'(z)
+\frac{\partial f}{\partial d}\,(z_0)=\lim_{t\to 0}\frac{f(z_0+td)-f(z_0)}{t}=d\,f'(z_0)\quad \forall d\in\CC\text{ tc }|d|=1,\ t\in\RR
 \end{equation*}
-Possiamo considerare per esempio le due direzioni
-\begin{align*}
-d = (1, 0) = 1 & \ \ \implies \ \ \partial_{x}[u + iv] = u_{x} + iv_{x} = f'(z)\\
-d = (0, 1) = i & \ \ \implies \ \ \partial_{y}[u + iv] = u_{y} + iv_{y} = if'(z)
-\end{align*}
-da cui poi
-\begin{equation*}
-u_{y} + iv_{y} = i(u_{x} + iv_{x})
-\end{equation*}
-Uguagliando le rispettive $Re$ e $Im$ otteniamo le Equazioni di Cauchy-Riemann (CR)
-\begin{equation*}
-\boxed{u_{x} = v_{y}} \quad \boxed{u_{y} = - v_{x}} \quad\text{oppure}\quad \boxed{\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}} \quad \boxed{\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}} \quad\text{oppure}\quad \boxed{\frac{\partial f}{\partial \overline{z}}=0}
-\end{equation*}
+che, pensandoci, non può che essere così ($u,v$ sono funzioni $\RR^2\to\RR$ e quindi vale per loro il teorema di AN2 enunciato sopra). Con i versori direzionali $d=(1,0)$ e $d=(0,i)$ abbiamo
+\begin{gather*}
+\frac{\partial f}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial f}{\partial y}\,(z_0)=if'(z_0) \\
+\frac{\partial (u+iv)}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial (u+iv)}{\partial y}\,(z_0)=if'(z_0) \\
+f'(z_0)=\frac{\partial u}{\partial x}\,(z_0) \qquad -if'(z_0)=\frac{\partial v}{\partial x}\,(z_0) \qquad if'(z_0)=\frac{\partial u}{\partial y}\,(z_0)\qquad f'(z_0)=\frac{\partial v}{\partial y}\,(z_0)
+\end{gather*}
+Uguagliando le $f'$ e le $if'$ si ottengono le (CR).
+\end{proof}
+
+\begin{proof}\leavevmode
+\begin{enumerate}
+    \item [$(\Rightarrow)$] $f$ è differenziabile perciò è possibile esprimere il suo incremento nell'intorno di $z_0$ in maniera lineare:
+    \begin{equation*}
+    f(z_0+h)-f(z_0)=\alpha h+o(h)\qquad \alpha,h\in\CC,\ h\to 0
+    \end{equation*}
+    Esprimiamo tutte le quantità complesse in funzione delle loro parti reali e immaginarie:
+    \begin{align*}
+    h&=h_1+ih_2\\
+    \alpha&=\alpha_1+i\alpha_2 \\
+    f(z_0)&=u(x_0,y_0)+iv(x_0,y_0)=u_0+iv_0 \\
+    f(z_0+h)&=u(x_0+h_1,y_0+h_2)+iv(x_0+h_1,y_0+h_2)=u+iv    
+    \end{align*}
+    Allora possiamo riscrivere la definizione di differenziabilità in
+    \begin{equation*}
+    (u-u_0)+i(v-v_0)=(\alpha_1+i\alpha_2)(h_1+ih_2)+o(h_1,h_2)+io(h_1,h_2)
+    \end{equation*}
+    Prendendo la parte reale di tale espressione otteniamo
+    \begin{gather*}
+    u-u_0=\alpha_1h_1-\alpha_2h_2+o(h_1,h_2) \\
+    u-u_0=\underbrace{(\alpha_1,-\alpha_2)}_{\nabla u}\cdot (h_1,h_2)+o(h_1,h_2)
+    \end{gather*}
+    che è proprio la definizione di differenziabilità in senso relae di $u$ in $(x_0,y_0)$. Abbiamo anche scoperto che il gradiente di $u$ (che esiste perché $u$ è differenziabile) è
+    \begin{equation*}
+    \nabla u(x_0,y_0):=\left(\frac{\partial u}{\partial x}\,(x_0,y_0),\frac{\partial u}{\partial y}\,(x_0,y_0)\right)=(\alpha_1,-\alpha_2)
+    \end{equation*}
+    Prendendo invece la parte immaginaria dell'espressione otteniamo
+    \begin{equation*}
+    \nabla v(x_0,y_0):=\left(\frac{\partial v}{\partial x}\,(x_0,y_0),\frac{\partial v}{\partial y}\,(x_0,y_0)\right)=(\alpha_2,\alpha_1)
+    \end{equation*}
+    Uguagliando gli $\alpha_1$ e gli $\alpha_2$ si ottengono le (CR).
+
+    \item [$(\Leftarrow)$] I calcoli sono gli stessi, solo che i passaggi sono invertiti. Andando in maniera più spiccia si ha
+    \begin{align*}
+    f(z_0+h)-f(z_0)&=(u-u_0)+i(v-v_0) &\\
+    &=\nabla u\cdot h+o(h)+i\left(\nabla v\cdot h+o(h)\right) &\text{def di diff per }u,v \\
+    &=(\alpha_1,-\alpha_2)\cdot h+o(h)+i\left((\alpha_2,\alpha_1)\cdot h+o(h)\right) &\text{uso (CR)} \\
+    &=\alpha\cdot h+o(h)\,,\ h\to 0
+    \end{align*}
+    che dimostra che $f$ è differenziabile in senso complesso.
+\end{enumerate}
+\end{proof}
+
 
 \section{Funzioni olomorfe}
 
@@ -80,6 +146,8 @@ Uguagliando le rispettive $Re$ e $Im$ otteniamo le Equazioni di Cauchy-Riemann (
 $f:A\rightarrow\CC$ è detta olomorfa in $A$, e si scrive $f\in H(A)$, se $f$ è derivabile $\forall z \in A$.
 \end{defn}
 È un concetto molto più forte della semplice derivabilità, anche se dalla definizione non lo si intuisce. Se una funzione è olomorfa, allora è differenziabile infinite volte; inoltre una funzione olomorfa può essere scritta come serie di potenze (basta con gli spoiler).
+
+Vediamo subito due corollari che discendono direttamente dal teorema sulle (CR).
 
 \begin{thm}
 [CN per l'olomorfia]
@@ -91,8 +159,8 @@ $f\in H(A)\ \Rightarrow$ valgono le (CR).
 \begin{equation*}
 \boxed{f\in H(A) \ \ \iff \ \
 \begin{cases}
-u, v\ \text{differenziabili in} \ A (\text{cioè }f\in\Cc^1)\\
-\text{valgono le (CR)}
+u, v\ \text{differenziabili }\forall z\in A\ (\text{cioè }f\in\Cc^1(A)) \\
+\text{valgono le (CR) } \forall z\in A
 \end{cases}}
 \end{equation*}
 \end{thm}
@@ -123,11 +191,12 @@ $$
 $$
 Funzioni di questo tipo, ovvero a laplaciano nullo, sono dette funzioni armoniche.
 
+
 \section{Serie di potenze}
 
 Consideriamo una serie di potenze complessa
 \begin{equation*}
-f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n} \ \ \ \ \{a_{n}\}_{n\in\NN} \subset \CC, z\in \CC
+f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n} \ \ \ \ \{a_{n}\}_{n\in\NN} \subset \CC,\ z\in \CC
 \end{equation*}
 In primis osserviamo che si può tralasciare $z_{0}$, in quanto si può semplicemente fare una traslazione. Consideriamo quindi una certa serie di potenze centrata in $0$ al variare di $z$
 \begin{equation}
@@ -139,7 +208,7 @@ f(z) = \sum\limits^{\infty}_{n = 0} a_{n} z^{n}
 Se \eqref{serie_generica} converge in $z \neq 0$ allora converge assolutamente in $w\in\CC\ :\ |w|<|z|$.
 \end{thm}
 
-\fg{0.3}{bonfa_1}
+\fg{0.35}{bonfa_1}
 
 \begin{proof}
 Se la serie converge, allora il termine generale tende a zero
@@ -152,9 +221,9 @@ quindi è limitato
 \end{equation*}
 A questo punto verifichiamo la convergenza assoluta della serie in $w$:
 \begin{equation*}
-\sum\limits^{\infty}_{n = 0}\left| a_{n} w^{n}\right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} w^{n} \cdot \frac{z^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} z^{n} \cdot \frac{w^n}{z^n} \right| \overset{\underset{\text{dis. triang.}}{}}{\leq} \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}\right|}_{\leq M}\cdot \left|\frac{w^n}{z^n}\right| \leq M\sum\limits^{\infty}_{n = 0}\left|\frac{w}{z}\right|^n
+\sum\limits^{\infty}_{n = 0}\left| a_{n} w^{n}\right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} w^{n} \cdot \frac{z^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} z^{n} \cdot \frac{w^n}{z^n} \right| \overset{\underset{\text{CS}}{}}{\leq} \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}\right|}_{\leq M}\cdot \left|\frac{w^n}{z^n}\right| \leq M\sum\limits^{\infty}_{n = 0}\left|\frac{w}{z}\right|^n
 \end{equation*}
-ma questa è una serie geometrica di ragione $\dfrac{| w|}{| z|} < 1$ per ipotesi quindi converge, e allora la serie converge assolutamente. 
+ma questa è una serie geometrica di ragione $\dfrac{|w|}{| z|} < 1$ per ipotesi quindi converge, e allora la serie converge assolutamente. 
 \end{proof}
 
 È altrettanto banale verificare che se la serie non converge in $z$ allora la serie non può convergere in nessun $w\ :\ |w|>|z|$. 
@@ -194,7 +263,9 @@ A questo punto è naturale chiedersi come calcolare $R\in[0,+\infty]$:
 \frac{1}{R}&=\limsup_{n\to+\infty}\sqrt[n]{|a_n|}\qquad\text{formula di Cauchy-Hadamard}
 \end{align*}
 
-Ora vogliamo estendere quanto detto per la convergenza puntuale a quella uniforme. Per prima cosa ricordiamo da AN2 il seguente teorema
+\newpage
+
+Ora vogliamo estendere quanto detto per la convergenza puntuale a quella uniforme. Per prima cosa ricordiamo da AN2 il seguente
 \begin{thm}[Criterio di Weierstrass per la convergenza uniforme]$\\$
 Sia $\sum_n f_n(x)$ una serie di funzioni definite su $E\subseteq\RR$ tale che $|f_n(x)|\leq C_n$ $\forall x \in E$, $\forall n\geq 0$. Se la serie numerica $\sum_n C_n$ converge allora la serie di funzioni $\sum_n f_n(x)$ converge uniformemente su $E$.
 \end{thm}
@@ -213,7 +284,7 @@ Banalmente $\sup_{z\in d} |z^k|=r^k$ e quindi il nostro $C_k$ è
 $$
 \sup_{z\in d} |a_kz^k|=C_k=|a_k|r^k
 $$
-Dobbiamo ora dimostrare che $\sum_k |a_k|r^k $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $R'<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_kz^k|\leq M$, quindi
+Dobbiamo ora dimostrare che $\sum_k |a_k|r^k $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $r<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_kz^k|\leq M$, quindi
 $$
 \sum_k |a_k|r^k=\sum_k |a_k|r^k\,\frac{|z^k|}{|z^k|}\leq M\sum_{k} \left(\frac{r}{|z|}\right)^k<\infty
 $$
@@ -270,15 +341,13 @@ e^z&=\sum_{n=0}^{+\infty}\frac{z^n}{n!} \qquad &R=+\infty \\
 \frac{1}{1-z}&=\sum_{n=0}^{+\infty}z^n  \qquad &|z|<1
 \end{align*}
 
-Tralasciamo per il momento le estensioni di $\log(1+z)$ e $(1+z)^\alpha$.
-
 Alla luce di queste estensioni possiamo giustificare la formula di Eulero: moltiplicando la serie di $\sin z$ per $i$ e sommandola alla serie di $\cos z$ si ottiene proprio la serie di $e^{iz}$. Osserviamo che la formula è estesa ad ogni $z$ complesso e non solo ad angoli $\theta\in[0,2\pi)$; d'altro canto
 $$
 e^{i\theta}=\cos\theta+i\sin\theta=\cos(\theta+2k\pi)+i\sin(\theta+2k\pi)=e^{i(\theta+2k\pi)}=e^{i\theta}\,e^{2k\pi i}
 $$
 da cui deduciamo che la funzione esponenziale complessa e $2\pi i$-periodica. Questo dovrebbe farci capire per quale motivo l'estensione del logaritmo potrebbe risultare problematica.
 
-Prima di indagare in maniera più approfondita su ciò, è bene concludere con un'importante osservazione
+Prima di indagare in maniera più approfondita su ciò, è bene concludere con un'importante osservazione:
 \begin{lemma}
 $\CC$ è il luogo naturale per parlare di serie di potenze.
 \end{lemma}
@@ -327,11 +396,12 @@ Per raggirare il problema si ridefinisce il codominio della funzione come $2^\CC
 
 Un altro possibile approccio risolutivo, ideato da Riemann, è quello di limitare il dominio della funzione polidroma in maniera che non si possa girare attorno ai punti critici, detti di diramazione (nel caso di logaritmo e radice è l'origine). In questo modo è possibile assegnare dei valori privilegiati. Possiamo immaginare di associare ad ogni $k$ un diverso piano $\CC$; completato un giro antiorario (o orario) attorno al punto di diramazione si sale (o scende) alla realizzazione successiva. Questi piani sono detti appunti di Riemann e si possono immaginare come dei piani paralleli interrotti da un \textit{buco} e collegati con quelli adiacenti attraverso dei \textit{ponti}.
 
-\fg{0.3}{superfici-di-Riemann}
+\fg{0.4}{superfici-di-Riemann}
+
 
 \section{Curve in \texorpdfstring{$\CC$}{C}}
 
-Una curva nel piano complesso è $\gamma: [a, b]\subseteq\RR\rightarrow \CC$ continua, proprio come nel piano reale. Infatti continuano a valere in $\CC$ un sacco di definizioni enunciate in AN2 (si veda il prontuario a fine libro).
+Una curva nel piano complesso è $\gamma: [a, b]\subseteq\RR\rightarrow \CC$ continua, proprio come nel piano reale. Infatti continuano a valere in $\CC$ un sacco di definizioni enunciate in AN2 (curva chiusa, sostegno, ecc.).
 
 Quello che cambia in $\CC$ è il concetto di integrale di linea complesso:
 \begin{defn}
@@ -346,9 +416,9 @@ L'integrale di linea complesso si trova a cavallo tra integrale curvilineo di pr
 \begin{gather*}
 f(x)=u(x,y)+iv(x,y) \\
 \gamma(t)=x(t)+iy(t) \\ 
-\int_\gamma f(z)\dz=\int_a^b \left(ux'-vy'\right)\dt+i\int_a^b\left(uy'+vx'\right) \dt = \int_\gamma\left(u\dx-v\dy\right)\dt +i\int_\gamma\left(u\dy+v\dx\right)\dt
+\int_\gamma f(z)\dz=\int_a^b \left(ux'-vy'\right)\dt+i\int_a^b\left(uy'+vx'\right) \dt = \int_\gamma\left(u\,\de x-v\,\de y\right) +i\int_\gamma\left(u\,\de y+v\,\de x\right)
 \end{gather*}
-perchè appunto $u\dx-v\dy$ e $u\dy+v\dx$ sono due forme differenziali (oppure sono campi irrotazionali).
+perchè appunto $u\,\de x-v\,\de y$ e $u\,\de y+v\,\de x$ sono due forme differenziali (o campi irrotazionali).
 
 Viene naturale osservare che, in virtù delle (CR), le sopracitate forme differenziali sono chiuse (ovviamente bisogna supporre $u,v\in\Cc^1$, che per quanto ne sappiamo ora non significa $f\in H$). 
 \end{rem}
@@ -362,7 +432,7 @@ $$
 
 Ricordiamo da AN2 il
 \begin{lemma}[di Poincarè]$\\$
-Una forma differenziale $\Cc^1$ e chiusa in un aperto semplicemente connesso è esatta (oppure è un campo conservativo).
+Una forma differenziale $\Cc^1$ e chiusa in un aperto semplicemente connesso è esatta (o campo conservativo).
 \end{lemma}
 
 Analogamente nei complessi vale il
@@ -375,7 +445,7 @@ Siano $A\subset \CC$ un aperto semplicemente connesso, $f:A\to\CC$ olomorfa in $
 \begin{proof}
 La dimostrazione vera e propria è molto lunga e tecnica, perciò noi ci limiteremo a verificare l'asserto nel caso in cui $u,v\in C^{1}$:
 \begin{equation*}
-\int_{\gamma} f(z) \dz = \int_\gamma\left(u\dx-v\dy\right) +i\int_\gamma\left(u\dy+v\dx\right) = 0
+\int_{\gamma} f(z) \dz = \int_\gamma\left(u\,\de x-v\,\de y\right) +i\int_\gamma\left(u\,\de y+v\,\de x\right) = 0
 \end{equation*}
 in quanto le forme differenziali sono esatte.
 \end{proof}
@@ -384,14 +454,18 @@ Il teorema dell'integrale nullo di Cauchy ha un'importantissima conseguenza: sia
 \begin{equation*}
 \int_{\gamma_1}f(z)\dz=\int_{\gamma_2}f(z)\dz
 \end{equation*}
-cioè $\gamma_1$ si può deformare con continuità in $\gamma_2$ e viceversa (in \textit{matematichese} curve di questo tipo sono dette $A$-omotope, ovvero esiste una funzione $H$ continua tale che $H(t,0)=\gamma_1(t)$ e $H(t,1)=\gamma_2(t)$).
-
-\fg{0.3}{bonfa_2}
+cioè $\gamma_1$ si può deformare con continuità in $\gamma_2$ e viceversa (in \textit{matematichese} curve di questo tipo sono dette $A$-omotope, ovvero esiste una funzione $\Omega$ continua tale che $\Omega(t,0)=\gamma_1(t)$ e $\Omega(t,1)=\gamma_2(t)$).
 
 \begin{proof}
-Basta togliere un segmento che collega il \textit{buco} all'esterno ad $A$, in modo tale che $A$ sia semplicemente connesso, e poi applicare il teorema dell'integrale nullo alla curva $\gamma_3$ che percorre una volta una curva in un senso e una volta l'altra curca in senso opposto
-\fg{0.3}{bonfa_3}
+Basta togliere un segmento che collega il \textit{buco} all'esterno ad $A$, in modo tale che $A$ sia semplicemente connesso, e poi applicare il teorema dell'integrale nullo alla curva $\gamma_3$ che percorre una volta una curva in un senso e una volta l'altra curca in senso opposto.
 \end{proof}
+
+\begin{figure}[h!]
+\begin{center}
+  \includegraphics[width=4cm]{images/bonfa_2}
+  \includegraphics[width=4cm]{images/bonfa_3}
+\end{center}
+\end{figure}
 
 Il teorema dell'integrale nullo si può estendere anche alla frontiera dell'aperto $A$, a patto che qui la funzione sia continua:
 \begin{thm}
@@ -633,7 +707,7 @@ Per quanto riguarda l'ordine dei poli, nella pratica è tutto più semplice:
 f(z)=\frac{e^{\frac{1}{z-1}}}{z^2(z^2+4)}\ :\ 0\text{ è un 2-polo, }\pm 2i\text{ sono entrambi 1-poli}
 \end{equation*}
 
-Concludiamo con due teoremi (non fatti da Arioli):
+Concludiamo con due teoremi:
 \begin{thm}
 [Caratterizzazione delle singolarità essenziali] Sia $z_{0}$ una singolarità essenziale isolata per $f(z)$. Allora la funzione $\frac{1}{f(z)}$ ha in $z_{0}$ una singolarità essenziale oppure un punto di accumulazione di poli.
 \end{thm}
@@ -874,7 +948,7 @@ e $K$ non dipende da $R$.
 \begin{aligned}
 \left|\int_{C_R} e^{i \omega t} f(z) \dz\right| &\stackrel{D E F}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
 &\leqslant \underbrace{\max _{t \in[0, \pi]}\left|f\left(R e^{i t}\right)\right|}_M\cdot\left|\int_0^\pi Re^{i \omega(\cos t+i \sin t) R} \dt\right|\\
-&=M\left|\int_0^\pi R\ \cancel{e^{\text {Riw } \cos t}}\ e^{-R \omega \sin t} \dt\right|\\
+&=M\left|\int_0^\pi R\ \cancel{e^{\text {Ri}\omega \cos t}}\ e^{-R \omega \sin t} \dt\right|\\
 &=2 M\left|\int_0^{\pi / 2} R e^{-\omega R \sin t} \dt\right|\\
 &\leqslant 2 M\left|\int_0^{\pi / 2} R e^{-\omega R t} \dt\right| \qquad \left(\sin x\leq x\text{ se } x\in[0,\pi/2]\right)\\
 &=2 M \cancel{R}\left|\left[\frac{1}{-\omega \cancel{R}}\ e^{-\omega R t}\right]_0^{\pi / 2}\right|\\
@@ -909,7 +983,7 @@ Addentriamoci nell'\textit{Analisi funzionale} parlando di \textbf{spazi funzion
 Iniziamo con un elenco delle nozioni basilari dell'algebra lineare.
 
 \begin{defn}[Spazio vettoriale]
-Sia $\KK$ il camo dei reali o dei complessi. Gli elementi di $\KK$ verranno detti scalari. Uno spazio vettoriale (o lineare) sul campo $\KK$ è un insieme non vuoto $X$ tale che:
+Sia $\KK$ il campo dei reali o dei complessi. Gli elementi di $\KK$ verranno detti scalari. Uno spazio vettoriale (o lineare) sul campo $\KK$ è un insieme non vuoto $X$ tale che:
 \begin{enumerate}
     \item [(i)] per ogni coppia di elementi $x,y\in X$ esista un terzo elemento di $X$ che indicheremo con $x+y$
     \item [(ii)] per ogni $x\in X$ e $\lambda \in \KK$ esista un elemento di $X$ che indicheremo con $\lambda x$
@@ -1562,7 +1636,7 @@ Se avessimo un generico spazio vettoriale $X$ finito potremmo scrivere
 $$
 x=\sum_{n=1}^Nc_ne_n
 $$
-e se la base fosse otronormale potremmo addirittura calcolare i coefficienti della combinazione lineare tramite il prodotto scalare
+e se la base fosse ortonormale potremmo addirittura calcolare i coefficienti della combinazione lineare tramite il prodotto scalare
 $$
 (x,e_n)=\left(\sum_{n=1}^Nc_ne_n,e_n\right)=\sum_{n=1}^Nc_n(e_n,e_n)=c_n
 $$
@@ -1573,7 +1647,7 @@ Sia $H$ uno spazio di Hilbert, $\dim H=+\infty$. Sia $\{e_n\}_{n=1,2,\dots}\subs
 \begin{equation*}
 \boxed{x = \sum^{+\infty}_{n = 1}(x, e_{n}) e_{n}}
 \end{equation*}
-I coefficienti $(x,e_n)=:\lambda_n$ della combinazione sono detti \textbf{coefficienti di Fourier} di $x$ rispetto $\{e_n\}$, e come nel caso finito sono dati da un prodotto scalare.
+I coefficienti $(x,e_n)=:\lambda_n$ della combinazione sono detti \textbf{coefficienti di Fourier} di $x$ rispetto $\{e_n\}$, e, come nel caso finito, sono dati da un prodotto scalare.
 \end{thm}
 
 Riprendendo il discorso di inizio pagina, abbiamo che la serie di Fourier generalizzata converge se e solo se
