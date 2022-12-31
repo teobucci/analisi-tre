@@ -4,56 +4,51 @@
 
 Studieremo funzioni complesse $f : A\subset\CC\rightarrow \CC$ con $A$ aperto, lavorando con numeri complessi di forma
 \begin{equation*}
-z = x + iy = (x, y) = \rho e^{i\theta} = \rho (\cos\theta + i\sin\theta)
+z = x + iy = (x, y) = \rho e^{i\theta} = \rho (\cos\theta + i\sin\theta)\qquad\ \rho=|z|,\ \theta=\text{arg}(z)
 \end{equation*}
-dove $\rho=|z|$ e $\theta=\text{arg}(z)$.
-
 Osserviamo che il campo dei numeri complessi $\CC$ può essere messo in relazione
 biunivoca con $\RR^2$: pensiamo a un vettore di due componenti dove la prima componente rappresenta la parte
 reale $x$ mentre la seconda la parte immaginaria $y$ del numero complesso $z$. Dunque possiamo anche intendere $z$ come un vettore di $\RR^2$ e quindi $f:\CC\to\CC$ non sarà altro che la ben più familiare $f:\RR^2\to\RR^2$.
 
 Inoltre, essendo il codominio di $f$ proprio $\CC$, anche $f(z)\in\CC$ e risulta quindi comodo scomporre $f$ in parte reale e immaginaria:
 $$
-f(x,y)=u(x,y)+i\,v(x,y)\qquad u,v:\RR^2\to\RR \qquad u=Re(f),\ v=Im(f)
+f(x,y)=u(x,y)+i\,v(x,y)\qquad u,v:\RR^2\to\RR \qquad u=\Re(f),\ v=\Im(f)
 $$
-Si faccia attenzione al fatto che non tutte le coppie di funzioni $u,v$ possono rappresentare una funzione
-complessa, occorre che rispettino le condizioni di Cauchy-Riemann che vedremo tra poco.
-
 In virtù del parallelismo tra $\CC$ e $\RR^2$ possiamo importare direttamente dai corsi di Analisi 1 e 2 una notevole quantità di definizioni topologiche (insiemi aperti, semplicementi connessi, curve, curve chiuse, sostegno di una curva, ...) tuttavia è bene ricordare che $\CC$ è un campo non ordinato, mentre $\RR^2$ uno spazio vettoriale. Questa discrepanza ha un notevole risvolto in ambito di differenziabilità.
 
 \begin{defn}
-$f:A\to\CC$ ammette limite, cioè $\lim_{z\to z_0}f(z)=l$, se $\forall \varepsilon>0$ $\exists\delta>0$ tale che 
-$$|f(z)-l|<\varepsilon \qquad \forall z\neq z_0\,:\,|z-z_0|<\delta$$ 
+$f:A\to\CC$ ammette limite, cioè $\displaystyle\lim_{z\to z_0}f(z)=l$, se
+$$
+\forall\Ec>0\quad\exists\delta>0\quad\text{t.c.}\quad |f(z)-l|<\Ec \quad\quad \forall z\neq z_0\,:\,|z-z_0|<\delta
+$$
+Diremo che $f$ è continua in $z_0$ se $l=f(z_0)$. 
 \end{defn}
-
-Tale definizione di limite ci permette di introdurre il concetto di continuità, ovvero diremo che $f$ è continua in $z_0$ se $l=f(z_0)$.
 
 \begin{defn}
 $f:A\to\CC$ è differenziabile in senso complesso in $z_0\in A$ se $f(z_0 + h)$ si può scrivere come
 \begin{equation*}
-f(z_0 + h) = f(z_0) + \alpha h + o(|h|)
+f(z_0 + h) = f(z_0) + \alpha h + o(|h|)\qquad \alpha,h\in\CC,\ |h|\to 0
 \end{equation*}
-per $h\in\CC,\ |h|\rightarrow 0$ e $\alpha\in\CC$.
 \end{defn}
 
 \begin{defn}
 $f:A\to\CC$ è derivabile in senso complesso in $z_0\in A$ se esiste finito il limite del rapporto incrementale, ovvero
 \begin{equation*}
-\lim_{h\in\CC,\,h\rightarrow 0}\frac{f(z_0 + h) - f(z_0)}{h}=:f'(z_0)
+\lim_{h\to 0}\frac{f(z_0 + h) - f(z_0)}{h}=:f'(z_0)\qquad h\in\CC
 \end{equation*}
 \end{defn}
 
 \begin{rem}
-In virtù di queste due definizioni, possiamo concludere che in $\CC$ i concetti di derivabilità e differenziabilità coincidono ($\alpha\equiv f'(z_0)$).
+In virtù di queste definizioni, possiamo dire che in $\CC$ i concetti di derivabilità e differenziabilità coincidono: $\alpha\equiv f'(z_0)$. Invece non possiamo dire che differenziabilità e $\Cc^1$ sono sinonimi: l'appartenenza a $\Cc^1$ è una proprietà più forte della differenziabilità. Noteremo tale differenza nella dimostrazione del teorema (\ref{int_nullo}) dell'integrale nullo di Cauchy.
 \end{rem}
 
-Precisiamo che viene ancora chiamato \textit{rapporto incrementale}, ma in realtà nei complessi l'aggettivo incrementale non significa nulla proprio perchè, come già detto prima, $\CC$ non è ordinato.
 
 \section{Equazioni di Cauchy-Riemann}
 
 \begin{thm}[Condizioni di Cauchy-Riemann]
+\label{CR}
 Sia $f:A\to\CC$ con $A\subset\CC$ aperto. Esprimiamo $f$ in termini delle sue parti reale e immaginaria: $f=u+iv$, con $u,v:\RR^2\to\RR$. \\
-Allora, $f$ è derivabile/differenziabile (in senso complesso) in $z_0=x_0+iy_0\in A$ se e solo se $u,v$ sono differenziabili (in senso classico/reale) in $(x_0,y_0)$ e valgono le equazioni di Cauchy-Riemann (CR)
+Allora, $f$ è differenziabile (in senso complesso) in $z_0=x_0+iy_0\in A$ se e solo se $u,v$ sono differenziabili (in senso reale) in $(x_0,y_0)$ e valgono le equazioni di Cauchy-Riemann (CR)
 \begin{equation*}
 \boxed{\frac{\partial u}{\partial x}\,(x_0,y_0)=\frac{\partial v}{\partial y}\,(x_0,y_0)} \qquad\qquad \boxed{\frac{\partial u}{\partial y}\,(x_0,y_0)=-\frac{\partial v}{\partial x}\,(x_0,y_0)}
 \end{equation*}
@@ -72,21 +67,23 @@ Prima di procedere con la dimostrazione, facciamo qualche osservazione:
     \frac{\partial u}{\partial x}\,(x_0,y_0)\qquad\frac{\partial u}{\partial x}\,(z_0)
     \end{equation*}
 
-    \item Una condizione alternativa alle (CR) è
+    \item Una condizione alternativa alle (CR) è espressa tramite la derivata di Wirtinger
     \begin{equation*}
     \frac{\partial f}{\partial\overline{z}}(z_0)=0
     \end{equation*}
 
 \end{enumerate}
 
-Presentiamo due dimostrazioni, la prima è più un procedimento per ricavare le (CR), la seconda è la dimostrazione integrale del teorema.
+Presentiamo due dimostrazioni: la prima è più un procedimento per ricavare le (CR), che afferma che una funzione differenziabile le soddisfa; la seconda è la dimostrazione integrale del teorema.
 
 \begin{proof}
-Sia per ipotesi $f$ differenziabile in $z_0$. Allora anche le sue componenti $u,v$ sono differenziabili e vale l'estensione al campo complesso della formula del gradiente
+Sia per ipotesi $f$ differenziabile in $z_0$. Allora vale l'estensione al campo complesso della formula del gradiente
 \begin{equation*}
 \frac{\partial f}{\partial d}\,(z_0)=\lim_{t\to 0}\frac{f(z_0+td)-f(z_0)}{t}=d\,f'(z_0)\quad \forall d\in\CC\text{ tc }|d|=1,\ t\in\RR
 \end{equation*}
-che, pensandoci, non può che essere così ($u,v$ sono funzioni $\RR^2\to\RR$ e quindi vale per loro il teorema di AN2 enunciato sopra). Con i versori direzionali $d=(1,0)$ e $d=(0,i)$ abbiamo
+che, pensandoci, non può che essere così ($u,v$ sono funzioni $\RR^2\to\RR$ e quindi vale per loro il teorema di AN2 enunciato sopra). 
+
+Con i versori direzionali $d=(1,0)$ e $d=(0,i)$ abbiamo
 \begin{gather*}
 \frac{\partial f}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial f}{\partial y}\,(z_0)=if'(z_0) \\
 \frac{\partial (u+iv)}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial (u+iv)}{\partial y}\,(z_0)=if'(z_0) \\
@@ -94,6 +91,10 @@ f'(z_0)=\frac{\partial u}{\partial x}\,(z_0) \qquad -if'(z_0)=\frac{\partial v}{
 \end{gather*}
 Uguagliando le $f'$ e le $if'$ si ottengono le (CR).
 \end{proof}
+
+\newpage
+
+Veniamo, dunque, alla dimostrazione completa.
 
 \begin{proof}\leavevmode
 \begin{enumerate}
@@ -138,35 +139,37 @@ Uguagliando le $f'$ e le $if'$ si ottengono le (CR).
 \end{enumerate}
 \end{proof}
 
+\newpage
 
 \section{Funzioni olomorfe}
 
-\begin{defn}
-[Funzione Olomorfa]
-$f:A\rightarrow\CC$ è detta olomorfa in $A$, e si scrive $f\in H(A)$, se $f$ è derivabile $\forall z \in A$.
+\begin{defn}[Funzione Olomorfa]$\\$
+$f:A\rightarrow\CC$ è detta olomorfa in $A$, e si scrive $f\in H(A)$, se e solo se $f$ è differenziabile $\forall z \in A$.
 \end{defn}
-È un concetto molto più forte della semplice derivabilità, anche se dalla definizione non lo si intuisce. Se una funzione è olomorfa, allora è differenziabile infinite volte; inoltre una funzione olomorfa può essere scritta come serie di potenze (basta con gli spoiler).
 
-Vediamo subito due corollari che discendono direttamente dal teorema sulle (CR).
+Vediamo subito due corollari che discendono direttamente dal teorema (\ref{CR}) sulle condizioni di Cauchy-Riemann e dalla definizione appena riportata.
 
-\begin{thm}
-[CN per l'olomorfia]
-$f\in H(A)\ \Rightarrow$ valgono le (CR).
+\begin{thm}[CN per l'olomorfia]
+\label{CN}
+$f\in H(A)\ \Rightarrow$ valgono le (CR) $\forall z\in A$.
+\end{thm}
+È utile la sua contronominale: non valgono le (CR) $\Rightarrow\ f\not\in H$.
+
+\begin{proof}
+$f\in H(A)\ \stackrel{\mathrm{DEF}}{\Rightarrow}\ f\text{ differenziabile }\forall z\in A\ \ \stackrel{(\ref{CR})}{\Rightarrow}\ $ valgono le (CR) $\forall z\in A$.
+\end{proof}
+
+\begin{thm}[CNS per l'olomorfia]$\\$
+\label{CNS}
+$f\in H(A)\ \Leftrightarrow\ u,v\text{ differenziabili }\forall z\in A$ e valgono le (CR) $\forall z\in A$.
 \end{thm}
 
-\begin{thm}
-[CNS per l'olomorfia]
-\begin{equation*}
-\boxed{f\in H(A) \ \ \iff \ \
-\begin{cases}
-u, v\ \text{differenziabili }\forall z\in A\ (\text{cioè }f\in\Cc^1(A)) \\
-\text{valgono le (CR) } \forall z\in A
-\end{cases}}
-\end{equation*}
-\end{thm}
+\begin{proof}
+$f\in H(A)\ \stackrel{\mathrm{DEF}}{\Leftrightarrow}\ f\text{ differenziabile }\forall z\in A\ \ \stackrel{(\ref{CR})}{\Leftrightarrow}\ $ valgono le (CR) $\forall z\in A$.
+\end{proof}
 
 \begin{exa}
-Dire se le seguenti funzioni sono o meno olomorfe:
+Dire se le seguenti funzioni sono, o meno, olomorfe:
 \begin{itemize}
     \item $f(z)=\overline{z}$ è definita $\forall z_0\in\CC$ tuttavia non è olomorfa in alcun punto in quanto il rapporto incrementale non ammette limite per $h\to 0$
     \begin{equation*}
@@ -175,6 +178,7 @@ Dire se le seguenti funzioni sono o meno olomorfe:
     \item $f(z)=|z|^2=z\overline{z}$ è olomorfa solamente in $z=0$
 \end{itemize}
 \end{exa}
+
 
 \section{Funzioni armoniche}
 
@@ -191,14 +195,17 @@ $$
 $$
 Funzioni di questo tipo, ovvero a laplaciano nullo, sono dette funzioni armoniche.
 
+\newpage
 
 \section{Serie di potenze}
 
 Consideriamo una serie di potenze complessa
 \begin{equation*}
-f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n} \ \ \ \ \{a_{n}\}_{n\in\NN} \subset \CC,\ z\in \CC
+f(z) = \sum\limits^{\infty}_{n = 0} a_{n}(z - z_{0})^{n}\qquad\qquad\{a_{n}\} \subset \CC,\ z\in \CC
 \end{equation*}
-In primis osserviamo che si può tralasciare $z_{0}$, in quanto si può semplicemente fare una traslazione. Consideriamo quindi una certa serie di potenze centrata in $0$ al variare di $z$
+In primis osserviamo che si può tralasciare $z_{0}$, in quanto si può semplicemente fare una traslazione. 
+
+Consideriamo quindi una certa serie di potenze centrata in $0$ al variare di $z$
 \begin{equation}
 \label{serie_generica}
 f(z) = \sum\limits^{\infty}_{n = 0} a_{n} z^{n}
@@ -208,10 +215,8 @@ f(z) = \sum\limits^{\infty}_{n = 0} a_{n} z^{n}
 Se \eqref{serie_generica} converge in $z \neq 0$ allora converge assolutamente in $w\in\CC\ :\ |w|<|z|$.
 \end{thm}
 
-\fg{0.35}{bonfa_1}
-
 \begin{proof}
-Se la serie converge, allora il termine generale tende a zero
+Se la serie converge, allora il termine generale tende al centro della serie
 \begin{equation*}
 a_{n} z^{n}\rightarrow 0
 \end{equation*}
@@ -263,35 +268,43 @@ A questo punto è naturale chiedersi come calcolare $R\in[0,+\infty]$:
 \frac{1}{R}&=\limsup_{n\to+\infty}\sqrt[n]{|a_n|}\qquad\text{formula di Cauchy-Hadamard}
 \end{align*}
 
-\newpage
-
-Ora vogliamo estendere quanto detto per la convergenza puntuale a quella uniforme. Per prima cosa ricordiamo da AN2 il seguente
+Ora vogliamo estendere quanto detto per la convergenza assoluta a quella uniforme. Per prima cosa ricordiamo da AN2 il seguente
 \begin{thm}[Criterio di Weierstrass per la convergenza uniforme]$\\$
 Sia $\sum_n f_n(x)$ una serie di funzioni definite su $E\subseteq\RR$ tale che $|f_n(x)|\leq C_n$ $\forall x \in E$, $\forall n\geq 0$. Se la serie numerica $\sum_n C_n$ converge allora la serie di funzioni $\sum_n f_n(x)$ converge uniformemente su $E$.
 \end{thm}
-Allora estendendo ciò ai complessi abbiamo
+Si può parlare di ciò anche nei complessi, ma in pratica si sta semmplicemente dicendo che la convergenza totale, cioè la convergenza della successione
+\begin{equation*}
+\sum_{n=0}^\infty \sup_{z\in E} \left|a_nz^n\right|
+\end{equation*}
+implica la convergenza uniforme. Ciò ci permette di ricordare che la convergenza totale è la più \textit{forte}, mentre quella puntuale la più \textit{debole}.
+
+Bene, abbiamo tutti gli elementi per proseguire.
+
 \begin{thm}
-Si consideri la serie di potenze $\sum a_kz^k$ che converge puntualmente nel disco $D=\{z\in\CC\ :\ |z|< R\}$. Allora per ogni $r<R$ la serie converge uniformemente nel disco $d=\{z\in\CC\ :\ |z|\leq r\}$.
+Si consideri la serie di potenze $\sum a_nz^n$ che converge puntualmente nel disco $D=\{z\in\CC\ :\ |z|< R\}$. Allora per ogni $r<R$ la serie converge uniformemente nel disco $d=\{z\in\CC\ :\ |z|\leq r\}$.
 \end{thm}
 \begin{rem}
 Dunque la regione di convergenza uniforme è un \textbf{disco chiuso} contenuto nel \textbf{disco aperto} di convergenza puntuale assoluta.
 \end{rem}
 
 \begin{proof}
-L'idea è quella di usare Weierstrass, dunque calcoliamo $\sup_{z\in d} |a_kz^k|=C_k$ e se in qualche modo riusciamo a verificare che $\sum_k C_k<\infty$ allora la tesi è verificata.
+L'idea è quella di usare Weierstrass, dunque calcoliamo $\sup_{z\in d} |a_nz^n|=C_n$ e se in qualche modo riusciamo a verificare che $\sum_n C_n<\infty$ allora la tesi è verificata.
 
-Banalmente $\sup_{z\in d} |z^k|=r^k$ e quindi il nostro $C_k$ è
+Banalmente $\sup_{z\in d} |z^n|=r^n$ e quindi il nostro $C_n$ è
 $$
-\sup_{z\in d} |a_kz^k|=C_k=|a_k|r^k
+\sup_{z\in d} |a_nz^n|=C_n=|a_n|r^n
 $$
-Dobbiamo ora dimostrare che $\sum_k |a_k|r^k $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $r<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_kz^k|\leq M$, quindi
+Dobbiamo ora dimostrare che $\sum_n |a_n|r^n $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $r<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_nz^n|\leq M$, quindi
 $$
-\sum_k |a_k|r^k=\sum_k |a_k|r^k\,\frac{|z^k|}{|z^k|}\leq M\sum_{k} \left(\frac{r}{|z|}\right)^k<\infty
+\sum_n |a_n|r^n=\sum_n |a_n|r^n\,\frac{|z^n|}{|z^n|}\leq M\sum_{n} \left(\frac{r}{|z|}\right)^n<\infty
 $$
 \end{proof}
 \begin{rem}
 Ecco perché sul bordo di $D$ non possiamo dire nulla sulla convergenza puntuale, perché con Weierstrass bisogna fare il $\sup$, che se non chiudiamo il disco può non esistere.
 \end{rem}
+
+\newpage
+
 Conseguenze di questo teorema (proprietà di regolarità):
 \begin{enumerate}
     \item [$\triangleright$] La somma della serie è continua nel disco chiuso di raggio $r$.
@@ -300,13 +313,13 @@ Conseguenze di questo teorema (proprietà di regolarità):
 
 Ora parliamo di serie derivate:
 \begin{enumerate}
-    \item [$\triangleright$] La serie derivata è ancora una serie di potenze, infatti la derivata di $\sum_k a_kz^k$ si fa termine per termine e quindi
+    \item [$\triangleright$] La serie derivata è ancora una serie di potenze, infatti la derivata di $\sum_n a_nz^n$ si fa termine per termine e quindi
     $$
-    \left(\sum_k a_kz^k\right)'=\sum_k ka_kz^{k-1}
+    \left(\sum_n a_nz^n\right)'=\sum_n na_nz^{n-1}
     $$
     \item [$\triangleright$] La serie derivata ha lo stesso $R$ della serie di partenza, infatti per il criterio di Cauchy-Hadamrd
     $$
-    \frac{1}{R'}=\limsup_{k}\sqrt[k]{|ka_k|}=\limsup_{k}\sqrt[k]{|a_k|}=\frac{1}{R}
+    \frac{1}{R'}=\limsup_{n}\sqrt[n]{|na_n|}=\limsup_{n}\sqrt[n]{|a_n|}=\frac{1}{R}
     $$
     \item [$\triangleright$] Se ne deduce che anche la serie derivata converge assolutamente all'interno di $R$ ed è ivi derivabile, quindi una serie di potenze è derivabile infinte volte (iterando questo ragionamento).
 \end{enumerate}
@@ -396,7 +409,7 @@ Per raggirare il problema si ridefinisce il codominio della funzione come $2^\CC
 
 Un altro possibile approccio risolutivo, ideato da Riemann, è quello di limitare il dominio della funzione polidroma in maniera che non si possa girare attorno ai punti critici, detti di diramazione (nel caso di logaritmo e radice è l'origine). In questo modo è possibile assegnare dei valori privilegiati. Possiamo immaginare di associare ad ogni $k$ un diverso piano $\CC$; completato un giro antiorario (o orario) attorno al punto di diramazione si sale (o scende) alla realizzazione successiva. Questi piani sono detti appunti di Riemann e si possono immaginare come dei piani paralleli interrotti da un \textit{buco} e collegati con quelli adiacenti attraverso dei \textit{ponti}.
 
-\fg{0.4}{superfici-di-Riemann}
+\fg{0.3}{superfici-di-Riemann}
 
 
 \section{Curve in \texorpdfstring{$\CC$}{C}}
@@ -412,42 +425,62 @@ Data una curva $\gamma: [a, b]\subseteq\RR\rightarrow \CC$ regolare, cioè $\Cc^
 \end{defn}
 
 \begin{rem}
-L'integrale di linea complesso si trova a cavallo tra integrale curvilineo di prima specie e quello di seconda. Infatti ha la faccia di un integrale di prima specie (modulo a parte), tuttavia scomponendo $f$ in parte reale e immaginaria si ottiene un integrale di seconda specie
+Per l'integrale di linea complesso valgono le classiche proprietà
+$$
+\int_\gamma  \left(f+g\right)=\int_\gamma f + \int_\gamma g \qquad \int_\gamma kf = k\int_\gamma f \qquad \int_{-\gamma}f=-\int_\gamma f\qquad \left| \int_\gamma f \right|\leq \int_\gamma |f|
+$$
+\end{rem}
+
+L'integrale di linea complesso ha la faccia di un integrale di prima specie (modulo a parte), tuttavia scomponendo $f$ in parte reale e immaginaria si ottiene un integrale di seconda specie:
 \begin{gather*}
-f(x)=u(x,y)+iv(x,y) \\
+f(z)=u(x,y)+iv(x,y) \\
 \gamma(t)=x(t)+iy(t) \\ 
 \int_\gamma f(z)\dz=\int_a^b \left(ux'-vy'\right)\dt+i\int_a^b\left(uy'+vx'\right) \dt = \int_\gamma\left(u\,\de x-v\,\de y\right) +i\int_\gamma\left(u\,\de y+v\,\de x\right)
 \end{gather*}
-perchè appunto $u\,\de x-v\,\de y$ e $u\,\de y+v\,\de x$ sono due forme differenziali (o campi irrotazionali).
+In pratica, anche la forma differenziale complessa $f(z)\,\de z$ può essere scomposta in parte reale e immaginaria:
+\begin{equation*}
+f(z)\,\de z=\left(u\,\de x-v\,\de y\right)+i\left(u\,\de y+v\,\de x\right)
+\end{equation*}
+Ci sarebbero tante cose da dire ora, ma le posticipiamo al prossimo paragrafo. 
 
-Viene naturale osservare che, in virtù delle (CR), le sopracitate forme differenziali sono chiuse (ovviamente bisogna supporre $u,v\in\Cc^1$, che per quanto ne sappiamo ora non significa $f\in H$). 
-\end{rem}
-
-Per l'integrale di linea valgono le proprietà di linearità, cambio verso, e le consuete maggiorazioni:
-$$
-\int  \left(f+g\right)=\int f + \int g \qquad \int kf = k\int f \qquad \int_{-\gamma}=-\int_\gamma \qquad \left| \int f \right|\leq \int |f|
-$$
 
 \section{Teorema dell'Integrale Nullo di Cauchy}
 
-Ricordiamo da AN2 il
+Ricordiamo da AN2 i seguenti teoremi sulle forme differenziali esatte.
+
 \begin{lemma}[di Poincarè]$\\$
-Una forma differenziale $\Cc^1$ e chiusa in un aperto semplicemente connesso è esatta (o campo conservativo).
+Una forma differenziale esatta (o campo conservativo) è una forma differenziale $\Cc^1(\RR^n)$ chiusa (o campo irrotazionale) in un aperto semplicemente connesso.
 \end{lemma}
 
-Analogamente nei complessi vale il
-\begin{thm}[dell'Integrale Nullo di Cauchy]$\\$
+\begin{thm}
+Siano $\omega$ una forma differenziale esatta in $A\subset\RR^n$, $v$ una sua primitiva e $\gamma:[a,b]\to A$. Allora
+\begin{equation*}
+\int_\gamma \omega =v(\gamma(b))-v(\gamma(a))
+\end{equation*}
+\end{thm}
+
+\begin{coro}
+\label{mega_coro}
+Se $\omega$ è esatta e $\gamma$ chiusa ($a\equiv b$) allora 
+$$\displaystyle\int_\gamma \omega=0$$
+\end{coro}
+
+Nei complessi vale il
+\begin{thm}[dell'integrale nullo di Cauchy]$\\$
+\label{int_nullo}
 Siano $A\subset \CC$ un aperto semplicemente connesso, $f:A\to\CC$ olomorfa in $A$ e $\gamma:[a,b]\to A$ una curva chiusa. Allora
 \begin{equation*}
 \int_{\gamma} f(z) \dz = 0
 \end{equation*}
 \end{thm}
+
+\textbf{NB.} La dimostrazione vera e propria è molto lunga e tecnica, perciò noi ci limitiamo a verificare l'asserto nell'ipotesi aggiuntiva $u,v\in \Cc^{1}(A)$. Tale ipotesi aggiuntiva è molto \textit{sottile} per quanto dicevamo all'inizio su differenziabilità e $\Cc^1$: per la CNS sull'olomorfia (\ref{CNS}) abbiamo che $u,v$ sono differenziabili e valgono le (CR); tuttavia noi vogliamo sfruttare le proprietà delle forme differenziali e perciò non basta che $u,v$ siano differenziabili, ma devono essere $\Cc^1$. Quindi, in realtà, stiamo dimostrando il teorema dell'integrale nullo di Cauchy non sotto l'ipotesi di $f$ olomorfa cioè differenziabile, ma di $f\in\Cc^1(A)$.
+
 \begin{proof}
-La dimostrazione vera e propria è molto lunga e tecnica, perciò noi ci limiteremo a verificare l'asserto nel caso in cui $u,v\in C^{1}$:
+In virtù del fatto che $u,v\in\Cc^1$ e valgono le (CR) possiamo osservare che le forme differenziali $u\,\de x-v\,\de y$ e $u\,\de y+v\,\de x$ sono chiuse. Allora per lemma di Poincarè, essendo $A$ semplicemente connesso, abbiamo che tali forme differenziali sono anche esatte. Essendo $\gamma$ chiusa otteniamo la tesi:
 \begin{equation*}
 \int_{\gamma} f(z) \dz = \int_\gamma\left(u\,\de x-v\,\de y\right) +i\int_\gamma\left(u\,\de y+v\,\de x\right) = 0
 \end{equation*}
-in quanto le forme differenziali sono esatte.
 \end{proof}
 
 Il teorema dell'integrale nullo di Cauchy ha un'importantissima conseguenza: sia $f\in H(A)$ dove $A$ è un insieme qualsiasi, che per comodità rappresentativa immaginiamo con un \textit{buco}; allora prese due curve chiuse che girano attorno al \textit{buco} si ha
@@ -509,19 +542,15 @@ Questo è un teorema molto forte, in quanto conoscendo $f$ sul bordo, possiamo c
 
 \section{Esistenza di primitive}
 
-Nei reali $f\in\Cc^0\ \Rightarrow\ \exists F$ primitiva tale che $F'(x)=f(x)$; invece nei complessi la conitnuità non è più condizione sufficiente per l'esistenza di una primitiva.
+Nei reali $f\in\Cc^0\ \Rightarrow\ \exists F$ primitiva tale che $F'(x)=f(x)$; invece nei complessi la continuità non è più condizione sufficiente per l'esistenza di una primitiva.
 \begin{thm}
 Sia $f:A\to\CC$ continua, $A$ aperto semplicemente connesso. Allora le seguenti affermazioni sono equivalenti:
 \begin{enumerate}
     \item $\exists F:A\to\CC$ tale che $F'(z)=f(z)$ $\forall z\in A$
     \item $f\in H(A)$
-    \item $u\dx-v\dy$ e $u\dy+v\dx$ sono forme differenziali esatte
+    \item $u\,\de x-v\,\de y$ e $u\,\de y+v\,\de x$ sono forme differenziali esatte
 \end{enumerate}
 \end{thm}
-
-Dunque l'olomorfia è CNS per la derivabilità di una funzione complessa (terza conferma del fatto che le funzioni olomorfe sono \textit{cazzute}\footnote{Scusate il francesismo, ma non ho trovato (o voluto cercare) altri sinonimi.}).
-
-\newpage
 
 \section{Serie di potenze}
 
@@ -577,6 +606,8 @@ f(z)=\sum_{n=0}^\infty a_n(z-z_0)^n \qquad a_n=\frac{1}{2\pi i}\int_{\gamma}\fra
 $$
 \end{proof}
 
+\newpage
+
 Conseguenze di tale teorema:
 \begin{enumerate}
     \item [$\triangleright$] Presa una $f$ analitica, dato che si può esprimere localmente come serie di potenze per definizione, e che una serie di potenze è derivabile infinite volte, possiamo dire che $f$ analitica $\Rightarrow$ $f$ olomorfa.
@@ -604,8 +635,6 @@ Sia $A\subset\CC$ un aperto connesso e sia $f\in H(A)$. Se la funzione $z\mapsto
 Sia $A\subset\CC$ un aperto connesso e sia $f\in H(A)\cap\Cc^0(\overline{A})$. Se $f(z)\neq 0$ per ogni $z\in A$ allora la funzione $z\mapsto |f(z)|$ assume il suo valore minimo su $\partial A$.
 \end{coro}
 
-\newpage
-
 \section{Serie di Laurent}
 
 Finora si è parlato di funzioni olomorfe, ora dobbiamo capire cosa succede nel caso di funzioni non olomorfe.
@@ -621,18 +650,12 @@ Si dimostra che $f$ ammette espansione in serie di Taylor centrata in $z_0$
 \end{equation*} 
 Possiamo quindi espandere la funzione $f$ in serie di Taylor in ogni direzione meno quella che include il punto critico $z^*=1$.
 
-Per capire meglio osserviamo la seguente figura:
-
-\fg{0.7}{bonfa_6}
-
 Punti $z^*$ che non permettono di scrivere un'espansione in serie di Taylor centrata in $z_0$ e il cui disco di convergenza li contenga, sono detti \textit{punti singolari}. Più precisamente:
 \begin{defn}[Punto singolare]
 Sia $f:A\to\CC$, $f\in H(A)$. Il punto $z^*\in\partial A$ è detto singolare per $f$ se non esiste una serie di potenze convergente anche in $z^*$.
 \end{defn}
 
 Come vedremo, queste singolarità sono di vario tipo e verranno opportunamente classificate.
-
-\newpage
 
 Per risolvere il problema si introduce la \textit{serie di Laurent}, una \underline{serie di potenze bilatera} su una corona circolare $A$ (quindi \textit{non} semplicemente connessa) centrata nel punto stesso che compromette l'espansione in serie di Taylor.
 \begin{thm}[Serie di Laurent]$\\$
@@ -651,9 +674,12 @@ Osserviamo alcune cose:
 Ma questo come ci aiuta?\\
 Sia $f\in H(A\setminus\{z_0\})$, cioè $z_0$ è un punto singolare per $f$. Grazie al teorema di Laurent è possibile prendere una corona circolare di raggio interno piccolo a piacere e raggio esterno grande purché la corona rimanga all'interno di $A$, e scrivere $f$ come serie di Laurent centrata in $z_0$:
 
-\fg{0.7}{bonfa_7}
-
-\newpage
+\begin{figure}[h!]
+\begin{center}
+  \includegraphics[width=6cm]{images/bonfa_6}
+  \includegraphics[width=6cm]{images/bonfa_7}
+\end{center}
+\end{figure}
 
 \subsection{Classificazione delle singolarità al finito}
 
@@ -761,8 +787,6 @@ Vi è inoltre un terzo modo per studiare la singolarità all'infinito: $\infty$ 
 \textit{Esempio.}\\
 La funzione $f(z) = e^{z}$ ha singolarità isolata essenziale all'infinito, mentre $g(z) = \frac{1}{\sin z}$ ha punto all'infinito non isolato.
 
-\newpage
-
 \begin{rem}
 Al variare dell'aperto $A$ considerato, può variare la serie di Laurent associata ad una funzione $f$: in altre parole, bisognerà volta per volta precisare in quale corona si andrà ad operare. A titolo di esempio, prendiamo la funzione $f(z)=\dfrac{1}{z(1-z)}$; risulta
 \begin{align*}
@@ -773,6 +797,7 @@ Al variare dell'aperto $A$ considerato, può variare la serie di Laurent associa
 Dunque in 0 e 1 ci sono dei poli, all'infinito una singolarità eliminabile.
 \end{rem}
 
+\newpage
 
 \section{Teorema dei residui}
 
@@ -806,13 +831,13 @@ Sia $A$ semplicemente connesso. Sia $f\in H(A\setminus \{z_{1}, \dotsc, z_{n}\})
 \begin{proof} 
 Vediamo una dimostrazione abbastanza approssimativa e per $k=2$; la situazione è questa:
 
-\fg{0.5}{bonfa_8}
+\fg{0.3}{bonfa_8}
 
-vogliamo calcolare $\int_{\gamma}f(z)\dz$, ma per ora sappiamo dalla definizione di residuo che
+Vogliamo calcolare $\int_{\gamma}f(z)\dz$, ma per ora sappiamo dalla definizione di residuo che
 $$\int_{\Gamma_1}f(z)\dz=2\pi i\cdot \Res(f,z_1) \qquad \int_{\Gamma_2}f(z)\dz=2\pi i\cdot \Res(f,z_2)$$
 Per sbloccare la situazione usiamo la conseguenza del teorema dell'integrale nullo di Cauchy deformando con continuità $\gamma$ in $\gamma'$ \textit{girando attorno} alle singolarità:
 
-\fg{0.6}{bonfa_9}
+\fg{0.3}{bonfa_9}
 
 Da una parte 
 $$\int_{\gamma'}f(z)\dz=0$$
@@ -833,8 +858,6 @@ La funzione geometrica $f(z)=\frac{1}{1-z}$ ha $z^*=1$ come punto singolare. Si 
 \begin{defn}
 Si dice residuo di $f$ in $\infty$ la quantità $\Res(f,\infty):=-a_{-1}$.
 \end{defn}
-
-\newpage
 
 \begin{thm}
 Sia $f\in H(\CC\setminus\{z_1,\dotsc,z_n\})$. Allora
@@ -946,7 +969,7 @@ e $K$ non dipende da $R$.
 \begin{proof}\leavevmode
 \begin{equation*}
 \begin{aligned}
-\left|\int_{C_R} e^{i \omega t} f(z) \dz\right| &\stackrel{D E F}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
+\left|\int_{C_R} e^{i \omega t} f(z) \dz\right| &\stackrel{\mathrm{DEF}}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
 &\leqslant \underbrace{\max _{t \in[0, \pi]}\left|f\left(R e^{i t}\right)\right|}_M\cdot\left|\int_0^\pi Re^{i \omega(\cos t+i \sin t) R} \dt\right|\\
 &=M\left|\int_0^\pi R\ \cancel{e^{\text {Ri}\omega \cos t}}\ e^{-R \omega \sin t} \dt\right|\\
 &=2 M\left|\int_0^{\pi / 2} R e^{-\omega R \sin t} \dt\right|\\
@@ -959,12 +982,14 @@ e $K$ non dipende da $R$.
 \end{equation*}
 \end{proof}
 
+\newpage
+
 Come corollari di ciò ci sono i casi in cui si ha
 \begin{itemize}
-    \item $\int_{C_R} e^{i\omega z}f(z)\dz$ ma $\omega<0$: si prende
+    \item $\displaystyle\int_{C_R} e^{i\omega z}f(z)\dz$ ma $\omega<0$: si prende
     \fg{0.4}{bonfa_11}
 
-    \item $\int_{C_R} e^{\omega z}f(z)\dz$ con $\omega>0$ o $\omega<0$: si prendono rispettivamente
+    \item $\displaystyle\int_{C_R} e^{\omega z}f(z)\dz$ con $\omega>0$ o $\omega<0$: si prendono rispettivamente
     \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=4cm]{images/bonfa_12}
@@ -2349,8 +2374,7 @@ Dal punto di vista geometrico, una funzione è concava se comunque si scelgano l
 
 
 \begin{defn}
-Due numeri $p, q \geq 1$ sono \textbf{esponenti coniugati} se $\dfrac{1}{p} + \dfrac{1}{q} = 1$.\\
-Tale concetto si estende anche al caso $p=1$ e $q=+\infty$ e viceversa.
+Due numeri $p, q \geq 1$ sono \textbf{esponenti coniugati} se $\dfrac{1}{p} + \dfrac{1}{q} = 1$, con la convenzione che $\dfrac{1}{\infty}=0$.
 \end{defn}
 
 \begin{rem}
@@ -2376,7 +2400,7 @@ Dato che il logaritmo è una funzione crescente posso semplificarlo e ottenere c
 \end{proof}
 
 \begin{thm}[Disuguaglianza di Holder]$\\$
-Sia $A\subseteq\RR^n$ misurabile e siano $p,q\in[0,+\infty]$ coniugati. Se $f\in L^p(A)$ e $g\in L^q(A)$ allora $fg\in L^1(A)$ e
+Sia $A\subseteq\RR^n$ misurabile e siano $p,q\in[1,+\infty]$ coniugati. Se $f\in L^p(A)$ e $g\in L^q(A)$ allora $fg\in L^1(A)$ e
 \begin{equation*}
 \int_A | f(x) g(x)| \dx=\Vert fg \Vert_1 \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{equation*}
@@ -2385,13 +2409,13 @@ Sia $A\subseteq\RR^n$ misurabile e siano $p,q\in[0,+\infty]$ coniugati. Se $f\in
 \begin{proof}
 Dimostriamo prima l'asserto nel caso $p=1$ e $q=\infty$ (la dimostrazione con $q=1$ e $p=\infty$ è del tutto analoga).
 
-Abbiamo $f\in L^1$ e $g\in L^{\infty}$. Per definizone di norma infinito abbiamo 
+Abbiamo $f\in L^1$ e $g\in L^{\infty}$. Per definizione di norma infinito abbiamo 
 $$
 |g(x)| \leq \Vert g \Vert_{\infty} \qquad\qquad\text{q.o. in }x
 $$
 e dunque
 $$
-\int_A |f(x) g(x)| \dx \leq \Vert g \Vert_{\infty}\cdot \int_A |f(x)| \dx = \Vert g \Vert_{\infty}\cdot \Vert f \Vert_{1}
+\int_A |f(x) g(x)| \dx \stackrel{\mathrm{CS}}{\leq} \int_A |f(x)|\cdot|g(x)|\dx\leq \Vert g \Vert_{\infty}\cdot \int_A |f(x)| \dx = \Vert g \Vert_{\infty}\cdot \Vert f \Vert_{1}
 $$
 
 Possiamo passare a dimostrare l'asserto per due generici $1<p,q<\infty$. 
@@ -2406,15 +2430,15 @@ Per semplicità consideriamo dapprima due funzioni $\widetilde{f}\in L^p$ e $\wi
 
 Ma allora il caso generale (con norme non necessariamente unitarie) è banale da verificare:
 \begin{gather*}
-f(x)=\frac{\Vert f \Vert_{p}}{\Vert f \Vert_{p}} \cdot f(x)=\frac{f(x)}{\Vert f \Vert_{p}} \cdot \Vert f \Vert_{p} = \widetilde{f}(x)\cdot \Vert f \Vert_{p} \\
-g(x)=\frac{\Vert g \Vert_{q}}{\Vert g \Vert_{q}} \cdot g(x)=\frac{g(x)}{\Vert g \Vert_{q}} \cdot \Vert g \Vert_{q} = \widetilde{g}(x)\cdot \Vert g \Vert_{q} \\
-\Longrightarrow \int_A | f(x) g(x)| \dx =\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
+f(x)=\frac{f(x)}{\Vert f \Vert_{p}} \cdot \Vert f \Vert_{p} = \widetilde{f}(x)\cdot \Vert f \Vert_{p} \\
+g(x)=\frac{g(x)}{\Vert g \Vert_{q}} \cdot \Vert g \Vert_{q} = \widetilde{g}(x)\cdot \Vert g \Vert_{q} \\
+\Longrightarrow \int_A | f(x) g(x)| \dx \stackrel{\mathrm{CS}}{\leq}\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{gather*}
 \end{proof}
 
 Conseguenze della disuguaglianza di Holder:
 \begin{itemize}
-    \item Se $A\subset\RR^n$ è un insieme di misura finita e $1\leq p<q\leq+\infty$ allora vale l'inclusione $L^q(A)\subset L^p(A)$ e inoltre
+    \item Se $A\subset\RR^n$ è un insieme di \underline{misura finita} e $1\leq p<q\leq+\infty$ allora vale l'inclusione $L^q(A)\subset L^p(A)$ e inoltre
     $$
     \Vert f \Vert_p\leq |A|^{\frac{1}{p}-\frac{1}{q}}\Vert f\Vert_q \qquad \qquad \forall f\in L^q(A) 
     $$
@@ -2433,14 +2457,14 @@ Conseguenze della disuguaglianza di Holder:
 \begin{thm}[Disuguaglianza di Minkowski]$\\$
 Siano $p \geq 1, f\in L^{p}, g\in L^{p}$. Allora
 \begin{equation*}
-(f + g) \in L^{p} \ \ \text{e} \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
+(f + g) \in L^{p} \ \ \text{e} \ \ \Vert f + g \Vert_{p} \leq \Vert f \Vert_{p} + \Vert g \Vert_{p}
 \end{equation*}
 \end{thm}
 \begin{proof}
 \begin{align*}
-\Vert f + g \Vert^{p}_{L^{p}} & = \int | f(x) + g(x)|^{p} dx\\
- & = \int | f(x) + g(x)|^{p - 1}| f(x) + g(x)| dx\\
- & \leq \int \underbrace{| f(x) + g(x)|^{p - 1}}_{A}\underbrace{| f(x)|}_{B} dx + \int \underbrace{| f(x) + g(x)|^{p - 1}}_{C}\underbrace{| g(x)|}_{D} dx
+\Vert f + g \Vert^{p}_{p} & = \int | f(x) + g(x)|^{p} \dx\\
+ & = \int | f(x) + g(x)|^{p - 1}| f(x) + g(x)| \dx\\
+ & \leq \int \underbrace{| f(x) + g(x)|^{p - 1}}_{A}\underbrace{| f(x)|}_{B} \dx + \int \underbrace{| f(x) + g(x)|^{p - 1}}_{C}\underbrace{| g(x)|}_{D} \dx
 \end{align*}
 Consideriamo $h(x) = A$
 \begin{equation*}
@@ -2448,20 +2472,20 @@ Consideriamo $h(x) = A$
 \end{equation*}
 Sappiamo già, per dimostrazione precedente, che $(f + g) \in L^{p}$, allora $h\in L^{q}$. Usiamo la disuguaglianza di Holder su $A\in L^{q}, B\in L^{p}$ e $C\in L^{q}, D\in L^{p}$. Otteniamo
 \begin{align*}
-\Vert f + g \Vert^{p}_{L^{p}} & \leq \Vert f \Vert_{L^{p}}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{L^{q}} + \Vert g \Vert_{L^{p}}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{L^{q}}
+\Vert f + g \Vert^{p}_{p} & \leq \Vert f \Vert_{p}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{q} + \Vert g \Vert_{p}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{q}
 \end{align*}
 osserviamo il termine che si presenta due volte
 \begin{align*}
-\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{L^{q}} & = \left(\int | f(x) + g(x)|^{(p - 1) q} dx\right)^{1/q}\\
- & = \left(\int | f(x) + g(x)|^{p} dx\right)^{1/q}\\
- & = \left(\Vert f + g \Vert^{p}_{L^{p}}\right)^{1/q}\\
- & = \Vert f + g \Vert^{p/q}_{L^{p}}\\
- & = \Vert f + g \Vert^{p - 1}_{L^{p}}
+\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{q} & = \left(\int | f(x) + g(x)|^{(p - 1) q} \dx\right)^{1/q}\\
+ & = \left(\int | f(x) + g(x)|^{p} \dx\right)^{1/q}\\
+ & = \left(\Vert f + g \Vert^{p}_{p}\right)^{1/q}\\
+ & = \Vert f + g \Vert^{p/q}_{p}\\
+ & = \Vert f + g \Vert^{p - 1}_{p}
 \end{align*}
 allora
 \begin{gather*}
-\Vert f + g \Vert^{p}_{L^{p}} \leq \Vert f \Vert_{L^{p}} \Vert f + g \Vert^{p - 1}_{L^{p}} + \Vert g \Vert_{L^{p}} \Vert f + g \Vert^{p - 1}_{L^{p}}\\
-\implies \ \ \Vert f + g \Vert_{L^{p}} \leq \Vert f \Vert_{L^{p}} + \Vert g \Vert_{L^{p}}
+\Vert f + g \Vert^{p}_{p} \leq \Vert f \Vert_{p} \Vert f + g \Vert^{p - 1}_{p} + \Vert g \Vert_{p} \Vert f + g \Vert^{p - 1}_{p}\\
+\implies \ \ \Vert f + g \Vert_{p} \leq \Vert f \Vert_{p} + \Vert g \Vert_{p}
 \end{gather*}
 \end{proof}
 
@@ -3072,10 +3096,11 @@ La dimostrazione si articola in tre punti:
 
     Usando la proprietà $\displaystyle\left|\int f\right|\leq \int|f|$ possiamo scrivere
     \begin{equation*}
-    \left\Vert \hat{f} \right\Vert_{\infty} = \left| \hat{f}(z)\right| = \left| \int_{\RR} e^{- ixz} f(x) \dx\right| \leq \int_{\RR}\left| e^{- ixz} f(x)\right| \dx \leq \int_{\RR}| f(x)| \dx = \Vert f \Vert_{L^{1}}
+    \left| \hat{f}(z)\right| = \left| \int_{\RR} e^{- ixz} f(x) \dx\right| \leq \int_{\RR}\left| e^{- ixz} f(x)\right| \dx \leq \int_{\RR}| f(x)| \dx = \Vert f \Vert_{L^{1}}
     \end{equation*}
+    da cui segue, per la continuità della funzione, la tesi.
 
-    \item [$\triangleright$] Ultimo punto per l'appartenenza a $\Cc_0^0$: è vero che $\lim\limits_{\to \pm \infty}\hat{f}(z) = 0$ ??
+    \item [$\triangleright$] Ultimo punto per l'appartenenza a $\Cc_0^0$: è vero che $\lim\limits_{z\to \pm \infty}\hat{f}(z) = 0$ ??
 
     Ricordiamo che $-1=e^{i\pi}$ e quindi $1=-e^{i\pi}$. Allora
     \begin{equation*}
