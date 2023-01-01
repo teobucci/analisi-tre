@@ -226,7 +226,7 @@ quindi è limitato
 \end{equation*}
 A questo punto verifichiamo la convergenza assoluta della serie in $w$:
 \begin{equation*}
-\sum\limits^{\infty}_{n = 0}\left| a_{n} w^{n}\right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} w^{n} \cdot \frac{z^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} z^{n} \cdot \frac{w^n}{z^n} \right| \overset{\underset{\text{CS}}{}}{\leq} \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}\right|}_{\leq M}\cdot \left|\frac{w^n}{z^n}\right| \leq M\sum\limits^{\infty}_{n = 0}\left|\frac{w}{z}\right|^n
+\sum\limits^{\infty}_{n = 0}\left| a_{n} w^{n}\right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} w^{n} \cdot \frac{z^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0} \left|a_{n} z^{n} \cdot \frac{w^n}{z^n} \right| = \sum\limits^{\infty}_{n = 0}\underbrace{\left| a_{n} z^{n}\right|}_{\leq M}\cdot \left|\frac{w^n}{z^n}\right| \leq M\sum\limits^{\infty}_{n = 0}\left|\frac{w}{z}\right|^n
 \end{equation*}
 ma questa è una serie geometrica di ragione $\dfrac{|w|}{| z|} < 1$ per ipotesi quindi converge, e allora la serie converge assolutamente. 
 \end{proof}
@@ -294,9 +294,9 @@ Banalmente $\sup_{z\in d} |z^n|=r^n$ e quindi il nostro $C_n$ è
 $$
 \sup_{z\in d} |a_nz^n|=C_n=|a_n|r^n
 $$
-Dobbiamo ora dimostrare che $\sum_n |a_n|r^n $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $r<|z|<R$; sappiamo che in tutta questa corona c'è convergenza assoluta, ovvero che $|a_nz^n|\leq M$, quindi
+Dobbiamo ora dimostrare che $\sum_n |a_n|r^n $ converge. Per fare ciò scegliamo uno $z$ che sta nella corona circolare compresa da $d$ e $D$, cioè $r<|z|<R$; sappiamo che in tutta questa corona c'è convergenza puntuale, ovvero che $|a_nz^n|\leq M$, quindi
 $$
-\sum_n |a_n|r^n=\sum_n |a_n|r^n\,\frac{|z^n|}{|z^n|}\leq M\sum_{n} \left(\frac{r}{|z|}\right)^n<\infty
+\sum\limits^{\infty}_{n = 0} |a_n|r^n=\sum\limits^{\infty}_{n = 0} |a_n|r^n\cdot\frac{|z^n|}{|z^n|}=\sum\limits^{\infty}_{n = 0} \underbrace{|a_nz^n|}_{\leq M}\cdot\frac{r^n}{|z^n|}\leq M\sum_{n=0}^\infty \left(\frac{r}{|z|}\right)^n<\infty
 $$
 \end{proof}
 \begin{rem}
@@ -2415,24 +2415,24 @@ $$
 $$
 e dunque
 $$
-\int_A |f(x) g(x)| \dx \stackrel{\mathrm{CS}}{\leq} \int_A |f(x)|\cdot|g(x)|\dx\leq \Vert g \Vert_{\infty}\cdot \int_A |f(x)| \dx = \Vert g \Vert_{\infty}\cdot \Vert f \Vert_{1}
+\int_A |f(x) g(x)| \dx \leq \Vert g \Vert_{\infty}\cdot \int_A |f(x)| \dx = \Vert g \Vert_{\infty}\cdot \Vert f \Vert_{1}
 $$
 
 Possiamo passare a dimostrare l'asserto per due generici $1<p,q<\infty$. 
 
 Per semplicità consideriamo dapprima due funzioni $\widetilde{f}\in L^p$ e $\widetilde{g}\in L^q$ tali che $\Vert \widetilde{f}\Vert_p=1$ e $\Vert \widetilde{g}\Vert_q=1$. In questo modo per la disuguaglianza di Young si ha
 \begin{align*}
-\int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx&\leq \int_A \left(\frac{|\widetilde{f}(x)|^p}{p}+\frac{|\widetilde{g}(x)|^q}{q} \right)\dx \\
-&=\left(\frac{\Vert \widetilde{f}\Vert_p^p}{p}+\frac{\Vert \widetilde{g}\Vert_q^q}{q}\right) \\
+\int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx&\leq \int_A \left(\frac{|\widetilde{f}(x)|^p}{p}+\frac{|\widetilde{g}(x)|^q}{q} \right)\de x \\
+&=\frac{\Vert \widetilde{f}\Vert_p^p}{p}+\frac{\Vert \widetilde{g}\Vert_q^q}{q} \\
 &=\frac{1}{p}+\frac{1}{q} \\
-&=1\left(=\Vert \widetilde{f}\Vert_p\cdot \Vert \widetilde{g}\Vert_q\right)
+&=1
 \end{align*} 
 
 Ma allora il caso generale (con norme non necessariamente unitarie) è banale da verificare:
 \begin{gather*}
 f(x)=\frac{f(x)}{\Vert f \Vert_{p}} \cdot \Vert f \Vert_{p} = \widetilde{f}(x)\cdot \Vert f \Vert_{p} \\
 g(x)=\frac{g(x)}{\Vert g \Vert_{q}} \cdot \Vert g \Vert_{q} = \widetilde{g}(x)\cdot \Vert g \Vert_{q} \\
-\Longrightarrow \int_A | f(x) g(x)| \dx \stackrel{\mathrm{CS}}{\leq}\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
+\Longrightarrow \int_A | f(x) g(x)| \dx =\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{gather*}
 \end{proof}
 
