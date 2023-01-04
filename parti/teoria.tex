@@ -83,7 +83,7 @@ Sia per ipotesi $f$ differenziabile in $z_0$. Allora vale l'estensione al campo 
 \end{equation*}
 che, pensandoci, non può che essere così ($u,v$ sono funzioni $\RR^2\to\RR$ e quindi vale per loro il teorema di AN2 enunciato sopra). 
 
-Con i versori direzionali $d=(1,0)$ e $d=(0,i)$ abbiamo
+Con i versori direzionali $d=(1,0)=1$ e $d=(0,1)=i$ abbiamo
 \begin{gather*}
 \frac{\partial f}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial f}{\partial y}\,(z_0)=if'(z_0) \\
 \frac{\partial (u+iv)}{\partial x}\,(z_0)=f'(z_0) \qquad \frac{\partial (u+iv)}{\partial y}\,(z_0)=if'(z_0) \\
@@ -272,7 +272,7 @@ Ora vogliamo estendere quanto detto per la convergenza assoluta a quella uniform
 \begin{thm}[Criterio di Weierstrass per la convergenza uniforme]$\\$
 Sia $\sum_n f_n(x)$ una serie di funzioni definite su $E\subseteq\RR$ tale che $|f_n(x)|\leq C_n$ $\forall x \in E$, $\forall n\geq 0$. Se la serie numerica $\sum_n C_n$ converge allora la serie di funzioni $\sum_n f_n(x)$ converge uniformemente su $E$.
 \end{thm}
-Si può parlare di ciò anche nei complessi, ma in pratica si sta semmplicemente dicendo che la convergenza totale, cioè la convergenza della successione
+Si può parlare di ciò anche nei complessi, ma in pratica si sta semplicemente dicendo che la convergenza totale, cioè la convergenza della successione
 \begin{equation*}
 \sum_{n=0}^\infty \sup_{z\in E} \left|a_nz^n\right|
 \end{equation*}
@@ -969,7 +969,7 @@ e $K$ non dipende da $R$.
 \begin{proof}\leavevmode
 \begin{equation*}
 \begin{aligned}
-\left|\int_{C_R} e^{i \omega t} f(z) \dz\right| &\stackrel{\mathrm{DEF}}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
+\left|\int_{C_R} e^{i \omega z} f(z) \dz\right| &\stackrel{\mathrm{DEF}}{=}\left|\int_0^\pi e^{i \omega(\cos t+i \sin t) R} f\left(R e^{i t}\right) \cdot R \cancel{i e^{i t}} \dt\right|\\
 &\leqslant \underbrace{\max _{t \in[0, \pi]}\left|f\left(R e^{i t}\right)\right|}_M\cdot\left|\int_0^\pi Re^{i \omega(\cos t+i \sin t) R} \dt\right|\\
 &=M\left|\int_0^\pi R\ \cancel{e^{\text {Ri}\omega \cos t}}\ e^{-R \omega \sin t} \dt\right|\\
 &=2 M\left|\int_0^{\pi / 2} R e^{-\omega R \sin t} \dt\right|\\
@@ -977,7 +977,7 @@ e $K$ non dipende da $R$.
 &=2 M \cancel{R}\left|\left[\frac{1}{-\omega \cancel{R}}\ e^{-\omega R t}\right]_0^{\pi / 2}\right|\\
 &\leqslant \frac{2 M}{\omega}\left|e^{-\omega R \pi / 2}-1\right|\\
 &\leqslant \frac{2 M}{\omega}\\
-&=K M \text { con } k=\frac{2}{\omega}
+&=K M \text { con } K=\frac{2}{\omega}
 \end{aligned}
 \end{equation*}
 \end{proof}
@@ -2297,17 +2297,17 @@ $$
 $$
 per ogni $f\in L^p(A)$.
 \end{defn}
-
-Il caso $p=\infty$ merita una trattazione a parte.
-
 \begin{defn}
 Sia $A\subseteq\RR^n$ un insieme misurabile. Per ogni funzione $f:A\to\RR$ misurabile definiamo l'\textbf{estremo superiore essenziale} di $f$ su $A$ come
 $$
-\esssup_{x\in A} f(x):=\inf\left\{ \alpha\in\RR\ :\ \left|f^{-1}(\alpha,+\infty) \right|=0 \right\}
+\esssup_{x\in A} f(x):=\inf\left\{ \alpha\in\RR\ :\ \left|f^{-1}(\alpha,+\infty) \right|=0 \right\}\in[0,\infty]
 $$
 dove con $\left|f^{-1}(\alpha,+\infty) \right|$ si intende la misura della controimmagine di $f(\alpha,+\infty)$.
 \end{defn}
 In pratica si è rivisitato il concetto di estremo superiore in modo tale che non vengano considerati punti a misura nulla. Per intenderci:
+\begin{equation*}
+\esssup f(x)\leq \sup f(x)\qquad \left(\text{vale } =\text{ se }f\text{ è continua}\right)
+\end{equation*}
 \fg{0.4}{bonfa_18}
 
 \begin{defn}
@@ -2346,43 +2346,59 @@ $$
 è una combinazione lineare convessa.
 
 Inoltre, diremo che $f$ è convessa se
-$$
+\begin{equation}
+\label{convessa}
 f(tx+(1-t)y)\leq t f(x)+(1-t)f(y)
-$$
+\end{equation}
+
+
 mentre diremo che è concava se
-$$
+\begin{equation}
+\label{concava}
 f(tx+(1-t)y)\geq t f(x)+(1-t)f(y)
-$$
+\end{equation}
 \end{defn}
 
-\begin{thm}
-La funzione logaritmo è concava.
-\end{thm}
-
-\begin{rem}
-Dal punto di vista geometrico, una funzione è concava se comunque si scelgano le ascisse $x,y$ il segmento congiungente i punti $(x,f(x)),(y,f(y))$ sottosta al grafico della funzione.
-
-\end{rem}
+Esempi di funzioni concave e convessa sono riportati nella figura sottostante:
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.3\linewidth]{bonfa_19} $\quad$
-\includegraphics[width=0.3\linewidth]{bonfa_20}
-\caption{Funzione modulo (convessa) a sinistra e logaritmo (concava) a destra}
+\includegraphics[width=0.3\linewidth]{bonfa_20} $\quad$
+\includegraphics[width=0.3\linewidth]{bonfa_21}
+\caption{Funzioni modulo (convessa) a sinistra, esponenziale (convessa) al centro e logaritmo (concava) a destra}
 \end{figure}
 \FloatBarrier
 
+\begin{rem}
+Dal punto di vista geometrico, una funzione è convessa/concava se comunque si scelgano le ascisse $x,y$ il segmento congiungente i punti $(x,f(x)),(y,f(y))$ è soprastante/sottostante al grafico della funzione.
+\end{rem}
 
-\begin{defn}
-Due numeri $p, q \geq 1$ sono \textbf{esponenti coniugati} se $\dfrac{1}{p} + \dfrac{1}{q} = 1$, con la convenzione che $\dfrac{1}{\infty}=0$.
+
+\begin{defn}[Esponenti coniugati]$\\$
+Due numeri $p, q \geq 1$ sono esponenti coniugati se $\dfrac{1}{p} + \dfrac{1}{q} = 1$, con la convenzione che $\dfrac{1}{\infty}=0$.
 \end{defn}
 
-\begin{rem}
-Prendendo due esponenti coniugati la concavità della funzione logaritmo può essere espressa come
-$$
-\log\left(\frac{x}{p}+\frac{y}{q}\right)\geq \frac{\log x}{p}+\frac{\log y}{q}
-$$
-\end{rem}
+Prendiamo $p,q$ esponenti coniugati e vediamo cosa possiamo dedurre dalla condizione di convessità \eqref{convessa}:
+\begin{gather*}
+f(tx+(1-t)y)\leq t f(x)+(1-t)f(y) \\
+\left\{t=\frac{1}{p},\ (1-t)=\frac{1}{q}\right\} \\
+f\left(\frac{x}{p}+\frac{y}{q}\right)\leq \frac{f(x)}{p}+\frac{f(y)}{q}
+\end{gather*}
+\begin{equation}
+\label{esp_convesso}
+\Rightarrow\ \boxed{e^{\frac{x}{p}+\frac{y}{q}}\leq \frac{e^x}{p}+\frac{e^y}{q}}
+\end{equation}
+Analogamente, per il logaritmo vale:
+\begin{gather*}
+f(tx+(1-t)y)\geq t f(x)+(1-t)f(y) \\
+\left\{t=\frac{1}{p},\ (1-t)=\frac{1}{q}\right\} \\
+f\left(\frac{x}{p}+\frac{y}{q}\right)\geq \frac{f(x)}{p}+\frac{f(y)}{q}
+\end{gather*}
+\begin{equation}
+\label{log_convesso}
+\Rightarrow\ \boxed{\log\left(\frac{x}{p}+\frac{y}{q}\right)\geq \frac{\log x}{p}+\frac{\log y}{q}}
+\end{equation}
 
 \begin{thm}[Disuguaglianza di Young]$\\$
 Siano $p, q$ esponenti coniugati. Allora $\forall a, b > 0$ vale
@@ -2391,12 +2407,18 @@ ab\leq\frac{a^{p}}{p} + \frac{b^{q}}{q}
 \end{equation*}
 \end{thm}
 
-\begin{proof}
-La dimostrazione si basa sulle proprietà del logaritmo:
-$$
-\log(ab)=\log(a)+\log(b)=\frac{\log a^p}{p}+\frac{\log b^q}{q}\leq \log\left(\frac{a^p}{p}+\frac{b^q}{q}\right)
-$$
-Dato che il logaritmo è una funzione crescente posso semplificarlo e ottenere così la tesi.
+\begin{proof} Presentiamo due dimostrazioni analoghe. \leavevmode
+
+La prima:
+\begin{equation*}
+ab=e^{\log(ab)}=e^{\log(a)+\log(b)}=e^{\frac{p\log(a)}{p}+\frac{q\log(b)}{q}}=e^{\frac{\log\left(a^p\right)}{p}+\frac{\log\left(b^q\right)}{q}}\stackrel{\eqref{esp_convesso}}{\leq} \frac{e^{\log\left(a^p\right)}}{p}+\frac{e^{\log\left(b^q\right)}}{q}=\frac{a^{p}}{p} + \frac{b^{q}}{q}
+\end{equation*}
+
+La seconda:
+\begin{equation*}
+\log(ab)=\log(a)+\log(b)=\frac{p\log(a)}{p}+\frac{q\log(b)}{q}=\frac{\log \left(a^p\right)}{p}+\frac{\log \left(b^q\right)}{q}\stackrel{\eqref{log_convesso}}{\leq} \log\left(\frac{a^p}{p}+\frac{b^q}{q}\right)
+\end{equation*}
+e dato che il logaritmo è una funzione crescente posso semplificarlo e ottenere così la tesi.
 \end{proof}
 
 \begin{thm}[Disuguaglianza di Holder]$\\$
@@ -2421,12 +2443,9 @@ $$
 Possiamo passare a dimostrare l'asserto per due generici $1<p,q<\infty$. 
 
 Per semplicità consideriamo dapprima due funzioni $\widetilde{f}\in L^p$ e $\widetilde{g}\in L^q$ tali che $\Vert \widetilde{f}\Vert_p=1$ e $\Vert \widetilde{g}\Vert_q=1$. In questo modo per la disuguaglianza di Young si ha
-\begin{align*}
-\int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx&\leq \int_A \left(\frac{|\widetilde{f}(x)|^p}{p}+\frac{|\widetilde{g}(x)|^q}{q} \right)\de x \\
-&=\frac{\Vert \widetilde{f}\Vert_p^p}{p}+\frac{\Vert \widetilde{g}\Vert_q^q}{q} \\
-&=\frac{1}{p}+\frac{1}{q} \\
-&=1
-\end{align*} 
+\begin{equation*}
+\int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx\leq \int_A \left(\frac{|\widetilde{f}(x)|^p}{p}+\frac{|\widetilde{g}(x)|^q}{q} \right)\de x =\frac{\Vert \widetilde{f}\Vert_p^p}{p}+\frac{\Vert \widetilde{g}\Vert_q^q}{q}=\frac{1}{p}+\frac{1}{q}=1
+\end{equation*} 
 
 Ma allora il caso generale (con norme non necessariamente unitarie) è banale da verificare:
 \begin{gather*}
@@ -2435,6 +2454,8 @@ g(x)=\frac{g(x)}{\Vert g \Vert_{q}} \cdot \Vert g \Vert_{q} = \widetilde{g}(x)\c
 \Longrightarrow \int_A | f(x) g(x)| \dx =\Vert f \Vert_{p}\cdot \Vert g \Vert_{q} \cdot \int_A | \widetilde{f}(x) \widetilde{g}(x)| \dx \leq \Vert f \Vert_{p}\cdot \Vert g \Vert_{q}
 \end{gather*}
 \end{proof}
+
+\newpage
 
 Conseguenze della disuguaglianza di Holder:
 \begin{itemize}
@@ -3004,19 +3025,19 @@ Ovviamente $f_y\in L^1(\RR)$.
 \label{per_la_dim_riemann_L}
 Sia $f\in L^{1}(\RR)$ e sia $f_y\in L^1(\RR)$ la sua traslata. Allora
 \begin{equation*}
-\lim\limits_{y\rightarrow 0} \Vert f - f_y \Vert_{L^{1}} = 0
+\lim\limits_{y\rightarrow 0} \Vert f - f_y \Vert_{1} = 0
 \end{equation*}
 \end{thm}
 
 
 \begin{proof}
-Poiché $\Dc(\RR)$ è denso in $L^1(\RR)$ (si veda teorema \ref{teo_denso})
+Poiché $\Dc(\RR)$ è denso in $L^1(\RR)$ (si veda teorema (\ref{teo_denso}))
 \begin{equation*}
-\forall\Ec>0\ \ \exists\varphi\in\Dc(\RR)\text{ tc } \Vert f-\varphi\Vert<\Ec
+\forall\Ec>0\ \ \exists\varphi\in\Dc(\RR)\text{ tc } \Vert f-\varphi\Vert_1<\Ec
 \end{equation*}
 Ovviamente tale risultato vale anche per la traslata
 \begin{equation*}
-\forall\Ec>0\ \ \exists\varphi_y\in\Dc(\RR)\text{ tc } \Vert f_y-\varphi_y\Vert<\Ec
+\forall\Ec>0\ \ \exists\varphi_y\in\Dc(\RR)\text{ tc } \Vert f_y-\varphi_y\Vert_1<\Ec
 \end{equation*}
 Posto dunque $[a,b]$, con $a\in\RR$ e $b\in\RR$, un generico insieme tale che $\supp\varphi\subset[a,b]$ e $\supp\varphi_y\subset[a,b]$, per l'uniforme continuità di $\varphi$
 \begin{equation*}
@@ -3028,21 +3049,21 @@ che può essere riscritta in
 \end{equation*}
 Possiamo dunque calcolare $\forall y\text{ tc }|y|<\delta$
 \begin{equation*}
-\Vert\varphi-\varphi_y\Vert_{L^1}=\int_\RR |\varphi(x)-\varphi_y(x)|\dx=\int_a^b |\varphi(x)-\varphi_y(x)|\dx\leq \Ec(b-a)
+\Vert\varphi-\varphi_y\Vert_{1}=\int_\RR |\varphi(x)-\varphi_y(x)|\dx=\int_a^b |\varphi(x)-\varphi_y(x)|\dx\leq \Ec(b-a)
 \end{equation*}
-Ricapitolando, e sottointendendo la norma di $L^1$, abbiamo finora dimostrato che
+Ricapitolando, abbiamo finora dimostrato che
 \begin{equation*}
-\forall\Ec>0\ \ \exists\delta>0\text{ tc }\Vert\varphi-\varphi_y\Vert<\Ec(b-a)\ \ \forall y\text{ tc }|y|<\delta
+\forall\Ec>0\ \ \exists\delta>0\text{ tc }\Vert\varphi-\varphi_y\Vert_1<\Ec(b-a)\ \ \forall y\text{ tc }|y|<\delta
 \end{equation*}
 
 Possiamo ora ritornare a $f$:
 \begin{align*}
-\Vert f - f_y \Vert & = \Vert (f - \varphi) + (\varphi - \varphi_y) + (\varphi_y - f_y) \Vert \\
-  &\overset{\underset{\mathrm{tr.}}{}}{\leq} \Vert f - \varphi \Vert + \Vert \varphi - \varphi_y \Vert + \Vert \varphi_y - f_y \Vert \\
+\Vert f - f_y \Vert_1 & = \Vert (f - \varphi) + (\varphi - \varphi_y) + (\varphi_y - f_y) \Vert_1 \\
+  &\overset{\underset{\mathrm{tr.}}{}}{\leq} \Vert f - \varphi \Vert_1 + \Vert \varphi - \varphi_y \Vert_1 + \Vert \varphi_y - f_y \Vert_1 \\
  & < \Ec +\Ec(b-a) + \Ec \\
  & =\Ec(b-a+2)
 \end{align*}
-cioè $ \Vert f - f_y \Vert \to 0$ come volevasi dimostrare.
+cioè $ \Vert f - f_y \Vert_1 \to 0$ come volevasi dimostrare.
 \end{proof}
 
 
@@ -3061,14 +3082,14 @@ In alcune trattazioni la definizione di $\hat{f}$ è leggermente diversa: nell'i
 
 La definizione è ben posta? Certo, infatti 
 \begin{equation*}
-f\in L^1(\RR) \ \Rightarrow\ \int_\RR |f(x)|\dx<+\infty\ \Rightarrow\ \int_\RR \left| e^{- izx} f(x)\right|\dx<+\infty\ \text{ xk }\left| e^{- izx}\right|=1
+f\in L^1(\RR) \ \Rightarrow\ \int_\RR |f(x)|\dx<+\infty\ \Rightarrow\ \int_\RR \left| e^{- izx} f(x)\right|\,\de x=\int_\RR \underbrace{\left| e^{- izx}\right|}_{=1}\cdot\left|f(x)\right|\,\de x<+\infty
 \end{equation*}
 L'unica cosa che resta da capire è in quale spazio viene trasformato (linearmente) $L^1(\RR)$ da $\hat{f}$. Per rispondere a questa domanda enunciamo il
 
 \begin{thm}[di Riemann-Lebesgue]$\\$ 
 Sia $f\in L^{1}(\RR)$. Allora
 \begin{equation*}
-\boxed{\hat{f} \in C^{0}_{0}(\RR)}\qquad\text{ e }\qquad\boxed{\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}}
+\boxed{\hat{f} \in C^{0}_{0}(\RR)}\qquad\text{ e }\qquad\boxed{\left\|\hat{f}\,\right\|_{\infty} \leq \Vert f \Vert_{1}}
 \end{equation*}
 \end{thm}
 
@@ -3092,19 +3113,19 @@ La dimostrazione si articola in tre punti:
     Si, sono soddisfatte in quanto $f\in L^1$ (e quindi anche $|f|\in L^1$) e $|f|$ domina l'integranda.
 
 
-    \item [$\triangleright$] Disuguaglianza delle norme: è vero che $\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}$ ??
+    \item [$\triangleright$] Disuguaglianza delle norme: è vero che $\left\|\hat{f}\,\right\|_{\infty} \leq \Vert f \Vert_{1}$ ??
 
-    Usando la proprietà $\displaystyle\left|\int f\right|\leq \int|f|$ possiamo scrivere
+    Possiamo scrivere
     \begin{equation*}
-    \left| \hat{f}(z)\right| = \left| \int_{\RR} e^{- ixz} f(x) \dx\right| \leq \int_{\RR}\left| e^{- ixz} f(x)\right| \dx \leq \int_{\RR}| f(x)| \dx = \Vert f \Vert_{L^{1}}
+    \left| \hat{f}(z)\right| = \left| \int_{\RR} e^{- izx} f(x) \dx\right| \leq \int_\RR \left| e^{- izx} f(x)\right|\,\de x=\int_\RR |f(x)|\dx= \Vert f \Vert_{1}
     \end{equation*}
-    da cui segue, per la continuità della funzione, la tesi.
+    da cui segue la tesi.
 
     \item [$\triangleright$] Ultimo punto per l'appartenenza a $\Cc_0^0$: è vero che $\lim\limits_{z\to \pm \infty}\hat{f}(z) = 0$ ??
 
-    Ricordiamo che $-1=e^{i\pi}$ e quindi $1=-e^{i\pi}$. Allora
+    Ricordiamo che $e^{i\pi}=-1$ e quindi $1=-e^{i\pi}$. Allora
     \begin{equation*}
-    \hat{f}(z) = - e^{i\pi}\int_{\RR} e^{- ixz} f(x) \dx = - \int_{\RR} e^{- i(xz - \pi)} f(x) \dx = - \int_{\RR} e^{- iz\left(x - \frac{\pi}{z}\right)} f(x) \dx
+    \hat{f}(z) = - e^{i\pi}\int_{\RR} e^{- izx} f(x) \dx = - \int_{\RR} e^{- iz\left(x - \frac{\pi}{z}\right)} f(x) \dx
     \end{equation*}
     Con il cambio di variabile
     \begin{equation*}
@@ -3112,23 +3133,23 @@ La dimostrazione si articola in tre punti:
     \end{equation*}
     otteniamo
     \begin{equation*}
-    \hat{f}(z) = - \int_{\RR} e^{- izx'} f\left(x' + \frac{\pi}{z}\right) \dx' = - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \dx
+    \hat{f}(z) = - \int_{\RR} e^{- izx'} f\left(x' + \frac{\pi}{z}\right) \de x' = - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \de x
     \end{equation*}
     dove nell'ultimo passaggio si è ritornati nella variabile $x$ per comodità.
 
     Scriviamo ora il doppio di $\hat{f}$, prendendo una parte come appena calcolata e l'altra come da definizione:
     \begin{align*}
-    2\hat{f}(z) & = \int_{\RR} e^{- ixz} f(x) \dx - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \dx=\\
-     & = \int_{\RR}\left[e^{- ixz} f(x) - e^{- izx} f\left(x + \frac{\pi}{z}\right)\right] \dx=\\
-     & = \int_{\RR} e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right] \dx
+    2\hat{f}(z) & = \int_{\RR} e^{- izx} f(x) \dx - \int_{\RR} e^{- izx} f\left(x + \frac{\pi}{z}\right) \de x\\
+     & = \int_{\RR}\left[e^{- izx} f(x) - e^{- izx} f\left(x + \frac{\pi}{z}\right)\right] \de x\\
+     & = \int_{\RR} e^{- izx}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right] \de x
     \end{align*}
     Passiamo al modulo
     \begin{align*}
-    2\left| \hat{f}(z)\right| & = \int_{\RR}\left| e^{- ixz}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right]\right| \dx\\
-     & \leq \int_{\RR}\left| f(x) - f\left(x + \frac{\pi}{z}\right)\right| \dx\\
-     & = \Vert f - f_{- \pi /z} \Vert_{L^{1}}
+    2\left| \hat{f}(z)\right| & =\left| \int_{\RR} e^{- izx}\left[f(x) - f\left(x + \frac{\pi}{z}\right)\right] \de x\right|\\
+     & \leq \int_{\RR}\left| f(x) - f\left(x + \frac{\pi}{z}\right)\right| \de x\\
+     & = \Vert f - f_{- \pi /z} \Vert_{1}
     \end{align*}
-    Quando $z\rightarrow \pm \infty $ la traslazione $ - \pi /z\rightarrow 0$ per il teorema \ref{per_la_dim_riemann_L} e quindi $\left| \hat{f}(z)\right| \rightarrow 0$ come volevasi dimostrare.
+    Quando $z\rightarrow \pm \infty $ la traslazione $ - \pi /z\rightarrow 0$ per il teorema (\ref{per_la_dim_riemann_L}) e quindi $\left| \hat{f}(z)\right| \rightarrow 0$ come volevasi dimostrare.
 \end{enumerate}
 \end{proof}
 
@@ -3150,7 +3171,7 @@ Possono essere utili le seguenti proprietà.
 Siano $f,g\in L^1(\RR)$, $\alpha,\beta\in\CC$, e $y\in\RR$. Allora
 \renewcommand{\theenumi}{\roman{enumi}}
 \begin{enumerate}
-    \item linearita
+    \item linearità
     $$\Fc(\alpha f+\beta g,z)=\alpha\Fc(f,z)+\beta\Fc(g,z)$$
     \item shifting
     $$\Fc(f(x - y), z)=e^{- iyz}\ \Fc(f(x), z)$$
@@ -3211,7 +3232,6 @@ Siano $f\in L^1\left(\RR^n\right)$, $y\in\RR^n$ e $A$ matrice reale $n\times n$ 
 
 
 \section{Derivata}
-
 
 Vogliamo capire se una trasformata di Fourier è derivabile.
 \begin{thm}[Derivata della trasformata]$\\$
@@ -3303,7 +3323,7 @@ Siano $f,g\in L^1(\RR)$. Allora la funzione
 \end{align*}
 definita per quasi ogni $x\in\RR$ e inoltre, siccome $(f*g)\in L^1$, vale la seguente disuguaglianza
 \begin{equation*}
-\Vert f*g \Vert_{L^{1}} \leq \Vert f \Vert_{L^{1}}\ \Vert g \Vert_{L^{1}}
+\Vert f*g \Vert_{1} \leq \Vert f \Vert_{1}\ \Vert g \Vert_{1}
 \end{equation*}
 \end{thm}
 
@@ -3335,25 +3355,23 @@ che in forma più compatta è
 \begin{proof}
 Abbiamo
 \begin{align*}
-\hat{(f*g)}(z)&=\int_\RR e^{-izx}\left[\int_\RR f(x-t)\,g(t)\dt\right]\dx=\\
-&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR^2}e^{-iz(x-t)}e^{-izt}f(x-t)\,g(t)\dt\dx =\\
-&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-iz(x-t)} f(x-t)\dx\right]\dt=\\
+\hat{(f*g)}(z)&=\int_\RR e^{-izx}\left[\int_\RR f(x-t)\,g(t)\dt\right]\,\de x=\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR^2}e^{-iz(x-t)}e^{-izt}f(x-t)\,g(t)\dt\,\de x =\\
+&\overset{\underset{\mathrm{(F)}}{}}{=}\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-iz(x-t)} f(x-t)\dx\right]\,\de t=\\
 &=\left\{\text{cambio di var: }s=x-t\right\}=\\
-&=\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-izs} f(s)\ds\right]\dt=\\
+&=\int_{\RR} e^{-izt}g(t)\left[\int_\RR e^{-izs} f(s)\ds\right]\,\de t=\\
 &\overset{\underset{\mathrm{(F)}}{}}{=}\int_\RR e^{-izt}g(t)\dt\cdot \int_\RR e^{-izs} f(s)\ds =\\
 &= \hat{f}(z)\cdot\hat{g}(z)
 \end{align*}
 \end{proof}
 
-%zzzzzzzzzzzzzzzzzz
 
 \section{Estensione della trasformata di Fourier ... }
 
 
 Vogliamo estendere la definizione di trasformata di Fourier agli spazi $\Sc$, $L^2$ e $\Sc'$.
 
-\textbf{NB.} Prima di procedere oltre consigliamo di andare a ripassare le proprietà di questi spazi e soprattutto di leggere l'appendice
-\ref{myprod}.
+\textbf{NB.} Prima di procedere oltre consigliamo di andare a ripassare le proprietà di questi spazi e soprattutto di leggere l'appendice (\ref{myprod}).
 
 
 \subsection{... allo spazio delle funzioni a decrescita rapida}
@@ -3426,11 +3444,11 @@ Non possiamo definirla in $L^{2}$ come $\int e^{- ixz} f(x) \dx$ perché $f\in L
 \begin{thm}[Identità di Plancherel]$\\$
 Sia $f\in\Sc\left(\RR^n\right)$ $\left(\Rightarrow f\in L^{1}\left(\RR^n\right) \cap L^{2}\left(\RR^n\right)\right)$. Allora $\hat{f}\in L^2\left(\RR^n\right)$ e
 \begin{equation*}
-\left\|\hat{f}\right\|_2 = (2\pi)^{n/2} \,\Vert f \Vert_2
+\left\|\hat{f}\,\right\|_2 = (2\pi)^{n/2} \,\Vert f \Vert_2
 \end{equation*}
 In particolare per $n=1$ vale
 \begin{equation*}
-\Vert f \Vert_2^2=\frac{1}{2\pi}\ \left\|\hat{f}\right\|_2^2
+\Vert f \Vert_2^2=\frac{1}{2\pi}\ \left\|\hat{f}\,\right\|_2^2
 \end{equation*}
 \end{thm}
 
@@ -3452,8 +3470,8 @@ f(x)=\frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z) \dz
 Mettendo insieme queste due cose otteniamo
 \begin{align*}
 \Vert f \Vert_2^2&=\int_\RR f(x)\,\overline{f(x)}\dx=\int_\RR \left(\frac{1}{2\pi}\int_\RR e^{ixz}\hat{f}(z) \dz\right)\overline{f(x)}\dx =\\
-&\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_{\RR^2}e^{ixz}\hat{f}(z)\,\overline{f(x)}\dx\dz\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_\RR \hat{f}(z) \left(\int_\RR \overline{e^{-ixz}f(x)} \dx\right)\dz=\\
-&=\frac{1}{2\pi}\int_\RR \hat{f}(z)\,\hat{f}(z)\dz=\frac{1}{2\pi}\ \left\|\hat{f}\right\|_2^2
+&\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_{\RR^2}e^{ixz}\hat{f}(z)\,\overline{f(x)}\dx\,\de z\overset{\underset{\mathrm{(F)}}{}}{=}\frac{1}{2\pi}\int_\RR \hat{f}(z) \left(\int_\RR \overline{e^{-ixz}f(x)} \dx\right)\de z=\\
+&=\frac{1}{2\pi}\int_\RR \hat{f}(z)\,\overline{\hat{f}(z)}\dz=\frac{1}{2\pi}\,\left\|\hat{f}\,\right\|_2^2
 \end{align*}
 che conclude la dimostrazione.
 \end{proof}
