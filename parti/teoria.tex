@@ -567,7 +567,7 @@ Se $z_{0} \neq \infty $
 \item se è eliminabile allora $\Res (f, z_{0}) = 0$
 \item se è polo di ordine $n$ allora $\Res (f, z_{0}) = \frac{1}{(n - 1)!}\lim\limits_{z\rightarrow z_{0}}\frac{d^{n - 1}}{dz^{n - 1}}(z - z_0)^n f(z)$
 \item se è polo di ordine $1$ allora $\Res \left(\frac{f}{g}, z_{0}\right) = \lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g'(z)}$
-\item vale L'Hopital $\lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g(z)} = \lim\limits_{z\rightarrow z_{0}}\frac{f'(z)}{g'(z)}$
+\item vale De l'Hôpital $\lim\limits_{z\rightarrow z_{0}}\frac{f(z)}{g(z)} = \lim\limits_{z\rightarrow z_{0}}\frac{f'(z)}{g'(z)}$
 \end{itemize}
 
 Se $z_{0} = \infty $
@@ -1274,7 +1274,7 @@ La funzione logaritmo è concava, poniamo $\lambda = \frac{1}{p}$ e di conseguen
 \end{gather*}
 \end{proof}
 \begin{thm}
-[Disuguaglianza di Holder]
+[Disuguaglianza di Hölder]
 Siano $p, q$ coniugati e siano $f\in L^{p}, g\in L^{q}$. Allora
 \begin{equation*}
 f(x) g(x) \in L^{1} \ \ \text{e} \ \ \int | f(x) g(x)| dx \leq \Vert f \Vert_{L^{p}} \Vert g \Vert_{L^{q}}
@@ -1337,7 +1337,7 @@ Consideriamo $h(x) = A$
 \begin{equation*}
 [h(x)]^{q} = [h(x)]^{\frac{p}{p - 1}} = | f(x) + g(x)|^{p}
 \end{equation*}
-Sappiamo già, per dimostrazione precedente, che $(f + g) \in L^{p}$, allora $h\in L^{q}$. Usiamo la disuguaglianza di Holder su $A\in L^{q}, B\in L^{p}$ e $C\in L^{q}, D\in L^{p}$. Otteniamo
+Sappiamo già, per dimostrazione precedente, che $(f + g) \in L^{p}$, allora $h\in L^{q}$. Usiamo la disuguaglianza di Hölder su $A\in L^{q}, B\in L^{p}$ e $C\in L^{q}, D\in L^{p}$. Otteniamo
 \begin{align*}
 \Vert f + g \Vert^{p}_{L^{p}} & \leq \Vert f \Vert_{L^{p}}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{L^{q}} + \Vert g \Vert_{L^{p}}\left \Vert \ | f + g|^{p - 1} \ \right \Vert_{L^{q}}
 \end{align*}
@@ -1535,7 +1535,7 @@ Supponiamo di avere due spazi di Banach $X, Y$ in modo assolutamente generale, p
 L: X\rightarrow Y\ \ \ \ L(\alpha x_{1} + \beta x_{2}) = \alpha L(x_{1}) + \beta L(x_{2})
 \end{equation*}
 \end{defn}
-Teniamo presente che quando parliamo di spazi di Banach spesso intendiamo spazi a dimensione infinita, in questo caso certe idee che abbiamo molto naturali e intuitive delle funzioni lineari non valgono necessariemente. In particolare la continuità \textbf{non} è necessariamente garantita in caso di funzioni lineari. In uno spazio di Banach possiamo avere funzioni lineari continue e funzioni lineari non continue.
+Teniamo presente che quando parliamo di spazi di Banach spesso intendiamo spazi a dimensione infinita, in questo caso certe idee che abbiamo molto naturali e intuitive delle funzioni lineari non valgono necessariamente. In particolare la continuità \textbf{non} è necessariamente garantita in caso di funzioni lineari. In uno spazio di Banach possiamo avere funzioni lineari continue e funzioni lineari non continue.
 \begin{defn}
 [Continuità] Una funzione è continua se
 \begin{equation*}
@@ -1571,7 +1571,7 @@ La categoria più importante di spazi di Banach che abbiamo visto fin'ora è $L^
 \begin{thm}
 Se $1 < p < + \infty $, allora il duale di $L^{p}$ è $L^{q}$ dove $q$ è l'esponente coniugato di $p$: $\frac{1}{p} + \frac{1}{q} = 1$.
 \end{thm}
-Sia $f\in L^{p}$ e $L(f) \in \RR$, possiamo dimostrare che $\forall L$ funzionale lineare su $L^{p}$ esiste una funzione $h\in L^{q}$ tale che $L(f) = \int hf$. Non stiamo specificando in quale dominio stiamo definendo questi spazi. Grazie alla disuguaglianza di Holder otteniamo questo risultato. Non indaghiamo ulteriormente.
+Sia $f\in L^{p}$ e $L(f) \in \RR$, possiamo dimostrare che $\forall L$ funzionale lineare su $L^{p}$ esiste una funzione $h\in L^{q}$ tale che $L(f) = \int hf$. Non stiamo specificando in quale dominio stiamo definendo questi spazi. Grazie alla disuguaglianza di Hölder otteniamo questo risultato. Non indaghiamo ulteriormente.
 
 Torniamo alla definizione di duale. Una possibile notazione dello spazio duale di $X$ è $X'$. Questo spazio duale è lui stesso uno spazio di Banach. È ovviamente uno spazio vettoriale, ma dobbiamo far vedere che c'è una \textit{norma}. Un elemento del duale è un funzionale $L: X\rightarrow \RR$, questo vuol dire che dato un elemento $x\in X$ allora $L(x) \in \RR$
 \begin{equation*}
@@ -1666,7 +1666,7 @@ Dobbiamo verificare che l'integrale sia ben definito, lineare e continuo (o limi
 \begin{equation*}
 \int_{A} u(c_{1} f_{1} + c_{2} f_{2}) dx = c_{1}\int_{A} uf_{1} dx + c_{2}\int_{A} uf_{2} dx = c_{1}(u, f_{1}) + c_{2}(u, f_{2})
 \end{equation*}
-\item \textit{continuo, o limitato} (sono equivalenti). Per ipotesi $f_{n}\rightarrow f$ in $\Dc(A)$ e $u\in L^{1}_{\loc}$. Allora la convergenza in $\Dc(A)$ garantisce che il supporto di tutte le $f_{n}$ sia contenuto in un compatto $K\subset A$, e inoltre $f_{n}\rightarrow f$ (e le derivate) uniformemente, cioè $ \Vert f_{n} - f \Vert_{\infty}\rightarrow 0$. Per definizione di $L^{1}_{\loc}$ la funzione $u$ ristretta al compatto $K$ è $L^{1}(K)$. Possiamo allora usare la disuguaglianza di Holder con $p = 1, q = \infty $ per far vedere che
+\item \textit{continuo, o limitato} (sono equivalenti). Per ipotesi $f_{n}\rightarrow f$ in $\Dc(A)$ e $u\in L^{1}_{\loc}$. Allora la convergenza in $\Dc(A)$ garantisce che il supporto di tutte le $f_{n}$ sia contenuto in un compatto $K\subset A$, e inoltre $f_{n}\rightarrow f$ (e le derivate) uniformemente, cioè $ \Vert f_{n} - f \Vert_{\infty}\rightarrow 0$. Per definizione di $L^{1}_{\loc}$ la funzione $u$ ristretta al compatto $K$ è $L^{1}(K)$. Possiamo allora usare la disuguaglianza di Hölder con $p = 1, q = \infty $ per far vedere che
 \begin{equation*}
 \left| \int_{K} u(f_{n} - f) dx\right| \leq \Vert u \Vert_{L^{1}(K)} \Vert f_{n} - f \Vert_{\infty}\rightarrow 0
 \end{equation*}allora abbiamo fatto vedere che
@@ -1742,7 +1742,7 @@ Sia $\Lambda \subset \Dc'(A)$. Consideriamo $B\subset A$ e $\varphi \in \Dc(B)$.
 \end{equation*}
 \end{defn}
 
-NB. Quando diciamo che a $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione, diciame che esiste una $\Lambda_{u}$ distribuzione definita come $(\Lambda_{u}, \varphi) = \int_{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
+NB. Quando diciamo che a $u\in L^{1}_{\loc}(A)$ corrisponde una distribuzione, diciamo che esiste una $\Lambda_{u}$ distribuzione definita come $(\Lambda_{u}, \varphi) = \int_{A} u\varphi $, ma talvolta scriveremo direttamente $u$ con abuso di notazione.
 \begin{defn}
 [Derivata di una distribuzione]
 Sia $\Lambda \in \Dc'(A)$ una distribuzione. Definiamo la sua distribuzione derivata $\Lambda'\in \Dc'(A)$. Per ogni $\varphi \in \Dc(A)$ dobbiamo definire quanto vale $(\Lambda', \varphi)$
@@ -1994,7 +1994,7 @@ ma $f$, e quindi anche $| f| $, è integrabile secondo Lebesgue, quindi anche il
 \boxed{\hat{f} \in C^{0}_{0}(\RR)} \ \ \ \ \boxed{\Vert \hat{f} \Vert_{\infty} \leq \Vert f \Vert_{L^{1}}}
 \end{equation*}
 \end{thm}
-La trasformata ha proprietà molto diverse e molto più regolari della $f$, che è banalmente integrabile, sta in uno spazio compeltamente diverso.
+La trasformata ha proprietà molto diverse e molto più regolari della $f$, che è banalmente integrabile, sta in uno spazio completamente diverso.
 
 \begin{proof}
 
@@ -2182,7 +2182,7 @@ n & x\in \left[0, \frac{1}{n}\right]\\
 (u*v)(x) = \int_{\RR} u(x - t) v(t) dt = n\int^{x}_{x - \frac{1}{n}} v(t) dt
 \end{gather*}
 
-è la media della funzione $v$ calcolata in un intorno di $x$. L'effetto della convoluzione è in qualche modo di smussare il valore della funzione $v$, in ogni punto sostutiamo la media in un suo intorno.
+è la media della funzione $v$ calcolata in un intorno di $x$. L'effetto della convoluzione è in qualche modo di smussare il valore della funzione $v$, in ogni punto sostituiamo la media in un suo intorno.
 \end{itemize}
 
 Qual è il legame con la trasformata di Fourier? Siano $u, v\in L^{1}$, calcoliamo la trasformata di $u*v$, dato che sta in $L^{1}$
@@ -2237,7 +2237,7 @@ dato che $v$ sta in $L^{1}$, $\hat{v}$ sta in $C^{0}_{0}$, quindi la quantità $
 moltiplichiamola per $z^{M}$, il termine che otteniamo a destra abbiamo appena fatto vedere che, a meno di coefficienti $i$ opportunamente elevati, è limitato
 \begin{equation*}
 z^{M}\hat{u}^{(N)} = z^{M}(- i)^{N}\hat{v} \ \ \boxed{\in L^{\infty}(\RR)} \ \ \forall N, M \geq 0
-\end{equation*}ma questa è proprio la definizione di funzione a descrescenza rapida, quindi $\hat{u} \in \Sc(\RR)$ e abbiamo dimostrato la tesi.
+\end{equation*}ma questa è proprio la definizione di funzione a decrescenza rapida, quindi $\hat{u} \in \Sc(\RR)$ e abbiamo dimostrato la tesi.
 \end{itemize}
 \end{proof}
 
@@ -2259,7 +2259,7 @@ Sia $u\in L^{1}(\RR) \cap L^{2}(\RR)$, allora
 \begin{itemize}
 \item \textit{Dimostrazione nel caso di}$u\in \Sc(\RR)$
 
-Dato che $u\in \Sc(\RR)$, allora $u\in L^{2}$. Ci serve partira da $u\in \Sc(\RR)$ per poter usare correttamente il risultato di inversione, in accordo a quanto appena detto sull'estensione a $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$.
+Dato che $u\in \Sc(\RR)$, allora $u\in L^{2}$. Ci serve partire da $u\in \Sc(\RR)$ per poter usare correttamente il risultato di inversione, in accordo a quanto appena detto sull'estensione a $\Fc : \Sc(\RR)\rightarrow \Sc(\RR)$.
 
 \begin{align*}
 \Vert u \Vert^{2}_{L^{2}} & = \int | u(x)|^{2} dx = \int \overline{u(x)} u(x) dx & \text{essendo} \ u\in L^{2}(\RR)\\
@@ -2584,7 +2584,7 @@ Analizziamo bene però la nostra funzione, derivandola
 \begin{equation*}
 \frac{d}{dx}\left(e^{- \lambda x} u(x)\right) = \underbrace{- \lambda e^{- \lambda x} u(x)}_{\in L^{1}} + \underbrace{e^{- \lambda x} u'(x)}_{\in L^{1}} \in L^{1}
 \end{equation*}
-le due parti sono integrabili per ipotesi, grazie al fatto che anche $u'$ deve essere $\Lc$ - trasformabile. Per il teoreoma del calcolo
+le due parti sono integrabili per ipotesi, grazie al fatto che anche $u'$ deve essere $\Lc$ - trasformabile. Per il teorema del calcolo
 \begin{equation*}
 e^{- \lambda x} u(x) = u(0) + \int^{x}_{0}\frac{d}{dt}\left(e^{- \lambda t} u(t)\right) dt
 \end{equation*}
